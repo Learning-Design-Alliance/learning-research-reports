@@ -1,0 +1,4863 @@
+{
+ "partial": false,
+ "seed": 20261007,
+ "draws": 500,
+ "alpha": 0.025,
+ "level": 2,
+ "min_group": 3,
+ "pairscan_sha256": "8bcaa5cfb168651c53680fbf90c0248930e10876b8833e92ecce0d7153da139c",
+ "corpora": {
+  "xes3g5m": {
+   "a": {
+    "sets": 15,
+    "reproduction": [
+     {
+      "set": 0,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.726609419495063,
+      "critical_z_committed": -3.726609419495063,
+      "a_max_diff": 0.0004563531356351902
+     },
+     {
+      "set": 1,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.7933058797231647,
+      "critical_z_committed": -3.7933058797231647,
+      "a_max_diff": 0.0004979834720839627
+     },
+     {
+      "set": 2,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.72940307641586,
+      "critical_z_committed": -3.72940307641586,
+      "a_max_diff": 0.00047018927822417567
+     },
+     {
+      "set": 3,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.77523487617564,
+      "critical_z_committed": -3.77523487617564,
+      "a_max_diff": 0.0004183079779871979
+     },
+     {
+      "set": 4,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.901089819918673,
+      "critical_z_committed": -3.901089819918673,
+      "a_max_diff": 0.00047939314741851646
+     },
+     {
+      "set": 5,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.902458347552182,
+      "critical_z_committed": -3.902458347552182,
+      "a_max_diff": 0.00048011164111771976
+     },
+     {
+      "set": 6,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.691332378244137,
+      "critical_z_committed": -3.691332378244137,
+      "a_max_diff": 0.0004975904512065643
+     },
+     {
+      "set": 7,
+      "scanned": 210,
+      "scanned_committed": 210,
+      "critical_z": -3.7972564053205025,
+      "critical_z_committed": -3.7972564053205025,
+      "a_max_diff": 0.0004954991858439062
+     },
+     {
+      "set": 8,
+      "scanned": 209,
+      "scanned_committed": 209,
+      "critical_z": -3.7735860546128457,
+      "critical_z_committed": -3.7735860546128457,
+      "a_max_diff": 0.00046890339245964086
+     },
+     {
+      "set": 9,
+      "scanned": 209,
+      "scanned_committed": 209,
+      "critical_z": -4.109243512225889,
+      "critical_z_committed": -4.109243512225889,
+      "a_max_diff": 0.0004471247104551601
+     },
+     {
+      "set": 10,
+      "scanned": 196,
+      "scanned_committed": 196,
+      "critical_z": -3.929310058029153,
+      "critical_z_committed": -3.929310058029153,
+      "a_max_diff": 0.0004932336349232624
+     },
+     {
+      "set": 11,
+      "scanned": 182,
+      "scanned_committed": 182,
+      "critical_z": -4.85211526319582,
+      "critical_z_committed": -4.85211526319582,
+      "a_max_diff": 0.0004501220556151764
+     },
+     {
+      "set": 12,
+      "scanned": 201,
+      "scanned_committed": 201,
+      "critical_z": -4.177226452717566,
+      "critical_z_committed": -4.177226452717566,
+      "a_max_diff": 0.00044463765784980014
+     },
+     {
+      "set": 13,
+      "scanned": 196,
+      "scanned_committed": 196,
+      "critical_z": -4.036620905219868,
+      "critical_z_committed": -4.036620905219868,
+      "a_max_diff": 0.00043423842146017577
+     },
+     {
+      "set": 14,
+      "scanned": 166,
+      "scanned_committed": 166,
+      "critical_z": -5.2034914579479015,
+      "critical_z_committed": -5.2034914579479015,
+      "a_max_diff": 0.0004484498401433057
+     }
+    ],
+    "floor": {
+     "pairscan": {
+      "pair_median": 1.0,
+      "gate_median": 1.0,
+      "pair_per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.9333333333333333,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.9333333333333333,
+       0.3333333333333333,
+       0.8,
+       0.8666666666666667,
+       0.5333333333333333
+      ],
+      "gate_per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.9333333333333333,
+       1.0,
+       0.7333333333333333,
+       0.9333333333333333,
+       1.0,
+       0.6666666666666666
+      ]
+     },
+     "g2": {
+      "pair_median": 1.0,
+      "gate_median": 1.0,
+      "pair_per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.9333333333333333,
+       0.7333333333333333,
+       0.26666666666666666,
+       0.5333333333333333,
+       0.4666666666666667,
+       0.2
+      ],
+      "gate_per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.8,
+       0.9333333333333333,
+       0.3333333333333333,
+       0.8666666666666667,
+       0.7333333333333333,
+       0.06666666666666667
+      ]
+     },
+     "x2": {
+      "pair_median": 0.8666666666666667,
+      "gate_median": 0.9333333333333333,
+      "pair_per_set": [
+       1.0,
+       1.0,
+       1.0,
+       0.8666666666666667,
+       1.0,
+       1.0,
+       0.8666666666666667,
+       1.0,
+       1.0,
+       0.7333333333333333,
+       0.5333333333333333,
+       0.06666666666666667,
+       0.4,
+       0.26666666666666666,
+       0.26666666666666666
+      ],
+      "gate_per_set": [
+       1.0,
+       0.9333333333333333,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.9333333333333333,
+       1.0,
+       1.0,
+       0.7333333333333333,
+       0.7333333333333333,
+       0.06666666666666667,
+       0.4666666666666667,
+       0.26666666666666666,
+       0.06666666666666667
+      ]
+     },
+     "q3": {
+      "pair_median": 0.6,
+      "gate_median": 0.26666666666666666,
+      "pair_per_set": [
+       1.0,
+       0.6,
+       0.8,
+       0.5333333333333333,
+       0.6,
+       0.8,
+       0.6,
+       0.8666666666666667,
+       0.6666666666666666,
+       0.6666666666666666,
+       0.13333333333333333,
+       0.06666666666666667,
+       0.13333333333333333,
+       0.06666666666666667,
+       0.4
+      ],
+      "gate_per_set": [
+       1.0,
+       0.4666666666666667,
+       0.6666666666666666,
+       0.2,
+       0.8,
+       0.8666666666666667,
+       0.5333333333333333,
+       0.6666666666666666,
+       0.26666666666666666,
+       0.13333333333333333,
+       0.26666666666666666,
+       0.06666666666666667,
+       0.13333333333333333,
+       0.0,
+       0.26666666666666666
+      ]
+     }
+    },
+    "fitted_model_fp": {
+     "pairscan": 0.0,
+     "g2": 0.0,
+     "x2": 0.0,
+     "q3": 0.0
+    },
+    "fitted_model_fp_per_set": [
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      }
+     ]
+    ],
+    "control_scale": {
+     "null_hamming_median": 2623.2
+    },
+    "per_set": [
+     {
+      "set": 0,
+      "learners": 3000,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "108",
+        "109"
+       ],
+       [
+        "138",
+        "208"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "108",
+         "109"
+        ],
+        [
+         "138",
+         "208"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "108",
+         "109"
+        ],
+        [
+         "138",
+         "208"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "108",
+         "109"
+        ],
+        [
+         "138",
+         "208"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 3,
+       "significant": 3,
+       "overlap": 2,
+       "jaccard": 0.6666666666666666,
+       "pairs": [
+        [
+         "108",
+         "109"
+        ],
+        [
+         "138",
+         "208"
+        ],
+        [
+         "55",
+         "155"
+        ]
+       ]
+      }
+     },
+     {
+      "set": 1,
+      "learners": 1344,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "214",
+        "213"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "214",
+         "213"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "214",
+         "213"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "214",
+         "213"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "214",
+         "213"
+        ]
+       ]
+      }
+     },
+     {
+      "set": 2,
+      "learners": 1544,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "223",
+        "222"
+       ],
+       [
+        "41",
+        "43"
+       ],
+       [
+        "77",
+        "76"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 3,
+       "significant": 3,
+       "overlap": 3,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "223",
+         "222"
+        ],
+        [
+         "41",
+         "43"
+        ],
+        [
+         "77",
+         "76"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 0.6666666666666666,
+       "pairs": [
+        [
+         "41",
+         "43"
+        ],
+        [
+         "77",
+         "76"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 3,
+       "significant": 3,
+       "overlap": 3,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "223",
+         "222"
+        ],
+        [
+         "41",
+         "43"
+        ],
+        [
+         "77",
+         "76"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 0.6666666666666666,
+       "pairs": [
+        [
+         "41",
+         "43"
+        ],
+        [
+         "77",
+         "76"
+        ]
+       ]
+      }
+     },
+     {
+      "set": 3,
+      "learners": 605,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 4,
+      "learners": 1165,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "204",
+        "204_205"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "204",
+         "204_205"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "204",
+         "204_205"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "204",
+         "204_205"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "204",
+         "204_205"
+        ]
+       ]
+      }
+     },
+     {
+      "set": 5,
+      "learners": 782,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 6,
+      "learners": 705,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 0,
+       "jaccard": 0.0,
+       "pairs": [
+        [
+         "132",
+         "240"
+        ],
+        [
+         "67",
+         "546"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 0,
+       "jaccard": 0.0,
+       "pairs": [
+        [
+         "132",
+         "240"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 7,
+      "learners": 1256,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "249",
+        "250"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "249",
+         "250"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "249",
+         "250"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "249",
+         "250"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "249",
+         "250"
+        ]
+       ]
+      }
+     },
+     {
+      "set": 8,
+      "learners": 1136,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "153",
+        "152"
+       ],
+       [
+        "51",
+        "470"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "153",
+         "152"
+        ],
+        [
+         "51",
+         "470"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "153",
+         "152"
+        ],
+        [
+         "51",
+         "470"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "153",
+         "152"
+        ],
+        [
+         "51",
+         "470"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 2,
+       "significant": 2,
+       "overlap": 2,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "153",
+         "152"
+        ],
+        [
+         "51",
+         "470"
+        ]
+       ]
+      }
+     },
+     {
+      "set": 9,
+      "learners": 461,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 10,
+      "learners": 737,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "16",
+        "248_73"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "16",
+         "248_73"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": 0.0,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": 0.0,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": 0.0,
+       "pairs": []
+      }
+     },
+     {
+      "set": 11,
+      "learners": 354,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 12,
+      "learners": 467,
+      "committed_fires": true,
+      "committed_flagged": [
+       [
+        "40",
+        "48"
+       ]
+      ],
+      "pairscan": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "40",
+         "48"
+        ]
+       ]
+      },
+      "g2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "40",
+         "48"
+        ]
+       ]
+      },
+      "x2": {
+       "fires": true,
+       "any": true,
+       "clustered": false,
+       "flagged": 1,
+       "significant": 1,
+       "overlap": 1,
+       "jaccard": 1.0,
+       "pairs": [
+        [
+         "40",
+         "48"
+        ]
+       ]
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": 0.0,
+       "pairs": []
+      }
+     },
+     {
+      "set": 13,
+      "learners": 604,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 14,
+      "learners": 278,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": true,
+       "clustered": true,
+       "flagged": 0,
+       "significant": 1,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": true,
+       "clustered": true,
+       "flagged": 0,
+       "significant": 2,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     }
+    ],
+    "summary": {
+     "pairscan": {
+      "sets_firing": 8,
+      "scored": 15,
+      "flagged_pairs": 12,
+      "overlap_with_committed": 12,
+      "committed_pairs": 12,
+      "pooled_jaccard": 1.0,
+      "pooled_jaccard_ci95_sets": [
+       1.0,
+       1.0
+      ],
+      "set_verdict_agreement": 1.0,
+      "set_verdict_kappa": 1.0,
+      "verdict": "PAIRWISE LOCAL DEPENDENCE BEYOND ONE TRAIT",
+      "reason": "",
+      "binomial_p": 1.8295733787133794e-07,
+      "chance_rate": 0.05,
+      "adjacency": {
+       "flagged": 12,
+       "adjacent": 3,
+       "rate": 0.25,
+       "expected_rate": 0.023091666666666667,
+       "p": 0.001999800019998
+      }
+     },
+     "g2": {
+      "sets_firing": 8,
+      "scored": 15,
+      "flagged_pairs": 12,
+      "overlap_with_committed": 10,
+      "committed_pairs": 12,
+      "pooled_jaccard": 0.7142857142857143,
+      "pooled_jaccard_ci95_sets": [
+       0.42857142857142855,
+       1.0
+      ],
+      "set_verdict_agreement": 0.8666666666666667,
+      "set_verdict_kappa": 0.7321428571428572,
+      "verdict": "PAIRWISE LOCAL DEPENDENCE BEYOND ONE TRAIT",
+      "reason": "",
+      "binomial_p": 1.8295733787133794e-07,
+      "chance_rate": 0.05,
+      "adjacency": {
+       "flagged": 12,
+       "adjacent": 3,
+       "rate": 0.25,
+       "expected_rate": 0.0208,
+       "p": 0.0012998700129987
+      }
+     },
+     "x2": {
+      "sets_firing": 8,
+      "scored": 15,
+      "flagged_pairs": 12,
+      "overlap_with_committed": 11,
+      "committed_pairs": 12,
+      "pooled_jaccard": 0.8461538461538461,
+      "pooled_jaccard_ci95_sets": [
+       0.5555555555555556,
+       1.0
+      ],
+      "set_verdict_agreement": 0.8666666666666667,
+      "set_verdict_kappa": 0.7321428571428572,
+      "verdict": "PAIRWISE LOCAL DEPENDENCE BEYOND ONE TRAIT",
+      "reason": "",
+      "binomial_p": 1.8295733787133794e-07,
+      "chance_rate": 0.05,
+      "adjacency": {
+       "flagged": 12,
+       "adjacent": 3,
+       "rate": 0.25,
+       "expected_rate": 0.020383333333333333,
+       "p": 0.0015998400159984002
+      }
+     },
+     "q3": {
+      "sets_firing": 6,
+      "scored": 15,
+      "flagged_pairs": 10,
+      "overlap_with_committed": 9,
+      "committed_pairs": 12,
+      "pooled_jaccard": 0.6923076923076923,
+      "pooled_jaccard_ci95_sets": [
+       0.42857142857142855,
+       0.8888888888888888
+      ],
+      "set_verdict_agreement": 0.8666666666666667,
+      "set_verdict_kappa": 0.736842105263158,
+      "verdict": "UNANSWERABLE",
+      "reason": "floor fails",
+      "binomial_p": 5.280567326660455e-05,
+      "chance_rate": 0.05,
+      "adjacency": {
+       "flagged": 10,
+       "adjacent": 3,
+       "rate": 0.3,
+       "expected_rate": 0.0185,
+       "p": 0.0006999300069993001
+      }
+     }
+    },
+    "reading": "PARTLY ANSWERABLE"
+   },
+   "b": {
+    "groups_per_set": [
+     3,
+     3,
+     2,
+     2,
+     2,
+     0,
+     2,
+     2,
+     1,
+     0,
+     1,
+     1,
+     1,
+     0,
+     3
+    ],
+    "module_sizes_per_set": [
+     [
+      4,
+      3,
+      3,
+      2,
+      1,
+      1,
+      1
+     ],
+     [
+      5,
+      4,
+      4,
+      1,
+      1
+     ],
+     [
+      5,
+      4,
+      2,
+      2,
+      1,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      2,
+      1,
+      1,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      2,
+      2,
+      2,
+      2,
+      2,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      2,
+      2,
+      1,
+      1
+     ],
+     [
+      5,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      3,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      3,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      4,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     [
+      4,
+      4,
+      4,
+      1,
+      1,
+      1
+     ]
+    ],
+    "within_pairs_per_set": [
+     12,
+     22,
+     16,
+     9,
+     9,
+     0,
+     9,
+     9,
+     10,
+     0,
+     3,
+     3,
+     6,
+     0,
+     18
+    ],
+    "lam_per_set": [
+     [
+      0.564,
+      0.343,
+      0.0
+     ],
+     [
+      0.8,
+      0.69,
+      1.023
+     ],
+     [
+      0.064,
+      0.01
+     ],
+     [
+      0.04,
+      0.831
+     ],
+     [
+      0.519,
+      1.211
+     ],
+     [],
+     [
+      0.562,
+      1.004
+     ],
+     [
+      0.838,
+      0.5
+     ],
+     [
+      0.667
+     ],
+     [],
+     [
+      0.721
+     ],
+     [
+      0.76
+     ],
+     [
+      0.006
+     ],
+     [],
+     [
+      0.884,
+      0.0,
+      1.541
+     ]
+    ],
+    "conv": [
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ],
+     [
+      true,
+      true
+     ]
+    ],
+    "boot_nonconverged": [
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      1,
+      1
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      0,
+      0
+     ],
+     [
+      10,
+      8
+     ],
+     [
+      52,
+      65
+     ],
+     [
+      0,
+      1
+     ],
+     [
+      35,
+      47
+     ],
+     [
+      2,
+      5
+     ],
+     [
+      1,
+      0
+     ],
+     [
+      0,
+      0
+     ]
+    ],
+    "floor": {
+     "bf_within": {
+      "median": 1.0,
+      "per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.6666666666666666,
+       0.6666666666666666,
+       0.75,
+       0.375
+      ],
+      "pooled": 0.8804347826086957
+     },
+     "bf_cross": {
+      "median": 1.0,
+      "per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.5714285714285714,
+       1.0,
+       0.42857142857142855,
+       0.8571428571428571,
+       1.0,
+       0.14285714285714285
+      ],
+      "pooled": 0.8666666666666667
+     },
+     "d1_within": {
+      "median": 1.0,
+      "per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.875,
+       1.0,
+       1.0,
+       1.0,
+       0.8333333333333334,
+       0.6666666666666666,
+       0.75,
+       0.75
+      ],
+      "pooled": 0.9130434782608695
+     },
+     "d1_cross": {
+      "median": 1.0,
+      "per_set": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       0.5714285714285714,
+       0.8571428571428571,
+       1.0,
+       0.2857142857142857
+      ],
+      "pooled": 0.9142857142857143
+     }
+    },
+    "plants_per_set": [
+     [
+      {
+       "where": "within",
+       "edge": [
+        13,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 289
+      },
+      {
+       "where": "within",
+       "edge": [
+        14,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 134
+      },
+      {
+       "where": "within",
+       "edge": [
+        12,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 146
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 226
+      },
+      {
+       "where": "within",
+       "edge": [
+        14,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 84
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 175
+      },
+      {
+       "where": "within",
+       "edge": [
+        9,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 222
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 237
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 203
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 236
+      },
+      {
+       "where": "cross",
+       "edge": [
+        5,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 343
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 139
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 134
+      },
+      {
+       "where": "cross",
+       "edge": [
+        13,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 224
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 142
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        9,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 111
+      },
+      {
+       "where": "within",
+       "edge": [
+        7,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 162
+      },
+      {
+       "where": "within",
+       "edge": [
+        0,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 100
+      },
+      {
+       "where": "within",
+       "edge": [
+        5,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 8
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 86
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 84
+      },
+      {
+       "where": "within",
+       "edge": [
+        14,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 102
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 83
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 104
+      },
+      {
+       "where": "cross",
+       "edge": [
+        7,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 123
+      },
+      {
+       "where": "cross",
+       "edge": [
+        6,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 103
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 58
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 127
+      },
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 109
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 110
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        3,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 71
+      },
+      {
+       "where": "within",
+       "edge": [
+        12,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 223
+      },
+      {
+       "where": "within",
+       "edge": [
+        7,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 73
+      },
+      {
+       "where": "within",
+       "edge": [
+        1,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 119
+      },
+      {
+       "where": "within",
+       "edge": [
+        2,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 105
+      },
+      {
+       "where": "within",
+       "edge": [
+        12,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 181
+      },
+      {
+       "where": "within",
+       "edge": [
+        2,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 149
+      },
+      {
+       "where": "within",
+       "edge": [
+        7,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 71
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 153
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 112
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 118
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 12
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 80
+      },
+      {
+       "where": "cross",
+       "edge": [
+        6,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 205
+      },
+      {
+       "where": "cross",
+       "edge": [
+        11,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 88
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        5,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 87
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 42
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 24
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 25
+      },
+      {
+       "where": "within",
+       "edge": [
+        12,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 17
+      },
+      {
+       "where": "within",
+       "edge": [
+        3,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 15
+      },
+      {
+       "where": "within",
+       "edge": [
+        5,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 96
+      },
+      {
+       "where": "within",
+       "edge": [
+        12,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 19
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 50
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 18
+      },
+      {
+       "where": "cross",
+       "edge": [
+        7,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 84
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 78
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 58
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 29
+      },
+      {
+       "where": "cross",
+       "edge": [
+        5,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 98
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        5,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 56
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 54
+      },
+      {
+       "where": "within",
+       "edge": [
+        4,
+        7
+       ],
+       "bf": true,
+       "d1": false,
+       "flips": 11
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 53
+      },
+      {
+       "where": "within",
+       "edge": [
+        2,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 80
+      },
+      {
+       "where": "within",
+       "edge": [
+        1,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 86
+      },
+      {
+       "where": "within",
+       "edge": [
+        1,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 102
+      },
+      {
+       "where": "within",
+       "edge": [
+        5,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 58
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 66
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 64
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 92
+      },
+      {
+       "where": "cross",
+       "edge": [
+        6,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 43
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        7
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 69
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 66
+      },
+      {
+       "where": "cross",
+       "edge": [
+        11,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 78
+      }
+     ],
+     [
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 69
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 108
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 29
+      },
+      {
+       "where": "cross",
+       "edge": [
+        7,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 134
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 42
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 78
+      },
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 65
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        2,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 120
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 55
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 82
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 47
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 41
+      },
+      {
+       "where": "within",
+       "edge": [
+        0,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 66
+      },
+      {
+       "where": "within",
+       "edge": [
+        3,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 89
+      },
+      {
+       "where": "within",
+       "edge": [
+        0,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 90
+      },
+      {
+       "where": "cross",
+       "edge": [
+        7,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 12
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 27
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 105
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 29
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 24
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 31
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 113
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        6,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 140
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 159
+      },
+      {
+       "where": "within",
+       "edge": [
+        9,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 50
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 170
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 168
+      },
+      {
+       "where": "within",
+       "edge": [
+        3,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 67
+      },
+      {
+       "where": "within",
+       "edge": [
+        3,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 84
+      },
+      {
+       "where": "within",
+       "edge": [
+        14,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 30
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 122
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 115
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 40
+      },
+      {
+       "where": "cross",
+       "edge": [
+        5,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 106
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 208
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        4
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 161
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 39
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        14,
+        7
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 65
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 28
+      },
+      {
+       "where": "within",
+       "edge": [
+        8,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 126
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        7
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 21
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 54
+      },
+      {
+       "where": "within",
+       "edge": [
+        8,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 152
+      },
+      {
+       "where": "within",
+       "edge": [
+        7,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 263
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        7
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 38
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 10
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 19
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 44
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 35
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 137
+      },
+      {
+       "where": "cross",
+       "edge": [
+        9,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 149
+      },
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 81
+      }
+     ],
+     [
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        1
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 15
+      },
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 22
+      },
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 19
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 6
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        5
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 4
+      },
+      {
+       "where": "cross",
+       "edge": [
+        5,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 36
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        1
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 9
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        10,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 57
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 133
+      },
+      {
+       "where": "within",
+       "edge": [
+        6,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 90
+      },
+      {
+       "where": "within",
+       "edge": [
+        5,
+        6
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 3
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 93
+      },
+      {
+       "where": "within",
+       "edge": [
+        5,
+        10
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 3
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 161
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 87
+      },
+      {
+       "where": "cross",
+       "edge": [
+        11,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 58
+      },
+      {
+       "where": "cross",
+       "edge": [
+        13,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 26
+      },
+      {
+       "where": "cross",
+       "edge": [
+        11,
+        7
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 74
+      },
+      {
+       "where": "cross",
+       "edge": [
+        12,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 22
+      },
+      {
+       "where": "cross",
+       "edge": [
+        3,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 39
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        2,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 15
+      },
+      {
+       "where": "within",
+       "edge": [
+        0,
+        3
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 0
+      },
+      {
+       "where": "within",
+       "edge": [
+        3,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 49
+      },
+      {
+       "where": "within",
+       "edge": [
+        2,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 13
+      },
+      {
+       "where": "within",
+       "edge": [
+        0,
+        2
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 2
+      },
+      {
+       "where": "within",
+       "edge": [
+        3,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 53
+      },
+      {
+       "where": "cross",
+       "edge": [
+        14,
+        6
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 51
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        1
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 13
+      },
+      {
+       "where": "cross",
+       "edge": [
+        9,
+        3
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 169
+      },
+      {
+       "where": "cross",
+       "edge": [
+        13,
+        3
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 55
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 17
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        9
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 4
+      },
+      {
+       "where": "cross",
+       "edge": [
+        5,
+        13
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 3
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        12,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 39
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        9
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 6
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 21
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        9
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 17
+      },
+      {
+       "where": "within",
+       "edge": [
+        11,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 6
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        12
+       ],
+       "bf": true,
+       "d1": false,
+       "flips": 20
+      },
+      {
+       "where": "within",
+       "edge": [
+        12,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 36
+      },
+      {
+       "where": "within",
+       "edge": [
+        9,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 109
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        2
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 29
+      },
+      {
+       "where": "cross",
+       "edge": [
+        3,
+        14
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 47
+      },
+      {
+       "where": "cross",
+       "edge": [
+        3,
+        8
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 58
+      },
+      {
+       "where": "cross",
+       "edge": [
+        7,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 26
+      },
+      {
+       "where": "cross",
+       "edge": [
+        4,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 23
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 54
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        14
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 12
+      }
+     ],
+     [
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 35
+      },
+      {
+       "where": "cross",
+       "edge": [
+        2,
+        10
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 39
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        0
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 54
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 43
+      },
+      {
+       "where": "cross",
+       "edge": [
+        6,
+        13
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 50
+      },
+      {
+       "where": "cross",
+       "edge": [
+        0,
+        9
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 48
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        12
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 11
+      }
+     ],
+     [
+      {
+       "where": "within",
+       "edge": [
+        4,
+        7
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 29
+      },
+      {
+       "where": "within",
+       "edge": [
+        8,
+        5
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 44
+      },
+      {
+       "where": "within",
+       "edge": [
+        4,
+        3
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 36
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        9
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 12
+      },
+      {
+       "where": "within",
+       "edge": [
+        5,
+        8
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 4
+      },
+      {
+       "where": "within",
+       "edge": [
+        8,
+        9
+       ],
+       "bf": true,
+       "d1": false,
+       "flips": 45
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        5
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 15
+      },
+      {
+       "where": "within",
+       "edge": [
+        10,
+        8
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 10
+      },
+      {
+       "where": "cross",
+       "edge": [
+        6,
+        14
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 40
+      },
+      {
+       "where": "cross",
+       "edge": [
+        1,
+        6
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 0
+      },
+      {
+       "where": "cross",
+       "edge": [
+        9,
+        12
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 23
+      },
+      {
+       "where": "cross",
+       "edge": [
+        11,
+        6
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 5
+      },
+      {
+       "where": "cross",
+       "edge": [
+        11,
+        14
+       ],
+       "bf": false,
+       "d1": false,
+       "flips": 3
+      },
+      {
+       "where": "cross",
+       "edge": [
+        10,
+        12
+       ],
+       "bf": false,
+       "d1": true,
+       "flips": 10
+      },
+      {
+       "where": "cross",
+       "edge": [
+        8,
+        11
+       ],
+       "bf": true,
+       "d1": true,
+       "flips": 62
+      }
+     ]
+    ],
+    "fitted_model_fp": 0.03333333333333333,
+    "fitted_model_fp_per_set": [
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      true
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ],
+     [
+      false,
+      false
+     ]
+    ],
+    "per_set": [
+     {
+      "set": 0,
+      "fires_1d": true,
+      "fires_bf": true,
+      "clustered_bf": true,
+      "flagged_1d": [
+       [
+        "138",
+        "208"
+       ]
+      ],
+      "flagged_bf": [
+       [
+        "138",
+        "208"
+       ],
+       [
+        "55",
+        "155"
+       ]
+      ],
+      "committed": [
+       {
+        "pair": [
+         "138",
+         "208"
+        ],
+        "category": "cross",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       },
+       {
+        "pair": [
+         "108",
+         "109"
+        ],
+        "category": "doublet",
+        "kept_1d": false,
+        "kept_bf": false,
+        "adjacent": true
+       }
+      ],
+      "new_under_bf": 1,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 1,
+      "fires_1d": true,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "214",
+        "213"
+       ]
+      ],
+      "flagged_bf": [],
+      "committed": [
+       {
+        "pair": [
+         "214",
+         "213"
+        ],
+        "category": "within",
+        "kept_1d": true,
+        "kept_bf": false,
+        "adjacent": false
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 1
+     },
+     {
+      "set": 2,
+      "fires_1d": true,
+      "fires_bf": true,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "223",
+        "222"
+       ],
+       [
+        "41",
+        "43"
+       ],
+       [
+        "77",
+        "76"
+       ]
+      ],
+      "flagged_bf": [
+       [
+        "223",
+        "222"
+       ],
+       [
+        "41",
+        "43"
+       ],
+       [
+        "77",
+        "76"
+       ]
+      ],
+      "committed": [
+       {
+        "pair": [
+         "41",
+         "43"
+        ],
+        "category": "within",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": true
+       },
+       {
+        "pair": [
+         "77",
+         "76"
+        ],
+        "category": "cross",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       },
+       {
+        "pair": [
+         "223",
+         "222"
+        ],
+        "category": "within",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 3,
+      "fires_1d": false,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 4,
+      "fires_1d": true,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "204",
+        "204_205"
+       ]
+      ],
+      "flagged_bf": [],
+      "committed": [
+       {
+        "pair": [
+         "204",
+         "204_205"
+        ],
+        "category": "within",
+        "kept_1d": true,
+        "kept_bf": false,
+        "adjacent": true
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 1
+     },
+     {
+      "set": 5,
+      "fires_1d": false,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 6,
+      "fires_1d": false,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 7,
+      "fires_1d": true,
+      "fires_bf": true,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "249",
+        "250"
+       ]
+      ],
+      "flagged_bf": [
+       [
+        "249",
+        "250"
+       ]
+      ],
+      "committed": [
+       {
+        "pair": [
+         "249",
+         "250"
+        ],
+        "category": "doublet",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 8,
+      "fires_1d": true,
+      "fires_bf": true,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "153",
+        "152"
+       ],
+       [
+        "51",
+        "470"
+       ]
+      ],
+      "flagged_bf": [
+       [
+        "153",
+        "152"
+       ],
+       [
+        "51",
+        "470"
+       ]
+      ],
+      "committed": [
+       {
+        "pair": [
+         "153",
+         "152"
+        ],
+        "category": "within",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       },
+       {
+        "pair": [
+         "51",
+         "470"
+        ],
+        "category": "cross",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 9,
+      "fires_1d": true,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "392",
+        "301_5"
+       ]
+      ],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 1
+     },
+     {
+      "set": 10,
+      "fires_1d": true,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "13",
+        "64"
+       ],
+       [
+        "16",
+        "248_73"
+       ],
+       [
+        "59",
+        "64"
+       ],
+       [
+        "61",
+        "64"
+       ],
+       [
+        "64",
+        "101"
+       ],
+       [
+        "64",
+        "114"
+       ],
+       [
+        "64",
+        "123"
+       ],
+       [
+        "64",
+        "14"
+       ],
+       [
+        "64",
+        "248_73"
+       ],
+       [
+        "64",
+        "64_102"
+       ],
+       [
+        "64",
+        "99"
+       ],
+       [
+        "69",
+        "64"
+       ]
+      ],
+      "flagged_bf": [],
+      "committed": [
+       {
+        "pair": [
+         "16",
+         "248_73"
+        ],
+        "category": "cross",
+        "kept_1d": true,
+        "kept_bf": false,
+        "adjacent": false
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 12
+     },
+     {
+      "set": 11,
+      "fires_1d": false,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 12,
+      "fires_1d": true,
+      "fires_bf": true,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "40",
+        "48"
+       ]
+      ],
+      "flagged_bf": [
+       [
+        "40",
+        "48"
+       ]
+      ],
+      "committed": [
+       {
+        "pair": [
+         "40",
+         "48"
+        ],
+        "category": "cross",
+        "kept_1d": true,
+        "kept_bf": true,
+        "adjacent": false
+       }
+      ],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 13,
+      "fires_1d": false,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 0
+     },
+     {
+      "set": 14,
+      "fires_1d": true,
+      "fires_bf": false,
+      "clustered_bf": false,
+      "flagged_1d": [
+       [
+        "1_2",
+        "245"
+       ]
+      ],
+      "flagged_bf": [],
+      "committed": [],
+      "new_under_bf": 0,
+      "lost_under_bf": 1
+     }
+    ],
+    "survival": {
+     "within": {
+      "committed": 5,
+      "kept_1d": 5,
+      "kept_bf_of_kept_1d": 3,
+      "kept_bf_all": 3,
+      "survival": 0.6,
+      "survival_ci95": [
+       0.14663279963467318,
+       0.9472550494736831
+      ]
+     },
+     "doublet": {
+      "committed": 2,
+      "kept_1d": 1,
+      "kept_bf_of_kept_1d": 1,
+      "kept_bf_all": 1,
+      "survival": 1.0,
+      "survival_ci95": [
+       0.025000000000000022,
+       1.0
+      ]
+     },
+     "cross": {
+      "committed": 5,
+      "kept_1d": 5,
+      "kept_bf_of_kept_1d": 4,
+      "kept_bf_all": 4,
+      "survival": 0.8,
+      "survival_ci95": [
+       0.28358206388191054,
+       0.9949492366205319
+      ]
+     }
+    },
+    "adjacency": {
+     "1d": {
+      "flagged": 24,
+      "adjacent": 3,
+      "rate": 0.125,
+      "expected_rate": 0.038837500000000004,
+      "p": 0.054094590540945904
+     },
+     "bf": {
+      "flagged": 9,
+      "adjacent": 1,
+      "rate": 0.1111111111111111,
+      "expected_rate": 0.019200000000000002,
+      "p": 0.16058394160583941
+     }
+    },
+    "sets_firing_1d": 10,
+    "sets_firing_bf": 5,
+    "flagged_1d": 24,
+    "flagged_bf": 9,
+    "verdict_bf_scan": {
+     "verdict": "PAIRWISE LOCAL DEPENDENCE BEYOND ONE TRAIT",
+     "reason": "",
+     "binomial_p": 0.0006146828696831205,
+     "chance_rate": 0.05
+    },
+    "verdict_1d_scan": {
+     "verdict": "PAIRWISE LOCAL DEPENDENCE BEYOND ONE TRAIT",
+     "reason": "",
+     "binomial_p": 2.3244544976806647e-10,
+     "chance_rate": 0.05
+    },
+    "verdict": "MIXED",
+    "verdict_reason": "within survival 0.600; BF adjacency p 0.1606; BF scan PAIRWISE LOCAL DEPENDENCE BEYOND ONE TRAIT"
+   }
+  },
+  "assist12": {
+   "a": {
+    "sets": 2,
+    "reproduction": [
+     {
+      "set": 0,
+      "scanned": 120,
+      "scanned_committed": 120,
+      "critical_z": -3.7428564578158747,
+      "critical_z_committed": -3.7428564578158747,
+      "a_max_diff": 0.00043539040094087156
+     },
+     {
+      "set": 1,
+      "scanned": 202,
+      "scanned_committed": 202,
+      "critical_z": -3.8099066515951354,
+      "critical_z_committed": -3.8099066515951354,
+      "a_max_diff": 0.00033549831325041524
+     }
+    ],
+    "floor": {
+     "pairscan": {
+      "pair_median": 0.7,
+      "gate_median": 0.6,
+      "pair_per_set": [
+       0.6666666666666666,
+       0.7333333333333333
+      ],
+      "gate_per_set": [
+       0.7333333333333333,
+       0.4666666666666667
+      ]
+     },
+     "g2": {
+      "pair_median": 0.5,
+      "gate_median": 0.3666666666666667,
+      "pair_per_set": [
+       0.4,
+       0.6
+      ],
+      "gate_per_set": [
+       0.2,
+       0.5333333333333333
+      ]
+     },
+     "x2": {
+      "pair_median": 0.3333333333333333,
+      "gate_median": 0.23333333333333334,
+      "pair_per_set": [
+       0.13333333333333333,
+       0.5333333333333333
+      ],
+      "gate_per_set": [
+       0.06666666666666667,
+       0.4
+      ]
+     },
+     "q3": {
+      "pair_median": 0.5,
+      "gate_median": 0.33333333333333337,
+      "pair_per_set": [
+       0.4,
+       0.6
+      ],
+      "gate_per_set": [
+       0.26666666666666666,
+       0.4
+      ]
+     }
+    },
+    "fitted_model_fp": {
+     "pairscan": 0.0,
+     "g2": 0.25,
+     "x2": 0.25,
+     "q3": 0.25
+    },
+    "fitted_model_fp_per_set": [
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": true
+      }
+     ],
+     [
+      {
+       "pairscan": false,
+       "g2": false,
+       "x2": false,
+       "q3": false
+      },
+      {
+       "pairscan": false,
+       "g2": true,
+       "x2": true,
+       "q3": false
+      }
+     ]
+    ],
+    "control_scale": {
+     "null_hamming_median": 970.1
+    },
+    "per_set": [
+     {
+      "set": 0,
+      "learners": 242,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": false,
+       "clustered": false,
+       "flagged": 0,
+       "significant": 0,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     },
+     {
+      "set": 1,
+      "learners": 272,
+      "committed_fires": false,
+      "committed_flagged": [],
+      "pairscan": {
+       "fires": false,
+       "any": true,
+       "clustered": true,
+       "flagged": 0,
+       "significant": 3,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "g2": {
+       "fires": false,
+       "any": true,
+       "clustered": true,
+       "flagged": 0,
+       "significant": 3,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "x2": {
+       "fires": false,
+       "any": true,
+       "clustered": true,
+       "flagged": 0,
+       "significant": 3,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      },
+      "q3": {
+       "fires": false,
+       "any": true,
+       "clustered": true,
+       "flagged": 0,
+       "significant": 3,
+       "overlap": 0,
+       "jaccard": null,
+       "pairs": []
+      }
+     }
+    ],
+    "summary": {
+     "pairscan": {
+      "sets_firing": 0,
+      "scored": 2,
+      "flagged_pairs": 0,
+      "overlap_with_committed": 0,
+      "committed_pairs": 0,
+      "pooled_jaccard": null,
+      "pooled_jaccard_ci95_sets": [
+       null,
+       null
+      ],
+      "set_verdict_agreement": 1.0,
+      "set_verdict_kappa": null,
+      "verdict": "UNANSWERABLE",
+      "reason": "floor fails",
+      "binomial_p": 0.9999999999999999,
+      "chance_rate": 0.05,
+      "adjacency": null
+     },
+     "g2": {
+      "sets_firing": 0,
+      "scored": 2,
+      "flagged_pairs": 0,
+      "overlap_with_committed": 0,
+      "committed_pairs": 0,
+      "pooled_jaccard": null,
+      "pooled_jaccard_ci95_sets": [
+       null,
+       null
+      ],
+      "set_verdict_agreement": 1.0,
+      "set_verdict_kappa": null,
+      "verdict": "UNANSWERABLE",
+      "reason": "floor fails",
+      "binomial_p": 1.0,
+      "chance_rate": 0.25,
+      "adjacency": null
+     },
+     "x2": {
+      "sets_firing": 0,
+      "scored": 2,
+      "flagged_pairs": 0,
+      "overlap_with_committed": 0,
+      "committed_pairs": 0,
+      "pooled_jaccard": null,
+      "pooled_jaccard_ci95_sets": [
+       null,
+       null
+      ],
+      "set_verdict_agreement": 1.0,
+      "set_verdict_kappa": null,
+      "verdict": "UNANSWERABLE",
+      "reason": "floor fails",
+      "binomial_p": 1.0,
+      "chance_rate": 0.25,
+      "adjacency": null
+     },
+     "q3": {
+      "sets_firing": 0,
+      "scored": 2,
+      "flagged_pairs": 0,
+      "overlap_with_committed": 0,
+      "committed_pairs": 0,
+      "pooled_jaccard": null,
+      "pooled_jaccard_ci95_sets": [
+       null,
+       null
+      ],
+      "set_verdict_agreement": 1.0,
+      "set_verdict_kappa": null,
+      "verdict": "UNANSWERABLE",
+      "reason": "floor fails",
+      "binomial_p": 1.0,
+      "chance_rate": 0.25,
+      "adjacency": null
+     }
+    }
+   }
+  }
+ }
+}

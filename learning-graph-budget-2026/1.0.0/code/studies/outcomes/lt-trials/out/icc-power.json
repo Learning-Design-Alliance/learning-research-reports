@@ -1,0 +1,155 @@
+{
+ "formula": "J = 2 Z^2 / d^2 [rho eta_B + (1 - rho) eta_W / m]; two arms, alpha 0.05 two-sided, power 0.80, normal approximation (as order-swap-remnant/remnant.py)",
+ "Z": 2.8015852181129683,
+ "m_values": [
+  13,
+  20,
+  12.0
+ ],
+ "trial_median_class_size": 12.0,
+ "rho_used": {
+  "length_trial_icc_point": 0.39487607461350255,
+  "length_trial_icc_lo90": 0.22554334539548201,
+  "length_trial_icc_hi90": 0.5821759028189113,
+  "length_trial_icc_point_with_pretest": 0.39487607461350255
+ },
+ "eta_B": 0.6904943439264446,
+ "eta_W": 0.8704101121125689,
+ "classes_per_arm": {
+  "0.05": {
+   "length_trial_icc_point": {
+    "m=13": 2772,
+    "m=20": 2670,
+    "m=12": 2797
+   },
+   "length_trial_icc_lo90": {
+    "m=13": 1791,
+    "m=20": 1660,
+    "m=12": 1822
+   },
+   "length_trial_icc_hi90": {
+    "m=13": 3858,
+    "m=20": 3787,
+    "m=12": 3875
+   },
+   "length_trial_icc_point_with_pretest": {
+    "m=13": 1967,
+    "m=20": 1878,
+    "m=12": 1988
+   },
+   "power_json_classroom_rows_m13_m20": {
+    "this_experiment_ptm_rho": {
+     "m=13": 1040,
+     "m=20": 887
+    },
+    "this_experiment_ptm_rho_with_remnant": {
+     "m=13": 965,
+     "m=20": 839
+    },
+    "hedges_hedberg_rho_0.15": {
+     "m=13": 1353,
+     "m=20": 1209
+    },
+    "hedges_hedberg_rho_0.25": {
+     "m=13": 1933,
+     "m=20": 1806
+    },
+    "hedges_hedberg_rho_0.239_pretest_etaB_0.210_etaW_0.360": {
+     "m=13": 448,
+     "m=20": 402
+    }
+   }
+  },
+  "0.1": {
+   "length_trial_icc_point": {
+    "m=13": 693,
+    "m=20": 668,
+    "m=12": 700
+   },
+   "length_trial_icc_lo90": {
+    "m=13": 448,
+    "m=20": 415,
+    "m=12": 456
+   },
+   "length_trial_icc_hi90": {
+    "m=13": 965,
+    "m=20": 947,
+    "m=12": 969
+   },
+   "length_trial_icc_point_with_pretest": {
+    "m=13": 492,
+    "m=20": 470,
+    "m=12": 497
+   },
+   "power_json_classroom_rows_m13_m20": {
+    "this_experiment_ptm_rho": {
+     "m=13": 260,
+     "m=20": 222
+    },
+    "this_experiment_ptm_rho_with_remnant": {
+     "m=13": 242,
+     "m=20": 210
+    },
+    "hedges_hedberg_rho_0.15": {
+     "m=13": 339,
+     "m=20": 303
+    },
+    "hedges_hedberg_rho_0.25": {
+     "m=13": 484,
+     "m=20": 452
+    },
+    "hedges_hedberg_rho_0.239_pretest_etaB_0.210_etaW_0.360": {
+     "m=13": 112,
+     "m=20": 101
+    }
+   }
+  },
+  "0.3": {
+   "length_trial_icc_point": {
+    "m=13": 77,
+    "m=20": 75,
+    "m=12": 78
+   },
+   "length_trial_icc_lo90": {
+    "m=13": 50,
+    "m=20": 47,
+    "m=12": 51
+   },
+   "length_trial_icc_hi90": {
+    "m=13": 108,
+    "m=20": 106,
+    "m=12": 108
+   },
+   "length_trial_icc_point_with_pretest": {
+    "m=13": 55,
+    "m=20": 53,
+    "m=12": 56
+   },
+   "power_json_classroom_rows_m13_m20": {
+    "this_experiment_ptm_rho": {
+     "m=13": 29,
+     "m=20": 25
+    },
+    "this_experiment_ptm_rho_with_remnant": {
+     "m=13": 27,
+     "m=20": 24
+    },
+    "hedges_hedberg_rho_0.15": {
+     "m=13": 38,
+     "m=20": 34
+    },
+    "hedges_hedberg_rho_0.25": {
+     "m=13": 54,
+     "m=20": 51
+    },
+    "hedges_hedberg_rho_0.239_pretest_etaB_0.210_etaW_0.360": {
+     "m=13": 13,
+     "m=20": 12
+    }
+   }
+  }
+ },
+ "replacement_rule_verdict": "PLANNING VALUES STAND",
+ "conservative_case": "length_trial_icc_hi90",
+ "source_not_modified": "studies/outcomes/order-swap-remnant/out/power.json"
+}

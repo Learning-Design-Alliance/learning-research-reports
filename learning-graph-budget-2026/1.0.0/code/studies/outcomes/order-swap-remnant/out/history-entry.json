@@ -1,0 +1,6 @@
+{
+ "date": "2026-10-07",
+ "study": "studies/outcomes/order-swap-remnant (remnant.py) -- remnant-adjusted PSABANRN and edge-release power",
+ "moved": {},
+ "note": "Floor PASS (planted T1-T3 -1.0 recovered unbiased; useless covariate ratio 1.005; null rejection 0.075). Remnant model (ridge on pre-experiment priors, fitted on non-participants in the other 87 osf-59shv experiments) used as covariate in a ReLOOP-style estimator, randomization inference over students. PSABANRN problems to mastery: adjusted omnibus p 0.0013 (unadjusted re-run 0.0047); T1-T3 -1.4737 [-2.1558, -0.8093] vs -1.4947 [-2.2417, -0.7558] unadjusted (90% bootstrap over students within arm); variance ratio 0.828 (median over pairs 0.837; completion 0.843). Deranged-covariate control 0.984. ORDER MATTERS, VERDICT UNCHANGED; T1-T3 CONFIRMED; PRECISION GAIN. Class ICC 0.096 [0.057, 0.136] (65 classes); learner ICC of first-attempt correctness 0.149. At 0.10 SD: 1,570 learners per arm (1,301 with remnant), 222-260 classes per arm at this ICC, 2,673 randomized encounters; arm_power.json's 291-385 is for an absolute 0.10 (0.20-0.23 SD). Mastery-requirement experiments identify no next skill in-row; linkage only through shared student ids (noted, not run). Moves nothing."
+}

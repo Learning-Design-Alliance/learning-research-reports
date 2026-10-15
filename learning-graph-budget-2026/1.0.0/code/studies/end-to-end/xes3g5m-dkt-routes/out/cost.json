@@ -1,0 +1,50 @@
+{
+ "gpu": "NVIDIA GeForce RTX 4090",
+ "billed_per_hour_usd": 0.89,
+ "timing_check_cost_usd_approx": 0.25,
+ "epoch_seconds": {
+  "simplekt": 12.199885368347168,
+  "akt": 32.31179356575012
+ },
+ "trainings_per_model": {
+  "main": 25,
+  "floor": 10
+ },
+ "overhead": 0.1,
+ "scenarios": [
+  {
+   "name": "fast",
+   "simplekt_epochs": 30,
+   "akt_epochs": 60,
+   "simplekt_hours": 3.5582998991012573,
+   "akt_hours": 18.848546246687572,
+   "gpu_hours": 24.647530760367715,
+   "usd": 21.936302376727266
+  },
+  {
+   "name": "middle",
+   "simplekt_epochs": 60,
+   "akt_epochs": 120,
+   "simplekt_hours": 7.116599798202515,
+   "akt_hours": 37.697092493375145,
+   "gpu_hours": 49.29506152073543,
+   "usd": 43.87260475345453
+  },
+  {
+   "name": "slow",
+   "simplekt_epochs": 120,
+   "akt_epochs": 200,
+   "simplekt_hours": 14.23319959640503,
+   "akt_hours": 62.82848748895857,
+   "gpu_hours": 84.76785579389997,
+   "usd": 75.44339165657097
+  }
+ ],
+ "actual": {
+  "balance_before_usd": 200.0,
+  "balance_after_usd": 187.04,
+  "spent_usd": 12.96,
+  "includes": "timing check, three aborted launches (GPU-device bug, flaky host network, worker contention; synthetic floor data only), simpleKT pod 0.20 h on 2x RTX 4090 ($1.78/h), AKT pod 2.68 h on 4x L40S ($4.36/h)",
+  "real_runs": "not started: both floors failed"
+ }
+}

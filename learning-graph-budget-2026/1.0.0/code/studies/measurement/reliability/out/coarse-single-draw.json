@@ -1,0 +1,87 @@
+{
+  "seed": 20260922,
+  "splits": 8,
+  "pairs": 30000,
+  "gate": 0.8,
+  "min_cell": 5,
+  "min_edges_per_group_pair": 3,
+  "rows": [
+    {
+      "grain": "edge",
+      "groups": 865,
+      "pairs": 30000,
+      "split_half": 0.3111333061672135,
+      "spearman_brown": 0.47460209378211554,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L2",
+      "groups": 53,
+      "pairs": 335,
+      "split_half": 0.28806473298261553,
+      "spearman_brown": 0.44728300621286154,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L3",
+      "groups": 187,
+      "pairs": 550,
+      "split_half": 0.3288594491691864,
+      "spearman_brown": 0.4949499352618398,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L4",
+      "groups": 425,
+      "pairs": 152,
+      "split_half": 0.40237764972694345,
+      "spearman_brown": 0.5738506311838188,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L2 RANDOM",
+      "groups": 53,
+      "pairs": 372,
+      "split_half": 0.28422443911939144,
+      "spearman_brown": 0.44263982285571146,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L3 RANDOM",
+      "groups": 187,
+      "pairs": 459,
+      "split_half": 0.253874023910219,
+      "spearman_brown": 0.40494342983278375,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L4 RANDOM",
+      "groups": 425,
+      "pairs": 80,
+      "split_half": 0.3193361089217365,
+      "spearman_brown": 0.4840860592873831,
+      "meets_gate": false
+    },
+    {
+      "comparison": "L2",
+      "taxonomy": 0.44728300621286154,
+      "random": 0.44263982285571146,
+      "gap": 0.0046431833571500825,
+      "verdict": "AGGREGATION ONLY"
+    },
+    {
+      "comparison": "L3",
+      "taxonomy": 0.4949499352618398,
+      "random": 0.40494342983278375,
+      "gap": 0.09000650542905603,
+      "verdict": "TAXONOMY BEATS RANDOM"
+    },
+    {
+      "comparison": "L4",
+      "taxonomy": 0.5738506311838188,
+      "random": 0.4840860592873831,
+      "gap": 0.08976457189643577,
+      "verdict": "TAXONOMY BEATS RANDOM"
+    }
+  ]
+}

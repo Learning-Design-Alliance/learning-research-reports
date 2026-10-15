@@ -1,0 +1,30 @@
+{
+  "corpus": "ednet-at-scale",
+  "learners": 60308,
+  "items": 30,
+  "n_triples": 12176,
+  "background": 0.059298955602113734,
+  "background_pairs": 858,
+  "null_ratio": 0.9901593069430359,
+  "null_accepted": true,
+  "power": {
+    "0.0593": {
+      "detected": 16673,
+      "of": 48704,
+      "rate": 0.3423332785808147
+    },
+    "0.1": {
+      "detected": 37426,
+      "of": 48704,
+      "rate": 0.7684379106438897
+    },
+    "0.2": {
+      "detected": 47692,
+      "of": 48704,
+      "rate": 0.9792214191852825
+    }
+  },
+  "power_at_own_bar": 0.3423332785808147,
+  "powered": false,
+  "verdict": "UNANSWERABLE"
+}

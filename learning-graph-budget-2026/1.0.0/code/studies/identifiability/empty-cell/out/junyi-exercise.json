@@ -1,0 +1,237 @@
+{
+ "atlas_row": {
+  "dataset": "datashop/ds1275-exercise",
+  "learners": 2063,
+  "items": 631,
+  "edges": 20000,
+  "median_reach": 11.0,
+  "median_identifying": 0.0,
+  "readable": 18,
+  "readable_frac": 0.0009,
+  "mde_median": 0.4894820981319059,
+  "detect_20pt": 0,
+  "detect_20pt_frac": 0.0,
+  "retro_readable": 142,
+  "retro_mde_median": 0.5123466392386924,
+  "supported": 0,
+  "contradicted": 0,
+  "unknown": 20000,
+  "contradicted_before_reachability": 0,
+  "downgraded_unfalsifiable": 0,
+  "downgraded_frac": 0.0,
+  "downgraded_readable_but_unpowered": 0,
+  "decided_frac": 0.0,
+  "drop_n": 18,
+  "drop_median": 0.20436507936507936,
+  "drop_p75": 0.2656565656565656,
+  "background_share": 2.0436507936507935,
+  "kc_model": "KC (Exercise)"
+ },
+ "reading": {
+  "learners": 2063,
+  "pairs": 20000,
+  "coverage_median_N": 1.0,
+  "W_two_way_share": 0.5214626391096979,
+  "unordered_pairs_for_W": 1258,
+  "minority_share_median": 0.3,
+  "pass_through_median_F": 0.0,
+  "ease_median_P1": 0.25,
+  "retry_median_P2": 0.0,
+  "forward": {
+   "label": "COVERAGE-LIMITED",
+   "pairs": 5805,
+   "empty_share": 0.9958656330749354,
+   "binding_shares": {
+    "COVERAGE": 0.9562359453381768,
+    "ORDER": 0.0,
+    "EASE": 0.007438159487977858,
+    "RETRY": 0.03632589517384536
+   },
+   "bands": {
+    "N<5": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 4369,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N5-19": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 1215,
+     "empty_share": 0.9901234567901235,
+     "binding_shares": {
+      "COVERAGE": 0.8985868661679135,
+      "ORDER": 0.0,
+      "EASE": 0.00831255195344971,
+      "RETRY": 0.09310058187863675
+     }
+    },
+    "N20-99": {
+     "label": "MIXED",
+     "pairs": 213,
+     "empty_share": 0.9436619718309859,
+     "binding_shares": {
+      "COVERAGE": 0.3880597014925373,
+      "ORDER": 0.0,
+      "EASE": 0.15920398009950248,
+      "RETRY": 0.4527363184079602
+     }
+    },
+    "N100+": {
+     "label": "RETRY-LIMITED",
+     "pairs": 8,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.125,
+      "RETRY": 0.875
+     }
+    }
+   }
+  },
+  "backward": {
+   "label": "COVERAGE-LIMITED",
+   "pairs": 14195,
+   "empty_share": 0.9990137372314195,
+   "binding_shares": {
+    "COVERAGE": 0.9722163458148226,
+    "ORDER": 0.02228333685917777,
+    "EASE": 0.0004231013327691982,
+    "RETRY": 0.0050772159932303785
+   },
+   "bands": {
+    "N<5": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 12726,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N5-19": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 1255,
+     "empty_share": 0.999203187250996,
+     "binding_shares": {
+      "COVERAGE": 0.7647527910685805,
+      "ORDER": 0.21610845295055822,
+      "EASE": 0.0,
+      "RETRY": 0.019138755980861243
+     }
+    },
+    "N20-99": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 207,
+     "empty_share": 0.9468599033816425,
+     "binding_shares": {
+      "COVERAGE": 0.5153061224489796,
+      "ORDER": 0.22959183673469388,
+      "EASE": 0.02040816326530612,
+      "RETRY": 0.23469387755102042
+     }
+    },
+    "N100+": {
+     "label": "MIXED",
+     "pairs": 7,
+     "empty_share": 0.7142857142857143,
+     "binding_shares": {
+      "COVERAGE": 0.2,
+      "ORDER": 0.0,
+      "EASE": 0.4,
+      "RETRY": 0.4
+     }
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "COVERAGE-LIMITED",
+    "backward": "COVERAGE-LIMITED"
+   },
+   "0.3": {
+    "forward": "COVERAGE-LIMITED",
+    "backward": "COVERAGE-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "difficulty": {
+   "forward": {
+    "EASE": {
+     "pairs": 43,
+     "P1_median": 0.0,
+     "all_learner_miss_median": 0.06802721088435375,
+     "ability_adjusted_median": -0.24209193571569992
+    },
+    "other": {
+     "pairs": 5762,
+     "P1_median": 0.3333333333333333,
+     "all_learner_miss_median": 0.5,
+     "ability_adjusted_median": 0.0858179612054172
+    }
+   },
+   "backward": {
+    "EASE": {
+     "pairs": 6,
+     "P1_median": 0.03835227272727273,
+     "all_learner_miss_median": 0.06468531468531469,
+     "ability_adjusted_median": -0.24647596076227696
+    },
+    "other": {
+     "pairs": 14189,
+     "P1_median": 0.5,
+     "all_learner_miss_median": 0.6285714285714286,
+     "ability_adjusted_median": 0.16226912974904495
+    }
+   }
+  },
+  "decided_share": 0.0,
+  "funnel": {
+   "reached": {
+    "COVERAGE": 20000,
+    "CELL": 2905,
+    "READABILITY": 38,
+    "POWER": 18,
+    "GATE": 0
+   },
+   "passed": {
+    "COVERAGE": 2905,
+    "CELL": 38,
+    "READABILITY": 18,
+    "POWER": 0,
+    "GATE": 0
+   },
+   "pass_rates": {
+    "COVERAGE": 0.14525,
+    "CELL": 0.013080895008605853,
+    "READABILITY": 0.47368421052631576,
+    "POWER": 0.0,
+    "GATE": null
+   },
+   "binding_stage": "POWER",
+   "pre_gate": {
+    "supported": 0,
+    "would_be_contradicted": 0
+   },
+   "size": {
+    "median_identifying_cell_readable": 7.5,
+    "median_control_accuracy": 0.7339544513457557,
+    "per_group_n_for_mde_0.10": 336
+   },
+   "ability": {
+    "supported": 0,
+    "survive": 0,
+    "share_survive": null,
+    "verdict": "NOT TESTABLE (TOO FEW VERDICTS)"
+   },
+   "matches_atlas": true
+  }
+ }
+}

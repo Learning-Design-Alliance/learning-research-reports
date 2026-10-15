@@ -1,0 +1,782 @@
+{
+ "passed": true,
+ "lean_floor_passed": true,
+ "checks": {
+  "exactness": true,
+  "mech_seed1": true,
+  "mech_seed2": true,
+  "subst_seed1": true,
+  "subst_seed2": true,
+  "X1_all_worlds_exact_and_every_branch": true
+ },
+ "detail": {
+  "exactness": {
+   "X1_engine_equals_replica": true,
+   "X1_mismatches": 0,
+   "X1_states_seen": [
+    "supported",
+    "unfalsifiable",
+    "unpowered"
+   ],
+   "X2_excl_equals_atlas_functions": true,
+   "X2_edges": 40,
+   "X2_mismatches": 0,
+   "X2_states_seen": [
+    "supported",
+    "unfalsifiable",
+    "unpowered"
+   ],
+   "X3_pool_covariates_exact": true,
+   "X3_mismatches": 0
+  },
+  "mech_seed1": {
+   "verdict": "MECHANICAL: the gap vanishes once shared-item responses are excluded and coverage and difficulty are matched",
+   "verdict_gES": "UNANSWERABLE: NO COMMON SUPPORT",
+   "gaps": {
+    "g0": {
+     "point": 0.5581958762886597,
+     "lo": 0.5182312284160905,
+     "hi": 0.5964638769523509,
+     "a": 0.955,
+     "b": 0.3968041237113402
+    },
+    "gE": {
+     "point": -0.0018041237113401998,
+     "lo": -0.06876816250267746,
+     "hi": 0.06311170743516369,
+     "a": 0.395,
+     "b": 0.3968041237113402
+    },
+    "gM": {
+     "point": 0.16216216216216217,
+     "lo": 0.05555555555555558,
+     "hi": 0.28206521739130436,
+     "a": 1.0,
+     "b": 0.8378378378378378
+    },
+    "gEM": {
+     "point": 0.0,
+     "lo": -0.10485858700590642,
+     "hi": 0.10769607843137255,
+     "a": 0.4492753623188406,
+     "b": 0.4492753623188406
+    },
+    "gES": {
+     "point": -0.4324324324324324,
+     "lo": -0.6042410714285715,
+     "hi": -0.23997826086956522,
+     "a": 0.40540540540540543,
+     "b": 0.8378378378378378
+    },
+    "share_explained": {
+     "point": 1.0,
+     "lo": 0.8047134960544284,
+     "hi": 1.1861411538856603
+    }
+   },
+   "decided_share": {
+    "treated_raw": 0.955,
+    "treated_excl": 0.395,
+    "treated_to_a": 0.74,
+    "treated_to_b": 0.95,
+    "baseline": 0.3968041237113402
+   },
+   "matching": {
+    "m_matched": 37,
+    "em_matched": 138,
+    "m_unmatched_share": 0.815,
+    "em_unmatched_share": 0.31000000000000005,
+    "sd": [
+     0.5005107352202239,
+     0.10769450320078583,
+     0.056735692663556235,
+     0.06409685618056934
+    ],
+    "caliper_sd": 0.5,
+    "smd_m": [
+     0.025967510073585862,
+     0.11201755729007253,
+     -0.2870998595781657,
+     0.02488299034923557
+    ],
+    "smd_em": [
+     -0.033489391944365295,
+     -0.05059159950884245,
+     0.2027269850821748,
+     -0.04410111862402674
+    ],
+    "smd_before": [
+     0.6977037327625895,
+     2.165141003357488,
+     -1.0648886259751513,
+     -1.0948175299696254
+    ]
+   },
+   "lean": {
+    "raw": {
+     "point": 0.02879921214322345,
+     "lo": 0.011429724057827847,
+     "hi": 0.04626370073891626,
+     "a": 0.9947643979057592,
+     "b": 0.9659651857625358
+    },
+    "raw_verdict": "LEANS SUPPORTED",
+    "em": {
+     "point": -0.016129032258064502,
+     "lo": -0.09090909090909094,
+     "hi": 0.07861811928874747,
+     "a": 0.9516129032258065,
+     "b": 0.967741935483871
+    },
+    "em_verdict": "NO DETECTED LEAN"
+   },
+   "positivity": {
+    "failed_cell_share": {
+     "point": 0.0033708605270671987,
+     "lo": -9.709474610062071e-06,
+     "hi": 0.006903199539242513,
+     "a": 0.03641565373212383,
+     "b": 0.033044793205056634
+    }
+   },
+   "sized": {
+    "treatment_median_share_removed": 0.25559046744644764,
+    "control_median_share_removed": 0.24780381139380098,
+    "ratio_quartiles": [
+     0.8321094169704977,
+     0.9455718741828267,
+     1.0109147370247065
+    ],
+    "passes_check_control_scale": true,
+    "report": "control scale: median treatment 26, control_median 25 (0.97x)"
+   },
+   "mechanism": {
+    "mean_cells_raw_m_f_n": [
+     1607.705,
+     835.8,
+     7544.1
+    ],
+    "mean_cells_excl_m_f_n": [
+     1745.875,
+     301.97,
+     7057.655
+    ],
+    "share_B_reachers_first_B_on_shared_item": 0.1848245900794034,
+    "share_B_reachers_tied_raw": 0.09740973937195153,
+    "share_B_reachers_tied_excl": 0.0,
+    "share_coattempters_only_through_shared": 0.3010648645881329,
+    "median_share_of_B_events_removed": 0.14839230971414222,
+    "median_share_of_A_events_removed": 0.14839230971414222,
+    "cell_transition_raw_to_excl": {
+     "order": [
+      "mastered",
+      "failed",
+      "never",
+      "absent"
+     ],
+     "counts": [
+      [
+       292503,
+       0,
+       0,
+       29038
+      ],
+      [
+       28850,
+       59834,
+       0,
+       78476
+      ],
+      [
+       27822,
+       560,
+       1411531,
+       68907
+      ],
+      [
+       0,
+       0,
+       0,
+       2002479
+      ]
+     ]
+    },
+    "supported_raw": 190,
+    "supported_raw_surviving_excl": 76
+   },
+   "X1": {
+    "pairs": 9900,
+    "mismatches": 0,
+    "states_seen": [
+     "contradicted",
+     "supported",
+     "unfalsifiable",
+     "unpowered",
+     "unreadable"
+    ]
+   }
+  },
+  "mech_seed2": {
+   "verdict": "MECHANICAL: the gap vanishes once shared-item responses are excluded and coverage and difficulty are matched",
+   "verdict_gES": "UNANSWERABLE: NO COMMON SUPPORT",
+   "gaps": {
+    "g0": {
+     "point": 0.5746907216494845,
+     "lo": 0.53137172429311,
+     "hi": 0.6170548641925395,
+     "a": 0.955,
+     "b": 0.3803092783505155
+    },
+    "gE": {
+     "point": 0.0346907216494845,
+     "lo": -0.03344104698088599,
+     "hi": 0.10613144917305664,
+     "a": 0.415,
+     "b": 0.3803092783505155
+    },
+    "gM": {
+     "point": 0.12244897959183676,
+     "lo": 0.03998039215686278,
+     "hi": 0.21818181818181814,
+     "a": 1.0,
+     "b": 0.8775510204081632
+    },
+    "gEM": {
+     "point": 0.03597122302158273,
+     "lo": -0.056344671804411356,
+     "hi": 0.13768740629685158,
+     "a": 0.4748201438848921,
+     "b": 0.43884892086330934
+    },
+    "gES": {
+     "point": -0.28571428571428564,
+     "lo": -0.4595114345114345,
+     "hi": -0.11362564322469974,
+     "a": 0.46938775510204084,
+     "b": 0.7551020408163265
+    },
+    "share_explained": {
+     "point": 0.9374076844005108,
+     "lo": 0.7629246262460196,
+     "hi": 1.0989202712836221
+    }
+   },
+   "decided_share": {
+    "treated_raw": 0.955,
+    "treated_excl": 0.415,
+    "treated_to_a": 0.695,
+    "treated_to_b": 0.955,
+    "baseline": 0.3803092783505155
+   },
+   "matching": {
+    "m_matched": 49,
+    "em_matched": 139,
+    "m_unmatched_share": 0.755,
+    "em_unmatched_share": 0.30500000000000005,
+    "sd": [
+     0.6018699085789121,
+     0.12686611610914464,
+     0.052920846714275,
+     0.0609195089474976
+    ],
+    "caliper_sd": 0.5,
+    "smd_m": [
+     0.07551463167375329,
+     0.07298250539438825,
+     -0.24224411575348068,
+     0.056633932471266184
+    ],
+    "smd_em": [
+     -0.013078150323594061,
+     -0.09008944586533076,
+     0.16482324449127472,
+     -0.03535407511310993
+    ],
+    "smd_before": [
+     0.6826741397516741,
+     1.7629626806936172,
+     -1.022077738481104,
+     -1.0521906805722794
+    ]
+   },
+   "lean": {
+    "raw": {
+     "point": 0.027022462421888216,
+     "lo": 0.00926293750125858,
+     "hi": 0.044318004961978484,
+     "a": 0.9947643979057592,
+     "b": 0.967741935483871
+    },
+    "raw_verdict": "LEANS SUPPORTED",
+    "em": {
+     "point": -0.011425732737208039,
+     "lo": -0.06932625901564643,
+     "hi": 0.04446231570264969,
+     "a": 0.9393939393939394,
+     "b": 0.9508196721311475
+    },
+    "em_verdict": "NO DETECTED LEAN"
+   },
+   "positivity": {
+    "failed_cell_share": {
+     "point": 0.008170114257721874,
+     "lo": 0.005004403929526861,
+     "hi": 0.011494825532162826,
+     "a": 0.03670820279122757,
+     "b": 0.028538088533505698
+    }
+   },
+   "sized": {
+    "treatment_median_share_removed": 0.26688650281279214,
+    "control_median_share_removed": 0.28145619122586196,
+    "ratio_quartiles": [
+     0.9037764421338025,
+     1.0037019937101155,
+     1.1472181708124143
+    ],
+    "passes_check_control_scale": true,
+    "report": "control scale: median treatment 27, control_median 28 (1.05x)"
+   },
+   "mechanism": {
+    "mean_cells_raw_m_f_n": [
+     1738.315,
+     915.575,
+     7797.1
+    ],
+    "mean_cells_excl_m_f_n": [
+     1898.825,
+     346.83,
+     7283.625
+    ],
+    "share_B_reachers_first_B_on_shared_item": 0.18894143042907896,
+    "share_B_reachers_tied_raw": 0.09826341810680136,
+    "share_B_reachers_tied_excl": 0.0,
+    "share_coattempters_only_through_shared": 0.29100214215917647,
+    "median_share_of_B_events_removed": 0.1468049132478993,
+    "median_share_of_A_events_removed": 0.1468049132478993,
+    "cell_transition_raw_to_excl": {
+     "order": [
+      "mastered",
+      "failed",
+      "never",
+      "absent"
+     ],
+     "counts": [
+      [
+       315473,
+       0,
+       0,
+       32190
+      ],
+      [
+       33397,
+       68769,
+       0,
+       80949
+      ],
+      [
+       30895,
+       597,
+       1456725,
+       71203
+      ],
+      [
+       0,
+       0,
+       0,
+       1909802
+      ]
+     ]
+    },
+    "supported_raw": 190,
+    "supported_raw_surviving_excl": 79
+   },
+   "X1": {
+    "pairs": 9900,
+    "mismatches": 0,
+    "states_seen": [
+     "contradicted",
+     "supported",
+     "unfalsifiable",
+     "unpowered",
+     "unreadable"
+    ]
+   }
+  },
+  "subst_seed1": {
+   "verdict": "MIXED: part of the gap is mechanical, a same-sign remainder survives",
+   "verdict_gES": "UNANSWERABLE: NO COMMON SUPPORT",
+   "gaps": {
+    "g0": {
+     "point": 0.5574742268041237,
+     "lo": 0.5138255545920286,
+     "hi": 0.6054660860920409,
+     "a": 0.925,
+     "b": 0.3675257731958763
+    },
+    "gE": {
+     "point": 0.1474742268041237,
+     "lo": 0.07989698142750448,
+     "hi": 0.2216324464180036,
+     "a": 0.515,
+     "b": 0.3675257731958763
+    },
+    "gM": {
+     "point": 0.12121212121212122,
+     "lo": -0.03125,
+     "hi": 0.2941176470588235,
+     "a": 0.9696969696969697,
+     "b": 0.8484848484848485
+    },
+    "gEM": {
+     "point": 0.11764705882352938,
+     "lo": 0.03423500555349873,
+     "hi": 0.21978216818642354,
+     "a": 0.5359477124183006,
+     "b": 0.41830065359477125
+    },
+    "gES": {
+     "point": -0.393939393939394,
+     "lo": -0.6000000000000001,
+     "hi": -0.13333333333333341,
+     "a": 0.42424242424242425,
+     "b": 0.8181818181818182
+    },
+    "share_explained": {
+     "point": 0.7889641293410569,
+     "lo": 0.6047087935704061,
+     "hi": 0.9391118830681554
+    }
+   },
+   "decided_share": {
+    "treated_raw": 0.925,
+    "treated_excl": 0.515,
+    "treated_to_a": 0.735,
+    "treated_to_b": 0.925,
+    "baseline": 0.3675257731958763
+   },
+   "matching": {
+    "m_matched": 33,
+    "em_matched": 153,
+    "m_unmatched_share": 0.835,
+    "em_unmatched_share": 0.235,
+    "sd": [
+     0.5043313471890606,
+     0.10897294423982566,
+     0.03673325980941234,
+     0.04268582062637029
+    ],
+    "caliper_sd": 0.5,
+    "smd_m": [
+     0.05563625079729752,
+     0.0948380115741284,
+     -0.2512702169007475,
+     -0.04308841685421444
+    ],
+    "smd_em": [
+     0.005872773365424981,
+     -0.023826969725040746,
+     0.08976610251185428,
+     -0.0339110596265496
+    ],
+    "smd_before": [
+     0.6932601234670412,
+     2.143497144036019,
+     -1.1175105757975368,
+     -1.040773660678759
+    ]
+   },
+   "lean": {
+    "raw": {
+     "point": 0.0042075736325385416,
+     "lo": 0.0016932643561116845,
+     "hi": 0.00743925208389126,
+     "a": 1.0,
+     "b": 0.9957924263674615
+    },
+    "raw_verdict": "LEANS SUPPORTED",
+    "em": {
+     "point": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "a": 1.0,
+     "b": 1.0
+    },
+    "em_verdict": "NO DETECTED LEAN"
+   },
+   "positivity": {
+    "failed_cell_share": {
+     "point": 0.010060478807376986,
+     "lo": 0.007697702696803428,
+     "hi": 0.012741014425206669,
+     "a": 0.03237525969412104,
+     "b": 0.022314780886744056
+    }
+   },
+   "sized": {
+    "treatment_median_share_removed": 0.2479781125581103,
+    "control_median_share_removed": 0.26737872921840244,
+    "ratio_quartiles": [
+     0.967522426986363,
+     1.0459473675201265,
+     1.1325079927684445
+    ],
+    "passes_check_control_scale": true,
+    "report": "control scale: median treatment 25, control_median 27 (1.08x)"
+   },
+   "mechanism": {
+    "mean_cells_raw_m_f_n": [
+     1724.38,
+     716.315,
+     7541.665
+    ],
+    "mean_cells_excl_m_f_n": [
+     1761.19,
+     286.985,
+     7058.0
+    ],
+    "share_B_reachers_first_B_on_shared_item": 0.18352022968516463,
+    "share_B_reachers_tied_raw": 0.09690393854759796,
+    "share_B_reachers_tied_excl": 0.0,
+    "share_coattempters_only_through_shared": 0.29961598435213177,
+    "median_share_of_B_events_removed": 0.14916835341048834,
+    "median_share_of_A_events_removed": 0.14916835341048834,
+    "cell_transition_raw_to_excl": {
+     "order": [
+      "mastered",
+      "failed",
+      "never",
+      "absent"
+     ],
+     "counts": [
+      [
+       307090,
+       0,
+       0,
+       37786
+      ],
+      [
+       19983,
+       55028,
+       0,
+       68252
+      ],
+      [
+       25165,
+       2369,
+       1411600,
+       69199
+      ],
+      [
+       0,
+       0,
+       0,
+       2003528
+      ]
+     ]
+    },
+    "supported_raw": 185,
+    "supported_raw_surviving_excl": 103
+   },
+   "X1": {
+    "pairs": 9900,
+    "mismatches": 0,
+    "states_seen": [
+     "contradicted",
+     "supported",
+     "unfalsifiable",
+     "unpowered",
+     "unreadable"
+    ]
+   }
+  },
+  "subst_seed2": {
+   "verdict": "MIXED: part of the gap is mechanical, a same-sign remainder survives",
+   "verdict_gES": "UNANSWERABLE: NO COMMON SUPPORT",
+   "gaps": {
+    "g0": {
+     "point": 0.530979381443299,
+     "lo": 0.4773709776642319,
+     "hi": 0.581452541441149,
+     "a": 0.895,
+     "b": 0.36402061855670104
+    },
+    "gE": {
+     "point": 0.19597938144329902,
+     "lo": 0.11621489811445447,
+     "hi": 0.2755890466622834,
+     "a": 0.56,
+     "b": 0.36402061855670104
+    },
+    "gM": {
+     "point": 0.023809523809523836,
+     "lo": 0.0,
+     "hi": 0.07697368421052622,
+     "a": 0.9761904761904762,
+     "b": 0.9523809523809523
+    },
+    "gEM": {
+     "point": 0.18709677419354842,
+     "lo": 0.09700890707751571,
+     "hi": 0.27172970843183597,
+     "a": 0.5741935483870968,
+     "b": 0.3870967741935484
+    },
+    "gES": {
+     "point": -0.19047619047619047,
+     "lo": -0.39409090909090905,
+     "hi": 0.0,
+     "a": 0.6904761904761905,
+     "b": 0.8809523809523809
+    },
+    "share_explained": {
+     "point": 0.6476383439127426,
+     "lo": 0.4846887582046918,
+     "hi": 0.8150232243849705
+    }
+   },
+   "decided_share": {
+    "treated_raw": 0.895,
+    "treated_excl": 0.56,
+    "treated_to_a": 0.725,
+    "treated_to_b": 0.895,
+    "baseline": 0.36402061855670104
+   },
+   "matching": {
+    "m_matched": 42,
+    "em_matched": 155,
+    "m_unmatched_share": 0.79,
+    "em_unmatched_share": 0.22499999999999998,
+    "sd": [
+     0.6002846322244643,
+     0.12658995563166436,
+     0.03492841464501069,
+     0.04083945425399851
+    ],
+    "caliper_sd": 0.5,
+    "smd_m": [
+     0.04279242559569721,
+     0.15232981886187694,
+     -0.2558894740350933,
+     0.038762859235048665
+    ],
+    "smd_em": [
+     -0.0018569727708291984,
+     -0.046592665217083884,
+     0.09137560976803742,
+     -0.014449332999838718
+    ],
+    "smd_before": [
+     0.6869586174043476,
+     1.7646316269876574,
+     -1.02688797115783,
+     -0.988386238788478
+    ]
+   },
+   "lean": {
+    "raw": {
+     "point": 0.0019824412347776432,
+     "lo": 0.0002785399128092947,
+     "hi": 0.004161922985762045,
+     "a": 1.0,
+     "b": 0.9980175587652224
+    },
+    "raw_verdict": "LEANS SUPPORTED",
+    "em": {
+     "point": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "a": 1.0,
+     "b": 1.0
+    },
+    "em_verdict": "NO DETECTED LEAN"
+   },
+   "positivity": {
+    "failed_cell_share": {
+     "point": 0.010250220917035615,
+     "lo": 0.007147426569775951,
+     "hi": 0.013318668040566384,
+     "a": 0.032652915377428156,
+     "b": 0.02240269446039254
+    }
+   },
+   "sized": {
+    "treatment_median_share_removed": 0.2614048011211184,
+    "control_median_share_removed": 0.26269790854511177,
+    "ratio_quartiles": [
+     0.9004350216133241,
+     0.9928244838895219,
+     1.1222766757594236
+    ],
+    "passes_check_control_scale": true,
+    "report": "control scale: median treatment 26, control_median 26 (1.00x)"
+   },
+   "mechanism": {
+    "mean_cells_raw_m_f_n": [
+     1883.895,
+     776.82,
+     7795.91
+    ],
+    "mean_cells_excl_m_f_n": [
+     1930.415,
+     316.88,
+     7284.925
+    ],
+    "share_B_reachers_first_B_on_shared_item": 0.18807789320167836,
+    "share_B_reachers_tied_raw": 0.09773421156443882,
+    "share_B_reachers_tied_excl": 0.0,
+    "share_coattempters_only_through_shared": 0.2914541097833969,
+    "median_share_of_B_events_removed": 0.15025554451875778,
+    "median_share_of_A_events_removed": 0.15025554451875778,
+    "cell_transition_raw_to_excl": {
+     "order": [
+      "mastered",
+      "failed",
+      "never",
+      "absent"
+     ],
+     "counts": [
+      [
+       334520,
+       0,
+       0,
+       42259
+      ],
+      [
+       23305,
+       60920,
+       0,
+       71139
+      ],
+      [
+       28258,
+       2456,
+       1456985,
+       71483
+      ],
+      [
+       0,
+       0,
+       0,
+       1908675
+      ]
+     ]
+    },
+    "supported_raw": 179,
+    "supported_raw_surviving_excl": 112
+   },
+   "X1": {
+    "pairs": 9900,
+    "mismatches": 0,
+    "states_seen": [
+     "contradicted",
+     "supported",
+     "unfalsifiable",
+     "unpowered",
+     "unreadable"
+    ]
+   }
+  }
+ },
+ "verdict": "FLOOR PASSED"
+}

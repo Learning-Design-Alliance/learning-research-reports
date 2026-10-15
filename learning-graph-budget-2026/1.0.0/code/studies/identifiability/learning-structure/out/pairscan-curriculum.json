@@ -1,0 +1,490 @@
+{
+ "n_perm": 10000,
+ "alpha": 0.05,
+ "power": 0.8,
+ "meaningful": {
+  "R1": 0.1,
+  "R2": 0.1,
+  "R3": 0.1
+ },
+ "seed": 20260927,
+ "audit": {
+  "pairscan_sha256": "8bcaa5cfb168651c53680fbf90c0248930e10876b8833e92ecce0d7153da139c",
+  "routes_md5": "f381243566f9da16c29ff237b0233557",
+  "per_set": [
+   {
+    "set": 0,
+    "learners": 3000,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 2,
+    "compound_skills": 0,
+    "r1": 1,
+    "r2": 0,
+    "dist_median": 8.0,
+    "dist_min": 2.0,
+    "rho_dist_db": -0.032,
+    "rho_dist_nboth": 0.074,
+    "rho_dist_edisc": -0.431
+   },
+   {
+    "set": 1,
+    "learners": 1344,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 1,
+    "compound_skills": 0,
+    "r1": 2,
+    "r2": 0,
+    "dist_median": 8.0,
+    "dist_min": 2.0,
+    "rho_dist_db": 0.004,
+    "rho_dist_nboth": -0.375,
+    "rho_dist_edisc": 0.192
+   },
+   {
+    "set": 2,
+    "learners": 1544,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 3,
+    "compound_skills": 0,
+    "r1": 2,
+    "r2": 0,
+    "dist_median": 8.0,
+    "dist_min": 2.0,
+    "rho_dist_db": 0.15,
+    "rho_dist_nboth": -0.109,
+    "rho_dist_edisc": 0.036
+   },
+   {
+    "set": 3,
+    "learners": 605,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 0,
+    "compound_skills": 1,
+    "r1": 3,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 2.0,
+    "rho_dist_db": -0.274,
+    "rho_dist_nboth": -0.046,
+    "rho_dist_edisc": 0.115
+   },
+   {
+    "set": 4,
+    "learners": 1165,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 1,
+    "compound_skills": 3,
+    "r1": 4,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 0.0,
+    "rho_dist_db": -0.196,
+    "rho_dist_nboth": -0.408,
+    "rho_dist_edisc": 0.034
+   },
+   {
+    "set": 5,
+    "learners": 782,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 0,
+    "compound_skills": 4,
+    "r1": 6,
+    "r2": 0,
+    "dist_median": 8.0,
+    "dist_min": 0.0,
+    "rho_dist_db": -0.065,
+    "rho_dist_nboth": -0.192,
+    "rho_dist_edisc": 0.412
+   },
+   {
+    "set": 6,
+    "learners": 705,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 0,
+    "compound_skills": 0,
+    "r1": 2,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 2.0,
+    "rho_dist_db": -0.021,
+    "rho_dist_nboth": -0.325,
+    "rho_dist_edisc": -0.111
+   },
+   {
+    "set": 7,
+    "learners": 1256,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 210,
+    "scanned_reconstructed": 210,
+    "clustered_dropped": 0,
+    "flagged": 1,
+    "compound_skills": 0,
+    "r1": 1,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 2.0,
+    "rho_dist_db": 0.287,
+    "rho_dist_nboth": -0.165,
+    "rho_dist_edisc": 0.086
+   },
+   {
+    "set": 8,
+    "learners": 1136,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 209,
+    "scanned_reconstructed": 209,
+    "clustered_dropped": 0,
+    "flagged": 2,
+    "compound_skills": 0,
+    "r1": 3,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 2.0,
+    "rho_dist_db": -0.075,
+    "rho_dist_nboth": -0.094,
+    "rho_dist_edisc": -0.144
+   },
+   {
+    "set": 9,
+    "learners": 461,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 209,
+    "scanned_reconstructed": 209,
+    "clustered_dropped": 0,
+    "flagged": 0,
+    "compound_skills": 9,
+    "r1": 10,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 0.0,
+    "rho_dist_db": -0.038,
+    "rho_dist_nboth": 0.033,
+    "rho_dist_edisc": 0.239
+   },
+   {
+    "set": 10,
+    "learners": 737,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 196,
+    "scanned_reconstructed": 196,
+    "clustered_dropped": 0,
+    "flagged": 1,
+    "compound_skills": 3,
+    "r1": 5,
+    "r2": 0,
+    "dist_median": 8.0,
+    "dist_min": 0.0,
+    "rho_dist_db": 0.048,
+    "rho_dist_nboth": 0.237,
+    "rho_dist_edisc": 0.24
+   },
+   {
+    "set": 11,
+    "learners": 354,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 182,
+    "scanned_reconstructed": 182,
+    "clustered_dropped": 0,
+    "flagged": 0,
+    "compound_skills": 9,
+    "r1": 11,
+    "r2": 0,
+    "dist_median": 9.0,
+    "dist_min": 0.0,
+    "rho_dist_db": 0.193,
+    "rho_dist_nboth": -0.05,
+    "rho_dist_edisc": 0.224
+   },
+   {
+    "set": 12,
+    "learners": 467,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 201,
+    "scanned_reconstructed": 198,
+    "clustered_dropped": 0,
+    "flagged": 1,
+    "compound_skills": 2,
+    "r1": 3,
+    "r2": 0,
+    "dist_median": 10.0,
+    "dist_min": 0.0,
+    "rho_dist_db": 0.189,
+    "rho_dist_nboth": -0.031,
+    "rho_dist_edisc": -0.32
+   },
+   {
+    "set": 13,
+    "learners": 604,
+    "eligible": 105,
+    "unordered_total": 105,
+    "scanned_committed": 196,
+    "scanned_reconstructed": 196,
+    "clustered_dropped": 0,
+    "flagged": 0,
+    "compound_skills": 7,
+    "r1": 8,
+    "r2": 0,
+    "dist_median": 7.0,
+    "dist_min": 0.0,
+    "rho_dist_db": -0.006,
+    "rho_dist_nboth": 0.129,
+    "rho_dist_edisc": 0.23
+   },
+   {
+    "set": 14,
+    "learners": 278,
+    "eligible": 103,
+    "unordered_total": 105,
+    "scanned_committed": 166,
+    "scanned_reconstructed": 167,
+    "clustered_dropped": 1,
+    "flagged": 0,
+    "compound_skills": 1,
+    "r1": 4,
+    "r2": 2,
+    "dist_median": 7.0,
+    "dist_min": 2.0,
+    "rho_dist_db": -0.036,
+    "rho_dist_nboth": -0.176,
+    "rho_dist_edisc": 0.206
+   }
+  ]
+ },
+ "best_case_p": {
+  "R1": 9.999000099990002e-05,
+  "R2": 1.0,
+  "R3": 9.999000099990002e-05
+ },
+ "relation_positive_in_flag_sets": {
+  "R1": 21,
+  "R2": 0
+ },
+ "readable": [
+  "R1",
+  "R3"
+ ],
+ "flagged_per_set": [
+  2,
+  1,
+  3,
+  0,
+  1,
+  0,
+  0,
+  1,
+  2,
+  0,
+  1,
+  0,
+  1,
+  0,
+  0
+ ],
+ "mde_used": {
+  "R1": 0.3173,
+  "R3": 0.2577
+ },
+ "result": {
+  "tests": {
+   "R1/set": {
+    "flagged": 12,
+    "observed": 0.25,
+    "expected": 0.02385,
+    "effect": 0.22615,
+    "p": 0.0012998700129987
+   },
+   "R1/control": {
+    "flagged": 12,
+    "observed": 0.25,
+    "expected": 0.062825,
+    "effect": 0.187175,
+    "p": 0.027497250274972504
+   },
+   "R1/db3": {
+    "flagged": 12,
+    "observed": 0.25,
+    "expected": 0.023691666666666666,
+    "effect": 0.22630833333333333,
+    "p": 0.0026997300269973002
+   },
+   "R1/nb3": {
+    "flagged": 12,
+    "observed": 0.25,
+    "expected": 0.0496,
+    "effect": 0.2004,
+    "p": 0.0183981601839816
+   },
+   "R1/ed3": {
+    "flagged": 12,
+    "observed": 0.25,
+    "expected": 0.031516666666666665,
+    "effect": 0.21848333333333333,
+    "p": 0.0038996100389961006
+   },
+   "R2/set": {
+    "flagged": 12,
+    "observed": 0.0,
+    "expected": 0.0,
+    "effect": 0.0,
+    "p": 1.0
+   },
+   "R2/control": {
+    "flagged": 12,
+    "observed": 0.0,
+    "expected": 0.0,
+    "effect": 0.0,
+    "p": 1.0
+   },
+   "R2/db3": {
+    "flagged": 12,
+    "observed": 0.0,
+    "expected": 0.0,
+    "effect": 0.0,
+    "p": 1.0
+   },
+   "R2/nb3": {
+    "flagged": 12,
+    "observed": 0.0,
+    "expected": 0.0,
+    "effect": 0.0,
+    "p": 1.0
+   },
+   "R2/ed3": {
+    "flagged": 12,
+    "observed": 0.0,
+    "expected": 0.0,
+    "effect": 0.0,
+    "p": 1.0
+   },
+   "R3/set": {
+    "flagged": 12,
+    "observed": 0.20079365079365077,
+    "expected": 0.49938472222222224,
+    "effect": -0.29859107142857144,
+    "p": 0.00019998000199980003
+   },
+   "R3/control": {
+    "flagged": 12,
+    "observed": 0.20079365079365077,
+    "expected": 0.44275500000000007,
+    "effect": -0.2419613492063493,
+    "p": 0.0006999300069993001
+   },
+   "R3/db3": {
+    "flagged": 12,
+    "observed": 0.20079365079365077,
+    "expected": 0.4991830158730159,
+    "effect": -0.2983893650793651,
+    "p": 9.999000099990002e-05
+   },
+   "R3/nb3": {
+    "flagged": 12,
+    "observed": 0.20079365079365077,
+    "expected": 0.45578472222222227,
+    "effect": -0.2549910714285715,
+    "p": 0.00039996000399960006
+   },
+   "R3/ed3": {
+    "flagged": 12,
+    "observed": 0.20079365079365077,
+    "expected": 0.4791355158730159,
+    "effect": -0.2783418650793651,
+    "p": 9.999000099990002e-05
+   }
+  },
+  "holm_primary": {
+   "R3": true,
+   "R1": true
+  },
+  "holm_control": {
+   "R3": true,
+   "R1": true
+  },
+  "readable": [
+   "R1",
+   "R3"
+  ],
+  "powered": [],
+  "verdict": "CURRICULUM-LINKED",
+  "reason": "R1, R3 enriched, surviving the control stratification",
+  "comparison_rates_in_flag_sets": {
+   "R1": 0.021739130434782608,
+   "R2": 0.0
+  },
+  "covariates": {
+   "db": {
+    "flagged_median": 0.5050000000000001,
+    "comparison_median": 0.6925
+   },
+   "nboth": {
+    "flagged_median": 8305.0,
+    "comparison_median": 4635.5
+   },
+   "edisc": {
+    "flagged_median": 243.09545248077777,
+    "comparison_median": 189.91483263198063
+   }
+  },
+  "orientation": {
+   "n_flagged_r2": 0,
+   "n_all_r2": 2,
+   "z_vs_curriculum": {
+    "claimed": NaN,
+    "reversed": NaN,
+    "margin": NaN,
+    "verdict": "UNRESOLVED"
+   },
+   "difficulty_vs_curriculum_flagged": {
+    "claimed": NaN,
+    "reversed": NaN,
+    "margin": NaN,
+    "verdict": "UNRESOLVED"
+   },
+   "z_vs_difficulty_flagged": null,
+   "difficulty_vs_curriculum_all": {
+    "claimed": 0.5,
+    "reversed": 0.5,
+    "margin": 0.0,
+    "verdict": "UNRESOLVED"
+   },
+   "discordant_z_vs_difficulty": {
+    "n": 0,
+    "curriculum_agrees_with_z": 0
+   }
+  }
+ }
+}

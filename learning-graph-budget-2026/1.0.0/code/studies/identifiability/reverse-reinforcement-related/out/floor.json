@@ -1,0 +1,238 @@
+{
+ "L1": {
+  "passes": true,
+  "rules": {
+   "REV -> RAISES >= 32": true,
+   "NEG -> LOWERS >= 32": true,
+   "NULL -> NO REVERSE EFFECT >= 32": true,
+   "NULL -> RAISES or LOWERS <= 2": true,
+   "ABILITY-B -> RAISES <= 2": true,
+   "ABILITY-ALL -> RAISES <= 2": true
+  },
+  "tally": {
+   "NULL": {
+    "NO REVERSE EFFECT": {
+     "k": 38,
+     "cp95": [
+      0.8308031360405823,
+      0.9938863534006491
+     ]
+    },
+    "UNRESOLVED": {
+     "k": 2,
+     "cp95": [
+      0.006113646599350838,
+      0.16919686395941763
+     ]
+    },
+    "n": 40,
+    "Delta_mean": -0.0002998224521300498,
+    "S_mean": -0.0012017602725875715,
+    "Delta_raw_mean": -0.0002803801752481087,
+    "Delta_ci_width_mean": 0.01300850685083848
+   },
+   "ABILITY-B": {
+    "NO REVERSE EFFECT": {
+     "k": 38,
+     "cp95": [
+      0.8308031360405823,
+      0.9938863534006491
+     ]
+    },
+    "NOT B-SPECIFIC": {
+     "k": 1,
+     "cp95": [
+      0.0006327449320494191,
+      0.13158585848276572
+     ]
+    },
+    "PRACTISING B RAISES A": {
+     "k": 1,
+     "cp95": [
+      0.0006327449320494191,
+      0.13158585848276572
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.00150965135554272,
+    "S_mean": 0.0009414212577567742,
+    "Delta_raw_mean": 0.007434680168732681,
+    "Delta_ci_width_mean": 0.013875228768106238
+   },
+   "REV": {
+    "PRACTISING B RAISES A": {
+     "k": 40,
+     "cp95": [
+      0.9119026971211976,
+      1.0
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.03153855192747734,
+    "S_mean": 0.033070584949822145,
+    "Delta_raw_mean": 0.03151584423945713,
+    "Delta_ci_width_mean": 0.013202892951828868
+   },
+   "ABILITY-ALL": {
+    "NO REVERSE EFFECT": {
+     "k": 38,
+     "cp95": [
+      0.8308031360405823,
+      0.9938863534006491
+     ]
+    },
+    "UNRESOLVED": {
+     "k": 2,
+     "cp95": [
+      0.006113646599350838,
+      0.16919686395941763
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.0017839258466995252,
+    "S_mean": -0.0010484777581840378,
+    "Delta_raw_mean": 0.007639294822343543,
+    "Delta_ci_width_mean": 0.014131384378916695
+   },
+   "NEG": {
+    "PRACTISING B LOWERS A": {
+     "k": 40,
+     "cp95": [
+      0.9119026971211976,
+      1.0
+     ]
+    },
+    "n": 40,
+    "Delta_mean": -0.031111060431997045,
+    "S_mean": -0.03349054834023127,
+    "Delta_raw_mean": -0.03100660644386004,
+    "Delta_ci_width_mean": 0.01318707789220983
+   }
+  },
+  "seeds": 40,
+  "boot": 200,
+  "planted": {
+   "delta_logit": 0.15,
+   "gamma": 0.5,
+   "theta_sd": 0.8
+  }
+ },
+ "CM": {
+  "passes": true,
+  "rules": {
+   "REV -> RAISES >= 32": true,
+   "NEG -> LOWERS >= 32": true,
+   "NULL -> NO REVERSE EFFECT >= 32": true,
+   "NULL -> RAISES or LOWERS <= 2": true,
+   "ABILITY-B -> RAISES <= 2": true,
+   "ABILITY-ALL -> RAISES <= 2": true
+  },
+  "tally": {
+   "NULL": {
+    "NO REVERSE EFFECT": {
+     "k": 39,
+     "cp95": [
+      0.8684141415172343,
+      0.9993672550679505
+     ]
+    },
+    "UNRESOLVED": {
+     "k": 1,
+     "cp95": [
+      0.0006327449320494191,
+      0.13158585848276572
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.000488740678444078,
+    "S_mean": 0.000965475438307485,
+    "Delta_raw_mean": 0.0005194359075861544,
+    "Delta_ci_width_mean": 0.013949202189072979
+   },
+   "ABILITY-B": {
+    "NO REVERSE EFFECT": {
+     "k": 39,
+     "cp95": [
+      0.8684141415172343,
+      0.9993672550679505
+     ]
+    },
+    "NOT B-SPECIFIC": {
+     "k": 1,
+     "cp95": [
+      0.0006327449320494191,
+      0.13158585848276572
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.0032280994799445406,
+    "S_mean": 0.0023584655543718524,
+    "Delta_raw_mean": 0.009124077356320974,
+    "Delta_ci_width_mean": 0.014133906354766385
+   },
+   "REV": {
+    "PRACTISING B RAISES A": {
+     "k": 40,
+     "cp95": [
+      0.9119026971211976,
+      1.0
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.031719046388537855,
+    "S_mean": 0.03395041222652018,
+    "Delta_raw_mean": 0.031701668856435966,
+    "Delta_ci_width_mean": 0.013938548778335395
+   },
+   "ABILITY-ALL": {
+    "NO REVERSE EFFECT": {
+     "k": 38,
+     "cp95": [
+      0.8308031360405823,
+      0.9938863534006491
+     ]
+    },
+    "PRACTISING B RAISES A": {
+     "k": 1,
+     "cp95": [
+      0.0006327449320494191,
+      0.13158585848276572
+     ]
+    },
+    "UNRESOLVED": {
+     "k": 1,
+     "cp95": [
+      0.0006327449320494191,
+      0.13158585848276572
+     ]
+    },
+    "n": 40,
+    "Delta_mean": 0.0029400429930761134,
+    "S_mean": 2.0812569448937918e-05,
+    "Delta_raw_mean": 0.00895352880454509,
+    "Delta_ci_width_mean": 0.013952259147889204
+   },
+   "NEG": {
+    "PRACTISING B LOWERS A": {
+     "k": 40,
+     "cp95": [
+      0.9119026971211976,
+      1.0
+     ]
+    },
+    "n": 40,
+    "Delta_mean": -0.03130621866344214,
+    "S_mean": -0.03341246314852766,
+    "Delta_raw_mean": -0.031154048705033723,
+    "Delta_ci_width_mean": 0.013742599941076772
+   }
+  },
+  "seeds": 40,
+  "boot": 200,
+  "planted": {
+   "delta_logit": 0.15,
+   "gamma": 0.5,
+   "theta_sd": 0.8
+  }
+ }
+}

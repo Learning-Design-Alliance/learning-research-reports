@@ -1,0 +1,69 @@
+{
+  "seed": 20260922,
+  "top": 60,
+  "splits": 12,
+  "min_cell": 30,
+  "gate": 0.8,
+  "learners": 541452,
+  "pairs_total": 1770,
+  "pairs_readable": 1770,
+  "cell_median": 1494,
+  "cell_p10": 568,
+  "cell_max": 32922,
+  "raw_spearman": 0.9845338586086658,
+  "raw_sb": 0.9922066628774088,
+  "raw_kappa": 0.8589030455364549,
+  "opendate_r2": 0.0005465650821352419,
+  "residual_spearman": 0.9843768082794275,
+  "residual_sb": 0.9921269026853228,
+  "assert_bar": 0.3,
+  "tail_selected": 770,
+  "tail_readable": 770,
+  "tail_replication": 0.9155844155844156,
+  "base_rate": 0.4288135593220339,
+  "ladder": [
+    {
+      "learners": 5414,
+      "median_cell": 40,
+      "pairs": 55,
+      "spearman": 0.8913135699740757,
+      "sb": 0.9425338919196704,
+      "kappa": 0.523535334655553
+    },
+    {
+      "learners": 16243,
+      "median_cell": 61,
+      "pairs": 549,
+      "spearman": 0.8587824855486185,
+      "sb": 0.9240268748230102,
+      "kappa": 0.4365193297430243
+    },
+    {
+      "learners": 54145,
+      "median_cell": 154,
+      "pairs": 1554,
+      "spearman": 0.9045665451672819,
+      "sb": 0.9498922969770341,
+      "kappa": 0.5755685898638135
+    },
+    {
+      "learners": 178679,
+      "median_cell": 495,
+      "pairs": 1747,
+      "spearman": 0.9598062850559467,
+      "sb": 0.9794909755874642,
+      "kappa": 0.7379916789055389
+    },
+    {
+      "learners": 541452,
+      "median_cell": 1494,
+      "pairs": 1768,
+      "spearman": 0.9838515675204813,
+      "sb": 0.9918600601255154,
+      "kappa": 0.8591726328475026
+    }
+  ],
+  "cells_explain": false,
+  "verdict": "RELIABLE AND NOT THE CATALOGUE",
+  "kappa_discriminates": true
+}

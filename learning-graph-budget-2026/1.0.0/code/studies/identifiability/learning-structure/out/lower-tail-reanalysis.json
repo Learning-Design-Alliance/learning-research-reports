@@ -1,0 +1,182 @@
+[
+  {
+    "concept": "K_信息化战争_军事思想及军事历史",
+    "n": 700,
+    "observed": 14,
+    "p5": 14,
+    "median": 15,
+    "p95": 16,
+    "below_p5": false
+  },
+  {
+    "concept": "K_触摸屏_控制科学与工程",
+    "n": 231,
+    "observed": 3,
+    "p5": 3,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_触点_控制科学与工程",
+    "n": 227,
+    "observed": 12,
+    "p5": 12,
+    "median": 12,
+    "p95": 12,
+    "below_p5": false
+  },
+  {
+    "concept": "K_梯形图_控制科学与工程",
+    "n": 225,
+    "observed": 20,
+    "p5": 20,
+    "median": 20,
+    "p95": 20,
+    "below_p5": false
+  },
+  {
+    "concept": "K_谱_物理学",
+    "n": 199,
+    "observed": 1,
+    "p5": 1,
+    "median": 2,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_休克_临床医学",
+    "n": 151,
+    "observed": 3,
+    "p5": 3,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_微血栓_临床医学",
+    "n": 145,
+    "observed": 6,
+    "p5": 6,
+    "median": 6,
+    "p95": 7,
+    "below_p5": false
+  },
+  {
+    "concept": "K_D_中国语言文学",
+    "n": 131,
+    "observed": 11,
+    "p5": 5,
+    "median": 9,
+    "p95": 12,
+    "below_p5": false
+  },
+  {
+    "concept": "K_道德经_中国语言文学",
+    "n": 130,
+    "observed": 2,
+    "p5": 1,
+    "median": 2,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_资源调度_计算机科学与技术",
+    "n": 122,
+    "observed": 3,
+    "p5": 3,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_硬链接_计算机科学与技术",
+    "n": 110,
+    "observed": 4,
+    "p5": 3,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_符号链接_计算机科学与技术",
+    "n": 110,
+    "observed": 6,
+    "p5": 5,
+    "median": 6,
+    "p95": 6,
+    "below_p5": false
+  },
+  {
+    "concept": "K_命令提示符_计算机科学与技术",
+    "n": 100,
+    "observed": 2,
+    "p5": 2,
+    "median": 2,
+    "p95": 2,
+    "below_p5": false
+  },
+  {
+    "concept": "K_文章_中国语言文学",
+    "n": 98,
+    "observed": 3,
+    "p5": 2,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_用户组_计算机科学与技术",
+    "n": 87,
+    "observed": 4,
+    "p5": 3,
+    "median": 4,
+    "p95": 4,
+    "below_p5": false
+  },
+  {
+    "concept": "K_虚拟用户_计算机科学与技术",
+    "n": 87,
+    "observed": 6,
+    "p5": 6,
+    "median": 6,
+    "p95": 7,
+    "below_p5": false
+  },
+  {
+    "concept": "K_观点_中国语言文学",
+    "n": 85,
+    "observed": 5,
+    "p5": 5,
+    "median": 7,
+    "p95": 8,
+    "below_p5": false
+  },
+  {
+    "concept": "K_登录_计算机科学与技术",
+    "n": 81,
+    "observed": 9,
+    "p5": 11,
+    "median": 12,
+    "p95": 12,
+    "below_p5": true
+  },
+  {
+    "concept": "K_亭_建筑学",
+    "n": 77,
+    "observed": 3,
+    "p5": 3,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  },
+  {
+    "concept": "K_关帝庙_建筑学",
+    "n": 77,
+    "observed": 3,
+    "p5": 3,
+    "median": 3,
+    "p95": 3,
+    "below_p5": false
+  }
+]

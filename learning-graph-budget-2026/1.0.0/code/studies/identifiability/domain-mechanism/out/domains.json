@@ -1,0 +1,543 @@
+{
+ "seed": 20260925,
+ "cap": 3000,
+ "min_both": 30,
+ "bar": 0.03,
+ "verdict": "MIXED",
+ "corpora": {
+  "xes3g5m": {
+   "learners": 18066,
+   "labelled_items": 563,
+   "domains": {
+    "几何模块": {
+     "items": 61,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 261,
+      "mean_D": -0.05595741155540802,
+      "ci": [
+       -0.0807368400856676,
+       -0.03195462938572272
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.15901981616904223,
+      "late_mean": 0.10306240461363422
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 363,
+       "median_drop": 0.1351674641148325
+      },
+      "MID": {
+       "readable_pairs": 266,
+       "median_drop": 0.09479056601312297
+      },
+      "LATE_7_30": {
+       "readable_pairs": 299,
+       "median_drop": 0.114245630472811
+      },
+      "LATE_30P": {
+       "readable_pairs": 661,
+       "median_drop": 0.07713068181818183
+      }
+     }
+    },
+    "应用题模块": {
+     "items": 146,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 159,
+      "mean_D": -0.06863557272887619,
+      "ci": [
+       -0.09424057796779967,
+       -0.042742709121221294
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.18438532363843507,
+      "late_mean": 0.11574975090955889
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 200,
+       "median_drop": 0.17185609206885805
+      },
+      "MID": {
+       "readable_pairs": 245,
+       "median_drop": 0.16243118678786322
+      },
+      "LATE_7_30": {
+       "readable_pairs": 401,
+       "median_drop": 0.11067193675889325
+      },
+      "LATE_30P": {
+       "readable_pairs": 894,
+       "median_drop": 0.10514361350277968
+      }
+     }
+    },
+    "数论模块": {
+     "items": 38,
+     "pairs": 1406,
+     "lag": {
+      "pairs_both": 56,
+      "mean_D": -0.03405406673814624,
+      "ci": [
+       -0.060466593453754894,
+       -0.004269611005526815
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.10963892526108343,
+      "late_mean": 0.07558485852293718
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 73,
+       "median_drop": 0.08403361344537819
+      },
+      "MID": {
+       "readable_pairs": 55,
+       "median_drop": 0.06481481481481488
+      },
+      "LATE_7_30": {
+       "readable_pairs": 83,
+       "median_drop": 0.10292298175069592
+      },
+      "LATE_30P": {
+       "readable_pairs": 154,
+       "median_drop": 0.05601045296167245
+      }
+     }
+    },
+    "组合模块": {
+     "items": 98,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 51,
+      "mean_D": -0.060964849505882525,
+      "ci": [
+       -0.10924099990257669,
+       -0.010885053608794272
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.19717126072341828,
+      "late_mean": 0.13620641121753577
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 85,
+       "median_drop": 0.1991129785247432
+      },
+      "MID": {
+       "readable_pairs": 84,
+       "median_drop": 0.10125047625358222
+      },
+      "LATE_7_30": {
+       "readable_pairs": 131,
+       "median_drop": 0.10251686298197926
+      },
+      "LATE_30P": {
+       "readable_pairs": 466,
+       "median_drop": 0.0855232690768793
+      }
+     }
+    },
+    "行程模块": {
+     "items": 23,
+     "pairs": 506,
+     "lag": {
+      "pairs_both": 48,
+      "mean_D": -0.024925208626598767,
+      "ci": [
+       -0.11351298397267937,
+       0.042907794811770275
+      ],
+      "verdict": "UNRESOLVED",
+      "early_mean": 0.1537776175181791,
+      "late_mean": 0.1288524088915803
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 89,
+       "median_drop": 0.1574963609898108
+      },
+      "MID": {
+       "readable_pairs": 47,
+       "median_drop": 0.22352941176470587
+      },
+      "LATE_7_30": {
+       "readable_pairs": 53,
+       "median_drop": 0.18670886075949367
+      },
+      "LATE_30P": {
+       "readable_pairs": 83,
+       "median_drop": 0.1446451406649616
+      }
+     }
+    },
+    "计数模块": {
+     "items": 71,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 197,
+      "mean_D": -0.06284749850453407,
+      "ci": [
+       -0.08995630876608848,
+       -0.03774317599569982
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.14859135634154386,
+      "late_mean": 0.08574385783700982
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 281,
+       "median_drop": 0.14761904761904765
+      },
+      "MID": {
+       "readable_pairs": 239,
+       "median_drop": 0.07917888563049846
+      },
+      "LATE_7_30": {
+       "readable_pairs": 403,
+       "median_drop": 0.0908244523345848
+      },
+      "LATE_30P": {
+       "readable_pairs": 1032,
+       "median_drop": 0.06169963915865556
+      }
+     }
+    },
+    "计算模块": {
+     "items": 125,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 107,
+      "mean_D": -0.056626728875997574,
+      "ci": [
+       -0.09189389271184148,
+       -0.02133474406687186
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.17304760161239946,
+      "late_mean": 0.11642087273640189
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 148,
+       "median_drop": 0.15489897269811242
+      },
+      "MID": {
+       "readable_pairs": 151,
+       "median_drop": 0.11598915989159886
+      },
+      "LATE_7_30": {
+       "readable_pairs": 193,
+       "median_drop": 0.12389380530973448
+      },
+      "LATE_30P": {
+       "readable_pairs": 525,
+       "median_drop": 0.0888888888888888
+      }
+     }
+    }
+   },
+   "heterogeneity": {
+    "answerable": [
+     "几何模块",
+     "应用题模块",
+     "数论模块",
+     "组合模块",
+     "行程模块",
+     "计数模块",
+     "计算模块"
+    ],
+    "pairs": {
+     "几何模块": 261,
+     "应用题模块": 159,
+     "数论模块": 56,
+     "组合模块": 51,
+     "行程模块": 48,
+     "计数模块": 197,
+     "计算模块": 107
+    },
+    "R": 0.043710364102277424,
+    "null_975": 0.10600560537414726,
+    "null_mean": 0.05736477133691162,
+    "R_ci": [
+     0.03162036428400307,
+     0.12939106435461228
+    ],
+    "verdict": "UNRESOLVED",
+    "domain_mean_D": {
+     "几何模块": -0.05595741155540802,
+     "应用题模块": -0.06863557272887619,
+     "数论模块": -0.03405406673814624,
+     "组合模块": -0.060964849505882525,
+     "行程模块": -0.024925208626598767,
+     "计数模块": -0.06284749850453407,
+     "计算模块": -0.056626728875997574
+    }
+   }
+  },
+  "eedi": {
+   "learners": 118971,
+   "labelled_items": 263,
+   "domains": {
+    "Algebra": {
+     "items": 73,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 1957,
+      "mean_D": -0.042970770000530935,
+      "ci": [
+       -0.05130909151332629,
+       -0.03417340841568504
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.18208475625008858,
+      "late_mean": 0.13911398624955762
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 1988,
+       "median_drop": 0.18021839101995651
+      },
+      "MID": {
+       "readable_pairs": 1693,
+       "median_drop": 0.15868673050615595
+      },
+      "LATE_7_30": {
+       "readable_pairs": 1992,
+       "median_drop": 0.14612884683583816
+      },
+      "LATE_30P": {
+       "readable_pairs": 2336,
+       "median_drop": 0.1377837741624316
+      }
+     }
+    },
+    "Data and Statistics": {
+     "items": 34,
+     "pairs": 1122,
+     "lag": {
+      "pairs_both": 784,
+      "mean_D": -0.022981895823939696,
+      "ci": [
+       -0.03454123695091338,
+       -0.01186073493008644
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.14761016962645415,
+      "late_mean": 0.12462827380251444
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 819,
+       "median_drop": 0.14972227423079326
+      },
+      "MID": {
+       "readable_pairs": 672,
+       "median_drop": 0.13139158712349125
+      },
+      "LATE_7_30": {
+       "readable_pairs": 777,
+       "median_drop": 0.14026193493874095
+      },
+      "LATE_30P": {
+       "readable_pairs": 852,
+       "median_drop": 0.12210578243500228
+      }
+     }
+    },
+    "Geometry and Measure": {
+     "items": 79,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 1896,
+      "mean_D": -0.034545092735001746,
+      "ci": [
+       -0.04331348037114812,
+       -0.025376219406401203
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.1565926137132505,
+      "late_mean": 0.12204752097824877
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 1919,
+       "median_drop": 0.1568627450980392
+      },
+      "MID": {
+       "readable_pairs": 1515,
+       "median_drop": 0.142751333201659
+      },
+      "LATE_7_30": {
+       "readable_pairs": 1983,
+       "median_drop": 0.13364782405693032
+      },
+      "LATE_30P": {
+       "readable_pairs": 2306,
+       "median_drop": 0.11310324886342937
+      }
+     }
+    },
+    "Number": {
+     "items": 77,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 2252,
+      "mean_D": -0.04764418602750317,
+      "ci": [
+       -0.054722985179632054,
+       -0.040099529978970636
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.16587849781637715,
+      "late_mean": 0.11823431178887399
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 2288,
+       "median_drop": 0.1752420886277609
+      },
+      "MID": {
+       "readable_pairs": 1971,
+       "median_drop": 0.13888888888888884
+      },
+      "LATE_7_30": {
+       "readable_pairs": 2322,
+       "median_drop": 0.1350947793479717
+      },
+      "LATE_30P": {
+       "readable_pairs": 2602,
+       "median_drop": 0.11536606376353137
+      }
+     }
+    }
+   },
+   "heterogeneity": {
+    "answerable": [
+     "Algebra",
+     "Data and Statistics",
+     "Geometry and Measure",
+     "Number"
+    ],
+    "pairs": {
+     "Algebra": 1957,
+     "Data and Statistics": 784,
+     "Geometry and Measure": 1896,
+     "Number": 2252
+    },
+    "R": 0.024662290203563475,
+    "null_975": 0.02047884958381128,
+    "null_mean": 0.010347358161169674,
+    "R_ci": [
+     0.012278120943808634,
+     0.03851540457721729
+    ],
+    "verdict": "UNRESOLVED",
+    "domain_mean_D": {
+     "Algebra": -0.042970770000530935,
+     "Data and Statistics": -0.022981895823939696,
+     "Geometry and Measure": -0.034545092735001746,
+     "Number": -0.04764418602750317
+    }
+   }
+  },
+  "ednet": {
+   "learners": 6000,
+   "labelled_items": 141,
+   "domains": {
+    "Listening": {
+     "items": 58,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 971,
+      "mean_D": -0.02785893674935525,
+      "ci": [
+       -0.048564310435039455,
+       -0.008852592398520811
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.06687671806226925,
+      "late_mean": 0.039017781312913995
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 1551,
+       "median_drop": 0.07352941176470584
+      },
+      "MID": {
+       "readable_pairs": 1210,
+       "median_drop": 0.0471354916111576
+      },
+      "LATE_7_30": {
+       "readable_pairs": 594,
+       "median_drop": 0.026370648321867862
+      },
+      "LATE_30P": {
+       "readable_pairs": 537,
+       "median_drop": 0.030612244897959218
+      }
+     }
+    },
+    "Reading": {
+     "items": 82,
+     "pairs": 3000,
+     "lag": {
+      "pairs_both": 2520,
+      "mean_D": -0.019151780697563396,
+      "ci": [
+       -0.027970409886421955,
+       -0.00989744646465536
+      ],
+      "verdict": "DECAYS",
+      "early_mean": 0.06691518878961183,
+      "late_mean": 0.04776340809204844
+     },
+     "bands": {
+      "EARLY": {
+       "readable_pairs": 2551,
+       "median_drop": 0.0675438596491228
+      },
+      "MID": {
+       "readable_pairs": 2584,
+       "median_drop": 0.04131776778942814
+      },
+      "LATE_7_30": {
+       "readable_pairs": 2452,
+       "median_drop": 0.04615384615384613
+      },
+      "LATE_30P": {
+       "readable_pairs": 2159,
+       "median_drop": 0.047042052744119656
+      }
+     }
+    }
+   },
+   "heterogeneity": {
+    "answerable": [
+     "Listening",
+     "Reading"
+    ],
+    "pairs": {
+     "Listening": 971,
+     "Reading": 2520
+    },
+    "R": 0.008707156051791853,
+    "null_975": 0.020258017423901386,
+    "null_mean": 0.007436347735397638,
+    "R_ci": [
+     0.0005414685736089114,
+     0.031153947629957577
+    ],
+    "verdict": "UNRESOLVED",
+    "domain_mean_D": {
+     "Listening": -0.02785893674935525,
+     "Reading": -0.019151780697563396
+    }
+   }
+  }
+ }
+}

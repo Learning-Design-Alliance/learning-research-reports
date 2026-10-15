@@ -1,0 +1,35 @@
+{
+  "seed": 20260922,
+  "splits": 8,
+  "pairs": 6000,
+  "gate": 0.8,
+  "min_later": 1,
+  "rows": [
+    {
+      "corpus": "ednet",
+      "splits": 8,
+      "pairs_median": 3252,
+      "first_attempt_split_half": 0.08350250570291184,
+      "first_attempt_sb": 0.154134402575729,
+      "retention_split_half": 0.04184494351698334,
+      "retention_sb": 0.08032854366164366,
+      "gain": -0.07380585891408534,
+      "retention_meets_gate": false,
+      "min_later": 1,
+      "min_cell": 5
+    },
+    {
+      "corpus": "xes3g5m",
+      "splits": 8,
+      "pairs_median": 532,
+      "first_attempt_split_half": 0.4711703350733521,
+      "first_attempt_sb": 0.6405381128757734,
+      "retention_split_half": 0.20181931241035866,
+      "retention_sb": 0.33585633102465556,
+      "gain": -0.3046817818511179,
+      "retention_meets_gate": false,
+      "min_later": 1,
+      "min_cell": 5
+    }
+  ]
+}

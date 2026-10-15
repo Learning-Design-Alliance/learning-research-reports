@@ -1,0 +1,76 @@
+{
+ "soft": {
+  "by_fan": {
+   "1": {
+    "edges": 1,
+    "supported": 1.0,
+    "median_drop": 0.34748598373140616
+   },
+   "2-3": {
+    "edges": 4,
+    "supported": 1.0,
+    "median_drop": 0.18011040054029853
+   },
+   "4+": {
+    "edges": 17,
+    "supported": 0.11764705882352941,
+    "median_drop": 0.04788162852678979
+   }
+  },
+  "label": "soft",
+  "gate": 0.3,
+  "truth": 22,
+  "asserted": 8,
+  "precision": 0.625,
+  "recall": 0.22727272727272727,
+  "decided": 0.11538461538461539,
+  "planted_supported": 0.3181818181818182,
+  "asserted_decided": 0.375,
+  "asserted_supported": 3,
+  "asserted_contradicted": 0,
+  "reversed_arrow": {
+   "claimed": 0.625,
+   "reversed": 0.0,
+   "margin": 0.625,
+   "verdict": "CLAIMED"
+  }
+ },
+ "hard": {
+  "by_fan": {
+   "1": {
+    "edges": 2,
+    "supported": 1.0,
+    "median_drop": 0.6072564074040216
+   },
+   "2-3": {
+    "edges": 6,
+    "supported": 0.8333333333333334,
+    "median_drop": 0.11081028467259031
+   },
+   "4+": {
+    "edges": 32,
+    "supported": 0.21875,
+    "median_drop": 0.01779092972159493
+   }
+  },
+  "label": "hard",
+  "gate": 0.6,
+  "truth": 40,
+  "asserted": 17,
+  "precision": 0.8235294117647058,
+  "recall": 0.35,
+  "decided": 0.6153846153846154,
+  "planted_supported": 0.35,
+  "asserted_decided": 0.7058823529411765,
+  "asserted_supported": 3,
+  "asserted_contradicted": 9,
+  "reversed_arrow": {
+   "claimed": 0.8235294117647058,
+   "reversed": 0.0,
+   "margin": 0.8235294117647058,
+   "verdict": "CLAIMED"
+  }
+ },
+ "reading_unknown_share": false,
+ "reading_accuracy": false
+}

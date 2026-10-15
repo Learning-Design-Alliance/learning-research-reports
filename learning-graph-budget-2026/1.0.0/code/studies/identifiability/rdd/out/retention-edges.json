@@ -1,0 +1,11 @@
+{
+ "observations": 626850,
+ "flat_gap": 0.031191173255367074,
+ "readable_edges": 695,
+ "edge_gap_sd": 0.05505503593764502,
+ "null_spread_mean": 0.05887035456559288,
+ "p_concentrated": 0.844,
+ "edge_component_sd": 0.0,
+ "split_half_r": 0.35432184884458656,
+ "split_half_reliability": 0.5232461532638928
+}

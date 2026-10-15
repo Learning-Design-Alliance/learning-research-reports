@@ -1,0 +1,43 @@
+{
+ "model": "akt",
+ "tree_md5": {
+  "R": "77c36026bac1a815d9e2ee27528a3c05",
+  "Rd0": "3a12312f527897873fc189c672bee5a9",
+  "Rd1": "e68f239dcded1aec39e446c454d1bcec",
+  "Rd2": "017a15494dec446c2f12e7fd35427c17"
+ },
+ "encoder": "hfl/chinese-roberta-wwm-ext",
+ "encoder_revision": "5c58d0b8ec1d9014354d691c538661bf00bfdb44",
+ "route_text_chars_mean": {
+  "R": 39.772254335260115,
+  "Rd0": 39.37456647398844,
+  "Rd1": 39.339884393063585,
+  "Rd2": 39.438150289017344
+ },
+ "size": {
+  "cosine_distance": {
+   "Rd0": 0.05773722007870674,
+   "Rd1": 0.057984091341495514,
+   "Rd2": 0.057552795857191086,
+   "shuffle": 0.09965918958187103
+  },
+  "check_control_scale": {
+   "ok": true,
+   "median_treatment": 0.09965918958187103,
+   "ratios": {
+    "Rd0": 0.5793466746112262,
+    "Rd1": 0.5818238296415305,
+    "Rd2": 0.5774961255320151
+   },
+   "covers": {
+    "shuffle": true
+   },
+   "uncovered": [],
+   "report": "control scale: median treatment 0, Rd0 0 (0.58x), Rd1 0 (0.58x), Rd2 0 (0.58x)"
+  }
+ },
+ "kcs_with_questions": 865,
+ "family_mean_size": 8.298265895953758,
+ "world_planted_mean_correct": 0.5042160226965685,
+ "world_null_mean_correct": 0.5940968657119697
+}

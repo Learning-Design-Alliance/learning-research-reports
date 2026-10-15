@@ -1,0 +1,599 @@
+{
+ "family": "google",
+ "requested_slug": "google/gemini-3.8-flash",
+ "served_model": "google/gemini-3.8-flash",
+ "provider": "Google",
+ "timestamp_utc": "2026-09-26T05:16:45Z",
+ "usage": {
+  "prompt_tokens": 17897,
+  "completion_tokens": 7876,
+  "total_tokens": 25773,
+  "cost": 0.04295775,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.04295775,
+   "upstream_inference_prompt_cost": 0.01342275,
+   "upstream_inference_completions_cost": 0.029535
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 2190,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "sample_question_ids": [
+  "4476",
+  "1716",
+  "1061",
+  "5593",
+  "3205",
+  "5181",
+  "5402",
+  "5298",
+  "135",
+  "3733",
+  "4895",
+  "5042",
+  "4857",
+  "2108",
+  "3043",
+  "2151",
+  "7224",
+  "6694",
+  "3549",
+  "1102",
+  "157",
+  "3089",
+  "411",
+  "493",
+  "2537",
+  "6006",
+  "1695",
+  "477",
+  "6672",
+  "4808",
+  "5360",
+  "1031",
+  "693",
+  "2951",
+  "6529",
+  "3584",
+  "4380",
+  "2906",
+  "102",
+  "3692",
+  "3582",
+  "3414",
+  "6155",
+  "105",
+  "6581",
+  "1406",
+  "5435",
+  "4774",
+  "2316",
+  "7290",
+  "1580",
+  "948",
+  "3995",
+  "5926",
+  "4467",
+  "4216",
+  "263",
+  "7195",
+  "300",
+  "5951",
+  "6942",
+  "944",
+  "3989",
+  "1754",
+  "4173",
+  "6246",
+  "5545",
+  "3381",
+  "3513",
+  "2166",
+  "3554",
+  "5582",
+  "3420",
+  "2966",
+  "7554",
+  "1300",
+  "4261",
+  "1764",
+  "2668",
+  "3546",
+  "6065",
+  "6074",
+  "7289",
+  "2600",
+  "3516",
+  "3327",
+  "7443",
+  "6221",
+  "5060",
+  "3376",
+  "6338",
+  "5445",
+  "2775",
+  "6880",
+  "4073",
+  "7524",
+  "3666",
+  "4902",
+  "6816",
+  "983",
+  "4420",
+  "808",
+  "3393",
+  "3036",
+  "5781",
+  "6062",
+  "1033",
+  "7081",
+  "2057",
+  "3178",
+  "1628",
+  "2411",
+  "2247",
+  "4596",
+  "5814",
+  "2713",
+  "4794",
+  "1787",
+  "3713",
+  "4810"
+ ],
+ "prompt_sha256": "56ee605f2ccd1c22c1d7e4e3db071eba7ee45bf5e44bbd782165ae06d04ca27b",
+ "capabilities": [
+  {
+   "name": "Multi-digit column arithmetic with regrouping and remainders",
+   "name_zh": "多位数竖式笔算与带余除法",
+   "description": "Execute standard multi-digit column addition, subtraction, multi-digit by one-digit multiplication, and division with remainders, stating the place-value meaning of each step.",
+   "terminal": false
+  },
+  {
+   "name": "Additive grouping and complementation",
+   "name_zh": "加减凑整与带符号搬家",
+   "description": "Simplify multi-term addition and subtraction expressions by rearranging terms with their signs, grouping complementary pairs to tens, hundreds, or thousands, and removing/adding brackets.",
+   "terminal": false
+  },
+  {
+   "name": "Benchmark product factorization and associative grouping",
+   "name_zh": "乘法基准数凑整与分组结合",
+   "description": "Identify and exploit benchmark products such as 4 x 25 = 100 and 8 x 125 = 1000 by decomposing factors and applying the associative property of multiplication.",
+   "terminal": false
+  },
+  {
+   "name": "Expanding via distributive law",
+   "name_zh": "乘法分配律展开",
+   "description": "Multiply a single number across a sum or difference, particularly rewriting numbers near powers of ten as (100 +/- d) to compute products quickly.",
+   "terminal": false
+  },
+  {
+   "name": "Factoring out common multipliers",
+   "name_zh": "乘法分配律逆用（提取公因数）",
+   "description": "Identify shared factors across multiple product terms and factor them out to sum or subtract the remaining terms into round numbers.",
+   "terminal": false
+  },
+  {
+   "name": "Constructing common multipliers across terms",
+   "name_zh": "构造公因数巧算",
+   "description": "Transfer factors between numbers (e.g., 3 x 810 = 30 x 81) or split a term to reveal a hidden common factor for distributive calculation.",
+   "terminal": false
+  },
+  {
+   "name": "Distributive division over addition and subtraction",
+   "name_zh": "除法分配律与连续除法性质",
+   "description": "Distribute a single divisor across grouped summands (e.g., (4500 + 450 + 45) / 45) and transform chained division a / b / c into a / (b x c).",
+   "terminal": false
+  },
+  {
+   "name": "Evaluating defined operations",
+   "name_zh": "定义新运算直接代入与多层嵌套",
+   "description": "Substitute numerical operands into arbitrary teacher-defined symbolic formulas and evaluate single or nested operations following standard order of evaluation.",
+   "terminal": false
+  },
+  {
+   "name": "Inverse solving of defined operations",
+   "name_zh": "定义新运算逆运算求解",
+   "description": "Solve for an unknown variable embedded inside an equation featuring defined operations by working backwards from the output.",
+   "terminal": false
+  },
+  {
+   "name": "Comprehensive rapid arithmetic calculation",
+   "name_zh": "综合速算与巧算能力",
+   "description": "Inspect complex multi-operation arithmetic expressions, select the optimal calculation strategy, and execute error-free evaluation using arithmetic laws.",
+   "terminal": true
+  },
+  {
+   "name": "Identifying arithmetic progression parameters",
+   "name_zh": "识别等差数列基本要素",
+   "description": "Verify whether a number sequence is an arithmetic progression and identify its first term, last term, and common difference.",
+   "terminal": false
+  },
+  {
+   "name": "Finding the n-th term of an arithmetic sequence",
+   "name_zh": "求等差数列的第n项",
+   "description": "Calculate the value of the n-th term using the first term, the common difference, and the number of steps (n - 1).",
+   "terminal": false
+  },
+  {
+   "name": "Finding the number of terms in an arithmetic sequence",
+   "name_zh": "求等差数列的项数",
+   "description": "Determine the total count of terms in a finite arithmetic sequence using the formula (last - first) / difference + 1.",
+   "terminal": false
+  },
+  {
+   "name": "Summing arithmetic sequences",
+   "name_zh": "等差数列求和公式应用",
+   "description": "Calculate the sum of an arithmetic progression using the paired summation formula (first + last) x count / 2.",
+   "terminal": false
+  },
+  {
+   "name": "Solving context problems involving arithmetic progressions",
+   "name_zh": "等差数列综合与应用题",
+   "description": "Model word problems (such as ranked test scores or tiered quantities) as arithmetic sequences to determine unknown individual terms or sums.",
+   "terminal": true
+  },
+  {
+   "name": "Divisibility tests for composite numbers",
+   "name_zh": "数的整除特征判定（含综合整除）",
+   "description": "Apply divisibility criteria for 2, 3, 4, 5, 8, and 9 individually and combine them to determine unknown digits for composite divisors such as 36.",
+   "terminal": false
+  },
+  {
+   "name": "Parity analysis of arithmetic operations",
+   "name_zh": "奇数与偶数的运算性质分析",
+   "description": "Determine the parity of sums, differences, and products without evaluating full numbers, and apply parity invariants to prove existence or impossibility.",
+   "terminal": true
+  },
+  {
+   "name": "Representing quantitative relationships using line segment diagrams",
+   "name_zh": "画线段图表征数量关系",
+   "description": "Translate verbal descriptions of differences, sums, and multiples into accurate line segment diagrams representing baseline units.",
+   "terminal": false
+  },
+  {
+   "name": "Solving standard sum-difference problems",
+   "name_zh": "标准和差问题求解",
+   "description": "Calculate two unknown quantities given their total sum and difference using equalizing transformations or the sum-difference formulas.",
+   "terminal": false
+  },
+  {
+   "name": "Solving standard sum-multiple problems",
+   "name_zh": "标准和倍问题求解",
+   "description": "Identify the base unit quantity (1 unit) and solve for parts given the total sum and the multiple relationship between them.",
+   "terminal": false
+  },
+  {
+   "name": "Solving advanced sum-multiple problems with offsets",
+   "name_zh": "几倍多几/几倍少几的和倍问题",
+   "description": "Adjust the overall sum by adding or subtracting non-proportional remainders to restore strict integer multiple ratios before dividing by total units.",
+   "terminal": false
+  },
+  {
+   "name": "Solving standard difference-multiple problems",
+   "name_zh": "标准差倍问题求解",
+   "description": "Calculate quantities when given their difference and multiple ratio using the relationship difference / (multiple - 1) = 1 unit.",
+   "terminal": false
+  },
+  {
+   "name": "Applying the constant-difference principle to changing quantities",
+   "name_zh": "差不变原理在差倍问题中的应用",
+   "description": "Recognize that subtracting or adding equal amounts to two quantities preserves their difference, and use this invariant to solve dynamic multiple problems.",
+   "terminal": false
+  },
+  {
+   "name": "Solving multi-party sum and difference multiple systems",
+   "name_zh": "三个及以上对象的多重和差倍问题",
+   "description": "Express three or more related quantities in terms of a single benchmark unit and adjust surplus/deficit values to find all quantities simultaneously.",
+   "terminal": true
+  },
+  {
+   "name": "Solving age problems using invariant age difference",
+   "name_zh": "年龄差不变与动态倍数问题",
+   "description": "Calculate past, present, or future ages by enforcing the invariant property that the difference between two persons' ages never changes across time.",
+   "terminal": false
+  },
+  {
+   "name": "Solving multi-person combined age changes across time",
+   "name_zh": "多人多时段年龄和与倍数综合问题",
+   "description": "Track how the sum of multiple people's ages changes across years and align compound age conditions to solve for individual ages.",
+   "terminal": true
+  },
+  {
+   "name": "Solving standard chicken-rabbit problems via hypothesis",
+   "name_zh": "假设法解标准鸡兔同笼问题",
+   "description": "Assume all animals are of one kind, calculate the total difference from the actual head/leg counts, and divide by the difference per unit to determine the two populations.",
+   "terminal": false
+  },
+  {
+   "name": "Solving grouped and packaged chicken-rabbit variants",
+   "name_zh": "分组打包法解鸡兔同笼及拓展题",
+   "description": "Pair items with differing attributes (e.g., table tennis singles and doubles, multi-denomination stamps) into fixed packages to resolve surplus/deficit conditions.",
+   "terminal": true
+  },
+  {
+   "name": "Differentiating tree-planting boundary configurations",
+   "name_zh": "识别植树问题的三种端点情形",
+   "description": "Identify whether an open-line tree-planting problem has both ends planted, one end planted, or neither end planted, and relate count to intervals accordingly.",
+   "terminal": false
+  },
+  {
+   "name": "Calculating intervals and distance in open tree-planting",
+   "name_zh": "直线植树问题的距离与棵数计算",
+   "description": "Convert between total route length, interval spacing, and tree count across various boundary conditions.",
+   "terminal": false
+  },
+  {
+   "name": "Solving closed-loop and variant interval problems",
+   "name_zh": "封闭路线植树及楼梯锯木等类比模型",
+   "description": "Solve interval problems on closed loops (where tree count equals interval count) and analogize to climbing stairs, sawing logs, and ringing bells.",
+   "terminal": true
+  },
+  {
+   "name": "Calculating counts in solid square formations",
+   "name_zh": "实心方阵的边长与总数计算",
+   "description": "Relate the number of items per side, total items (n x n), and the outer perimeter layer count (4n - 4) for solid square arrays.",
+   "terminal": false
+  },
+  {
+   "name": "Calculating nested layers in hollow square formations",
+   "name_zh": "空心方阵的层数与增减变化计算",
+   "description": "Compute the number of items in single or multi-layered hollow square formations and calculate changes when adding or removing surrounding layers.",
+   "terminal": true
+  },
+  {
+   "name": "Tracing single-track reverse operations",
+   "name_zh": "单线倒推法（还原问题）",
+   "description": "Reconstruct an original starting number by systematically applying inverse operations in reverse chronological order from the final outcome.",
+   "terminal": false
+  },
+  {
+   "name": "Working backwards with fractions and fractional offsets",
+   "name_zh": "含“一半多/少几个”的还原问题",
+   "description": "Use flow diagrams or line segments to reconstruct original quantities when successive steps take a fractional part (such as half) plus or minus a constant offset.",
+   "terminal": false
+  },
+  {
+   "name": "Solving multi-party mutual transfer problems with constant sum",
+   "name_zh": "和不变的多人多次相互给移还原问题",
+   "description": "Construct backwards step tables to track quantities across multiple sequential transfers where the total sum remains constant.",
+   "terminal": true
+  },
+  {
+   "name": "Identifying the cycle length in periodic sequences",
+   "name_zh": "寻找周期规律与确定周期长度",
+   "description": "Examine repeating sequences of shapes, colors, letters, or digits to define the fundamental repeating unit and count its length.",
+   "terminal": false
+  },
+  {
+   "name": "Determining the n-th element of a periodic sequence using division remainders",
+   "name_zh": "余数法确定周期中的第n个对象",
+   "description": "Divide the target position n by the period length and interpret the quotient (completed cycles) and remainder to identify the specific item.",
+   "terminal": false
+  },
+  {
+   "name": "Cumulative counting of specific items across multiple periods",
+   "name_zh": "周期中特定对象的累计出现次数计算",
+   "description": "Compute how many times a particular element or sub-pattern occurs across n positions by multiplying occurrences per cycle by full cycles and adding remainder contributions.",
+   "terminal": false
+  },
+  {
+   "name": "Solving calendar and day-of-week periodic problems",
+   "name_zh": "日期与星期中的周期问题",
+   "description": "Calculate elapsed calendar days across months or years, modulo by 7, and determine target days of the week.",
+   "terminal": false
+  },
+  {
+   "name": "Multi-sequence synchronized period matching",
+   "name_zh": "多周期同步循环与同列对齐问题",
+   "description": "Analyze two or more cyclic text or number sequences operating in parallel to determine the elements aligned at any given position.",
+   "terminal": true
+  },
+  {
+   "name": "Applying basic motion relationship s = v x t",
+   "name_zh": "行程基本公式运用与时间单位换算",
+   "description": "Solve for speed, time, or distance given the other two parameters, performing required conversions between seconds, minutes, and hours.",
+   "terminal": false
+  },
+  {
+   "name": "Solving opposite-direction separation problems",
+   "name_zh": "同地出发反向相离行程问题",
+   "description": "Calculate the total separation distance between two travelers moving in opposite directions using the sum of their speeds.",
+   "terminal": false
+  },
+  {
+   "name": "Solving simultaneous encounter motion problems",
+   "name_zh": "相向而行的相遇行程问题（同时出发）",
+   "description": "Determine encounter time or initial distance between two travelers moving towards each other simultaneously using encounter distance / sum of speeds.",
+   "terminal": false
+  },
+  {
+   "name": "Solving phased encounter motion problems with departure delays",
+   "name_zh": "不同时出发的相遇行程问题",
+   "description": "Deduct the distance covered by the early traveler during head-start time before applying speed sum to the remaining gap.",
+   "terminal": true
+  },
+  {
+   "name": "Calculating standard rectangle and square perimeters",
+   "name_zh": "长方形与正方形的基础周长计算",
+   "description": "Calculate perimeter from side lengths, and conversely compute the side length or missing dimension given perimeter and one known side.",
+   "terminal": false
+  },
+  {
+   "name": "Calculating composite perimeters via edge translation",
+   "name_zh": "平移法求巧算不规则图形周长",
+   "description": "Translate recessed or protruding boundary line segments outward to transform stepped or notched shapes into standard bounding rectangles.",
+   "terminal": false
+  },
+  {
+   "name": "Tracking perimeter changes through cutting and pasting",
+   "name_zh": "图形切拼与重叠中的周长增减变化",
+   "description": "Calculate the increase in perimeter when making internal cuts and the reduction in perimeter when overlapping or joining shapes.",
+   "terminal": true
+  },
+  {
+   "name": "Calculating standard rectangle and square areas",
+   "name_zh": "长方形与正方形的基础面积计算与单位应用",
+   "description": "Calculate area using side length products, and determine missing dimensions from area values using inverse division.",
+   "terminal": false
+  },
+  {
+   "name": "Splitting and completing composite rectilinear areas",
+   "name_zh": "割补法与添补法求组合图形面积",
+   "description": "Calculate the area of L-shaped, T-shaped, or notched rectilinear figures by decomposing them into non-overlapping rectangles or subtracting external voids.",
+   "terminal": false
+  },
+  {
+   "name": "Translating paths to evaluate remaining rectangular area",
+   "name_zh": "平移道路求空白草坪/花圃面积",
+   "description": "Translate intersecting or traversing uniform pathways to the outer boundaries of a rectangular plot to calculate residual area in one product.",
+   "terminal": false
+  },
+  {
+   "name": "Area relations in composite squares and triangles",
+   "name_zh": "正方形组合与等积变形求阴影面积",
+   "description": "Compute the area of shaded triangles or quadrilaterals embedded within joined squares using trapezoid formulas or equal-area shearing along diagonals.",
+   "terminal": true
+  },
+  {
+   "name": "Distinguishing between parallel and intersecting geometric lines",
+   "name_zh": "平面直线的相交、平行与交点极值分析",
+   "description": "Determine how introducing new lines into a planar diagram alters the count of intersection points and regions, distinguishing parallel lines from concurrent intersections.",
+   "terminal": false
+  },
+  {
+   "name": "Counting line segments systematically",
+   "name_zh": "有序数线段（打枪法/公式法）",
+   "description": "Count all line segments along a partitioned straight line using endpoint pairing or consecutive index summation 1 + 2 + ... + n.",
+   "terminal": false
+  },
+  {
+   "name": "Counting rectangles on standard and modified grids",
+   "name_zh": "数方格网及特殊线段构成的长方形个数",
+   "description": "Count total rectangles on grid networks using horizontal and vertical segment combinations (m(m+1)/2 x n(n+1)/2) and account for added or deleted segments.",
+   "terminal": false
+  },
+  {
+   "name": "Counting overlapping composite planar figures",
+   "name_zh": "数重叠与交错组合图形",
+   "description": "Count squares, rectangles, or triangles spanning across intersecting large shapes using the principle of inclusion-exclusion on sub-regions.",
+   "terminal": true
+  },
+  {
+   "name": "Applying the addition principle for disjoint classifications",
+   "name_zh": "分类加法计数原理",
+   "description": "Partition problem outcomes into mutually exclusive categories and sum their individual counts to find the grand total.",
+   "terminal": false
+  },
+  {
+   "name": "Applying the multiplication principle for multi-stage selection",
+   "name_zh": "分步乘法计数原理（搭配问题）",
+   "description": "Break a complete task into independent consecutive stages (such as clothing outfits or meal combos) and multiply the options per stage.",
+   "terminal": false
+  },
+  {
+   "name": "Selecting between addition and multiplication counting principles",
+   "name_zh": "辨析并综合运用加乘原理",
+   "description": "Discern whether complex combinatorial choices require categorization (addition), staging (multiplication), or a nested combination of both.",
+   "terminal": false
+  },
+  {
+   "name": "Shortest-path grid routing with obstacles",
+   "name_zh": "标数法求最短路线（含障碍点）",
+   "description": "Label vertices with cumulative route counts from start to finish, treating obstructed vertices or streets as zero paths.",
+   "terminal": false
+  },
+  {
+   "name": "Forming numbers under digit availability constraints",
+   "name_zh": "有条件限制的组数问题",
+   "description": "Count multi-digit numbers that can be formed from given digit sets, enforcing rules on digit reuse, odd/even restrictions, or non-zero leading digits.",
+   "terminal": false
+  },
+  {
+   "name": "Systematic integer partition via dictionary order",
+   "name_zh": "字典排列法进行数的拆分",
+   "description": "Enumerate all ways to express an integer as the sum of a fixed number of positive or non-negative integers in strict non-decreasing order.",
+   "terminal": true
+  },
+  {
+   "name": "Solving two-set inclusion-exclusion problems",
+   "name_zh": "两集合容斥原理基础计算",
+   "description": "Calculate total population, intersection, or single-set quantities using Total = |A| + |B| - |A and B| + Neither.",
+   "terminal": false
+  },
+  {
+   "name": "Solving three-set inclusion-exclusion problems",
+   "name_zh": "三集合容斥原理图表与公式计算",
+   "description": "Determine unknown survey subsets across three overlapping categories using the three-set Venn formula or 7-region diagram filling.",
+   "terminal": true
+  },
+  {
+   "name": "Converting between page numbers and total digit counts",
+   "name_zh": "由页码总数求数字总个数及反求总页数",
+   "description": "Break page numbering into 1-digit (1-9), 2-digit (10-99), and 3-digit (100-n) intervals to calculate total digits written or deduce total pages from digit sums.",
+   "terminal": false
+  },
+  {
+   "name": "Counting occurrences of a specific digit across page numbers",
+   "name_zh": "页码中某个数字出现的频次统计",
+   "description": "Tally occurrences of a specific digit (e.g., how many times '8' appears) by analyzing units, tens, and hundreds places across page ranges.",
+   "terminal": true
+  },
+  {
+   "name": "Applying the basic pigeonhole principle to guarantee identical properties",
+   "name_zh": "基本抽屉原理与最不利原则",
+   "description": "Identify items and pigeonholes, compute quotient and remainder via n / k, and assert the guaranteed minimum number of items sharing an attribute.",
+   "terminal": true
+  },
+  {
+   "name": "Solving addition and subtraction cryptarithms",
+   "name_zh": "加减法竖式算式谜",
+   "description": "Determine hidden single digits represented by letters or geometric shapes in addition and subtraction column forms using carry/borrow constraints.",
+   "terminal": false
+  },
+  {
+   "name": "Solving multi-digit multiplication cryptarithms",
+   "name_zh": "乘法竖式算式谜",
+   "description": "Deduce unknown multiplicand and multiplier digits by combining end-digit multiplication results with leading-digit carry limits.",
+   "terminal": true
+  },
+  {
+   "name": "Classifying graph vertices by parity of degree",
+   "name_zh": "判断连通图顶点的奇偶性",
+   "description": "Count the number of edges incident to each vertex in a topological network and categorize vertices as odd or even nodes.",
+   "terminal": false
+  },
+  {
+   "name": "Evaluating Eulerian traversability",
+   "name_zh": "一笔画问题与欧拉路径判定",
+   "description": "Determine whether a connected network or bridge system can be traversed without retracing any edge by checking whether the number of odd vertices is 0 or 2.",
+   "terminal": true
+  },
+  {
+   "name": "Solving grid deduction and Latin square puzzles",
+   "name_zh": "数独与数阵图的行列不重复推理",
+   "description": "Fill missing symbols or numbers into 4x4 or 5x5 grids satisfying row, column, and block uniqueness alongside directional sightline constraints.",
+   "terminal": false
+  },
+  {
+   "name": "Solving verbal logic matching puzzles using elimination grids",
+   "name_zh": "列表排除法解逻辑推理问题",
+   "description": "Construct two-dimensional cross-reference tables (tick-and-cross grids) to systematically eliminate impossible pairings and deduce unique person-attribute matches.",
+   "terminal": true
+  },
+  {
+   "name": "Solving discrete optimization and purchase packaging problems",
+   "name_zh": "离散最优化与打包购买统筹策略",
+   "description": "Compare unit costs across different bundle sizes to identify greedy purchasing combinations that meet minimum quantity thresholds at lowest total expense.",
+   "terminal": true
+  }
+ ]
+}

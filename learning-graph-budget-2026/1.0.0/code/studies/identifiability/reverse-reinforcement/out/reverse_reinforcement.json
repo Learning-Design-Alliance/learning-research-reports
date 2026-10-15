@@ -1,0 +1,298 @@
+{
+ "scheme": "fine",
+ "boot": 1000,
+ "boot_unit": "learner (multinomial resampling)",
+ "margin": 0.02,
+ "floor_passes": true,
+ "primary": {
+  "verdict": "NO REVERSE EFFECT",
+  "Delta": -0.012188544016839317,
+  "Delta_ci": [
+   -0.016445020626851898,
+   -0.006891768331070615
+  ],
+  "Delta_der": -0.005033918201386014,
+  "Delta_der_ci": [
+   -0.009176625559092587,
+   0.0002460664808979851
+  ],
+  "S": -0.007154625815453303,
+  "S_ci": [
+   -0.013734356605323713,
+   -0.002024756592223672
+  ],
+  "Delta_raw": -0.012416122029112579,
+  "Delta_raw_ci": [
+   -0.016958771609843985,
+   -0.00702588329147621
+  ],
+  "beta": 0.7453470165489604,
+  "beta_der": 0.7292453928479649,
+  "mean_T": 0.43149220734136046,
+  "mean_T_ci": [
+   0.42533092762186114,
+   0.43264780501772504
+  ],
+  "mean_K_weighted": 0.44390832937047303,
+  "mean_K_ci": [
+   0.4359771166469284,
+   0.44642620706182207
+  ],
+  "positivity_R": {
+   "T_cases": 351048,
+   "K_cases": 1080086,
+   "matched_T": 273655,
+   "matched_K": 539883,
+   "usable_pairs": 2486,
+   "pairs_with_cases": 2693,
+   "coverage": 0.7795372712563524,
+   "learners": 43713
+  },
+  "positivity_D": {
+   "T_cases": 353099,
+   "K_cases": 1097564,
+   "matched_T": 280861,
+   "matched_K": 549866,
+   "usable_pairs": 2385,
+   "pairs_with_cases": 2691,
+   "coverage": 0.7954171492980722,
+   "learners": 43696
+  }
+ },
+ "secondary": {
+  "first_meeting": {
+   "verdict": "NO REVERSE EFFECT",
+   "Delta": -0.00280327594261368,
+   "Delta_ci": [
+    -0.00970580599610985,
+    0.004105665773100779
+   ],
+   "Delta_der": -0.008197587251045255,
+   "Delta_der_ci": [
+    -0.013714789589614756,
+    0.00046523563694128833
+   ],
+   "S": 0.005394311308431575,
+   "S_ci": [
+    -0.004755933129565545,
+    0.012272626742890574
+   ],
+   "Delta_raw": -0.003215102149914938,
+   "Delta_raw_ci": [
+    -0.00995021654896081,
+    0.0036993786389598665
+   ],
+   "beta": 0.7713262992485044,
+   "beta_der": 0.7594078315657797,
+   "mean_T": 0.4458844565912659,
+   "mean_T_ci": [
+    0.4390617040194314,
+    0.44833060757075743
+   ],
+   "mean_K_weighted": 0.44909955874118085,
+   "mean_K_ci": [
+    0.43997632617711446,
+    0.4539431343704211
+   ],
+   "positivity_R": {
+    "T_cases": 188367,
+    "K_cases": 671393,
+    "matched_T": 137576,
+    "matched_K": 275432,
+    "usable_pairs": 2286,
+    "pairs_with_cases": 2692,
+    "coverage": 0.7303614752053172,
+    "learners": 38269
+   },
+   "positivity_D": {
+    "T_cases": 187062,
+    "K_cases": 685603,
+    "matched_T": 138857,
+    "matched_K": 277751,
+    "usable_pairs": 2156,
+    "pairs_with_cases": 2690,
+    "coverage": 0.742304690423496,
+    "learners": 38582
+   }
+  },
+  "length <1h": {
+   "verdict": "UNANSWERABLE",
+   "positivity_R": {
+    "T_cases": 52201,
+    "K_cases": 105190,
+    "matched_T": 25329,
+    "matched_K": 29954,
+    "usable_pairs": 986,
+    "pairs_with_cases": 2629,
+    "coverage": 0.48522058964387654,
+    "learners": 13303
+   },
+   "positivity_D": {
+    "T_cases": 48176,
+    "K_cases": 104689,
+    "matched_T": 25511,
+    "matched_K": 32790,
+    "usable_pairs": 959,
+    "pairs_with_cases": 2630,
+    "coverage": 0.5295375290601129,
+    "learners": 14655
+   }
+  },
+  "length 1h-1d": {
+   "verdict": "UNANSWERABLE",
+   "positivity_R": {
+    "T_cases": 6410,
+    "K_cases": 17439,
+    "matched_T": 519,
+    "matched_K": 550,
+    "usable_pairs": 63,
+    "pairs_with_cases": 2518,
+    "coverage": 0.08096723868954758,
+    "learners": 718
+   },
+   "positivity_D": {
+    "T_cases": 6393,
+    "K_cases": 17915,
+    "matched_T": 566,
+    "matched_K": 619,
+    "usable_pairs": 68,
+    "pairs_with_cases": 2509,
+    "coverage": 0.08853433442828093,
+    "learners": 752
+   }
+  },
+  "length 1-7d": {
+   "verdict": "UNANSWERABLE",
+   "positivity_R": {
+    "T_cases": 21857,
+    "K_cases": 61280,
+    "matched_T": 9698,
+    "matched_K": 14168,
+    "usable_pairs": 681,
+    "pairs_with_cases": 2631,
+    "coverage": 0.44370224641991124,
+    "learners": 6537
+   },
+   "positivity_D": {
+    "T_cases": 22328,
+    "K_cases": 62430,
+    "matched_T": 10401,
+    "matched_K": 14190,
+    "usable_pairs": 679,
+    "pairs_with_cases": 2631,
+    "coverage": 0.46582766033679684,
+    "learners": 6529
+   }
+  },
+  "length 7-30d": {
+   "verdict": "NO REVERSE EFFECT",
+   "Delta": -0.010937392047805305,
+   "Delta_ci": [
+    -0.015999543954345465,
+    -0.0034696721224249925
+   ],
+   "Delta_der": -0.0061647907411782835,
+   "Delta_der_ci": [
+    -0.011556548569477975,
+    3.564238455742069e-05
+   ],
+   "S": -0.004772601306627022,
+   "S_ci": [
+    -0.010981589098511796,
+    0.002892765875913644
+   ],
+   "Delta_raw": -0.010771849888678492,
+   "Delta_raw_ci": [
+    -0.015992558671477464,
+    -0.003456940192699115
+   ],
+   "beta": 0.6922676820190785,
+   "beta_der": 0.6825876841626303,
+   "mean_T": 0.42748807567437574,
+   "mean_T_ci": [
+    0.4203975601293576,
+    0.4297619192655846
+   ],
+   "mean_K_weighted": 0.4382599255630542,
+   "mean_K_ci": [
+    0.42861043601684246,
+    0.4410214458846953
+   ],
+   "positivity_R": {
+    "T_cases": 150703,
+    "K_cases": 451518,
+    "matched_T": 124745,
+    "matched_K": 248574,
+    "usable_pairs": 2208,
+    "pairs_with_cases": 2685,
+    "coverage": 0.8277539265973471,
+    "learners": 25236
+   },
+   "positivity_D": {
+    "T_cases": 150977,
+    "K_cases": 461427,
+    "matched_T": 127370,
+    "matched_K": 250657,
+    "usable_pairs": 2104,
+    "pairs_with_cases": 2678,
+    "coverage": 0.8436384349934096,
+    "learners": 24955
+   }
+  },
+  "length >=30d": {
+   "verdict": "PRACTISING B LOWERS A",
+   "Delta": -0.01637593788325971,
+   "Delta_ci": [
+    -0.025067334937732985,
+    -0.007897451399191005
+   ],
+   "Delta_der": -0.003830425485424225,
+   "Delta_der_ci": [
+    -0.011515460250353871,
+    0.004867899905268568
+   ],
+   "S": -0.012545512397835483,
+   "S_ci": [
+    -0.023497332657653087,
+    -0.0037048914706291846
+   ],
+   "Delta_raw": -0.017905729653119547,
+   "Delta_raw_ci": [
+    -0.02646824305363379,
+    -0.009591536903281005
+   ],
+   "beta": 0.8319630202986248,
+   "beta_der": 0.8274337311799667,
+   "mean_T": 0.45774210501170515,
+   "mean_T_ci": [
+    0.44899553659846353,
+    0.45976428613662096
+   ],
+   "mean_K_weighted": 0.47564783466482463,
+   "mean_K_ci": [
+    0.46369995364431194,
+    0.4803195939101028
+   ],
+   "positivity_R": {
+    "T_cases": 119877,
+    "K_cases": 444659,
+    "matched_T": 104655,
+    "matched_K": 223158,
+    "usable_pairs": 2190,
+    "pairs_with_cases": 2685,
+    "coverage": 0.873019845341475,
+    "learners": 29439
+   },
+   "positivity_D": {
+    "T_cases": 125225,
+    "K_cases": 451103,
+    "matched_T": 108531,
+    "matched_K": 228302,
+    "usable_pairs": 2072,
+    "pairs_with_cases": 2685,
+    "coverage": 0.8666879616689958,
+    "learners": 29534
+   }
+  }
+ }
+}

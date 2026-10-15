@@ -1,0 +1,342 @@
+{
+ "treated_edges": 1528,
+ "baseline_nonshared_edges": 19961,
+ "states": {
+  "treated_raw": {
+   "unpowered": 561,
+   "unreadable": 539,
+   "supported": 349,
+   "contradicted": 21,
+   "unfalsifiable": 58
+  },
+  "treated_excl": {
+   "unpowered": 492,
+   "unreadable": 653,
+   "supported": 310,
+   "contradicted": 17,
+   "unfalsifiable": 56
+  },
+  "treated_to_a": {
+   "unpowered": 555,
+   "supported": 330,
+   "unreadable": 568,
+   "unfalsifiable": 59,
+   "contradicted": 16
+  },
+  "treated_to_b": {
+   "unpowered": 561,
+   "unreadable": 539,
+   "supported": 349,
+   "contradicted": 17,
+   "unfalsifiable": 62
+  },
+  "baseline": {
+   "unreadable": 15137,
+   "supported": 727,
+   "unpowered": 3689,
+   "unfalsifiable": 341,
+   "contradicted": 67
+  },
+  "m_controls_raw": {
+   "unpowered": 538,
+   "unfalsifiable": 81,
+   "unreadable": 468,
+   "supported": 362,
+   "contradicted": 19
+  },
+  "m_controls_sized": {
+   "unpowered": 384,
+   "unfalsifiable": 80,
+   "unreadable": 715,
+   "supported": 276,
+   "contradicted": 13
+  },
+  "em_controls": {
+   "unpowered": 374,
+   "supported": 276,
+   "unreadable": 737,
+   "unfalsifiable": 76,
+   "contradicted": 11
+  }
+ },
+ "decided_share": {
+  "treated_raw": 0.24214659685863874,
+  "treated_excl": 0.21400523560209425,
+  "treated_to_a": 0.22643979057591623,
+  "treated_to_b": 0.2395287958115183,
+  "baseline": 0.03977756625419568
+ },
+ "gaps": {
+  "g0": {
+   "point": 0.20236903060444306,
+   "lo": 0.16723423769823337,
+   "hi": 0.23613187365992303,
+   "a": 0.24214659685863874,
+   "b": 0.03977756625419568
+  },
+  "gE": {
+   "point": 0.17422766934789857,
+   "lo": 0.1392119319629024,
+   "hi": 0.20893894920159617,
+   "a": 0.21400523560209425,
+   "b": 0.03977756625419568
+  },
+  "gM": {
+   "point": -0.010217983651226142,
+   "lo": -0.04068543875208248,
+   "hi": 0.018829586919288103,
+   "a": 0.24931880108991825,
+   "b": 0.2595367847411444
+  },
+  "gEM": {
+   "point": 0.024423337856173677,
+   "lo": 0.001960133085936035,
+   "hi": 0.046930307887530893,
+   "a": 0.21913161465400272,
+   "b": 0.19470827679782904
+  },
+  "gES": {
+   "point": 0.0231607629427793,
+   "lo": -0.0026093054625906304,
+   "hi": 0.04836264984941378,
+   "a": 0.22002724795640327,
+   "b": 0.19686648501362397
+  },
+  "g_toA": {
+   "point": 0.18666222432172055,
+   "lo": 0.15148292078899095,
+   "hi": 0.22164635980462774,
+   "a": 0.22643979057591623,
+   "b": 0.03977756625419568
+  },
+  "g_toB": {
+   "point": 0.19975122955732263,
+   "lo": 0.16578918281100022,
+   "hi": 0.2336972974549613,
+   "a": 0.2395287958115183,
+   "b": 0.03977756625419568
+  },
+  "exclusion_effect_beyond_data_loss": {
+   "point": -0.03337874659400544,
+   "lo": -0.05067298444130127,
+   "hi": -0.015599179753926181,
+   "a": 0.029291553133514985,
+   "b": 0.06267029972752043
+  },
+  "share_explained": {
+   "point": 0.879312868262376,
+   "lo": 0.7757143604435441,
+   "hi": 0.9900982339524448
+  }
+ },
+ "matching": {
+  "m_matched": 1468,
+  "em_matched": 1474,
+  "m_unmatched_share": 0.03926701570680624,
+  "em_unmatched_share": 0.035340314136125706,
+  "sd": [
+   1.7827106731932565,
+   0.4373102247851052,
+   0.1489366687894385,
+   0.15930239691635542
+  ],
+  "caliper_sd": 0.5,
+  "smd_m": [
+   0.040095513934876884,
+   0.027803411134332146,
+   0.0014288529225980427,
+   -0.019916121577933602
+  ],
+  "smd_em": [
+   0.012043096561642425,
+   0.019328865552088178,
+   0.04354321127660229,
+   0.008953325713010853
+  ],
+  "smd_before": [
+   0.8358507523491068,
+   0.786019029719564,
+   -0.11410688520824742,
+   -0.10155802612041115
+  ]
+ },
+ "sized_control": {
+  "treatment_median_share_removed": 0.2760033802546921,
+  "control_median_share_removed": 0.47796472909035026,
+  "ratio_quartiles": [
+   0.9925176234910531,
+   1.0691363800629161,
+   2.559456672619734
+  ],
+  "passes_check_control_scale": true,
+  "report": "control scale: median treatment 28, control_median 48 (1.73x)"
+ },
+ "lean": {
+  "raw": {
+   "point": 0.027626114779767175,
+   "lo": -0.008596531703862226,
+   "hi": 0.06360998034585837,
+   "a": 0.9432432432432433,
+   "b": 0.9156171284634761
+  },
+  "raw_verdict": "NO DETECTED LEAN",
+  "em": {
+   "point": -0.014304052814964274,
+   "lo": -0.05277299251901854,
+   "hi": 0.022163023048352017,
+   "a": 0.9473684210526315,
+   "b": 0.9616724738675958
+  },
+  "em_verdict": "NO DETECTED LEAN"
+ },
+ "positivity_diagnostic": {
+  "failed_cell_share": {
+   "point": 0.002531036227308287,
+   "lo": 0.0002660028358550956,
+   "hi": 0.004708616056078789,
+   "a": 0.02365741986548779,
+   "b": 0.021126383638179504
+  }
+ },
+ "mechanism": {
+  "mean_cells_raw_m_f_n": [
+   1099.6204188481674,
+   161.2408376963351,
+   5293.47054973822
+  ],
+  "mean_cells_excl_m_f_n": [
+   969.1236910994764,
+   143.5170157068063,
+   4978.133507853403
+  ],
+  "share_B_reachers_first_B_on_shared_item": 0.10459610710673639,
+  "share_B_reachers_tied_raw": 0.10240839283480141,
+  "share_B_reachers_tied_excl": 0.040364240698343976,
+  "share_coattempters_only_through_shared": 0.22606436728270438,
+  "median_share_of_B_events_removed": 0.05536752330946314,
+  "median_share_of_A_events_removed": 0.05536752330946314,
+  "cell_transition_raw_to_excl": {
+   "order": [
+    "mastered",
+    "failed",
+    "never",
+    "absent"
+   ],
+   "counts": [
+    [
+     1443723,
+     0,
+     0,
+     236497
+    ],
+    [
+     3077,
+     214437,
+     0,
+     28862
+    ],
+    [
+     34021,
+     4857,
+     7606588,
+     442957
+    ],
+    [
+     0,
+     0,
+     0,
+     17589829
+    ]
+   ]
+  },
+  "supported_raw": 349,
+  "supported_raw_surviving_excl": 303
+ },
+ "verdict": "MIXED: part of the gap is mechanical, a same-sign remainder survives",
+ "verdict_using_gES": "MECHANICAL: the gap vanishes once shared-item responses are excluded and coverage and difficulty are matched",
+ "atlas_sample_subset": {
+  "edges": 39,
+  "decided_raw": 11,
+  "decided_excl": 11
+ },
+ "corpus": "xes3g5m",
+ "learners": 18066,
+ "units": 865,
+ "items": 7651,
+ "multi_unit_items": 1023,
+ "floor_passed": true,
+ "reproduction": {
+  "recomputed": {
+   "learners": 18066,
+   "items": 865,
+   "edges": 20000,
+   "readable": 4851,
+   "detect_20pt": 2398,
+   "supported": 736,
+   "contradicted": 69,
+   "unknown": 19195,
+   "contradicted_before_reachability": 412
+  },
+  "committed": {
+   "learners": 18066,
+   "items": 865,
+   "edges": 20000,
+   "readable": 4851,
+   "detect_20pt": 2398,
+   "supported": 736,
+   "contradicted": 69,
+   "unknown": 19195,
+   "contradicted_before_reachability": 412,
+   "source": "overlap/out/atlas.json"
+  },
+  "fields": {
+   "learners": [
+    18066,
+    18066,
+    true
+   ],
+   "items": [
+    865,
+    865,
+    true
+   ],
+   "edges": [
+    20000,
+    20000,
+    true
+   ],
+   "readable": [
+    4851,
+    4851,
+    true
+   ],
+   "detect_20pt": [
+    2398,
+    2398,
+    true
+   ],
+   "supported": [
+    736,
+    736,
+    true
+   ],
+   "contradicted": [
+    69,
+    69,
+    true
+   ],
+   "unknown": [
+    19195,
+    19195,
+    true
+   ],
+   "contradicted_before_reachability": [
+    412,
+    412,
+    true
+   ]
+  },
+  "reproduced_exactly": true
+ },
+ "sample_decided_nonshared": 794
+}
