@@ -1,0 +1,218 @@
+{
+ "note": "NOT PRE-REGISTERED; written after the registered patel_order.py run to document why its part 3 fails on the data. No outcome contrast between arms is computed.",
+ "step_anatomy_pooled": {
+  "num1": {
+   "n": 2740,
+   "correct": 1.0,
+   "incorrect": 0.0,
+   "hint": 0.0,
+   "median_duration_s": 0.0
+  },
+  "den1": {
+   "n": 2740,
+   "correct": 1.0,
+   "incorrect": 0.0,
+   "hint": 0.0,
+   "median_duration_s": 0.0
+  },
+  "operation1": {
+   "n": 2740,
+   "correct": 1.0,
+   "incorrect": 0.0,
+   "hint": 0.0,
+   "median_duration_s": 0.0
+  },
+  "num2": {
+   "n": 2740,
+   "correct": 1.0,
+   "incorrect": 0.0,
+   "hint": 0.0,
+   "median_duration_s": 0.0
+  },
+  "den2": {
+   "n": 2740,
+   "correct": 1.0,
+   "incorrect": 0.0,
+   "hint": 0.0,
+   "median_duration_s": 0.0
+  },
+  "num3": {
+   "n": 2713,
+   "correct": 0.7147069664577957,
+   "incorrect": 0.2852930335422042,
+   "hint": 0.0,
+   "median_duration_s": 8.0
+  },
+  "den3": {
+   "n": 2703,
+   "correct": 0.7328893821679615,
+   "incorrect": 0.2671106178320385,
+   "hint": 0.0,
+   "median_duration_s": 5.0
+  },
+  "ConfidenceRating": {
+   "n": 1799,
+   "correct": 0.0,
+   "incorrect": 1.0,
+   "hint": 0.0,
+   "median_duration_s": 2.0
+  }
+ },
+ "logging_share_by_arm": {
+  "Pretest": {
+   "AM": {
+    "given": 0.6673422273841031,
+    "answer": 0.25292328551146437,
+    "confidence": 0.07973448710443258,
+    "other": 0.0,
+    "learners": 30,
+    "learners_with_any_confidence_step": 29
+   },
+   "MA": {
+    "given": 0.6557201186481122,
+    "answer": 0.26085697318818607,
+    "confidence": 0.08342290816370185,
+    "other": 0.0,
+    "learners": 30,
+    "learners_with_any_confidence_step": 30
+   }
+  },
+  "Midtest A": {
+   "AM": {
+    "given": 0.676662990596037,
+    "answer": 0.2399691384317743,
+    "confidence": 0.08336787097218876,
+    "other": 0.0,
+    "learners": 29,
+    "learners_with_any_confidence_step": 27
+   },
+   "MA": {
+    "given": 0.6530251049820032,
+    "answer": 0.2584627892455485,
+    "confidence": 0.08851210577244827,
+    "other": 0.0,
+    "learners": 26,
+    "learners_with_any_confidence_step": 26
+   }
+  },
+  "Midtest B": {
+   "AM": {
+    "given": 0.6746954415149946,
+    "answer": 0.25608507315772183,
+    "confidence": 0.06921948532728374,
+    "other": 0.0,
+    "learners": 29,
+    "learners_with_any_confidence_step": 28
+   },
+   "MA": {
+    "given": 0.6541627447582896,
+    "answer": 0.25902398914324887,
+    "confidence": 0.08681326609846161,
+    "other": 0.0,
+    "learners": 29,
+    "learners_with_any_confidence_step": 29
+   }
+  },
+  "Posttest": {
+   "AM": {
+    "given": 0.6698326846194644,
+    "answer": 0.25229735335942943,
+    "confidence": 0.0778699620211062,
+    "other": 0.0,
+    "learners": 29,
+    "learners_with_any_confidence_step": 28
+   },
+   "MA": {
+    "given": 0.6495626810165278,
+    "answer": 0.25609005292274956,
+    "confidence": 0.09434726606072272,
+    "other": 0.0,
+    "learners": 28,
+    "learners_with_any_confidence_step": 28
+   }
+  },
+  "DPosttest": {
+   "AM": {
+    "given": 0.6706264294243142,
+    "answer": 0.25104257863607826,
+    "confidence": 0.07833099193960766,
+    "other": 0.0,
+    "learners": 27,
+    "learners_with_any_confidence_step": 26
+   },
+   "MA": {
+    "given": 0.6510332877522497,
+    "answer": 0.2573491852352394,
+    "confidence": 0.09161752701251091,
+    "other": 0.0,
+    "learners": 29,
+    "learners_with_any_confidence_step": 29
+   }
+  }
+ },
+ "delay_days": {
+  "Pretest": {
+   "registered_definition_median_days": -4.999189814814815,
+   "from_last_practice_set_row": {
+    "median": -1.010138888888889,
+    "min": -1.014699074074074,
+    "max": -0.00949074074074074,
+    "n": 59
+   }
+  },
+  "Midtest A": {
+   "registered_definition_median_days": -4.001527777777778,
+   "from_last_practice_set_row": {
+    "median": -0.01019675925925926,
+    "min": -1.004224537037037,
+    "max": 0.0005092592592592592,
+    "n": 54
+   }
+  },
+  "Midtest B": {
+   "registered_definition_median_days": -4.004386574074074,
+   "from_last_practice_set_row": {
+    "median": -0.015173611111111112,
+    "min": -1.0027430555555557,
+    "max": 0.0025462962962962965,
+    "n": 57
+   }
+  },
+  "Posttest": {
+   "registered_definition_median_days": -3.9885937499999997,
+   "from_last_practice_set_row": {
+    "median": 0.0002199074074074074,
+    "min": -0.0016898148148148148,
+    "max": 0.0019328703703703704,
+    "n": 56
+   }
+  },
+  "DPosttest": {
+   "registered_definition_median_days": -0.004131944444444444,
+   "from_last_practice_set_row": {
+    "median": 3.984675925925926,
+    "min": 3.970787037037037,
+    "max": 4.970347222222222,
+    "n": 55
+   }
+  }
+ },
+ "provenance": {
+  "md5": {
+   "ds1190_student_step_All_Data_2767_2026_0916_160202.txt": "e4d2ba2d7ba06be4fe080a7671f34e18",
+   "ds1190_student_step_S2_AM_Blocked_3548_2026_0916_160239.txt": "355e10b9e231dc461a3249acd616a4da",
+   "ds1190_student_step_S2_MA_Blocked_3549_2026_0916_160244.txt": "c243341b7e3b6c4dee080e0be0fdeabe"
+  },
+  "learners": {
+   "AM": 30,
+   "MA": 30
+  },
+  "rows_in_samples": 34738,
+  "rows_same_learners_in_all_data": 34738,
+  "learners_whose_row_counts_match": 60,
+  "all_data_assignments_for_these_learners": {
+   "Assignment MA Day 1 (Pretest": 18124,
+   "Assignment AM Day 1 (Pretest": 16614
+  }
+ }
+}

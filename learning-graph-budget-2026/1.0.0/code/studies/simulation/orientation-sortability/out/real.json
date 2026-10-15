@@ -1,0 +1,169 @@
+{
+  "min_learners": 20,
+  "min_edges": 30,
+  "min_nodes": 30,
+  "boot": 2000,
+  "junyi2015": {
+    "n_exercises": 835,
+    "n_authored_edges": 981,
+    "n_cycle_members": 3,
+    "n_exercises_in_log": 631,
+    "n_eligible_exercises": 236,
+    "n_eligible_edges": 233,
+    "n_depths_eligible": 48,
+    "depth_max": 65,
+    "log": {
+      "source": "DataShop ds1275 student-step export, 'All Data' sample",
+      "file": "ds1275_student_step_All_Data_2872_2026_0916_191215.txt",
+      "rows": 303720,
+      "first_attempt_hint": 53604,
+      "no_kc_or_time": 110,
+      "n_logged_exercises_in_authored_table": 631,
+      "n_logged_exercises_not_in_authored_table": 0
+    },
+    "eligible": true,
+    "floor": {
+      "per_r": {
+        "0.3": {
+          "correct_sign_rate": 0.01,
+          "wrong_sign_rate": 0.0
+        },
+        "0.0": {
+          "correct_sign_rate": 0.0,
+          "wrong_sign_rate": 0.01
+        },
+        "-0.3": {
+          "correct_sign_rate": 0.07,
+          "wrong_sign_rate": 0.0
+        }
+      },
+      "passes": false
+    },
+    "S": [
+      0.5793991416309013,
+      0.5150214592274678,
+      0.6394849785407726
+    ],
+    "rho": [
+      0.4764879725702386,
+      0.38826872350613445,
+      0.5505983588348969
+    ],
+    "rho_node_resampled": [
+      0.3354502080897582,
+      0.20746972247054843,
+      0.44689170764382763
+    ],
+    "verdict": "DIFFICULTY RISES WITH DEPTH (ALIGNED SIDE)",
+    "nearest_sim": {
+      "cell": "AND/INVERTED/0.25",
+      "sim_diffsort": 0.602510460251046,
+      "sim_asym": 0.602510460251046,
+      "reading_vs_diffsort": "NO BETTER",
+      "D": 0.0
+    },
+    "rater_difficulty_descriptive": {
+      "coder": "Junyi 2015 crowd workers (Chang, Hsu & Chen 2015), mean of raters; no independent reference computed here: descriptive only",
+      "n_rated_authored_pairs": 652,
+      "mean_dependent_minus_equal": [
+        0.6234510207024541,
+        0.524397474239954,
+        0.7249564107657209
+      ],
+      "share_dependent_rated_harder": [
+        0.7147239263803681,
+        0.6809624233128834,
+        0.7476993865030674
+      ]
+    }
+  },
+  "assistments2012": {
+    "all_matched": {
+      "n_skills": 131,
+      "n_cross_grade_pairs": 6871,
+      "n_grades": 8,
+      "eligible": true,
+      "floor": {
+        "per_r": {
+          "0.3": {
+            "correct_sign_rate": 0.93,
+            "wrong_sign_rate": 0.0
+          },
+          "0.0": {
+            "correct_sign_rate": 0.0,
+            "wrong_sign_rate": 0.07
+          },
+          "-0.3": {
+            "correct_sign_rate": 0.88,
+            "wrong_sign_rate": 0.0
+          }
+        },
+        "passes": true
+      },
+      "S": [
+        0.5756076262552758,
+        0.502781318231605,
+        0.647313290208762
+      ],
+      "rho": [
+        0.1867085696688915,
+        0.0010568682364724528,
+        0.36384051619528424
+      ],
+      "verdict": "DIFFICULTY RISES WITH DEPTH (ALIGNED SIDE)",
+      "nearest_sim": {
+        "cell": "AND/INVERTED/0.25",
+        "sim_diffsort": 0.602510460251046,
+        "sim_asym": 0.602510460251046,
+        "reading_vs_diffsort": "NO BETTER",
+        "D": 0.0
+      }
+    },
+    "exact_name": {
+      "n_skills": 66,
+      "n_cross_grade_pairs": 1577,
+      "n_grades": 6,
+      "eligible": true,
+      "floor": {
+        "per_r": {
+          "0.3": {
+            "correct_sign_rate": 0.67,
+            "wrong_sign_rate": 0.0
+          },
+          "0.0": {
+            "correct_sign_rate": 0.0,
+            "wrong_sign_rate": 0.05
+          },
+          "-0.3": {
+            "correct_sign_rate": 0.63,
+            "wrong_sign_rate": 0.0
+          }
+        },
+        "passes": false
+      },
+      "S": [
+        0.5897273303741281,
+        0.4900092821112338,
+        0.6881882078330958
+      ],
+      "rho": [
+        0.20963382706458172,
+        -0.024859868920649456,
+        0.4377575195071203
+      ],
+      "verdict": "UNDERPOWERED",
+      "nearest_sim": {
+        "cell": "AND/INVERTED/0.25",
+        "sim_diffsort": 0.602510460251046,
+        "sim_asym": 0.602510460251046,
+        "reading_vs_diffsort": "NO BETTER",
+        "D": 0.0
+      }
+    },
+    "note": "No authored prerequisite graph is held for ASSISTments 2012-13; depth is the CCSS grade of the name-matched code (studies/measurement/assist2012-direction)."
+  },
+  "eedi": {
+    "verdict": "NOT HELD",
+    "note": "No authored prerequisite graph is held: the NeurIPS 2020 subject tree is an unordered taxonomy and the NeurIPS 2022 Task 3 adjacency is not released or held."
+  }
+}

@@ -1,0 +1,68 @@
+{
+ "floor_passed": true,
+ "corpora": {
+  "xes3g5m": {
+   "census_U_share": 0.00020204453007921215,
+   "census_U_pure_share": 0.16647398843930636,
+   "sample_edges": 20000,
+   "sample_U": 2,
+   "decided": 805,
+   "undecided": 19195,
+   "f": 0.0001041938004688721,
+   "f_interval": [
+    0.0,
+    0.00037985979886408135
+   ],
+   "d": -0.04025402540254026,
+   "d_p": 1.0,
+   "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+   "verdict_overlap": "DESIGN NESTED IN LEARNER LIMIT",
+   "verdict_direction": "NO DETECTED ASSOCIATION beyond the dependant",
+   "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)",
+   "strict_pure_verdict_f": "MIXED: both limits bind; report the two shares side by side",
+   "reproduction": "against the committed atlas"
+  },
+  "assist": {
+   "census_U_share": 0.0,
+   "census_U_pure_share": 0.0,
+   "sample_edges": 40000,
+   "sample_U": 0,
+   "decided": 87,
+   "undecided": 39913,
+   "f": 0.0,
+   "f_interval": [
+    0.0,
+    9.62365442980533e-05
+   ],
+   "d": null,
+   "d_p": null,
+   "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+   "verdict_overlap": "NO DESIGN LIMIT",
+   "verdict_direction": "NOT TESTABLE (U or not-U empty, or nothing to derange)",
+   "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)",
+   "strict_pure_verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+   "reproduction": "against the committed atlas"
+  },
+  "eedi": {
+   "census_U_share": 0.00019036338254579298,
+   "census_U_pure_share": 0.06168831168831169,
+   "sample_edges": 20000,
+   "sample_U": 3,
+   "decided": 5073,
+   "undecided": 14927,
+   "f": 0.00020097809338782074,
+   "f_interval": [
+    0.0,
+    0.0005907832634092655
+   ],
+   "d": -0.2536880532079812,
+   "d_p": 1.0,
+   "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+   "verdict_overlap": "DESIGN NESTED IN LEARNER LIMIT",
+   "verdict_direction": "NO DETECTED ASSOCIATION beyond the dependant",
+   "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)",
+   "strict_pure_verdict_f": "MIXED: both limits bind; report the two shares side by side",
+   "reproduction": "against the committed atlas"
+  }
+ }
+}

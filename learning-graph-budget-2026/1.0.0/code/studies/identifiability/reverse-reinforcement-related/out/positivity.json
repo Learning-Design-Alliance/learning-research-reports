@@ -1,0 +1,630 @@
+{
+ "registered_strict_derangement": {
+  "L1": {
+   "scheme": "fine",
+   "schemes": {
+    "fine": {
+     "real": {
+      "T_cases": 160606,
+      "K_cases": 291206,
+      "matched_T": 117727,
+      "matched_K": 160124,
+      "usable_pairs": 735,
+      "pairs_with_cases": 799,
+      "coverage": 0.7330174464216779,
+      "learners": 34114
+     },
+     "deranged": {
+      "T_cases": 67737,
+      "K_cases": 278133,
+      "matched_T": 56437,
+      "matched_K": 126827,
+      "usable_pairs": 591,
+      "pairs_with_cases": 706,
+      "coverage": 0.8331783220396534,
+      "learners": 28752
+     },
+     "answerable_real": true,
+     "answerable_deranged": true,
+     "size_real": {
+      "dose": {
+       "T": 2.15467989501134,
+       "K_weighted": 2.254942778077047,
+       "K_unweighted": 2.49837625839974
+      },
+      "loglen": {
+       "T": 2.4692627039636452,
+       "K_weighted": 2.5119821609323436,
+       "K_unweighted": 2.82604158077096
+      }
+     },
+     "size_deranged": {
+      "dose": {
+       "T": 2.1662030228396265,
+       "K_weighted": 2.311574302959367,
+       "K_unweighted": 2.3707491307056068
+      },
+      "loglen": {
+       "T": 2.764730704877419,
+       "K_weighted": 2.7560783047702344,
+       "K_unweighted": 3.011288509873531
+      }
+     }
+    }
+   },
+   "proxy_filter": {
+    "R": {
+     "cases": 451826,
+     "kept": 451812,
+     "dropped_proxy_under_min": 14
+    },
+    "D": {
+     "cases": 345872,
+     "kept": 345870,
+     "dropped_proxy_under_min": 2
+    }
+   },
+   "answerable": false,
+   "size": {
+    "control_dose_ratio": 1.0465326117804516,
+    "control_loglen_diff": 0.04271945696869839,
+    "deranged_dose_ratio": 1.0053479534732588,
+    "deranged_T_ratio": 0.479388755340746,
+    "check_control_scale": [
+     "{'ok': True, 'median_treatment': 2.15467989501134, 'ratios': {'control_c_dose': 1.0465326117804516}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.05x)'}",
+     "{'ok': True, 'median_treatment': 2.15467989501134, 'ratios': {'deranged_b_dose': 1.0053479534732588}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.01x)'}"
+    ],
+    "passes": false,
+    "failure": "every control is under 0.5x the median treatment perturbation (117727). deranged_T_cases=56437. A control this small shows only that a small change is harmless and cannot rule out that a large one moves the instrument by size alone."
+   }
+  },
+  "L2r": {
+   "scheme": "fine",
+   "schemes": {
+    "fine": {
+     "real": {
+      "T_cases": 30159,
+      "K_cases": 25355,
+      "matched_T": 16231,
+      "matched_K": 13495,
+      "usable_pairs": 68,
+      "pairs_with_cases": 73,
+      "coverage": 0.5381809741702311,
+      "learners": 15086
+     },
+     "deranged": {
+      "T_cases": 4397,
+      "K_cases": 20329,
+      "matched_T": 3457,
+      "matched_K": 8028,
+      "usable_pairs": 38,
+      "pairs_with_cases": 51,
+      "coverage": 0.7862178758244257,
+      "learners": 7650
+     },
+     "answerable_real": true,
+     "answerable_deranged": true,
+     "size_real": {
+      "dose": {
+       "T": 1.831803339289015,
+       "K_weighted": 1.8881747151181587,
+       "K_unweighted": 2.0703223416080028
+      },
+      "loglen": {
+       "T": 1.9716919008760134,
+       "K_weighted": 2.094835126384166,
+       "K_unweighted": 2.492900518831272
+      }
+     },
+     "size_deranged": {
+      "dose": {
+       "T": 1.8180503326583743,
+       "K_weighted": 1.9182498577658,
+       "K_unweighted": 1.9393373193821624
+      },
+      "loglen": {
+       "T": 0.9270890513090845,
+       "K_weighted": 0.9844981535518109,
+       "K_unweighted": 2.731518552867694
+      }
+     }
+    }
+   },
+   "proxy_filter": {
+    "R": {
+     "cases": 55521,
+     "kept": 55514,
+     "dropped_proxy_under_min": 7
+    },
+    "D": {
+     "cases": 24726,
+     "kept": 24726,
+     "dropped_proxy_under_min": 0
+    }
+   },
+   "answerable": false,
+   "size": {
+    "control_dose_ratio": 1.0307737051353032,
+    "control_loglen_diff": 0.1231432255081526,
+    "deranged_dose_ratio": 0.9924920943555117,
+    "deranged_T_ratio": 0.21298749306881892,
+    "check_control_scale": [
+     "{'ok': True, 'median_treatment': 1.831803339289015, 'ratios': {'control_c_dose': 1.0307737051353032}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.03x)'}",
+     "{'ok': True, 'median_treatment': 1.831803339289015, 'ratios': {'deranged_b_dose': 0.9924920943555117}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (0.99x)'}"
+    ],
+    "passes": false,
+    "failure": "every control is under 0.5x the median treatment perturbation (16231). deranged_T_cases=3457. A control this small shows only that a small change is harmless and cannot rule out that a large one moves the instrument by size alone."
+   }
+  },
+  "L2x": {
+   "scheme": "fine",
+   "schemes": {
+    "fine": {
+     "real": {
+      "T_cases": 292345,
+      "K_cases": 263022,
+      "matched_T": 178965,
+      "matched_K": 157101,
+      "usable_pairs": 659,
+      "pairs_with_cases": 722,
+      "coverage": 0.6121705519164001,
+      "learners": 42788
+     },
+     "deranged": {
+      "T_cases": 51875,
+      "K_cases": 287127,
+      "matched_T": 42157,
+      "matched_K": 121560,
+      "usable_pairs": 542,
+      "pairs_with_cases": 679,
+      "coverage": 0.8126650602409639,
+      "learners": 28903
+     },
+     "answerable_real": true,
+     "answerable_deranged": true,
+     "size_real": {
+      "dose": {
+       "T": 1.881982510546755,
+       "K_weighted": 1.941859441306559,
+       "K_unweighted": 2.24452422327038
+      },
+      "loglen": {
+       "T": 1.397175549565534,
+       "K_weighted": 1.4820745446642458,
+       "K_unweighted": 2.548011429450962
+      }
+     },
+     "size_deranged": {
+      "dose": {
+       "T": 2.2046635197001683,
+       "K_weighted": 2.2778521025024507,
+       "K_unweighted": 2.26072721289898
+      },
+      "loglen": {
+       "T": 2.6714300426087125,
+       "K_weighted": 2.677966451941939,
+       "K_unweighted": 3.0128440643149914
+      }
+     }
+    }
+   },
+   "proxy_filter": {
+    "R": {
+     "cases": 555435,
+     "kept": 555367,
+     "dropped_proxy_under_min": 68
+    },
+    "D": {
+     "cases": 339008,
+     "kept": 339002,
+     "dropped_proxy_under_min": 6
+    }
+   },
+   "answerable": false,
+   "size": {
+    "control_dose_ratio": 1.0318158805537512,
+    "control_loglen_diff": 0.0848989950987118,
+    "deranged_dose_ratio": 1.1714580275560944,
+    "deranged_T_ratio": 0.23556002570334983,
+    "check_control_scale": [
+     "{'ok': True, 'median_treatment': 1.881982510546755, 'ratios': {'control_c_dose': 1.0318158805537512}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.03x)'}",
+     "{'ok': True, 'median_treatment': 1.881982510546755, 'ratios': {'deranged_b_dose': 1.1714580275560944}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.17x)'}"
+    ],
+    "passes": false,
+    "failure": "every control is under 0.5x the median treatment perturbation (178965). deranged_T_cases=42157. A control this small shows only that a small change is harmless and cannot rule out that a large one moves the instrument by size alone."
+   }
+  },
+  "CM": {
+   "scheme": "fine",
+   "schemes": {
+    "fine": {
+     "real": {
+      "T_cases": 179954,
+      "K_cases": 282121,
+      "matched_T": 132275,
+      "matched_K": 164041,
+      "usable_pairs": 661,
+      "pairs_with_cases": 697,
+      "coverage": 0.7350489569556664,
+      "learners": 35766
+     },
+     "deranged": {
+      "T_cases": 64314,
+      "K_cases": 261481,
+      "matched_T": 52423,
+      "matched_K": 130283,
+      "usable_pairs": 521,
+      "pairs_with_cases": 581,
+      "coverage": 0.8151102403831203,
+      "learners": 27313
+     },
+     "answerable_real": true,
+     "answerable_deranged": true,
+     "size_real": {
+      "dose": {
+       "T": 2.254190134190134,
+       "K_weighted": 2.325329771684158,
+       "K_unweighted": 2.486341829176852
+      },
+      "loglen": {
+       "T": 2.2944255803647287,
+       "K_weighted": 2.349420379285464,
+       "K_unweighted": 2.7552061279833273
+      }
+     },
+     "size_deranged": {
+      "dose": {
+       "T": 2.3981649276081107,
+       "K_weighted": 2.4501517522097993,
+       "K_unweighted": 2.4244145437240467
+      },
+      "loglen": {
+       "T": 2.647312972792147,
+       "K_weighted": 2.671328729527297,
+       "K_unweighted": 2.912668062643759
+      }
+     }
+    }
+   },
+   "proxy_filter": {
+    "R": {
+     "cases": 462091,
+     "kept": 462075,
+     "dropped_proxy_under_min": 16
+    },
+    "D": {
+     "cases": 325795,
+     "kept": 325795,
+     "dropped_proxy_under_min": 0
+    }
+   },
+   "answerable": false,
+   "size": {
+    "control_dose_ratio": 1.0315588451990019,
+    "control_loglen_diff": 0.054994798920735555,
+    "deranged_dose_ratio": 1.0638698534051134,
+    "deranged_T_ratio": 0.3963182763182763,
+    "check_control_scale": [
+     "{'ok': True, 'median_treatment': 2.254190134190134, 'ratios': {'control_c_dose': 1.0315588451990019}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.03x)'}",
+     "{'ok': True, 'median_treatment': 2.254190134190134, 'ratios': {'deranged_b_dose': 1.0638698534051134}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.06x)'}"
+    ],
+    "passes": false,
+    "failure": "every control is under 0.5x the median treatment perturbation (132275). deranged_T_cases=52423. A control this small shows only that a small change is harmless and cannot rule out that a large one moves the instrument by size alone."
+   }
+  }
+ },
+ "L1": {
+  "scheme": "fine",
+  "schemes": {
+   "fine": {
+    "real": {
+     "T_cases": 160606,
+     "K_cases": 305402,
+     "matched_T": 118858,
+     "matched_K": 167380,
+     "usable_pairs": 740,
+     "pairs_with_cases": 799,
+     "coverage": 0.740059524550764,
+     "learners": 34832
+    },
+    "deranged": {
+     "T_cases": 104309,
+     "K_cases": 316873,
+     "matched_T": 82672,
+     "matched_K": 159784,
+     "usable_pairs": 688,
+     "pairs_with_cases": 799,
+     "coverage": 0.7925682347640185,
+     "learners": 32673
+    },
+    "answerable_real": true,
+    "answerable_deranged": true,
+    "size_real": {
+     "dose": {
+      "T": 2.1651466455770754,
+      "K_weighted": 2.265513022397358,
+      "K_unweighted": 2.548464571633409
+     },
+     "loglen": {
+      "T": 2.4713346487193366,
+      "K_weighted": 2.521230830670152,
+      "K_unweighted": 2.8226480502853497
+     }
+    },
+    "size_deranged": {
+     "dose": {
+      "T": 2.3373209792916585,
+      "K_weighted": 2.4366211822356783,
+      "K_unweighted": 2.476011365343213
+     },
+     "loglen": {
+      "T": 2.5347513971113886,
+      "K_weighted": 2.57550443885415,
+      "K_unweighted": 2.919695938942322
+     }
+    }
+   }
+  },
+  "proxy_filter": {
+   "R": {
+    "cases": 466023,
+    "kept": 466008,
+    "dropped_proxy_under_min": 15
+   },
+   "D": {
+    "cases": 421185,
+    "kept": 421182,
+    "dropped_proxy_under_min": 3
+   }
+  },
+  "answerable": true,
+  "size": {
+   "control_dose_ratio": 1.046355463739747,
+   "control_loglen_diff": 0.049896181950815244,
+   "deranged_dose_ratio": 1.079520864818232,
+   "deranged_T_ratio": 0.6955526763028151,
+   "check_control_scale": [
+    "{'ok': True, 'median_treatment': 2.1651466455770754, 'ratios': {'control_c_dose': 1.046355463739747}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.05x)'}",
+    "{'ok': True, 'median_treatment': 2.1651466455770754, 'ratios': {'deranged_b_dose': 1.079520864818232}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.08x)'}",
+    "{'ok': True, 'median_treatment': 118858.0, 'ratios': {'deranged_T_cases': 0.6955526763028151}, 'covers': {'treatment_T_cases': True}, 'uncovered': [], 'report': 'control scale: median treatment 118858, deranged_T_cases 82672 (0.70x)'}"
+   ],
+   "passes": true,
+   "failure": null
+  }
+ },
+ "L2r": {
+  "scheme": "fine",
+  "schemes": {
+   "fine": {
+    "real": {
+     "T_cases": 30159,
+     "K_cases": 26096,
+     "matched_T": 16547,
+     "matched_K": 13970,
+     "usable_pairs": 69,
+     "pairs_with_cases": 73,
+     "coverage": 0.5486587751583275,
+     "learners": 15129
+    },
+    "deranged": {
+     "T_cases": 7846,
+     "K_cases": 28619,
+     "matched_T": 6270,
+     "matched_K": 12212,
+     "usable_pairs": 54,
+     "pairs_with_cases": 68,
+     "coverage": 0.7991333163395361,
+     "learners": 11066
+    },
+    "answerable_real": true,
+    "answerable_deranged": true,
+    "size_real": {
+     "dose": {
+      "T": 1.814044841965311,
+      "K_weighted": 1.8781063116732464,
+      "K_unweighted": 2.2005010737294204
+     },
+     "loglen": {
+      "T": 1.9036070056218446,
+      "K_weighted": 2.0419998010204603,
+      "K_unweighted": 2.748975942991373
+     }
+    },
+    "size_deranged": {
+     "dose": {
+      "T": 2.0433811802232853,
+      "K_weighted": 2.12649181063558,
+      "K_unweighted": 2.2824271208647233
+     },
+     "loglen": {
+      "T": 1.5355014851654916,
+      "K_weighted": 1.619216030572334,
+      "K_unweighted": 2.874067413787047
+     }
+    }
+   }
+  },
+  "proxy_filter": {
+   "R": {
+    "cases": 56262,
+    "kept": 56255,
+    "dropped_proxy_under_min": 7
+   },
+   "D": {
+    "cases": 36465,
+    "kept": 36465,
+    "dropped_proxy_under_min": 0
+   }
+  },
+  "answerable": false,
+  "size": {
+   "control_dose_ratio": 1.0353141599512679,
+   "control_loglen_diff": 0.1383927953986157,
+   "deranged_dose_ratio": 1.1264226401424093,
+   "deranged_T_ratio": 0.3789206502689309,
+   "check_control_scale": [
+    "{'ok': True, 'median_treatment': 1.814044841965311, 'ratios': {'control_c_dose': 1.0353141599512679}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.04x)'}",
+    "{'ok': True, 'median_treatment': 1.814044841965311, 'ratios': {'deranged_b_dose': 1.1264226401424093}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.13x)'}"
+   ],
+   "passes": false,
+   "failure": "every control is under 0.5x the median treatment perturbation (16547). deranged_T_cases=6270. A control this small shows only that a small change is harmless and cannot rule out that a large one moves the instrument by size alone."
+  }
+ },
+ "L2x": {
+  "scheme": "fine",
+  "schemes": {
+   "fine": {
+    "real": {
+     "T_cases": 292345,
+     "K_cases": 271769,
+     "matched_T": 180011,
+     "matched_K": 160492,
+     "usable_pairs": 660,
+     "pairs_with_cases": 725,
+     "coverage": 0.615748516307787,
+     "learners": 42965
+    },
+    "deranged": {
+     "T_cases": 81844,
+     "K_cases": 297860,
+     "matched_T": 64787,
+     "matched_K": 135927,
+     "usable_pairs": 582,
+     "pairs_with_cases": 723,
+     "coverage": 0.7915913200723327,
+     "learners": 32275
+    },
+    "answerable_real": true,
+    "answerable_deranged": true,
+    "size_real": {
+     "dose": {
+      "T": 1.8720967052013489,
+      "K_weighted": 1.933999185592578,
+      "K_unweighted": 2.269633377364604
+     },
+     "loglen": {
+      "T": 1.371082900623258,
+      "K_weighted": 1.4572318666002886,
+      "K_unweighted": 2.552849219429988
+     }
+    },
+    "size_deranged": {
+     "dose": {
+      "T": 2.159322086221001,
+      "K_weighted": 2.2537695052582603,
+      "K_unweighted": 2.4565980268820766
+     },
+     "loglen": {
+      "T": 2.505822270130044,
+      "K_weighted": 2.546581663612277,
+      "K_unweighted": 2.9332018567841387
+     }
+    }
+   }
+  },
+  "proxy_filter": {
+   "R": {
+    "cases": 564182,
+    "kept": 564114,
+    "dropped_proxy_under_min": 68
+   },
+   "D": {
+    "cases": 379714,
+    "kept": 379704,
+    "dropped_proxy_under_min": 10
+   }
+  },
+  "answerable": false,
+  "size": {
+   "control_dose_ratio": 1.0330658561703796,
+   "control_loglen_diff": 0.08614896597703048,
+   "deranged_dose_ratio": 1.1534244359394672,
+   "deranged_T_ratio": 0.3599057835354506,
+   "check_control_scale": [
+    "{'ok': True, 'median_treatment': 1.8720967052013489, 'ratios': {'control_c_dose': 1.0330658561703796}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.03x)'}",
+    "{'ok': True, 'median_treatment': 1.8720967052013489, 'ratios': {'deranged_b_dose': 1.1534244359394672}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.15x)'}"
+   ],
+   "passes": false,
+   "failure": "every control is under 0.5x the median treatment perturbation (180011). deranged_T_cases=64787. A control this small shows only that a small change is harmless and cannot rule out that a large one moves the instrument by size alone."
+  }
+ },
+ "CM": {
+  "scheme": "fine",
+  "schemes": {
+   "fine": {
+    "real": {
+     "T_cases": 179954,
+     "K_cases": 289464,
+     "matched_T": 133172,
+     "matched_K": 167470,
+     "usable_pairs": 664,
+     "pairs_with_cases": 698,
+     "coverage": 0.7400335641330562,
+     "learners": 35949
+    },
+    "deranged": {
+     "T_cases": 95464,
+     "K_cases": 300061,
+     "matched_T": 76216,
+     "matched_K": 155398,
+     "usable_pairs": 607,
+     "pairs_with_cases": 668,
+     "coverage": 0.7983742562641415,
+     "learners": 30812
+    },
+    "answerable_real": true,
+    "answerable_deranged": true,
+    "size_real": {
+     "dose": {
+      "T": 2.2645901540864446,
+      "K_weighted": 2.3412062871131973,
+      "K_unweighted": 2.4910252582552097
+     },
+     "loglen": {
+      "T": 2.299929922256044,
+      "K_weighted": 2.3610741261456876,
+      "K_unweighted": 2.7424328509588456
+     }
+    },
+    "size_deranged": {
+     "dose": {
+      "T": 2.360344284664637,
+      "K_weighted": 2.443606832786974,
+      "K_unweighted": 2.384651025109718
+     },
+     "loglen": {
+      "T": 2.6732188515893065,
+      "K_weighted": 2.7209076904236884,
+      "K_unweighted": 2.9139753028581454
+     }
+    }
+   }
+  },
+  "proxy_filter": {
+   "R": {
+    "cases": 469434,
+    "kept": 469418,
+    "dropped_proxy_under_min": 16
+   },
+   "D": {
+    "cases": 395527,
+    "kept": 395525,
+    "dropped_proxy_under_min": 2
+   }
+  },
+  "answerable": true,
+  "size": {
+   "control_dose_ratio": 1.0338322291512658,
+   "control_loglen_diff": 0.06114420388964348,
+   "deranged_dose_ratio": 1.0422832053762154,
+   "deranged_T_ratio": 0.5723124981227286,
+   "check_control_scale": [
+    "{'ok': True, 'median_treatment': 2.2645901540864446, 'ratios': {'control_c_dose': 1.0338322291512658}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.03x)'}",
+    "{'ok': True, 'median_treatment': 2.2645901540864446, 'ratios': {'deranged_b_dose': 1.0422832053762154}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.04x)'}",
+    "{'ok': True, 'median_treatment': 133172.0, 'ratios': {'deranged_T_cases': 0.5723124981227286}, 'covers': {'treatment_T_cases': True}, 'uncovered': [], 'report': 'control scale: median treatment 133172, deranged_T_cases 76216 (0.57x)'}"
+   ],
+   "passes": true,
+   "failure": null
+  }
+ }
+}

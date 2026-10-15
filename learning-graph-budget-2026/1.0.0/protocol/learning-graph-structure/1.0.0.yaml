@@ -1,0 +1,561 @@
+# ============================================================================
+# EMBARGOED — NOT PUBLISHED. Staged in learning-engineering-research (private).
+#
+# Edited in place on 2026-09-25, not superseded: it has never been published,
+# so there is nothing frozen to protect. The release it governs now reads the
+# learner corpora Paper 1 rests on, not two, and the graph and procedure
+# sources of its shape typology; the sources below say so.
+#
+# This protocol governs two kinds of work that look different and raise the
+# same questions: SIMULATION, where the participants do not exist, and
+# SECONDARY USE of published learner corpora, where they exist but are
+# unreachable and were told something by someone else years ago.
+#
+# The disclosure problem this protocol originally shared with the grader protocol
+# is RESOLVED in the layer (learning-wiki#80): `consent.basis` now names what
+# processing rests on, and a complete `licence` basis satisfies the AI-processing
+# check in place of a disclosure that cannot exist. This protocol has been
+# migrated onto that basis.
+#
+# IT SURFACED A SECOND GAP, now FIXED IN THE LAYER from this protocol: the
+# governing instrument is not the same for the sources here, and `basis`
+# takes one value. `sources_uniformly_governed` and `additional_bases` carry the
+# rest, and declaring the sources non-uniform costs this protocol the licence
+# relaxation — which is correct, and which is why the analyses below that use a
+# model do so over authored text rather than over anybody's records.
+#
+# Edited in place again on 2026-10-08, still unpublished: `ai_processing_detail`
+# said no model touched anything from a learner corpus. That was wrong. Models
+# read AUTHORED ITEM CONTENT from four of the corpora (question text, skill and
+# unit names, standards descriptions), never a learner record. The detail, the
+# five sources' `additional_bases` notes and `data.collected` now say so, with
+# the route and the zero-data-retention safeguard.
+# Junyi 2020, which the release reads and this protocol had omitted, is added.
+# ============================================================================
+
+schema_version: 1
+
+protocol:
+  id: learning-graph-structure
+  version: 1.0.0
+  title: >-
+    Simulation and secondary analysis of learner records for questions about
+    capability-graph structure and instructional budget
+  effective_from: 2026-09-14
+  note: >-
+    Two populations under one protocol because the governing instrument is of
+    the same kind in both cases (a data licence or depositor terms, not a
+    consent form; the terms differ corpus by corpus) and because several
+    findings are established by pairing a simulation against an external corpus
+    and reading the disagreement. Splitting them would make that pairing
+    invisible in the record.
+
+participants:
+  population: >-
+    Two, and neither is recruited by us. (1) SIMULATED learners: parameterised
+    ability draws over generated capability graphs. No person is represented,
+    and no result about a simulated learner is a result about a person. (2)
+    ARCHIVAL learners in published corpora — school students using ASSISTments
+    (US, 2012-13) and its EDM Cup 2023 release, primary-school pupils on a
+    Chinese competition-mathematics platform (XES3G5M), UK school pupils
+    answering diagnostic mathematics questions (Eedi), adults using a
+    commercial TOEIC preparation app in Korea (EdNet, collected to 2019),
+    Duolingo learners in their first 30 days on a course (SLAM 2018; ages not
+    recorded), students in tutor studies deposited in DataShop (mathematics,
+    chemistry and physics tutors, and Junyi Academy's practice log),
+    students on Junyi Academy in 2018-19 (Junyi 2020; ages not established here),
+    learners on a Chinese MOOC platform (MOOCCubeX), and kindergartners in one
+    randomised trial (ICPSR 151741). Two DataShop sets, ds1530 and ds1531, are
+    simulated students and represent no person. The graph-shape typology also
+    reads (3) annotations of people recorded performing procedures
+    (CaptainCook4D, Ego-Exo4D; ages not established), never the video, and
+    (4) authored prerequisite graphs, task graphs and step lists (Junyi,
+    Metacademy, the Coherence Map, LCPRE, AL-CPL, MOOCCubeX, EgoPER via
+    GTG2Vid, recipes, WikiHow), which represent no learner.
+  recruitment: >-
+    None. Simulated learners are generated; archival learners were recruited by
+    the original depositors under their own arrangements, which we did not see
+    and cannot characterise.
+  inclusion:
+    - >-
+      SIMULATION — every generated learner is analysed; no exclusion on outcome.
+    - >-
+      ASSISTMENTS — rows carrying a skill tag. 2,711,813 of 6,123,270 rows.
+      Since 2026-09-24, main problems only: scaffolding sub-steps and
+      open-response rows are dropped.
+    - >-
+      EDM CUP, XES3G5M, EEDI — every learner and every tagged item the
+      positivity atlas can place in time, read through the shared corpus
+      loaders.
+    - >-
+      EDNET — for the load analysis, bundle sessions on questions carrying at
+      least one expert tag, by users with at least 30 rows, where the learner's
+      mastery on the tags is estimable from their own prior history. For the
+      positivity analyses, the re-issued 6,000-learner prefix of the archive.
+      Questions carrying only the undocumented no-tag value are dropped.
+    - >-
+      DUOLINGO SLAM 2018 — every learner in the three courses, with the train,
+      dev and test splits read together with their answer keys.
+    - >-
+      DATASHOP — for the positivity atlas, the first student-step export of
+      each set in sorted order and its first KC model, tutor steps only (pre-
+      and posttest steps dropped); a set with under 40 learners or 8 KCs is
+      reported as unreadable rather than analysed. For surmise-vs-positivity,
+      the 'All Data' samples of ds1190 and ds1275.
+    - >-
+      MOOCCUBEX — attempts on concept-linked problems, by learners who attempted
+      every item in a set.
+    - >-
+      ICPSR 151741 — every child in the authors' analysis file.
+    - >-
+      GRAPHS AND PROCEDURES — every graph the typology loaders build with at
+      least 5 nodes and 4 edges after transitive reduction; demonstration
+      graphs only for tasks with at least 5 demonstrations.
+  exclusion:
+    - >-
+      EDNET — elapsed times of 0 or above 600,000 ms, as instrument artefacts
+      rather than learner behaviour.
+    - >-
+      No exclusion is applied on the outcome being analysed, in any corpus.
+  vulnerable_populations:
+    - group: >-
+        School-age students in ASSISTments 2012-13
+      safeguards:
+        - >-
+          We hold no identifiers, no demographics and no free text from it, and
+          every figure leaving the analysis is an aggregate over tens of
+          thousands of learners.
+        - >-
+          NOT ESTABLISHED by us: whatever safeguards the original collection
+          carried. The deposit is what we are relying on, and we add no linkage.
+    - group: >-
+        School-age students and pupils in EDM Cup 2023, XES3G5M and Eedi, and
+        Junyi 2020's students, whose ages are not established here
+      safeguards:
+        - >-
+          The same as for ASSISTments: no identifiers leave the analysis, no
+          learner-written text is read, and only aggregates over thousands of
+          learners are reported. Eedi's demographic side file is never opened
+          by these analyses. Authored item content (XES3G5M's question text and
+          the corpora's skill and unit names) is read and sent to models; see
+          `ai_processing_detail`.
+        - >-
+          NOT ESTABLISHED by us: the safeguards of each original collection.
+    - group: >-
+        Students in the DataShop tutor studies, whose ages are not established
+        per set and may include minors, and kindergartners in ICPSR 151741
+      safeguards:
+        - >-
+          No identifiers leave the analysis and no free text is read. Some of
+          these samples are small (74 to 2,063 learners in the DataShop sets
+          the atlas reads, 187 children in the trial), so what is reported is a
+          cell mean over at least eight attempts or a model coefficient, never
+          a row; sets under 40 learners are skipped and report nothing. The
+          trial file's race, language-proficiency and assessor columns are
+          never read.
+        - >-
+          NOT ESTABLISHED by us: the safeguards of each original collection.
+    - group: >-
+        Duolingo SLAM learners, whose ages the release does not record, so
+        minors cannot be ruled out
+      safeguards:
+        - >-
+          The per-exercise `countries` field is never kept, and only aggregates
+          over at least 1,213 learners per course are reported.
+        - >-
+          NOT ESTABLISHED by us: the safeguards of the original collection.
+  age_assurance:
+    method: not-established
+    jurisdiction: >-
+      NOT ESTABLISHED per participant. Neither deposit records one. Recorded as
+      unknown rather than guessed: the operative consent age is set per
+      jurisdiction, so a band without one decides nothing.
+  compensation:
+    kind: none
+
+consent:
+  # ON WHAT BASIS WE PROCESS. `licence` is recorded because EdNet is the corpus
+  # every learner-data finding in this release rests on, and because it is the
+  # only one of the three whose permission is written down by its grantor.
+  #
+  # It does NOT cover the other two, and the layer now has a field that says so
+  # rather than leaving it to prose (learning-wiki, 2026-09-15, from this
+  # protocol). Declaring it costs the licence relaxation — condition 5 — and
+  # that is the right outcome: the relaxation is a claim about every source a
+  # release analyses, and this protocol can only make it about one.
+  basis: licence
+  sources_uniformly_governed: false
+  additional_bases:
+    - source: ASSISTments 2012-13
+      basis: not-established
+      note: >-
+        Two instruments. (1) The data site's WPI IRB-approved terms of use,
+        linked from https://sites.google.com/site/assistmentsdata/ (a Google
+        Drive document that needs a sign-in and has not been read here). The
+        public pages add: cite Feng, Heffernan & Koedinger (2009), or Wang,
+        Heffernan & Heffernan (2015) for the affect columns; email the citation
+        of any paper using the data to etrials@assistments.org; report and
+        delete any personally identifiable information; do not share problem
+        text. Emailing the citation is a courtesy the site asks for, not a
+        condition of use (maintainer, 2026-09-25); it will be sent on
+        publication. By our own practice the data and any row-level extract are
+        never redistributed. Access to the terms document was requested on
+        2026-09-25; until it is read, this is none of the four values, and it
+        attaches to the SCHOOL-AGE corpus while the `basis` field above
+        describes the adult one. Sent to models: the 245 skill names
+        (assist_skill_names.csv, from the export's skill_id and skill columns),
+        for the Common Core map; no problem text and no row, in keeping with the
+        public condition not to share problem text.
+    - source: EDM Cup 2023 (ASSISTments)
+      basis: not-established
+      note: >-
+        The ASSISTments Data Terms of Use (effective 2020-10-30, license.txt on
+        osf.io/yrwuh): cite ASSISTments and the dataset DOI; no commercial use;
+        outcomes made public with free and open access; no de-anonymisation; no
+        redistribution; every collaborator must access the data from its
+        original source. School-age learners. Sent to models: the Common Core
+        skill codes and skill descriptions of problem_details.csv
+        (problem_skill_code, problem_skill_description; 92 clusters with up to
+        three descriptions each), in every call of the Common Core map. The
+        file has no problem-text column, only a BERT-PCA vector, so no problem
+        text was sent.
+    - source: XES3G5M
+      basis: not-established
+      note: >-
+        The repository is MIT-licensed and the data licence is unstated. We
+        treat it as research use and do not redistribute it
+        (data/data-sources.json). Primary-school learners. Sent to models:
+        question text, options and answers of all 7,652 questions
+        (questions.json; the two tagging passes), worked solutions for the 840
+        questions shown to the proposer models only, and the knowledge-component
+        route names (cid2route.json).
+    - source: Eedi NeurIPS 2020 Education Challenge
+      basis: not-established
+      note: >-
+        Research use confirmed with the depositor; no redistribution
+        (data/data-sources.json). School-age pupils. The demographic side file
+        is never read by these analyses. Sent to models: the 308 level-3
+        subject names with their parent paths (subject_metadata.csv, Name), for
+        the Common Core map; no question, answer or pupil field.
+    - source: Junyi Academy learning activity 2018-19 (Junyi 2020, Kaggle)
+      basis: licence
+      note: >-
+        CC BY-NC-SA 4.0 (data/data-sources.json, junyi2020): attribution, no
+        commercial use, adaptations shared alike. Not redistributed. Read by the
+        cross-curricular analyses only (Log_Problem.csv, Info_Content.csv).
+        Sent to models: the 1,330 content-unit titles (Info_Content.csv,
+        content_pretty_name), for the Common Core map, and 25 of them again for
+        translation; no attempt row.
+    - source: Duolingo SLAM 2018 shared task
+      basis: licence
+      note: >-
+        CC BY-NC 4.0 (Settles et al. 2018), downloaded through a Dataverse
+        guestbook that records a name, email and institution. No commercial use.
+        Held for research, not redistributed. Learner ages unrecorded.
+    - source: DataShop exports (fourteen sets)
+      basis: terms-of-use
+      note: >-
+        DataShop terms of use (TERMS.html in each export, effective 2012-01-13):
+        research only, not commercial; no attempt to de-anonymise; no
+        distribution, and collaborators must hold their own DataShop accounts.
+        Exports from DataShop's QA server are not public and are not used.
+        ds1530 and ds1531 are simulated students, so the terms bind the
+        data but no participant stands behind it.
+    - source: MOOCCubeX
+      basis: not-established
+      note: >-
+        Research use, no redistribution (data/data-sources.json). The learner
+        file entities/user.json carries names, gender, birth year and school;
+        no analysis here reads it, and the ingest discards all four.
+    - source: Sarama, Clements et al. length-measurement trial (ICPSR 151741)
+      basis: terms-of-use
+      note: >-
+        AERA/ICPSR open-data terms, accepted at an ICPSR sign-in: statistical
+        analysis only, no re-identification. Kindergartners. Race,
+        language-proficiency and assessor columns are never read.
+    - source: >-
+        Openly licensed graph and procedure sources (Metacademy, AL-CPL, DTGL
+        and CaptainCook4D annotations and task graphs, WikiHow step lists)
+      basis: licence
+      note: >-
+        As data/data-sources.json records them: Metacademy per repository (its
+        LICENSE.txt states CC BY-SA 3.0); AL-CPL CC BY-NC-SA 4.0; DTGL CC BY-NC
+        4.0 over CaptainCook4D's MIT annotations; WikiHow CC BY-NC-SA 3.0.
+        Authored structure or step text; the CaptainCook4D step segments
+        describe recorded people but carry no identifiers.
+    - source: >-
+        Research-use graph sources (Junyi exercise table, LCPRE, MOOCCubeX
+        prerequisite pairs, Coherence Map)
+      basis: not-established
+      note: >-
+        Junyi exercise table and LCPRE research use; MOOCCubeX research use, no
+        redistribution; the Coherence Map a public web tool (CCSS), read
+        through a committed derivative (data/data-sources.json). Authored
+        structure, not learner data. Not redistributed.
+    - source: Ego-Exo4D v2 annotations
+      basis: licence
+      note: >-
+        Ego-Exo4D Dataset License, obtained by signing it at
+        ego-exo4d-data.org: licensed use only, no redistribution or
+        sublicensing, and no portion of the database in any dataset or
+        product. Signed 2026-09-22 by the principal investigator as an
+        individual licensee, with one identical agreement per licensor (the
+        organisation form did not work); the data were used by the licensee
+        alone and not shared. Annotations only, never video or audio. Attribution:
+        Ego-Exo4D: Understanding Skilled Human Activity from First- and
+        Third-Person Perspectives. https://arxiv.org/abs/2311.18259
+    - source: EgoPER task graphs (GTG2Vid) and the recipe step set
+      basis: not-established
+      note: >-
+        Our EgoPER copy is a third-party processed derivative with no licence
+        stated (GTG2Vid's in-code graphs); the official release is by emailed
+        request. The recipe set is a re-upload whose upstream source is not
+        named; data/data-sources.json records CC BY-SA 3.0 and a blocked
+        codebook. Neither is redistributed.
+    - source: Simulated learner populations
+      basis: none
+      note: >-
+        No participants, no instrument, nothing to govern. Recorded rather than
+        omitted so that a reader counting sources against instruments does not
+        find one missing and assume it was overlooked.
+  licence:
+    id: CC-BY-NC-4.0
+    ref: "https://creativecommons.org/licenses/by-nc/4.0/"
+    holder: >-
+      Riiid, who collected EdNet from users of their Santa tutoring service and
+      released it under this licence. Not a participant, and does not speak for
+      the participants.
+  # Research consent by US is not sought and cannot be: the participants are
+  # unreachable and the data were released for reuse.
+  required: false
+  mechanism: not-applicable
+  permitted_uses:
+    internal-pipeline-validation: permitted
+    research-analysis: permitted
+    research-publication: permitted
+    secondary-research-by-others: permitted
+    # CC BY-NC forbids it. This is the clearest line in the protocol and the one
+    # most likely to be crossed by accident, because the analysis lives inside a
+    # commercial product's repository.
+    product-improvement: prohibited
+    model-training: prohibited
+  permitted_uses_note: >-
+    Every value above is EdNet's licence. ASSISTments is NOT covered by it and
+    is governed by the data site's WPI IRB-approved terms (requested, not yet
+    read) and the public conditions `additional_bases` records; sending the
+    depositor the paper's citation is a courtesy, not a condition. No data or
+    row-level extract leaves this repository. EDM Cup ships the 2020
+    ASSISTments Data Terms of Use, which forbid commercial use and require
+    outcomes to be made openly available. Use of every dataset here is non-commercial: they are analysed only to produce research published openly on learning-wiki as a public good. Commercial applications may later build on those published results, as anyone's may, but no dataset, extract or model trained on one is used commercially (maintainer, 2026-09-25). EDM Cup, XES3G5M and Eedi are held for research use
+    without redistribution, as `additional_bases` records. Junyi 2020
+    (CC BY-NC-SA 4.0), Duolingo SLAM
+    (CC BY-NC 4.0), DataShop (terms of use), MOOCCubeX (research use), ICPSR
+    151741 (AERA/ICPSR open-data terms) and the graph and procedure sources
+    (Junyi, Metacademy, Coherence Map, LCPRE, AL-CPL, CaptainCook4D and DTGL,
+    EgoPER via GTG2Vid, Ego-Exo4D, recipes, WikiHow) are each governed by the
+    terms `additional_bases` records, none of which is redistributed here;
+    Ego-Exo4D's licence also bars any portion of it from appearing in any
+    dataset or product. The simulation has no participants and no
+    instrument.
+  # WHAT THE LICENCE DOES NOT SETTLE.
+  secondary_use_caveats:
+    - >-
+      NOT ESTABLISHED whether EdNet's users were told their interaction records
+      might be analysed by a third party years later. The service is a
+      commercial tutoring app; its terms are between Riiid and its users and we
+      have not read them. The licence is a statement by the depositor about the
+      rights they hold, not about what was explained to anyone.
+    - >-
+      THE ASSISTMENTS 2012-13 TERMS DOCUMENT HAS NOT BEEN READ. The data site
+      gates it behind a Google access request, made on 2026-09-25.
+      `not-established` is the nearest of the four values until it is read;
+      the `note` in `additional_bases` records the public conditions.
+  # Under a licence basis the layer requires exactly this: there is no consent
+  # step in which a disclosure could have been made.
+  ai_processing_disclosed: not-applicable
+  ai_processing_detail: >-
+    WHAT WENT TO MODELS. Large language models processed authored text only,
+    never a learner record; the learner records are read by arithmetic. The
+    text was of two kinds: capability statements and graphs written for or by
+    this program, and authored item content from public corpora (XES3G5M
+    question text, options, answers, some worked solutions and taxonomy names;
+    ASSISTments 2012-13 skill names; Eedi subject names; Junyi 2020 unit
+    titles; EDM Cup 2023 Common Core skill descriptions). No learner id,
+    response, timestamp or demographic entered any prompt. ROUTE. Every call
+    went through one routing service, OpenRouter, between 2026-09-26 and
+    2026-10-07, under its standard terms of service and data processing
+    agreement, accepted with the service. SAFEGUARD. The OpenRouter account
+    enforced zero data retention throughout, and its settings did not change
+    during the study (maintainer, 2026-10-08); from 2026-10-08 every request
+    also asks for zero data retention itself. NOT VERIFIED. The endpoint that
+    served each call was not checked against the routing service's own
+    records.
+
+data:
+  collected:
+    - item: >-
+        SIMULATION — generated ability, capability strength, hours spent,
+        outcome
+      purpose: every simulated result in the release
+      identifiability: not-applicable
+    - item: >-
+        ASSISTMENTS — user id, skill id, problem id, timestamp, correctness,
+        hint count. Six columns; everything else in the deposit is left unread
+      purpose: the scaffold-threshold, order-pair and positivity analyses
+      identifiability: deidentified
+    - item: >-
+        EDNET — timestamp, question id, answer, elapsed time, plus the published
+        question-to-tag map
+      purpose: the element-interactivity and positivity analyses
+      identifiability: deidentified
+    - item: >-
+        EDM CUP, XES3G5M, EEDI, JUNYI 2020 — learner id, item or skill id,
+        timestamp and correctness, read through the shared corpus loaders (Junyi
+        2020 by the cross-curricular analyses only)
+      purpose: >-
+        the positivity atlas and the lag analyses; XES3G5M also the surmise
+        graphs and, with EdNet, the conjunctive analysis
+      identifiability: deidentified
+    - item: >-
+        DUOLINGO SLAM 2018 — learner id, exercise, token, correctness; the
+        `countries` field is dropped
+      purpose: the positivity atlas
+      identifiability: deidentified
+    - item: >-
+        DATASHOP (fourteen public sets, 'All Data' samples) — anonymised
+        student id, step, KC, timestamp, first-attempt outcome
+      purpose: the positivity atlas and surmise-vs-positivity
+      identifiability: deidentified
+    - item: >-
+        MOOCCUBEX — attempt records on concept-linked problems (learner id,
+        problem id, correctness, time) and the concept-problem links; the
+        learner file is never read
+      purpose: item-tree inference
+      identifiability: deidentified
+    - item: >-
+        ICPSR 151741 — condition, class, pretest and posttest per child
+      purpose: the trajectory-order trial
+      identifiability: deidentified
+    - item: >-
+        CAPTAINCOOK4D (via DTGL) AND EGO-EXO4D — step or keystep ids and times
+        per recording, and Ego-Exo4D precondition lists; annotations only
+      purpose: the graph-shape typology
+      identifiability: deidentified
+    - item: >-
+        AUTHORED ITEM CONTENT — XES3G5M question text, options, answers and
+        worked solutions (questions.json) and KC route names (cid2route.json);
+        ASSISTments 2012-13 skill names; Eedi subject names
+        (subject_metadata.csv); Junyi 2020 content-unit titles
+        (Info_Content.csv); EDM Cup 2023 Common Core skill codes and
+        descriptions (problem_details.csv). Text the platforms' authors wrote;
+        no learner field
+      purpose: >-
+        the model steps of the built graph, the expert-KC tagging, the
+        cross-curricular cluster map and the translation for its human check,
+        all sent through OpenRouter (see ai_processing_detail)
+      identifiability: not-applicable
+    - item: >-
+        AUTHORED GRAPHS AND STEP LISTS — Junyi exercise table, Metacademy,
+        Coherence Map, LCPRE, AL-CPL, MOOCCubeX prerequisite pairs,
+        CaptainCook4D and DTGL task graphs, EgoPER graphs via GTG2Vid, recipe
+        and WikiHow step verbs, the 18-graph authored corpus and the
+        Automatico course graph (declared, not analysed)
+      purpose: the graph-shape typology and the corpus analyses
+      identifiability: not-applicable
+  prohibited:
+    - Linking any corpus to any other dataset, including each other.
+    - Re-identification attempts of any kind.
+    - Redistribution of ASSISTments rows in any form, including derived extracts.
+    - Any commercial use of EdNet, per its licence.
+    - Redistribution of EDM Cup, XES3G5M or Eedi rows in any form.
+    - >-
+      Redistribution of DataShop, MOOCCubeX, ICPSR 151741, LCPRE, Junyi,
+      EgoPER (GTG2Vid) or recipe data, and any commercial use of Duolingo SLAM,
+      AL-CPL, DTGL or WikiHow, per their terms.
+    - >-
+      Any portion of Ego-Exo4D, including keystep names, edge lists or other
+      annotation content, in a release, dataset or product; the release names
+      its files and hashes only.
+  deidentification:
+    applied: true
+    method: >-
+      Ids are used as grouping keys and dropped from every output. No output
+      contains a row-level record; the smallest unit published is a cell mean
+      over at least eight attempts.
+  retention:
+    raw: >-
+      For the duration of the analysis, in a session-scoped scratch directory
+      destroyed with the container. Corpora are never committed to this
+      repository and are re-downloaded from their deposits when needed.
+    derived: >-
+      Aggregates only, in version control. No row-level derived record is kept.
+    basis: >-
+      Each corpus's own terms: the EdNet licence, the ASSISTments data terms,
+      the research-use terms recorded for EDM Cup, XES3G5M and Eedi, and the
+      terms `additional_bases` records for every other source.
+  storage:
+    location: >-
+      Ephemeral analysis container, local disk only, not backed up and not
+      synchronised.
+    encryption_at_rest: unspecified
+    encryption_in_transit: unspecified
+    access_logging: unspecified
+  access:
+    raw:
+      - The analysis session only. No human reads row-level records.
+    derived:
+      - The analysis session, and this repository for aggregates alone.
+    published:
+      - anyone
+  # `identifiability` is a mapping of {collected, published}; the licence basis
+  # is only available over deidentified or aggregate COLLECTED data, and both
+  # corpora arrive that way.
+  identifiability:
+    collected: deidentified
+    published: aggregate
+
+risks:
+  classification: minimal
+  identified:
+    - risk: >-
+        A simulation result is read as a result about people.
+      mitigation: >-
+        Every claim page carries the population it was established on, and the
+        release's limitations name simulation explicitly wherever it is the
+        only evidence. Where a simulated finding and an external corpus
+        disagree, the disagreement is reported rather than resolved in favour
+        of the simulation.
+    - risk: >-
+        An aggregate over a small cell identifies an unusual learner.
+      mitigation: >-
+        Minimum cell sizes are enforced in the analysis code, not applied
+        afterwards, and no cell below eight attempts is reported.
+    - risk: >-
+        ASSISTments material leaves the container through a derived extract.
+      mitigation: >-
+        The extract is written to the scratch directory only, the repository
+        ignores it by path, and the analysis emits aggregates. This is the risk
+        that would breach a relationship rather than a licence, which is why it
+        is listed separately from the licence terms above.
+    - risk: >-
+        Authored item content sent to a model is retained, logged or trained
+        on by a provider or by the routing service, outside every corpus's
+        terms (XES3G5M's question text above all).
+      mitigation: >-
+        Only authored content is sent, never a learner record; the routing
+        account enforced zero data retention throughout, and since 2026-10-08
+        every request also asks for it (ai_processing_detail).
+
+external_review:
+  status: not-required
+  determination: >-
+    Secondary analysis of deidentified published corpora and of simulated data,
+    with no intervention, no contact and no re-identification. No human-subjects
+    review body has jurisdiction over either population as used here. Recorded
+    as a determination rather than an omission.
+
+deviations: []
+
+provenance:
+  source_type: research
+  created_at: 2026-09-15

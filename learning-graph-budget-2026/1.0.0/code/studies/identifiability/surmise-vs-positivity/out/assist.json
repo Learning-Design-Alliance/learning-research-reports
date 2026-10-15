@@ -1,0 +1,109 @@
+{
+ "dataset": "assist",
+ "sets": 2,
+ "item_set_size": 16,
+ "claimed_effect": 0.1,
+ "populations": {
+  "same population": {
+   "crosstab": {
+    "asserted": {
+     "supported": 0,
+     "contradicted": 0,
+     "unknown": 237
+    },
+    "silent": {
+     "supported": 0,
+     "contradicted": 0,
+     "unknown": 243
+    }
+   },
+   "verdict": "PRIOR, NOT A CONSTRAINT: 100.0% of asserted edges land on pairs this corpus cannot decide either way"
+  },
+  "every learner": {
+   "crosstab": {
+    "asserted": {
+     "supported": 23,
+     "contradicted": 0,
+     "unknown": 214
+    },
+    "silent": {
+     "supported": 26,
+     "contradicted": 0,
+     "unknown": 217
+    }
+   },
+   "verdict": "PRIOR, NOT A CONSTRAINT: 90.3% of asserted edges land on pairs this corpus cannot decide either way"
+  }
+ },
+ "reversed_arrow": {
+  "same population": {
+   "claimed": 0.0,
+   "reversed": 0.0,
+   "margin": 0.0,
+   "verdict": "UNRESOLVED",
+   "unknown_claimed": 1.0,
+   "unknown_reversed": 1.0
+  },
+  "every learner": {
+   "claimed": 0.0970464135021097,
+   "reversed": 0.10548523206751055,
+   "margin": -0.008438818565400852,
+   "verdict": "REVERSED",
+   "unknown_claimed": 0.9029535864978903,
+   "unknown_reversed": 0.8945147679324894
+  }
+ },
+ "relation": {
+  "ordered": 480,
+  "asserted": 237,
+  "density": 0.49375,
+  "bidirectional": 51,
+  "unordered": 240
+ },
+ "per_set": [
+  {
+   "items": 16,
+   "complete_case": 224,
+   "asserted": 91,
+   "shape": {
+    "ordered": 240,
+    "asserted": 91,
+    "density": 0.37916666666666665,
+    "bidirectional": 15,
+    "unordered": 120
+   },
+   "same_population": {
+    "supported": 0,
+    "contradicted": 0,
+    "unknown": 91
+   },
+   "all_learners": {
+    "supported": 22,
+    "contradicted": 0,
+    "unknown": 69
+   }
+  },
+  {
+   "items": 16,
+   "complete_case": 50,
+   "asserted": 146,
+   "shape": {
+    "ordered": 240,
+    "asserted": 146,
+    "density": 0.6083333333333333,
+    "bidirectional": 36,
+    "unordered": 120
+   },
+   "same_population": {
+    "supported": 0,
+    "contradicted": 0,
+    "unknown": 146
+   },
+   "all_learners": {
+    "supported": 1,
+    "contradicted": 0,
+    "unknown": 145
+   }
+  }
+ ]
+}

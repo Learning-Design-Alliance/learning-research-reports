@@ -1,0 +1,248 @@
+{
+ "summary": "L1: NOT B-SPECIFIC; L2: UNANSWERABLE; CM: NO REVERSE EFFECT",
+ "verdicts": {
+  "L1": "NOT B-SPECIFIC",
+  "L2": "UNANSWERABLE",
+  "CM": "NO REVERSE EFFECT"
+ },
+ "boot": 1000,
+ "boot_unit": "learner (multinomial resampling)",
+ "margin": 0.02,
+ "sets": {
+  "L1": {
+   "set": "L1",
+   "scheme": "fine",
+   "primary": {
+    "verdict": "NOT B-SPECIFIC",
+    "Delta": -0.013078119345641199,
+    "Delta_ci": [
+     -0.02258397649469214,
+     -0.005947598049100585
+    ],
+    "Delta_der": -0.011366537527014414,
+    "Delta_der_ci": [
+     -0.01924150563443496,
+     -0.00437573817300813
+    ],
+    "S": -0.0017115818186267846,
+    "S_ci": [
+     -0.012357495733221854,
+     0.0069542386468575395
+    ],
+    "Delta_raw": -0.012522262180803318,
+    "Delta_raw_ci": [
+     -0.022135555621543415,
+     -0.0051220852043307044
+    ],
+    "beta": 0.7723626133270994,
+    "beta_der": 0.7677243866602345,
+    "mean_T": 0.43541032156018106,
+    "mean_T_ci": [
+     0.4281699581506207,
+     0.4369055400135531
+    ],
+    "mean_K_weighted": 0.4479325837409843,
+    "mean_K_ci": [
+     0.43817814745560024,
+     0.454495233300241
+    ],
+    "positivity_R": {
+     "T_cases": 160606,
+     "K_cases": 305402,
+     "matched_T": 118858,
+     "matched_K": 167380,
+     "usable_pairs": 740,
+     "pairs_with_cases": 799,
+     "coverage": 0.740059524550764,
+     "learners": 34832
+    },
+    "positivity_D": {
+     "T_cases": 104309,
+     "K_cases": 316873,
+     "matched_T": 82672,
+     "matched_K": 159784,
+     "usable_pairs": 688,
+     "pairs_with_cases": 799,
+     "coverage": 0.7925682347640185,
+     "learners": 32673
+    }
+   },
+   "secondary_first_meeting": {
+    "verdict": "UNRESOLVED",
+    "Delta": -0.008777951425829525,
+    "Delta_ci": [
+     -0.021515786247517384,
+     0.0020207974032530225
+    ],
+    "Delta_der": -0.011515677661554683,
+    "Delta_der_ci": [
+     -0.021383702549888018,
+     0.0002514889853864652
+    ],
+    "S": 0.0027377262357251575,
+    "S_ci": [
+     -0.013680087444714124,
+     0.01600632567560633
+    ],
+    "Delta_raw": -0.008319419576571193,
+    "Delta_raw_ci": [
+     -0.02111821325749639,
+     0.0027696728669643358
+    ],
+    "beta": 0.8299048725955908,
+    "beta_der": 0.8193001358023471,
+    "mean_T": 0.4466029467582209,
+    "mean_T_ci": [
+     0.4383487249828552,
+     0.450661302107834
+    ],
+    "mean_K_weighted": 0.45492236633479205,
+    "mean_K_ci": [
+     0.44160260130725687,
+     0.4659409117995635
+    ],
+    "positivity_R": {
+     "T_cases": 83332,
+     "K_cases": 193066,
+     "matched_T": 57962,
+     "matched_K": 86465,
+     "usable_pairs": 694,
+     "pairs_with_cases": 799,
+     "coverage": 0.6955551288820622,
+     "learners": 28755
+    },
+    "positivity_D": {
+     "T_cases": 54477,
+     "K_cases": 196569,
+     "matched_T": 39508,
+     "matched_K": 79733,
+     "usable_pairs": 626,
+     "pairs_with_cases": 799,
+     "coverage": 0.7252234888117921,
+     "learners": 26751
+    }
+   }
+  },
+  "L2": {
+   "verdict": "UNANSWERABLE",
+   "tried": [
+    "L2r",
+    "L2x"
+   ]
+  },
+  "CM": {
+   "set": "CM",
+   "scheme": "fine",
+   "primary": {
+    "verdict": "NO REVERSE EFFECT",
+    "Delta": -0.006562933766842345,
+    "Delta_ci": [
+     -0.01765440863874513,
+     -6.032860126046016e-05
+    ],
+    "Delta_der": -0.016132565227643846,
+    "Delta_der_ci": [
+     -0.023414343988278904,
+     -0.007334394510544226
+    ],
+    "S": 0.009569631460801501,
+    "S_ci": [
+     -0.004405778582305007,
+     0.018318980627781884
+    ],
+    "Delta_raw": -0.006186683027637669,
+    "Delta_raw_ci": [
+     -0.01727589919041029,
+     0.0002962022384270151
+    ],
+    "beta": 0.6685730811597862,
+    "beta_der": 0.6990866545911093,
+    "mean_T": 0.4457017991770042,
+    "mean_T_ci": [
+     0.43804852430287333,
+     0.44710352727030533
+    ],
+    "mean_K_weighted": 0.4518884822046418,
+    "mean_K_ci": [
+     0.4423586004747066,
+     0.45927242444238336
+    ],
+    "positivity_R": {
+     "T_cases": 179954,
+     "K_cases": 289464,
+     "matched_T": 133172,
+     "matched_K": 167470,
+     "usable_pairs": 664,
+     "pairs_with_cases": 698,
+     "coverage": 0.7400335641330562,
+     "learners": 35949
+    },
+    "positivity_D": {
+     "T_cases": 95464,
+     "K_cases": 300061,
+     "matched_T": 76216,
+     "matched_K": 155398,
+     "usable_pairs": 607,
+     "pairs_with_cases": 668,
+     "coverage": 0.7983742562641415,
+     "learners": 30812
+    }
+   },
+   "secondary_first_meeting": {
+    "verdict": "NO REVERSE EFFECT",
+    "Delta": 0.001359587096037179,
+    "Delta_ci": [
+     -0.01164838090761589,
+     0.013278725110875701
+    ],
+    "Delta_der": 0.0006109228768539989,
+    "Delta_der_ci": [
+     -0.00990123295559166,
+     0.011929525413447254
+    ],
+    "S": 0.0007486642191831802,
+    "S_ci": [
+     -0.01561910336667961,
+     0.015143852909004973
+    ],
+    "Delta_raw": 0.0013628444964897913,
+    "Delta_raw_ci": [
+     -0.01213741811492056,
+     0.01348816757722106
+    ],
+    "beta": 0.6935018396035831,
+    "beta_der": 0.6556645905738989,
+    "mean_T": 0.45268855560897686,
+    "mean_T_ci": [
+     0.4443700700525374,
+     0.4563087683990171
+    ],
+    "mean_K_weighted": 0.45132571111248704,
+    "mean_K_ci": [
+     0.43757991701512033,
+     0.4618020865159947
+    ],
+    "positivity_R": {
+     "T_cases": 93146,
+     "K_cases": 178763,
+     "matched_T": 64477,
+     "matched_K": 88133,
+     "usable_pairs": 642,
+     "pairs_with_cases": 698,
+     "coverage": 0.6922143731346488,
+     "learners": 29856
+    },
+    "positivity_D": {
+     "T_cases": 48633,
+     "K_cases": 187119,
+     "matched_T": 36747,
+     "matched_K": 79109,
+     "usable_pairs": 583,
+     "pairs_with_cases": 668,
+     "coverage": 0.7555980507063105,
+     "learners": 25126
+    }
+   }
+  }
+ }
+}

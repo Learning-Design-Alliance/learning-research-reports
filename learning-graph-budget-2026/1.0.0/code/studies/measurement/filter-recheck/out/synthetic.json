@@ -1,0 +1,152 @@
+{
+ "worlds": [
+  {
+   "seed": 20261002,
+   "identity": {
+    "run_gauss_dense": 0.0,
+    "run_gauss_arrow": 0.0,
+    "run_joint_P": 8.881784197001252e-16,
+    "run_joint_g": 2.6645352591003757e-15,
+    "mm_joint_vs_gauss": 0.0,
+    "passes": true
+   },
+   "agreement": {
+    "first_attempt_max_abs_dP": 0.0,
+    "true_items_mean_abs_dP": 0.007995079290691882,
+    "true_items_max_abs_dP": 0.0906725286009048,
+    "step_canonical_v0_max_rel": 6.290755694138284e-10,
+    "canonical_small_var_max_abs_dP": 8.262377637624496e-08,
+    "passes": true
+   },
+   "exact": {
+    "answers": 574902,
+    "learners": 2000,
+    "total_nats_behind_exact": {
+     "laplace": 200.7592679518628,
+     "moment_matching": 31.30868658180088
+    },
+    "per_answer_behind_exact": {
+     "laplace": {
+      "est": 0.00034920606982035687,
+      "lo": 0.00027880875398097603,
+      "hi": 0.0004088160767213821
+     },
+     "moment_matching": {
+      "est": 5.445917144452599e-05,
+      "lo": 3.227496465502825e-05,
+      "hi": 7.969816100703875e-05
+     }
+    },
+    "laplace_minus_mm_per_answer": {
+     "est": 0.00029474689837583084,
+     "lo": 0.00022853935263755643,
+     "hi": 0.00035694498119127703
+    },
+    "logloss": {
+     "exact": 0.5127184337571545,
+     "laplace": 0.5130676398269749,
+     "moment_matching": 0.5127728929285991
+    },
+    "mean_residual_by_learner_attempts": {
+     "0-50": {
+      "exact": 0.0003438841381290622,
+      "laplace": 0.006090403910589091,
+      "moment_matching": 0.00048046057275944766
+     },
+     "50-150": {
+      "exact": -0.00020706604996753244,
+      "laplace": 0.006570357749729188,
+      "moment_matching": -0.00016950430606185518
+     },
+     "150-300": {
+      "exact": 0.0018389036500336335,
+      "laplace": 0.008517293651943076,
+      "moment_matching": 0.0019010839261171593
+     },
+     "300-inf": {
+      "exact": -0.003434869660418346,
+      "laplace": 0.003117190836651107,
+      "moment_matching": -0.003304871957477947
+     }
+    },
+    "passes": true
+   }
+  },
+  {
+   "seed": 20261003,
+   "identity": {
+    "run_gauss_dense": 0.0,
+    "run_gauss_arrow": 0.0,
+    "run_joint_P": 6.661338147750939e-16,
+    "run_joint_g": 4.884981308350689e-15,
+    "mm_joint_vs_gauss": 0.0,
+    "passes": true
+   },
+   "agreement": {
+    "first_attempt_max_abs_dP": 0.0,
+    "true_items_mean_abs_dP": 0.008969004607187242,
+    "true_items_max_abs_dP": 0.0804538093217263,
+    "step_canonical_v0_max_rel": 6.290755694138284e-10,
+    "canonical_small_var_max_abs_dP": 7.53420956733919e-08,
+    "passes": true
+   },
+   "exact": {
+    "answers": 574592,
+    "learners": 2000,
+    "total_nats_behind_exact": {
+     "laplace": 223.6123287915574,
+     "moment_matching": 26.195304285152346
+    },
+    "per_answer_behind_exact": {
+     "laplace": {
+      "est": 0.00038916714606461174,
+      "lo": 0.00031003620558785205,
+      "hi": 0.00045910591519014114
+     },
+     "moment_matching": {
+      "est": 4.558939958292553e-05,
+      "lo": 2.2119625425819986e-05,
+      "hi": 7.163605698159493e-05
+     }
+    },
+    "laplace_minus_mm_per_answer": {
+     "est": 0.0003435777464816862,
+     "lo": 0.0002595839860725396,
+     "hi": 0.0004099771862349109
+    },
+    "logloss": {
+     "exact": 0.5008600073804385,
+     "laplace": 0.501249174526503,
+     "moment_matching": 0.5009055967800213
+    },
+    "mean_residual_by_learner_attempts": {
+     "0-50": {
+      "exact": 0.00071016199741352,
+      "laplace": 0.00774918245852878,
+      "moment_matching": 0.0007808414374940654
+     },
+     "50-150": {
+      "exact": -0.0010179357659617567,
+      "laplace": 0.0069898473163182056,
+      "moment_matching": -0.0009451499916018355
+     },
+     "150-300": {
+      "exact": -0.0004092284972386758,
+      "laplace": 0.007349579959742659,
+      "moment_matching": -0.00032452149402018574
+     },
+     "300-inf": {
+      "exact": 0.0009008959203422847,
+      "laplace": 0.008276534113752279,
+      "moment_matching": 0.0010201302996148054
+     }
+    },
+    "passes": true
+   }
+  }
+ ],
+ "identity_passes": true,
+ "agreement_passes": true,
+ "exact_passes": true,
+ "validated": true
+}

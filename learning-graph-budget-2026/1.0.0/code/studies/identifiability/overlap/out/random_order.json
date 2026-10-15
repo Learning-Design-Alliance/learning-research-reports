@@ -1,0 +1,65 @@
+{
+ "rows_scanned": 6123270,
+ "section": "RandomChildOrderSection",
+ "units": 17502,
+ "units_one_skill": 7447,
+ "units_two_or_more_skills": 10055,
+ "pairs_co_seen": 3838,
+ "largest_minority_arm": 15,
+ "pairs_with_both_arms_at_least": {
+  "threshold": 15,
+  "pairs": 1
+ },
+ "top_pairs": [
+  {
+   "students": 490,
+   "a_first": 0,
+   "b_first_or_tied": 490
+  },
+  {
+   "students": 479,
+   "a_first": 4,
+   "b_first_or_tied": 475
+  },
+  {
+   "students": 479,
+   "a_first": 2,
+   "b_first_or_tied": 477
+  },
+  {
+   "students": 479,
+   "a_first": 2,
+   "b_first_or_tied": 477
+  },
+  {
+   "students": 475,
+   "a_first": 5,
+   "b_first_or_tied": 470
+  },
+  {
+   "students": 475,
+   "a_first": 2,
+   "b_first_or_tied": 473
+  },
+  {
+   "students": 475,
+   "a_first": 1,
+   "b_first_or_tied": 474
+  },
+  {
+   "students": 474,
+   "a_first": 3,
+   "b_first_or_tied": 471
+  },
+  {
+   "students": 474,
+   "a_first": 1,
+   "b_first_or_tied": 473
+  },
+  {
+   "students": 473,
+   "a_first": 4,
+   "b_first_or_tied": 469
+  }
+ ]
+}

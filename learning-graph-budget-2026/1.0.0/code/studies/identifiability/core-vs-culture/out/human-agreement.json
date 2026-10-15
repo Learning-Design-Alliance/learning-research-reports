@@ -1,0 +1,110 @@
+{
+ "kappa_human_mapper": 0.6056098597535061,
+ "kappa_human_mapper2": 0.5600982375036118,
+ "kappa_mapper_mapper2": 0.7096633778293674,
+ "raw_human_mapper": 0.632183908045977,
+ "raw_human_mapper2": 0.5977011494252874,
+ "raw_mapper_mapper2": 0.735632183908046,
+ "raw_grade_domain_human_mapper": 0.6666666666666666,
+ "raw_domain_human_mapper": 0.7586206896551724,
+ "none_share": {
+  "human": 0.21839080459770116,
+  "mapper": 0.22988505747126436,
+  "mapper2": 0.3218390804597701
+ },
+ "kappa_human_mapper_ci95": [
+  0.4928898664329148,
+  0.7094541735378624
+ ],
+ "n": 87,
+ "per_corpus": {
+  "assistments2012": {
+   "kappa_human_mapper": 0.6199324324324325,
+   "kappa_human_mapper2": 0.5819397993311036,
+   "kappa_mapper_mapper2": 0.7058823529411764,
+   "raw_human_mapper": 0.64,
+   "raw_human_mapper2": 0.6,
+   "raw_mapper_mapper2": 0.72,
+   "raw_grade_domain_human_mapper": 0.68,
+   "raw_domain_human_mapper": 0.8,
+   "none_share": {
+    "human": 0.0,
+    "mapper": 0.0,
+    "mapper2": 0.16
+   },
+   "n": 25
+  },
+  "eedi": {
+   "kappa_human_mapper": 0.6679841897233202,
+   "kappa_human_mapper2": 0.562753036437247,
+   "kappa_mapper_mapper2": 0.7018633540372671,
+   "raw_human_mapper": 0.7083333333333334,
+   "raw_human_mapper2": 0.625,
+   "raw_mapper_mapper2": 0.75,
+   "raw_grade_domain_human_mapper": 0.7083333333333334,
+   "raw_domain_human_mapper": 0.75,
+   "none_share": {
+    "human": 0.2916666666666667,
+    "mapper": 0.3333333333333333,
+    "mapper2": 0.4166666666666667
+   },
+   "n": 24
+  },
+  "junyi2020": {
+   "kappa_human_mapper": 0.5250659630606861,
+   "kappa_human_mapper2": 0.52,
+   "kappa_mapper_mapper2": 0.581151832460733,
+   "raw_human_mapper": 0.55,
+   "raw_human_mapper2": 0.55,
+   "raw_mapper_mapper2": 0.6,
+   "raw_grade_domain_human_mapper": 0.65,
+   "raw_domain_human_mapper": 0.75,
+   "none_share": {
+    "human": 0.2,
+    "mapper": 0.1,
+    "mapper2": 0.15
+   },
+   "n": 20
+  },
+  "xes3g5m": {
+   "kappa_human_mapper": 0.4638297872340426,
+   "kappa_human_mapper2": 0.4449339207048459,
+   "kappa_mapper_mapper2": 0.8252427184466018,
+   "raw_human_mapper": 0.6111111111111112,
+   "raw_human_mapper2": 0.6111111111111112,
+   "raw_mapper_mapper2": 0.8888888888888888,
+   "raw_grade_domain_human_mapper": 0.6111111111111112,
+   "raw_domain_human_mapper": 0.7222222222222222,
+   "none_share": {
+    "human": 0.4444444444444444,
+    "mapper": 0.5555555555555556,
+    "mapper2": 0.6111111111111112
+   },
+   "n": 18
+  }
+ },
+ "english_named": {
+  "kappa_human_mapper": 0.6556873078612209,
+  "kappa_human_mapper2": 0.5858540925266904,
+  "kappa_mapper_mapper2": 0.7137078651685393,
+  "raw_human_mapper": 0.673469387755102,
+  "raw_human_mapper2": 0.6122448979591837,
+  "raw_mapper_mapper2": 0.7346938775510204,
+  "raw_grade_domain_human_mapper": 0.6938775510204082,
+  "raw_domain_human_mapper": 0.7755102040816326,
+  "none_share": {
+   "human": 0.14285714285714285,
+   "mapper": 0.16326530612244897,
+   "mapper2": 0.2857142857142857
+  },
+  "n": 49
+ },
+ "blank": 13,
+ "unsure": 22,
+ "verdict": "MAP VALIDATED",
+ "coder": "human:david-porcaro",
+ "mappers": {
+  "MAPPER": "openai/gpt-6-sol",
+  "MAPPER2": "deepseek/deepseek-v4-pro"
+ }
+}

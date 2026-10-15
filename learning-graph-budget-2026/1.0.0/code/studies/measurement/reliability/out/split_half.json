@@ -1,0 +1,85 @@
+{
+  "seed": 20260921,
+  "splits": 12,
+  "cells": [
+    5,
+    10,
+    20
+  ],
+  "gate": 0.8,
+  "min_pairs": 30,
+  "rows": [
+    {
+      "corpus": "xes3g5m",
+      "min_cell": 5,
+      "splits": 12,
+      "pairs_median": 1261,
+      "split_half": 0.34222765681492456,
+      "spearman_brown": 0.5099398080159113,
+      "split_half_reach_partialled": 0.3398567238536248,
+      "spearman_brown_reach_partialled": 0.5073030836851674,
+      "predictor_ceiling": 0.7141006987924822,
+      "meets_gate": false
+    },
+    {
+      "corpus": "xes3g5m",
+      "min_cell": 10,
+      "splits": 12,
+      "pairs_median": 1036,
+      "split_half": 0.39168987462687577,
+      "spearman_brown": 0.562898217150414,
+      "split_half_reach_partialled": 0.38860639704170646,
+      "spearman_brown_reach_partialled": 0.5597070528691145,
+      "predictor_ceiling": 0.7502654311311524,
+      "meets_gate": false
+    },
+    {
+      "corpus": "xes3g5m",
+      "min_cell": 20,
+      "splits": 12,
+      "pairs_median": 812,
+      "split_half": 0.47423123363150416,
+      "spearman_brown": 0.6433607195572985,
+      "split_half_reach_partialled": 0.47066887986614087,
+      "spearman_brown_reach_partialled": 0.6400745760105847,
+      "predictor_ceiling": 0.8020976995087933,
+      "meets_gate": false
+    },
+    {
+      "corpus": "ednet",
+      "min_cell": 5,
+      "splits": 12,
+      "pairs_median": 4382,
+      "split_half": 0.05139595572266409,
+      "spearman_brown": 0.09776707898279428,
+      "split_half_reach_partialled": 0.05055941597575526,
+      "spearman_brown_reach_partialled": 0.09625236841801257,
+      "predictor_ceiling": 0.31267727608957174,
+      "meets_gate": false
+    },
+    {
+      "corpus": "ednet",
+      "min_cell": 10,
+      "splits": 12,
+      "pairs_median": 3569,
+      "split_half": 0.06686040416977555,
+      "spearman_brown": 0.1253404923614274,
+      "split_half_reach_partialled": 0.06479292613337619,
+      "spearman_brown_reach_partialled": 0.12170051949661471,
+      "predictor_ceiling": 0.3540345920407036,
+      "meets_gate": false
+    },
+    {
+      "corpus": "ednet",
+      "min_cell": 20,
+      "splits": 12,
+      "pairs_median": 2343,
+      "split_half": 0.07293646497888655,
+      "spearman_brown": 0.13595672690707142,
+      "split_half_reach_partialled": 0.06787335932569939,
+      "spearman_brown_reach_partialled": 0.12711874256055514,
+      "predictor_ceiling": 0.3687231032998494,
+      "meets_gate": false
+    }
+  ]
+}
