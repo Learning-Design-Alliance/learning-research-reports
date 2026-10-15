@@ -12,7 +12,10 @@ run by CI on every pull request and on main, fails when:
     SHA-256 differs from the one recorded when it was lifted;
   - with --base <ref> (pull requests), the change edits, adds to or deletes from a version folder
     that already exists at <ref>. A published version is never changed: a correction is a new
-    version folder whose release file says what it supersedes.
+    version folder whose release file says what it supersedes;
+  - DOIS.json (written by scripts/mint_doi.py) names a version folder that does not exist, has an
+    entry that is not a well-formed reserved or published DOI, or, with --base, changes or removes
+    an entry that was already published at <ref> (a reserved entry may only become published).
 
     python3 scripts/check_releases.py [--base origin/main]
 
@@ -30,9 +33,10 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MARKER = ("LDA-" + "EMBARGO").encode()
+MARKER = "-".join(["LDA", "EMBARGO"]).encode()   # joined at run time: a constant would be folded into the .pyc
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
 NOT_RELEASES = {".git", ".github", "scripts"}
+DOIS = ROOT / "DOIS.json"
 
 
 def sha(p: Path) -> str:
@@ -46,7 +50,7 @@ def files_under(d: Path) -> list[Path]:
 def check_tree() -> list[str]:
     bad = []
     for p in files_under(ROOT):
-        if ".git" in p.relative_to(ROOT).parts:
+        if {".git", "__pycache__"} & set(p.relative_to(ROOT).parts):
             continue
         if MARKER in p.read_bytes():
             bad.append(f"{p.relative_to(ROOT)}: carries the embargo marker")
@@ -92,6 +96,47 @@ def check_version(release: str, vdir: Path) -> list[str]:
     return bad
 
 
+DOI = re.compile(r"^10\.\d{4,9}/\S+$")
+
+
+def check_dois(text: str | None, where: str = "DOIS.json") -> tuple[list[str], dict]:
+    if text is None:
+        return [], {}
+    try:
+        d = json.loads(text)
+    except json.JSONDecodeError as e:
+        return [f"{where}: not JSON ({e})"], {}
+    bad = []
+    for key, e in d.items():
+        parts = key.split("/")
+        if len(parts) != 2 or not SEMVER.match(parts[1]):
+            bad.append(f"{where}: key {key!r} is not <release>/<version>")
+            continue
+        if where == "DOIS.json" and not (ROOT / key / "LIFT.json").is_file():
+            bad.append(f"{where}: {key} has no published version folder")
+        if not DOI.match(str(e.get("doi", ""))) or e.get("state") not in ("reserved", "published") \
+                or not isinstance(e.get("deposition"), int):
+            bad.append(f"{where}: {key} needs a doi (10.x/...), a state (reserved or published) and a deposition id")
+        if e.get("state") == "published" and not str(e.get("published_by", "")).startswith("human:"):
+            bad.append(f"{where}: {key} is published but not by a person (published_by: human:<name>)")
+    return bad, d
+
+
+def check_dois_unchanged(base: str) -> list[str]:
+    r = subprocess.run(["git", "show", f"{base}:DOIS.json"], cwd=ROOT, capture_output=True, text=True)
+    _bad, old = check_dois(r.stdout if r.returncode == 0 else None, f"{base}:DOIS.json")
+    _bad, new = check_dois(DOIS.read_text(encoding="utf-8") if DOIS.is_file() else None)
+    out = []
+    for key, e in old.items():
+        n = new.get(key)
+        if e.get("state") == "published" and n != e:
+            out.append(f"DOIS.json: {key} was published at {base}; its entry may not change")
+        elif e.get("state") == "reserved" and (not n or n.get("doi") != e.get("doi")
+                                              or n.get("deposition") != e.get("deposition")):
+            out.append(f"DOIS.json: {key}'s reserved DOI may only become published, not change or go")
+    return out
+
+
 def check_published_unchanged(base: str) -> list[str]:
     def git(*args):
         return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, check=True).stdout
@@ -113,8 +158,10 @@ def main() -> int:
     ap.add_argument("--base", help="the ref a pull request merges into, e.g. origin/main")
     a = ap.parse_args()
     bad = check_tree()
+    bad += check_dois(DOIS.read_text(encoding="utf-8") if DOIS.is_file() else None)[0]
     if a.base:
         bad += check_published_unchanged(a.base)
+        bad += check_dois_unchanged(a.base)
     n = sum(1 for r in ROOT.iterdir() if r.is_dir() and r.name not in NOT_RELEASES
             for v in r.iterdir() if v.is_dir() and SEMVER.match(v.name))
     if bad:
