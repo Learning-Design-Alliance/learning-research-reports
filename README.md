@@ -30,6 +30,7 @@ releases here.
   notebooks/            re-run notebooks, where the release has them
   per-case-*            per-case outputs and their README
   protocol/             the protocol the release follows
+  readiness/            the readiness record, and the independent scope audit and reproduction it cites
   artifacts/            other documents the release cites, at their original paths
 ```
 
