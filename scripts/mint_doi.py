@@ -131,8 +131,9 @@ def deposit_metadata(vdir: Path, release: str, version: str) -> dict:
                 "scheme": "url"}]
     for d in rec.get("datasets") or []:
         loc = (d or {}).get("location") or {}
-        if loc.get("kind") == "doi" and loc.get("ref"):
-            related.append({"identifier": loc["ref"], "relation": "references", "scheme": "doi"})
+        ref = {"identifier": loc.get("ref"), "relation": "references", "scheme": "doi"}
+        if loc.get("kind") == "doi" and loc.get("ref") and ref not in related:   # one corpus, several datasets
+            related.append(ref)
     prev = r.get("supersedes")
     if prev and (load_dois().get(f"{release}/{prev}") or {}).get("doi"):
         related.append({"identifier": load_dois()[f"{release}/{prev}"]["doi"], "relation": "isNewVersionOf",
