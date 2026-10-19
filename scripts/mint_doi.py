@@ -18,9 +18,12 @@ deposition that holds it and its state (reserved, then published).
         # published. IRREVERSIBLE: a published Zenodo record cannot be deleted, and the DOI resolves
         # from then on. Commit DOIS.json through a pull request.
 
-Token: ZENODO_TOKEN (or ZENODO_SANDBOX_TOKEN with --sandbox), with scopes deposit:write and
-deposit:actions, read from the environment and never passed on the command line. Try the whole
-flow on the sandbox first: sandbox DOIs never resolve.
+Token: a Zenodo personal access token with scopes deposit:write and deposit:actions, never passed
+on the command line. Either set ZENODO_TOKEN (or ZENODO_SANDBOX_TOKEN with --sandbox) in the
+environment, or, in a Claude Code cloud environment, store it as a network secret that the proxy
+adds as an Authorization header for zenodo.org (or sandbox.zenodo.org): the script then sends no
+header of its own and never sees the token. Try the whole flow on the sandbox first: sandbox DOIs
+never resolve.
 
 What it refuses, each for a reason:
 - a version folder that fails scripts/check_releases.py: only a complete, unaltered, lifted release
@@ -45,6 +48,8 @@ import json
 import os
 import subprocess
 import sys
+import urllib.error
+import urllib.parse
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -168,12 +173,11 @@ class Zenodo:
     def __init__(self, sandbox: bool):
         self.base = ZENODO_SANDBOX if sandbox else ZENODO
         var = "ZENODO_SANDBOX_TOKEN" if sandbox else "ZENODO_TOKEN"
-        self.token = os.environ.get(var)
-        if not self.token:
-            raise Refusal(f"{var} is not set")
+        self.var = var
+        self.token = os.environ.get(var)   # unset: the proxy adds the header (a network secret)
 
     def _call(self, method, url, body=None, raw=None):
-        headers = {"Authorization": f"Bearer {self.token}"}
+        headers = {"Authorization": f"Bearer {self.token}"} if self.token else {}
         data = None
         if body is not None:
             data, headers["Content-Type"] = json.dumps(body).encode(), "application/json"
@@ -184,7 +188,11 @@ class Zenodo:
             with urllib.request.urlopen(req, timeout=600) as resp:
                 text = resp.read()
         except urllib.error.HTTPError as e:
-            raise Refusal(f"Zenodo {method} {url} -> {e.code}: {e.read()[:300]!r}")
+            hint = ""
+            if e.code in (401, 403):
+                hint = (f"\n  no token was accepted: set {self.var}, or store the token as a network "
+                        f"secret for {urllib.parse.urlsplit(url).hostname} (Authorization: Bearer <token>)")
+            raise Refusal(f"Zenodo {method} {url} -> {e.code}: {e.read()[:300]!r}{hint}")
         return json.loads(text) if text else {}
 
     def reserve(self, meta: dict) -> tuple[int, str]:

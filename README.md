@@ -60,9 +60,11 @@ because a published version folder never changes. The deposit is the version fol
    --by human:<name> --yes`. This uploads the zip, publishes the record and marks the entry
    `published`. Commit `DOIS.json` through a pull request. **This cannot be undone.**
 
-The token comes from the environment: `ZENODO_TOKEN`, with the scopes `deposit:write` and
-`deposit:actions`. Run the whole flow on the sandbox first: add `--sandbox` and set
-`ZENODO_SANDBOX_TOKEN`. Sandbox DOIs never resolve, and `DOIS.json` is not changed for them. Use
+The token is a Zenodo personal access token with the scopes `deposit:write` and `deposit:actions`.
+Set it as `ZENODO_TOKEN`, or, in a Claude Code cloud environment, store it as a network secret for
+`zenodo.org` that adds the header `Authorization: Bearer <token>`; the script then sends no header
+itself. Run the whole flow on the sandbox first: add `--sandbox`, with `ZENODO_SANDBOX_TOKEN` or a
+network secret for `sandbox.zenodo.org`. Sandbox DOIs never resolve, and `DOIS.json` is not changed for them. Use
 `--metadata` to see what would be deposited, offline. CI refuses a `DOIS.json` entry that is
 malformed, names a version that does not exist, or changes after it has been published.
 
