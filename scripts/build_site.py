@@ -2,7 +2,7 @@
 
     python3 scripts/build_site.py [--out _site]
 
-The site is <out>/index.html plus a copy of every <release>/<version>/ folder, unchanged, so each
+The site is <out>/index.html, the brand assets in site/ (served as assets/), plus a copy of every <release>/<version>/ folder, unchanged, so each
 release's HTML report is served at <release>/<version>/report/index.html. Nothing here is committed:
 the workflow in .github/workflows/pages.yml builds it from main on every push, after
 check_releases.py has passed, so the site never shows a file the repository's checks have not.
@@ -105,39 +105,57 @@ PAGE = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Learning Research Reports</title>
 <meta name="description" content="Published research releases of the Learning Design Alliance's learning-engineering programme.">
+<link rel="icon" type="image/svg+xml" href="assets/lda-monogram-lapis.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif&display=swap" rel="stylesheet">
 <style>
-:root {{ --bg:#fbfaf7; --fg:#1d1d1b; --muted:#66645e; --line:#e4e1d8; --card:#ffffff; --accent:#1f5f8b; --accent-fg:#ffffff; }}
+/* Learning Design Alliance: ink #0E1240, lapis #122FB2, pyrite #E3B455 on a cool gesso white. */
+:root {{ --bg:#f6f7fb; --fg:#0e1240; --muted:#4f5475; --line:#dde0ec; --card:#ffffff; --band:#0e1240; --band-fg:#f8fafc;
+         --accent:#122fb2; --accent-fg:#ffffff; --pyrite:#e3b455; }}
 @media (prefers-color-scheme: dark) {{
-  :root:not([data-theme="light"]) {{ --bg:#161614; --fg:#ecebe6; --muted:#a3a198; --line:#33322e; --card:#1f1f1c; --accent:#7fb7de; --accent-fg:#10202b; }}
+  :root:not([data-theme="light"]) {{ --bg:#0a0d2e; --fg:#eef0fa; --muted:#a9aecb; --line:#262b55; --card:#11163d;
+         --band:#070a24; --band-fg:#f8fafc; --accent:#8fa2ff; --accent-fg:#0a0d2e; }}
 }}
-:root[data-theme="dark"] {{ --bg:#161614; --fg:#ecebe6; --muted:#a3a198; --line:#33322e; --card:#1f1f1c; --accent:#7fb7de; --accent-fg:#10202b; }}
+:root[data-theme="dark"] {{ --bg:#0a0d2e; --fg:#eef0fa; --muted:#a9aecb; --line:#262b55; --card:#11163d;
+         --band:#070a24; --band-fg:#f8fafc; --accent:#8fa2ff; --accent-fg:#0a0d2e; }}
 * {{ box-sizing:border-box; }}
-body {{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif; }}
-main {{ max-width:860px; margin:0 auto; padding:40px 16px 64px; }}
-header h1 {{ font-size:1.9rem; margin:0 0 8px; letter-spacing:-0.01em; }}
-header p {{ color:var(--muted); margin:0 0 6px; max-width:68ch; }}
-a {{ color:var(--accent); }}
-.card {{ background:var(--card); border:1px solid var(--line); border-radius:10px; padding:20px 22px; margin:22px 0; }}
-.card h2 {{ font-size:1.25rem; line-height:1.3; margin:0 0 6px; }}
+body {{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif; }}
+a {{ color:var(--accent); text-underline-offset:3px; }}
+.band {{ background:var(--band); color:var(--band-fg); border-bottom:3px solid var(--pyrite); }}
+.band-inner {{ max-width:880px; margin:0 auto; padding:28px 16px 34px; }}
+.brand {{ display:inline-block; line-height:0; }}
+.brand img {{ height:58px; width:auto; }}
+.band h1 {{ font:400 clamp(2.2rem,6vw,3.1rem)/1.05 "Instrument Serif",Georgia,serif; margin:26px 0 12px; letter-spacing:-0.01em; text-wrap:balance; }}
+.band p {{ margin:0 0 8px; max-width:66ch; color:#c9cde6; text-wrap:pretty; }}
+.band a {{ color:#ffffff; text-decoration-color:var(--pyrite); }}
+main {{ max-width:880px; margin:0 auto; padding:12px 16px 64px; }}
+.card {{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px 24px; margin:24px 0;
+         box-shadow:0 1px 2px rgba(14,18,64,0.05); }}
+.card h2 {{ font:400 1.6rem/1.2 "Instrument Serif",Georgia,serif; margin:0 0 8px; text-wrap:balance; }}
 .card h2 a {{ color:var(--fg); text-decoration:none; }}
-.card h2 a:hover {{ text-decoration:underline; }}
+.card h2 a:hover {{ color:var(--accent); }}
 .meta, .older, .muted {{ color:var(--muted); font-size:0.9rem; }}
 .meta {{ margin:0 0 12px; }}
-.question {{ margin:0 0 14px; }}
-.links {{ display:flex; flex-wrap:wrap; gap:8px 16px; align-items:center; margin:0; font-size:0.95rem; }}
-.links a.primary {{ background:var(--accent); color:var(--accent-fg); padding:6px 12px; border-radius:6px; text-decoration:none; font-weight:600; }}
+.question {{ margin:0 0 16px; text-wrap:pretty; }}
+.links {{ display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:0; font-size:0.95rem; font-weight:500; }}
+.links a.primary {{ background:var(--accent); color:var(--accent-fg); padding:7px 14px; border-radius:8px; text-decoration:none; font-weight:600; }}
+.links a.primary:hover {{ filter:brightness(1.12); }}
 footer {{ color:var(--muted); font-size:0.85rem; border-top:1px solid var(--line); margin-top:40px; padding-top:16px; }}
 </style>
 </head>
 <body>
-<main>
-<header>
-  <h1>Learning Research Reports</h1>
-  <p>Published research releases of the Learning Design Alliance's learning-engineering programme. Each release
-  is an article with everything needed to check it: the release file, the code, per-case outputs, re-run notebooks,
-  and an HTML report in which every number links to the output it was computed from.</p>
-  <p>Findings are also summarised as claim pages in <a href="https://github.com/Learning-Design-Alliance/learning-wiki">learning-wiki</a>.</p>
+<header class="band">
+  <div class="band-inner">
+    <a class="brand" href="https://learningdesignalliance.org"><img src="assets/lda-wordmark-white.svg" alt="Learning Design Alliance"></a>
+    <h1>Research Reports</h1>
+    <p>Published research releases of the Learning Design Alliance's learning-engineering programme. Each release
+    is an article with everything needed to check it: the release file, the code, per-case outputs, re-run notebooks,
+    and an HTML report in which every number links to the output it was computed from.</p>
+    <p>Findings are also summarised as claim pages in <a href="https://github.com/Learning-Design-Alliance/learning-wiki">learning-wiki</a>.</p>
+  </div>
 </header>
+<main>
 {cards}
 <footer>
   {n} published release(s). Every file is listed with its SHA-256 in each version's LIFT.json; a published version
@@ -167,6 +185,7 @@ def main() -> int:
     (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL,
                                                 repo_short=REPO_URL.removeprefix("https://github.com/")),
                                     encoding="utf-8")
+    shutil.copytree(ROOT / "site", out / "assets")   # the LDA logos the index uses
     (out / ".nojekyll").write_text("", encoding="utf-8")   # serve folders as they are, underscores included
     print(f"built {out}: {len(rels)} release(s), "
           + ", ".join(f"{r['release']} {r['versions'][0]['version']}" for r in rels))
