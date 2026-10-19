@@ -22,7 +22,14 @@ article h1,article h2,article h3,article h4{font-family:"Baskervville",Georgia,s
 article{overflow-wrap:break-word}article a{overflow-wrap:anywhere}
 @media (max-width:900px){.prov{white-space:normal}}
 article h1,article h2,article h3,article h4{position:relative}
-.hanchor{position:absolute;left:-1.1em;margin:0;padding:0}
+.hanchor{position:absolute;left:-1.1em;margin:0;padding:0 .5em 0 0}
+/* Margin controls stay reachable: an invisible strip bridges the gap between the text and the control,
+   and the control lingers for half a second after the pointer leaves, so crossing the gap never hides it. */
+.hanchor,.rv-btn{transition:opacity .15s ease .45s}
+h1:hover .hanchor,h2:hover .hanchor,h3:hover .hanchor,h4:hover .hanchor,p.para:hover .rv-btn,.hanchor:focus,.rv-btn:focus{transition-delay:0s}
+.rv-btn::before{content:"";position:absolute;top:-6px;bottom:-6px;left:-18px;right:-6px}
+.hanchor::after{content:"";position:absolute;top:0;bottom:0;right:-.6em;width:.8em}
+@media (max-width:1100px){.rv-btn::before{display:none}}
 article h1{font-size:clamp(30px,4.2vw,42px);line-height:1.1;text-wrap:balance}
 article h2{font-size:30px;line-height:1.2;border-top:1px solid var(--accent);border-top-color:color-mix(in srgb,var(--accent) 45%,transparent)}
 article h3{font-size:23px}article h4{font-size:19px}
