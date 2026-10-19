@@ -3,14 +3,20 @@
   "doi": "10.5281/zenodo.23480844",
   "registrar": "zenodo",
   "deposition": 23480844,
-  "state": "reserved",
-  "reserved_at": "2026-10-19"
+  "state": "published",
+  "reserved_at": "2026-10-19",
+  "published_at": "2026-10-19",
+  "published_by": "human:david-porcaro",
+  "zip_sha256": "15be199a40643c7da620da1f20b1e9b35b0a97583c8e30667a8c0cba69829d17"
  },
  "learning-graph-budget-2026/1.0.0": {
   "doi": "10.5281/zenodo.23480842",
   "registrar": "zenodo",
   "deposition": 23480842,
-  "state": "reserved",
-  "reserved_at": "2026-10-19"
+  "state": "published",
+  "reserved_at": "2026-10-19",
+  "published_at": "2026-10-19",
+  "published_by": "human:david-porcaro",
+  "zip_sha256": "0da879025c0d69e8e63ce85ebdf36600a06dbbe09b4dfd379b977335713b71fb"
  }
 }
