@@ -1,0 +1,69 @@
+{
+  "dL": {
+    "NULL": {
+      "expected": "NO-REASONING-EFFECT",
+      "hit_rate": 0.36,
+      "wrong_signed_rate": 0.065,
+      "verdicts": {
+        "NO-REASONING-EFFECT": 72,
+        "INCONCLUSIVE": 115,
+        "REASONING-RAISES": 5,
+        "REASONING-LOWERS": 8
+      },
+      "pass": false
+    },
+    "RAISE": {
+      "expected": "REASONING-RAISES",
+      "hit_rate": 0.965,
+      "wrong_signed_rate": 0.0,
+      "verdicts": {
+        "NO-REASONING-EFFECT": 1,
+        "INCONCLUSIVE": 6,
+        "REASONING-RAISES": 193
+      },
+      "pass": true
+    },
+    "LOWER": {
+      "expected": "REASONING-LOWERS",
+      "hit_rate": 0.96,
+      "wrong_signed_rate": 0.0,
+      "verdicts": {
+        "INCONCLUSIVE": 8,
+        "REASONING-LOWERS": 192
+      },
+      "pass": true
+    }
+  },
+  "heterogeneity": {
+    "tau0": {
+      "tau": 0.0,
+      "question_sd": 0.0,
+      "rate_p_below_0.05": 0.04
+    },
+    "tau0_question0.3": {
+      "tau": 0.0,
+      "question_sd": 0.3,
+      "rate_p_below_0.05": 0.055
+    },
+    "tau0.2": {
+      "tau": 0.2,
+      "question_sd": 0.0,
+      "rate_p_below_0.05": 0.365
+    },
+    "tau0.3": {
+      "tau": 0.3,
+      "question_sd": 0.0,
+      "rate_p_below_0.05": 0.67
+    },
+    "tau0.5": {
+      "tau": 0.5,
+      "question_sd": 0.0,
+      "rate_p_below_0.05": 1.0
+    }
+  },
+  "dL_equivalence_reachable": false,
+  "minimum_detectable_tau": 0.5,
+  "heterogeneity_false_positive_ok": true,
+  "pass": true,
+  "note": "smoke check: synthetic graders written and scored by the same session"
+}

@@ -1,0 +1,80 @@
+{
+ "n": 3000,
+ "mean_prompt_chars": {
+  "none": 5757,
+  "low": 5851,
+  "mid": 5851,
+  "high": 5851
+ },
+ "schema_tokens": 500,
+ "out_tokens": {
+  "planning": 600,
+  "pessimistic": 900
+ },
+ "prices_usd_per_M": {
+  "google:gemini-3.5-flash-lite": [
+   0.3,
+   2.5
+  ],
+  "openai:gpt-4.1-mini": [
+   0.4,
+   1.6
+  ],
+  "openrouter:qwen/qwen3-235b-a22b-2507": [
+   0.09,
+   0.55
+  ],
+  "openai:gpt-5-mini": [
+   0.25,
+   2.0
+  ]
+ },
+ "models": {
+  "openrouter:qwen/qwen3-235b-a22b-2507": {
+   "planning": {
+    "arms": [
+     "none",
+     "low",
+     "high",
+     "mid"
+    ],
+    "calls": 12000,
+    "usd": 6.07
+   },
+   "pessimistic": {
+    "arms": [
+     "none",
+     "low",
+     "high",
+     "mid"
+    ],
+    "calls": 12000,
+    "usd": 8.05
+   }
+  },
+  "openai:gpt-4.1-mini": {
+   "planning": {
+    "arms": [
+     "none",
+     "low",
+     "high"
+    ],
+    "calls": 9000,
+    "usd": 15.68
+   },
+   "pessimistic": {
+    "arms": [
+     "none",
+     "low",
+     "high"
+    ],
+    "calls": 9000,
+    "usd": 20.0
+   }
+  }
+ },
+ "total_planning": 21.75,
+ "total_pessimistic": 28.05,
+ "optional_gpt5mini_planning_excluding_reasoning": 15.2,
+ "budget": 25.0
+}

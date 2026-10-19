@@ -1,0 +1,33 @@
+{
+ "A_vendored_934478716_exemplars": {
+  "exit": 0,
+  "calls": 450,
+  "prompt_sha256": "969748e8f44375abb94caa3f263299af260b10c43716908f3a8e6e2c93f2f2ea"
+ },
+ "B_current_exemplars": {
+  "exit": 0,
+  "calls": 450,
+  "prompt_sha256": "969748e8f44375abb94caa3f263299af260b10c43716908f3a8e6e2c93f2f2ea"
+ },
+ "C_current_exemplar_marks": {
+  "exit": 0,
+  "calls": 1800,
+  "prompt_multiset_sha256": "a2ccf4a4e77b115843d89920c3b7734184c9242c4910dfb23318cef1bb8b148a",
+  "distinct_prompts": 1800
+ },
+ "B_equals_A": true,
+ "C_contains_A": true,
+ "A_prompts_missing_from_C": 0,
+ "C_prompts_not_in_A": 1350,
+ "self_test_new_arms_are_new": true,
+ "same_schema_object": true,
+ "models": {
+  "A": [
+   "google.generative-ai:gemini-3.5-flash-lite"
+  ],
+  "C": [
+   "google.generative-ai:gemini-3.5-flash-lite"
+  ]
+ },
+ "PASS": true
+}

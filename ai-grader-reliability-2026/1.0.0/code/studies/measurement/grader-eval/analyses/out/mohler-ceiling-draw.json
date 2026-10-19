@@ -1,0 +1,50 @@
+{
+  "script": "analyses/mohler_ceiling_draw.mts",
+  "node": "v22.22.0",
+  "results": [
+    {
+      "snapshot": "vendor/934478716/lazuli-app/scripts/grader-eval",
+      "all_consistent_rows": {
+        "n": 1727,
+        "qwk": 0.5193208051471492,
+        "mae": 0.7237984944991315,
+        "ids_sha256": "6bf4b78b17463fabe5e9657fb78afec3da1a1653295a9e701a5fbb6ec1feddc8"
+      },
+      "ceiling_draw_stratifiedSample_all_150_seed7": {
+        "n": 150,
+        "qwk": 0.6076738248986333,
+        "mae": 1.1466666666666667,
+        "ids_sha256": "2b9eed540c08cc7acd8f31c067bfcf634b2356bf36fa1c9f21fcfaa47a83cfc3"
+      },
+      "taxonomy_draw_stratifiedSample_eligible_150_seed7": {
+        "eligible": 1609,
+        "n": 150,
+        "qwk": 0.47761561369397754,
+        "mae": 1.3466666666666667,
+        "ids_sha256": "96b511c9e5af0d0f637e485e171dd5a2e975d6c40a9e36bfb33c3b5572003d51"
+      }
+    },
+    {
+      "snapshot": "harness",
+      "all_consistent_rows": {
+        "n": 1727,
+        "qwk": 0.5193208051471492,
+        "mae": 0.7237984944991315,
+        "ids_sha256": "6bf4b78b17463fabe5e9657fb78afec3da1a1653295a9e701a5fbb6ec1feddc8"
+      },
+      "ceiling_draw_stratifiedSample_all_150_seed7": {
+        "n": 150,
+        "qwk": 0.6076738248986333,
+        "mae": 1.1466666666666667,
+        "ids_sha256": "2b9eed540c08cc7acd8f31c067bfcf634b2356bf36fa1c9f21fcfaa47a83cfc3"
+      },
+      "taxonomy_draw_stratifiedSample_eligible_150_seed7": {
+        "eligible": 1609,
+        "n": 150,
+        "qwk": 0.47761561369397754,
+        "mae": 1.3466666666666667,
+        "ids_sha256": "96b511c9e5af0d0f637e485e171dd5a2e975d6c40a9e36bfb33c3b5572003d51"
+      }
+    }
+  ]
+}

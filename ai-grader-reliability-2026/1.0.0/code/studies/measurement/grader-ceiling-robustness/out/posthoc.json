@@ -1,0 +1,65 @@
+{
+ "note": "ADDED AFTER THE RUN (2026-10-06), reported only, no verdict. Two readings the results raised:\n    (1) what AC2 and QWK give a grader that ignores the work (every item the pooled modal human mark, or\n    the pooled median), on the same rows as the real comparisons, since AC2 put GPT-4.1-mini at 0.745 on\n    Menagerie where its QWK is 0.058; (2) the two Mohler raters' means, since every grader sits much closer\n    to rater 2 (P2 per rater), which breaks P2's independence assumption in a known direction.",
+ "mohler_rater_means": {
+  "full_1727": {
+   "r1": 4.3977996525767225,
+   "r2": 3.929936305732484,
+   "r1_minus_r2": 0.4678633468442386
+  },
+  "draw_300": {
+   "r1": 3.4466666666666668,
+   "r2": 2.5566666666666666,
+   "r1_minus_r2": 0.89
+  }
+ },
+ "constant_grader": {
+  "mohler_constant_mode_5_full_1727_vs_r1": {
+   "qwk": 0.0,
+   "ac2": 0.926282769663491
+  },
+  "mohler_constant_mode_5_full_1727_vs_r2": {
+   "qwk": 0.0,
+   "ac2": 0.7948822903451587
+  },
+  "mohler_constant_mode_5_draw_300_vs_r1": {
+   "qwk": 0.0,
+   "ac2": 0.6370078617019611
+  },
+  "mohler_constant_mode_5_draw_300_vs_r2": {
+   "qwk": 0.0,
+   "ac2": 0.20924922882611535
+  },
+  "mohler_constant_median_5_full_1727_vs_r1": {
+   "qwk": 0.0,
+   "ac2": 0.926282769663491
+  },
+  "mohler_constant_median_5_full_1727_vs_r2": {
+   "qwk": 0.0,
+   "ac2": 0.7948822903451587
+  },
+  "mohler_constant_median_5_draw_300_vs_r1": {
+   "qwk": 0.0,
+   "ac2": 0.6370078617019611
+  },
+  "mohler_constant_median_5_draw_300_vs_r2": {
+   "qwk": 0.0,
+   "ac2": 0.20924922882611535
+  },
+  "menagerie_constant_mode_A_vs_every_rater_14level": {
+   "qwk": 0.0,
+   "ac2": 0.8347821260636575
+  },
+  "menagerie_constant_mode_A_vs_every_rater_5level": {
+   "qwk": 0.0,
+   "ac2": 0.8652587865105459
+  },
+  "menagerie_constant_median_A-_vs_every_rater_14level": {
+   "qwk": 0.0,
+   "ac2": 0.8536579436502928
+  },
+  "menagerie_constant_median_A-_vs_every_rater_5level": {
+   "qwk": 0.0,
+   "ac2": 0.8652587865105459
+  }
+ }
+}

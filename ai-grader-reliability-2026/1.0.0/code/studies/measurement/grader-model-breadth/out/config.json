@@ -1,0 +1,664 @@
+{
+  "captured_offline": {
+    "584e5a91a-attainment-gpt41mini": [
+      {
+        "url": "https://api.openai.com/v1/responses",
+        "model": "gpt-4.1-mini",
+        "method": "POST",
+        "body": {
+          "model": "gpt-4.1-mini",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": true,
+              "name": "response",
+              "schema": "<schema sha256:ddb037a8dfb643ed>"
+            }
+          }
+        }
+      }
+    ],
+    "584e5a91a-attainment-gpt5mini": [
+      {
+        "url": "https://api.openai.com/v1/responses",
+        "model": "gpt-5-mini",
+        "method": "POST",
+        "body": {
+          "model": "gpt-5-mini",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": true,
+              "name": "response",
+              "schema": "<schema sha256:ddb037a8dfb643ed>"
+            }
+          }
+        }
+      }
+    ],
+    "584e5a91a-attainment-lite": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:11dbd602a0ff7df8>"
+        }
+      }
+    ],
+    "584e5a91a-history-lite": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "934478716-agreement-lite": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "934478716-agreement-standard-thinking": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent",
+        "model": "gemini-3.7-flash",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>"
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "934478716-perturb-lite": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "934478716-pool-lite+standard": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      },
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.7-flash:generateContent",
+        "model": "gemini-3.7-flash",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>"
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "current-history-lite": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "current-pool-lite+standard": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:66f446a2632c3f4b>"
+        }
+      }
+    ],
+    "current-swap-gemini31pro": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro-preview:generateContent",
+        "model": "gemini-3.1-pro-preview",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>"
+          },
+          "contents": "<1 item(s), sha256:11dbd602a0ff7df8>"
+        }
+      }
+    ],
+    "current-swap-gpt41mini": [
+      {
+        "url": "https://api.openai.com/v1/responses",
+        "model": "gpt-4.1-mini",
+        "method": "POST",
+        "body": {
+          "model": "gpt-4.1-mini",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": false,
+              "name": "response",
+              "schema": "<schema sha256:27c9e45186d8acbb>"
+            }
+          }
+        }
+      }
+    ],
+    "current-swap-gpt5mini-high": [
+      {
+        "url": "https://api.openai.com/v1/responses",
+        "model": "gpt-5-mini",
+        "method": "POST",
+        "body": {
+          "model": "gpt-5-mini",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": false,
+              "name": "response",
+              "schema": "<schema sha256:27c9e45186d8acbb>"
+            }
+          },
+          "reasoning": {
+            "effort": "high"
+          }
+        }
+      }
+    ],
+    "current-swap-gpt5mini-minimal": [
+      {
+        "url": "https://api.openai.com/v1/responses",
+        "model": "gpt-5-mini",
+        "method": "POST",
+        "body": {
+          "model": "gpt-5-mini",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": false,
+              "name": "response",
+              "schema": "<schema sha256:27c9e45186d8acbb>"
+            }
+          },
+          "reasoning": {
+            "effort": "minimal"
+          }
+        }
+      }
+    ],
+    "current-swap-gpt5mini": [
+      {
+        "url": "https://api.openai.com/v1/responses",
+        "model": "gpt-5-mini",
+        "method": "POST",
+        "body": {
+          "model": "gpt-5-mini",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": false,
+              "name": "response",
+              "schema": "<schema sha256:27c9e45186d8acbb>"
+            }
+          }
+        }
+      }
+    ],
+    "current-swap-lite-thinking-high": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "high"
+            }
+          },
+          "contents": "<1 item(s), sha256:11dbd602a0ff7df8>"
+        }
+      }
+    ],
+    "current-swap-lite": [
+      {
+        "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+        "model": "gemini-3.5-flash-lite",
+        "method": "POST",
+        "body": {
+          "generationConfig": {
+            "responseMimeType": "application/json",
+            "responseSchema": "<schema sha256:d5483b2b10191927>",
+            "thinkingConfig": {
+              "includeThoughts": false,
+              "thinkingLevel": "minimal"
+            }
+          },
+          "contents": "<1 item(s), sha256:11dbd602a0ff7df8>"
+        }
+      }
+    ],
+    "current-swap-llama4-parasail": [
+      {
+        "url": "https://openrouter.ai/api/v1/responses",
+        "model": "meta-llama/llama-4-maverick",
+        "method": "POST",
+        "body": {
+          "model": "meta-llama/llama-4-maverick",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": false,
+              "name": "response",
+              "schema": "<schema sha256:27c9e45186d8acbb>"
+            }
+          },
+          "reasoning": {
+            "exclude": true
+          },
+          "max_tokens": 16384,
+          "usage": {
+            "include": true
+          },
+          "provider": {
+            "order": [
+              "Parasail"
+            ],
+            "allow_fallbacks": false
+          }
+        }
+      }
+    ],
+    "current-swap-opus55-bedrock": [
+      {
+        "url": "https://openrouter.ai/api/v1/responses",
+        "model": "anthropic/claude-opus-5.5",
+        "method": "POST",
+        "body": {
+          "model": "anthropic/claude-opus-5.5",
+          "input": "<2 item(s), sha256:639d2116c9c9f0b5>",
+          "text": {
+            "format": {
+              "type": "json_object"
+            }
+          },
+          "reasoning": {
+            "exclude": true
+          },
+          "max_tokens": 16384,
+          "usage": {
+            "include": true
+          },
+          "provider": {
+            "order": [
+              "Amazon Bedrock"
+            ],
+            "allow_fallbacks": false
+          }
+        }
+      }
+    ],
+    "current-swap-qwen-deepinfra": [
+      {
+        "url": "https://openrouter.ai/api/v1/responses",
+        "model": "qwen/qwen3-235b-a22b-2507",
+        "method": "POST",
+        "body": {
+          "model": "qwen/qwen3-235b-a22b-2507",
+          "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+          "text": {
+            "format": {
+              "type": "json_schema",
+              "strict": false,
+              "name": "response",
+              "schema": "<schema sha256:27c9e45186d8acbb>"
+            }
+          },
+          "reasoning": {
+            "exclude": true
+          },
+          "max_tokens": 16384,
+          "usage": {
+            "include": true
+          },
+          "provider": {
+            "order": [
+              "DeepInfra"
+            ],
+            "allow_fallbacks": false
+          }
+        }
+      }
+    ]
+  },
+  "runs": {
+    "swap-opus55.json": {
+      "model": "openrouter:anthropic/claude-opus-5.5",
+      "temperature": "provider default",
+      "reasoning": "provider default",
+      "run": {
+        "calls": 902,
+        "failures": 0,
+        "reportedSpendUsd": 24.7796,
+        "tokens": {
+          "input": 1946085,
+          "output": 849765,
+          "reasoning": 10549,
+          "withUsage": 900
+        },
+        "served": {
+          "anthropic/claude-opus-5.5 / default": 900
+        },
+        "wire": {
+          "https://openrouter.ai/api/v1/responses anthropic/claude-opus-5.5": {
+            "url": "https://openrouter.ai/api/v1/responses",
+            "body": {
+              "model": "anthropic/claude-opus-5.5",
+              "input": "<2 item(s), sha256:639d2116c9c9f0b5>",
+              "text": {
+                "format": {
+                  "type": "json_object"
+                }
+              },
+              "reasoning": {
+                "exclude": true
+              },
+              "max_tokens": 16384,
+              "usage": {
+                "include": true
+              },
+              "provider": {
+                "order": [
+                  "Amazon Bedrock"
+                ],
+                "allow_fallbacks": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "swap-llama4.json": {
+      "model": "openrouter:meta-llama/llama-4-maverick",
+      "temperature": "provider default",
+      "reasoning": "provider default",
+      "run": {
+        "calls": 915,
+        "failures": 0,
+        "reportedSpendUsd": 0.5648,
+        "tokens": {
+          "input": 854955,
+          "output": 296713,
+          "reasoning": 0,
+          "withUsage": 900
+        },
+        "served": {
+          "meta-llama/llama-4-maverick / auto": 900
+        },
+        "wire": {
+          "https://openrouter.ai/api/v1/responses meta-llama/llama-4-maverick": {
+            "url": "https://openrouter.ai/api/v1/responses",
+            "body": {
+              "model": "meta-llama/llama-4-maverick",
+              "input": "<1 item(s), sha256:0cc33ee81edd9ff7>",
+              "text": {
+                "format": {
+                  "type": "json_schema",
+                  "strict": false,
+                  "name": "response",
+                  "schema": "<schema sha256:27c9e45186d8acbb>"
+                }
+              },
+              "reasoning": {
+                "exclude": true
+              },
+              "max_tokens": 16384,
+              "usage": {
+                "include": true
+              },
+              "provider": {
+                "order": [
+                  "Parasail"
+                ],
+                "allow_fallbacks": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "swap-lite-rerun.json": {
+      "model": "google:gemini-3.5-flash-lite",
+      "temperature": "provider default",
+      "reasoning": "provider default",
+      "run": {
+        "calls": 900,
+        "failures": 0,
+        "reportedSpendUsd": 0,
+        "tokens": {
+          "input": 883153,
+          "output": 269464,
+          "reasoning": 0,
+          "withUsage": 900
+        },
+        "served": {
+          "gemini-3.5-flash-lite": 900
+        },
+        "wire": {
+          "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent ": {
+            "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+            "body": {
+              "generationConfig": {
+                "responseMimeType": "application/json",
+                "responseSchema": "<schema sha256:d5483b2b10191927>",
+                "thinkingConfig": {
+                  "includeThoughts": false,
+                  "thinkingLevel": "minimal"
+                }
+              },
+              "contents": "<1 item(s), sha256:6ce84473b738535f>"
+            }
+          }
+        }
+      }
+    },
+    "swap-lite-high.json": {
+      "model": "google:gemini-3.5-flash-lite",
+      "temperature": "provider default",
+      "reasoning": "high",
+      "run": {
+        "calls": 900,
+        "failures": 0,
+        "reportedSpendUsd": 0,
+        "tokens": {
+          "input": 883153,
+          "output": 1658356,
+          "reasoning": 1431753,
+          "withUsage": 900
+        },
+        "served": {
+          "gemini-3.5-flash-lite": 900
+        },
+        "wire": {
+          "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent ": {
+            "url": "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash-lite:generateContent",
+            "body": {
+              "generationConfig": {
+                "responseMimeType": "application/json",
+                "responseSchema": "<schema sha256:d5483b2b10191927>",
+                "thinkingConfig": {
+                  "includeThoughts": false,
+                  "thinkingLevel": "high"
+                }
+              },
+              "contents": "<1 item(s), sha256:3e57caaf33430081>"
+            }
+          }
+        }
+      }
+    },
+    "swap-g5m-min.json": {
+      "model": "openai:gpt-5-mini",
+      "temperature": "provider default",
+      "reasoning": "minimal",
+      "run": {
+        "calls": 899,
+        "failures": 92,
+        "reportedSpendUsd": 0,
+        "tokens": {
+          "input": 1139856,
+          "output": 578755,
+          "reasoning": 0,
+          "withUsage": 899
+        },
+        "served": {
+          "gpt-5-mini-2025-08-07 / default": 899
+        },
+        "wire": {
+          "https://api.openai.com/v1/responses gpt-5-mini": {
+            "url": "https://api.openai.com/v1/responses",
+            "body": {
+              "model": "gpt-5-mini",
+              "input": "<1 item(s), sha256:89dd8859f164ee0b>",
+              "text": {
+                "format": {
+                  "type": "json_schema",
+                  "strict": false,
+                  "name": "response",
+                  "schema": "<schema sha256:27c9e45186d8acbb>"
+                }
+              },
+              "reasoning": {
+                "effort": "minimal"
+              }
+            }
+          }
+        }
+      }
+    },
+    "swap-g5m-high.json": {
+      "model": "openai:gpt-5-mini",
+      "temperature": "provider default",
+      "reasoning": "high",
+      "run": {
+        "calls": 897,
+        "failures": 3,
+        "reportedSpendUsd": 0,
+        "tokens": {
+          "input": 1137776,
+          "output": 4767181,
+          "reasoning": 3967936,
+          "withUsage": 897
+        },
+        "served": {
+          "gpt-5-mini-2025-08-07 / default": 897
+        },
+        "wire": {
+          "https://api.openai.com/v1/responses gpt-5-mini": {
+            "url": "https://api.openai.com/v1/responses",
+            "body": {
+              "model": "gpt-5-mini",
+              "input": "<1 item(s), sha256:06f733ced6b724a3>",
+              "text": {
+                "format": {
+                  "type": "json_schema",
+                  "strict": false,
+                  "name": "response",
+                  "schema": "<schema sha256:27c9e45186d8acbb>"
+                }
+              },
+              "reasoning": {
+                "effort": "high"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
