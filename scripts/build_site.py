@@ -162,7 +162,7 @@ PAGE = """<!doctype html>
 <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=DM+Mono&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
 /* After learningdesignalliance.org and the LDA templates' palette: cream ground, lapis type, Baskervville display, DM Mono labels,
-   DM Sans text, pill buttons, hairline lapis rules, a lavender-to-peach glow over a faint grid. */
+   DM Sans text, pill buttons, hairline lapis rules, a lavender-to-peach glow. */
 :root {{ --cream:#fffbf5; --lapis:#122fb2; --ink:#0e1240; --lavender:#e1dbff; --pink:#f7cbcb; --orange:#f37434; --butter:#fffad9;
          --bg:var(--cream); --fg:var(--lapis); --text:var(--ink); --rule:rgba(18,47,178,.85); --faint:rgba(18,47,178,.12); }}
 @media (prefers-color-scheme: dark) {{
@@ -179,7 +179,6 @@ body::before {{ content:""; position:fixed; inset:0; z-index:-1; pointer-events:
     radial-gradient(60vw 50vh at 100% 0%, var(--lavender), transparent 70%),
     radial-gradient(55vw 55vh at 0% 100%, var(--pink), transparent 70%),
     radial-gradient(30vw 30vh at 0% 100%, color-mix(in srgb, var(--orange) 35%, transparent), transparent 70%),
-    repeating-linear-gradient(90deg, var(--faint) 0 1px, transparent 1px 160px),
     var(--bg); }}
 a {{ color:var(--fg); text-underline-offset:3px; }}
 .label, nav.top {{ font:400 12.5px/1.5 "DM Mono",ui-monospace,Menlo,monospace; letter-spacing:.07em; text-transform:uppercase; color:var(--fg); }}
