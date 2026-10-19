@@ -173,6 +173,7 @@ PAGE = """<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research Reports · Learning Design Alliance</title>
 <meta name="description" content="Published research releases of the Learning Design Alliance's learning-engineering programme.">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/lda-favicon.png">
 <link rel="icon" type="image/svg+xml" href="assets/lda-monogram-lapis.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -282,6 +283,7 @@ def main() -> int:
                                                 repo_short=REPO_URL.removeprefix("https://github.com/")),
                                     encoding="utf-8")
     shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review", "report"))   # the LDA logos
+    shutil.copyfile(ROOT / "site" / "lda-favicon.png", out / "favicon.ico")   # browsers that ask for /favicon.ico take a PNG
     (out / ".nojekyll").write_text("", encoding="utf-8")   # serve folders as they are, underscores included
     print(f"built {out}: {len(rels)} release(s), "
           + ", ".join(f"{r['release']} {r['versions'][0]['version']}" for r in rels))
