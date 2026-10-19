@@ -3,7 +3,8 @@
     python3 scripts/build_site.py [--out _site]
 
 The site is <out>/index.html, the brand assets in site/ (served as assets/), plus a copy of every <release>/<version>/ folder, unchanged, so each
-release's HTML report is served at <release>/<version>/report/index.html. Nothing here is committed:
+release's HTML report is served at <release>/<version>/report/index.html, with a breadcrumb bar back to
+the index added to the served copy only (the repository's file, which LIFT.json hashes, is unchanged). Nothing here is committed:
 the workflow in .github/workflows/pages.yml builds it from main on every push, after
 check_releases.py has passed, so the site never shows a file the repository's checks have not.
 
@@ -19,6 +20,7 @@ from __future__ import annotations
 import argparse
 import html
 import json
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -96,6 +98,35 @@ def card(rel: dict) -> str:
     <p class="question">{esc(q)}</p>
     <p class="links">{' '.join(links)}</p>{older}
   </article>"""
+
+
+# The bar the site adds above each report it serves. Only the served copy carries it: the repository's
+# file, which LIFT.json hashes and the DOI deposit holds, is not changed.
+NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><style>
+.lda-crumbs{{background:#0e1240;color:#f8fafc;border-bottom:2px solid #e3b455;font:500 14px/1.4 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}}
+.lda-crumbs .in{{display:flex;align-items:center;gap:10px;padding:9px 16px;min-width:0}}
+.lda-crumbs a{{color:#f8fafc;text-decoration:none}}
+.lda-crumbs a:hover{{text-decoration:underline;text-decoration-color:#e3b455;text-underline-offset:3px}}
+.lda-crumbs img{{height:22px;width:22px;display:block}}
+.lda-crumbs .home{{display:flex;align-items:center;gap:8px;white-space:nowrap;flex:none}}
+.lda-crumbs .sep{{color:#8f95c4;flex:none}}
+.lda-crumbs .here{{color:#c9cde6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1}}
+.lda-crumbs .doi{{flex:none;white-space:nowrap;color:#c9cde6}}
+@media (max-width:560px){{.lda-crumbs .doi{{display:none}}}}
+@media print{{.lda-crumbs{{display:none}}}}
+</style><div class="in"><a class="home" href="../../../index.html"><img src="../../../assets/lda-monogram-white.svg" alt="">Research Reports</a><span class="sep" aria-hidden="true">›</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
+
+
+def add_nav(report: Path, e: dict) -> None:
+    """Insert NAV right after <body> in the served copy of a report."""
+    s = report.read_text(encoding="utf-8")
+    doi = (f'<a class="doi" href="https://doi.org/{html.escape(e["doi"])}">doi:{html.escape(e["doi"])}</a>'
+           if e["doi"] else "")
+    nav = NAV.format(title=html.escape(e["title"]), version=html.escape(e["version"]), doi=doi)
+    m = re.search(r"<body[^>]*>", s)
+    if not m:
+        sys.exit(f"{report}: no <body> tag to put the navigation after")
+    report.write_text(s[:m.end()] + nav + s[m.end():], encoding="utf-8")
 
 
 PAGE = """<!doctype html>
@@ -182,6 +213,8 @@ def main() -> int:
     for rel in rels:
         for v in rel["versions"]:
             shutil.copytree(ROOT / v["release"] / v["version"], out / v["release"] / v["version"])
+            if v["has_report"]:
+                add_nav(out / v["release"] / v["version"] / "report" / "index.html", v)
     (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL,
                                                 repo_short=REPO_URL.removeprefix("https://github.com/")),
                                     encoding="utf-8")

@@ -22,7 +22,8 @@ releases here.
 The reports are published at <https://learning-design-alliance.github.io/learning-research-reports/>,
 with an index of every release. The site is built from `main` on every push by
 `.github/workflows/pages.yml` (`scripts/build_site.py`), after `scripts/check_releases.py` has passed.
-It serves the version folders unchanged and adds only the index, which is never committed.
+It adds an index and, to each report it serves, a breadcrumb bar back to the index; neither is
+committed, and the files in the version folders here, which `LIFT.json` hashes, are unchanged.
 
 ## Layout
 
