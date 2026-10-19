@@ -1,0 +1,41 @@
+<dialog id="review-dialog" aria-labelledby="rv-title"><form method="dialog" class="rv" novalidate>
+<style>
+.rv .rv-hint{display:block;color:var(--muted);font-size:12.5px;margin-top:1px}
+.rv .rv-tip{display:inline-block;width:15px;height:15px;line-height:15px;text-align:center;border-radius:50%;border:1px solid var(--rule);font-size:11px;color:var(--muted);cursor:help;margin-left:4px}
+.rv fieldset legend{color:var(--ink2);padding:0 4px}
+.rv details summary{cursor:pointer;color:var(--ink2)}
+.rv .rv-steps{margin:0;padding-left:18px;color:var(--muted)}
+.rv .rv-actions{flex-wrap:wrap;align-items:center}
+.rv .rv-actions .primary{background:var(--accent,#122fb2);border-color:var(--accent,#122fb2);color:#fff;font-weight:600}
+.rv .rv-status{margin-right:auto;color:var(--muted);font-size:12.5px}
+.rv .rv-error{color:#b42318;font-size:12.5px}
+</style>
+<h3 id="rv-title">Review this paragraph</h3>
+<p class="rv-help">Questions, concerns, checks and supporting or contradicting evidence are all welcome. Your review
+is shared publicly alongside the release in learning-wiki, where the authors and others can respond to it.</p>
+<ol class="rv-steps"><li>Fill in the form. Only your main point is required.</li>
+<li>Choose <b>Submit on GitHub</b>: it opens a new GitHub issue with your review filled in, for you to check and post
+(you need a free GitHub account). Or copy or download your review and send it to the authors another way.</li></ol>
+<label>What are you reviewing?<select name="target"></select>
+<span class="rv-hint">The whole release, or the specific analysis this paragraph's numbers come from.</span></label>
+<label>Kind of review<select name="type"></select><span class="rv-hint rv-type-hint"></span></label>
+<label>Your main point <span class="rv-hint" style="display:inline">(one sentence, required)</span><textarea name="assertion" rows="2"></textarea>
+<span class="rv-error" hidden>Please write your main point before submitting.</span></label>
+<label>Why: your reasoning or evidence<textarea name="rationale" rows="4"></textarea>
+<span class="rv-hint">What you checked, what you found, and anything a reader would need to follow you.</span></label>
+<fieldset><legend>What is your review based on? <span class="rv-hint" style="display:inline">Tick all that apply.</span></legend><div class="bases"></div></fieldset>
+<label>Your name<input name="author" placeholder="e.g. Jane Smith" autocomplete="name">
+<span class="rv-hint">Shown publicly with your review. A consistent pseudonym is fine.</span></label>
+<label>Can readers confirm who you are?<select name="identity">
+<option value="unverified_identity">No, this is just a name I typed</option>
+<option value="verified_pseudonym">Yes, through a pseudonym I use consistently elsewhere</option>
+<option value="public_verified_identity">Yes, it is my real name, and I can be found publicly</option></select></label>
+<label>Conflicts of interest<input name="disclosure" value="none declared">
+<span class="rv-hint">Anything that might bias your review, such as funding, an affiliation or a stake in the result. Leave "none declared" if there is nothing.</span></label>
+<details><summary>Show your review as it will be submitted</summary><textarea name="yaml" rows="12" readonly class="rv-yaml" aria-label="Your review as a learning-wiki review record"></textarea></details>
+<div class="rv-actions"><span class="rv-status" role="status"></span>
+<button type="button" data-act="cancel">Cancel</button>
+<button type="button" data-act="copy" title="Copy your review to the clipboard">Copy</button>
+<button type="button" data-act="download" title="Save your review as a .yaml file">Download</button>
+<button type="button" data-act="submit" class="primary" title="Open a new GitHub issue with your review filled in">Submit on GitHub</button></div>
+</form></dialog>

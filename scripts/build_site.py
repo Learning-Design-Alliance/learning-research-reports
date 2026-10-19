@@ -4,7 +4,7 @@
 
 The site is <out>/index.html, the brand assets in site/ (served as assets/), plus a copy of every <release>/<version>/ folder, unchanged, so each
 release's HTML report is served at <release>/<version>/report/index.html, with a breadcrumb bar back to
-the index added to the served copy only (the repository's file, which LIFT.json hashes, is unchanged). Nothing here is committed:
+the index and the current review form (site/review/) in the served copy only (the repository's file, which LIFT.json hashes, is unchanged). Nothing here is committed:
 the workflow in .github/workflows/pages.yml builds it from main on every push, after
 check_releases.py has passed, so the site never shows a file the repository's checks have not.
 
@@ -117,6 +117,25 @@ NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><styl
 </style><div class="in"><a class="home" href="../../../index.html"><img src="../../../assets/lda-monogram-white.svg" alt="">Research Reports</a><span class="sep" aria-hidden="true">›</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
 
 
+REVIEW_DIALOG = re.compile(r'<dialog id="review-dialog".*?</dialog>', re.S)
+REVIEW_JS = re.compile(r'// Review drafting: a "Review" action on every paragraph.*?p\.appendChild\(b\);\}\);', re.S)
+
+
+def update_review_form(report: Path) -> None:
+    """Swap the report's review form for the current one in site/review/, in the served copy only.
+
+    Reports published before 2026-10-19 carry a form whose Close button could not close an empty form
+    and whose labels were the review schema's own terms. The new form builds the same record."""
+    s = report.read_text(encoding="utf-8")
+    dialog = (ROOT / "site" / "review" / "dialog.html").read_text(encoding="utf-8").strip()
+    js = (ROOT / "site" / "review" / "review.js").read_text(encoding="utf-8").strip()
+    s, n1 = REVIEW_DIALOG.subn(lambda m: dialog, s, count=1)
+    s, n2 = REVIEW_JS.subn(lambda m: js, s, count=1)
+    if (n1, n2) != (1, 1):
+        sys.exit(f"{report}: review form not found (dialog {n1}, script {n2}); update REVIEW_DIALOG/REVIEW_JS")
+    report.write_text(s, encoding="utf-8")
+
+
 def add_nav(report: Path, e: dict) -> None:
     """Insert NAV right after <body> in the served copy of a report."""
     s = report.read_text(encoding="utf-8")
@@ -214,11 +233,12 @@ def main() -> int:
         for v in rel["versions"]:
             shutil.copytree(ROOT / v["release"] / v["version"], out / v["release"] / v["version"])
             if v["has_report"]:
+                update_review_form(out / v["release"] / v["version"] / "report" / "index.html")
                 add_nav(out / v["release"] / v["version"] / "report" / "index.html", v)
     (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL,
                                                 repo_short=REPO_URL.removeprefix("https://github.com/")),
                                     encoding="utf-8")
-    shutil.copytree(ROOT / "site", out / "assets")   # the LDA logos the index uses
+    shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review"))   # the LDA logos
     (out / ".nojekyll").write_text("", encoding="utf-8")   # serve folders as they are, underscores included
     print(f"built {out}: {len(rels)} release(s), "
           + ", ".join(f"{r['release']} {r['versions'][0]['version']}" for r in rels))
