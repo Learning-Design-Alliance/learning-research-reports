@@ -3,13 +3,13 @@
    Baskervville display type, DM Sans text, DM Mono labels. The reports site serves published reports
    with this file too (learning-research-reports site/report/brand.css), so keep the two in step. */
 :root{--bg:#fffbf5;--surface:#fffefb;--ink:#0e1240;--ink2:#353a6e;--muted:#676b93;--rule:#dcd8ec;
---accent:#122fb2;--accent-soft:#ece9ff;--warn:#b5431b;--ok:#1b7f5a;--code:#f6f0e6;--s1:#122fb2;--s1l:#8ea0f0;--s2:#f37434;--s3:#1baf7a;
+--accent:#122fb2;--accent-soft:#ece9ff;--warn:#b5431b;--ok:#0f7a67;--code:#f6f0e6;--s1:#3554dc;--s1l:#a7b4f2;--s2:#e8682a;--s3:#14a38a;
 --lda-lavender:#e1dbff;--lda-pink:#f7cbcb;--lda-butter:#fffad9}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0e33;--surface:#11163d;--ink:#ece9ff;--ink2:#c9c2ff;
---muted:#9a96c4;--rule:#262b55;--accent:#a3b2ff;--accent-soft:#1c2160;--warn:#f08a62;--ok:#4cc79a;--code:#161b45;
---s1:#a3b2ff;--s1l:#4a56a8;--s2:#f59a6a;--s3:#4cc79a;--lda-lavender:#2b2470;--lda-pink:#4a2340;--lda-butter:#2a2f6b}}
+--muted:#9a96c4;--rule:#262b55;--accent:#a3b2ff;--accent-soft:#1c2160;--warn:#f08a62;--ok:#3cc3a4;--code:#161b45;
+--s1:#5f78f0;--s1l:#3a4796;--s2:#e0702f;--s3:#1aa88d;--lda-lavender:#2b2470;--lda-pink:#4a2340;--lda-butter:#2a2f6b}}
 :root[data-theme="dark"]{--bg:#0b0e33;--surface:#11163d;--ink:#ece9ff;--ink2:#c9c2ff;--muted:#9a96c4;--rule:#262b55;
---accent:#a3b2ff;--accent-soft:#1c2160;--warn:#f08a62;--ok:#4cc79a;--code:#161b45;--s1:#a3b2ff;--s1l:#4a56a8;--s2:#f59a6a;--s3:#4cc79a;
+--accent:#a3b2ff;--accent-soft:#1c2160;--warn:#f08a62;--ok:#3cc3a4;--code:#161b45;--s1:#5f78f0;--s1l:#3a4796;--s2:#e0702f;--s3:#1aa88d;
 --lda-lavender:#2b2470;--lda-pink:#4a2340;--lda-butter:#2a2f6b}
 body{font:16.5px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;position:relative}
 body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
@@ -40,6 +40,22 @@ code{font-family:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
 .rv .rv-actions button{border-radius:999px;font-family:"DM Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
 .rv .rv-actions .primary{background:var(--lda-butter);color:var(--accent);border-color:var(--accent)}
 .rv h3{font-family:"Baskervville",Georgia,serif;font-weight:400;font-size:26px;color:var(--accent)}
+/* Charts, tooltips, diagrams and call-outs. Series colours above pass the dataviz validator (lightness band,
+   chroma, CVD and normal-vision separation, 3:1 contrast) on the cream and navy surfaces. */
+.ifig,.diagram{border:1px solid color-mix(in srgb,var(--accent) 22%,transparent);border-radius:12px;background:var(--surface)}
+.ifig .controls label,.ifig-hint{color:var(--ink2)}
+.ifig .rowhit{fill:var(--accent)}
+.d-box{stroke:var(--accent);stroke-opacity:.55}.d-arrow,.ah{stroke:var(--accent);fill:var(--accent)}
+.prov-pop,.tip,abbr.gl:hover::after,abbr.gl:focus::after{background:var(--surface);border:1px solid color-mix(in srgb,var(--accent) 35%,transparent);
+border-radius:10px;box-shadow:0 10px 30px rgba(14,18,64,.14)}
+.prov-pop .pk{color:var(--accent)}
+details.rerun{background:var(--lda-butter);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);border-left:3px solid var(--accent);border-radius:12px}
+details.rerun summary{color:var(--accent)}
+.rerun-badge{background:var(--accent);color:var(--bg);border-radius:999px;padding:2px 9px;font:400 10.5px/1.6 "DM Mono",ui-monospace,Menlo,monospace;letter-spacing:.07em;text-transform:uppercase}
+.nb-in{border-left-color:var(--accent)}.nb-out{border-left-color:var(--s3)}
+blockquote{background:color-mix(in srgb,var(--lda-pink) 40%,var(--bg));border-left:3px solid var(--s2);border-radius:0 12px 12px 0;color:var(--ink)}
+.badge.embargo{border-color:var(--s2)}.badge.embargo span{color:var(--warn)}
+tr.hl td{background:color-mix(in srgb,var(--lda-lavender) 60%,transparent)}
 /* The LDA footer floats at the foot of the window, so its links are in reach anywhere in a long report. */
 footer.lda-foot{position:fixed;left:0;right:0;bottom:0;z-index:40;margin:0;padding:7px 16px;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-top:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
 font:11.5px/1.4 "DM Mono",ui-monospace,Menlo,monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
