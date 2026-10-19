@@ -1,0 +1,619 @@
+{
+ "coder": "human:david-porcaro",
+ "blind_to": [
+  "openai/gpt-6-sol",
+  "deepseek/deepseek-v4-pro"
+ ],
+ "returned_file": "coder1.xlsx",
+ "codes": [
+  {
+   "item": 1,
+   "corpus": "xes3g5m",
+   "unit": "k367",
+   "code": "1.NBT.A",
+   "unsure": true
+  },
+  {
+   "item": 2,
+   "corpus": "xes3g5m",
+   "unit": "k191",
+   "code": "4.G.A",
+   "unsure": false
+  },
+  {
+   "item": 3,
+   "corpus": "junyi2020",
+   "unit": "4JcS9o5eqSGmsfqe/xrIrLH6445lgnKVcwF9b24djEw=",
+   "code": "7.G.A",
+   "unsure": false
+  },
+  {
+   "item": 4,
+   "corpus": "eedi",
+   "unit": "s112",
+   "code": "7.SP.C",
+   "unsure": false
+  },
+  {
+   "item": 5,
+   "corpus": "eedi",
+   "unit": "s1077",
+   "code": "7.EE.A",
+   "unsure": false
+  },
+  {
+   "item": 6,
+   "corpus": "xes3g5m",
+   "unit": "k791",
+   "code": "7.EE.B",
+   "unsure": false
+  },
+  {
+   "item": 7,
+   "corpus": "eedi",
+   "unit": "s115",
+   "code": "8.SP.A",
+   "unsure": false
+  },
+  {
+   "item": 8,
+   "corpus": "xes3g5m",
+   "unit": "k747",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 9,
+   "corpus": "junyi2020",
+   "unit": "hxF+GCZ2kFjuoHOUVj0a6Jn9NbRfydExscjLa0cvxuw=",
+   "code": "7.G.B",
+   "unsure": true
+  },
+  {
+   "item": 10,
+   "corpus": "junyi2020",
+   "unit": "7GfQH+xzSUY6otFf1vL+TrUfTP/mPShPsFPOrzb8tZc=",
+   "code": "5.OA.A",
+   "unsure": true
+  },
+  {
+   "item": 11,
+   "corpus": "assistments2012",
+   "unit": "370",
+   "code": "6.EE.A",
+   "unsure": false
+  },
+  {
+   "item": 12,
+   "corpus": "junyi2020",
+   "unit": "IN2rf9N8yr1JT9tAJXei08vWhgCbmljAZ141KO0Bdto=",
+   "code": "4.NBT.B",
+   "unsure": false
+  },
+  {
+   "item": 13,
+   "corpus": "eedi",
+   "unit": "s1081",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 14,
+   "corpus": "junyi2020",
+   "unit": "evnrvQPPTPutwKufIKh7K4UMK3E+lB2zHUzaKFdprEw=",
+   "code": "4.NF.C",
+   "unsure": false
+  },
+  {
+   "item": 15,
+   "corpus": "assistments2012",
+   "unit": "22",
+   "code": "7.G.B",
+   "unsure": false
+  },
+  {
+   "item": 16,
+   "corpus": "eedi",
+   "unit": "s372",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 17,
+   "corpus": "xes3g5m",
+   "unit": "k85",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 18,
+   "corpus": "xes3g5m",
+   "unit": "k850",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 19,
+   "corpus": "eedi",
+   "unit": "s1217",
+   "code": "8.G.B",
+   "unsure": true
+  },
+  {
+   "item": 20,
+   "corpus": "eedi",
+   "unit": "s447",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 21,
+   "corpus": "eedi",
+   "unit": "s442",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 22,
+   "corpus": "assistments2012",
+   "unit": "54",
+   "code": "3.NBT.A",
+   "unsure": false
+  },
+  {
+   "item": 23,
+   "corpus": "assistments2012",
+   "unit": "81",
+   "code": "6.RP.A",
+   "unsure": false
+  },
+  {
+   "item": 24,
+   "corpus": "assistments2012",
+   "unit": "223",
+   "code": "8.EE.C",
+   "unsure": false
+  },
+  {
+   "item": 25,
+   "corpus": "eedi",
+   "unit": "s649",
+   "code": "8.F.A",
+   "unsure": false
+  },
+  {
+   "item": 26,
+   "corpus": "junyi2020",
+   "unit": "1iha+v5exIXrmb2ARHQmmJwmljMj98PxQ1Io7y+rq84=",
+   "code": "4.NBT.B",
+   "unsure": true
+  },
+  {
+   "item": 27,
+   "corpus": "eedi",
+   "unit": "s179",
+   "code": "6.G.A",
+   "unsure": true
+  },
+  {
+   "item": 28,
+   "corpus": "assistments2012",
+   "unit": "386",
+   "code": "2.OA.C",
+   "unsure": false
+  },
+  {
+   "item": 29,
+   "corpus": "junyi2020",
+   "unit": "WS6WWNekaOD2ftvFW2KFOR67cYFe7KHl0DfZjhjhbRU=",
+   "code": "6.NS.B",
+   "unsure": false
+  },
+  {
+   "item": 31,
+   "corpus": "xes3g5m",
+   "unit": "k192",
+   "code": "4.G.A",
+   "unsure": false
+  },
+  {
+   "item": 32,
+   "corpus": "junyi2020",
+   "unit": "blcaSZRDQfHg6i4RKYRvO7/D6wVIL6rGsyTJtdOElCg=",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 33,
+   "corpus": "assistments2012",
+   "unit": "202",
+   "code": "4.OA.C",
+   "unsure": false
+  },
+  {
+   "item": 34,
+   "corpus": "assistments2012",
+   "unit": "288",
+   "code": "5.MD.C",
+   "unsure": false
+  },
+  {
+   "item": 35,
+   "corpus": "xes3g5m",
+   "unit": "k56",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 36,
+   "corpus": "junyi2020",
+   "unit": "WMgUXcGDQCwsVgpqW00m0nL9vzTUYdkN6Cbdtg8M29k=",
+   "code": "3.MD.D",
+   "unsure": false
+  },
+  {
+   "item": 37,
+   "corpus": "xes3g5m",
+   "unit": "k193",
+   "code": "4.NF.C",
+   "unsure": false
+  },
+  {
+   "item": 38,
+   "corpus": "eedi",
+   "unit": "s1208",
+   "code": "7.EE.A",
+   "unsure": false
+  },
+  {
+   "item": 39,
+   "corpus": "eedi",
+   "unit": "s376",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 40,
+   "corpus": "assistments2012",
+   "unit": "307",
+   "code": "6.G.A",
+   "unsure": false
+  },
+  {
+   "item": 41,
+   "corpus": "junyi2020",
+   "unit": "gr4NKrj+oJ0DWsF5eptZqQQ7ksEfY5k4NLv8FQdDDk4=",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 42,
+   "corpus": "assistments2012",
+   "unit": "75",
+   "code": "8.EE.A",
+   "unsure": false
+  },
+  {
+   "item": 43,
+   "corpus": "junyi2020",
+   "unit": "v90baLZYacc3s+oqAusl+90J4O6kJCF7s47aUGFf8gA=",
+   "code": "4.G.A",
+   "unsure": true
+  },
+  {
+   "item": 44,
+   "corpus": "assistments2012",
+   "unit": "233",
+   "code": "8.G.A",
+   "unsure": false
+  },
+  {
+   "item": 45,
+   "corpus": "assistments2012",
+   "unit": "35",
+   "code": "7.RP.A",
+   "unsure": false
+  },
+  {
+   "item": 46,
+   "corpus": "assistments2012",
+   "unit": "1641",
+   "code": "6.RP.A",
+   "unsure": false
+  },
+  {
+   "item": 47,
+   "corpus": "assistments2012",
+   "unit": "582",
+   "code": "6.NS.B",
+   "unsure": false
+  },
+  {
+   "item": 49,
+   "corpus": "junyi2020",
+   "unit": "R9Uc/YSWli57zmUYbFm1LrpLpQSpiV8XlzGUDkoUIn8=",
+   "code": "5.MD.C",
+   "unsure": false
+  },
+  {
+   "item": 50,
+   "corpus": "assistments2012",
+   "unit": "49",
+   "code": "5.NBT.A",
+   "unsure": false
+  },
+  {
+   "item": 51,
+   "corpus": "eedi",
+   "unit": "s58",
+   "code": "8.F.B",
+   "unsure": false
+  },
+  {
+   "item": 52,
+   "corpus": "xes3g5m",
+   "unit": "k169",
+   "code": "K.OA.A",
+   "unsure": true
+  },
+  {
+   "item": 53,
+   "corpus": "junyi2020",
+   "unit": "pAUvW4XKSYhg1jlJZSgI+zcE64Vc1ZTK8rqKzNKk0+Q=",
+   "code": "3.OA.D",
+   "unsure": true
+  },
+  {
+   "item": 54,
+   "corpus": "eedi",
+   "unit": "s195",
+   "code": "2.MD.A",
+   "unsure": false
+  },
+  {
+   "item": 55,
+   "corpus": "assistments2012",
+   "unit": "576",
+   "code": "3.MD.C",
+   "unsure": false
+  },
+  {
+   "item": 56,
+   "corpus": "eedi",
+   "unit": "s1165",
+   "code": "6.RP.A",
+   "unsure": true
+  },
+  {
+   "item": 58,
+   "corpus": "junyi2020",
+   "unit": "xlVWFGWcVQ8HiY2o1mGb7xJ9fNjjd/XBRul7GwvTwjc=",
+   "code": "3.NF.A",
+   "unsure": false
+  },
+  {
+   "item": 59,
+   "corpus": "xes3g5m",
+   "unit": "k860",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 60,
+   "corpus": "junyi2020",
+   "unit": "q+qhddeoPj+932QSq5bGBAzgqT4XtW74phrSiM/jfw8=",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 61,
+   "corpus": "eedi",
+   "unit": "s453",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 62,
+   "corpus": "assistments2012",
+   "unit": "4",
+   "code": "3.MD.B",
+   "unsure": false
+  },
+  {
+   "item": 63,
+   "corpus": "assistments2012",
+   "unit": "230",
+   "code": "6.G.A",
+   "unsure": true
+  },
+  {
+   "item": 67,
+   "corpus": "junyi2020",
+   "unit": "kX+5omUWpBnZq80iSxuIAlsvxdHI68joYz6itRBOCss=",
+   "code": "6.NS.A",
+   "unsure": false
+  },
+  {
+   "item": 68,
+   "corpus": "assistments2012",
+   "unit": "587",
+   "code": "6.NS.B",
+   "unsure": false
+  },
+  {
+   "item": 69,
+   "corpus": "eedi",
+   "unit": "s190",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 70,
+   "corpus": "junyi2020",
+   "unit": "bL9LCeyWY9s37YHGGaajw9y6AvwkTvCxHwEL9prznXk=",
+   "code": "6.RP.A",
+   "unsure": true
+  },
+  {
+   "item": 71,
+   "corpus": "assistments2012",
+   "unit": "279",
+   "code": "7.NS.A",
+   "unsure": false
+  },
+  {
+   "item": 72,
+   "corpus": "eedi",
+   "unit": "s1163",
+   "code": "8.EE.A",
+   "unsure": false
+  },
+  {
+   "item": 73,
+   "corpus": "xes3g5m",
+   "unit": "k536",
+   "code": "3.NF.A",
+   "unsure": false
+  },
+  {
+   "item": 77,
+   "corpus": "xes3g5m",
+   "unit": "k858",
+   "code": "2.MD.C",
+   "unsure": false
+  },
+  {
+   "item": 78,
+   "corpus": "xes3g5m",
+   "unit": "k672",
+   "code": "NONE",
+   "unsure": false
+  },
+  {
+   "item": 79,
+   "corpus": "assistments2012",
+   "unit": "313",
+   "code": "7.SP.C",
+   "unsure": false
+  },
+  {
+   "item": 80,
+   "corpus": "assistments2012",
+   "unit": "198",
+   "code": "6.SP.A",
+   "unsure": false
+  },
+  {
+   "item": 81,
+   "corpus": "eedi",
+   "unit": "s1161",
+   "code": "4.NF.C",
+   "unsure": false
+  },
+  {
+   "item": 82,
+   "corpus": "junyi2020",
+   "unit": "LX5JBmC+vdiEQxmg1hxbBfGAanwh78vK0LYfaoDJMTM=",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 83,
+   "corpus": "assistments2012",
+   "unit": "371",
+   "code": "6.EE.A",
+   "unsure": false
+  },
+  {
+   "item": 84,
+   "corpus": "assistments2012",
+   "unit": "301",
+   "code": "6.G.A",
+   "unsure": false
+  },
+  {
+   "item": 85,
+   "corpus": "xes3g5m",
+   "unit": "k102",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 86,
+   "corpus": "xes3g5m",
+   "unit": "k356",
+   "code": "NONE",
+   "unsure": true
+  },
+  {
+   "item": 87,
+   "corpus": "junyi2020",
+   "unit": "CF13V6t23GjzMMrmb1dKAo7CKiOon8TM72V7olKWEgw=",
+   "code": "5.NF.A",
+   "unsure": false
+  },
+  {
+   "item": 88,
+   "corpus": "junyi2020",
+   "unit": "h8yV7uoM6hu2grzOG5Weh+0M055I9znunaEikiEHXjo=",
+   "code": "7.G.A",
+   "unsure": false
+  },
+  {
+   "item": 89,
+   "corpus": "eedi",
+   "unit": "s222",
+   "code": "5.NBT.A",
+   "unsure": false
+  },
+  {
+   "item": 91,
+   "corpus": "eedi",
+   "unit": "s270",
+   "code": "4.MD.A",
+   "unsure": false
+  },
+  {
+   "item": 92,
+   "corpus": "assistments2012",
+   "unit": "1",
+   "code": "6.SP.B",
+   "unsure": false
+  },
+  {
+   "item": 93,
+   "corpus": "xes3g5m",
+   "unit": "k610",
+   "code": "4.G.A",
+   "unsure": false
+  },
+  {
+   "item": 96,
+   "corpus": "xes3g5m",
+   "unit": "k66",
+   "code": "3.MD.D",
+   "unsure": false
+  },
+  {
+   "item": 97,
+   "corpus": "eedi",
+   "unit": "s1180",
+   "code": "5.G.A",
+   "unsure": true
+  },
+  {
+   "item": 98,
+   "corpus": "eedi",
+   "unit": "s281",
+   "code": "7.G.A",
+   "unsure": false
+  },
+  {
+   "item": 100,
+   "corpus": "eedi",
+   "unit": "s1160",
+   "code": "4.OA.B",
+   "unsure": true
+  }
+ ]
+}

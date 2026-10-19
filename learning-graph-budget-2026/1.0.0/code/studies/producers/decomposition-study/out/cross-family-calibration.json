@@ -1,0 +1,224 @@
+{
+ "judge": {
+  "calibrations": [
+   {
+    "judge": "minimax/minimax-m3",
+    "provider": "Together",
+    "rep0_all_parsed": true,
+    "rates": {
+     "n": 2811,
+     "label_counts": {
+      "SAME": 30,
+      "OVERLAPPING": 50,
+      "DIFFERENT": 2731
+     },
+     "synonym_miss_rate": 0.2,
+     "false_merge_rate": 0.0,
+     "grain_promotion_rate": 0.04,
+     "lenient_miss_rate": 0.05,
+     "lenient_false_merge_rate": 0.004760161113145368,
+     "kappa_strict": 0.8557129658145982,
+     "kappa_lenient": 0.8962998487475561,
+     "confusion_label_rows_matcher_cols_DOS": [
+      [
+       2718,
+       13,
+       0
+      ],
+      [
+       4,
+       44,
+       2
+      ],
+      [
+       0,
+       6,
+       24
+      ]
+     ]
+    },
+    "rates_excluding_disputed": {
+     "n": 2809,
+     "label_counts": {
+      "SAME": 28,
+      "OVERLAPPING": 50,
+      "DIFFERENT": 2731
+     },
+     "synonym_miss_rate": 0.21428571428571427,
+     "false_merge_rate": 0.0,
+     "grain_promotion_rate": 0.04,
+     "lenient_miss_rate": 0.05128205128205128,
+     "lenient_false_merge_rate": 0.004760161113145368,
+     "kappa_strict": 0.8447251319753454,
+     "kappa_lenient": 0.893861702151305,
+     "confusion_label_rows_matcher_cols_DOS": [
+      [
+       2718,
+       13,
+       0
+      ],
+      [
+       4,
+       44,
+       2
+      ],
+      [
+       0,
+       6,
+       22
+      ]
+     ]
+    },
+    "retest_kappa_strict": 0.6511427395703391,
+    "label_source": "Anthropic-family agents (first judge; independent re-judge on 400 rows)",
+    "label_ceiling_kappa_same": 0.965,
+    "passes": true
+   }
+  ],
+  "chosen": {
+   "judge": "minimax/minimax-m3",
+   "provider": "Together",
+   "rep0_all_parsed": true,
+   "rates": {
+    "n": 2811,
+    "label_counts": {
+     "SAME": 30,
+     "OVERLAPPING": 50,
+     "DIFFERENT": 2731
+    },
+    "synonym_miss_rate": 0.2,
+    "false_merge_rate": 0.0,
+    "grain_promotion_rate": 0.04,
+    "lenient_miss_rate": 0.05,
+    "lenient_false_merge_rate": 0.004760161113145368,
+    "kappa_strict": 0.8557129658145982,
+    "kappa_lenient": 0.8962998487475561,
+    "confusion_label_rows_matcher_cols_DOS": [
+     [
+      2718,
+      13,
+      0
+     ],
+     [
+      4,
+      44,
+      2
+     ],
+     [
+      0,
+      6,
+      24
+     ]
+    ]
+   },
+   "rates_excluding_disputed": {
+    "n": 2809,
+    "label_counts": {
+     "SAME": 28,
+     "OVERLAPPING": 50,
+     "DIFFERENT": 2731
+    },
+    "synonym_miss_rate": 0.21428571428571427,
+    "false_merge_rate": 0.0,
+    "grain_promotion_rate": 0.04,
+    "lenient_miss_rate": 0.05128205128205128,
+    "lenient_false_merge_rate": 0.004760161113145368,
+    "kappa_strict": 0.8447251319753454,
+    "kappa_lenient": 0.893861702151305,
+    "confusion_label_rows_matcher_cols_DOS": [
+     [
+      2718,
+      13,
+      0
+     ],
+     [
+      4,
+      44,
+      2
+     ],
+     [
+      0,
+      6,
+      22
+     ]
+    ]
+   },
+   "retest_kappa_strict": 0.6511427395703391,
+   "label_source": "Anthropic-family agents (first judge; independent re-judge on 400 rows)",
+   "label_ceiling_kappa_same": 0.965,
+   "passes": true
+  }
+ },
+ "embedding": {
+  "model": "perplexity/pplx-embed-v1-4b",
+  "provider": "Perplexity",
+  "served_model": "pplx-embed-v1-4b",
+  "tau_same": 0.63,
+  "tau_linked": 0.5,
+  "held_out_rates": {
+   "n": 2811,
+   "label_counts": {
+    "SAME": 30,
+    "OVERLAPPING": 50,
+    "DIFFERENT": 2731
+   },
+   "synonym_miss_rate": 0.16666666666666666,
+   "false_merge_rate": 0.0,
+   "grain_promotion_rate": 0.26,
+   "lenient_miss_rate": 0.2,
+   "lenient_false_merge_rate": 0.004393994873672647,
+   "kappa_strict": 0.7320986085520055,
+   "kappa_lenient": 0.8153937085440345,
+   "confusion_label_rows_matcher_cols_DOS": [
+    [
+     2719,
+     12,
+     0
+    ],
+    [
+     16,
+     21,
+     13
+    ],
+    [
+     0,
+     5,
+     25
+    ]
+   ]
+  },
+  "in_sample_rates": {
+   "n": 2811,
+   "label_counts": {
+    "SAME": 30,
+    "OVERLAPPING": 50,
+    "DIFFERENT": 2731
+   },
+   "synonym_miss_rate": 0.16666666666666666,
+   "false_merge_rate": 0.0,
+   "grain_promotion_rate": 0.22,
+   "lenient_miss_rate": 0.2125,
+   "lenient_false_merge_rate": 0.0021969974368363236,
+   "kappa_strict": 0.7547200680605993,
+   "kappa_lenient": 0.8414586597809212,
+   "confusion_label_rows_matcher_cols_DOS": [
+    [
+     2725,
+     6,
+     0
+    ],
+    [
+     17,
+     22,
+     11
+    ],
+    [
+     0,
+     5,
+     25
+    ]
+   ]
+  },
+  "passes": true
+ }
+}

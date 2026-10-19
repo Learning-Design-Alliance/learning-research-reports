@@ -1,0 +1,6 @@
+{
+ "date": "2026-10-07",
+ "study": "studies/identifiability/core-vs-culture-no-xes/no_xes.py (pre-registered at 9cc4075)",
+ "moved": {},
+ "note": "Does invariance.py's CORE AND CULTURAL survive without XES3G5M, the corpus the blind human map check supports least (kappa 0.464)? Floor on the reduced design's real key structure passes (false core 1/40; planted core 40/40); 3-corpus power at effect 0.3 is 0.80 at 300 shared pairs, and the reduced design's median is 768 (6 ordered pairs; 760, 768, 1,134 shared). CORE AND CULTURAL without XES3G5M: b_other +0.147 [+0.108, +0.186] (null 97.5th +0.027), b_prox +0.351 [+0.307, +0.392], ratio 0.418 (four corpora: +0.125, +0.363, 0.344). Second map: CORE AND CULTURAL (+0.161, +0.359). Leave-one-corpus-out: all four CORE AND CULTURAL, b_other +0.093 to +0.147. Descriptive: 70-82% of each remaining corpus's shared cluster pairs touch a cluster the human confirmed at least once, 19-31% both. The point estimate was not blind (it is the mean of six committed per-pair coefficients). Moves nothing."
+}

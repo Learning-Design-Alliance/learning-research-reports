@@ -1,0 +1,1158 @@
+{
+ "seed": 20261007,
+ "draws": 200,
+ "level": 2,
+ "min_group": 3,
+ "worlds": {
+  "group": {
+   "summary": {
+    "sets": 20,
+    "bf_false_alarm": 0.05,
+    "bf_any": 0.05,
+    "d1_fires": 0.25,
+    "d1_any": 0.6,
+    "d1_clustered": 0.4,
+    "d1_flagged": 5,
+    "d1_flagged_within": 3,
+    "d1_within_survive_bf": 0,
+    "floor_bf_within": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      0.875,
+      1.0,
+      1.0,
+      1.0,
+      0.875,
+      0.875,
+      0.625,
+      0.6666666666666666,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.875,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "pooled": 0.9318181818181818
+    },
+    "floor_bf_cross": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      1.0,
+      0.8571428571428571,
+      0.8571428571428571,
+      1.0
+     ],
+     "pooled": 0.9714285714285714
+    },
+    "floor_1d_within": {
+     "median": 0.875,
+     "per_set": [
+      0.875,
+      0.75,
+      1.0,
+      1.0,
+      0.875,
+      0.875,
+      1.0,
+      0.875,
+      0.8333333333333334,
+      1.0,
+      1.0,
+      0.875,
+      1.0,
+      0.875,
+      1.0,
+      0.875,
+      1.0
+     ],
+     "pooled": 0.9242424242424242
+    },
+    "floor_1d_cross": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      0.8571428571428571,
+      0.8571428571428571,
+      0.8571428571428571,
+      1.0
+     ],
+     "pooled": 0.9642857142857143
+    },
+    "median_flips": 105.5,
+    "seconds": 1021
+   },
+   "sets": [
+    {
+     "n": 3000,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 228.4
+    },
+    {
+     "n": 1105,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 269.3
+    },
+    {
+     "n": 771,
+     "groups": 2,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": true,
+     "any_bf": true,
+     "flagged_1d": 1,
+     "flagged_1d_within": 0,
+     "survive_bf": 1,
+     "within_survive_bf": 0,
+     "flagged_bf": 1,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 170.0
+    },
+    {
+     "n": 801,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 229.4
+    },
+    {
+     "n": 581,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 139.4
+    },
+    {
+     "n": 1843,
+     "groups": 0,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 120.7
+    },
+    {
+     "n": 648,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 137.9
+    },
+    {
+     "n": 836,
+     "groups": 2,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 1,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 110.1
+    },
+    {
+     "n": 211,
+     "groups": 1,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 179.5
+    },
+    {
+     "n": 1279,
+     "groups": 0,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 99.3
+    },
+    {
+     "n": 493,
+     "groups": 1,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 131.4
+    },
+    {
+     "n": 311,
+     "groups": 1,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 149.5
+    },
+    {
+     "n": 1335,
+     "groups": 1,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 111.5
+    },
+    {
+     "n": 763,
+     "groups": 0,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 117.9
+    },
+    {
+     "n": 1931,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 126.8
+    },
+    {
+     "n": 257,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 186.3
+    },
+    {
+     "n": 403,
+     "groups": 3,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 1,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 210.2
+    },
+    {
+     "n": 656,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 130.5
+    },
+    {
+     "n": 495,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 80.2
+    },
+    {
+     "n": 843,
+     "groups": 2,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 1,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 55.8
+    }
+   ]
+  },
+  "group-free": {
+   "summary": {
+    "sets": 20,
+    "bf_false_alarm": 0.15,
+    "bf_any": 0.2,
+    "d1_fires": 0.35,
+    "d1_any": 0.65,
+    "d1_clustered": 0.5,
+    "d1_flagged": 11,
+    "d1_flagged_within": 9,
+    "d1_within_survive_bf": 2,
+    "floor_bf_within": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      1.0,
+      0.875,
+      0.75,
+      0.875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "pooled": 0.9696969696969697
+    },
+    "floor_bf_cross": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "pooled": 1.0
+    },
+    "floor_1d_within": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      0.75,
+      0.875,
+      0.875,
+      0.875,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.75,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "pooled": 0.946969696969697
+    },
+    "floor_1d_cross": {
+     "median": 1.0,
+     "per_set": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.8571428571428571,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "pooled": 0.9928571428571429
+    },
+    "median_flips": 137.0,
+    "seconds": 1042
+   },
+   "sets": [
+    {
+     "n": 3000,
+     "groups": 3,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": true,
+     "any_bf": true,
+     "flagged_1d": 2,
+     "flagged_1d_within": 2,
+     "survive_bf": 1,
+     "within_survive_bf": 1,
+     "flagged_bf": 1,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 109.7
+    },
+    {
+     "n": 1221,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 120.7
+    },
+    {
+     "n": 347,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      1
+     ],
+     "seconds": 192.7
+    },
+    {
+     "n": 333,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 172.2
+    },
+    {
+     "n": 1513,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": true,
+     "any_bf": true,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 2,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 119.1
+    },
+    {
+     "n": 444,
+     "groups": 0,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 77.6
+    },
+    {
+     "n": 2900,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 130.1
+    },
+    {
+     "n": 1479,
+     "groups": 2,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": true,
+     "any_bf": true,
+     "flagged_1d": 2,
+     "flagged_1d_within": 2,
+     "survive_bf": 1,
+     "within_survive_bf": 1,
+     "flagged_bf": 1,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 140.8
+    },
+    {
+     "n": 559,
+     "groups": 1,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 151.2
+    },
+    {
+     "n": 401,
+     "groups": 0,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 132.2
+    },
+    {
+     "n": 798,
+     "groups": 1,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 1,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 218.4
+    },
+    {
+     "n": 2010,
+     "groups": 1,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 1,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 130.2
+    },
+    {
+     "n": 306,
+     "groups": 1,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      4,
+      28
+     ],
+     "seconds": 407.6
+    },
+    {
+     "n": 2893,
+     "groups": 0,
+     "fires_1d": false,
+     "any_1d": false,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 84.3
+    },
+    {
+     "n": 357,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      1,
+      1
+     ],
+     "seconds": 275.9
+    },
+    {
+     "n": 2048,
+     "groups": 3,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 1,
+     "flagged_1d_within": 1,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 106.1
+    },
+    {
+     "n": 788,
+     "groups": 3,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 126.1
+    },
+    {
+     "n": 2736,
+     "groups": 2,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": true,
+     "flagged_1d": 2,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 111.4
+    },
+    {
+     "n": 678,
+     "groups": 2,
+     "fires_1d": true,
+     "any_1d": true,
+     "clustered_1d": false,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 2,
+     "flagged_1d_within": 2,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 123.2
+    },
+    {
+     "n": 1868,
+     "groups": 2,
+     "fires_1d": false,
+     "any_1d": true,
+     "clustered_1d": true,
+     "fires_bf": false,
+     "any_bf": false,
+     "flagged_1d": 0,
+     "flagged_1d_within": 0,
+     "survive_bf": 0,
+     "within_survive_bf": 0,
+     "flagged_bf": 0,
+     "conv": [
+      true,
+      true
+     ],
+     "boot_nc": [
+      0,
+      0
+     ],
+     "seconds": 131.9
+    }
+   ]
+  }
+ }
+}

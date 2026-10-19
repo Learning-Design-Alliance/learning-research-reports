@@ -1,0 +1,37 @@
+{
+ "passed": true,
+ "checks": {
+  "F1_toy": true,
+  "F2_exact_co": true,
+  "F2_exact_iso_BnotA": true,
+  "F2_exact_iso_AnotB": true,
+  "F2_exact_pure": true,
+  "F2_planted_unidentified_recovered": true,
+  "F2_planted_isolating_recovered": true,
+  "F2_census_exact": true,
+  "F2_planted_40_and_40": true,
+  "F3_stream_rebuild": true,
+  "F4_replica_equal": true,
+  "F5_crosstab_and_verdicts": true,
+  "F6_timekey_string_order": true
+ },
+ "F2": {
+  "ordered_pairs": 39800,
+  "planted_unidentified": 40,
+  "planted_isolating": 40,
+  "census_U": 249,
+  "bruteforce_U": 249
+ },
+ "F4": {
+  "pairs": 210,
+  "mismatches": 0,
+  "states": {
+   "supported": 38,
+   "contradicted": 139,
+   "unknown": 33
+  },
+  "falsifiable_pairs": 18,
+  "all_branches_seen": true
+ },
+ "verdict": "FLOOR PASSED: the counter is exact and the replica equals the atlas"
+}

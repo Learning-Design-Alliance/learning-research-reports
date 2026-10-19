@@ -1,0 +1,260 @@
+{
+ "xes3g5m": {
+  "learners": 18066,
+  "items": 200,
+  "readable_pairs": 32362,
+  "ordered_pairs": 39800,
+  "q": 127,
+  "real": [
+   {
+    "p": 32362,
+    "q": 127,
+    "bounds": {
+     "0.60": 2.4919658859155804,
+     "0.75": 0.996786354366232,
+     "0.90": 0.622991471478895
+    },
+    "hist": [
+     32037,
+     165,
+     67,
+     35,
+     20,
+     15,
+     10,
+     5,
+     5,
+     3
+    ],
+    "0.60": {
+     "selected": 24,
+     "reverse_also_selected": 0.0
+    },
+    "0.75": {
+     "selected": 10,
+     "reverse_also_selected": 0.0
+    },
+    "0.90": {
+     "selected": 3,
+     "reverse_also_selected": 0.0
+    },
+    "q_mean": 127.0,
+    "median_min_cell": 139.0
+   },
+   {
+    "p": 32362,
+    "q": 127,
+    "bounds": {
+     "0.60": 2.4919658859155804,
+     "0.75": 0.996786354366232,
+     "0.90": 0.622991471478895
+    },
+    "hist": [
+     32033,
+     167,
+     70,
+     35,
+     15,
+     18,
+     13,
+     3,
+     6,
+     2
+    ],
+    "0.60": {
+     "selected": 25,
+     "reverse_also_selected": 0.0
+    },
+    "0.75": {
+     "selected": 9,
+     "reverse_also_selected": 0.0
+    },
+    "0.90": {
+     "selected": 2,
+     "reverse_also_selected": 0.0
+    },
+    "q_mean": 127.0,
+    "median_min_cell": 139.0
+   }
+  ],
+  "deranged": {
+   "p": 32362,
+   "q": 127,
+   "bounds": {
+    "0.60": 2.4919658859155804,
+    "0.75": 0.996786354366232,
+    "0.90": 0.622991471478895
+   },
+   "hist": [
+    32252,
+    107,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "0.60": {
+    "selected": 0,
+    "reverse_also_selected": 0.0
+   },
+   "0.75": {
+    "selected": 0,
+    "reverse_also_selected": 0.0
+   },
+   "0.90": {
+    "selected": 0,
+    "reverse_also_selected": 0.0
+   },
+   "q_mean": 127.0,
+   "median_min_cell": 145.0
+  },
+  "control_scale": {
+   "ok": true,
+   "median_treatment": 139.0,
+   "ratios": {
+    "deranged": 1.0431654676258992
+   },
+   "covers": {
+    "real": true
+   },
+   "uncovered": [],
+   "report": "control scale: median treatment 139, deranged 145 (1.04x)"
+  },
+  "verdict": "BOUND HONEST UNDER THE DERANGED NULL",
+  "deranged_minus_bound": -0.996786354366232
+ },
+ "ednet": {
+  "learners": 6000,
+  "items": 141,
+  "readable_pairs": 15138,
+  "ordered_pairs": 19740,
+  "q": 87,
+  "real": [
+   {
+    "p": 15138,
+    "q": 87,
+    "bounds": {
+     "0.60": 2.5000000000000004,
+     "0.75": 1.0,
+     "0.90": 0.6249999999999999
+    },
+    "hist": [
+     14952,
+     130,
+     36,
+     10,
+     9,
+     0,
+     1,
+     0,
+     0,
+     0
+    ],
+    "0.60": {
+     "selected": 1,
+     "reverse_also_selected": 0.0
+    },
+    "0.75": {
+     "selected": 0,
+     "reverse_also_selected": 0.0
+    },
+    "0.90": {
+     "selected": 0,
+     "reverse_also_selected": 0.0
+    },
+    "q_mean": 87.0,
+    "median_min_cell": 23.0
+   },
+   {
+    "p": 15138,
+    "q": 87,
+    "bounds": {
+     "0.60": 2.5000000000000004,
+     "0.75": 1.0,
+     "0.90": 0.6249999999999999
+    },
+    "hist": [
+     14960,
+     130,
+     24,
+     14,
+     7,
+     2,
+     1,
+     0,
+     0,
+     0
+    ],
+    "0.60": {
+     "selected": 2,
+     "reverse_also_selected": 0.0
+    },
+    "0.75": {
+     "selected": 0,
+     "reverse_also_selected": 0.0
+    },
+    "0.90": {
+     "selected": 0,
+     "reverse_also_selected": 0.0
+    },
+    "q_mean": 87.0,
+    "median_min_cell": 23.0
+   }
+  ],
+  "deranged": {
+   "p": 15138,
+   "q": 87,
+   "bounds": {
+    "0.60": 2.5000000000000004,
+    "0.75": 1.0,
+    "0.90": 0.6249999999999999
+   },
+   "hist": [
+    15138,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "0.60": {
+    "selected": 0,
+    "reverse_also_selected": 0.0
+   },
+   "0.75": {
+    "selected": 0,
+    "reverse_also_selected": 0.0
+   },
+   "0.90": {
+    "selected": 0,
+    "reverse_also_selected": 0.0
+   },
+   "q_mean": 87.0,
+   "median_min_cell": 10.0
+  },
+  "control_scale": {
+   "ok": false,
+   "median_treatment": 23.0,
+   "ratios": {
+    "deranged": 0.43478260869565216
+   },
+   "covers": {
+    "real": false
+   },
+   "uncovered": [
+    "real"
+   ],
+   "report": "control scale: median treatment 23, deranged 10 (0.43x)\n   NOT COVERED by any control at 0.5x: real 23 -- say so in the write-up rather than implying otherwise"
+  },
+  "verdict": "BOUND HONEST UNDER THE DERANGED NULL",
+  "deranged_minus_bound": -1.0
+ }
+}

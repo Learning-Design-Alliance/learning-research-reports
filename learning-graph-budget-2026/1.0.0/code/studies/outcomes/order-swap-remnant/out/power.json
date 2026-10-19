@@ -1,0 +1,263 @@
+{
+ "alpha": 0.05,
+ "power": 0.8,
+ "Z": 2.8015852181129683,
+ "icc": {
+  "completion_class": {
+   "icc": 0.09709658351155406,
+   "lo90": 0.05152950199209075,
+   "hi90": 0.14471304844402452,
+   "groups": 67,
+   "students": 1190
+  },
+  "completion_teacher": {
+   "icc": 0.09169558593568555,
+   "lo90": 0.027183318673800288,
+   "hi90": 0.1547551497751611,
+   "groups": 40,
+   "students": 1192
+  },
+  "completion_class_after_remnant": {
+   "icc": 0.04549573841491484
+  },
+  "problems_to_mastery_class": {
+   "icc": 0.09606233076372978,
+   "lo90": 0.05697075216696221,
+   "hi90": 0.136193971547626,
+   "groups": 65,
+   "students": 928
+  },
+  "problems_to_mastery_teacher": {
+   "icc": 0.09051493518531467,
+   "lo90": 0.0548334369468838,
+   "hi90": 0.12481637223434523,
+   "groups": 38,
+   "students": 930
+  },
+  "problems_to_mastery_class_after_remnant": {
+   "icc": 0.09481335148333964
+  },
+  "encounter_correct_learner": {
+   "icc": 0.14881850059987514,
+   "lo90": 0.1285610543944087,
+   "hi90": 0.16985693843800964,
+   "learners": 1104,
+   "attempts": 7683,
+   "draws": 500
+  }
+ },
+ "participant_class_size_median": 13.0,
+ "participant_classes": 69,
+ "sample_sizes": {
+  "0.05": {
+   "per_learner_n_per_arm": {
+    "none": 6280,
+    "remnant_ptm": 5203,
+    "remnant_completion": 5296
+   },
+   "per_class": {
+    "this_experiment_ptm_rho": {
+     "m=13": {
+      "classes_per_arm": 1040,
+      "learners_per_arm": 13520
+     },
+     "m=20": {
+      "classes_per_arm": 887,
+      "learners_per_arm": 17740
+     }
+    },
+    "this_experiment_ptm_rho_with_remnant": {
+     "m=13": {
+      "classes_per_arm": 965,
+      "learners_per_arm": 12545
+     },
+     "m=20": {
+      "classes_per_arm": 839,
+      "learners_per_arm": 16780
+     }
+    },
+    "hedges_hedberg_rho_0.15": {
+     "m=13": {
+      "classes_per_arm": 1353,
+      "learners_per_arm": 17589
+     },
+     "m=20": {
+      "classes_per_arm": 1209,
+      "learners_per_arm": 24180
+     }
+    },
+    "hedges_hedberg_rho_0.25": {
+     "m=13": {
+      "classes_per_arm": 1933,
+      "learners_per_arm": 25129
+     },
+     "m=20": {
+      "classes_per_arm": 1806,
+      "learners_per_arm": 36120
+     }
+    },
+    "hedges_hedberg_rho_0.239_pretest_etaB_0.210_etaW_0.360": {
+     "m=13": {
+      "classes_per_arm": 448,
+      "learners_per_arm": 5824
+     },
+     "m=20": {
+      "classes_per_arm": 402,
+      "learners_per_arm": 8040
+     }
+    }
+   },
+   "per_encounter": {
+    "total_encounters": 10690,
+    "learners_K=5": 2138,
+    "learners_K=20": 535,
+    "with_remnant_total_encounters_if_same_ratio": 8856
+   }
+  },
+  "0.1": {
+   "per_learner_n_per_arm": {
+    "none": 1570,
+    "remnant_ptm": 1301,
+    "remnant_completion": 1324
+   },
+   "per_class": {
+    "this_experiment_ptm_rho": {
+     "m=13": {
+      "classes_per_arm": 260,
+      "learners_per_arm": 3380
+     },
+     "m=20": {
+      "classes_per_arm": 222,
+      "learners_per_arm": 4440
+     }
+    },
+    "this_experiment_ptm_rho_with_remnant": {
+     "m=13": {
+      "classes_per_arm": 242,
+      "learners_per_arm": 3146
+     },
+     "m=20": {
+      "classes_per_arm": 210,
+      "learners_per_arm": 4200
+     }
+    },
+    "hedges_hedberg_rho_0.15": {
+     "m=13": {
+      "classes_per_arm": 339,
+      "learners_per_arm": 4407
+     },
+     "m=20": {
+      "classes_per_arm": 303,
+      "learners_per_arm": 6060
+     }
+    },
+    "hedges_hedberg_rho_0.25": {
+     "m=13": {
+      "classes_per_arm": 484,
+      "learners_per_arm": 6292
+     },
+     "m=20": {
+      "classes_per_arm": 452,
+      "learners_per_arm": 9040
+     }
+    },
+    "hedges_hedberg_rho_0.239_pretest_etaB_0.210_etaW_0.360": {
+     "m=13": {
+      "classes_per_arm": 112,
+      "learners_per_arm": 1456
+     },
+     "m=20": {
+      "classes_per_arm": 101,
+      "learners_per_arm": 2020
+     }
+    }
+   },
+   "per_encounter": {
+    "total_encounters": 2673,
+    "learners_K=5": 535,
+    "learners_K=20": 134,
+    "with_remnant_total_encounters_if_same_ratio": 2214
+   }
+  },
+  "0.3": {
+   "per_learner_n_per_arm": {
+    "none": 175,
+    "remnant_ptm": 145,
+    "remnant_completion": 148
+   },
+   "per_class": {
+    "this_experiment_ptm_rho": {
+     "m=13": {
+      "classes_per_arm": 29,
+      "learners_per_arm": 377
+     },
+     "m=20": {
+      "classes_per_arm": 25,
+      "learners_per_arm": 500
+     }
+    },
+    "this_experiment_ptm_rho_with_remnant": {
+     "m=13": {
+      "classes_per_arm": 27,
+      "learners_per_arm": 351
+     },
+     "m=20": {
+      "classes_per_arm": 24,
+      "learners_per_arm": 480
+     }
+    },
+    "hedges_hedberg_rho_0.15": {
+     "m=13": {
+      "classes_per_arm": 38,
+      "learners_per_arm": 494
+     },
+     "m=20": {
+      "classes_per_arm": 34,
+      "learners_per_arm": 680
+     }
+    },
+    "hedges_hedberg_rho_0.25": {
+     "m=13": {
+      "classes_per_arm": 54,
+      "learners_per_arm": 702
+     },
+     "m=20": {
+      "classes_per_arm": 51,
+      "learners_per_arm": 1020
+     }
+    },
+    "hedges_hedberg_rho_0.239_pretest_etaB_0.210_etaW_0.360": {
+     "m=13": {
+      "classes_per_arm": 13,
+      "learners_per_arm": 169
+     },
+     "m=20": {
+      "classes_per_arm": 12,
+      "learners_per_arm": 240
+     }
+    }
+   },
+   "per_encounter": {
+    "total_encounters": 297,
+    "learners_K=5": 60,
+    "learners_K=20": 15,
+    "with_remnant_total_encounters_if_same_ratio": 246
+   }
+  }
+ },
+ "lt_trials_comparison": {
+  "arm_power_n_per_arm_for_abs_0.10": {
+   "0.5": 385,
+   "0.6": 385,
+   "0.7": 354,
+   "0.8": 291
+  },
+  "abs_0.10_in_sd_at_p": {
+   "0.5": 0.20203050891044216,
+   "0.6": 0.20203050891044216,
+   "0.7": 0.21081851067789195,
+   "0.8": 0.2324952774876386
+  },
+  "note": "arm_power.json's 0.10 is an absolute accuracy difference, i.e. about 0.20-0.25 SD"
+ }
+}

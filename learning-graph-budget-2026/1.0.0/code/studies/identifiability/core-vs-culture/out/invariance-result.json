@@ -1,0 +1,319 @@
+{
+ "openai/gpt-6-sol": {
+  "pairs_per_corpus": {
+   "xes3g5m": 930,
+   "assistments2012": 972,
+   "eedi": 1531,
+   "junyi2020": 2604
+  },
+  "cross": {
+   "verdict": "CORE AND CULTURAL",
+   "pooled_b_other": 0.12488274683670249,
+   "pooled_b_prox": 0.36290093375786214,
+   "b_other_ci": [
+    0.09097709373751542,
+    0.15833718565515964
+   ],
+   "b_prox_ci": [
+    0.3262744496513399,
+    0.40110186463502256
+   ],
+   "null_b_other_975": 0.022323125171890265,
+   "per_pair": {
+    "xes3g5m<-assistments2012": {
+     "n_shared": 273,
+     "b_other": 0.08355794558323132,
+     "b_prox": 0.3786802655675005
+    },
+    "xes3g5m<-eedi": {
+     "n_shared": 395,
+     "b_other": 0.14797632547701176,
+     "b_prox": 0.36410619707631925
+    },
+    "xes3g5m<-junyi2020": {
+     "n_shared": 804,
+     "b_other": 0.10819783847387249,
+     "b_prox": 0.3897224347720477
+    },
+    "assistments2012<-xes3g5m": {
+     "n_shared": 273,
+     "b_other": 0.06229874925103457,
+     "b_prox": 0.269662433995435
+    },
+    "assistments2012<-eedi": {
+     "n_shared": 760,
+     "b_other": 0.16177831768368567,
+     "b_prox": 0.2740429522873971
+    },
+    "assistments2012<-junyi2020": {
+     "n_shared": 768,
+     "b_other": 0.09734522119213931,
+     "b_prox": 0.28951859484961684
+    },
+    "eedi<-xes3g5m": {
+     "n_shared": 395,
+     "b_other": 0.1210597596151764,
+     "b_prox": 0.6146327847235007
+    },
+    "eedi<-assistments2012": {
+     "n_shared": 760,
+     "b_other": 0.11807787209785481,
+     "b_prox": 0.5953278525796236
+    },
+    "eedi<-junyi2020": {
+     "n_shared": 1134,
+     "b_other": 0.16166112258343823,
+     "b_prox": 0.5077198625168198
+    },
+    "junyi2020<-xes3g5m": {
+     "n_shared": 804,
+     "b_other": 0.09529237735646817,
+     "b_prox": 0.23413671037141254
+    },
+    "junyi2020<-assistments2012": {
+     "n_shared": 768,
+     "b_other": 0.1136367373435283,
+     "b_prox": 0.23695276582073213
+    },
+    "junyi2020<-eedi": {
+     "n_shared": 1134,
+     "b_other": 0.22771069538298908,
+     "b_prox": 0.20030835053394141
+    }
+   },
+   "order_discordance": {
+    "xes3g5m<-assistments2012": {
+     "discordant_n": 78,
+     "discordant_rho": 0.1767473033295818,
+     "concordant_n": 195,
+     "concordant_rho": 0.10328051918626292
+    },
+    "xes3g5m<-eedi": {
+     "discordant_n": 83,
+     "discordant_rho": 0.3051089374921288,
+     "concordant_n": 312,
+     "concordant_rho": 0.15681227127864278
+    },
+    "xes3g5m<-junyi2020": {
+     "discordant_n": 243,
+     "discordant_rho": 0.05414971038418629,
+     "concordant_n": 561,
+     "concordant_rho": 0.09068283088065378
+    },
+    "assistments2012<-xes3g5m": {
+     "discordant_n": 78,
+     "discordant_rho": 0.1767473033295818,
+     "concordant_n": 195,
+     "concordant_rho": 0.10328051918626292
+    },
+    "assistments2012<-eedi": {
+     "discordant_n": 42,
+     "discordant_rho": 0.20249574588769143,
+     "concordant_n": 718,
+     "concordant_rho": 0.2544854778383185
+    },
+    "assistments2012<-junyi2020": {
+     "discordant_n": 99,
+     "discordant_rho": 0.06085343228200371,
+     "concordant_n": 669,
+     "concordant_rho": 0.14559454813684325
+    },
+    "eedi<-xes3g5m": {
+     "discordant_n": 83,
+     "discordant_rho": 0.3051089374921288,
+     "concordant_n": 312,
+     "concordant_rho": 0.15681227127864278
+    },
+    "eedi<-assistments2012": {
+     "discordant_n": 42,
+     "discordant_rho": 0.20249574588769143,
+     "concordant_n": 718,
+     "concordant_rho": 0.2544854778383185
+    },
+    "eedi<-junyi2020": {
+     "discordant_n": 118,
+     "discordant_rho": 0.1635642522980509,
+     "concordant_n": 1016,
+     "concordant_rho": 0.24538042753810488
+    },
+    "junyi2020<-xes3g5m": {
+     "discordant_n": 243,
+     "discordant_rho": 0.05414971038418629,
+     "concordant_n": 561,
+     "concordant_rho": 0.09068283088065378
+    },
+    "junyi2020<-assistments2012": {
+     "discordant_n": 99,
+     "discordant_rho": 0.06085343228200371,
+     "concordant_n": 669,
+     "concordant_rho": 0.14559454813684325
+    },
+    "junyi2020<-eedi": {
+     "discordant_n": 118,
+     "discordant_rho": 0.1635642522980509,
+     "concordant_n": 1016,
+     "concordant_rho": 0.24538042753810488
+    }
+   }
+  }
+ },
+ "deepseek/deepseek-v4-pro": {
+  "pairs_per_corpus": {
+   "xes3g5m": 858,
+   "assistments2012": 879,
+   "eedi": 1749,
+   "junyi2020": 2900
+  },
+  "cross": {
+   "verdict": "CORE AND CULTURAL",
+   "pooled_b_other": 0.15549910805586806,
+   "pooled_b_prox": 0.3603489164974832,
+   "b_other_ci": [
+    0.11959019645030335,
+    0.19449994188329878
+   ],
+   "b_prox_ci": [
+    0.3075124614575226,
+    0.40425601523787313
+   ],
+   "null_b_other_975": 0.02515324468650611,
+   "per_pair": {
+    "xes3g5m<-assistments2012": {
+     "n_shared": 147,
+     "b_other": 0.3553392722227716,
+     "b_prox": 0.31869286713988926
+    },
+    "xes3g5m<-eedi": {
+     "n_shared": 344,
+     "b_other": 0.18234455316797232,
+     "b_prox": 0.3838940849186379
+    },
+    "xes3g5m<-junyi2020": {
+     "n_shared": 738,
+     "b_other": 0.030848167881989408,
+     "b_prox": 0.303623526872374
+    },
+    "assistments2012<-xes3g5m": {
+     "n_shared": 147,
+     "b_other": 0.24944404464395703,
+     "b_prox": 0.3587585202030605
+    },
+    "assistments2012<-eedi": {
+     "n_shared": 734,
+     "b_other": 0.20063185041093684,
+     "b_prox": 0.24238894111811657
+    },
+    "assistments2012<-junyi2020": {
+     "n_shared": 702,
+     "b_other": 0.13358866640925748,
+     "b_prox": 0.2992896674034027
+    },
+    "eedi<-xes3g5m": {
+     "n_shared": 344,
+     "b_other": 0.07616969740316548,
+     "b_prox": 0.5960318993255252
+    },
+    "eedi<-assistments2012": {
+     "n_shared": 734,
+     "b_other": 0.13951721441313747,
+     "b_prox": 0.6665318394566514
+    },
+    "eedi<-junyi2020": {
+     "n_shared": 1290,
+     "b_other": 0.14088116777533366,
+     "b_prox": 0.5161524761158433
+    },
+    "junyi2020<-xes3g5m": {
+     "n_shared": 738,
+     "b_other": 0.007007617767507052,
+     "b_prox": 0.20892546925518662
+    },
+    "junyi2020<-assistments2012": {
+     "n_shared": 702,
+     "b_other": 0.15330996760995386,
+     "b_prox": 0.268621806813748
+    },
+    "junyi2020<-eedi": {
+     "n_shared": 1290,
+     "b_other": 0.1969070769644346,
+     "b_prox": 0.1612758993473638
+    }
+   },
+   "order_discordance": {
+    "xes3g5m<-assistments2012": {
+     "discordant_n": 43,
+     "discordant_rho": 0.07988523104802174,
+     "concordant_n": 104,
+     "concordant_rho": 0.42556278672783526
+    },
+    "xes3g5m<-eedi": {
+     "discordant_n": 76,
+     "discordant_rho": 0.14966507177033492,
+     "concordant_n": 268,
+     "concordant_rho": 0.14525384854683185
+    },
+    "xes3g5m<-junyi2020": {
+     "discordant_n": 172,
+     "discordant_rho": -0.10140959334753068,
+     "concordant_n": 566,
+     "concordant_rho": 0.07004335351688303
+    },
+    "assistments2012<-xes3g5m": {
+     "discordant_n": 43,
+     "discordant_rho": 0.07988523104802174,
+     "concordant_n": 104,
+     "concordant_rho": 0.42556278672783526
+    },
+    "assistments2012<-eedi": {
+     "discordant_n": 42,
+     "discordant_rho": 0.2694271128757799,
+     "concordant_n": 692,
+     "concordant_rho": 0.25832368167762126
+    },
+    "assistments2012<-junyi2020": {
+     "discordant_n": 67,
+     "discordant_rho": 0.2200494851943491,
+     "concordant_n": 635,
+     "concordant_rho": 0.17337002343786248
+    },
+    "eedi<-xes3g5m": {
+     "discordant_n": 76,
+     "discordant_rho": 0.14966507177033492,
+     "concordant_n": 268,
+     "concordant_rho": 0.14525384854683185
+    },
+    "eedi<-assistments2012": {
+     "discordant_n": 42,
+     "discordant_rho": 0.2694271128757799,
+     "concordant_n": 692,
+     "concordant_rho": 0.25832368167762126
+    },
+    "eedi<-junyi2020": {
+     "discordant_n": 73,
+     "discordant_rho": 0.11964704430457855,
+     "concordant_n": 1217,
+     "concordant_rho": 0.25524617999181504
+    },
+    "junyi2020<-xes3g5m": {
+     "discordant_n": 172,
+     "discordant_rho": -0.10140959334753068,
+     "concordant_n": 566,
+     "concordant_rho": 0.07004335351688303
+    },
+    "junyi2020<-assistments2012": {
+     "discordant_n": 67,
+     "discordant_rho": 0.2200494851943491,
+     "concordant_n": 635,
+     "concordant_rho": 0.17337002343786248
+    },
+    "junyi2020<-eedi": {
+     "discordant_n": 73,
+     "discordant_rho": 0.11964704430457855,
+     "concordant_n": 1217,
+     "concordant_rho": 0.25524617999181504
+    }
+   }
+  }
+ },
+ "verdict": "CORE AND CULTURAL"
+}

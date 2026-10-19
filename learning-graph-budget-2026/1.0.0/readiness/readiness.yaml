@@ -1,0 +1,77 @@
+# Publication readiness for learning-graph-budget-2026 1.0.0 (Paper II; was Paper 1).
+# From 2026-10-07 the article is research/article/what-learner-records-can-say-about-a-prerequisite-edge.md,
+# which merges Papers 1 and 2; the audits below predate it and the 2026-10-06 headline correction, so a
+# fresh scope audit and reproduction are due on the first complete draft. See
+# docs/specs/PUBLICATION-READINESS.md. Agents never sign explain_back or waive a review.
+release: learning-graph-budget-2026
+version: 1.0.0
+scope_audit: {date: 2026-10-14, by: agent, report: scope-audit-verify-2026-10-14g.md, open_findings: 0, audited_commit: 322a8635324ea6d28535765efa675099e5cd630f}
+# The scope audit of 0db3702 (scope-audit-2026-10-14b.md, AA1-AA7) and its verification chain (verify c, d, e, f,
+# g; corrections-9 to -14) end at 0 open. Earlier record: {date: 2026-09-25, report: scope-audit.md, open_findings: 0}.
+# 2026-10-13 verification audits of Paper II (not yet a passing scope audit; each answered by a corrections file):
+#   scope-audit-verify-2026-10-13.md (b40b0e9, V1-V10, corrections-3.md);
+#   scope-audit-verify2-2026-10-13.md (3a17acb, W1-W18, corrections-4.md).
+reproduction: {date: 2026-10-14, by: agent, report: reproduction-2026-10-14.md, unexplained_mismatches: 0, audited_commit: 0db370283f6cbc4ccf34745007753f2edae2aadd}
+# Follow-up of reproduction-2026-10-13.md (full run of b40b0e9: 161 steps, 0 unexplained, 15 explained). Earlier
+# record: {date: 2026-09-25, report: reproduction.md, unexplained_mismatches: 0}.
+# 2026-10-05 follow-up (reproduction.md, last section): #1, #16 and #46 MATCH; #41 AUC recomputed from recorded
+# model outputs (clustered CI not recomputable); #18 committed, not rerunnable without Ego-Exo4D keys;
+# #23 resolved in text (12 of 13); #16 MATCH (22 GB stream, hashes equal the registry); #33 and #38 not
+# reproducible, recommended cut from Paper II.
+reproduction_followup: {date: 2026-10-05, by: agent, report: reproduction.md, not_reproduced_open: [33, 38], recommend_cut: [33, 38, 41]}
+precedence: {date: 2026-09-25, by: agent, report: scope-audit.md}
+specialist_reviews:
+  # Questions from the scope audit and ../reviewer-packets/ that Paper II's text answers. Status moves to
+  # done when the reviewer returns the form; only the maintainer may waive. Optional: they attach after
+  # publication. A8, A15 and A13 (Paper 1's twins, typology and completeness) moved 2026-10-15 to
+  # research/holding/paper-1/specialist-reviews.yaml.
+  - {claim: "IITA against the fixed-margins null recovers ability and difficulty, not dependency (A7)", role: psychometrician, status: requested}
+  - {claim: "positivity decided share as a corpus property under guessing and slips", role: psychometrician, status: requested}
+  - {claim: "ability stratification for the mastery-release contrast (S5)", role: psychometrician, status: requested}
+  - {claim: "conjunctive interaction scale and null", role: psychometrician, status: requested}
+  - {claim: "an observed, powered merge node as the standard for a null (A5, C1)", role: causal-inference, status: requested, note: "no causal-inference reviewer yet"}
+disclosure: {section: "AI use (written by the maintainer, David Porcaro; placed verbatim by the agent 2026-10-13)", present: true}
+explain_back: {signed_by: "human:david-porcaro", date: "2026-10-15"}
+cooling_off:
+  # 2026-09-25: RDD relabelled; degree rule 0.81/0.68 -> 0.80/0.67; twin count given without recipes.
+  # 2026-09-25: scope-audit revision: existence restated as two limits (positivity; merge-node power);
+  # completeness table rerun with matched estimands (under-reporting withdrawn); direction and
+  # extraneous-capability headlines narrowed; motifs moved to limitations.
+  # 2026-10-05: item-tree headline narrowed (IITA-DENSE, IITA-PAIRSCAN): 'finds no dependency beyond ability
+  # and difficulty' -> the count statistic sees none and could not have seen one; pairwise dependence beyond one
+  # trait in 8 of 15 XES3G5M sets (wording in studies/identifiability/learning-structure/RESULTS-IITA-REAL.md).
+  # 2026-10-06: section 5.3 frequency triage AUC 0.677 [0.518, 0.823] -> 0.577 [0.418, 0.731] after a
+  # re-run under the strict matcher (studies/producers/pipeline/rerun-2026-10-05/); now "no better than
+  # chance". "Two authored capabilities in no run" unchanged.
+  # 2026-10-06: open question 3 has its first data. Abstract, section 5.3, 6.3, 6.4 and Appendix A
+  # report three blind human decompositions (kappa -0.20 vs 0.66 for model runs; barely overlapping;
+  # proposals unjudged; no completeness estimate) in place of "being collected".
+  # 2026-10-08: section 5.3 (Table 9, the RQ3 answer, 7.2): the ds1190 fraction-order swap's d -0.43
+  # [-0.93, +0.10], UNINFORMATIVE, withdrawn. Its scorer read the logged problem statement (5 given
+  # steps, always "correct") and an ungraded confidence rating as answers; the registered re-analysis
+  # (order-trials-reanalysis/patel_order.py) fails on the same logging. Delay corrected to a median
+  # 3.98 days after the last practice (was "3 to 6 days").
+  # 2026-10-08 (later): Table 9's ds1190 row replaced by the registered, non-blind answers-only scoring
+  # (patel_answers.py): MA - AM +0.089 [-0.025, +0.203], UNINFORMATIVE (BELOW FLOOR); reproduces the
+  # authors' 0.70/0.78 on the delayed test's trained items. RQ3 answer and 7.2 follow.
+  # 2026-10-13: RQ1's headline replaced after scope-audit finding F1 and the empty-cell study
+  # (studies/identifiability/empty-cell/): "where a platform sets the order, almost no pair is decided" ->
+  # most pairs share too few learners; where covered, a uniform order hides only the reverse direction;
+  # readable identifying cells hold tens of learners where 277-379 per group are needed; supported
+  # verdicts are mostly general ability (9.2%-27.6% survive an adjustment). Abstract, Table 1 (Junyi now
+  # at its exercises), 5.1, the RQ1 answer, 6.1, 6.6, implications, 7.1, 7.3 and 8 follow. Also F2, F3,
+  # F7 narrowed (corrections-1.md) and the RQ4 answer's deep-model UNANSWERABLE (5.4).
+  # 2026-10-13 (later): verification audit V1-V10 (corrections-3.md). V1, V2 narrow the Abstract, RQ1
+  # answer and Conclusion: supported edges "did not survive an adjustment for general ability" rather than
+  # "mostly reflect" it; randomized release no longer said to supply the numbers. No number changes.
+  # 2026-10-13 (latest): second verification audit W1-W18 (corrections-4.md). W5: the Conclusion's last
+  # sentence no longer says learners were "never allowed to go without" a prerequisite. Discussion
+  # corrected (W1-W4, W6-W17); Table 16 shows both effect sizes. No number or verdict changes.
+  # 2026-10-14: scope audit Z1-Z17 (corrections-7.md). Abstract, RQ1/RQ3/RQ4 answers and Conclusion
+  # reworded: edges and grade order agree or improve "by less than the bar" (intervals exclude zero);
+  # the grade map is named as unchecked; "supported verdicts"; "rarely a finding". No number changes.
+  # 2026-10-14 (later): reproduction follow-up (corrections-8.md). Abstract's ASSISTments grade-order excess
+  # +0.0118 -> +0.0117 [+0.0054, +0.0181] on the hashed extract; 5.2's random control re-read as a mean of 50
+  # draws (post hoc; verdicts as published). Verdicts unchanged.
+  last_headline_correction: 2026-10-14
+  last_headline_correction_commit: 5e74d15b4bac1b617be1a0ee56ed8b44c7713435

@@ -1,0 +1,43 @@
+{
+  "seed": 20260922,
+  "items": 30,
+  "draws": 1000,
+  "min_power": 0.5,
+  "floor_share": 0.05,
+  "verdict": null,
+  "arms": {
+    "ednet": {
+      "corpus": "ednet",
+      "learners": 8000,
+      "items": 30,
+      "n_triples": 11298,
+      "background": 0.06470588235294117,
+      "background_pairs": 825,
+      "fixed_bar": 0.1,
+      "null_ratio": 0.9982060672204578,
+      "null_accepted": true,
+      "null_mean": -0.0007607540322719334,
+      "power": {
+        "0.0647": {
+          "detected": 1694,
+          "of": 45192,
+          "rate": 0.03748451053283767
+        },
+        "0.2": {
+          "detected": 29088,
+          "of": 45192,
+          "rate": 0.6436537440254912
+        },
+        "0.4": {
+          "detected": 44775,
+          "of": 45192,
+          "rate": 0.9907727031332979
+        }
+      },
+      "power_at_own_bar": 0.03748451053283767,
+      "power_at_fixed_bar": 0.11752080014161799,
+      "readable_own": false,
+      "readable_fixed": false
+    }
+  }
+}

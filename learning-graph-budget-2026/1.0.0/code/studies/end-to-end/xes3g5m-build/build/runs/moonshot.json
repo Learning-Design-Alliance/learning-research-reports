@@ -1,0 +1,815 @@
+{
+ "family": "moonshot",
+ "requested_slug": "moonshotai/kimi-k2.6",
+ "served_model": "moonshotai/kimi-k2.6",
+ "provider": "Inceptron",
+ "timestamp_utc": "2026-09-26T05:44:19Z",
+ "usage": {
+  "prompt_tokens": 15807,
+  "completion_tokens": 20191,
+  "total_tokens": 35998,
+  "cost": 0.0551230508,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0551230508,
+   "upstream_inference_prompt_cost": 0.0068665608,
+   "upstream_inference_completions_cost": 0.04825649
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 16458,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "sample_question_ids": [
+  "4783",
+  "3497",
+  "843",
+  "5711",
+  "2872",
+  "3191",
+  "3768",
+  "3922",
+  "1113",
+  "367",
+  "5749",
+  "1946",
+  "2476",
+  "4479",
+  "4103",
+  "5696",
+  "1674",
+  "6676",
+  "4676",
+  "634",
+  "2746",
+  "6362",
+  "1381",
+  "1545",
+  "5342",
+  "1512",
+  "5267",
+  "334",
+  "5856",
+  "5381",
+  "7165",
+  "3592",
+  "6996",
+  "3033",
+  "3249",
+  "4037",
+  "6533",
+  "6187",
+  "6564",
+  "233",
+  "3179",
+  "4928",
+  "4740",
+  "5352",
+  "4640",
+  "7561",
+  "2786",
+  "4727",
+  "3188",
+  "422",
+  "7130",
+  "1699",
+  "1386",
+  "4795",
+  "6887",
+  "5070",
+  "5585",
+  "5140",
+  "5103",
+  "308",
+  "2031",
+  "481",
+  "5576",
+  "4581",
+  "6721",
+  "6056",
+  "7094",
+  "4196",
+  "7219",
+  "3337",
+  "97",
+  "63",
+  "316",
+  "6469",
+  "6871",
+  "4138",
+  "5106",
+  "4921",
+  "4386",
+  "6622",
+  "6060",
+  "5671",
+  "1835",
+  "4951",
+  "93",
+  "4198",
+  "4730",
+  "3172",
+  "5744",
+  "5656",
+  "6098",
+  "3177",
+  "754",
+  "4270",
+  "6411",
+  "5591",
+  "6377",
+  "5533",
+  "5677",
+  "3745",
+  "2460",
+  "7338",
+  "6596",
+  "5885",
+  "6279",
+  "862",
+  "4329",
+  "3418",
+  "5230",
+  "5316",
+  "414",
+  "966",
+  "490",
+  "4284",
+  "2896",
+  "3910",
+  "5943",
+  "1535",
+  "107",
+  "2983"
+ ],
+ "prompt_sha256": "6ce26ee42813ff29727158c214b57cf382fc8479bdba77150e93474e22d48f14",
+ "capabilities": [
+  {
+   "name": "Round-and-group integer addition/subtraction",
+   "name_zh": "整数加减凑整巧算",
+   "description": "Learner can simplify integer addition and subtraction by rounding to tens or hundreds and rearranging terms.",
+   "terminal": false
+  },
+  {
+   "name": "Move terms with signs in mixed operations",
+   "name_zh": "加减混合带符号搬家",
+   "description": "Learner can reorder mixed addition and subtraction by moving each term with its sign.",
+   "terminal": false
+  },
+  {
+   "name": "Benchmark-number summation",
+   "name_zh": "基准数法求和",
+   "description": "Learner can sum a set of close numbers by choosing a benchmark and compensating for differences.",
+   "terminal": false
+  },
+  {
+   "name": "Arithmetic series sum",
+   "name_zh": "等差数列求和",
+   "description": "Learner can calculate the sum of an arithmetic sequence by pairing first with last or applying the formula.",
+   "terminal": false
+  },
+  {
+   "name": "Arithmetic series nth term and count",
+   "name_zh": "等差数列项数与第n项",
+   "description": "Learner can find the nth term or the number of terms given the first term, last term, and common difference.",
+   "terminal": false
+  },
+  {
+   "name": "Distributive law forward application",
+   "name_zh": "乘法分配律正向展开",
+   "description": "Learner can expand expressions of the form a×(b±c) and compute the result efficiently.",
+   "terminal": false
+  },
+  {
+   "name": "Factor out common terms",
+   "name_zh": "提取公因数巧算",
+   "description": "Learner can factor a common multiplier out of a sum of products to create an easier calculation.",
+   "terminal": false
+  },
+  {
+   "name": "Special-product multiplication patterns",
+   "name_zh": "特殊数乘法速算",
+   "description": "Learner can multiply by 11, 101, or similar numbers using observed place-value patterns.",
+   "terminal": false
+  },
+  {
+   "name": "Friend-pair multiplication chaining",
+   "name_zh": "好朋友配对连乘",
+   "description": "Learner can chain multiplications using complement pairs such as 4×25 and 8×125 for quick mental math.",
+   "terminal": false
+  },
+  {
+   "name": "Decompose divisor for successive division",
+   "name_zh": "除数分解与连除性质",
+   "description": "Learner can rewrite division by a composite number as successive divisions by its factors.",
+   "terminal": false
+  },
+  {
+   "name": "Compensate dividend and divisor",
+   "name_zh": "商不变性质巧算",
+   "description": "Learner can multiply or divide both dividend and divisor by the same number to create an easier division.",
+   "terminal": false
+  },
+  {
+   "name": "Add/remove parentheses in mixed multiplication/division",
+   "name_zh": "乘除混合去添括号",
+   "description": "Learner can strategically add or remove parentheses in mixed multiplication and division to simplify.",
+   "terminal": false
+  },
+  {
+   "name": "Decimal addition and subtraction",
+   "name_zh": "小数加减法计算",
+   "description": "Learner can accurately add and subtract decimal numbers using vertical alignment.",
+   "terminal": false
+  },
+  {
+   "name": "Page-number digit counting",
+   "name_zh": "页码数字计数",
+   "description": "Learner can count the total number of digits used to print consecutive page numbers from 1 to N.",
+   "terminal": false
+  },
+  {
+   "name": "Adjacent area unit conversion",
+   "name_zh": "相邻面积单位换算",
+   "description": "Learner can convert between adjacent square units such as square meters, square decimeters, and square centimeters.",
+   "terminal": false
+  },
+  {
+   "name": "Understand fraction meaning and unit fraction",
+   "name_zh": "分数的意义与分数单位",
+   "description": "Learner can interpret a fraction as equal parts of a whole and identify its unit fraction.",
+   "terminal": false
+  },
+  {
+   "name": "Represent quantities with letters",
+   "name_zh": "用字母表示数",
+   "description": "Learner can use letters to express unknown quantities and quantitative relationships in formulas.",
+   "terminal": false
+  },
+  {
+   "name": "Evaluate algebraic expressions",
+   "name_zh": "代入求值",
+   "description": "Learner can substitute given numerical values for letters and evaluate the resulting expression.",
+   "terminal": false
+  },
+  {
+   "name": "Solve simple linear equations",
+   "name_zh": "解一元一次方程",
+   "description": "Learner can solve equations of the form ax+b=cx+d by correctly moving terms across the equal sign.",
+   "terminal": false
+  },
+  {
+   "name": "Draw line-segment diagrams for multiples",
+   "name_zh": "画线段图表示倍数关系",
+   "description": "Learner can draw a standard line-segment diagram to visualize sum, difference, or multiple relationships in a problem.",
+   "terminal": false
+  },
+  {
+   "name": "Basic sum-multiple problems",
+   "name_zh": "基本和倍问题",
+   "description": "Learner can solve word problems where the sum of two quantities and an exact integer multiple relation are given.",
+   "terminal": false
+  },
+  {
+   "name": "Sum-multiple with remainder",
+   "name_zh": "和倍余量问题（几倍多/少几）",
+   "description": "Learner can solve sum-multiple problems where one quantity is a multiple plus or minus a fixed remainder.",
+   "terminal": false
+  },
+  {
+   "name": "Hidden-sum sum-multiple problems",
+   "name_zh": "和倍暗和问题",
+   "description": "Learner can identify and solve sum-multiple problems where the total must be inferred from implicit conditions.",
+   "terminal": false
+  },
+  {
+   "name": "Recognise sum-multiple vs difference-multiple",
+   "name_zh": "识别和倍与差倍题型",
+   "description": "Learner can read a word problem and decide whether it calls for a sum-multiple or a difference-multiple model.",
+   "terminal": false
+  },
+  {
+   "name": "Basic difference-multiple problems",
+   "name_zh": "基本差倍问题",
+   "description": "Learner can solve word problems where the difference and a multiple relation between two quantities are known.",
+   "terminal": false
+  },
+  {
+   "name": "Difference-multiple with hidden difference",
+   "name_zh": "差倍暗差问题",
+   "description": "Learner can solve difference-multiple problems where the difference must be derived from transfer or change conditions.",
+   "terminal": false
+  },
+  {
+   "name": "Basic sum-difference problems",
+   "name_zh": "基本和差问题",
+   "description": "Learner can solve word problems where both the sum and the difference of two quantities are given.",
+   "terminal": false
+  },
+  {
+   "name": "Integrated sum-difference-multiple problems",
+   "name_zh": "综合和差倍分应用题",
+   "description": "Learner can solve complex word problems that combine sum, difference, and multiple relations in a single scenario.",
+   "terminal": true
+  },
+  {
+   "name": "Basic age problems with invariant difference",
+   "name_zh": "基本年龄问题（差不变）",
+   "description": "Learner can solve age problems by applying sum-multiple or difference-multiple models while using the constant age difference.",
+   "terminal": false
+  },
+  {
+   "name": "Age timeline 'when A was B's age' problems",
+   "name_zh": "年龄轴当...时问题",
+   "description": "Learner can solve age problems involving the phrase 'when A was B's current age' by constructing a timeline diagram.",
+   "terminal": false
+  },
+  {
+   "name": "Cross-time age-sum problems",
+   "name_zh": "年龄跨时段综合问题",
+   "description": "Learner can solve age problems that provide sums or multiples at past or future moments and relate them to present ages.",
+   "terminal": false
+  },
+  {
+   "name": "Integrated age and multiple problems",
+   "name_zh": "综合年龄与和差倍问题",
+   "description": "Learner can solve complex age problems that require combining multiple models and hidden conditions.",
+   "terminal": true
+  },
+  {
+   "name": "Single-step reverse reasoning",
+   "name_zh": "单步还原问题",
+   "description": "Learner can determine an original number from the result of a single inverse operation.",
+   "terminal": false
+  },
+  {
+   "name": "Multi-step reverse reasoning",
+   "name_zh": "多步还原逆推",
+   "description": "Learner can work backwards through a chain of operations to recover the starting value.",
+   "terminal": false
+  },
+  {
+   "name": "Reverse problems with half more/less",
+   "name_zh": "还原问题中的一半多/少几",
+   "description": "Learner can reverse problems stated as taking half of a remainder and then adding or subtracting a number.",
+   "terminal": false
+  },
+  {
+   "name": "Reverse problems with cost/remaining structure",
+   "name_zh": "还原问题中的花费与剩余",
+   "description": "Learner can reverse real-world spending sequences that include fixed costs and fractional remainders.",
+   "terminal": false
+  },
+  {
+   "name": "Basic Chicken-Rabbit by assumption",
+   "name_zh": "假设法解基本鸡兔同笼",
+   "description": "Learner can solve classic head-and-leg Chicken-Rabbit problems using the assumption method.",
+   "terminal": false
+  },
+  {
+   "name": "Value-type Chicken-Rabbit problems",
+   "name_zh": "假设法解价值型鸡兔同笼",
+   "description": "Learner can solve assumption-method problems involving total monetary value or points rather than legs.",
+   "terminal": false
+  },
+  {
+   "name": "Basic excess-shortage problems",
+   "name_zh": "基本盈亏问题",
+   "description": "Learner can solve distribution problems that yield one excess and one shortage by comparing the two scenarios.",
+   "terminal": false
+  },
+  {
+   "name": "Advanced excess-shortage variants",
+   "name_zh": "盈亏问题进阶变型",
+   "description": "Learner can solve double-excess, double-shortage, and unit-quantity-change variants of profit-loss problems.",
+   "terminal": false
+  },
+  {
+   "name": "Average and total interconversion",
+   "name_zh": "平均数与总数互化",
+   "description": "Learner can compute an average from a total and count, and reconstruct a total from a known average.",
+   "terminal": false
+  },
+  {
+   "name": "Move-more-to-less average diagram",
+   "name_zh": "平均数移多补少图解",
+   "description": "Learner can use the move-more-to-less diagram to relate individual values to the overall average.",
+   "terminal": false
+  },
+  {
+   "name": "Two-group average to find count",
+   "name_zh": "两组平均数求数量",
+   "description": "Learner can find the number of members in each group given the overall average and each group's separate average.",
+   "terminal": false
+  },
+  {
+   "name": "Weighted average with changing members",
+   "name_zh": "加权平均与人员变动",
+   "description": "Learner can solve average problems where adding or removing a member changes the overall mean.",
+   "terminal": false
+  },
+  {
+   "name": "Tree-planting on open routes",
+   "name_zh": "直线型植树问题",
+   "description": "Learner can solve interval problems on open segments for all three endpoint configurations.",
+   "terminal": false
+  },
+  {
+   "name": "Tree-planting on closed routes",
+   "name_zh": "环形植树与封闭间隔",
+   "description": "Learner can solve interval problems on closed loops where the number of intervals equals the number of points.",
+   "terminal": false
+  },
+  {
+   "name": "Sawing and stair-climbing intervals",
+   "name_zh": "锯木头与爬楼梯间隔",
+   "description": "Learner can apply interval logic to count cuts, segments, or stairs in practical tasks.",
+   "terminal": false
+  },
+  {
+   "name": "Queue and line spacing problems",
+   "name_zh": "队列长度与间隔问题",
+   "description": "Learner can calculate the length of a queue or the spacing between arranged objects.",
+   "terminal": false
+  },
+  {
+   "name": "Basic meeting problems",
+   "name_zh": "相遇问题基本量互求",
+   "description": "Learner can calculate speed, time, or distance in a two-object meeting scenario moving in opposite directions.",
+   "terminal": false
+  },
+  {
+   "name": "Basic chasing problems",
+   "name_zh": "追及问题基本量互求",
+   "description": "Learner can calculate speed, time, or distance in a two-object chasing scenario moving in the same direction.",
+   "terminal": false
+  },
+  {
+   "name": "Queue relative-motion problems",
+   "name_zh": "队列相对运动问题",
+   "description": "Learner can solve queue-length problems that combine meeting and chasing relative motion.",
+   "terminal": false
+  },
+  {
+   "name": "Two-set inclusion-exclusion",
+   "name_zh": "二元容斥原理",
+   "description": "Learner can apply the inclusion-exclusion formula for two sets and account for a possible neither region.",
+   "terminal": false
+  },
+  {
+   "name": "Three-set inclusion-exclusion",
+   "name_zh": "三元容斥原理与韦恩图",
+   "description": "Learner can apply the inclusion-exclusion formula for three sets and interpret a three-circle Venn diagram.",
+   "terminal": false
+  },
+  {
+   "name": "Inclusion-exclusion with explicit neither",
+   "name_zh": "容斥与都不参加综合",
+   "description": "Learner can solve inclusion-exclusion problems that include a count of elements outside all sets.",
+   "terminal": false
+  },
+  {
+   "name": "Find cycle and remainder in periodic problems",
+   "name_zh": "周期问题找规律与余数",
+   "description": "Learner can identify the repeating cycle in a sequence or action and use remainders to predict states.",
+   "terminal": false
+  },
+  {
+   "name": "Calendar spanning-month weekday calculation",
+   "name_zh": "跨月日期与星期推算",
+   "description": "Learner can calculate the number of days between dates across months and determine the resulting weekday.",
+   "terminal": false
+  },
+  {
+   "name": "Integrated periodic and calendar problems",
+   "name_zh": "综合周期与日期问题",
+   "description": "Learner can solve complex problems combining periodic cycles with calendar arithmetic and finger-counting patterns.",
+   "terminal": true
+  },
+  {
+   "name": "Count line segments and angles",
+   "name_zh": "数线段与数角",
+   "description": "Learner can count line segments or angles in a figure by sequential addition from a common vertex.",
+   "terminal": false
+  },
+  {
+   "name": "Single-layer triangle counting",
+   "name_zh": "单层三角形计数",
+   "description": "Learner can count triangles in a single-layer figure by analyzing bases on one line.",
+   "terminal": false
+  },
+  {
+   "name": "Add-line method for triangle counting",
+   "name_zh": "添线法数三角形",
+   "description": "Learner can count triangles in composite figures by adding the contribution of each newly added line.",
+   "terminal": false
+  },
+  {
+   "name": "Count rectangles in grid",
+   "name_zh": "网格中数长方形",
+   "description": "Learner can count rectangles in a rectangular grid by multiplying horizontal and vertical segment counts.",
+   "terminal": false
+  },
+  {
+   "name": "Count squares in regular grid",
+   "name_zh": "规则图形数正方形",
+   "description": "Learner can count squares of all sizes in a regular grid by summing layerwise counts.",
+   "terminal": false
+  },
+  {
+   "name": "Count squares in irregular/overlapping shapes",
+   "name_zh": "不规则与重叠图形数正方形",
+   "description": "Learner can count squares in irregular or overlapping figures using decomposition and inclusion-exclusion.",
+   "terminal": false
+  },
+  {
+   "name": "Systematic enumeration by dictionary order",
+   "name_zh": "字典排列法有序枚举",
+   "description": "Learner can enumerate partitions or combinations in non-decreasing dictionary order without omission.",
+   "terminal": false
+  },
+  {
+   "name": "Addition principle by classification",
+   "name_zh": "加法原理分类计数",
+   "description": "Learner can partition a set of possibilities into mutually exclusive classes and sum their counts.",
+   "terminal": false
+  },
+  {
+   "name": "Multiplication principle by steps",
+   "name_zh": "乘法原理分步计数",
+   "description": "Learner can break a counting task into independent sequential steps and multiply their counts.",
+   "terminal": false
+  },
+  {
+   "name": "Recognise order and repetition constraints",
+   "name_zh": "识别计数问题中的有序与可重",
+   "description": "Learner can read a counting problem and determine whether order matters and whether repetition is allowed.",
+   "terminal": false
+  },
+  {
+   "name": "Arrangements with repeated digits allowed",
+   "name_zh": "可重复数字的排列",
+   "description": "Learner can count numbers or codes formed from digits when repetition is permitted.",
+   "terminal": false
+  },
+  {
+   "name": "Permutations without repeated digits",
+   "name_zh": "无重复数字的排列",
+   "description": "Learner can count numbers or arrangements formed from digits when no repetition is allowed.",
+   "terminal": false
+  },
+  {
+   "name": "Tree-diagram enumeration with adjacency constraints",
+   "name_zh": "树形图枚举相邻限制",
+   "description": "Learner can use tree diagrams to count sequences with restrictions such as adjacent items being different.",
+   "terminal": false
+  },
+  {
+   "name": "Additive numbering for shortest paths",
+   "name_zh": "标数法求最短路线",
+   "description": "Learner can count shortest paths on a grid by labelling each intersection with the number of ways to reach it.",
+   "terminal": false
+  },
+  {
+   "name": "Transform real map to point-line graph",
+   "name_zh": "实物图转化为点线图",
+   "description": "Learner can convert a floorplan or map into a graph of points and lines to analyze traversals.",
+   "terminal": false
+  },
+  {
+   "name": "Euler-path feasibility by odd vertices",
+   "name_zh": "奇点个数与一笔画判断",
+   "description": "Learner can count odd vertices to determine whether a connected graph can be drawn in one continuous stroke.",
+   "terminal": false
+  },
+  {
+   "name": "Maximum lines through points",
+   "name_zh": "平面点确定最多直线数",
+   "description": "Learner can determine the maximum number of lines determined by N points with no three collinear.",
+   "terminal": false
+  },
+  {
+   "name": "Partition integer into distinct piles",
+   "name_zh": "整数拆分成不同堆枚举",
+   "description": "Learner can enumerate ways to split an integer into a specified number of distinct positive summands.",
+   "terminal": false
+  },
+  {
+   "name": "Distribute identical items to distinct people",
+   "name_zh": "相同物品分给不同人枚举",
+   "description": "Learner can enumerate ways to distribute identical objects to distinct recipients under constraints.",
+   "terminal": false
+  },
+  {
+   "name": "Basic parity of sum, difference, product",
+   "name_zh": "和差积基本奇偶性判定",
+   "description": "Learner can determine whether the result of an addition, subtraction, or multiplication is odd or even.",
+   "terminal": false
+  },
+  {
+   "name": "Parity of chained multiplications",
+   "name_zh": "乘法链奇偶性判定",
+   "description": "Learner can determine the parity of a product chain using the all-odd versus any-even rule.",
+   "terminal": false
+  },
+  {
+   "name": "Parity invariance impossibility proofs",
+   "name_zh": "奇偶不变量证明不可能",
+   "description": "Learner can use parity invariants to prove that certain end states are impossible in operation games.",
+   "terminal": false
+  },
+  {
+   "name": "Parity analysis in coin-flipping games",
+   "name_zh": "奇偶分析操作游戏",
+   "description": "Learner can apply parity analysis to state-changing games such as flipping coins or hats.",
+   "terminal": false
+  },
+  {
+   "name": "Insert operators by reverse reasoning",
+   "name_zh": "逆推法填算符",
+   "description": "Learner can insert operators and parentheses into short expressions by working backwards from the target result.",
+   "terminal": false
+  },
+  {
+   "name": "Insert operators in long digit strings by target approximation",
+   "name_zh": "长串数字凑目标算符",
+   "description": "Learner can construct a value near the target in a long uniform-digit expression and adjust with remaining digits.",
+   "terminal": false
+  },
+  {
+   "name": "Correct addition/subtraction errors by place value",
+   "name_zh": "错中求解加减法",
+   "description": "Learner can determine the correct result or misread digit by analyzing how place-value errors affect the sum.",
+   "terminal": false
+  },
+  {
+   "name": "Matchstick digit optimization",
+   "name_zh": "火柴棍数字最值问题",
+   "description": "Learner can rearrange matchstick digits to maximize or minimize a sum under digit-uniqueness constraints.",
+   "terminal": false
+  },
+  {
+   "name": "Nonogram logic deduction",
+   "name_zh": "方格逻辑绘图（数织）",
+   "description": "Learner can deduce black-and-white cell placements from row and column run-length clues.",
+   "terminal": false
+  },
+  {
+   "name": "Rectangle and square perimeter formulas",
+   "name_zh": "长方形与正方形周长公式",
+   "description": "Learner can compute the perimeter of rectangles and squares using standard formulas.",
+   "terminal": false
+  },
+  {
+   "name": "Translation method for irregular perimeters",
+   "name_zh": "平移法求不规则图形周长",
+   "description": "Learner can translate protruding segments to form a bounding rectangle and compute the resulting perimeter.",
+   "terminal": false
+  },
+  {
+   "name": "Deduce perimeter from length-plus-width sum",
+   "name_zh": "已知长加宽求周长",
+   "description": "Learner can compute a rectangle's perimeter when only the sum of one length and one width is provided.",
+   "terminal": false
+  },
+  {
+   "name": "Rectangle and square area formulas",
+   "name_zh": "长方形与正方形面积公式",
+   "description": "Learner can compute the area of rectangles and squares from side lengths.",
+   "terminal": false
+  },
+  {
+   "name": "Derive side lengths from area relations",
+   "name_zh": "由面积关系求边长",
+   "description": "Learner can deduce unknown side lengths in composite figures from given areas and shared sides.",
+   "terminal": false
+  },
+  {
+   "name": "Composite rectangle area puzzles",
+   "name_zh": "长方形拼图与已知区域求未知",
+   "description": "Learner can solve area puzzles where a large rectangle is partitioned into smaller rectangles and a square.",
+   "terminal": false
+  },
+  {
+   "name": "Shaded area of overlapping strips",
+   "name_zh": "重叠长条阴影面积",
+   "description": "Learner can calculate the shaded area formed by overlapping parallel strips using inclusion-exclusion or translation.",
+   "terminal": false
+  },
+  {
+   "name": "Parallelogram area via base and height",
+   "name_zh": "平行四边形面积公式",
+   "description": "Learner can calculate the area of a parallelogram using base multiplied by the corresponding height.",
+   "terminal": false
+  },
+  {
+   "name": "Perpendicular-diagonal quadrilateral area",
+   "name_zh": "对角线垂直四边形面积",
+   "description": "Learner can compute the area of a quadrilateral with perpendicular diagonals as half the product of the diagonals.",
+   "terminal": false
+  },
+  {
+   "name": "Rhombus area and perimeter interconversion",
+   "name_zh": "菱形面积与周长互求",
+   "description": "Learner can find the side length or perimeter of a rhombus given its area and a height or diagonal length.",
+   "terminal": false
+  },
+  {
+   "name": "Integrated plane geometry measurement",
+   "name_zh": "综合平面几何度量问题",
+   "description": "Learner can solve complex geometry problems that require combining perimeter, area, translation, and derived formulas.",
+   "terminal": true
+  },
+  {
+   "name": "Set up equations for word problems",
+   "name_zh": "列方程解应用题",
+   "description": "Learner can translate a word problem into a simple equation and solve for the unknown.",
+   "terminal": false
+  },
+  {
+   "name": "Recognise problem type among sum/difference/multiple models",
+   "name_zh": "识别和差倍应用题类型",
+   "description": "Learner can read a word problem and identify which of the sum-difference-multiple models applies before selecting a method.",
+   "terminal": false
+  },
+  {
+   "name": "Recognise geometry strategy: translation vs direct formula",
+   "name_zh": "识别几何解题策略（平移或直接公式）",
+   "description": "Learner can inspect a composite shape and decide whether to use segment translation or direct formula application.",
+   "terminal": false
+  },
+  {
+   "name": "Recognise operator-insertion strategy",
+   "name_zh": "识别填算符解题策略",
+   "description": "Learner can inspect an operator-insertion problem and choose between reverse reasoning, target approximation, or trial.",
+   "terminal": false
+  },
+  {
+   "name": "Represent inclusion-exclusion data with Venn diagrams",
+   "name_zh": "用韦恩图表示容斥数据",
+   "description": "Learner can organize given set data into a two- or three-circle Venn diagram to visualize overlaps.",
+   "terminal": false
+  },
+  {
+   "name": "Represent reverse problems with flowcharts",
+   "name_zh": "用流程图表示还原问题",
+   "description": "Learner can draw a forward flowchart of operations to support systematic reverse calculation.",
+   "terminal": false
+  },
+  {
+   "name": "Check solution plausibility in word problems",
+   "name_zh": "应用题结果合理性检验",
+   "description": "Learner can verify whether a computed answer satisfies all original conditions of a word problem.",
+   "terminal": false
+  },
+  {
+   "name": "Sum-multiple with transfer and change",
+   "name_zh": "移多补少型暗和倍问题",
+   "description": "Learner can solve sum-multiple problems where quantities are transferred and the sum changes implicitly.",
+   "terminal": false
+  },
+  {
+   "name": "Age problem with sum at different epochs",
+   "name_zh": "不同时间点年龄和差倍问题",
+   "description": "Learner can solve age problems where the sum of ages is given at a past or future time and relate it to the present.",
+   "terminal": false
+  },
+  {
+   "name": "Interval problem with explicit end-point cases",
+   "name_zh": "植树问题两端情况辨析",
+   "description": "Learner can distinguish whether an interval problem includes points at both ends, one end, or neither and adjust counts accordingly.",
+   "terminal": false
+  },
+  {
+   "name": "Multiplication principle with restriction handling",
+   "name_zh": "乘法原理处理限制条件",
+   "description": "Learner can apply the multiplication principle when later choices are reduced by earlier selections such as no-repetition rules.",
+   "terminal": false
+  },
+  {
+   "name": "Integrated flexible integer calculation",
+   "name_zh": "综合整数巧算",
+   "description": "Learner can fluently choose and combine rounding, factoring, distributive law, and quotient invariance to simplify complex integer expressions.",
+   "terminal": true
+  },
+  {
+   "name": "Integrated counting and combinatorics",
+   "name_zh": "综合计数问题",
+   "description": "Learner can solve complex counting problems that require combining enumeration, addition and multiplication principles, and geometric counting.",
+   "terminal": true
+  },
+  {
+   "name": "Integrated composite word problems",
+   "name_zh": "综合复杂应用题",
+   "description": "Learner can solve multi-step word problems that integrate several models such as sum-difference-multiple, age, average, reverse, Chicken-Rabbit, and interval logic.",
+   "terminal": true
+  }
+ ]
+}

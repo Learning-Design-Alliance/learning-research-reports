@@ -1,0 +1,393 @@
+{
+ "corpus": "xes3g5m",
+ "kc_model": "authored kc_routes leaf (866 KCs)",
+ "learners": 18066,
+ "units": 865,
+ "items": 7651,
+ "items_per_unit_median": 3.0,
+ "units_per_item_mean": 1.1640308456410926,
+ "multi_unit_items": 1023,
+ "census": {
+  "ordered_pairs": 747360,
+  "U": 151,
+  "U_share": 0.00020204453007921215,
+  "U_either": 288,
+  "U_either_share": 0.0003853564547206166,
+  "U_pure": 124416,
+  "U_pure_share": 0.16647398843930636,
+  "cotagged": 1528,
+  "cotagged_share": 0.00204453007921216,
+  "U_within_cotagged": 151,
+  "U_share_within_cotagged": 0.09882198952879581,
+  "units_without_pure_item": 144,
+  "units": 865
+ },
+ "qmatrix_conditions": {
+  "corpus": "xes3g5m",
+  "items": 7651,
+  "attributes": 865,
+  "mean_attrs_per_item": 1.1640308456410926,
+  "single_attribute_items": 6628,
+  "C1_complete": false,
+  "C1_attrs_isolated": 721,
+  "C2_two_identity": false,
+  "C2_attrs_isolated_twice": 498,
+  "C3_three_items": false,
+  "C3_attrs_with_3plus": 492,
+  "C4_distinct_columns": false,
+  "C4_duplicate_attrs": 7,
+  "all_hold": false
+ },
+ "timestamps": {
+  "key": "string-rank",
+  "rows_by_width": {
+   "12": 7,
+   "13": 6350428
+  }
+ },
+ "reproduction": {
+  "recomputed": {
+   "learners": 18066,
+   "items": 865,
+   "edges": 20000,
+   "readable": 4851,
+   "detect_20pt": 2398,
+   "supported": 736,
+   "contradicted": 69,
+   "unknown": 19195,
+   "contradicted_before_reachability": 412
+  },
+  "committed": {
+   "learners": 18066,
+   "items": 865,
+   "edges": 20000,
+   "readable": 4851,
+   "detect_20pt": 2398,
+   "supported": 736,
+   "contradicted": 69,
+   "unknown": 19195,
+   "contradicted_before_reachability": 412,
+   "source": "overlap/out/atlas.json"
+  },
+  "fields": {
+   "learners": [
+    18066,
+    18066,
+    true
+   ],
+   "items": [
+    865,
+    865,
+    true
+   ],
+   "edges": [
+    20000,
+    20000,
+    true
+   ],
+   "readable": [
+    4851,
+    4851,
+    true
+   ],
+   "detect_20pt": [
+    2398,
+    2398,
+    true
+   ],
+   "supported": [
+    736,
+    736,
+    true
+   ],
+   "contradicted": [
+    69,
+    69,
+    true
+   ],
+   "unknown": [
+    19195,
+    19195,
+    true
+   ],
+   "contradicted_before_reachability": [
+    412,
+    412,
+    true
+   ]
+  },
+  "reproduced_exactly": true,
+  "label": "against the committed atlas"
+ },
+ "sample": {
+  "edges": 20000,
+  "U": 2,
+  "U_wilson": [
+   2.7424035026310506e-05,
+   0.0003645736168954184
+  ],
+  "U_either": 6,
+  "U_pure": 3241,
+  "cotagged": 39,
+  "states": {
+   "unreadable": 15149,
+   "unpowered": 3703,
+   "supported": 736,
+   "contradicted": 69,
+   "unfalsifiable": 343,
+   "no_comparison": 0
+  }
+ },
+ "primary_U": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 2,
+    "unpowered": 0,
+    "supported": 0,
+    "contradicted": 0,
+    "unfalsifiable": 0,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 15147,
+    "unpowered": 3703,
+    "supported": 736,
+    "contradicted": 69,
+    "unfalsifiable": 343,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 2,
+   "U_and_decided": 0,
+   "notU_and_undecided": 19193,
+   "notU_and_decided": 805,
+   "U": 2,
+   "undecided": 19195,
+   "decided": 805,
+   "jaccard": 0.0001041938004688721,
+   "U_share_undecided": 1.0,
+   "f": 0.0001041938004688721,
+   "f_wilson": [
+    2.8574163054416392e-05,
+    0.00037985979886408135
+   ],
+   "p_decided_given_U": 0.0,
+   "p_decided_given_notU": 0.04025402540254026,
+   "d": -0.04025402540254026,
+   "U_and_supported": 0,
+   "supported": 736,
+   "supported_U_share": 0.0
+  },
+  "f_cluster_boot": [
+   0.0,
+   0.0002607731942456603
+  ],
+  "f_interval_conservative": [
+   0.0,
+   0.00037985979886408135
+  ],
+  "derangement": {
+   "d": -0.04025402540254026,
+   "p_two_sided": 1.0,
+   "p_one_sided_observed_direction": 1.0,
+   "null_mean": -0.040254025402540264,
+   "null_sd": 6.938893903907228e-18,
+   "draws": 1000,
+   "singleton_dependants": 0
+  },
+  "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+  "verdict_overlap": "DESIGN NESTED IN LEARNER LIMIT",
+  "verdict_direction": "NO DETECTED ASSOCIATION beyond the dependant",
+  "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)"
+ },
+ "secondary_U_either": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 6,
+    "unpowered": 0,
+    "supported": 0,
+    "contradicted": 0,
+    "unfalsifiable": 0,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 15143,
+    "unpowered": 3703,
+    "supported": 736,
+    "contradicted": 69,
+    "unfalsifiable": 343,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 6,
+   "U_and_decided": 0,
+   "notU_and_undecided": 19189,
+   "notU_and_decided": 805,
+   "U": 6,
+   "undecided": 19195,
+   "decided": 805,
+   "jaccard": 0.0003125814014066163,
+   "U_share_undecided": 1.0,
+   "f": 0.0003125814014066163,
+   "f_wilson": [
+    0.00014326648342970644,
+    0.0006818592886239927
+   ],
+   "p_decided_given_U": 0.0,
+   "p_decided_given_notU": 0.04026207862358708,
+   "d": -0.04026207862358708,
+   "U_and_supported": 0,
+   "supported": 736,
+   "supported_U_share": 0.0
+  },
+  "f_cluster_boot": [
+   0.00010363687735410119,
+   0.0005750755169678699
+  ],
+  "f_interval_conservative": [
+   0.00010363687735410119,
+   0.0006818592886239927
+  ],
+  "derangement": {
+   "d": -0.04026207862358708,
+   "p_two_sided": 1.0,
+   "p_one_sided_observed_direction": 0.6463536463536463,
+   "null_mean": 0.02409056050148377,
+   "null_sd": 0.09146715921022641,
+   "draws": 1000,
+   "singleton_dependants": 0
+  },
+  "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+  "verdict_overlap": "DESIGN NESTED IN LEARNER LIMIT",
+  "verdict_direction": "NO DETECTED ASSOCIATION beyond the dependant",
+  "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)"
+ },
+ "secondary_U_pure": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 2761,
+    "unpowered": 404,
+    "supported": 40,
+    "contradicted": 5,
+    "unfalsifiable": 31,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 12388,
+    "unpowered": 3299,
+    "supported": 696,
+    "contradicted": 64,
+    "unfalsifiable": 312,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 3196,
+   "U_and_decided": 45,
+   "notU_and_undecided": 15999,
+   "notU_and_decided": 760,
+   "U": 3241,
+   "undecided": 19195,
+   "decided": 805,
+   "jaccard": 0.16611226611226612,
+   "U_share_undecided": 0.9861153964825671,
+   "f": 0.1665016931492576,
+   "f_wilson": [
+    0.16129846496130998,
+    0.17183837939356686
+   ],
+   "p_decided_given_U": 0.01388460351743289,
+   "p_decided_given_notU": 0.045348767826242614,
+   "d": -0.031464164308809724,
+   "U_and_supported": 40,
+   "supported": 736,
+   "supported_U_share": 0.05434782608695652
+  },
+  "f_cluster_boot": [
+   0.14289541300844888,
+   0.19064523270107325
+  ],
+  "f_interval_conservative": [
+   0.14289541300844888,
+   0.19064523270107325
+  ],
+  "derangement": {
+   "d": -0.031464164308809724,
+   "p_two_sided": 1.0,
+   "p_one_sided_observed_direction": 1.0,
+   "null_mean": -0.031464164308809724,
+   "null_sd": 0.0,
+   "draws": 1000,
+   "singleton_dependants": 0
+  },
+  "verdict_f": "MIXED: both limits bind; report the two shares side by side",
+  "verdict_overlap": "DESIGN NESTED IN LEARNER LIMIT",
+  "verdict_direction": "NO DETECTED ASSOCIATION beyond the dependant",
+  "verdict_supported": "SUPPORTED COUNT CARRIES DESIGN-UNIDENTIFIED EDGES"
+ },
+ "cotagged_subset_U": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 2,
+    "unpowered": 0,
+    "supported": 0,
+    "contradicted": 0,
+    "unfalsifiable": 0,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 10,
+    "unpowered": 14,
+    "supported": 9,
+    "contradicted": 2,
+    "unfalsifiable": 2,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 2,
+   "U_and_decided": 0,
+   "notU_and_undecided": 26,
+   "notU_and_decided": 11,
+   "U": 2,
+   "undecided": 28,
+   "decided": 11,
+   "jaccard": 0.07142857142857142,
+   "U_share_undecided": 1.0,
+   "f": 0.07142857142857142,
+   "f_wilson": [
+    0.019812063936445176,
+    0.22645362729738683
+   ],
+   "p_decided_given_U": 0.0,
+   "p_decided_given_notU": 0.2972972972972973,
+   "d": -0.2972972972972973,
+   "U_and_supported": 0,
+   "supported": 9,
+   "supported_U_share": 0.0
+  },
+  "f_cluster_boot": [
+   0.0,
+   0.19230769230769232
+  ],
+  "f_interval_conservative": [
+   0.0,
+   0.22645362729738683
+  ],
+  "derangement": {
+   "d": -0.2972972972972973,
+   "p_two_sided": 1.0,
+   "p_one_sided_observed_direction": 1.0,
+   "null_mean": -0.29729729729729737,
+   "null_sd": 5.551115123125783e-17,
+   "draws": 1000,
+   "singleton_dependants": 35
+  },
+  "verdict_f": "MIXED: both limits bind; report the two shares side by side",
+  "verdict_overlap": "DESIGN NESTED IN LEARNER LIMIT",
+  "verdict_direction": "NO DETECTED ASSOCIATION beyond the dependant",
+  "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)"
+ }
+}

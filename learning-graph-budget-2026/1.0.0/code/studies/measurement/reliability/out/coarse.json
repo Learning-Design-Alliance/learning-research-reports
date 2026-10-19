@@ -1,0 +1,102 @@
+{
+  "seed": 20260922,
+  "random_seed": 20260923,
+  "random_draws": 50,
+  "change": "CHANGE 1 (2026-10-14): mean of matched random draws",
+  "splits": 8,
+  "pairs": 30000,
+  "gate": 0.8,
+  "min_cell": 5,
+  "min_edges_per_group_pair": 3,
+  "rows": [
+    {
+      "grain": "edge",
+      "groups": 865,
+      "pairs": 30000,
+      "split_half": 0.3138101975372646,
+      "spearman_brown": 0.4777100956066582,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L2",
+      "groups": 53,
+      "pairs": 337,
+      "split_half": 0.2947868172652479,
+      "spearman_brown": 0.45534417455357573,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L3",
+      "groups": 187,
+      "pairs": 547,
+      "split_half": 0.3606815631602883,
+      "spearman_brown": 0.5301483799377387,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L4",
+      "groups": 425,
+      "pairs": 153,
+      "split_half": 0.393209761840042,
+      "spearman_brown": 0.5644659872619919,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L2 RANDOM",
+      "groups": 53,
+      "pairs": 381,
+      "split_half": 0.2788531943841253,
+      "spearman_brown": 0.4360988354389128,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L3 RANDOM",
+      "groups": 187,
+      "pairs": 454,
+      "split_half": 0.28344016876720063,
+      "spearman_brown": 0.4416881685095723,
+      "meets_gate": false
+    },
+    {
+      "grain": "taxonomy L4 RANDOM",
+      "groups": 425,
+      "pairs": 79,
+      "split_half": 0.31397496492982,
+      "spearman_brown": 0.47790098488914445,
+      "meets_gate": false
+    },
+    {
+      "comparison": "L2",
+      "taxonomy": 0.45534417455357573,
+      "random": 0.43575804319134853,
+      "gap": 0.0195861313622272,
+      "random_draws": 50,
+      "random_p2_5": 0.3929761309887078,
+      "random_p97_5": 0.48384719944799603,
+      "share_of_draws_below_taxonomy": 0.8,
+      "verdict": "AGGREGATION ONLY"
+    },
+    {
+      "comparison": "L3",
+      "taxonomy": 0.5301483799377387,
+      "random": 0.4415051979783435,
+      "gap": 0.08864318195939519,
+      "random_draws": 50,
+      "random_p2_5": 0.40608081185917433,
+      "random_p97_5": 0.46691557826266805,
+      "share_of_draws_below_taxonomy": 1.0,
+      "verdict": "TAXONOMY BEATS RANDOM"
+    },
+    {
+      "comparison": "L4",
+      "taxonomy": 0.5644659872619919,
+      "random": 0.4768863090523364,
+      "gap": 0.08757967820965551,
+      "random_draws": 50,
+      "random_p2_5": 0.41243131308388625,
+      "random_p97_5": 0.5544353364994943,
+      "share_of_draws_below_taxonomy": 0.98,
+      "verdict": "TAXONOMY BEATS RANDOM"
+    }
+  ]
+}

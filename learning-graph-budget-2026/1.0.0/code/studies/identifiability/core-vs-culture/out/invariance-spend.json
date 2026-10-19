@@ -1,0 +1,1141 @@
+{
+ "budget_usd": 10.0,
+ "calls": [
+  {
+   "what": "map xes3g5m k0",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.020456,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:36Z"
+  },
+  {
+   "what": "map xes3g5m k134",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.025091,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:38Z"
+  },
+  {
+   "what": "map xes3g5m k279",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0215685,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:40Z"
+  },
+  {
+   "what": "map xes3g5m k170",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.026581,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:41Z"
+  },
+  {
+   "what": "map xes3g5m k314",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0214085,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:41Z"
+  },
+  {
+   "what": "map xes3g5m k206",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0244085,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:42Z"
+  },
+  {
+   "what": "map xes3g5m k242",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.029501,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:45Z"
+  },
+  {
+   "what": "map xes3g5m k350",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0265835,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:45Z"
+  },
+  {
+   "what": "map xes3g5m k459",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0214035,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:50Z"
+  },
+  {
+   "what": "map xes3g5m k387",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0276685,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:51Z"
+  },
+  {
+   "what": "map xes3g5m k422",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.026461,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:52Z"
+  },
+  {
+   "what": "map xes3g5m k530",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0250135,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:56Z"
+  },
+  {
+   "what": "map xes3g5m k639",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.021501,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:56Z"
+  },
+  {
+   "what": "map xes3g5m k495",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.031771,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:32:59Z"
+  },
+  {
+   "what": "map xes3g5m k710",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.021291,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:03Z"
+  },
+  {
+   "what": "map xes3g5m k602",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0268885,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:03Z"
+  },
+  {
+   "what": "map xes3g5m k675",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.025836,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:04Z"
+  },
+  {
+   "what": "map xes3g5m k819",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0214685,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:08Z"
+  },
+  {
+   "what": "map xes3g5m k855",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0173185,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:09Z"
+  },
+  {
+   "what": "map xes3g5m k747",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0266785,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:10Z"
+  },
+  {
+   "what": "map assistments2012 1",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0161335,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:11Z"
+  },
+  {
+   "what": "map assistments2012 301",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.019306,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:16Z"
+  },
+  {
+   "what": "map assistments2012 598",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.014886,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:17Z"
+  },
+  {
+   "what": "map xes3g5m k567",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0256335,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:17Z"
+  },
+  {
+   "what": "map assistments2012 48",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.015626,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:18Z"
+  },
+  {
+   "what": "map assistments2012 217",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.018986,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:19Z"
+  },
+  {
+   "what": "map assistments2012 345",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.026961,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:23Z"
+  },
+  {
+   "what": "map xes3g5m k783",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.026741,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:23Z"
+  },
+  {
+   "what": "map assistments2012 88",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0086835,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:24Z"
+  },
+  {
+   "what": "map eedi s1177",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0176385,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:26Z"
+  },
+  {
+   "what": "map eedi s102",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0250785,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:30Z"
+  },
+  {
+   "what": "map eedi s235",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0199435,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:30Z"
+  },
+  {
+   "what": "map eedi s1982",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0223785,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:31Z"
+  },
+  {
+   "what": "map eedi s164",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.019786,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:32Z"
+  },
+  {
+   "what": "map eedi s408",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0180485,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:33Z"
+  },
+  {
+   "what": "map eedi s65",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.018556,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:36Z"
+  },
+  {
+   "what": "map junyi2020 +DlgHAr1GtoQgtGqwoen6pt4/ayVRO+rMaCVZ7jGCHE=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0253135,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:41Z"
+  },
+  {
+   "what": "map junyi2020 0BL+DbelLoGwTw7JvHBXe7pZr1N/E8JVhngim3zzjJ4=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.027101,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:44Z"
+  },
+  {
+   "what": "map junyi2020 2dZAIlKn+MzyIa5L8xpWkRhS6Njmw4EYe2vwwwNsRQ4=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0252835,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:45Z"
+  },
+  {
+   "what": "map junyi2020 86gD6UU9EwEF1gJZmFYJhq0JhD/6MJggjkNdt9CKiJk=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0230635,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:48Z"
+  },
+  {
+   "what": "map junyi2020 5svTX6dhnFB2BXkiQO1O2qKKYggIy5f5KlvnEVntVhM=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.028076,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:49Z"
+  },
+  {
+   "what": "map junyi2020 46ROXDc+6TtRsAPHki7/E82y+3AiRRPb1cWpd/9Y0OU=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0300835,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:49Z"
+  },
+  {
+   "what": "map junyi2020 AOPJ6VAg/KKkFJJKSu/lQV/vvzgscheE8m81+R3ZzIQ=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.022891,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:50Z"
+  },
+  {
+   "what": "map eedi s279",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.015106,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:52Z"
+  },
+  {
+   "what": "map junyi2020 C909uiishGWZRTfgsev1IhCjyL0gUD0ph9QKAYE+2DE=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0250785,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:33:55Z"
+  },
+  {
+   "what": "map junyi2020 IN2rf9N8yr1JT9tAJXei08vWhgCbmljAZ141KO0Bdto=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.023201,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:00Z"
+  },
+  {
+   "what": "map junyi2020 Lgvpn5xUu0sbll2/53oFiSmVdcNM99MCNRPNcpyw1yI=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0228085,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:01Z"
+  },
+  {
+   "what": "map junyi2020 EKYLxMLTcn5kWVoGOsh3zHLI31GB3V/xZq1IjjqFPNk=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0254085,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:01Z"
+  },
+  {
+   "what": "map junyi2020 K4GS8qPmRPsosinHUMiie4K4rcAVcF05OI/bcQqHJdc=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.024476,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:03Z"
+  },
+  {
+   "what": "map junyi2020 O+qdSyYcmKAzs4PPZikdBQWMw5MMHcW5ROV8s8sFljc=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.027486,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:05Z"
+  },
+  {
+   "what": "map junyi2020 GSi2GkiUGDNXuUqCrsNK5ZB5qW8bRkAoY9wEGx5rRng=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.026946,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:06Z"
+  },
+  {
+   "what": "map junyi2020 QmVklaXAga6VIQ+lpYkCclWpaUrgeJABVDnm+XFhXB0=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0254335,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:08Z"
+  },
+  {
+   "what": "map junyi2020 PGbCr6wCmzlyPoKCBQv8aOM0NW8HVk4PW+IU4iR6GRI=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.021456,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:09Z"
+  },
+  {
+   "what": "map junyi2020 Uq/TS8KieZduAKrYzEVKNL2Mm4txq9AR3VFY5cZO9rs=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0235685,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:14Z"
+  },
+  {
+   "what": "map junyi2020 T+TdpKTtcckj1sM4MAUOU/taROWhuq1ZIiOoJbasmhg=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.025521,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:16Z"
+  },
+  {
+   "what": "map junyi2020 WkBETrljVP4CWMKsouy8P5j94DMpD1mdMxCCZ7ftnN0=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.027566,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:17Z"
+  },
+  {
+   "what": "map junyi2020 aUZfbM1yIpHJBCb6q2Ibl75Ix+02UZ4ihUKYjUtEhkA=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0242185,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:17Z"
+  },
+  {
+   "what": "map junyi2020 c7CnB6hlM9deJD6GjunUMpgXQlPcGIKfVuzCTGSGiQ0=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0274235,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:22Z"
+  },
+  {
+   "what": "map junyi2020 e0+hFijqTJTOfBIL9insE6M7fh8UL201r+EDBi9M2Vw=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0252685,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:23Z"
+  },
+  {
+   "what": "map junyi2020 YVNOK+AhFjUEHxCvwUmqSSiYmGqD98ZGZrp5l+7UAFg=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.025356,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:26Z"
+  },
+  {
+   "what": "map junyi2020 hORfMtOHyiNudQ4hjk2xrUaL/uU+G9Tn6ElVFNXh3Cc=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0236085,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:26Z"
+  },
+  {
+   "what": "map junyi2020 j4rGpwpqhLE9foelXD2yjokS0u3QR+ULhNqLGeF/4sk=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.021956,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:28Z"
+  },
+  {
+   "what": "map junyi2020 n0+5yVdX/Q8BcTmvBKZUbUq6T5X8LDLWkAv/FLIuEfg=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.021506,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:29Z"
+  },
+  {
+   "what": "map junyi2020 z9WEaz3dU4bh7FPuKdAt6UrOgqpVnwWFrb/AL4dkKJs=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.010096,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:34Z"
+  },
+  {
+   "what": "map junyi2020 fkYHSXvk0VmYunyFLG74H16A4P9WX6Cx2MMKpQcvVNQ=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.027371,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:34Z"
+  },
+  {
+   "what": "map junyi2020 oybx9PFfxCN2VikUvZvMK8xe1nKfkPfqy06vVyZsKOQ=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.0253035,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:35Z"
+  },
+  {
+   "what": "map junyi2020 r9uHkHNbfdzRkBW9Gogqi1vmxUXafa57W8BEsdMqCZs=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.022486,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:36Z"
+  },
+  {
+   "what": "map junyi2020 tOR47i7wGbuHkGxkhX9tHItMHHuJtAttsvHDOjDRVOw=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.024111,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:40Z"
+  },
+  {
+   "what": "map junyi2020 wmSqGTqsAyWkNPvpGkVe/Jb9ezYUQbMHUQmyDPhmRLQ=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.025391,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:41Z"
+  },
+  {
+   "what": "map junyi2020 v0kd17IRi6S3Pb5Go3lcsG8G+brOsfhuCLG95fqRhY0=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.035541,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:34:48Z"
+  },
+  {
+   "what": "map junyi2020 lCiErLu25B5SZD4PvpfL2mNLrI6Vr/iDlsYeTdU8poM=",
+   "model": "openai/gpt-6-sol",
+   "cost_usd": 0.030566,
+   "served_model": "openai/gpt-6-sol",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:05Z"
+  },
+  {
+   "what": "map xes3g5m k0",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00750115,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:10Z"
+  },
+  {
+   "what": "map xes3g5m k242",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00413758,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:14Z"
+  },
+  {
+   "what": "map xes3g5m k350",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00744744,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:15Z"
+  },
+  {
+   "what": "map xes3g5m k387",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00389046,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:18Z"
+  },
+  {
+   "what": "map xes3g5m k422",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00408595,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:19Z"
+  },
+  {
+   "what": "map xes3g5m k459",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00385996,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:19Z"
+  },
+  {
+   "what": "map xes3g5m k495",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00427138,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:23Z"
+  },
+  {
+   "what": "map xes3g5m k530",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00425608,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:24Z"
+  },
+  {
+   "what": "map xes3g5m k567",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00419504,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:25Z"
+  },
+  {
+   "what": "map xes3g5m k602",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00423494,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:28Z"
+  },
+  {
+   "what": "map xes3g5m k639",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00424049,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:28Z"
+  },
+  {
+   "what": "map xes3g5m k675",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00415095,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:30Z"
+  },
+  {
+   "what": "map xes3g5m k710",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00412993,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:33Z"
+  },
+  {
+   "what": "map xes3g5m k747",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00425024,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:34Z"
+  },
+  {
+   "what": "map xes3g5m k783",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00408181,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:35:35Z"
+  },
+  {
+   "what": "map xes3g5m k855",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00288481,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:24Z"
+  },
+  {
+   "what": "map xes3g5m k819",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00416989,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:24Z"
+  },
+  {
+   "what": "map assistments2012 217",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00596537,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:29Z"
+  },
+  {
+   "what": "map assistments2012 301",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00293067,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:29Z"
+  },
+  {
+   "what": "map assistments2012 48",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00266096,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:35Z"
+  },
+  {
+   "what": "map assistments2012 345",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00273726,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:35Z"
+  },
+  {
+   "what": "map assistments2012 88",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00088701,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:37Z"
+  },
+  {
+   "what": "map assistments2012 598",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00279324,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:40Z"
+  },
+  {
+   "what": "map eedi s102",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00341971,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:42Z"
+  },
+  {
+   "what": "map eedi s1177",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00335066,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:44Z"
+  },
+  {
+   "what": "map eedi s164",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00333154,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:46Z"
+  },
+  {
+   "what": "map eedi s1982",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00331269,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:49Z"
+  },
+  {
+   "what": "map eedi s235",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00324141,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:50Z"
+  },
+  {
+   "what": "map eedi s279",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00328748,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:53Z"
+  },
+  {
+   "what": "map eedi s408",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00324739,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:55Z"
+  },
+  {
+   "what": "map eedi s65",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00237872,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:36:56Z"
+  },
+  {
+   "what": "map xes3g5m k279",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.0266365,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "NextBit",
+   "timestamp_utc": "2026-09-27T02:36:59Z"
+  },
+  {
+   "what": "map junyi2020 +DlgHAr1GtoQgtGqwoen6pt4/ayVRO+rMaCVZ7jGCHE=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00322859,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:00Z"
+  },
+  {
+   "what": "map junyi2020 0BL+DbelLoGwTw7JvHBXe7pZr1N/E8JVhngim3zzjJ4=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00332225,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:01Z"
+  },
+  {
+   "what": "map junyi2020 2dZAIlKn+MzyIa5L8xpWkRhS6Njmw4EYe2vwwwNsRQ4=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00314617,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:05Z"
+  },
+  {
+   "what": "map junyi2020 46ROXDc+6TtRsAPHki7/E82y+3AiRRPb1cWpd/9Y0OU=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00330697,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:06Z"
+  },
+  {
+   "what": "map junyi2020 5svTX6dhnFB2BXkiQO1O2qKKYggIy5f5KlvnEVntVhM=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00330886,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:06Z"
+  },
+  {
+   "what": "map junyi2020 86gD6UU9EwEF1gJZmFYJhq0JhD/6MJggjkNdt9CKiJk=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.0032936,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:10Z"
+  },
+  {
+   "what": "map xes3g5m k170",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.03162798,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "NextBit",
+   "timestamp_utc": "2026-09-27T02:37:10Z"
+  },
+  {
+   "what": "map junyi2020 AOPJ6VAg/KKkFJJKSu/lQV/vvzgscheE8m81+R3ZzIQ=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00341972,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:12Z"
+  },
+  {
+   "what": "map junyi2020 C909uiishGWZRTfgsev1IhCjyL0gUD0ph9QKAYE+2DE=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00326672,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:12Z"
+  },
+  {
+   "what": "map junyi2020 EKYLxMLTcn5kWVoGOsh3zHLI31GB3V/xZq1IjjqFPNk=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00317474,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:17Z"
+  },
+  {
+   "what": "map junyi2020 GSi2GkiUGDNXuUqCrsNK5ZB5qW8bRkAoY9wEGx5rRng=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00337005,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:17Z"
+  },
+  {
+   "what": "map junyi2020 IN2rf9N8yr1JT9tAJXei08vWhgCbmljAZ141KO0Bdto=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00315375,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:18Z"
+  },
+  {
+   "what": "map junyi2020 K4GS8qPmRPsosinHUMiie4K4rcAVcF05OI/bcQqHJdc=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00333556,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:19Z"
+  },
+  {
+   "what": "map junyi2020 Lgvpn5xUu0sbll2/53oFiSmVdcNM99MCNRPNcpyw1yI=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00338524,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:23Z"
+  },
+  {
+   "what": "map junyi2020 O+qdSyYcmKAzs4PPZikdBQWMw5MMHcW5ROV8s8sFljc=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00341593,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:23Z"
+  },
+  {
+   "what": "map junyi2020 PGbCr6wCmzlyPoKCBQv8aOM0NW8HVk4PW+IU4iR6GRI=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00329355,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:24Z"
+  },
+  {
+   "what": "map junyi2020 QmVklaXAga6VIQ+lpYkCclWpaUrgeJABVDnm+XFhXB0=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.0034005,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:24Z"
+  },
+  {
+   "what": "map junyi2020 T+TdpKTtcckj1sM4MAUOU/taROWhuq1ZIiOoJbasmhg=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00336815,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:28Z"
+  },
+  {
+   "what": "map junyi2020 WkBETrljVP4CWMKsouy8P5j94DMpD1mdMxCCZ7ftnN0=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00312307,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:30Z"
+  },
+  {
+   "what": "map junyi2020 YVNOK+AhFjUEHxCvwUmqSSiYmGqD98ZGZrp5l+7UAFg=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00323216,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:30Z"
+  },
+  {
+   "what": "map junyi2020 Uq/TS8KieZduAKrYzEVKNL2Mm4txq9AR3VFY5cZO9rs=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00635312,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:32Z"
+  },
+  {
+   "what": "map junyi2020 aUZfbM1yIpHJBCb6q2Ibl75Ix+02UZ4ihUKYjUtEhkA=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00331456,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:33Z"
+  },
+  {
+   "what": "map junyi2020 c7CnB6hlM9deJD6GjunUMpgXQlPcGIKfVuzCTGSGiQ0=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00338535,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:35Z"
+  },
+  {
+   "what": "map junyi2020 e0+hFijqTJTOfBIL9insE6M7fh8UL201r+EDBi9M2Vw=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00337187,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:36Z"
+  },
+  {
+   "what": "map junyi2020 hORfMtOHyiNudQ4hjk2xrUaL/uU+G9Tn6ElVFNXh3Cc=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00331074,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:39Z"
+  },
+  {
+   "what": "map junyi2020 fkYHSXvk0VmYunyFLG74H16A4P9WX6Cx2MMKpQcvVNQ=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00334329,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:39Z"
+  },
+  {
+   "what": "map junyi2020 j4rGpwpqhLE9foelXD2yjokS0u3QR+ULhNqLGeF/4sk=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00328587,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:41Z"
+  },
+  {
+   "what": "map xes3g5m k314",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.02843334042,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "SiliconFlow",
+   "timestamp_utc": "2026-09-27T02:37:41Z"
+  },
+  {
+   "what": "map junyi2020 lCiErLu25B5SZD4PvpfL2mNLrI6Vr/iDlsYeTdU8poM=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00334511,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:42Z"
+  },
+  {
+   "what": "map junyi2020 n0+5yVdX/Q8BcTmvBKZUbUq6T5X8LDLWkAv/FLIuEfg=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00337952,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:45Z"
+  },
+  {
+   "what": "map junyi2020 oybx9PFfxCN2VikUvZvMK8xe1nKfkPfqy06vVyZsKOQ=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00308295,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:46Z"
+  },
+  {
+   "what": "map junyi2020 r9uHkHNbfdzRkBW9Gogqi1vmxUXafa57W8BEsdMqCZs=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00333182,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:47Z"
+  },
+  {
+   "what": "map junyi2020 tOR47i7wGbuHkGxkhX9tHItMHHuJtAttsvHDOjDRVOw=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00311745,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:48Z"
+  },
+  {
+   "what": "map junyi2020 z9WEaz3dU4bh7FPuKdAt6UrOgqpVnwWFrb/AL4dkKJs=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00122168,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:48Z"
+  },
+  {
+   "what": "map junyi2020 v0kd17IRi6S3Pb5Go3lcsG8G+brOsfhuCLG95fqRhY0=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00344651,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:49Z"
+  },
+  {
+   "what": "map junyi2020 wmSqGTqsAyWkNPvpGkVe/Jb9ezYUQbMHUQmyDPhmRLQ=",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.00334523,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "Azure",
+   "timestamp_utc": "2026-09-27T02:37:50Z"
+  },
+  {
+   "what": "map xes3g5m k134",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.036600552,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "DigitalOcean",
+   "timestamp_utc": "2026-09-27T02:38:55Z"
+  },
+  {
+   "what": "map xes3g5m k206",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.036693468,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "DigitalOcean",
+   "timestamp_utc": "2026-09-27T02:38:55Z"
+  },
+  {
+   "what": "map assistments2012 1",
+   "model": "deepseek/deepseek-v4-pro",
+   "cost_usd": 0.0343407096,
+   "served_model": "deepseek/deepseek-v4-pro",
+   "provider": "DigitalOcean",
+   "timestamp_utc": "2026-09-27T02:39:31Z"
+  }
+ ]
+}

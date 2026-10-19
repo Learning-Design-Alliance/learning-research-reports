@@ -1,0 +1,7402 @@
+{
+ "families": [
+  "google",
+  "openai",
+  "anthropic",
+  "deepseek",
+  "moonshot",
+  "mistral"
+ ],
+ "nodes": [
+  {
+   "id": "n001",
+   "name": "Multi-digit column arithmetic with regrouping and remainders",
+   "name_zh": "多位数竖式笔算与带余除法",
+   "description": "Execute standard multi-digit column addition, subtraction, multi-digit by one-digit multiplication, and division with remainders, stating the place-value meaning of each step.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "n002",
+   "name": "Additive grouping and complementation",
+   "name_zh": "加减凑整与带符号搬家",
+   "description": "Simplify multi-term addition and subtraction expressions by rearranging terms with their signs, grouping complementary pairs to tens, hundreds, or thousands, and removing/adding brackets.",
+   "terminal": false,
+   "families": [
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     1
+    ],
+    [
+     "openai",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "n003",
+   "name": "Benchmark product factorization and associative grouping",
+   "name_zh": "乘法基准数凑整与分组结合",
+   "description": "Identify and exploit benchmark products such as 4 x 25 = 100 and 8 x 125 = 1000 by decomposing factors and applying the associative property of multiplication.",
+   "terminal": false,
+   "families": [
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     2
+    ],
+    [
+     "openai",
+     8
+    ],
+    [
+     "moonshot",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "n004",
+   "name": "Expanding via distributive law",
+   "name_zh": "乘法分配律展开",
+   "description": "Multiply a single number across a sum or difference, particularly rewriting numbers near powers of ten as (100 +/- d) to compute products quickly.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     3
+    ],
+    [
+     "google",
+     4
+    ],
+    [
+     "openai",
+     7
+    ],
+    [
+     "deepseek",
+     11
+    ],
+    [
+     "moonshot",
+     5
+    ],
+    [
+     "moonshot",
+     6
+    ],
+    [
+     "mistral",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "n005",
+   "name": "Constructing common multipliers across terms",
+   "name_zh": "构造公因数巧算",
+   "description": "Transfer factors between numbers (e.g., 3 x 810 = 30 x 81) or split a term to reveal a hidden common factor for distributive calculation.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "n006",
+   "name": "Distributive division over addition and subtraction",
+   "name_zh": "除法分配律与连续除法性质",
+   "description": "Distribute a single divisor across grouped summands (e.g., (4500 + 450 + 45) / 45) and transform chained division a / b / c into a / (b x c).",
+   "terminal": false,
+   "families": [
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     6
+    ],
+    [
+     "openai",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "n007",
+   "name": "Evaluating defined operations",
+   "name_zh": "定义新运算直接代入与多层嵌套",
+   "description": "Substitute numerical operands into arbitrary teacher-defined symbolic formulas and evaluate single or nested operations following standard order of evaluation.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     7
+    ],
+    [
+     "deepseek",
+     94
+    ]
+   ]
+  },
+  {
+   "id": "n008",
+   "name": "Inverse solving of defined operations",
+   "name_zh": "定义新运算逆运算求解",
+   "description": "Solve for an unknown variable embedded inside an equation featuring defined operations by working backwards from the output.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "n009",
+   "name": "Comprehensive rapid arithmetic calculation",
+   "name_zh": "综合速算与巧算能力",
+   "description": "Inspect complex multi-operation arithmetic expressions, select the optimal calculation strategy, and execute error-free evaluation using arithmetic laws.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     9
+    ],
+    [
+     "openai",
+     21
+    ],
+    [
+     "anthropic",
+     13
+    ],
+    [
+     "deepseek",
+     16
+    ],
+    [
+     "moonshot",
+     107
+    ]
+   ]
+  },
+  {
+   "id": "n010",
+   "name": "Identifying arithmetic progression parameters",
+   "name_zh": "识别等差数列基本要素",
+   "description": "Verify whether a number sequence is an arithmetic progression and identify its first term, last term, and common difference.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "n011",
+   "name": "Finding the n-th term of an arithmetic sequence",
+   "name_zh": "求等差数列的第n项",
+   "description": "Calculate the value of the n-th term using the first term, the common difference, and the number of steps (n - 1).",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     11
+    ],
+    [
+     "openai",
+     67
+    ],
+    [
+     "anthropic",
+     65
+    ],
+    [
+     "deepseek",
+     50
+    ],
+    [
+     "mistral",
+     21
+    ]
+   ]
+  },
+  {
+   "id": "n012",
+   "name": "Finding the number of terms in an arithmetic sequence",
+   "name_zh": "求等差数列的项数",
+   "description": "Determine the total count of terms in a finite arithmetic sequence using the formula (last - first) / difference + 1.",
+   "terminal": false,
+   "families": [
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     12
+    ],
+    [
+     "openai",
+     68
+    ]
+   ]
+  },
+  {
+   "id": "n013",
+   "name": "Summing arithmetic sequences",
+   "name_zh": "等差数列求和公式应用",
+   "description": "Calculate the sum of an arithmetic progression using the paired summation formula (first + last) x count / 2.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     13
+    ],
+    [
+     "openai",
+     69
+    ],
+    [
+     "anthropic",
+     66
+    ],
+    [
+     "deepseek",
+     51
+    ],
+    [
+     "moonshot",
+     3
+    ],
+    [
+     "mistral",
+     22
+    ]
+   ]
+  },
+  {
+   "id": "n014",
+   "name": "Solving context problems involving arithmetic progressions",
+   "name_zh": "等差数列综合与应用题",
+   "description": "Model word problems (such as ranked test scores or tiered quantities) as arithmetic sequences to determine unknown individual terms or sums.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "n015",
+   "name": "Divisibility tests for composite numbers",
+   "name_zh": "数的整除特征判定（含综合整除）",
+   "description": "Apply divisibility criteria for 2, 3, 4, 5, 8, and 9 individually and combine them to determine unknown digits for composite divisors such as 36.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     15
+    ]
+   ]
+  },
+  {
+   "id": "n016",
+   "name": "Parity analysis of arithmetic operations",
+   "name_zh": "奇数与偶数的运算性质分析",
+   "description": "Determine the parity of sums, differences, and products without evaluating full numbers, and apply parity invariants to prove existence or impossibility.",
+   "terminal": true,
+   "families": [
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     16
+    ],
+    [
+     "openai",
+     104
+    ],
+    [
+     "deepseek",
+     18
+    ],
+    [
+     "moonshot",
+     76
+    ]
+   ]
+  },
+  {
+   "id": "n017",
+   "name": "Representing quantitative relationships using line segment diagrams",
+   "name_zh": "画线段图表征数量关系",
+   "description": "Translate verbal descriptions of differences, sums, and multiples into accurate line segment diagrams representing baseline units.",
+   "terminal": false,
+   "families": [
+    "google",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "google",
+     17
+    ],
+    [
+     "moonshot",
+     19
+    ]
+   ]
+  },
+  {
+   "id": "n018",
+   "name": "Solving standard sum-difference problems",
+   "name_zh": "标准和差问题求解",
+   "description": "Calculate two unknown quantities given their total sum and difference using equalizing transformations or the sum-difference formulas.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     18
+    ],
+    [
+     "openai",
+     26
+    ],
+    [
+     "anthropic",
+     14
+    ],
+    [
+     "moonshot",
+     26
+    ]
+   ]
+  },
+  {
+   "id": "n019",
+   "name": "Solving standard sum-multiple problems",
+   "name_zh": "标准和倍问题求解",
+   "description": "Identify the base unit quantity (1 unit) and solve for parts given the total sum and the multiple relationship between them.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "google",
+     19
+    ],
+    [
+     "anthropic",
+     15
+    ],
+    [
+     "moonshot",
+     20
+    ]
+   ]
+  },
+  {
+   "id": "n020",
+   "name": "Solving advanced sum-multiple problems with offsets",
+   "name_zh": "几倍多几/几倍少几的和倍问题",
+   "description": "Adjust the overall sum by adding or subtracting non-proportional remainders to restore strict integer multiple ratios before dividing by total units.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     20
+    ],
+    [
+     "openai",
+     28
+    ],
+    [
+     "deepseek",
+     61
+    ],
+    [
+     "moonshot",
+     21
+    ]
+   ]
+  },
+  {
+   "id": "n021",
+   "name": "Solving standard difference-multiple problems",
+   "name_zh": "标准差倍问题求解",
+   "description": "Calculate quantities when given their difference and multiple ratio using the relationship difference / (multiple - 1) = 1 unit.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     21
+    ],
+    [
+     "openai",
+     27
+    ],
+    [
+     "anthropic",
+     16
+    ],
+    [
+     "moonshot",
+     24
+    ]
+   ]
+  },
+  {
+   "id": "n022",
+   "name": "Applying the constant-difference principle to changing quantities",
+   "name_zh": "差不变原理在差倍问题中的应用",
+   "description": "Recognize that subtracting or adding equal amounts to two quantities preserves their difference, and use this invariant to solve dynamic multiple problems.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     22
+    ]
+   ]
+  },
+  {
+   "id": "n023",
+   "name": "Solving multi-party sum and difference multiple systems",
+   "name_zh": "三个及以上对象的多重和差倍问题",
+   "description": "Express three or more related quantities in terms of a single benchmark unit and adjust surplus/deficit values to find all quantities simultaneously.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     23
+    ]
+   ]
+  },
+  {
+   "id": "n024",
+   "name": "Solving age problems using invariant age difference",
+   "name_zh": "年龄差不变与动态倍数问题",
+   "description": "Calculate past, present, or future ages by enforcing the invariant property that the difference between two persons' ages never changes across time.",
+   "terminal": false,
+   "families": [
+    "google",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "google",
+     24
+    ],
+    [
+     "moonshot",
+     28
+    ]
+   ]
+  },
+  {
+   "id": "n025",
+   "name": "Solving multi-person combined age changes across time",
+   "name_zh": "多人多时段年龄和与倍数综合问题",
+   "description": "Track how the sum of multiple people's ages changes across years and align compound age conditions to solve for individual ages.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     25
+    ]
+   ]
+  },
+  {
+   "id": "n026",
+   "name": "Solving standard chicken-rabbit problems via hypothesis",
+   "name_zh": "假设法解标准鸡兔同笼问题",
+   "description": "Assume all animals are of one kind, calculate the total difference from the actual head/leg counts, and divide by the difference per unit to determine the two populations.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     26
+    ],
+    [
+     "openai",
+     33
+    ],
+    [
+     "openai",
+     47
+    ],
+    [
+     "anthropic",
+     34
+    ],
+    [
+     "deepseek",
+     69
+    ],
+    [
+     "moonshot",
+     36
+    ]
+   ]
+  },
+  {
+   "id": "n027",
+   "name": "Solving grouped and packaged chicken-rabbit variants",
+   "name_zh": "分组打包法解鸡兔同笼及拓展题",
+   "description": "Pair items with differing attributes (e.g., table tennis singles and doubles, multi-denomination stamps) into fixed packages to resolve surplus/deficit conditions.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     27
+    ]
+   ]
+  },
+  {
+   "id": "n028",
+   "name": "Differentiating tree-planting boundary configurations",
+   "name_zh": "识别植树问题的三种端点情形",
+   "description": "Identify whether an open-line tree-planting problem has both ends planted, one end planted, or neither end planted, and relate count to intervals accordingly.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     28
+    ],
+    [
+     "google",
+     29
+    ],
+    [
+     "openai",
+     91
+    ],
+    [
+     "openai",
+     92
+    ],
+    [
+     "anthropic",
+     93
+    ],
+    [
+     "deepseek",
+     77
+    ],
+    [
+     "moonshot",
+     44
+    ],
+    [
+     "moonshot",
+     105
+    ]
+   ]
+  },
+  {
+   "id": "n029",
+   "name": "Solving closed-loop and variant interval problems",
+   "name_zh": "封闭路线植树及楼梯锯木等类比模型",
+   "description": "Solve interval problems on closed loops (where tree count equals interval count) and analogize to climbing stairs, sawing logs, and ringing bells.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "n030",
+   "name": "Calculating counts in solid square formations",
+   "name_zh": "实心方阵的边长与总数计算",
+   "description": "Relate the number of items per side, total items (n x n), and the outer perimeter layer count (4n - 4) for solid square arrays.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     31
+    ]
+   ]
+  },
+  {
+   "id": "n031",
+   "name": "Calculating nested layers in hollow square formations",
+   "name_zh": "空心方阵的层数与增减变化计算",
+   "description": "Compute the number of items in single or multi-layered hollow square formations and calculate changes when adding or removing surrounding layers.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     32
+    ]
+   ]
+  },
+  {
+   "id": "n032",
+   "name": "Tracing single-track reverse operations",
+   "name_zh": "单线倒推法（还原问题）",
+   "description": "Reconstruct an original starting number by systematically applying inverse operations in reverse chronological order from the final outcome.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     33
+    ],
+    [
+     "openai",
+     30
+    ],
+    [
+     "anthropic",
+     33
+    ],
+    [
+     "deepseek",
+     70
+    ],
+    [
+     "moonshot",
+     33
+    ],
+    [
+     "mistral",
+     47
+    ]
+   ]
+  },
+  {
+   "id": "n033",
+   "name": "Working backwards with fractions and fractional offsets",
+   "name_zh": "含“一半多/少几个”的还原问题",
+   "description": "Use flow diagrams or line segments to reconstruct original quantities when successive steps take a fractional part (such as half) plus or minus a constant offset.",
+   "terminal": false,
+   "families": [
+    "google",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "google",
+     34
+    ],
+    [
+     "moonshot",
+     34
+    ]
+   ]
+  },
+  {
+   "id": "n034",
+   "name": "Solving multi-party mutual transfer problems with constant sum",
+   "name_zh": "和不变的多人多次相互给移还原问题",
+   "description": "Construct backwards step tables to track quantities across multiple sequential transfers where the total sum remains constant.",
+   "terminal": true,
+   "families": [
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     35
+    ],
+    [
+     "openai",
+     31
+    ]
+   ]
+  },
+  {
+   "id": "n035",
+   "name": "Identifying the cycle length in periodic sequences",
+   "name_zh": "寻找周期规律与确定周期长度",
+   "description": "Examine repeating sequences of shapes, colors, letters, or digits to define the fundamental repeating unit and count its length.",
+   "terminal": false,
+   "families": [
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     36
+    ],
+    [
+     "openai",
+     70
+    ]
+   ]
+  },
+  {
+   "id": "n036",
+   "name": "Determining the n-th element of a periodic sequence using division remainders",
+   "name_zh": "余数法确定周期中的第n个对象",
+   "description": "Divide the target position n by the period length and interpret the quotient (completed cycles) and remainder to identify the specific item.",
+   "terminal": false,
+   "families": [
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     37
+    ],
+    [
+     "openai",
+     71
+    ]
+   ]
+  },
+  {
+   "id": "n037",
+   "name": "Cumulative counting of specific items across multiple periods",
+   "name_zh": "周期中特定对象的累计出现次数计算",
+   "description": "Compute how many times a particular element or sub-pattern occurs across n positions by multiplying occurrences per cycle by full cycles and adding remainder contributions.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     38
+    ]
+   ]
+  },
+  {
+   "id": "n038",
+   "name": "Solving calendar and day-of-week periodic problems",
+   "name_zh": "日期与星期中的周期问题",
+   "description": "Calculate elapsed calendar days across months or years, modulo by 7, and determine target days of the week.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     39
+    ]
+   ]
+  },
+  {
+   "id": "n039",
+   "name": "Multi-sequence synchronized period matching",
+   "name_zh": "多周期同步循环与同列对齐问题",
+   "description": "Analyze two or more cyclic text or number sequences operating in parallel to determine the elements aligned at any given position.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     40
+    ]
+   ]
+  },
+  {
+   "id": "n040",
+   "name": "Applying basic motion relationship s = v x t",
+   "name_zh": "行程基本公式运用与时间单位换算",
+   "description": "Solve for speed, time, or distance given the other two parameters, performing required conversions between seconds, minutes, and hours.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     41
+    ],
+    [
+     "openai",
+     38
+    ],
+    [
+     "deepseek",
+     31
+    ],
+    [
+     "deepseek",
+     64
+    ]
+   ]
+  },
+  {
+   "id": "n041",
+   "name": "Solving opposite-direction separation problems",
+   "name_zh": "同地出发反向相离行程问题",
+   "description": "Calculate the total separation distance between two travelers moving in opposite directions using the sum of their speeds.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     42
+    ]
+   ]
+  },
+  {
+   "id": "n042",
+   "name": "Solving simultaneous encounter motion problems",
+   "name_zh": "相向而行的相遇行程问题（同时出发）",
+   "description": "Determine encounter time or initial distance between two travelers moving towards each other simultaneously using encounter distance / sum of speeds.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "google",
+     43
+    ],
+    [
+     "anthropic",
+     26
+    ],
+    [
+     "deepseek",
+     65
+    ],
+    [
+     "moonshot",
+     48
+    ]
+   ]
+  },
+  {
+   "id": "n043",
+   "name": "Solving phased encounter motion problems with departure delays",
+   "name_zh": "不同时出发的相遇行程问题",
+   "description": "Deduct the distance covered by the early traveler during head-start time before applying speed sum to the remaining gap.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     44
+    ],
+    [
+     "anthropic",
+     27
+    ]
+   ]
+  },
+  {
+   "id": "n044",
+   "name": "Calculating standard rectangle and square perimeters",
+   "name_zh": "长方形与正方形的基础周长计算",
+   "description": "Calculate perimeter from side lengths, and conversely compute the side length or missing dimension given perimeter and one known side.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     45
+    ],
+    [
+     "openai",
+     52
+    ],
+    [
+     "deepseek",
+     34
+    ],
+    [
+     "moonshot",
+     85
+    ]
+   ]
+  },
+  {
+   "id": "n045",
+   "name": "Calculating composite perimeters via edge translation",
+   "name_zh": "平移法求巧算不规则图形周长",
+   "description": "Translate recessed or protruding boundary line segments outward to transform stepped or notched shapes into standard bounding rectangles.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     46
+    ],
+    [
+     "openai",
+     56
+    ],
+    [
+     "anthropic",
+     40
+    ],
+    [
+     "deepseek",
+     35
+    ],
+    [
+     "moonshot",
+     86
+    ]
+   ]
+  },
+  {
+   "id": "n046",
+   "name": "Tracking perimeter changes through cutting and pasting",
+   "name_zh": "图形切拼与重叠中的周长增减变化",
+   "description": "Calculate the increase in perimeter when making internal cuts and the reduction in perimeter when overlapping or joining shapes.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     47
+    ]
+   ]
+  },
+  {
+   "id": "n047",
+   "name": "Calculating standard rectangle and square areas",
+   "name_zh": "长方形与正方形的基础面积计算与单位应用",
+   "description": "Calculate area using side length products, and determine missing dimensions from area values using inverse division.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     48
+    ],
+    [
+     "google",
+     62
+    ],
+    [
+     "openai",
+     53
+    ],
+    [
+     "openai",
+     99
+    ],
+    [
+     "anthropic",
+     77
+    ],
+    [
+     "deepseek",
+     37
+    ],
+    [
+     "deepseek",
+     83
+    ],
+    [
+     "moonshot",
+     51
+    ],
+    [
+     "moonshot",
+     88
+    ],
+    [
+     "mistral",
+     25
+    ]
+   ]
+  },
+  {
+   "id": "n048",
+   "name": "Splitting and completing composite rectilinear areas",
+   "name_zh": "割补法与添补法求组合图形面积",
+   "description": "Calculate the area of L-shaped, T-shaped, or notched rectilinear figures by decomposing them into non-overlapping rectangles or subtracting external voids.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     49
+    ],
+    [
+     "google",
+     63
+    ],
+    [
+     "openai",
+     101
+    ],
+    [
+     "anthropic",
+     78
+    ],
+    [
+     "deepseek",
+     38
+    ],
+    [
+     "moonshot",
+     52
+    ],
+    [
+     "mistral",
+     26
+    ]
+   ]
+  },
+  {
+   "id": "n049",
+   "name": "Translating paths to evaluate remaining rectangular area",
+   "name_zh": "平移道路求空白草坪/花圃面积",
+   "description": "Translate intersecting or traversing uniform pathways to the outer boundaries of a rectangular plot to calculate residual area in one product.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     50
+    ]
+   ]
+  },
+  {
+   "id": "n050",
+   "name": "Area relations in composite squares and triangles",
+   "name_zh": "正方形组合与等积变形求阴影面积",
+   "description": "Compute the area of shaded triangles or quadrilaterals embedded within joined squares using trapezoid formulas or equal-area shearing along diagonals.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     51
+    ]
+   ]
+  },
+  {
+   "id": "n051",
+   "name": "Distinguishing between parallel and intersecting geometric lines",
+   "name_zh": "平面直线的相交、平行与交点极值分析",
+   "description": "Determine how introducing new lines into a planar diagram alters the count of intersection points and regions, distinguishing parallel lines from concurrent intersections.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     52
+    ]
+   ]
+  },
+  {
+   "id": "n052",
+   "name": "Counting line segments systematically",
+   "name_zh": "有序数线段（打枪法/公式法）",
+   "description": "Count all line segments along a partitioned straight line using endpoint pairing or consecutive index summation 1 + 2 + ... + n.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     53
+    ]
+   ]
+  },
+  {
+   "id": "n053",
+   "name": "Counting rectangles on standard and modified grids",
+   "name_zh": "数方格网及特殊线段构成的长方形个数",
+   "description": "Count total rectangles on grid networks using horizontal and vertical segment combinations (m(m+1)/2 x n(n+1)/2) and account for added or deleted segments.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     54
+    ]
+   ]
+  },
+  {
+   "id": "n054",
+   "name": "Counting overlapping composite planar figures",
+   "name_zh": "数重叠与交错组合图形",
+   "description": "Count squares, rectangles, or triangles spanning across intersecting large shapes using the principle of inclusion-exclusion on sub-regions.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     55
+    ]
+   ]
+  },
+  {
+   "id": "n055",
+   "name": "Applying the addition principle for disjoint classifications",
+   "name_zh": "分类加法计数原理",
+   "description": "Partition problem outcomes into mutually exclusive categories and sum their individual counts to find the grand total.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     56
+    ],
+    [
+     "openai",
+     77
+    ],
+    [
+     "anthropic",
+     52
+    ],
+    [
+     "moonshot",
+     64
+    ],
+    [
+     "mistral",
+     52
+    ]
+   ]
+  },
+  {
+   "id": "n056",
+   "name": "Applying the multiplication principle for multi-stage selection",
+   "name_zh": "分步乘法计数原理（搭配问题）",
+   "description": "Break a complete task into independent consecutive stages (such as clothing outfits or meal combos) and multiply the options per stage.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     57
+    ],
+    [
+     "openai",
+     78
+    ],
+    [
+     "anthropic",
+     53
+    ],
+    [
+     "moonshot",
+     65
+    ],
+    [
+     "mistral",
+     53
+    ]
+   ]
+  },
+  {
+   "id": "n057",
+   "name": "Selecting between addition and multiplication counting principles",
+   "name_zh": "辨析并综合运用加乘原理",
+   "description": "Discern whether complex combinatorial choices require categorization (addition), staging (multiplication), or a nested combination of both.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     58
+    ],
+    [
+     "anthropic",
+     54
+    ]
+   ]
+  },
+  {
+   "id": "n058",
+   "name": "Shortest-path grid routing with obstacles",
+   "name_zh": "标数法求最短路线（含障碍点）",
+   "description": "Label vertices with cumulative route counts from start to finish, treating obstructed vertices or streets as zero paths.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "google",
+     59
+    ],
+    [
+     "anthropic",
+     57
+    ],
+    [
+     "deepseek",
+     85
+    ],
+    [
+     "moonshot",
+     70
+    ]
+   ]
+  },
+  {
+   "id": "n059",
+   "name": "Forming numbers under digit availability constraints",
+   "name_zh": "有条件限制的组数问题",
+   "description": "Count multi-digit numbers that can be formed from given digit sets, enforcing rules on digit reuse, odd/even restrictions, or non-zero leading digits.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     60
+    ],
+    [
+     "anthropic",
+     55
+    ]
+   ]
+  },
+  {
+   "id": "n060",
+   "name": "Systematic integer partition via dictionary order",
+   "name_zh": "字典排列法进行数的拆分",
+   "description": "Enumerate all ways to express an integer as the sum of a fixed number of positive or non-negative integers in strict non-decreasing order.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     61
+    ]
+   ]
+  },
+  {
+   "id": "n061",
+   "name": "Converting between page numbers and total digit counts",
+   "name_zh": "由页码总数求数字总个数及反求总页数",
+   "description": "Break page numbering into 1-digit (1-9), 2-digit (10-99), and 3-digit (100-n) intervals to calculate total digits written or deduce total pages from digit sums.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     64
+    ],
+    [
+     "openai",
+     73
+    ],
+    [
+     "anthropic",
+     102
+    ],
+    [
+     "moonshot",
+     13
+    ]
+   ]
+  },
+  {
+   "id": "n062",
+   "name": "Counting occurrences of a specific digit across page numbers",
+   "name_zh": "页码中某个数字出现的频次统计",
+   "description": "Tally occurrences of a specific digit (e.g., how many times '8' appears) by analyzing units, tens, and hundreds places across page ranges.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     65
+    ]
+   ]
+  },
+  {
+   "id": "n063",
+   "name": "Applying the basic pigeonhole principle to guarantee identical properties",
+   "name_zh": "基本抽屉原理与最不利原则",
+   "description": "Identify items and pigeonholes, compute quotient and remainder via n / k, and assert the guaranteed minimum number of items sharing an attribute.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "google",
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     66
+    ],
+    [
+     "openai",
+     102
+    ],
+    [
+     "anthropic",
+     101
+    ],
+    [
+     "mistral",
+     55
+    ]
+   ]
+  },
+  {
+   "id": "n064",
+   "name": "Solving addition and subtraction cryptarithms",
+   "name_zh": "加减法竖式算式谜",
+   "description": "Determine hidden single digits represented by letters or geometric shapes in addition and subtraction column forms using carry/borrow constraints.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     67
+    ]
+   ]
+  },
+  {
+   "id": "n065",
+   "name": "Solving multi-digit multiplication cryptarithms",
+   "name_zh": "乘法竖式算式谜",
+   "description": "Deduce unknown multiplicand and multiplier digits by combining end-digit multiplication results with leading-digit carry limits.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     68
+    ]
+   ]
+  },
+  {
+   "id": "n066",
+   "name": "Classifying graph vertices by parity of degree",
+   "name_zh": "判断连通图顶点的奇偶性",
+   "description": "Count the number of edges incident to each vertex in a topological network and categorize vertices as odd or even nodes.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "google",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     69
+    ],
+    [
+     "openai",
+     115
+    ],
+    [
+     "anthropic",
+     86
+    ]
+   ]
+  },
+  {
+   "id": "n067",
+   "name": "Evaluating Eulerian traversability",
+   "name_zh": "一笔画问题与欧拉路径判定",
+   "description": "Determine whether a connected network or bridge system can be traversed without retracing any edge by checking whether the number of odd vertices is 0 or 2.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "google",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "google",
+     70
+    ],
+    [
+     "openai",
+     116
+    ],
+    [
+     "anthropic",
+     87
+    ],
+    [
+     "deepseek",
+     86
+    ],
+    [
+     "moonshot",
+     72
+    ],
+    [
+     "mistral",
+     56
+    ]
+   ]
+  },
+  {
+   "id": "n068",
+   "name": "Solving grid deduction and Latin square puzzles",
+   "name_zh": "数独与数阵图的行列不重复推理",
+   "description": "Fill missing symbols or numbers into 4x4 or 5x5 grids satisfying row, column, and block uniqueness alongside directional sightline constraints.",
+   "terminal": false,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     71
+    ]
+   ]
+  },
+  {
+   "id": "n069",
+   "name": "Solving verbal logic matching puzzles using elimination grids",
+   "name_zh": "列表排除法解逻辑推理问题",
+   "description": "Construct two-dimensional cross-reference tables (tick-and-cross grids) to systematically eliminate impossible pairings and deduce unique person-attribute matches.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     72
+    ],
+    [
+     "anthropic",
+     80
+    ]
+   ]
+  },
+  {
+   "id": "n070",
+   "name": "Solving discrete optimization and purchase packaging problems",
+   "name_zh": "离散最优化与打包购买统筹策略",
+   "description": "Compare unit costs across different bundle sizes to identify greedy purchasing combinations that meet minimum quantity thresholds at lowest total expense.",
+   "terminal": true,
+   "families": [
+    "google"
+   ],
+   "members": [
+    [
+     "google",
+     73
+    ]
+   ]
+  },
+  {
+   "id": "n071",
+   "name": "Read place value in whole numbers",
+   "name_zh": "认识整数的数位",
+   "description": "Read and write multi-digit whole numbers and identify the value of each digit.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "n072",
+   "name": "Add and subtract multi-digit numbers",
+   "name_zh": "多位数加减法",
+   "description": "Use written addition and subtraction accurately, including carrying and borrowing.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     1
+    ],
+    [
+     "anthropic",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "n073",
+   "name": "Multiply multi-digit numbers",
+   "name_zh": "多位数乘法",
+   "description": "Use written multiplication to calculate products involving multi-digit numbers.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "n074",
+   "name": "Divide whole numbers",
+   "name_zh": "整数除法",
+   "description": "Use written division and interpret a quotient and any remainder in context.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "n075",
+   "name": "Choose the order of operations",
+   "name_zh": "判断运算顺序",
+   "description": "Evaluate expressions containing several operations and parentheses in the correct order.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     4
+    ],
+    [
+     "anthropic",
+     3
+    ],
+    [
+     "deepseek",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "n076",
+   "name": "Use inverse operations",
+   "name_zh": "运用逆运算",
+   "description": "Find an unknown number or check a calculation using the inverse relationship between operations.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "n077",
+   "name": "Simplify products and quotients by cancellation",
+   "name_zh": "乘除连算中的约简",
+   "description": "Rearrange a chain of multiplication and division so matching factors cancel correctly.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "n078",
+   "name": "Check arithmetic with estimation",
+   "name_zh": "估算检验计算结果",
+   "description": "Estimate a result and use inverse operations to detect unreasonable answers.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     11
+    ]
+   ]
+  },
+  {
+   "id": "n079",
+   "name": "Interpret decimal place value",
+   "name_zh": "认识小数数位和计数单位",
+   "description": "Identify decimal place values and distinguish a decimal’s value from its counting unit.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "n080",
+   "name": "Compare equivalent decimal forms",
+   "name_zh": "比较末尾添零的小数",
+   "description": "Recognize that trailing zeros can leave a decimal’s value unchanged while changing its written place unit.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     13
+    ]
+   ]
+  },
+  {
+   "id": "n081",
+   "name": "Add and subtract decimals",
+   "name_zh": "小数加减法",
+   "description": "Align decimal places and calculate decimal sums and differences accurately.",
+   "terminal": false,
+   "families": [
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     14
+    ],
+    [
+     "moonshot",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "n082",
+   "name": "Simplify decimal expressions",
+   "name_zh": "小数巧算",
+   "description": "Group positive and negative decimal terms to form convenient whole-number totals.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     15
+    ]
+   ]
+  },
+  {
+   "id": "n083",
+   "name": "Interpret a fraction and its unit",
+   "name_zh": "理解分数及分数单位",
+   "description": "Explain the numerator, denominator, and unit fraction using equal parts of a whole.",
+   "terminal": false,
+   "families": [
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     16
+    ],
+    [
+     "moonshot",
+     15
+    ]
+   ]
+  },
+  {
+   "id": "n084",
+   "name": "Add and subtract like-denominator fractions",
+   "name_zh": "同分母分数加减法",
+   "description": "Combine or subtract fractions with the same denominator.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "n085",
+   "name": "Simplify grouped fraction calculations",
+   "name_zh": "分数加减巧算",
+   "description": "Remove parentheses correctly and group compatible fractional terms.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     18
+    ]
+   ]
+  },
+  {
+   "id": "n086",
+   "name": "Solve a one-step equation",
+   "name_zh": "解一步方程",
+   "description": "Find an unknown in an equation by applying the same inverse operation to both sides.",
+   "terminal": false,
+   "families": [
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     19
+    ],
+    [
+     "mistral",
+     16
+    ]
+   ]
+  },
+  {
+   "id": "n087",
+   "name": "Solve an equation with parentheses",
+   "name_zh": "解含括号的方程",
+   "description": "Expand parentheses, collect like terms, and check the resulting solution.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     20
+    ]
+   ]
+  },
+  {
+   "id": "n088",
+   "name": "Translate a word problem into operations",
+   "name_zh": "把文字条件转化为算式",
+   "description": "Identify the known quantities, the unknown, and the operations linking them.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     22
+    ],
+    [
+     "anthropic",
+     105
+    ]
+   ]
+  },
+  {
+   "id": "n089",
+   "name": "Keep track of units",
+   "name_zh": "标注并检查单位",
+   "description": "Attach appropriate units to quantities and check that an answer has the required unit.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     23
+    ]
+   ]
+  },
+  {
+   "id": "n090",
+   "name": "Solve successive total-and-remainder problems",
+   "name_zh": "解决总量与剩余量问题",
+   "description": "Track a starting amount through purchases, uses, or other changes to find a total or remainder.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     24
+    ]
+   ]
+  },
+  {
+   "id": "n091",
+   "name": "Find a quantity from a simple multiple",
+   "name_zh": "已知倍数求数量",
+   "description": "Use a multiplicative comparison to find one quantity from another.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     25
+    ]
+   ]
+  },
+  {
+   "id": "n092",
+   "name": "Track transfers between two people",
+   "name_zh": "两人之间的转移问题",
+   "description": "Account for how giving an amount changes both quantities and their difference.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     29
+    ],
+    [
+     "deepseek",
+     73
+    ]
+   ]
+  },
+  {
+   "id": "n093",
+   "name": "Recognize a two-case assumption problem",
+   "name_zh": "识别鸡兔同笼型问题",
+   "description": "Recognize when a total count and a second total arise from two types with different contributions.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     32
+    ]
+   ]
+  },
+  {
+   "id": "n094",
+   "name": "Solve a disguised two-case assumption problem",
+   "name_zh": "变式假设法",
+   "description": "Remove fixed contributions and identify the two variable contributions before applying the assumption method.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     34
+    ]
+   ]
+  },
+  {
+   "id": "n095",
+   "name": "Compare two distribution plans",
+   "name_zh": "盈亏问题",
+   "description": "Use the change in amount per person and the change in surplus or shortage to find the number of people.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "mistral",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     35
+    ],
+    [
+     "anthropic",
+     23
+    ],
+    [
+     "deepseek",
+     68
+    ],
+    [
+     "moonshot",
+     38
+    ],
+    [
+     "mistral",
+     46
+    ]
+   ]
+  },
+  {
+   "id": "n096",
+   "name": "Find a constant rate",
+   "name_zh": "求单位量",
+   "description": "Divide a total by the relevant numbers of workers, items, or time units to obtain a unit rate.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     36
+    ]
+   ]
+  },
+  {
+   "id": "n097",
+   "name": "Solve multi-factor rate problems",
+   "name_zh": "多因素归一问题",
+   "description": "Use a constant unit rate to relate different numbers of workers, time periods, and output amounts.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     37
+    ],
+    [
+     "deepseek",
+     74
+    ]
+   ]
+  },
+  {
+   "id": "n098",
+   "name": "Calculate average speed over stages",
+   "name_zh": "分段行程的平均速度",
+   "description": "Find total distance and total time before calculating average speed.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     39
+    ]
+   ]
+  },
+  {
+   "id": "n099",
+   "name": "Compare early and late arrivals",
+   "name_zh": "提前与迟到的行程问题",
+   "description": "Represent two travel speeds relative to a common deadline and determine the journey length.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     40
+    ]
+   ]
+  },
+  {
+   "id": "n100",
+   "name": "Find an arithmetic mean",
+   "name_zh": "求平均数",
+   "description": "Divide a total by the number of values and interpret the result in context.",
+   "terminal": true,
+   "families": [
+    "deepseek",
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     41
+    ],
+    [
+     "deepseek",
+     56
+    ],
+    [
+     "mistral",
+     23
+    ]
+   ]
+  },
+  {
+   "id": "n101",
+   "name": "Use changes in an average",
+   "name_zh": "利用平均数变化求数量",
+   "description": "Relate a change in one score or amount to the resulting change in the overall average.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     42
+    ]
+   ]
+  },
+  {
+   "id": "n102",
+   "name": "Recognize what stays fixed in an age problem",
+   "name_zh": "识别年龄差不变",
+   "description": "Use the fact that people age by the same amount while their age difference stays fixed.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     43
+    ]
+   ]
+  },
+  {
+   "id": "n103",
+   "name": "Solve present-age sum and difference problems",
+   "name_zh": "年龄和差问题",
+   "description": "Convert ages given at another time to present conditions and find each age.",
+   "terminal": true,
+   "families": [
+    "deepseek",
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     44
+    ],
+    [
+     "deepseek",
+     62
+    ],
+    [
+     "mistral",
+     42
+    ]
+   ]
+  },
+  {
+   "id": "n104",
+   "name": "Solve ages at different times",
+   "name_zh": "过去与未来年龄倍数问题",
+   "description": "Use a timeline or bar model to connect age ratios at different times.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     45
+    ]
+   ]
+  },
+  {
+   "id": "n105",
+   "name": "Solve multi-person age relationships",
+   "name_zh": "多人年龄关系问题",
+   "description": "Track several people’s ages across different dates while preserving pairwise age differences.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     46
+    ]
+   ]
+  },
+  {
+   "id": "n106",
+   "name": "Track repeated transformations",
+   "name_zh": "多次变化的数量追踪",
+   "description": "Represent how each of two kinds of action changes a quantity and determine their counts from a final state.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     48
+    ]
+   ]
+  },
+  {
+   "id": "n107",
+   "name": "Choose a model for a word problem",
+   "name_zh": "辨认并选择应用题模型",
+   "description": "Distinguish additive, multiplicative, rate, average, age, transfer, assumption, and surplus-shortage structures.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     49
+    ]
+   ]
+  },
+  {
+   "id": "n108",
+   "name": "Solve and check multi-step word problems",
+   "name_zh": "综合解决多步应用题",
+   "description": "Select a suitable model, carry out the steps, and check the answer against every condition.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     50
+    ]
+   ]
+  },
+  {
+   "id": "n109",
+   "name": "Find perimeter by counting boundary lengths",
+   "name_zh": "数边求周长",
+   "description": "Add the lengths on a figure’s outer boundary without counting internal edges.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     51
+    ],
+    [
+     "deepseek",
+     33
+    ]
+   ]
+  },
+  {
+   "id": "n110",
+   "name": "Distinguish perimeter from area",
+   "name_zh": "区分周长与面积",
+   "description": "Choose boundary length or covered surface as appropriate and use the corresponding units.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     54
+    ]
+   ]
+  },
+  {
+   "id": "n111",
+   "name": "Combine equal small shapes",
+   "name_zh": "由相同小图形求大图形",
+   "description": "Infer the dimensions of a composite shape from its arrangement of equal small shapes.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     55
+    ]
+   ]
+  },
+  {
+   "id": "n112",
+   "name": "Track perimeter changes after moving parts",
+   "name_zh": "平移拼块后的周长变化",
+   "description": "Identify newly exposed boundary segments after parts of a figure are moved.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     57
+    ]
+   ]
+  },
+  {
+   "id": "n113",
+   "name": "Find a composite area by partitioning",
+   "name_zh": "分割法求组合图形面积",
+   "description": "Split a figure into known shapes and add their areas.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     58
+    ]
+   ]
+  },
+  {
+   "id": "n114",
+   "name": "Find a composite area by subtraction",
+   "name_zh": "补形法求组合图形面积",
+   "description": "Enclose a figure in a simpler shape and subtract unwanted areas.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     59
+    ]
+   ]
+  },
+  {
+   "id": "n115",
+   "name": "Identify a base and its height",
+   "name_zh": "辨认底与对应的高",
+   "description": "Identify the perpendicular height corresponding to a chosen base, including one drawn outside a shape.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     60
+    ]
+   ]
+  },
+  {
+   "id": "n116",
+   "name": "Find a parallelogram’s area",
+   "name_zh": "平行四边形面积",
+   "description": "Use the corresponding base and height to find a parallelogram’s area or a missing dimension.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     61
+    ],
+    [
+     "deepseek",
+     39
+    ],
+    [
+     "moonshot",
+     92
+    ]
+   ]
+  },
+  {
+   "id": "n117",
+   "name": "Find a triangle’s area",
+   "name_zh": "三角形面积",
+   "description": "Use a triangle’s base and corresponding height, accounting for the factor of one half.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     62
+    ]
+   ]
+  },
+  {
+   "id": "n118",
+   "name": "Find a trapezoid’s area",
+   "name_zh": "梯形面积",
+   "description": "Use both parallel sides and the perpendicular height to calculate a trapezoid’s area.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     63
+    ],
+    [
+     "anthropic",
+     39
+    ],
+    [
+     "deepseek",
+     40
+    ]
+   ]
+  },
+  {
+   "id": "n119",
+   "name": "Scale square dimensions and area",
+   "name_zh": "正方形边长与面积的倍数",
+   "description": "Relate a change in square perimeter or side length to the resulting change in area.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     64
+    ]
+   ]
+  },
+  {
+   "id": "n120",
+   "name": "Measure an angle",
+   "name_zh": "用量角器量角",
+   "description": "Align a protractor correctly, read the appropriate scale, and report an angle in degrees.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     65
+    ]
+   ]
+  },
+  {
+   "id": "n121",
+   "name": "Choose and apply a geometry method",
+   "name_zh": "综合选择图形解法",
+   "description": "Identify the relevant dimensions and choose perimeter, area, partition, subtraction, or scaling methods for a figure.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     66
+    ]
+   ]
+  },
+  {
+   "id": "n122",
+   "name": "Read a regular number array",
+   "name_zh": "数表中的行列规律",
+   "description": "Relate a number’s row and column to its position in a regularly filled array.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     72
+    ],
+    [
+     "anthropic",
+     67
+    ],
+    [
+     "deepseek",
+     54
+    ]
+   ]
+  },
+  {
+   "id": "n123",
+   "name": "Interpret a newly defined operation",
+   "name_zh": "理解新定义运算",
+   "description": "Infer a stated operation’s rule from examples and apply it to new inputs.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     74
+    ]
+   ]
+  },
+  {
+   "id": "n124",
+   "name": "Recognize and extend numerical patterns",
+   "name_zh": "综合识别与运用数的规律",
+   "description": "Distinguish increasing, repeating, array, and defined-operation rules and use the appropriate one.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     75
+    ]
+   ]
+  },
+  {
+   "id": "n125",
+   "name": "Count with a systematic list",
+   "name_zh": "有序枚举",
+   "description": "List possibilities in a fixed order so none are missed or repeated.",
+   "terminal": true,
+   "families": [
+    "deepseek",
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     76
+    ],
+    [
+     "deepseek",
+     71
+    ],
+    [
+     "mistral",
+     50
+    ]
+   ]
+  },
+  {
+   "id": "n126",
+   "name": "Count arrangements of distinct objects",
+   "name_zh": "不同对象的排列",
+   "description": "Count ways to place distinct objects in distinct positions without reuse.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     79
+    ]
+   ]
+  },
+  {
+   "id": "n127",
+   "name": "Handle a forbidden leading zero",
+   "name_zh": "处理首位不能为零",
+   "description": "Count multi-digit numbers made from given digits while excluding those that begin with zero.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     80
+    ]
+   ]
+  },
+  {
+   "id": "n128",
+   "name": "Count digit arrangements with restrictions",
+   "name_zh": "按奇偶或倍数条件组数",
+   "description": "Apply place-value, parity, or divisibility restrictions before counting arrangements.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     81
+    ]
+   ]
+  },
+  {
+   "id": "n129",
+   "name": "Use a divisibility test for four",
+   "name_zh": "判断四的倍数",
+   "description": "Determine whether a whole number is divisible by four from its last two digits.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     82
+    ]
+   ]
+  },
+  {
+   "id": "n130",
+   "name": "Count choices by subsets",
+   "name_zh": "按选取与不选取计数",
+   "description": "Count combinations of available distinct objects and account for whether choosing none is allowed.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     83
+    ]
+   ]
+  },
+  {
+   "id": "n131",
+   "name": "Distinguish ordered from unordered distributions",
+   "name_zh": "区分有序与无序分配",
+   "description": "Decide whether swapping recipients or rearranging piles creates a new outcome.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     84
+    ]
+   ]
+  },
+  {
+   "id": "n132",
+   "name": "Count positive distributions to named recipients",
+   "name_zh": "至少分一个的有序分配",
+   "description": "Systematically count ways to distribute identical objects among named recipients with a minimum for each.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     85
+    ]
+   ]
+  },
+  {
+   "id": "n133",
+   "name": "Count unequal unordered piles",
+   "name_zh": "数量互异的无序分堆",
+   "description": "List distinct positive pile sizes in increasing order so equivalent rearrangements count once.",
+   "terminal": false,
+   "families": [
+    "moonshot",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     86
+    ],
+    [
+     "moonshot",
+     74
+    ]
+   ]
+  },
+  {
+   "id": "n134",
+   "name": "Distribute first and then arrange",
+   "name_zh": "先拆数再排列",
+   "description": "Find allowable pile sizes and then count assignments of those sizes to named recipients.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     87
+    ]
+   ]
+  },
+  {
+   "id": "n135",
+   "name": "Count possibilities with a tree diagram",
+   "name_zh": "树状图计数",
+   "description": "Build a branching diagram for sequential choices subject to restrictions.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "mistral",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     88
+    ],
+    [
+     "anthropic",
+     104
+    ],
+    [
+     "deepseek",
+     92
+    ],
+    [
+     "mistral",
+     54
+    ]
+   ]
+  },
+  {
+   "id": "n136",
+   "name": "Count simple shortest grid paths",
+   "name_zh": "简单网格最短路线计数",
+   "description": "Identify required moves and count short routes on a small grid without unnecessary detours.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     89
+    ]
+   ]
+  },
+  {
+   "id": "n137",
+   "name": "Count constrained or surface paths",
+   "name_zh": "受限制与立体表面路线计数",
+   "description": "Split a path diagram into cases or use intermediate-point counts when a single grid rule is insufficient.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     90
+    ]
+   ]
+  },
+  {
+   "id": "n138",
+   "name": "Count the boundary of a square array",
+   "name_zh": "方阵最外层人数",
+   "description": "Count a square array’s outer layer without counting its corner positions twice.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     93
+    ]
+   ]
+  },
+  {
+   "id": "n139",
+   "name": "Relate filled and hollow square arrays",
+   "name_zh": "实心与空心方阵",
+   "description": "Use side lengths or successive layer counts to find totals and missing dimensions.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     94
+    ]
+   ]
+  },
+  {
+   "id": "n140",
+   "name": "Count pairs and maximum intersections",
+   "name_zh": "两两配对与最多交点",
+   "description": "Count distinct pairs of points or lines and state the conditions needed to attain the maximum.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     95
+    ]
+   ]
+  },
+  {
+   "id": "n141",
+   "name": "Count nested figures by size",
+   "name_zh": "按大小分类数图形",
+   "description": "Count triangles or other figures systematically by size or position without duplication.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     96
+    ],
+    [
+     "deepseek",
+     46
+    ]
+   ]
+  },
+  {
+   "id": "n142",
+   "name": "Choose and verify a counting method",
+   "name_zh": "综合选择并检验计数方法",
+   "description": "Recognize whether a task needs listing, cases, stages, arrangements, distributions, or path counting and check for omissions and duplicates.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     97
+    ]
+   ]
+  },
+  {
+   "id": "n143",
+   "name": "Represent groups with overlapping circles",
+   "name_zh": "用集合图表示重叠",
+   "description": "Place totals, overlaps, and neither-group counts in the correct regions of a two-group diagram.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     98
+    ]
+   ]
+  },
+  {
+   "id": "n144",
+   "name": "Find only-one and neither counts",
+   "name_zh": "求只属于一类与两类都不属于",
+   "description": "Use a total and overlapping group counts to find exclusive and outside regions.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     100
+    ]
+   ]
+  },
+  {
+   "id": "n145",
+   "name": "Count multiples using overlap",
+   "name_zh": "倍数的容斥计数",
+   "description": "Count numbers divisible by either of two divisors without double-counting common multiples.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     103
+    ],
+    [
+     "anthropic",
+     74
+    ],
+    [
+     "deepseek",
+     84
+    ]
+   ]
+  },
+  {
+   "id": "n146",
+   "name": "Use set and number properties in combination",
+   "name_zh": "综合运用集合与数的性质",
+   "description": "Choose overlap counting, divisibility, parity, or pigeonhole reasoning and justify the choice.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     105
+    ]
+   ]
+  },
+  {
+   "id": "n147",
+   "name": "Use row, column, and diagonal sum constraints",
+   "name_zh": "利用数阵等和条件",
+   "description": "Write equal-sum relationships for rows, columns, or diagonals to find missing entries.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     106
+    ]
+   ]
+  },
+  {
+   "id": "n148",
+   "name": "Solve a three-by-three magic square",
+   "name_zh": "三阶幻方推数",
+   "description": "Use shared entries and equal line sums to deduce missing numbers in a small magic square.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     107
+    ]
+   ]
+  },
+  {
+   "id": "n149",
+   "name": "Solve a larger magic array",
+   "name_zh": "多行多列幻方推数",
+   "description": "Combine several row, column, and diagonal equations to solve a larger array.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     108
+    ]
+   ]
+  },
+  {
+   "id": "n150",
+   "name": "Use equal-product grid constraints",
+   "name_zh": "数阵等积条件",
+   "description": "Compare row, column, and diagonal products to determine unknown nonzero entries.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     109
+    ]
+   ]
+  },
+  {
+   "id": "n151",
+   "name": "Solve a digit puzzle by column",
+   "name_zh": "按数位破解竖式谜",
+   "description": "Track carries and digit restrictions from one column to the next in an unknown-digit calculation.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     110
+    ],
+    [
+     "anthropic",
+     81
+    ],
+    [
+     "deepseek",
+     88
+    ]
+   ]
+  },
+  {
+   "id": "n152",
+   "name": "Organize clues in a logic table",
+   "name_zh": "列表排除推理",
+   "description": "Record possible and impossible assignments and use clues to eliminate cases.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     111
+    ]
+   ]
+  },
+  {
+   "id": "n153",
+   "name": "Deduce a grid from row and column clues",
+   "name_zh": "行列提示填格",
+   "description": "Combine row, column, adjacency, and exclusion clues to fill a constrained grid.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     112
+    ]
+   ]
+  },
+  {
+   "id": "n154",
+   "name": "Check a deduction for uniqueness",
+   "name_zh": "检验推理结果的唯一性",
+   "description": "Test a proposed solution against every clue and determine whether another solution remains possible.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     113
+    ]
+   ]
+  },
+  {
+   "id": "n155",
+   "name": "Solve mixed logic and number puzzles",
+   "name_zh": "综合解决逻辑数阵题",
+   "description": "Choose equations, place-value reasoning, tables, or grid exclusions and verify all constraints.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     114
+    ]
+   ]
+  },
+  {
+   "id": "n156",
+   "name": "Modify a network for one-stroke drawing",
+   "name_zh": "增删线段实现一笔画",
+   "description": "Predict how adding or removing an edge changes vertex parity and one-stroke feasibility.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     117
+    ]
+   ]
+  },
+  {
+   "id": "n157",
+   "name": "Represent tournament results",
+   "name_zh": "用表或图记录比赛结果",
+   "description": "Record each pair’s match and infer possible wins, draws, losses, and scores.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     118
+    ]
+   ]
+  },
+  {
+   "id": "n158",
+   "name": "Schedule short jobs first",
+   "name_zh": "短任务优先安排",
+   "description": "Order jobs on one server to minimize the combined waiting and service time.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     119
+    ]
+   ]
+  },
+  {
+   "id": "n159",
+   "name": "Schedule jobs across parallel servers",
+   "name_zh": "多服务台的任务安排",
+   "description": "Assign and order jobs across several servers to reduce total completion time.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     120
+    ]
+   ]
+  },
+  {
+   "id": "n160",
+   "name": "Minimize movement to one location",
+   "name_zh": "集中运输的最省费用地点",
+   "description": "Compare weighted travel distances to choose a low-cost gathering location.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     121
+    ]
+   ]
+  },
+  {
+   "id": "n161",
+   "name": "Minimize costs in a small transport table",
+   "name_zh": "调运方案的费用最优化",
+   "description": "Meet supply and demand constraints while comparing the cost of alternative assignments.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     122
+    ]
+   ]
+  },
+  {
+   "id": "n162",
+   "name": "Justify a best arrangement",
+   "name_zh": "说明最优方案为什么最优",
+   "description": "Compare alternatives or explain why an exchange cannot improve a proposed schedule or transport plan.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     123
+    ]
+   ]
+  },
+  {
+   "id": "n163",
+   "name": "Solve small optimization and network problems",
+   "name_zh": "综合解决网络与最优化问题",
+   "description": "Represent the constraints, choose an appropriate network or cost strategy, and check the proposed result.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     124
+    ]
+   ]
+  },
+  {
+   "id": "n164",
+   "name": "Recognize the structure of an unfamiliar problem",
+   "name_zh": "辨认陌生题目的数学结构",
+   "description": "Separate the story and diagram from their underlying quantities, relationships, restrictions, and goal.",
+   "terminal": false,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     125
+    ]
+   ]
+  },
+  {
+   "id": "n165",
+   "name": "Select, combine, and validate course methods",
+   "name_zh": "综合选法、解题与验证",
+   "description": "Independently choose and combine course methods for an unfamiliar problem, then verify that the answer satisfies all given conditions.",
+   "terminal": true,
+   "families": [
+    "openai"
+   ],
+   "members": [
+    [
+     "openai",
+     126
+    ]
+   ]
+  },
+  {
+   "id": "n166",
+   "name": "Vertical multiplication algorithm",
+   "name_zh": "竖式乘法",
+   "description": "Learner can multiply a multi-digit number by a one- or two-digit number using the standard vertical algorithm.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "n167",
+   "name": "Vertical division algorithm with remainder",
+   "name_zh": "竖式除法（含余数）",
+   "description": "Learner can divide multi-digit numbers by one- or two-digit divisors using the vertical algorithm, obtaining quotient and remainder.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "n168",
+   "name": "Computational shortcuts via distributive/associative law",
+   "name_zh": "运用运算律简化计算",
+   "description": "Learner can split, combine or reorder factors/divisors (e.g. a÷(b×c)=a÷b÷c) to simplify a calculation.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "mistral"
+   ],
+   "members": [
+    [
+     "anthropic",
+     4
+    ],
+    [
+     "mistral",
+     41
+    ]
+   ]
+  },
+  {
+   "id": "n169",
+   "name": "Division check relationship",
+   "name_zh": "除法验算关系",
+   "description": "Learner can verify a division result using dividend = quotient × divisor + remainder.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "n170",
+   "name": "Place-value reasoning for repeated-digit sums",
+   "name_zh": "利用位值原理巧算",
+   "description": "Learner can use place-value decomposition to quickly add numbers formed by permuting the same digits.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "n171",
+   "name": "Solve for an unknown symbol in a numeric equation",
+   "name_zh": "求符号代表的数",
+   "description": "Learner can find the value of an unknown symbol in an equation by applying inverse operations step by step.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "n172",
+   "name": "Solve simple one-variable linear equations",
+   "name_zh": "解简单一元方程",
+   "description": "Learner can expand brackets and collect terms to solve a simple linear equation such as 4x+4=6+(8-x).",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     8
+    ],
+    [
+     "moonshot",
+     18
+    ]
+   ]
+  },
+  {
+   "id": "n173",
+   "name": "Compare decimals by place value",
+   "name_zh": "小数大小比较",
+   "description": "Learner can compare two decimals by comparing digits place by place from left to right.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "n174",
+   "name": "Effect of moving the decimal point",
+   "name_zh": "小数点移动引起的大小变化",
+   "description": "Learner can state how a number's magnitude changes when its decimal point is moved left or right by given places.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "n175",
+   "name": "Solve decimal-point-relocation difference problems",
+   "name_zh": "小数点位置变化差值问题",
+   "description": "Learner can use place-value ratio reasoning to find an original decimal when moving its decimal point creates a stated numeric difference.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     11
+    ]
+   ]
+  },
+  {
+   "id": "n176",
+   "name": "Estimate the digit-length of a quotient",
+   "name_zh": "估算商的位数",
+   "description": "Learner can reason about whether a division's quotient will have one fewer or the same number of digits as the dividend by comparing leading digits.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "n177",
+   "name": "Transfer-then-ratio problems",
+   "name_zh": "转移后倍数关系问题",
+   "description": "Learner can solve problems where one quantity is given to another, changing their ratio, by working out the resulting share structure.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "n178",
+   "name": "Age problems with time-shift alignment",
+   "name_zh": "年龄问题（时间轴对齐）",
+   "description": "Learner can align two people's ages across time using a timeline to find an unknown current or past age.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     18
+    ]
+   ]
+  },
+  {
+   "id": "n179",
+   "name": "Recognise the relational word-problem type",
+   "name_zh": "识别关系类应用题类型",
+   "description": "Learner can read a word problem and decide whether it is a sum-difference, sum-multiple, or difference-multiple structure before solving it.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     19
+    ],
+    [
+     "moonshot",
+     97
+    ]
+   ]
+  },
+  {
+   "id": "n180",
+   "name": "Multi-step relational word problems",
+   "name_zh": "综合数量关系应用题",
+   "description": "Learner can solve word problems that combine several sum/difference/multiple relationships in sequence.",
+   "terminal": true,
+   "families": [
+    "anthropic",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     20
+    ],
+    [
+     "moonshot",
+     27
+    ]
+   ]
+  },
+  {
+   "id": "n181",
+   "name": "Unitary-rate (unit-value) problems",
+   "name_zh": "归一问题",
+   "description": "Learner can find a per-unit rate from given data and scale it to answer a new quantity question.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     21
+    ]
+   ]
+  },
+  {
+   "id": "n182",
+   "name": "Rate problems with changing group size",
+   "name_zh": "归总/工程问题",
+   "description": "Learner can solve work/production-rate problems where the number of workers, days, or units changes, including partial participation.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     22
+    ]
+   ]
+  },
+  {
+   "id": "n183",
+   "name": "Infer group size from remainder constraints",
+   "name_zh": "由余数条件推断份数",
+   "description": "Learner can determine an unknown number of people or groups by testing values against stated division-with-remainder conditions.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     24
+    ]
+   ]
+  },
+  {
+   "id": "n184",
+   "name": "Average problems with overlapping subgroups",
+   "name_zh": "平均数与部分组合问题",
+   "description": "Learner can use total = average × count on overlapping subgroups to isolate an unknown individual or group value.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     25
+    ]
+   ]
+  },
+  {
+   "id": "n185",
+   "name": "Interrupted-journey meeting problems",
+   "name_zh": "途中停顿的相遇问题",
+   "description": "Learner can treat a mid-journey delay as equivalent to a later start when solving a meeting problem.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     28
+    ]
+   ]
+  },
+  {
+   "id": "n186",
+   "name": "Catch-up (same-direction) problems",
+   "name_zh": "追及问题",
+   "description": "Learner can use the speed difference and distance gap to find the time or distance needed for one traveller to catch another.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     29
+    ],
+    [
+     "deepseek",
+     66
+    ],
+    [
+     "moonshot",
+     49
+    ]
+   ]
+  },
+  {
+   "id": "n187",
+   "name": "Recognise the motion-problem type",
+   "name_zh": "识别行程问题类型",
+   "description": "Learner can determine whether a travel problem is a meeting, catch-up, staggered-start, or separating scenario and set it up accordingly.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "n188",
+   "name": "Moving-apart distance problems",
+   "name_zh": "背向而行/距离增加问题",
+   "description": "Learner can compute the resulting distance between two objects that start apart and move further apart or combine an initial gap with subsequent travel.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     31
+    ]
+   ]
+  },
+  {
+   "id": "n189",
+   "name": "Complex motion word problems",
+   "name_zh": "综合行程问题",
+   "description": "Learner can solve motion problems that combine staggered starts, interruptions, and multiple travellers in one scenario.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     32
+    ]
+   ]
+  },
+  {
+   "id": "n190",
+   "name": "Generalised multi-type invariant-sum problems",
+   "name_zh": "多类型头脚（不变量）问题",
+   "description": "Learner can find an invariant combined quantity across more than two item types to solve extended head/leg-style problems.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     35
+    ]
+   ]
+  },
+  {
+   "id": "n191",
+   "name": "Rectangle/square area and perimeter computation",
+   "name_zh": "长（正）方形周长面积计算",
+   "description": "Learner can compute the area and perimeter of a rectangle or square directly from given dimensions.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     36
+    ]
+   ]
+  },
+  {
+   "id": "n192",
+   "name": "Find a missing side from area or perimeter",
+   "name_zh": "由面积/周长求边长",
+   "description": "Learner can use inverse formulas to find an unknown side length given the area or perimeter and other dimensions.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     37
+    ]
+   ]
+  },
+  {
+   "id": "n193",
+   "name": "Parallelogram area with correct base-height pairing",
+   "name_zh": "平行四边形面积（底高匹配）",
+   "description": "Learner can compute a parallelogram's area by correctly identifying which height corresponds to which base among distractors.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     38
+    ]
+   ]
+  },
+  {
+   "id": "n194",
+   "name": "Irregular-figure perimeter/area via translation",
+   "name_zh": "平移法求不规则图形周长/面积",
+   "description": "Learner can mentally translate parts of an irregular figure to form an equivalent rectangle for easy perimeter/area calculation.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     41
+    ]
+   ]
+  },
+  {
+   "id": "n195",
+   "name": "Sum of perimeters after partitioning a rectangle",
+   "name_zh": "分割长方形后周长总和",
+   "description": "Learner can compute the total perimeter of all pieces after a rectangle is cut into smaller rectangles, using the 'each cut adds a fixed length' rule.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     42
+    ]
+   ]
+  },
+  {
+   "id": "n196",
+   "name": "Find an unknown sub-rectangle's dimension in a partition",
+   "name_zh": "分割图中未知小长方形的求解",
+   "description": "Learner can use whole-minus-known-parts or proportional reasoning to find an unknown sub-rectangle's perimeter or area within a partitioned figure.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     43
+    ]
+   ]
+  },
+  {
+   "id": "n197",
+   "name": "Border/frame area computation",
+   "name_zh": "环形/边框面积计算",
+   "description": "Learner can compute the area of a border or path surrounding or bordering a given shape.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     44
+    ]
+   ]
+  },
+  {
+   "id": "n198",
+   "name": "Equation setup from a described area change",
+   "name_zh": "由面积变化列方程求边长",
+   "description": "Learner can set up and solve a simple equation for an unknown side length from a description of how enlarging sides changes area.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     45
+    ]
+   ]
+  },
+  {
+   "id": "n199",
+   "name": "Proportional reasoning between decomposed regions",
+   "name_zh": "图形分解后的比例关系求面积",
+   "description": "Learner can use the ratio between corresponding decomposed parts of two related figures to find an unknown area.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     46
+    ]
+   ]
+  },
+  {
+   "id": "n200",
+   "name": "Composite perimeter/area problem solving",
+   "name_zh": "复合图形周长面积综合解决",
+   "description": "Learner can solve composite perimeter and area problems by choosing decomposition, transformation, or proportional reasoning as appropriate.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     47
+    ]
+   ]
+  },
+  {
+   "id": "n201",
+   "name": "Count angles at a shared vertex",
+   "name_zh": "数角个数",
+   "description": "Learner can count all distinct angles formed by several rays sharing a common vertex.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     48
+    ]
+   ]
+  },
+  {
+   "id": "n202",
+   "name": "Count triangles in a subdivided figure",
+   "name_zh": "数三角形个数",
+   "description": "Learner can systematically label and combine regions to count all triangles in a subdivided or overlapping figure.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "mistral"
+   ],
+   "members": [
+    [
+     "anthropic",
+     49
+    ],
+    [
+     "mistral",
+     31
+    ]
+   ]
+  },
+  {
+   "id": "n203",
+   "name": "Count squares of multiple sizes in a grid",
+   "name_zh": "数正方形个数",
+   "description": "Learner can count squares of every possible size within a grid using the size-by-size counting method.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     50
+    ],
+    [
+     "moonshot",
+     61
+    ]
+   ]
+  },
+  {
+   "id": "n204",
+   "name": "Count rectangles of multiple sizes in a grid",
+   "name_zh": "数长方形个数",
+   "description": "Learner can count rectangles of every possible size within a grid using row/column combination counting.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     51
+    ],
+    [
+     "moonshot",
+     60
+    ]
+   ]
+  },
+  {
+   "id": "n205",
+   "name": "Count map/region colourings under constraints",
+   "name_zh": "地图染色计数",
+   "description": "Learner can count the number of valid colourings of adjacent regions using case analysis by colour reuse.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek"
+   ],
+   "members": [
+    [
+     "anthropic",
+     56
+    ],
+    [
+     "deepseek",
+     91
+    ]
+   ]
+  },
+  {
+   "id": "n206",
+   "name": "Count non-repeating paths on a small network",
+   "name_zh": "网络图不重复路径计数",
+   "description": "Learner can count distinct routes between two points on a small graph without repeating a vertex or edge.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     58
+    ]
+   ]
+  },
+  {
+   "id": "n207",
+   "name": "Count outcomes of a circular rotation/passing game",
+   "name_zh": "circular传递/转圈问题计数",
+   "description": "Learner can determine the position or holder of an item after many steps of a cyclic passing process using modular counting.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     59
+    ]
+   ]
+  },
+  {
+   "id": "n208",
+   "name": "Count recursive multi-step passing patterns",
+   "name_zh": "多步传球方式计数",
+   "description": "Learner can enumerate, via a tree diagram or recursive reasoning, all distinct sequences of several passing steps that return to the start.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     60
+    ]
+   ]
+  },
+  {
+   "id": "n209",
+   "name": "Enumerate integer partitions into fixed parts",
+   "name_zh": "整数拆分/分组枚举",
+   "description": "Learner can list all ways to split a number into a given number of positive integer parts subject to constraints such as minimum value or distinctness.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     61
+    ]
+   ]
+  },
+  {
+   "id": "n210",
+   "name": "Maximum intersection points from lines/points",
+   "name_zh": "直线交点数最大值",
+   "description": "Learner can compute the maximum number of intersection points among a set of lines using the pairwise (triangular-number) counting formula.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     62
+    ]
+   ]
+  },
+  {
+   "id": "n211",
+   "name": "Comprehensive counting problem solving",
+   "name_zh": "综合计数问题解决",
+   "description": "Learner can solve unfamiliar counting problems by selecting and combining the appropriate enumeration principles.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     63
+    ]
+   ]
+  },
+  {
+   "id": "n212",
+   "name": "Find the nth term of a periodic pattern",
+   "name_zh": "周期规律找第n项",
+   "description": "Learner can identify a repeating cycle in a sequence and use division with remainder to find the value at a given position.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     64
+    ],
+    [
+     "deepseek",
+     53
+    ],
+    [
+     "moonshot",
+     54
+    ]
+   ]
+  },
+  {
+   "id": "n213",
+   "name": "Solve calendar date-arithmetic problems",
+   "name_zh": "日历数字规律问题",
+   "description": "Learner can use the fixed row/column differences of a calendar grid to find dates satisfying a given sum condition.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     68
+    ]
+   ]
+  },
+  {
+   "id": "n214",
+   "name": "Solve state-dependent sequential-rule problems",
+   "name_zh": "规则随状态变化的报数问题",
+   "description": "Learner can track a sequence whose generating rule changes depending on the current term's form (e.g., one-digit vs two-digit) to find a later term.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     69
+    ]
+   ]
+  },
+  {
+   "id": "n215",
+   "name": "Comprehensive sequence/pattern analysis",
+   "name_zh": "数列与规律综合分析",
+   "description": "Learner can analyse an unfamiliar sequence or table to discover its rule and compute any requested term or sum.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     70
+    ]
+   ]
+  },
+  {
+   "id": "n216",
+   "name": "Classify numbers as odd or even",
+   "name_zh": "奇偶数判断",
+   "description": "Learner can classify a number as odd or even from its last digit.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek"
+   ],
+   "members": [
+    [
+     "anthropic",
+     71
+    ],
+    [
+     "deepseek",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "n217",
+   "name": "Determine divisibility/multiples",
+   "name_zh": "倍数与整除判断",
+   "description": "Learner can determine whether one number is a multiple of another.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     72
+    ]
+   ]
+  },
+  {
+   "id": "n218",
+   "name": "Count multiples of a number within a range",
+   "name_zh": "范围内倍数个数",
+   "description": "Learner can count how many multiples of a given number lie within a specified range.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     73
+    ]
+   ]
+  },
+  {
+   "id": "n219",
+   "name": "Remainder-scaling rule",
+   "name_zh": "余数随被除数除数同倍变化规律",
+   "description": "Learner can state and apply the rule that scaling both dividend and divisor by the same factor scales the remainder by that factor too.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     75
+    ]
+   ]
+  },
+  {
+   "id": "n220",
+   "name": "Comprehensive number-theory reasoning",
+   "name_zh": "数论综合推理",
+   "description": "Learner can apply divisibility, remainder, and multiple-counting reasoning to solve number-theoretic word problems.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     76
+    ]
+   ]
+  },
+  {
+   "id": "n221",
+   "name": "Comprehensive set-overlap reasoning",
+   "name_zh": "集合重叠问题综合解决",
+   "description": "Learner can solve multi-set overlap word problems using inclusion-exclusion reasoning.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     79
+    ]
+   ]
+  },
+  {
+   "id": "n222",
+   "name": "Count solutions to a cryptarithmetic puzzle",
+   "name_zh": "数字谜解的个数统计",
+   "description": "Learner can count the number of valid digit assignments satisfying all constraints of a cryptarithmetic puzzle.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     82
+    ]
+   ]
+  },
+  {
+   "id": "n223",
+   "name": "Magic-square deduction",
+   "name_zh": "魔方阵/等和方格推理",
+   "description": "Learner can use row/column/diagonal equal-sum constraints to deduce missing entries in a magic-square-style grid.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek"
+   ],
+   "members": [
+    [
+     "anthropic",
+     83
+    ],
+    [
+     "deepseek",
+     87
+    ]
+   ]
+  },
+  {
+   "id": "n224",
+   "name": "Round-robin tournament game-count deduction",
+   "name_zh": "单循环赛场次推理",
+   "description": "Learner can deduce how many games a given competitor has played using pairing/degree reasoning in a round-robin schedule.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     84
+    ]
+   ]
+  },
+  {
+   "id": "n225",
+   "name": "Comprehensive logic-puzzle deduction",
+   "name_zh": "逻辑推理综合解决",
+   "description": "Learner can solve constraint-satisfaction logic puzzles (assignment, cryptarithmetic, magic square, tournament) through systematic deduction.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     85
+    ]
+   ]
+  },
+  {
+   "id": "n226",
+   "name": "Determine valid start/end points for one-stroke drawing",
+   "name_zh": "一笔画起点终点确定",
+   "description": "Learner can identify which two points must serve as start and end when a figure has exactly two odd vertices.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     88
+    ]
+   ]
+  },
+  {
+   "id": "n227",
+   "name": "Shortest route covering all edges with repeats",
+   "name_zh": "重复走边的最短路径问题",
+   "description": "Learner can find the minimum-length route that traverses every edge of a network and returns to start by repeating the fewest necessary edges.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     89
+    ]
+   ]
+  },
+  {
+   "id": "n228",
+   "name": "Comprehensive network/graph reasoning",
+   "name_zh": "网络图综合分析",
+   "description": "Learner can analyse a network's vertex degrees to solve one-stroke-drawing and route-covering problems.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     90
+    ]
+   ]
+  },
+  {
+   "id": "n229",
+   "name": "Hollow-array layer relationships",
+   "name_zh": "空心方阵层数关系",
+   "description": "Learner can state and use the fact that adjacent layers of a hollow square array differ by 8 items.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     91
+    ]
+   ]
+  },
+  {
+   "id": "n230",
+   "name": "Compute counts in solid/hollow square arrays",
+   "name_zh": "实心/空心方阵总数计算",
+   "description": "Learner can compute the total or per-layer number of items in a square array given partial information.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek"
+   ],
+   "members": [
+    [
+     "anthropic",
+     92
+    ],
+    [
+     "deepseek",
+     79
+    ]
+   ]
+  },
+  {
+   "id": "n231",
+   "name": "Circular tree-planting/interval problems",
+   "name_zh": "环形植树问题",
+   "description": "Learner can count trees or intervals around a closed loop, recognising that no endpoint adjustment is needed.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     94
+    ],
+    [
+     "deepseek",
+     78
+    ],
+    [
+     "moonshot",
+     45
+    ]
+   ]
+  },
+  {
+   "id": "n232",
+   "name": "Two-sided/multi-row interval extension",
+   "name_zh": "双边/多行植树问题",
+   "description": "Learner can extend interval-counting reasoning by multiplying when trees are planted on both sides of a road or in multiple rows.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     95
+    ]
+   ]
+  },
+  {
+   "id": "n233",
+   "name": "Read values from a bar chart",
+   "name_zh": "条形统计图读数",
+   "description": "Learner can read and extract quantities directly from a bar chart to answer questions.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     96
+    ]
+   ]
+  },
+  {
+   "id": "n234",
+   "name": "Combine values from statistical tables/charts",
+   "name_zh": "统计表/图综合计算",
+   "description": "Learner can combine multiple values from a data table or chart to compute totals, differences, or proportions.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     97
+    ]
+   ]
+  },
+  {
+   "id": "n235",
+   "name": "Compute elapsed time between clock readings",
+   "name_zh": "计算经过时间",
+   "description": "Learner can find the duration between two given clock times.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     98
+    ]
+   ]
+  },
+  {
+   "id": "n236",
+   "name": "Determine day of the week after n days",
+   "name_zh": "星期几推算（模运算）",
+   "description": "Learner can use modular arithmetic (remainder after dividing by 7) to determine the day of the week after a given number of days.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "deepseek"
+   ],
+   "members": [
+    [
+     "anthropic",
+     99
+    ],
+    [
+     "deepseek",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "n237",
+   "name": "Convert a fraction-of-total description into an absolute amount",
+   "name_zh": "分率转具体数量比较",
+   "description": "Learner can compute the absolute quantity corresponding to a stated fraction of a total in order to compare it with another quantity.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     100
+    ]
+   ]
+  },
+  {
+   "id": "n238",
+   "name": "Map an indexing problem onto another number base",
+   "name_zh": "数制映射解决排序问题",
+   "description": "Learner can recognise a bijection between a restricted-digit counting sequence and another number base (e.g. binary) to find a required term.",
+   "terminal": false,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     103
+    ]
+   ]
+  },
+  {
+   "id": "n239",
+   "name": "Verify a solution against all problem conditions",
+   "name_zh": "结果代入条件检验",
+   "description": "Learner can check a computed answer by substituting it back into every stated condition of the problem to confirm consistency.",
+   "terminal": false,
+   "families": [
+    "anthropic",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "anthropic",
+     106
+    ],
+    [
+     "moonshot",
+     102
+    ]
+   ]
+  },
+  {
+   "id": "n240",
+   "name": "Identify problem type and select solution strategy",
+   "name_zh": "综合识别题型并选择解法",
+   "description": "Given an unfamiliar problem from the course's range, learner can correctly identify its underlying type and select and execute the appropriate solving strategy.",
+   "terminal": true,
+   "families": [
+    "anthropic"
+   ],
+   "members": [
+    [
+     "anthropic",
+     107
+    ]
+   ]
+  },
+  {
+   "id": "n241",
+   "name": "Add and subtract within 100 mentally",
+   "name_zh": "100以内加减法心算",
+   "description": "Fluently add and subtract two-digit numbers without writing the vertical form.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "n242",
+   "name": "Add multi-digit numbers with regrouping",
+   "name_zh": "多位数进位加法笔算",
+   "description": "Perform column addition of numbers up to 10,000 with carrying.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "n243",
+   "name": "Subtract multi-digit numbers with regrouping",
+   "name_zh": "多位数退位减法笔算",
+   "description": "Perform column subtraction of numbers up to 10,000 with borrowing.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "n244",
+   "name": "Recall multiplication facts up to 10×10",
+   "name_zh": "熟记表内乘法口诀",
+   "description": "Quickly recall products of single-digit numbers.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "n245",
+   "name": "Multiply a multi-digit number by a 1-digit number",
+   "name_zh": "多位数乘一位数",
+   "description": "Compute products like 216×3 using the standard algorithm.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "n246",
+   "name": "Multiply a multi-digit number by a 2-digit number",
+   "name_zh": "多位数乘两位数",
+   "description": "Compute products like 23×14 using the standard algorithm with partial products.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "n247",
+   "name": "Multiply by multiples of 10, 100, 1000",
+   "name_zh": "乘整十、整百、整千数",
+   "description": "Use place value to multiply numbers ending in zeros efficiently.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "n248",
+   "name": "Divide a multi-digit number by a 1-digit number (exact)",
+   "name_zh": "多位数除以一位数（整除）",
+   "description": "Perform division with no remainder using the long division algorithm.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "n249",
+   "name": "Divide with remainders and interpret the remainder",
+   "name_zh": "有余数的除法及余数含义",
+   "description": "Perform division where a remainder exists and explain what the remainder represents in context.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "n250",
+   "name": "Use the commutative and associative properties to simplify computation",
+   "name_zh": "运用交换律和结合律简算",
+   "description": "Rearrange numbers in addition or multiplication to make mental calculation easier.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     10
+    ],
+    [
+     "mistral",
+     11
+    ]
+   ]
+  },
+  {
+   "id": "n251",
+   "name": "Estimate sums, differences, products and quotients",
+   "name_zh": "估算四则运算结果",
+   "description": "Round numbers to the nearest ten or hundred to quickly approximate a result.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     12
+    ],
+    [
+     "mistral",
+     15
+    ]
+   ]
+  },
+  {
+   "id": "n252",
+   "name": "Check calculation results by inverse operation or estimation",
+   "name_zh": "用逆运算或估算检验结果",
+   "description": "Verify an answer by performing the opposite operation or comparing with an estimate.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     13
+    ],
+    [
+     "mistral",
+     66
+    ]
+   ]
+  },
+  {
+   "id": "n253",
+   "name": "Multiply by 11 using the quick mental trick",
+   "name_zh": "乘11的速算技巧",
+   "description": "Use the 'add the two digits and put in the middle' method for 11× a two-digit number.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "n254",
+   "name": "Divide by using the splitting method",
+   "name_zh": "拆数连除巧算",
+   "description": "Combine divisions or split dividends, e.g., (a+b)÷c, or a÷b÷c = a÷(b×c).",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     15
+    ]
+   ]
+  },
+  {
+   "id": "n255",
+   "name": "Test divisibility by 2, 5, and 10",
+   "name_zh": "用2、5、10整除特征判断",
+   "description": "Decide if a number is divisible by 2, 5, or 10 using the last digit rule.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     19
+    ]
+   ]
+  },
+  {
+   "id": "n256",
+   "name": "Test divisibility by 3 and 9",
+   "name_zh": "用3和9整除特征判断",
+   "description": "Decide if a number is divisible by 3 or 9 using the sum of digits rule.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     20
+    ]
+   ]
+  },
+  {
+   "id": "n257",
+   "name": "Understand place value up to 100,000 and expanded form",
+   "name_zh": "十万以内位值制与数的拆分",
+   "description": "Read, write, and decompose numbers into place values (ones, tens, hundreds, thousands, ten thousands).",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     21
+    ]
+   ]
+  },
+  {
+   "id": "n258",
+   "name": "Compare and order large numbers",
+   "name_zh": "大数比较与排序",
+   "description": "Use place value to determine which of two numbers is larger and arrange a set in order.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     22
+    ]
+   ]
+  },
+  {
+   "id": "n259",
+   "name": "Round whole numbers to the nearest ten, hundred, or thousand",
+   "name_zh": "四舍五入近似数",
+   "description": "Approximate a number to a specified place value by rounding.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     23
+    ],
+    [
+     "mistral",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "n260",
+   "name": "Understand decimal notation for tenths and hundredths",
+   "name_zh": "认识一位及两位小数",
+   "description": "Read and write decimals like 3.43 and explain the meaning of the digits after the decimal point.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     24
+    ]
+   ]
+  },
+  {
+   "id": "n261",
+   "name": "Multiply and divide decimals by 10, 100 by shifting the decimal point",
+   "name_zh": "小数点移动引起小数大小变化",
+   "description": "Move the decimal point to quickly compute 0.3343×10 or 80.8÷100.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     25
+    ]
+   ]
+  },
+  {
+   "id": "n262",
+   "name": "Apply number properties and place value reasoning to solve puzzles",
+   "name_zh": "用数的性质解数字谜题",
+   "description": "Solve non-routine problems involving odd/even, divisibility, place value, and missing digits.",
+   "terminal": true,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     26
+    ]
+   ]
+  },
+  {
+   "id": "n263",
+   "name": "Convert between centimetres, metres and kilometres",
+   "name_zh": "长度单位换算（厘米、米、千米）",
+   "description": "Change a given length into a different unit within the metric system.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     27
+    ]
+   ]
+  },
+  {
+   "id": "n264",
+   "name": "Add and subtract money in yuan, jiao, fen",
+   "name_zh": "人民币元角分加减计算",
+   "description": "Perform computations with decimal money notation.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     28
+    ]
+   ]
+  },
+  {
+   "id": "n265",
+   "name": "Read an analog clock and compute elapsed time within an hour",
+   "name_zh": "认读钟表及计算经过时间",
+   "description": "Tell time to the minute and find how many minutes pass between two times.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     29
+    ]
+   ]
+  },
+  {
+   "id": "n266",
+   "name": "Understand work rate (amount done per unit time)",
+   "name_zh": "理解工作效率概念",
+   "description": "Calculate the amount one unit (person, machine) can do in one unit of time, or the total work done.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     32
+    ]
+   ]
+  },
+  {
+   "id": "n267",
+   "name": "Understand area as covering with unit squares",
+   "name_zh": "理解面积含义（单位面积）",
+   "description": "Explain area as the number of unit squares that cover a shape without gaps.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     36
+    ]
+   ]
+  },
+  {
+   "id": "n268",
+   "name": "Compute area of a quadrilateral with perpendicular diagonals",
+   "name_zh": "用对角线垂直求四边形面积",
+   "description": "Use the formula (diagonal1 × diagonal2) ÷ 2 for a kite or rhombus.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "deepseek",
+     41
+    ],
+    [
+     "moonshot",
+     93
+    ]
+   ]
+  },
+  {
+   "id": "n269",
+   "name": "Identify right, acute and obtuse angles",
+   "name_zh": "辨认直角、锐角和钝角",
+   "description": "Classify an angle by comparing it to a right angle (90°).",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     42
+    ],
+    [
+     "mistral",
+     27
+    ]
+   ]
+  },
+  {
+   "id": "n270",
+   "name": "Identify complementary and supplementary angle pairs",
+   "name_zh": "认识余角和补角",
+   "description": "Recognize when two angles sum to 90° or 180° and find a missing angle.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     43
+    ]
+   ]
+  },
+  {
+   "id": "n271",
+   "name": "Identify parallel and perpendicular lines",
+   "name_zh": "判断平行和垂直",
+   "description": "Decide whether two given lines are parallel or perpendicular.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     44
+    ],
+    [
+     "mistral",
+     29
+    ]
+   ]
+  },
+  {
+   "id": "n272",
+   "name": "Classify quadrilaterals by properties",
+   "name_zh": "按边角特征分类四边形",
+   "description": "Distinguish squares, rectangles, and parallelograms based on side lengths, parallelism, and angles.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     45
+    ]
+   ]
+  },
+  {
+   "id": "n273",
+   "name": "Apply inclusion-exclusion to count overlapping shapes",
+   "name_zh": "用容斥原理数复杂图形",
+   "description": "Count shapes in a compound figure by adding counts of parts and subtracting overlaps.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     47
+    ]
+   ]
+  },
+  {
+   "id": "n274",
+   "name": "Solve area and perimeter problems in real-world contexts",
+   "name_zh": "解决实际中的周长面积问题",
+   "description": "Apply formulas and strategies to problems like paving paths, cutting shapes, or combining figures.",
+   "terminal": true,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     48
+    ]
+   ]
+  },
+  {
+   "id": "n275",
+   "name": "Identify and extend an arithmetic sequence",
+   "name_zh": "认识并续写等差数列",
+   "description": "Find the common difference and list subsequent terms in a sequence.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     49
+    ]
+   ]
+  },
+  {
+   "id": "n276",
+   "name": "Use the middle term property in an arithmetic sequence",
+   "name_zh": "利用等差数列中项定理",
+   "description": "Find the sum or a middle term when the number of terms is odd.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     52
+    ]
+   ]
+  },
+  {
+   "id": "n277",
+   "name": "Describe and extend growing geometric patterns",
+   "name_zh": "描述并续写几何图形变化规律",
+   "description": "Find the rule for the number of shapes in each step and predict later steps.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     55
+    ]
+   ]
+  },
+  {
+   "id": "n278",
+   "name": "Use average to find a total or missing value",
+   "name_zh": "利用平均数求总量或未知值",
+   "description": "Given the average and count, compute the total; given all but one number and the average, find the missing number.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     57
+    ]
+   ]
+  },
+  {
+   "id": "n279",
+   "name": "Translate a one-step word problem into an arithmetic expression",
+   "name_zh": "将简单应用题转化为算式",
+   "description": "Identify the operation needed (add, subtract, multiply, divide) from a single-step story and write the computation.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     58
+    ]
+   ]
+  },
+  {
+   "id": "n280",
+   "name": "Solve two-step word problems involving mixed operations",
+   "name_zh": "解决两步混合运算应用题",
+   "description": "Plan and carry out two calculations where the operations may differ.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     59
+    ]
+   ]
+  },
+  {
+   "id": "n281",
+   "name": "Draw a line-segment diagram to represent comparison relationships",
+   "name_zh": "画线段图表示数量比较关系",
+   "description": "Visually model 'a is b times as many' or 'a is more/less than b' relationships to plan a solution.",
+   "terminal": true,
+   "families": [
+    "deepseek",
+    "mistral"
+   ],
+   "members": [
+    [
+     "deepseek",
+     60
+    ],
+    [
+     "mistral",
+     63
+    ]
+   ]
+  },
+  {
+   "id": "n282",
+   "name": "Solve money problems involving unit price, quantity, and total cost",
+   "name_zh": "解决单价、数量、总价问题",
+   "description": "Use multiplication or division to find one of price, quantity, or total cost.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     63
+    ]
+   ]
+  },
+  {
+   "id": "n283",
+   "name": "Solve round-trip / return meeting problems",
+   "name_zh": "解决折返相遇问题",
+   "description": "Analyze motion where one party reaches an endpoint and returns to meet the other.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     67
+    ]
+   ]
+  },
+  {
+   "id": "n284",
+   "name": "Use a table to organize information and find patterns",
+   "name_zh": "列表整理信息找规律",
+   "description": "Construct a table to record repeated operations or possibilities, then identify a pattern or solution.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     72
+    ]
+   ]
+  },
+  {
+   "id": "n285",
+   "name": "Solve problems involving a missing-digit error in numbers",
+   "name_zh": "解决数字错漏问题（如漏0）",
+   "description": "Determine original numbers when a mistake (like missing a trailing zero) leads to an erroneous result.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     75
+    ]
+   ]
+  },
+  {
+   "id": "n286",
+   "name": "Form largest/smallest numbers under matchstick-digit constraints",
+   "name_zh": "在给定资源下构造最值数字",
+   "description": "Arrange digits to maximize or minimize the number when each digit costs a fixed number of matchsticks.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     76
+    ]
+   ]
+  },
+  {
+   "id": "n287",
+   "name": "Solve simple optimization problems in context",
+   "name_zh": "解决简单的最优化问题",
+   "description": "Compare options (e.g., shipping routes, purchase packages) to minimize cost or distance under constraints.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     80
+    ]
+   ]
+  },
+  {
+   "id": "n288",
+   "name": "Plan and solve multi-step word problems independently",
+   "name_zh": "独立规划并解决多步应用题",
+   "description": "Read a complex problem, identify knowns and unknowns, choose a strategy, execute a multi-step plan, and interpret the answer.",
+   "terminal": true,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     81
+    ]
+   ]
+  },
+  {
+   "id": "n289",
+   "name": "Apply exponent rules (product of powers) to solve simple exponential equations",
+   "name_zh": "运用指数运算法则解简单方程",
+   "description": "Rewrite numbers with the same base and equate exponents, e.g., 3^m · 9^3 · 27^3 · 81^m = 3^30.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     82
+    ]
+   ]
+  },
+  {
+   "id": "n290",
+   "name": "Solve logic puzzles with true/false statements",
+   "name_zh": "解决真假话逻辑推理题",
+   "description": "Deduce facts from statements where some are true and some false, using contradiction or assumption.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     89
+    ]
+   ]
+  },
+  {
+   "id": "n291",
+   "name": "Solve tent-and-tree style grid puzzles",
+   "name_zh": "解决帐篷-树逻辑网格题",
+   "description": "Place objects on a grid satisfying adjacency and row/column count constraints.",
+   "terminal": false,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     90
+    ]
+   ]
+  },
+  {
+   "id": "n292",
+   "name": "Use parity invariants to reason about possible transformations",
+   "name_zh": "用奇偶不变性分析棋子跳动等问题",
+   "description": "Identify a quantity (e.g., sum of coordinates) that remains even or odd to prove a configuration is impossible.",
+   "terminal": false,
+   "families": [
+    "deepseek",
+    "moonshot"
+   ],
+   "members": [
+    [
+     "deepseek",
+     93
+    ],
+    [
+     "moonshot",
+     78
+    ]
+   ]
+  },
+  {
+   "id": "n293",
+   "name": "Solve non-routine puzzles and logical challenges",
+   "name_zh": "综合运用逻辑推理解决非典型谜题",
+   "description": "Combine logical deduction, enumeration, invariants, and trial to solve puzzles beyond standard word problems.",
+   "terminal": true,
+   "families": [
+    "deepseek"
+   ],
+   "members": [
+    [
+     "deepseek",
+     95
+    ]
+   ]
+  },
+  {
+   "id": "n294",
+   "name": "Round-and-group integer addition/subtraction",
+   "name_zh": "整数加减凑整巧算",
+   "description": "Learner can simplify integer addition and subtraction by rounding to tens or hundreds and rearranging terms.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "n295",
+   "name": "Move terms with signs in mixed operations",
+   "name_zh": "加减混合带符号搬家",
+   "description": "Learner can reorder mixed addition and subtraction by moving each term with its sign.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "n296",
+   "name": "Benchmark-number summation",
+   "name_zh": "基准数法求和",
+   "description": "Learner can sum a set of close numbers by choosing a benchmark and compensating for differences.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "n297",
+   "name": "Arithmetic series nth term and count",
+   "name_zh": "等差数列项数与第n项",
+   "description": "Learner can find the nth term or the number of terms given the first term, last term, and common difference.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "n298",
+   "name": "Special-product multiplication patterns",
+   "name_zh": "特殊数乘法速算",
+   "description": "Learner can multiply by 11, 101, or similar numbers using observed place-value patterns.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "n299",
+   "name": "Decompose divisor for successive division",
+   "name_zh": "除数分解与连除性质",
+   "description": "Learner can rewrite division by a composite number as successive divisions by its factors.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "n300",
+   "name": "Compensate dividend and divisor",
+   "name_zh": "商不变性质巧算",
+   "description": "Learner can multiply or divide both dividend and divisor by the same number to create an easier division.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     10
+    ]
+   ]
+  },
+  {
+   "id": "n301",
+   "name": "Add/remove parentheses in mixed multiplication/division",
+   "name_zh": "乘除混合去添括号",
+   "description": "Learner can strategically add or remove parentheses in mixed multiplication and division to simplify.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     11
+    ]
+   ]
+  },
+  {
+   "id": "n302",
+   "name": "Adjacent area unit conversion",
+   "name_zh": "相邻面积单位换算",
+   "description": "Learner can convert between adjacent square units such as square meters, square decimeters, and square centimeters.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     14
+    ]
+   ]
+  },
+  {
+   "id": "n303",
+   "name": "Represent quantities with letters",
+   "name_zh": "用字母表示数",
+   "description": "Learner can use letters to express unknown quantities and quantitative relationships in formulas.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     16
+    ]
+   ]
+  },
+  {
+   "id": "n304",
+   "name": "Evaluate algebraic expressions",
+   "name_zh": "代入求值",
+   "description": "Learner can substitute given numerical values for letters and evaluate the resulting expression.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "n305",
+   "name": "Hidden-sum sum-multiple problems",
+   "name_zh": "和倍暗和问题",
+   "description": "Learner can identify and solve sum-multiple problems where the total must be inferred from implicit conditions.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     22
+    ]
+   ]
+  },
+  {
+   "id": "n306",
+   "name": "Recognise sum-multiple vs difference-multiple",
+   "name_zh": "识别和倍与差倍题型",
+   "description": "Learner can read a word problem and decide whether it calls for a sum-multiple or a difference-multiple model.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     23
+    ]
+   ]
+  },
+  {
+   "id": "n307",
+   "name": "Difference-multiple with hidden difference",
+   "name_zh": "差倍暗差问题",
+   "description": "Learner can solve difference-multiple problems where the difference must be derived from transfer or change conditions.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     25
+    ]
+   ]
+  },
+  {
+   "id": "n308",
+   "name": "Age timeline 'when A was B's age' problems",
+   "name_zh": "年龄轴当...时问题",
+   "description": "Learner can solve age problems involving the phrase 'when A was B's current age' by constructing a timeline diagram.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     29
+    ]
+   ]
+  },
+  {
+   "id": "n309",
+   "name": "Cross-time age-sum problems",
+   "name_zh": "年龄跨时段综合问题",
+   "description": "Learner can solve age problems that provide sums or multiples at past or future moments and relate them to present ages.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "n310",
+   "name": "Integrated age and multiple problems",
+   "name_zh": "综合年龄与和差倍问题",
+   "description": "Learner can solve complex age problems that require combining multiple models and hidden conditions.",
+   "terminal": true,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     31
+    ]
+   ]
+  },
+  {
+   "id": "n311",
+   "name": "Single-step reverse reasoning",
+   "name_zh": "单步还原问题",
+   "description": "Learner can determine an original number from the result of a single inverse operation.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     32
+    ]
+   ]
+  },
+  {
+   "id": "n312",
+   "name": "Reverse problems with cost/remaining structure",
+   "name_zh": "还原问题中的花费与剩余",
+   "description": "Learner can reverse real-world spending sequences that include fixed costs and fractional remainders.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     35
+    ]
+   ]
+  },
+  {
+   "id": "n313",
+   "name": "Value-type Chicken-Rabbit problems",
+   "name_zh": "假设法解价值型鸡兔同笼",
+   "description": "Learner can solve assumption-method problems involving total monetary value or points rather than legs.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     37
+    ]
+   ]
+  },
+  {
+   "id": "n314",
+   "name": "Advanced excess-shortage variants",
+   "name_zh": "盈亏问题进阶变型",
+   "description": "Learner can solve double-excess, double-shortage, and unit-quantity-change variants of profit-loss problems.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     39
+    ]
+   ]
+  },
+  {
+   "id": "n315",
+   "name": "Average and total interconversion",
+   "name_zh": "平均数与总数互化",
+   "description": "Learner can compute an average from a total and count, and reconstruct a total from a known average.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     40
+    ]
+   ]
+  },
+  {
+   "id": "n316",
+   "name": "Move-more-to-less average diagram",
+   "name_zh": "平均数移多补少图解",
+   "description": "Learner can use the move-more-to-less diagram to relate individual values to the overall average.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     41
+    ]
+   ]
+  },
+  {
+   "id": "n317",
+   "name": "Two-group average to find count",
+   "name_zh": "两组平均数求数量",
+   "description": "Learner can find the number of members in each group given the overall average and each group's separate average.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     42
+    ]
+   ]
+  },
+  {
+   "id": "n318",
+   "name": "Weighted average with changing members",
+   "name_zh": "加权平均与人员变动",
+   "description": "Learner can solve average problems where adding or removing a member changes the overall mean.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     43
+    ]
+   ]
+  },
+  {
+   "id": "n319",
+   "name": "Sawing and stair-climbing intervals",
+   "name_zh": "锯木头与爬楼梯间隔",
+   "description": "Learner can apply interval logic to count cuts, segments, or stairs in practical tasks.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     46
+    ]
+   ]
+  },
+  {
+   "id": "n320",
+   "name": "Queue and line spacing problems",
+   "name_zh": "队列长度与间隔问题",
+   "description": "Learner can calculate the length of a queue or the spacing between arranged objects.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     47
+    ]
+   ]
+  },
+  {
+   "id": "n321",
+   "name": "Queue relative-motion problems",
+   "name_zh": "队列相对运动问题",
+   "description": "Learner can solve queue-length problems that combine meeting and chasing relative motion.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     50
+    ]
+   ]
+  },
+  {
+   "id": "n322",
+   "name": "Inclusion-exclusion with explicit neither",
+   "name_zh": "容斥与都不参加综合",
+   "description": "Learner can solve inclusion-exclusion problems that include a count of elements outside all sets.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     53
+    ]
+   ]
+  },
+  {
+   "id": "n323",
+   "name": "Calendar spanning-month weekday calculation",
+   "name_zh": "跨月日期与星期推算",
+   "description": "Learner can calculate the number of days between dates across months and determine the resulting weekday.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     55
+    ]
+   ]
+  },
+  {
+   "id": "n324",
+   "name": "Integrated periodic and calendar problems",
+   "name_zh": "综合周期与日期问题",
+   "description": "Learner can solve complex problems combining periodic cycles with calendar arithmetic and finger-counting patterns.",
+   "terminal": true,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     56
+    ]
+   ]
+  },
+  {
+   "id": "n325",
+   "name": "Count line segments and angles",
+   "name_zh": "数线段与数角",
+   "description": "Learner can count line segments or angles in a figure by sequential addition from a common vertex.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     57
+    ]
+   ]
+  },
+  {
+   "id": "n326",
+   "name": "Single-layer triangle counting",
+   "name_zh": "单层三角形计数",
+   "description": "Learner can count triangles in a single-layer figure by analyzing bases on one line.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     58
+    ]
+   ]
+  },
+  {
+   "id": "n327",
+   "name": "Add-line method for triangle counting",
+   "name_zh": "添线法数三角形",
+   "description": "Learner can count triangles in composite figures by adding the contribution of each newly added line.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     59
+    ]
+   ]
+  },
+  {
+   "id": "n328",
+   "name": "Count squares in irregular/overlapping shapes",
+   "name_zh": "不规则与重叠图形数正方形",
+   "description": "Learner can count squares in irregular or overlapping figures using decomposition and inclusion-exclusion.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     62
+    ]
+   ]
+  },
+  {
+   "id": "n329",
+   "name": "Systematic enumeration by dictionary order",
+   "name_zh": "字典排列法有序枚举",
+   "description": "Learner can enumerate partitions or combinations in non-decreasing dictionary order without omission.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     63
+    ]
+   ]
+  },
+  {
+   "id": "n330",
+   "name": "Recognise order and repetition constraints",
+   "name_zh": "识别计数问题中的有序与可重",
+   "description": "Learner can read a counting problem and determine whether order matters and whether repetition is allowed.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     66
+    ]
+   ]
+  },
+  {
+   "id": "n331",
+   "name": "Arrangements with repeated digits allowed",
+   "name_zh": "可重复数字的排列",
+   "description": "Learner can count numbers or codes formed from digits when repetition is permitted.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     67
+    ]
+   ]
+  },
+  {
+   "id": "n332",
+   "name": "Permutations without repeated digits",
+   "name_zh": "无重复数字的排列",
+   "description": "Learner can count numbers or arrangements formed from digits when no repetition is allowed.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     68
+    ]
+   ]
+  },
+  {
+   "id": "n333",
+   "name": "Tree-diagram enumeration with adjacency constraints",
+   "name_zh": "树形图枚举相邻限制",
+   "description": "Learner can use tree diagrams to count sequences with restrictions such as adjacent items being different.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     69
+    ]
+   ]
+  },
+  {
+   "id": "n334",
+   "name": "Transform real map to point-line graph",
+   "name_zh": "实物图转化为点线图",
+   "description": "Learner can convert a floorplan or map into a graph of points and lines to analyze traversals.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     71
+    ]
+   ]
+  },
+  {
+   "id": "n335",
+   "name": "Maximum lines through points",
+   "name_zh": "平面点确定最多直线数",
+   "description": "Learner can determine the maximum number of lines determined by N points with no three collinear.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     73
+    ]
+   ]
+  },
+  {
+   "id": "n336",
+   "name": "Distribute identical items to distinct people",
+   "name_zh": "相同物品分给不同人枚举",
+   "description": "Learner can enumerate ways to distribute identical objects to distinct recipients under constraints.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     75
+    ]
+   ]
+  },
+  {
+   "id": "n337",
+   "name": "Parity of chained multiplications",
+   "name_zh": "乘法链奇偶性判定",
+   "description": "Learner can determine the parity of a product chain using the all-odd versus any-even rule.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     77
+    ]
+   ]
+  },
+  {
+   "id": "n338",
+   "name": "Parity analysis in coin-flipping games",
+   "name_zh": "奇偶分析操作游戏",
+   "description": "Learner can apply parity analysis to state-changing games such as flipping coins or hats.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     79
+    ]
+   ]
+  },
+  {
+   "id": "n339",
+   "name": "Insert operators by reverse reasoning",
+   "name_zh": "逆推法填算符",
+   "description": "Learner can insert operators and parentheses into short expressions by working backwards from the target result.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     80
+    ]
+   ]
+  },
+  {
+   "id": "n340",
+   "name": "Insert operators in long digit strings by target approximation",
+   "name_zh": "长串数字凑目标算符",
+   "description": "Learner can construct a value near the target in a long uniform-digit expression and adjust with remaining digits.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     81
+    ]
+   ]
+  },
+  {
+   "id": "n341",
+   "name": "Correct addition/subtraction errors by place value",
+   "name_zh": "错中求解加减法",
+   "description": "Learner can determine the correct result or misread digit by analyzing how place-value errors affect the sum.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     82
+    ]
+   ]
+  },
+  {
+   "id": "n342",
+   "name": "Matchstick digit optimization",
+   "name_zh": "火柴棍数字最值问题",
+   "description": "Learner can rearrange matchstick digits to maximize or minimize a sum under digit-uniqueness constraints.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     83
+    ]
+   ]
+  },
+  {
+   "id": "n343",
+   "name": "Nonogram logic deduction",
+   "name_zh": "方格逻辑绘图（数织）",
+   "description": "Learner can deduce black-and-white cell placements from row and column run-length clues.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     84
+    ]
+   ]
+  },
+  {
+   "id": "n344",
+   "name": "Deduce perimeter from length-plus-width sum",
+   "name_zh": "已知长加宽求周长",
+   "description": "Learner can compute a rectangle's perimeter when only the sum of one length and one width is provided.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     87
+    ]
+   ]
+  },
+  {
+   "id": "n345",
+   "name": "Derive side lengths from area relations",
+   "name_zh": "由面积关系求边长",
+   "description": "Learner can deduce unknown side lengths in composite figures from given areas and shared sides.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     89
+    ]
+   ]
+  },
+  {
+   "id": "n346",
+   "name": "Composite rectangle area puzzles",
+   "name_zh": "长方形拼图与已知区域求未知",
+   "description": "Learner can solve area puzzles where a large rectangle is partitioned into smaller rectangles and a square.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     90
+    ]
+   ]
+  },
+  {
+   "id": "n347",
+   "name": "Shaded area of overlapping strips",
+   "name_zh": "重叠长条阴影面积",
+   "description": "Learner can calculate the shaded area formed by overlapping parallel strips using inclusion-exclusion or translation.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     91
+    ]
+   ]
+  },
+  {
+   "id": "n348",
+   "name": "Rhombus area and perimeter interconversion",
+   "name_zh": "菱形面积与周长互求",
+   "description": "Learner can find the side length or perimeter of a rhombus given its area and a height or diagonal length.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     94
+    ]
+   ]
+  },
+  {
+   "id": "n349",
+   "name": "Integrated plane geometry measurement",
+   "name_zh": "综合平面几何度量问题",
+   "description": "Learner can solve complex geometry problems that require combining perimeter, area, translation, and derived formulas.",
+   "terminal": true,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     95
+    ]
+   ]
+  },
+  {
+   "id": "n350",
+   "name": "Set up equations for word problems",
+   "name_zh": "列方程解应用题",
+   "description": "Learner can translate a word problem into a simple equation and solve for the unknown.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     96
+    ]
+   ]
+  },
+  {
+   "id": "n351",
+   "name": "Recognise geometry strategy: translation vs direct formula",
+   "name_zh": "识别几何解题策略（平移或直接公式）",
+   "description": "Learner can inspect a composite shape and decide whether to use segment translation or direct formula application.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     98
+    ]
+   ]
+  },
+  {
+   "id": "n352",
+   "name": "Recognise operator-insertion strategy",
+   "name_zh": "识别填算符解题策略",
+   "description": "Learner can inspect an operator-insertion problem and choose between reverse reasoning, target approximation, or trial.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     99
+    ]
+   ]
+  },
+  {
+   "id": "n353",
+   "name": "Represent inclusion-exclusion data with Venn diagrams",
+   "name_zh": "用韦恩图表示容斥数据",
+   "description": "Learner can organize given set data into a two- or three-circle Venn diagram to visualize overlaps.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     100
+    ]
+   ]
+  },
+  {
+   "id": "n354",
+   "name": "Represent reverse problems with flowcharts",
+   "name_zh": "用流程图表示还原问题",
+   "description": "Learner can draw a forward flowchart of operations to support systematic reverse calculation.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     101
+    ]
+   ]
+  },
+  {
+   "id": "n355",
+   "name": "Sum-multiple with transfer and change",
+   "name_zh": "移多补少型暗和倍问题",
+   "description": "Learner can solve sum-multiple problems where quantities are transferred and the sum changes implicitly.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     103
+    ]
+   ]
+  },
+  {
+   "id": "n356",
+   "name": "Age problem with sum at different epochs",
+   "name_zh": "不同时间点年龄和差倍问题",
+   "description": "Learner can solve age problems where the sum of ages is given at a past or future time and relate it to the present.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     104
+    ]
+   ]
+  },
+  {
+   "id": "n357",
+   "name": "Multiplication principle with restriction handling",
+   "name_zh": "乘法原理处理限制条件",
+   "description": "Learner can apply the multiplication principle when later choices are reduced by earlier selections such as no-repetition rules.",
+   "terminal": false,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     106
+    ]
+   ]
+  },
+  {
+   "id": "n358",
+   "name": "Integrated counting and combinatorics",
+   "name_zh": "综合计数问题",
+   "description": "Learner can solve complex counting problems that require combining enumeration, addition and multiplication principles, and geometric counting.",
+   "terminal": true,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     108
+    ]
+   ]
+  },
+  {
+   "id": "n359",
+   "name": "Integrated composite word problems",
+   "name_zh": "综合复杂应用题",
+   "description": "Learner can solve multi-step word problems that integrate several models such as sum-difference-multiple, age, average, reverse, Chicken-Rabbit, and interval logic.",
+   "terminal": true,
+   "families": [
+    "moonshot"
+   ],
+   "members": [
+    [
+     "moonshot",
+     109
+    ]
+   ]
+  },
+  {
+   "id": "n360",
+   "name": "Recognize and write numbers up to 10000",
+   "name_zh": "识别并书写10000以内的数",
+   "description": "Read, write, and identify numbers from 0 to 9999, including place value understanding.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     0
+    ]
+   ]
+  },
+  {
+   "id": "n361",
+   "name": "Compare numbers up to 10000",
+   "name_zh": "比较10000以内的数的大小",
+   "description": "Use place value to compare and order numbers up to 4 digits.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     1
+    ]
+   ]
+  },
+  {
+   "id": "n362",
+   "name": "Count by multiples of 2, 3, 5, and 10",
+   "name_zh": "2、3、5、10的倍数计数",
+   "description": "Skip-count forward and backward by multiples of 2, 3, 5, and 10 up to 1000.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     2
+    ]
+   ]
+  },
+  {
+   "id": "n363",
+   "name": "Understand and use place value (units, tens, hundreds, thousands)",
+   "name_zh": "理解并使用个、十、百、千的位值",
+   "description": "Break down numbers into thousands, hundreds, tens, and units, and recombine them.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "n364",
+   "name": "Add and subtract 2-digit and 3-digit numbers without regrouping",
+   "name_zh": "两位数或三位数加减（不进位、不借位）",
+   "description": "Perform addition and subtraction of 2-digit and 3-digit numbers without carrying or borrowing.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     4
+    ]
+   ]
+  },
+  {
+   "id": "n365",
+   "name": "Add and subtract 2-digit and 3-digit numbers with regrouping",
+   "name_zh": "两位数或三位数加减（进位、借位）",
+   "description": "Perform addition and subtraction of 2-digit and 3-digit numbers with carrying or borrowing.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     5
+    ]
+   ]
+  },
+  {
+   "id": "n366",
+   "name": "Multiply 2-digit numbers by 1-digit numbers without regrouping",
+   "name_zh": "两位数乘一位数（不进位）",
+   "description": "Perform multiplication of 2-digit numbers by 1-digit numbers without carrying.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     6
+    ]
+   ]
+  },
+  {
+   "id": "n367",
+   "name": "Multiply 2-digit numbers by 1-digit numbers with regrouping",
+   "name_zh": "两位数乘一位数（进位）",
+   "description": "Perform multiplication of 2-digit numbers by 1-digit numbers with carrying.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     7
+    ]
+   ]
+  },
+  {
+   "id": "n368",
+   "name": "Multiply 3-digit numbers by 1-digit numbers",
+   "name_zh": "三位数乘一位数",
+   "description": "Perform multiplication of 3-digit numbers by 1-digit numbers, including carrying.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     8
+    ]
+   ]
+  },
+  {
+   "id": "n369",
+   "name": "Divide 2-digit or 3-digit numbers by 1-digit numbers",
+   "name_zh": "两位数或三位数除以一位数",
+   "description": "Perform division of 2-digit or 3-digit numbers by 1-digit numbers, including remainders.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     9
+    ]
+   ]
+  },
+  {
+   "id": "n370",
+   "name": "Perform mental addition and subtraction strategies",
+   "name_zh": "心算加减法策略",
+   "description": "Use strategies like rounding, breaking apart, or compensation for mental addition and subtraction.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     12
+    ]
+   ]
+  },
+  {
+   "id": "n371",
+   "name": "Perform mental multiplication and division strategies",
+   "name_zh": "心算乘除法策略",
+   "description": "Use strategies like breaking apart, factoring, or splitting for mental multiplication and division.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     13
+    ]
+   ]
+  },
+  {
+   "id": "n372",
+   "name": "Solve two-step equations",
+   "name_zh": "解两步方程",
+   "description": "Solve equations requiring two operations (e.g., 2x + 3 = 11).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     17
+    ]
+   ]
+  },
+  {
+   "id": "n373",
+   "name": "Identify and use multiples and factors of numbers",
+   "name_zh": "识别和使用倍数与因数",
+   "description": "List multiples and factors of numbers and use them in problem-solving.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     18
+    ]
+   ]
+  },
+  {
+   "id": "n374",
+   "name": "Recognize common divisibility rules",
+   "name_zh": "识别常见的整除规则",
+   "description": "Apply divisibility rules for 2, 3, 5, and 9 to determine if numbers are divisible.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     19
+    ]
+   ]
+  },
+  {
+   "id": "n375",
+   "name": "Extend arithmetic patterns with addition, subtraction, or multiplication",
+   "name_zh": "扩展加减乘规律的数列",
+   "description": "Identify and extend numerical patterns (e.g., 4, 7, 10, 13...).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     20
+    ]
+   ]
+  },
+  {
+   "id": "n376",
+   "name": "Measure and calculate perimeter of polygons",
+   "name_zh": "测量并计算多边形的周长",
+   "description": "Calculate the perimeter of rectangles, squares, and composite shapes.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     24
+    ]
+   ]
+  },
+  {
+   "id": "n377",
+   "name": "Construct and measure angles using a protractor",
+   "name_zh": "使用量角器构造和测量角",
+   "description": "Use a protractor to draw and measure angles in degrees.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     28
+    ]
+   ]
+  },
+  {
+   "id": "n378",
+   "name": "Identify, describe, and classify triangles",
+   "name_zh": "识别、描述和分类三角形",
+   "description": "Classify triangles by side length (equilateral, isosceles, scalene) and angles (right, acute, obtuse).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "n379",
+   "name": "Use simple coordinate systems",
+   "name_zh": "使用简单的坐标系",
+   "description": "Place and locate points on a grid using row and column labels or coordinates.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     32
+    ]
+   ]
+  },
+  {
+   "id": "n380",
+   "name": "Read and interpret bar graphs and line graphs",
+   "name_zh": "阅读和解释条形图及折线图",
+   "description": "Extract and interpret data from bar graphs and line graphs.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     33
+    ]
+   ]
+  },
+  {
+   "id": "n381",
+   "name": "Create simple bar graphs and line graphs",
+   "name_zh": "创建简单的条形图和折线图",
+   "description": "Organize and present data into bar graphs or line graphs.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     34
+    ]
+   ]
+  },
+  {
+   "id": "n382",
+   "name": "Calculate probabilities of simple events",
+   "name_zh": "计算简单事件的概率",
+   "description": "Use basic probability concepts to determine the likelihood of simple events.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     35
+    ]
+   ]
+  },
+  {
+   "id": "n383",
+   "name": "Solve problems involving time",
+   "name_zh": "解决时间相关问题",
+   "description": "Calculate time differences and solve problems involving hours, minutes, and seconds.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     36
+    ]
+   ]
+  },
+  {
+   "id": "n384",
+   "name": "Solve problems involving converting units of measurement",
+   "name_zh": "解决单位换算问题",
+   "description": "Convert between units like meters/centimeters, kilograms/grams, or hours/minutes.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     37
+    ]
+   ]
+  },
+  {
+   "id": "n385",
+   "name": "Solve simple currency problems",
+   "name_zh": "解决简单货币问题",
+   "description": "Calculate sums and differences in currencies (e.g., yuan, jiao, fen).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     38
+    ]
+   ]
+  },
+  {
+   "id": "n386",
+   "name": "Use place value to decompose numbers for calculations",
+   "name_zh": "使用位值分解数字进行简便运算",
+   "description": "Break down numbers into parts (e.g., 352 = 300 + 50 + 2) to simplify arithmetic operations.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     39
+    ]
+   ]
+  },
+  {
+   "id": "n387",
+   "name": "Recognize equivalences in expressions and rewrite them",
+   "name_zh": "识别表达式的等价形式并改写",
+   "description": "Recognize equivalent arithmetic expressions and rewrite them (e.g., 125 × 72 = 125 × 8 × 9).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     40
+    ]
+   ]
+  },
+  {
+   "id": "n388",
+   "name": "Recognize and solve problems involving speed, distance, and time",
+   "name_zh": "识别并解决速度、距离和时间问题",
+   "description": "Solve problems using the formula Distance = Speed × Time.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     43
+    ]
+   ]
+  },
+  {
+   "id": "n389",
+   "name": "Recognize and solve problems involving ratios",
+   "name_zh": "识别并解决比例关系问题",
+   "description": "Solve problems where quantities are directly related (e.g., twice, three times, half).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     44
+    ]
+   ]
+  },
+  {
+   "id": "n390",
+   "name": "Recognize and solve part-whole problems (sum and difference of parts)",
+   "name_zh": "识别并解决部分整体问题（部分和与差）",
+   "description": "Solve problems where the total is known, and the parts are related by sums and differences.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     45
+    ]
+   ]
+  },
+  {
+   "id": "n391",
+   "name": "Recognize and solve problems involving overlapping sets (e.g., Venn diagrams)",
+   "name_zh": "识别并解决重叠集合问题（如维恩图）",
+   "description": "Use principles of inclusion and exclusion to solve problems with overlapping groups.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     48
+    ]
+   ]
+  },
+  {
+   "id": "n392",
+   "name": "Recognize and solve problems involving divisibility",
+   "name_zh": "识别并解决整除问题",
+   "description": "Solve problems where divisibility conditions must be satisfied (e.g., divisible by 8 to modify a digit).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     49
+    ]
+   ]
+  },
+  {
+   "id": "n393",
+   "name": "Recognize and solve combinatorial problems (counting paths, arrangements)",
+   "name_zh": "识别并解决组合问题（路径、排列计数）",
+   "description": "Count the number of arrangements, paths, or combinations (e.g., transport routes, seating).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     51
+    ]
+   ]
+  },
+  {
+   "id": "n394",
+   "name": "Calculate the number of diagonals in a polygon",
+   "name_zh": "计算多边形的对角线数量",
+   "description": "Use formulas or counting methods to determine the diagonals in polygons.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     57
+    ]
+   ]
+  },
+  {
+   "id": "n395",
+   "name": "Recognize and solve problems involving symmetry",
+   "name_zh": "识别并解决对称性问题",
+   "description": "Identify and apply symmetry properties in geometric and counting contexts.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     58
+    ]
+   ]
+  },
+  {
+   "id": "n396",
+   "name": "Use trial and error systematically in problem-solving",
+   "name_zh": "在解决问题时系统地使用尝试法",
+   "description": "Organize trial and error to systematically test possibilities in counting or arithmetic problems.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     59
+    ]
+   ]
+  },
+  {
+   "id": "n397",
+   "name": "Solve problems using the concept of properties (e.g., one property corresponds to a multiple of another)",
+   "name_zh": "使用属性关系概念解决问题",
+   "description": "Assign numerical relationships based on properties (e.g., age ratios, allocation rules).",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     60
+    ]
+   ]
+  },
+  {
+   "id": "n398",
+   "name": "Recognize and use the concept of ‘folding’ or ‘doubling’ to reverse calculations",
+   "name_zh": "识别并使用‘折半’或‘加倍’概念进行逆向计算",
+   "description": "Work backwards in problems involving halving or doubling to find initial values.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     61
+    ]
+   ]
+  },
+  {
+   "id": "n399",
+   "name": "Solve problems using before-and-after analysis",
+   "name_zh": "使用前后分析法解决问题",
+   "description": "Analyze changes before and after a process to determine unknowns (e.g., shifts in quantities).",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     62
+    ]
+   ]
+  },
+  {
+   "id": "n400",
+   "name": "Understand and apply the concept of ‘total’ or ‘invariant’",
+   "name_zh": "理解并应用‘总和’或‘不变量’概念",
+   "description": "Use the idea of an unchanging total quantity or invariant in solving problems.",
+   "terminal": false,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     64
+    ]
+   ]
+  },
+  {
+   "id": "n401",
+   "name": "Recognize which operation to apply given a word problem",
+   "name_zh": "根据文字题选择适当的运算",
+   "description": "Select the correct arithmetic operations (addition, subtraction, multiplication, division) based on the problem description.",
+   "terminal": true,
+   "families": [
+    "mistral"
+   ],
+   "members": [
+    [
+     "mistral",
+     65
+    ]
+   ]
+  }
+ ],
+ "judged_pairs": {
+  "google-openai": {
+   "same": 23,
+   "overlapping": 92
+  },
+  "google-anthropic": {
+   "same": 22,
+   "overlapping": 59
+  },
+  "google-deepseek": {
+   "same": 14,
+   "overlapping": 52
+  },
+  "google-moonshot": {
+   "same": 22,
+   "overlapping": 51
+  },
+  "google-mistral": {
+   "same": 3,
+   "overlapping": 80
+  },
+  "openai-anthropic": {
+   "same": 22,
+   "overlapping": 131
+  },
+  "openai-deepseek": {
+   "same": 27,
+   "overlapping": 93
+  },
+  "openai-moonshot": {
+   "same": 21,
+   "overlapping": 134
+  },
+  "openai-mistral": {
+   "same": 13,
+   "overlapping": 123
+  },
+  "anthropic-deepseek": {
+   "same": 25,
+   "overlapping": 76
+  },
+  "anthropic-moonshot": {
+   "same": 25,
+   "overlapping": 95
+  },
+  "anthropic-mistral": {
+   "same": 9,
+   "overlapping": 89
+  },
+  "deepseek-moonshot": {
+   "same": 17,
+   "overlapping": 94
+  },
+  "deepseek-mistral": {
+   "same": 18,
+   "overlapping": 59
+  },
+  "moonshot-mistral": {
+   "same": 6,
+   "overlapping": 121
+  }
+ },
+ "accumulation": [
+  95.0,
+  168.73,
+  233.5,
+  292.93,
+  348.5,
+  401.0
+ ],
+ "cluster_sizes": {
+  "1": 315,
+  "2": 46,
+  "3": 15,
+  "7": 2,
+  "5": 6,
+  "6": 4,
+  "4": 11,
+  "8": 1,
+  "10": 1
+ }
+}

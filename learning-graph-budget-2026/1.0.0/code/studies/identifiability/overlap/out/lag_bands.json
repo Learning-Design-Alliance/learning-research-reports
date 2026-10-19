@@ -1,0 +1,229 @@
+{
+ "bands_days": [
+  [
+   0.0,
+   1.0
+  ],
+  [
+   1.0,
+   7.0
+  ],
+  [
+   7.0,
+   30.0
+  ],
+  [
+   30.0,
+   Infinity
+  ]
+ ],
+ "min_cell": 5,
+ "max_pairs": 10000,
+ "verdict": "LAG-DEPENDENT",
+ "corpora": {
+  "assist": {
+   "learners": 29018,
+   "items": 265,
+   "pairs": 10000,
+   "primary": {
+    "pairs_both": 644,
+    "mean_D": -0.06157903684976018,
+    "ci": [
+     -0.07984795501300868,
+     -0.04343651492355602
+    ],
+    "verdict": "DECAYS",
+    "early_mean": 0.15784568303836274,
+    "late_mean": 0.09626664618860258
+   },
+   "secondary_supported": {
+    "pairs_both": 14,
+    "verdict": "UNANSWERABLE"
+   },
+   "bands": {
+    "EARLY": {
+     "readable_pairs": 851,
+     "median_drop": 0.16206896551724137
+    },
+    "MID": {
+     "readable_pairs": 436,
+     "median_drop": 0.09477954791601156
+    },
+    "LATE_7_30": {
+     "readable_pairs": 754,
+     "median_drop": 0.09999999999999998
+    },
+    "LATE_30P": {
+     "readable_pairs": 1692,
+     "median_drop": 0.07905137721744748
+    }
+   }
+  },
+  "xes3g5m": {
+   "learners": 18066,
+   "items": 865,
+   "pairs": 10000,
+   "primary": {
+    "pairs_both": 175,
+    "mean_D": -0.03323000495169846,
+    "ci": [
+     -0.06005886749152662,
+     -0.006644688051005846
+    ],
+    "verdict": "DECAYS",
+    "early_mean": 0.15298590615224691,
+    "late_mean": 0.11975590120054842
+   },
+   "secondary_supported": {
+    "pairs_both": 83,
+    "mean_D": -0.04864799233876492,
+    "ci": [
+     -0.07636452789996777,
+     -0.022410960887271594
+    ],
+    "verdict": "DECAYS",
+    "early_mean": 0.17502678889163148,
+    "late_mean": 0.12637879655286655
+   },
+   "bands": {
+    "EARLY": {
+     "readable_pairs": 243,
+     "median_drop": 0.13835910652920957
+    },
+    "MID": {
+     "readable_pairs": 326,
+     "median_drop": 0.10401213935053927
+    },
+    "LATE_7_30": {
+     "readable_pairs": 620,
+     "median_drop": 0.10342929054585498
+    },
+    "LATE_30P": {
+     "readable_pairs": 2061,
+     "median_drop": 0.08398268398268405
+    }
+   }
+  },
+  "ednet": {
+   "learners": 6000,
+   "items": 141,
+   "pairs": 10000,
+   "primary": {
+    "pairs_both": 6170,
+    "mean_D": -0.014596062949379122,
+    "ci": [
+     -0.021533793350140863,
+     -0.007470819009098981
+    ],
+    "verdict": "DECAYS",
+    "early_mean": 0.057752030349782935,
+    "late_mean": 0.04315596740040381
+   },
+   "secondary_supported": {
+    "pairs_both": 72,
+    "mean_D": 0.011352717783569343,
+    "ci": [
+     -0.02861272509203025,
+     0.05056354723946507
+    ],
+    "verdict": "UNRESOLVED",
+    "early_mean": 0.11221760403541357,
+    "late_mean": 0.12357032181898292
+   },
+   "bands": {
+    "EARLY": {
+     "readable_pairs": 6800,
+     "median_drop": 0.058441558441558406
+    },
+    "MID": {
+     "readable_pairs": 6785,
+     "median_drop": 0.036363636363636376
+    },
+    "LATE_7_30": {
+     "readable_pairs": 5590,
+     "median_drop": 0.04171245421245423
+    },
+    "LATE_30P": {
+     "readable_pairs": 5069,
+     "median_drop": 0.03656716417910444
+    }
+   }
+  },
+  "edmcup": {
+   "learners": 34580,
+   "items": 351,
+   "pairs": 10000,
+   "primary": {
+    "pairs_both": 0,
+    "verdict": "UNANSWERABLE"
+   },
+   "secondary_supported": {
+    "pairs_both": 0,
+    "verdict": "UNANSWERABLE"
+   },
+   "bands": {
+    "EARLY": {
+     "readable_pairs": 0,
+     "median_drop": null
+    },
+    "MID": {
+     "readable_pairs": 6,
+     "median_drop": 0.044642857142857095
+    },
+    "LATE_7_30": {
+     "readable_pairs": 53,
+     "median_drop": 0.10869565217391304
+    },
+    "LATE_30P": {
+     "readable_pairs": 235,
+     "median_drop": 0.1720759338640539
+    }
+   }
+  },
+  "eedi": {
+   "learners": 118971,
+   "items": 308,
+   "pairs": 10000,
+   "primary": {
+    "pairs_both": 4643,
+    "mean_D": -0.04769885512137814,
+    "ci": [
+     -0.05234078647670994,
+     -0.04289979429322094
+    ],
+    "verdict": "DECAYS",
+    "early_mean": 0.16559066149490667,
+    "late_mean": 0.11789180637352856
+   },
+   "secondary_supported": {
+    "pairs_both": 2504,
+    "mean_D": -0.03700697169807913,
+    "ci": [
+     -0.04142895615456149,
+     -0.03258148507402297
+    ],
+    "verdict": "DECAYS",
+    "early_mean": 0.17440251589557856,
+    "late_mean": 0.13739554419749944
+   },
+   "bands": {
+    "EARLY": {
+     "readable_pairs": 4707,
+     "median_drop": 0.16666666666666663
+    },
+    "MID": {
+     "readable_pairs": 4049,
+     "median_drop": 0.13157894736842102
+    },
+    "LATE_7_30": {
+     "readable_pairs": 5018,
+     "median_drop": 0.13408629213878598
+    },
+    "LATE_30P": {
+     "readable_pairs": 6103,
+     "median_drop": 0.1137664003156752
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "learners": 211063,
+ "learners_in_families": 211053,
+ "pairs_read": 3666,
+ "split_half_spearman_E": 0.8845162815716799,
+ "split_half_draws": 6,
+ "E_abs_median": 0.12508547727520838,
+ "proj": {
+  "P_red": {
+   "edges": 510,
+   "edges_in_universe": 510,
+   "edges_read": 133,
+   "D": 0.0449030608275996,
+   "null_mean": -0.010074400359187052,
+   "null_sd": 0.061862734392172235,
+   "p_upper": 0.1896896896896897,
+   "p_lower": 0.8108108108108109,
+   "concordance": 0.62,
+   "decided_edges": 100,
+   "kappa3": 0.0013837706178331255,
+   "kappa3_null_mean": 0.001170510108769674,
+   "kappa3_null_p95": 0.0183723352124873,
+   "raw_order_D": 0.03943817763685904,
+   "raw_order_null_mean": -0.003327747936041993,
+   "raw_order_p_upper": 0.3833833833833834,
+   "boot_ci": [
+    0.03227497540747733,
+    0.058502427150610284
+   ],
+   "boot_draws": 30,
+   "verdict": "UNANSWERABLE",
+   "D_derangement_only": 0.04642791463601308,
+   "verdict_before_floor": "LEVELS INDEPENDENT"
+  },
+  "P_clo": {
+   "edges": 938,
+   "edges_in_universe": 938,
+   "edges_read": 252,
+   "D": 0.07012959063653809,
+   "null_mean": -0.002369595058878755,
+   "null_sd": 0.04142562397756562,
+   "p_upper": 0.04447776111944028,
+   "p_lower": 0.9560219890054973,
+   "concordance": 0.676056338028169,
+   "decided_edges": 213,
+   "kappa3": 0.017440472115116467,
+   "kappa3_null_mean": 0.0006772677434716169,
+   "kappa3_null_p95": 0.019418055256216614,
+   "raw_order_D": 0.038471828496006506,
+   "raw_order_null_mean": 0.0003053472538513005,
+   "raw_order_p_upper": 0.33833083458270863,
+   "boot_ci": [
+    0.05568018901575036,
+    0.07878201783384776
+   ],
+   "boot_draws": 30,
+   "verdict": "UNANSWERABLE",
+   "D_derangement_only": 0.0760942141259692,
+   "verdict_before_floor": "PROJECTION PARTIAL"
+  },
+  "P_net": {
+   "edges": 3040,
+   "edges_in_universe": 3040,
+   "edges_read": 847,
+   "D": -0.012377569008341166,
+   "null_mean": -0.00012243831999759415,
+   "null_sd": 0.010596892315816453,
+   "p_upper": 0.8820589705147426,
+   "p_lower": 0.1184407796101949,
+   "concordance": 0.46620689655172415,
+   "decided_edges": 725,
+   "kappa3": 0.010444786167260803,
+   "kappa3_null_mean": 0.011423308242782992,
+   "kappa3_null_p95": 0.028996468842894654,
+   "raw_order_D": -0.039555887075447806,
+   "raw_order_null_mean": -0.00011601906286001914,
+   "raw_order_p_upper": 0.9525237381309345,
+   "boot_ci": [
+    -0.015980163468290186,
+    -0.007959690913326562
+   ],
+   "boot_draws": 30,
+   "verdict": "UNANSWERABLE",
+   "D_derangement_only": -0.012988800958382127,
+   "verdict_before_floor": "LEVELS INDEPENDENT"
+  },
+  "P_netred": {
+   "edges": 842,
+   "edges_in_universe": 842,
+   "edges_read": 175,
+   "D": 0.02569997683291156,
+   "null_mean": -0.005562343519386456,
+   "null_sd": 0.043974974337128075,
+   "p_upper": 0.2688655672163918,
+   "p_lower": 0.7316341829085458,
+   "concordance": 0.5507246376811594,
+   "decided_edges": 138,
+   "kappa3": 0.0020588869297988675,
+   "kappa3_null_mean": 0.002093811963267866,
+   "kappa3_null_p95": 0.02061455063834839,
+   "raw_order_D": -0.0010799147130129277,
+   "raw_order_null_mean": -0.005667769693139088,
+   "raw_order_p_upper": 0.49325337331334335,
+   "boot_ci": [
+    0.009695454543266696,
+    0.03447895152238147
+   ],
+   "boot_draws": 30,
+   "verdict": "UNANSWERABLE",
+   "D_derangement_only": 0.030557486052279,
+   "verdict_before_floor": "LEVELS INDEPENDENT"
+  }
+ },
+ "ability_join_share": 0.10429587374385847,
+ "ability_used": false,
+ "ability_learners": 22013,
+ "floor_pass": false,
+ "cohort_only_D": {
+  "P_red": 0.05270666501474808,
+  "P_clo": 0.08265709993232767,
+  "P_net": -0.016636725015832944,
+  "P_netred": 0.03190857304841171
+ },
+ "projection": {
+  "cs": {
+   "positives": 725,
+   "negatives": 797,
+   "positives_placed": 483,
+   "courses": 111,
+   "quotient_edges": 4396,
+   "quotient_mutual_pairs": 1427,
+   "closure_pairs": 11240,
+   "closure_mutual_pairs": 5151,
+   "reduction_edges": 510
+  },
+  "psy": {
+   "positives": 831,
+   "negatives": 914,
+   "positives_placed": 632,
+   "courses": 28,
+   "quotient_edges": 608,
+   "quotient_mutual_pairs": 277,
+   "closure_pairs": 756,
+   "closure_mutual_pairs": 378,
+   "reduction_edges": 0
+  },
+  "math": {
+   "positives": 761,
+   "negatives": 837,
+   "positives_placed": 240,
+   "courses": 27,
+   "quotient_edges": 481,
+   "quotient_mutual_pairs": 193,
+   "closure_pairs": 702,
+   "closure_mutual_pairs": 351,
+   "reduction_edges": 0
+  },
+  "pooled": {
+   "courses": 166,
+   "P_lit": 5485,
+   "closure_pairs": 12698,
+   "P_red": 510,
+   "P_clo": 938,
+   "P_net": 3040,
+   "P_netred": 842
+  }
+ },
+ "descriptive_only": "concept-course membership is model-extracted (NER over captions) with no human reference; per CLAUDE.md the verdict is descriptive"
+}

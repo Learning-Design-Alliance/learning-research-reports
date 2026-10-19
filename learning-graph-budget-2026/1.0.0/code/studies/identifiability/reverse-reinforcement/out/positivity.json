@@ -1,0 +1,80 @@
+{
+ "scheme": "fine",
+ "schemes": {
+  "fine": {
+   "real": {
+    "T_cases": 351048,
+    "K_cases": 1080086,
+    "matched_T": 273655,
+    "matched_K": 539883,
+    "usable_pairs": 2486,
+    "pairs_with_cases": 2693,
+    "coverage": 0.7795372712563524,
+    "learners": 43713
+   },
+   "deranged": {
+    "T_cases": 353099,
+    "K_cases": 1097564,
+    "matched_T": 280861,
+    "matched_K": 549866,
+    "usable_pairs": 2385,
+    "pairs_with_cases": 2691,
+    "coverage": 0.7954171492980722,
+    "learners": 43696
+   },
+   "answerable_real": true,
+   "answerable_deranged": true,
+   "size_real": {
+    "dose": {
+     "T": 2.163249346805284,
+     "K_weighted": 2.2891396950534184,
+     "K_unweighted": 2.4970447300618837
+    },
+    "loglen": {
+     "T": 2.543178395156243,
+     "K_weighted": 2.5688162924116495,
+     "K_unweighted": 2.9417751146547473
+    }
+   },
+   "size_deranged": {
+    "dose": {
+     "T": 2.2551582455378285,
+     "K_weighted": 2.351963695896698,
+     "K_unweighted": 2.4914724678376188
+    },
+    "loglen": {
+     "T": 2.5597311501151903,
+     "K_weighted": 2.5848845084385226,
+     "K_unweighted": 2.9163075146806317
+    }
+   }
+  }
+ },
+ "n_learners": 118971,
+ "proxy_filter": {
+  "R": {
+   "cases": 1431160,
+   "kept": 1431134,
+   "dropped_proxy_under_min": 26
+  },
+  "D": {
+   "cases": 1450683,
+   "kept": 1450663,
+   "dropped_proxy_under_min": 20
+  }
+ },
+ "min_xn": 30,
+ "verdict_if_unanswerable": null,
+ "size": {
+  "control_dose_ratio": 1.0581950242740399,
+  "control_loglen_diff": 0.02563789725540655,
+  "deranged_dose_ratio": 1.0424865024775238,
+  "deranged_T_ratio": 1.0263324258646835,
+  "check_control_scale": [
+   "{'ok': True, 'median_treatment': 2.163249346805284, 'ratios': {'control_c_dose': 1.0581950242740399}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, control_c_dose 2 (1.06x)'}",
+   "{'ok': True, 'median_treatment': 2.163249346805284, 'ratios': {'deranged_b_dose': 1.0424865024775238}, 'covers': {'treatment_b_dose': True}, 'uncovered': [], 'report': 'control scale: median treatment 2, deranged_b_dose 2 (1.04x)'}",
+   "{'ok': True, 'median_treatment': 273655.0, 'ratios': {'deranged_T_cases': 1.0263324258646835}, 'covers': {'treatment_T_cases': True}, 'uncovered': [], 'report': 'control scale: median treatment 273655, deranged_T_cases 280861 (1.03x)'}"
+  ],
+  "passes": true
+ }
+}

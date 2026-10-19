@@ -1,0 +1,56 @@
+{
+  "arm": "ednet",
+  "n_triples": 12176,
+  "background": 0.059298955602113734,
+  "background_pairs": 858,
+  "bar_k": 1.0,
+  "floor": {
+    "scale_invariant": false,
+    "rel_drift": 0.6666666666666666,
+    "fix_drift": 0.5562130177514791,
+    "bg_low": 0.09075719504398674,
+    "bg_high": 0.18247762898856473,
+    "rel_low": 0.036538461538461534,
+    "rel_high": 0.01217948717948718,
+    "fix_low": 0.0325,
+    "fix_high": 0.050576923076923075,
+    "self_cancel_clean": false,
+    "bg_no_conj": 0.02984267338284452,
+    "bg_conj": 0.08113732323078557,
+    "shift_of_conjunction": 0.2564732492397052,
+    "shift_of_background": 1.7188356146882102,
+    "share_own_bar": 0.03378205128205128,
+    "share_clean_bar": 0.03538461538461539,
+    "share_cost": 0.04528985507246399
+  },
+  "scopes": {
+    "global": {
+      "bar": 0.1,
+      "share": 0.05354796320630749,
+      "lo": 0.021931071142304023,
+      "hi": 0.09632319806092755,
+      "power": 0.770162614980289,
+      "design_effect": 86.79669106746954,
+      "n_eff": 140.281845428131,
+      "null_median": 0.0,
+      "null_hi": 2.0532194480950794e-06,
+      "null_reps": 200,
+      "verdict": "STRUCTURE",
+      "beats_old_rule": true
+    },
+    "corpus": {
+      "bar": 0.059298955602113734,
+      "share": 0.10972404730617609,
+      "lo": 0.05216704350244163,
+      "hi": 0.1691232871848476,
+      "power": 0.34095762155059134,
+      "design_effect": 112.61134172890733,
+      "n_eff": 108.1241002288353,
+      "null_median": 0.0,
+      "null_hi": 2.0532194480950794e-06,
+      "null_reps": 200,
+      "verdict": "UNANSWERABLE",
+      "beats_old_rule": true
+    }
+  }
+}

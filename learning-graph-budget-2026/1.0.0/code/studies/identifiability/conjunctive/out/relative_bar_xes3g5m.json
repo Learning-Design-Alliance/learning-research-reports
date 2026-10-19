@@ -1,0 +1,70 @@
+{
+  "arm": "xes3g5m",
+  "n_triples": 11203,
+  "background": 0.10730020445457678,
+  "background_pairs": 819,
+  "bar_k": 1.0,
+  "floor": {
+    "scale_invariant": false,
+    "rel_drift": 0.6666666666666666,
+    "fix_drift": 0.5562130177514791,
+    "bg_low": 0.09075719504398674,
+    "bg_high": 0.18247762898856473,
+    "rel_low": 0.036538461538461534,
+    "rel_high": 0.01217948717948718,
+    "fix_low": 0.0325,
+    "fix_high": 0.050576923076923075,
+    "self_cancel_clean": false,
+    "bg_no_conj": 0.02984267338284452,
+    "bg_conj": 0.08113732323078557,
+    "shift_of_conjunction": 0.2564732492397052,
+    "shift_of_background": 1.7188356146882102,
+    "share_own_bar": 0.03378205128205128,
+    "share_clean_bar": 0.03538461538461539,
+    "share_cost": 0.04528985507246399
+  },
+  "scopes": {
+    "global": {
+      "bar": 0.1,
+      "share": 0.1081853075069178,
+      "lo": 0.0621447604389355,
+      "hi": 0.1699138198924689,
+      "power": 0.749843791841471,
+      "design_effect": 91.80082910923305,
+      "n_eff": 122.03593484618361,
+      "null_median": 0.0,
+      "null_hi": 8.926180487369455e-05,
+      "null_reps": 200,
+      "verdict": "STRUCTURE",
+      "beats_old_rule": true
+    },
+    "corpus": {
+      "bar": 0.10730020445457678,
+      "share": 0.09693832009283228,
+      "lo": 0.053523685292180406,
+      "hi": 0.15877701901114044,
+      "power": 0.7811746853521379,
+      "design_effect": 99.4357139879505,
+      "n_eff": 112.66575710772857,
+      "null_median": 0.0,
+      "null_hi": 0.0,
+      "null_reps": 200,
+      "verdict": "STRUCTURE",
+      "beats_old_rule": true
+    },
+    "family": {
+      "bar": 0.11394283613207068,
+      "share": 0.08551280906899937,
+      "lo": 0.04566133940458069,
+      "hi": 0.13902828249468807,
+      "power": 0.8027760421315719,
+      "design_effect": 87.64175973013269,
+      "n_eff": 127.82719144955989,
+      "null_median": 0.0,
+      "null_hi": 0.0,
+      "null_reps": 200,
+      "verdict": "STRUCTURE",
+      "beats_old_rule": true
+    }
+  }
+}

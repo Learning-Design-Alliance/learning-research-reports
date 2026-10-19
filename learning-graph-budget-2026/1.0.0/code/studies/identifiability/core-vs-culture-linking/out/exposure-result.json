@@ -1,0 +1,448 @@
+{
+ "positivity": {
+  "assistments2012": {
+   "pairs": 931,
+   "pairs_E_pos": 893,
+   "pairs_E_zero": 38,
+   "pairs_E_at_or_below_median": 466,
+   "E_mean": 0.23241415782511618,
+   "E_median": 0.19746689694876224,
+   "E_max": 1.0,
+   "corr_E_P": 0.5745020408211429,
+   "passes": true
+  },
+  "eedi": {
+   "pairs": 1313,
+   "pairs_E_pos": 1310,
+   "pairs_E_zero": 3,
+   "pairs_E_at_or_below_median": 657,
+   "E_mean": 0.23228328689736183,
+   "E_median": 0.17232930414897094,
+   "E_max": 0.9848667470202224,
+   "corr_E_P": 0.7445574897221466,
+   "passes": true
+  }
+ },
+ "recorded": {
+  "assistments2012": "assignment_id (assist_rich.csv)",
+  "eedi": "QuizId (answers.tsv); GroupId is the class",
+  "xes3g5m": "not recorded",
+  "junyi2020": "not recorded"
+ },
+ "pooled": {
+  "regressions": [
+   "assistments2012<-xes3g5m",
+   "assistments2012<-eedi",
+   "assistments2012<-junyi2020",
+   "eedi<-xes3g5m",
+   "eedi<-assistments2012",
+   "eedi<-junyi2020"
+  ],
+  "delta_prox": -0.17169084122600053,
+  "delta_prox_ci": [
+   -0.2216817532017703,
+   -0.1203694523888571
+  ],
+  "delta_other": -0.006620182247626075,
+  "delta_other_ci": [
+   -0.013658083579385942,
+   0.0004874167732705405
+  ],
+  "share_absorbed": 0.4038352102354666,
+  "control_delta_prox_mean": -0.006905436922336634,
+  "control_delta_prox_p025": -0.0314543926000118,
+  "control_abs_corr_with_P_mean": 0.5533480734515736,
+  "real_corr_E_P": {
+   "assistments2012": 0.556776575606338,
+   "eedi": 0.7490418663041907
+  },
+  "control_scale": {
+   "ok": true,
+   "median_treatment": 0.6529092209552643,
+   "ratios": {
+    "deranged": 0.8475115003613766
+   },
+   "covers": {
+    "exposure": true
+   },
+   "uncovered": [],
+   "report": "control scale: median treatment 1, deranged 1 (0.85x)"
+  },
+  "core_holds": true,
+  "verdict": "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS"
+ },
+ "with_E": {
+  "pooled_b_other": 0.11374999148959541,
+  "pooled_b_prox": 0.25345990559939824,
+  "b_other_ci": [
+   0.07626707282424394,
+   0.1531020684358812
+  ],
+  "b_prox_ci": [
+   0.1828807467288518,
+   0.32450500246477426
+  ],
+  "null_b_other_975": 0.02950141581291946,
+  "ratio": 0.4487888970864727,
+  "ratio_ci": [
+   0.2718797886965679,
+   0.7191257442128582
+  ],
+  "median_pooled_b_other": 0.1179086869923891,
+  "median_pooled_b_prox": 0.2550357450548978,
+  "median_pooled_ratio": 0.46232220101934585,
+  "verdict": "CORE AND CULTURAL",
+  "per_pair": {
+   "assistments2012<-xes3g5m": {
+    "n_shared": 273,
+    "b_other": 0.04616934390363663,
+    "b_prox": 0.06016403609485836,
+    "b_exp": 0.3204732121814515
+   },
+   "assistments2012<-eedi": {
+    "n_shared": 760,
+    "b_other": 0.16175954599906953,
+    "b_prox": 0.24206129690175807,
+    "b_exp": 0.051396842631030296
+   },
+   "assistments2012<-junyi2020": {
+    "n_shared": 768,
+    "b_other": 0.09741438639063373,
+    "b_prox": 0.20483237537087542,
+    "b_exp": 0.14432257072256846
+   },
+   "eedi<-xes3g5m": {
+    "n_shared": 395,
+    "b_other": 0.1239252532768142,
+    "b_prox": 0.38380666969323146,
+    "b_exp": 0.2910980921932281
+   },
+   "eedi<-assistments2012": {
+    "n_shared": 760,
+    "b_other": 0.111892120707964,
+    "b_prox": 0.36188486232762845,
+    "b_exp": 0.31442814899107396
+   },
+   "eedi<-junyi2020": {
+    "n_shared": 1134,
+    "b_other": 0.14133929865945433,
+    "b_prox": 0.26801019320803754,
+    "b_exp": 0.3220652921046367
+   }
+  },
+  "pooled_b_exp": 0.24063069313733151,
+  "b_exp_ci": [
+   0.169320047303047,
+   0.307959073216299
+  ]
+ },
+ "without_E": {
+  "pooled_b_other": 0.12037017373722149,
+  "pooled_b_prox": 0.4251507468253988,
+  "b_other_ci": [
+   0.08187398598493167,
+   0.1608658489960012
+  ],
+  "b_prox_ci": [
+   0.36483762910732964,
+   0.482189231265835
+  ],
+  "null_b_other_975": 0.03088855770685324,
+  "ratio": 0.2831235147439485,
+  "ratio_ci": [
+   0.18290443021344358,
+   0.4044055904569297
+  ],
+  "median_pooled_b_other": 0.1195688158565156,
+  "median_pooled_b_prox": 0.3986192286832183,
+  "median_pooled_ratio": 0.2999574713229317,
+  "verdict": "CORE AND CULTURAL",
+  "per_pair": {
+   "assistments2012<-xes3g5m": {
+    "n_shared": 273,
+    "b_other": 0.06229874925103457,
+    "b_prox": 0.269662433995435
+   },
+   "assistments2012<-eedi": {
+    "n_shared": 760,
+    "b_other": 0.16177831768368567,
+    "b_prox": 0.2740429522873971
+   },
+   "assistments2012<-junyi2020": {
+    "n_shared": 768,
+    "b_other": 0.09734522119213931,
+    "b_prox": 0.28951859484961684
+   },
+   "eedi<-xes3g5m": {
+    "n_shared": 395,
+    "b_other": 0.1210597596151764,
+    "b_prox": 0.6146327847235007
+   },
+   "eedi<-assistments2012": {
+    "n_shared": 760,
+    "b_other": 0.11807787209785481,
+    "b_prox": 0.5953278525796236
+   },
+   "eedi<-junyi2020": {
+    "n_shared": 1134,
+    "b_other": 0.16166112258343823,
+    "b_prox": 0.5077198625168198
+   }
+  }
+ },
+ "verdict": "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS",
+ "per_corpus": {
+  "assistments2012": {
+   "exposure": {
+    "regressions": [
+     "assistments2012<-xes3g5m",
+     "assistments2012<-eedi",
+     "assistments2012<-junyi2020"
+    ],
+    "delta_prox": -0.10872209092165233,
+    "delta_prox_ci": [
+     -0.17862240205510355,
+     -0.039185094035850895
+    ],
+    "delta_other": -0.00535967061117322,
+    "delta_other_ci": [
+     -0.016740654713534652,
+     0.00509278231549399
+    ],
+    "share_absorbed": 0.39145089453817555,
+    "control_delta_prox_mean": 0.001424447276877555,
+    "control_delta_prox_p025": -0.04232147387563638,
+    "control_abs_corr_with_P_mean": 0.44691514207315464,
+    "real_corr_E_P": {
+     "assistments2012": 0.556776575606338
+    },
+    "control_scale": {
+     "ok": true,
+     "median_treatment": 0.556776575606338,
+     "ratios": {
+      "deranged": 0.8026830898668059
+     },
+     "covers": {
+      "exposure": true
+     },
+     "uncovered": [],
+     "report": "control scale: median treatment 1, deranged 0 (0.80x)"
+    },
+    "core_holds": true,
+    "verdict": "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS"
+   },
+   "with_E": {
+    "pooled_b_other": 0.10178109209777997,
+    "pooled_b_prox": 0.16901923612249728,
+    "b_other_ci": [
+     0.04807205134585779,
+     0.15848110464975115
+    ],
+    "b_prox_ci": [
+     0.0703895674149705,
+     0.2655001132519675
+    ],
+    "null_b_other_975": 0.04714988117679808,
+    "ratio": 0.6021864400334513,
+    "ratio_ci": [
+     0.23315306585314732,
+     1.6680212924280235
+    ],
+    "median_pooled_b_other": 0.09741438639063373,
+    "median_pooled_b_prox": 0.20483237537087542,
+    "median_pooled_ratio": 0.47558100234034006,
+    "verdict": "CORE AND CULTURAL",
+    "per_pair": {
+     "assistments2012<-xes3g5m": {
+      "n_shared": 273,
+      "b_other": 0.04616934390363663,
+      "b_prox": 0.06016403609485836,
+      "b_exp": 0.3204732121814515
+     },
+     "assistments2012<-eedi": {
+      "n_shared": 760,
+      "b_other": 0.16175954599906953,
+      "b_prox": 0.24206129690175807,
+      "b_exp": 0.051396842631030296
+     },
+     "assistments2012<-junyi2020": {
+      "n_shared": 768,
+      "b_other": 0.09741438639063373,
+      "b_prox": 0.20483237537087542,
+      "b_exp": 0.14432257072256846
+     }
+    },
+    "pooled_b_exp": 0.1720642085116834,
+    "b_exp_ci": [
+     0.06417021828271238,
+     0.27271349470508427
+    ]
+   },
+   "without_E": {
+    "pooled_b_other": 0.10714076270895319,
+    "pooled_b_prox": 0.2777413270441496,
+    "b_other_ci": [
+     0.0517556053982908,
+     0.16325686586636462
+    ],
+    "b_prox_ci": [
+     0.17567854489102183,
+     0.37495010360769204
+    ],
+    "null_b_other_975": 0.04762018279631874,
+    "ratio": 0.3857573658525875,
+    "ratio_ci": [
+     0.15805424498986384,
+     0.8000940091595334
+    ],
+    "median_pooled_b_other": 0.09734522119213931,
+    "median_pooled_b_prox": 0.2740429522873971,
+    "median_pooled_ratio": 0.3552188457306154,
+    "verdict": "CORE AND CULTURAL",
+    "per_pair": {
+     "assistments2012<-xes3g5m": {
+      "n_shared": 273,
+      "b_other": 0.06229874925103457,
+      "b_prox": 0.269662433995435
+     },
+     "assistments2012<-eedi": {
+      "n_shared": 760,
+      "b_other": 0.16177831768368567,
+      "b_prox": 0.2740429522873971
+     },
+     "assistments2012<-junyi2020": {
+      "n_shared": 768,
+      "b_other": 0.09734522119213931,
+      "b_prox": 0.28951859484961684
+     }
+    }
+   }
+  },
+  "eedi": {
+   "exposure": {
+    "regressions": [
+     "eedi<-xes3g5m",
+     "eedi<-assistments2012",
+     "eedi<-junyi2020"
+    ],
+    "delta_prox": -0.23465959153034882,
+    "delta_prox_ci": [
+     -0.3080994012859991,
+     -0.1590578093184811
+    ],
+    "delta_other": -0.007880693884078971,
+    "delta_other_ci": [
+     -0.017710812943505003,
+     0.0020563371591315774
+    ],
+    "share_absorbed": 0.4098426771828877,
+    "control_delta_prox_mean": -0.01260744240646916,
+    "control_delta_prox_p025": -0.05097878975102314,
+    "control_abs_corr_with_P_mean": 0.6575701269298964,
+    "real_corr_E_P": {
+     "eedi": 0.7490418663041907
+    },
+    "control_scale": {
+     "ok": true,
+     "median_treatment": 0.7490418663041907,
+     "ratios": {
+      "deranged": 0.8778816732559686
+     },
+     "covers": {
+      "exposure": true
+     },
+     "uncovered": [],
+     "report": "control scale: median treatment 1, deranged 1 (0.88x)"
+    },
+    "core_holds": true,
+    "verdict": "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS"
+   },
+   "with_E": {
+    "pooled_b_other": 0.12571889088141083,
+    "pooled_b_prox": 0.33790057507629917,
+    "b_other_ci": [
+     0.08353803963006201,
+     0.16691898037670377
+    ],
+    "b_prox_ci": [
+     0.23444628069346024,
+     0.43720343616830587
+    ],
+    "null_b_other_975": 0.03527360898281673,
+    "ratio": 0.37205882485705466,
+    "ratio_ci": [
+     0.211025367310249,
+     0.6356933577598952
+    ],
+    "median_pooled_b_other": 0.1239252532768142,
+    "median_pooled_b_prox": 0.36188486232762845,
+    "median_pooled_ratio": 0.342443871456054,
+    "verdict": "CORE AND CULTURAL",
+    "per_pair": {
+     "eedi<-xes3g5m": {
+      "n_shared": 395,
+      "b_other": 0.1239252532768142,
+      "b_prox": 0.38380666969323146,
+      "b_exp": 0.2910980921932281
+     },
+     "eedi<-assistments2012": {
+      "n_shared": 760,
+      "b_other": 0.111892120707964,
+      "b_prox": 0.36188486232762845,
+      "b_exp": 0.31442814899107396
+     },
+     "eedi<-junyi2020": {
+      "n_shared": 1134,
+      "b_other": 0.14133929865945433,
+      "b_prox": 0.26801019320803754,
+      "b_exp": 0.3220652921046367
+     }
+    },
+    "pooled_b_exp": 0.3091971777629796,
+    "b_exp_ci": [
+     0.20987356297191062,
+     0.40369560925163545
+    ]
+   },
+   "without_E": {
+    "pooled_b_other": 0.1335995847654898,
+    "pooled_b_prox": 0.572560166606648,
+    "b_other_ci": [
+     0.08884351279976517,
+     0.17537041352588537
+    ],
+    "b_prox_ci": [
+     0.5046013728056226,
+     0.6320134760220917
+    ],
+    "null_b_other_975": 0.03662106388000027,
+    "ratio": 0.23333719765607353,
+    "ratio_ci": [
+     0.1475098428670951,
+     0.3303169350608716
+    ],
+    "median_pooled_b_other": 0.1210597596151764,
+    "median_pooled_b_prox": 0.5953278525796236,
+    "median_pooled_ratio": 0.20334973257275069,
+    "verdict": "CORE AND CULTURAL",
+    "per_pair": {
+     "eedi<-xes3g5m": {
+      "n_shared": 395,
+      "b_other": 0.1210597596151764,
+      "b_prox": 0.6146327847235007
+     },
+     "eedi<-assistments2012": {
+      "n_shared": 760,
+      "b_other": 0.11807787209785481,
+      "b_prox": 0.5953278525796236
+     },
+     "eedi<-junyi2020": {
+      "n_shared": 1134,
+      "b_other": 0.16166112258343823,
+      "b_prox": 0.5077198625168198
+     }
+    }
+   }
+  }
+ }
+}
