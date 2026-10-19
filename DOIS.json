@@ -1,0 +1,16 @@
+{
+ "ai-grader-reliability-2026/1.0.0": {
+  "doi": "10.5281/zenodo.23480844",
+  "registrar": "zenodo",
+  "deposition": 23480844,
+  "state": "reserved",
+  "reserved_at": "2026-10-19"
+ },
+ "learning-graph-budget-2026/1.0.0": {
+  "doi": "10.5281/zenodo.23480842",
+  "registrar": "zenodo",
+  "deposition": 23480842,
+  "state": "reserved",
+  "reserved_at": "2026-10-19"
+ }
+}
