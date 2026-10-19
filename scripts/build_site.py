@@ -174,7 +174,7 @@ PAGE = """<!doctype html>
 <title>Research Reports · Learning Design Alliance</title>
 <meta name="description" content="Published research releases of the Learning Design Alliance's learning-engineering programme.">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/lda-favicon.png">
-<link rel="icon" type="image/svg+xml" href="assets/lda-monogram-lapis.svg">
+<link rel="icon" type="image/svg+xml" href="assets/lda-favicon-reports.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=DM+Mono&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
