@@ -35,7 +35,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MARKER = "-".join(["LDA", "EMBARGO"]).encode()   # joined at run time: a constant would be folded into the .pyc
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
-NOT_RELEASES = {".git", ".github", "scripts", "_site"}   # _site: the Pages build, never committed
+NOT_RELEASES = {".git", ".github", "scripts", "site", "_site"}   # _site: the Pages build, never committed
 DOIS = ROOT / "DOIS.json"
 
 
