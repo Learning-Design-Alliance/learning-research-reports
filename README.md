@@ -17,6 +17,13 @@ used, and the maintainer's sign-off. The findings themselves are also summarised
 [learning-wiki](https://github.com/Learning-Design-Alliance/learning-wiki), which links back to the
 releases here.
 
+## Reading the releases
+
+The reports are published at <https://learning-design-alliance.github.io/learning-research-reports/>,
+with an index of every release. The site is built from `main` on every push by
+`.github/workflows/pages.yml` (`scripts/build_site.py`), after `scripts/check_releases.py` has passed.
+It serves the version folders unchanged and adds only the index, which is never committed.
+
 ## Layout
 
 ```
