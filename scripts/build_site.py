@@ -4,7 +4,8 @@
 
 The site is <out>/index.html, the brand assets in site/ (served as assets/), plus a copy of every <release>/<version>/ folder, unchanged, so each
 release's HTML report is served at <release>/<version>/report/index.html, with a breadcrumb bar back to
-the index and the current review form (site/review/) in the served copy only (the repository's file, which LIFT.json hashes, is unchanged). Nothing here is committed:
+the index, the current review form (site/review/) and the LDA brand and footer (site/report/) in the
+served copy only (the repository's file, which LIFT.json hashes, is unchanged). Nothing here is committed:
 the workflow in .github/workflows/pages.yml builds it from main on every push, after
 check_releases.py has passed, so the site never shows a file the repository's checks have not.
 
@@ -137,6 +138,22 @@ def update_review_form(report: Path) -> None:
     report.write_text(s, encoding="utf-8")
 
 
+def add_brand(report: Path) -> None:
+    """Give a served report the LDA brand: the stylesheet, favicon and fonts in site/report/ (kept in step
+    with the report renderer's board/report/), and the LDA footer. Reports rendered before 2026-10-19
+    have none of these; a report that already has them is left alone."""
+    s = report.read_text(encoding="utf-8")
+    if 'class="lda-foot"' in s:
+        return
+    d = ROOT / "site" / "report"
+    head = (d / "head.html").read_text(encoding="utf-8") + "<style>" + (d / "brand.css").read_text(encoding="utf-8") + "</style>"
+    if s.count("</head>") < 1 or s.count("</article></main>") != 1:
+        sys.exit(f"{report}: no </head> or </article></main> to put the LDA brand around")
+    s = s.replace("</head>", head + "</head>", 1)
+    s = s.replace("</article></main>", "</article>" + (d / "footer.html").read_text(encoding="utf-8") + "</main>", 1)
+    report.write_text(s, encoding="utf-8")
+
+
 def add_nav(report: Path, e: dict) -> None:
     """Insert NAV right after <body> in the served copy of a report."""
     s = report.read_text(encoding="utf-8")
@@ -207,6 +224,8 @@ h1 em {{ font-style:italic; }}
 .older {{ margin-top:14px; }}
 footer {{ border-top:1px solid var(--rule); padding-top:18px; margin-top:8px; color:var(--fg); }}
 footer p {{ margin:0 0 8px; max-width:80ch; }}
+.lda-links {{ display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:14px !important; }}
+.lda-links a {{ text-decoration:none; }} .lda-links a:hover {{ text-decoration:underline; }}
 @media (max-width:600px) {{ nav.top {{ grid-template-columns:1fr auto; }} nav.top .l {{ display:none; }} nav.top .r {{ gap:16px; }} .hero {{ padding-top:44px; }} }}
 </style>
 </head>
@@ -227,6 +246,7 @@ footer p {{ margin:0 0 8px; max-width:80ch; }}
 </section>
 {cards}
 <footer class="label">
+  <p class="lda-links"><a href="https://www.learningdesignalliance.org">Learning Design Alliance</a> <a href="https://reports.learningdesignalliance.org">Research reports</a> <a href="https://wiki.learningdesignalliance.org">Wiki</a> <a href="https://lazuli.design">Lazuli</a></p>
   <p>{n} published release(s) · every file is listed with its SHA-256 in each version's LIFT.json, and a published version is never changed</p>
   <p>Code MIT · text, figures, reports and data outputs CC BY 4.0 · source <a href="{repo}">{repo_short}</a></p>
 </footer>
@@ -252,6 +272,7 @@ def main() -> int:
             shutil.copytree(ROOT / v["release"] / v["version"], out / v["release"] / v["version"])
             if v["has_report"]:
                 update_review_form(out / v["release"] / v["version"] / "report" / "index.html")
+                add_brand(out / v["release"] / v["version"] / "report" / "index.html")
                 add_nav(out / v["release"] / v["version"] / "report" / "index.html", v)
     # The mark is inlined so it takes the page's colour (lapis, or lavender in dark mode).
     mark = re.sub(r'fill="#[0-9A-Fa-f]{6}"', 'fill="currentColor"',
@@ -260,7 +281,7 @@ def main() -> int:
     (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL, mark=mark,
                                                 repo_short=REPO_URL.removeprefix("https://github.com/")),
                                     encoding="utf-8")
-    shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review"))   # the LDA logos
+    shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review", "report"))   # the LDA logos
     (out / ".nojekyll").write_text("", encoding="utf-8")   # serve folders as they are, underscores included
     print(f"built {out}: {len(rels)} release(s), "
           + ", ".join(f"{r['release']} {r['versions'][0]['version']}" for r in rels))

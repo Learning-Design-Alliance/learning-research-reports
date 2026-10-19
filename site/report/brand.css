@@ -1,0 +1,46 @@
+/* Learning Design Alliance brand, applied over report.css. After learningdesignalliance.org and the LDA
+   templates: cream ground with a soft lavender and pink glow, ink text, lapis headings and links,
+   Baskervville display type, DM Sans text, DM Mono labels. The reports site serves published reports
+   with this file too (learning-research-reports site/report/brand.css), so keep the two in step. */
+:root{--bg:#fffbf5;--surface:#fffefb;--ink:#0e1240;--ink2:#353a6e;--muted:#676b93;--rule:#dcd8ec;
+--accent:#122fb2;--accent-soft:#ece9ff;--warn:#b5431b;--ok:#1b7f5a;--code:#f6f0e6;--s1:#122fb2;--s1l:#8ea0f0;--s2:#f37434;--s3:#1baf7a;
+--lda-lavender:#e1dbff;--lda-pink:#f7cbcb;--lda-butter:#fffad9}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b0e33;--surface:#11163d;--ink:#ece9ff;--ink2:#c9c2ff;
+--muted:#9a96c4;--rule:#262b55;--accent:#a3b2ff;--accent-soft:#1c2160;--warn:#f08a62;--ok:#4cc79a;--code:#161b45;
+--s1:#a3b2ff;--s1l:#4a56a8;--s2:#f59a6a;--s3:#4cc79a;--lda-lavender:#2b2470;--lda-pink:#4a2340;--lda-butter:#2a2f6b}}
+:root[data-theme="dark"]{--bg:#0b0e33;--surface:#11163d;--ink:#ece9ff;--ink2:#c9c2ff;--muted:#9a96c4;--rule:#262b55;
+--accent:#a3b2ff;--accent-soft:#1c2160;--warn:#f08a62;--ok:#4cc79a;--code:#161b45;--s1:#a3b2ff;--s1l:#4a56a8;--s2:#f59a6a;--s3:#4cc79a;
+--lda-lavender:#2b2470;--lda-pink:#4a2340;--lda-butter:#2a2f6b}
+body{font:16.5px/1.65 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;position:relative}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+background:radial-gradient(55vw 45vh at 100% 0%,var(--lda-lavender),transparent 70%),
+radial-gradient(50vw 50vh at 0% 100%,var(--lda-pink),transparent 70%),var(--bg)}
+nav.side,table,.prov-pop,abbr.gl:hover::after,abbr.gl:focus::after,.ifig-hint,.ifig svg,.ifig .controls,.tip,.diagram svg,
+details.rerun,.proto,.menu,dialog#review-dialog{font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+article h1,article h2,article h3,article h4{font-family:"Baskervville",Georgia,serif;font-weight:400;color:var(--accent);letter-spacing:-.01em}
+article h1,article h2,article h3,article h4{position:relative}
+.hanchor{position:absolute;left:-1.1em;margin:0;padding:0}
+article h1{font-size:clamp(30px,4.2vw,42px);line-height:1.1;text-wrap:balance}
+article h2{font-size:30px;line-height:1.2;border-top:1px solid var(--accent);border-top-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+article h3{font-size:23px}article h4{font-size:19px}
+article h1 + p strong,article h1 + p b{font-weight:500}
+nav.side{background:color-mix(in srgb,var(--bg) 80%,transparent);border-right-color:color-mix(in srgb,var(--accent) 30%,transparent)}
+nav.side h2,.badge b,.rv-btn{font-family:"DM Mono",ui-monospace,Menlo,monospace;font-weight:400;letter-spacing:.07em;text-transform:uppercase}
+.badge{border-color:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:10px}
+.badge b{color:var(--accent)}
+.badge.repro{background:var(--lda-butter)}
+nav.side a:hover,nav.side a.on{color:var(--accent)}
+.proto{background:color-mix(in srgb,var(--lda-lavender) 55%,var(--bg));border:1px solid color-mix(in srgb,var(--accent) 18%,transparent)}
+th{color:var(--accent);border-bottom-color:color-mix(in srgb,var(--accent) 40%,transparent)}
+code{font-family:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+.rv-btn{border-radius:999px;font-size:11px;padding:2px 9px;color:var(--accent);border-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+.rv .rv-actions button{border-radius:999px;font-family:"DM Mono",ui-monospace,Menlo,monospace;font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.rv .rv-actions .primary{background:var(--lda-butter);color:var(--accent);border-color:var(--accent)}
+.rv h3{font-family:"Baskervville",Georgia,serif;font-weight:400;font-size:26px;color:var(--accent)}
+footer.lda-foot{max-width:760px;margin:64px 0 0;padding-top:16px;border-top:1px solid color-mix(in srgb,var(--accent) 45%,transparent);
+font:12px/1.6 "DM Mono",ui-monospace,Menlo,monospace;letter-spacing:.07em;text-transform:uppercase;color:var(--accent)}
+footer.lda-foot nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;margin-bottom:8px}
+footer.lda-foot a{color:var(--accent);text-decoration:none}footer.lda-foot a:hover{text-decoration:underline;text-underline-offset:3px}
+footer.lda-foot .mark svg{height:18px;width:auto;display:block;color:var(--accent)}
+footer.lda-foot p{margin:0;color:var(--muted)}
+@media print{body::before,footer.lda-foot{display:none!important}}
