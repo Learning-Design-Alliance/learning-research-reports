@@ -46,8 +46,10 @@ import hashlib
 import io
 import json
 import os
+import ssl
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -185,15 +187,25 @@ class Zenodo:
         elif raw is not None:
             data, headers["Content-Type"] = raw, "application/octet-stream"
         req = urllib.request.Request(url, data=data, method=method, headers=headers)
-        try:
-            with urllib.request.urlopen(req, timeout=600) as resp:
-                text = resp.read()
-        except urllib.error.HTTPError as e:
-            hint = ""
-            if e.code in (401, 403):
-                hint = (f"\n  no token was accepted: set {self.var}, or store the token as a network "
-                        f"secret for {urllib.parse.urlsplit(url).hostname} (Authorization: Bearer <token>)")
-            raise Refusal(f"Zenodo {method} {url} -> {e.code}: {e.read()[:300]!r}{hint}")
+        for attempt in (1, 2):
+            try:
+                with urllib.request.urlopen(req, timeout=600) as resp:
+                    text = resp.read()
+                break
+            except urllib.error.HTTPError as e:
+                hint = ""
+                if e.code in (401, 403):
+                    hint = (f"\n  no token was accepted (Zenodo answers 403 to a wrong token as to none): set "
+                            f"{self.var}, or store the token as a network secret for "
+                            f"{urllib.parse.urlsplit(url).hostname}; a network secret for that host replaces "
+                            f"the header this script sends, so keep only one of the two")
+                raise Refusal(f"Zenodo {method} {url} -> {e.code}: {e.read()[:300]!r}{hint}")
+            except urllib.error.URLError as e:
+                # A TLS handshake that fails fails before the request is sent, so one retry cannot
+                # create a second deposition. Seen once through the cloud sessions' proxy, 2026-10-19.
+                if attempt == 2 or not isinstance(e.reason, ssl.SSLError):
+                    raise Refusal(f"Zenodo {method} {url}: {e.reason}")
+                time.sleep(3)
         return json.loads(text) if text else {}
 
     def reserve(self, meta: dict) -> tuple[int, str]:
