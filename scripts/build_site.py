@@ -183,7 +183,7 @@ footer {{ color:var(--muted); font-size:0.85rem; border-top:1px solid var(--line
     <p>Published research releases of the Learning Design Alliance's learning-engineering programme. Each release
     is an article with everything needed to check it: the release file, the code, per-case outputs, re-run notebooks,
     and an HTML report in which every number links to the output it was computed from.</p>
-    <p>Findings are also summarised as claim pages in <a href="https://github.com/Learning-Design-Alliance/learning-wiki">learning-wiki</a>.</p>
+    <p>Findings are also summarised as claim pages in <a href="https://wiki.learningdesignalliance.org">learning-wiki</a>.</p>
   </div>
 </header>
 <main>

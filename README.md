@@ -14,12 +14,12 @@ repository, which is private. It is copied here only after a person has released
 and only after it has passed two gates: a patent check and a publication-readiness check. The
 readiness check requires an independent scope audit and reproduction, a disclosure of how AI was
 used, and the maintainer's sign-off. The findings themselves are also summarised as claim pages in
-[learning-wiki](https://github.com/Learning-Design-Alliance/learning-wiki), which links back to the
+[learning-wiki](https://wiki.learningdesignalliance.org), which links back to the
 releases here.
 
 ## Reading the releases
 
-The reports are published at <https://learning-design-alliance.github.io/learning-research-reports/>,
+The reports are published at <https://reports.learningdesignalliance.org>,
 with an index of every release. The site is built from `main` on every push by
 `.github/workflows/pages.yml` (`scripts/build_site.py`), after `scripts/check_releases.py` has passed.
 It adds an index and, to each report it serves, a breadcrumb bar back to the index; neither is
