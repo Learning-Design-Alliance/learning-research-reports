@@ -225,8 +225,15 @@ h1 em {{ font-style:italic; }}
 .older {{ margin-top:14px; }}
 footer {{ border-top:1px solid var(--rule); padding-top:18px; margin-top:8px; color:var(--fg); }}
 footer p {{ margin:0 0 8px; max-width:80ch; }}
-.lda-links {{ display:flex; flex-wrap:wrap; gap:8px 22px; margin-bottom:14px !important; }}
-.lda-links a {{ text-decoration:none; }} .lda-links a:hover {{ text-decoration:underline; }}
+/* The same floating LDA footer as the reports (site/report/footer.html). */
+body {{ padding-bottom:40px; }}
+footer.lda-foot {{ position:fixed; left:0; right:0; bottom:0; z-index:40; padding:7px 16px; border-top:1px solid var(--rule);
+  background:color-mix(in srgb, var(--bg) 88%, transparent); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+  font:11.5px/1.4 "DM Mono",ui-monospace,Menlo,monospace; letter-spacing:.07em; text-transform:uppercase; }}
+footer.lda-foot nav {{ display:flex; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; align-items:center; gap:6px 22px; max-width:1240px; margin:0 auto; white-space:nowrap; }}
+footer.lda-foot a {{ color:var(--fg); text-decoration:none; }} footer.lda-foot a:hover {{ text-decoration:underline; text-underline-offset:3px; }}
+footer.lda-foot .mark svg {{ height:15px; width:auto; display:block; color:var(--fg); }}
+@media (max-width:560px) {{ footer.lda-foot nav {{ gap:6px 16px; }} footer.lda-foot nav a:nth-child(2) {{ display:none; }} }}
 @media (max-width:600px) {{ nav.top {{ grid-template-columns:1fr auto; }} nav.top .l {{ display:none; }} nav.top .r {{ gap:16px; }} .hero {{ padding-top:44px; }} }}
 </style>
 </head>
@@ -247,11 +254,11 @@ footer p {{ margin:0 0 8px; max-width:80ch; }}
 </section>
 {cards}
 <footer class="label">
-  <p class="lda-links"><a href="https://www.learningdesignalliance.org">Learning Design Alliance</a> <a href="https://reports.learningdesignalliance.org">Research reports</a> <a href="https://wiki.learningdesignalliance.org">Wiki</a> <a href="https://lazuli.design">Lazuli</a></p>
   <p>{n} published release(s) · every file is listed with its SHA-256 in each version's LIFT.json, and a published version is never changed</p>
   <p>Code MIT · text, figures, reports and data outputs CC BY 4.0 · source <a href="{repo}">{repo_short}</a></p>
 </footer>
 </main>
+{lda_footer}
 </body>
 </html>
 """
@@ -280,7 +287,8 @@ def main() -> int:
                   (ROOT / "site" / "lda-monogram.svg").read_text(encoding="utf-8").strip())
     mark = mark.replace("<svg ", '<svg aria-hidden="true" focusable="false" ', 1)
     (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL, mark=mark,
-                                                repo_short=REPO_URL.removeprefix("https://github.com/")),
+                                                repo_short=REPO_URL.removeprefix("https://github.com/"),
+                                                lda_footer=(ROOT / "site" / "report" / "footer.html").read_text(encoding="utf-8").strip()),
                                     encoding="utf-8")
     shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review", "report"))   # the LDA logos
     shutil.copyfile(ROOT / "site" / "lda-favicon.png", out / "favicon.ico")   # browsers that ask for /favicon.ico take a PNG
