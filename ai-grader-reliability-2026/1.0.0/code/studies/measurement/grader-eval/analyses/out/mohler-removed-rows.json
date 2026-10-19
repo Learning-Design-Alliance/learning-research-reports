@@ -1,0 +1,15 @@
+{
+ "rows_in_csv": 2273,
+ "rows_kept": 1727,
+ "rows_removed": 546,
+ "rows_removed_with_a_score_above_5": 526,
+ "kept_qwk_0_5": 0.5193208051471492,
+ "removed_qwk": {
+  "halve_both_half_to_even": 0.41793123147784494,
+  "halve_both_half_up": 0.4098990478481739,
+  "halve_above_5_half_to_even": 0.3773156356317984,
+  "raw_0_10": 0.4106230040367207
+ },
+ "removed_exact_agreement_unrounded": 0.5238095238095238,
+ "quoted": "0.418 is halve_both_half_to_even; exact agreement 52.4% is removed_exact_agreement_unrounded"
+}

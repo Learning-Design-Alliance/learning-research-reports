@@ -1,0 +1,251 @@
+{
+ "what": "detection floor for the label-stability instrument: synthetic graders on the real draws",
+ "smoke_check": "written and scored by one session; checks the instrument's logic on worlds it was told about",
+ "reps": 200,
+ "boot": 2000,
+ "delta": 0.02,
+ "worlds": {
+  "CONST": {
+   "sigma": 0.05,
+   "cluster_sd": 0.3
+  },
+  "CONST-NOISY": {
+   "sigma": 0.075,
+   "cluster_sd": 0.5
+  },
+  "GROWS": {
+   "sigma": 0.05,
+   "cluster_sd": 0.3
+  },
+  "SHRINKS": {
+   "sigma": 0.05,
+   "cluster_sd": 0.3
+  },
+  "SCALE": {
+   "sigma": 0.05,
+   "cluster_sd": 0.3
+  }
+ },
+ "answerable": [
+  "C3",
+  "C5"
+ ],
+ "const_equivalence_rate": {
+  "C1": 0.405,
+  "C2": 0.015,
+  "C3": 0.615,
+  "C4": 0.46,
+  "C5": 0.68
+ },
+ "shares": {
+  "CONST no-difference": 0.935,
+  "CONST-NOISY no-difference": 0.905,
+  "GROWS detected": 1.0,
+  "GROWS detected [within]": 0.135,
+  "SHRINKS detected": 0.955,
+  "SCALE detected": 0.93,
+  "SCALE false length": 0.04
+ },
+ "checks": {
+  "CONST: no difference in >= 90%": true,
+  "CONST-NOISY: no difference in >= 90%": true,
+  "GROWS: GROWS-WITH-LENGTH >= 80%": true,
+  "GROWS: SHRINKS <= 5%": true,
+  "SHRINKS: SHRINKS-WITH-LENGTH >= 80%": true,
+  "SHRINKS: GROWS <= 5%": true,
+  "SCALE: SCALE-DEPENDENT (larger on 0-5) >= 80%": true,
+  "SCALE: any length verdict <= 10%": true
+ },
+ "passed": true,
+ "tallies": {
+  "CONST": {
+   "verdicts": {
+    "UNDERPOWERED": 186,
+    "SHRINKS-WITH-LENGTH[across-corpora: confounded with task] + SCALE-DEPENDENT (smaller on 0-5)": 1,
+    "LENGTH-INCONSISTENT": 1,
+    "SCALE-DEPENDENT (smaller on 0-5)": 4,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task]": 3,
+    "GROWS-WITH-LENGTH[within]": 2,
+    "STABLE": 1,
+    "SCALE-DEPENDENT (larger on 0-5)": 1,
+    "SHRINKS-WITH-LENGTH[across-corpora: confounded with task]": 1
+   },
+   "classes": {
+    "C1": {
+     "EQUIVALENT": 81,
+     "UNRESOLVED": 118,
+     "LARGER": 1
+    },
+    "C2": {
+     "UNRESOLVED": 195,
+     "SMALLER": 1,
+     "EQUIVALENT": 3,
+     "LARGER": 1
+    },
+    "C3": {
+     "EQUIVALENT": 123,
+     "UNRESOLVED": 71,
+     "SMALLER": 5,
+     "LARGER": 1
+    },
+    "C4": {
+     "EQUIVALENT": 92,
+     "UNRESOLVED": 105,
+     "LARGER": 1,
+     "SMALLER": 2
+    },
+    "C5": {
+     "EQUIVALENT": 136,
+     "UNRESOLVED": 61,
+     "LARGER": 2,
+     "SMALLER": 1
+    }
+   }
+  },
+  "CONST-NOISY": {
+   "verdicts": {
+    "SHRINKS-WITH-LENGTH[across-corpora: confounded with task] + SCALE-DEPENDENT (smaller on 0-5)": 2,
+    "UNDERPOWERED": 181,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task]": 2,
+    "SHRINKS-WITH-LENGTH[within]": 6,
+    "SCALE-DEPENDENT (larger on 0-5)": 2,
+    "SCALE-DEPENDENT (smaller on 0-5)": 3,
+    "GROWS-WITH-LENGTH[within]": 3,
+    "LENGTH-INCONSISTENT": 1
+   },
+   "classes": {
+    "C1": {
+     "UNRESOLVED": 187,
+     "EQUIVALENT": 7,
+     "SMALLER": 4,
+     "LARGER": 2
+    },
+    "C2": {
+     "UNRESOLVED": 195,
+     "SMALLER": 3,
+     "LARGER": 2
+    },
+    "C3": {
+     "SMALLER": 5,
+     "UNRESOLVED": 169,
+     "EQUIVALENT": 24,
+     "LARGER": 2
+    },
+    "C4": {
+     "LARGER": 2,
+     "UNRESOLVED": 172,
+     "SMALLER": 2,
+     "EQUIVALENT": 24
+    },
+    "C5": {
+     "UNRESOLVED": 160,
+     "EQUIVALENT": 40
+    }
+   }
+  },
+  "GROWS": {
+   "verdicts": {
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task]": 170,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task] + SCALE-DEPENDENT (smaller on 0-5)": 2,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task] + SCALE-DEPENDENT (larger on 0-5)": 1,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task; within]": 26,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task; within] + SCALE-DEPENDENT (larger on 0-5)": 1
+   },
+   "classes": {
+    "C1": {
+     "UNRESOLVED": 141,
+     "EQUIVALENT": 36,
+     "LARGER": 23
+    },
+    "C2": {
+     "UNRESOLVED": 185,
+     "LARGER": 4,
+     "EQUIVALENT": 11
+    },
+    "C3": {
+     "EQUIVALENT": 108,
+     "UNRESOLVED": 88,
+     "SMALLER": 2,
+     "LARGER": 2
+    },
+    "C4": {
+     "SMALLER": 33,
+     "UNRESOLVED": 136,
+     "EQUIVALENT": 31
+    },
+    "C5": {
+     "LARGER": 200
+    }
+   }
+  },
+  "SHRINKS": {
+   "verdicts": {
+    "SHRINKS-WITH-LENGTH[across-corpora: confounded with task]": 138,
+    "SHRINKS-WITH-LENGTH[across-corpora: confounded with task; within]": 47,
+    "UNDERPOWERED": 8,
+    "SHRINKS-WITH-LENGTH[within]": 4,
+    "SHRINKS-WITH-LENGTH[across-corpora: confounded with task] + SCALE-DEPENDENT (smaller on 0-5)": 2,
+    "SCALE-DEPENDENT (larger on 0-5)": 1
+   },
+   "classes": {
+    "C1": {
+     "UNRESOLVED": 137,
+     "EQUIVALENT": 50,
+     "SMALLER": 13
+    },
+    "C2": {
+     "UNRESOLVED": 159,
+     "SMALLER": 41
+    },
+    "C3": {
+     "UNRESOLVED": 81,
+     "EQUIVALENT": 116,
+     "SMALLER": 2,
+     "LARGER": 1
+    },
+    "C4": {
+     "UNRESOLVED": 140,
+     "LARGER": 46,
+     "EQUIVALENT": 14
+    },
+    "C5": {
+     "SMALLER": 185,
+     "UNRESOLVED": 15
+    }
+   }
+  },
+  "SCALE": {
+   "verdicts": {
+    "SCALE-DEPENDENT (larger on 0-5)": 178,
+    "UNDERPOWERED": 14,
+    "GROWS-WITH-LENGTH[across-corpora: confounded with task] + SCALE-DEPENDENT (larger on 0-5)": 5,
+    "SHRINKS-WITH-LENGTH[within] + SCALE-DEPENDENT (larger on 0-5)": 3
+   },
+   "classes": {
+    "C1": {
+     "EQUIVALENT": 83,
+     "UNRESOLVED": 116,
+     "SMALLER": 1
+    },
+    "C2": {
+     "UNRESOLVED": 198,
+     "SMALLER": 2
+    },
+    "C3": {
+     "LARGER": 186,
+     "UNRESOLVED": 14
+    },
+    "C4": {
+     "UNRESOLVED": 158,
+     "EQUIVALENT": 39,
+     "SMALLER": 3
+    },
+    "C5": {
+     "EQUIVALENT": 143,
+     "UNRESOLVED": 55,
+     "LARGER": 2
+    }
+   }
+  }
+ }
+}

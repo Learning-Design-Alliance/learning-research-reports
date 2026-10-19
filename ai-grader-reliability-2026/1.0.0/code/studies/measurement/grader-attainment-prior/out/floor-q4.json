@@ -1,0 +1,35 @@
+{
+  "pass": false,
+  "replicates": 200,
+  "bootstrap": 400,
+  "checks": {
+    "null_dMAE": {
+      "expected": "EQUIVALENT",
+      "hit_rate": 0.035,
+      "verdicts": {
+        "GAIN": 5,
+        "LOSS": 4,
+        "EQUIVALENT": 7,
+        "INCONCLUSIVE": 184
+      }
+    },
+    "null_dQWK": {
+      "expected": "EQUIVALENT",
+      "hit_rate": 0.33,
+      "verdicts": {
+        "GAIN": 3,
+        "LOSS": 9,
+        "EQUIVALENT": 66,
+        "INCONCLUSIVE": 122
+      }
+    },
+    "gain_dMAE": {
+      "expected": "GAIN",
+      "hit_rate": 1.0,
+      "verdicts": {
+        "GAIN": 200
+      }
+    }
+  },
+  "note": "smoke check: synthetic arms written and scored by the same session"
+}

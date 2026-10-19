@@ -1,0 +1,65 @@
+{
+  "pass": false,
+  "replicates": 200,
+  "bootstrap": 400,
+  "worlds": {
+    "NULL": {
+      "expected": "NO-LABEL-EFFECT",
+      "hit_rate": 0.94,
+      "wrong_direction_rate": 0.01,
+      "verdicts": {
+        "NO-LABEL-EFFECT": 188,
+        "PRIOR": 2,
+        "REVERSED": 4,
+        "UNRESOLVED": 6
+      },
+      "pass": true
+    },
+    "PENALTY": {
+      "expected": "PRIOR",
+      "hit_rate": 0.805,
+      "wrong_direction_rate": 0.0,
+      "verdicts": {
+        "PRIOR": 161,
+        "UNRESOLVED": 39
+      },
+      "pass": true
+    },
+    "OVERSHOOT": {
+      "expected": "BIAS",
+      "hit_rate": 0.78,
+      "wrong_direction_rate": 0.01,
+      "verdicts": {
+        "BIAS": 156,
+        "MIXED": 1,
+        "PRIOR": 1,
+        "UNRESOLVED": 42
+      },
+      "pass": false
+    },
+    "BOOST": {
+      "expected": "UNRESOLVED",
+      "hit_rate": 0.96,
+      "wrong_direction_rate": 0.04,
+      "verdicts": {
+        "BIAS": 5,
+        "PRIOR": 3,
+        "UNRESOLVED": 192
+      },
+      "pass": true
+    },
+    "SHOVE": {
+      "expected": "UNRESOLVED",
+      "hit_rate": 0.935,
+      "wrong_direction_rate": 0.065,
+      "verdicts": {
+        "BIAS": 1,
+        "MIXED": 2,
+        "PRIOR": 10,
+        "UNRESOLVED": 187
+      },
+      "pass": true
+    }
+  },
+  "note": "smoke check: synthetic graders written and scored by the same session"
+}

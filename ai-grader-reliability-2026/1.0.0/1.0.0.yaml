@@ -1,0 +1,1895 @@
+# ============================================================================
+# EMBARGOED — NOT PUBLISHED. Staged in learning-engineering-research
+# (private; github.com/Learning-Design-Alliance/Learning-engineering-research).
+#
+# `released_at` is the date this was written up, not the date it became public,
+# because it has not. The embargo is a decision about commercial and patent
+# exposure; the protocol this names permits publication (CC-BY-4.0 corpora).
+# Those are different things, recorded separately, and nothing in this file
+# changes when the embargo lifts.
+#
+# NOTHING HAS BEEN RELEASED, so this version was corrected in place on
+# 2026-09-25 to match the paper (research/article/attainment-bias-in-llm-grading.md)
+# and the committed working record. It reads as the current record. No
+# superseded figure is kept.
+#
+# Corrected in place again on 2026-10-05 (still unpublished): three limitations
+# added or rewritten from studies/measurement/grader-attainment-prior/ (bias or
+# prior; paired intervals for "no accuracy gain"; pooling read in Pearson r).
+#
+# Corrected in place on 2026-10-06 with the paper's redraft (still unpublished,
+# so still 1.0.0): the re-test analyses (swapped label and paired intervals,
+# model breadth and reasoning, item types and scales, exemplar marks, the loop
+# simulation, the QWK offset arithmetic) and the HARMOGEN-R re-analysis are now
+# declared, with their datasets; their observations are cited in `evidence:`;
+# the interpretation and the learner-context limitations are restated to match.
+# Same day, later: the ASAP 2.0 label-by-group analysis (the paper's last
+# placeholder) and its dataset are declared and its observation cited.
+# Same day, corrections-1 (research/readiness/ai-grader-reliability-2026/
+# corrections-1.md): the interpretation and limitations reworded to the
+# independent scope audit; the matching-artefact correction of the unlabeled
+# group gap declared as an analysis with its observation; the per-case model
+# outputs declared as a dataset (location awaiting the maintainer); the
+# Pearson-r check, the pooling re-run and the Mohler CSV export declared; the
+# dump order of each multi-dump analysis recorded; the HARMOGEN-R invocation
+# corrected; the withdrawn sampling SDs removed. Still unpublished, still 1.0.0.
+# Same day, corrections-2 (research/readiness/ai-grader-reliability-2026/
+# corrections-2.md): wording per scope-audit-2 (H5, H9, H15, K8, G1-G5); the
+# random-draw sampling figures corrected to uniform draws and computed by a
+# newly declared analysis `resolution-sampling-sd`; the Mohler removed-row 0.418
+# computed by a newly declared `mohler-removed-rows`; the `qwk-offset`
+# invocation and the single-thread BLAS requirement of `asap2-matching-artefact`
+# recorded. Still 1.0.0.
+# Same day, records-1 (research/readiness/ai-grader-reliability-2026/records-1.md),
+# maintainer decisions: the protocol's scope expanded to the three sources it
+# had recorded as deviations; the stripped per-case model outputs published as
+# one file beside this one (`per-case-model-outputs`); the exemplar claim
+# renamed. No number or verdict changed. Still 1.0.0.
+# Same day, corrections-4 (research/readiness/ai-grader-reliability-2026/
+# corrections-4.md): the ASAP 2.0 human score's reliability is now taken from
+# its data paper (two expert reads, adjudicated,
+# pre-adjudication r = .750; 0.75 lower bound, 0.857 best estimate), replacing
+# the assumed 0.65-0.90 bracket and every "one rater" description of ASAP 2.0;
+# the headline gap at equal true quality is 0.15-0.27 (was 0.11-0.28). The
+# human-ceiling robustness checks are declared as `ceiling-robustness` (Gwet's
+# AC2 beside each kappa; agreement stratified by whether the humans agreed).
+# The 150-answer Mohler draw behind the human-human 0.608 is rebuilt with no
+# model call by a newly declared `mohler-ceiling-draw`: it reproduces in the
+# frozen snapshot and in the current harness. Still 1.0.0.
+# Same day, corrections-5 (research/readiness/ai-grader-reliability-2026/
+# corrections-5.md): wording per scope-audit-6 S1-S9 (the 0.75-0.86 range is
+# implied by the data paper's rater agreement, not reported; "double-blind,
+# 100 percent adjudication" scoped to the PERSUADE 2.0 essays; AC2 comparisons
+# stated as not resolved rather than level; the 2026-09-16 working-log Gemini ASAP
+# probe marked as outside this release and the PERSUADE sentence dropped); strip_dumps.py rebuild now
+# writes the harness's own serialisation, so `ceiling-robustness` runs from the
+# published per-case file. No number or verdict changed; the per-case file's
+# bytes are unchanged. Still 1.0.0.
+# 2026-10-15, corrections-20 (research/readiness/ai-grader-reliability-2026/
+# corrections-20.md): `harmogen-reanalysis` now names a Python port of the
+# harness's HARMOGEN-R re-analysis, which ships in code/ with its output and a
+# reproduce.py step (`ref-harmogen`); every HARMOGEN-R figure the paper prints
+# reproduces from it. Same day, note T: the prose no longer says "we" or "our"
+# for the programme or its product (the paper's one author speaks as "I"). No
+# number or verdict changed. Still 1.0.0.
+#
+# THE CODE IS VENDORED HERE (corrected in place 2026-10-05, still unpublished).
+# The harness was written inside the product repository
+# (the Lazuli repository, private), because it
+# calls the production grading prompt directly. A commit in a private repo is
+# not reproducible by a reader, so each cited commit's harness and every app
+# file it imports were copied byte for byte into this repository under
+# studies/measurement/grader-eval/vendor/<9-char sha>/, with a VENDORED.md and a
+# lock (sha256 and git blob id per file; `pnpm vendor:verify` and
+# `python3 vendor/snapshot.py` check it offline). Every `code:` block below names
+# this repository and the vendored path; `upstream:` keeps the product-repo
+# commit the run was made from, as provenance. vendor/runtime/render.py shows
+# the vendored code renders the same prompts as the product repo at each cited
+# commit, and as the commits the learner-context runs were made at. Nothing was
+# withheld from the vendored files; two type-only imports are stubbed (see each
+# VENDORED.md). `commit:` will be the commit of the merge that brings the vendor
+# in, filled before publication.
+#
+# WHAT THIS RELEASE IS NOT: production calibration. Every figure here is
+# measured on other people's students answering other people's questions
+# against other people's rubrics. It measures grader MECHANICS: rubric
+# following, discrimination, run-to-run stability, and what a prompt or model
+# change does to those. It cannot say how the grader behaves on a Lazuli
+# course, because production has no ground truth.
+# ============================================================================
+
+schema_version: 1
+
+release:
+  id: ai-grader-reliability-2026
+  version: 1.0.0
+  title: >-
+    Reliability, calibration and attack surface of an LLM short-answer grader,
+    measured against three human-graded corpora
+  released_at: 2026-09-25
+  # The QUESTION, not the finding.
+  question: >-
+    For an LLM grader scoring free-text answers against a rubric: how closely
+    does it agree with expert human graders, and how closely do those graders
+    agree with each other; how stable is the grade when the same work is
+    submitted again or reformatted; which context additions improve it and
+    which only bias it; and can a learner move their own grade by writing to
+    the grader rather than to the question?
+
+protocol:
+  ref: open-graded-short-answer-corpora
+  version: 1.0.0
+
+no_study_reason: >-
+  No study plan object was written for this investigation. It began as an
+  engineering evaluation of a shipped grading prompt and grew adaptively: most
+  arms exist because an earlier result suggested them. A plan written now would
+  post-date its own findings. Each analysis records this in `prespecified`.
+
+research_design:
+  # Not an RCT and not a simulation. Every configuration is applied to every
+  # sampled case: a full within-item crossover with no assignment of people,
+  # because the units are archival answers. The closed vocabulary has no value
+  # for that shape, so `other` with this detail.
+  family: other
+  detail: >-
+    Two shapes. (1) Repeated-measures ablation over archival human-graded
+    answers (JorGPT, Mohler). Cases are drawn by stratified sampling across the
+    grade range, or across the learner's held-out attainment for the attainment
+    arm, and every grader configuration scores every sampled case, so each case
+    is its own control and contrasts are within-item. The human grade shipped
+    with the corpus is the reference. The only stochastic element is the model
+    call, which is why run-to-run spread is measured separately and treated as
+    the instrument's resolution. (2) Inter-rater agreement between humans, with
+    no model involved: two raters on Mohler, 28 recruited graders on
+    Menagerie, and four instructors on every item of HARMOGEN-R.
+  preregistration:
+    registered: false
+    note: >-
+      Not preregistered, and the analysis order was adaptive: several
+      configurations were tested because an earlier result suggested them.
+      Recorded because a reader who has to infer it will infer wrongly. Results
+      first seen at n=40 were re-run at n>=150 before being reported, and the
+      attainment contrast was re-run with a draw sampled on attainment, 150 per
+      tail, across three models. THE RE-TESTS ARE THE EXCEPTION: every analysis
+      below marked `prespecified: true` (swapped label and paired intervals,
+      model breadth and reasoning, item types and scales, exemplar marks, the
+      loop simulation, the label effect by demographic group, the
+      matching-artefact correction) was pre-registered in a commit of the
+      research repository before any model call, with its threshold, verdict
+      wording and detection floor; the study directories record each commit.
+      Exceptions inside them: in the swapped-label study the verdict rule was
+      revised after its floor failed, while model outputs sat unread, and the
+      revision was committed before any output was read; the Pearson-r check
+      and the recentred "usable prior" reading were added after the runs and
+      are reported, not pre-registered; the matching-artefact study's check of
+      the label-by-group contrasts was added after the planned label-by-group
+      analysis and does not re-cut its verdicts.
+
+datasets:
+  - id: jorgpt-answers
+    title: >-
+      JorGPT: 3,041 teacher-graded answers to 50 open-ended computer-science
+      questions from 79 students, with four LLM baselines per answer
+    grain: one student answer to one question, with its teacher grade
+    format: csv
+    rows: 3041
+    size_bytes: 14558120
+    location:
+      kind: url
+      ref: "https://zenodo.org/records/18981627"
+    # dataset_en.csv, the English file of the deposit. Hash computed over the
+    # downloaded file on 2026-09-25; the Zenodo MD5 (196825ce...) matches.
+    sha256: 1d5deb07247a415181f1999e66763c29a2a4df9130d0ad6e9bc813f64343653c
+    identifiability: deidentified
+    access: raw
+    note: >-
+      File dataset_en.csv (the deposit also carries a Spanish file, not read).
+      Every row carries the corpus's `teacher_corrected` flag, so the reference
+      grade is an independent human judgement rather than a model grade a
+      teacher declined to change. 5.9% of teacher grades coincide exactly with
+      the deposit's judge LLM. This was checked before any result was trusted.
+      The loader drops ten rows with an empty answer, leaving 3,031 cases.
+
+  - id: mohler-answers
+    title: >-
+      Mohler ASAG: 2,273 data-structures answers to 80 questions, each graded
+      independently by two graduate assistants
+    grain: one student answer to one question, with two independent rater scores
+    format: csv
+    rows: 2273
+    size_bytes: 702489
+    location:
+      kind: url
+      ref: "https://huggingface.co/datasets/nkazi/MohlerASAG/blob/dac06732b42d01a5169f543f6d272f1476cced3e/data/cleaned-oe-00001.parquet"
+    # The hash is of the CSV the harness read. It is a deterministic export of
+    # the parquet above by studies/measurement/grader-eval/analyses/mohler_to_csv.py
+    # (commit 6d450970cc905fb5d6a0dc56075c6fb47da603cd), reproduced byte for
+    # byte on 2026-09-25 and again by the 2026-10-06 independent reproduction.
+    sha256: 7c64b6e1eb9ef95121cb912e273b208130ec4f79c5cf1ea888970026fd605901
+    identifiability: deidentified
+    access: raw
+    note: >-
+      The mirror ships parquet only. The analysed CSV is the `cleaned` config,
+      `open_ended` split (data/cleaned-oe-00001.parquet at revision dac06732,
+      153,016 bytes, sha256
+      f2aff37d7a3c6e6a7267afe0ab29ca4ebfbf90285b8eea77b08da9e1217376b0),
+      written with Python's csv module: header row, CRLF line endings, floats
+      as repr(). THE ONLY CORPUS HERE WITH TWO RATERS ON ORDINARY MARKING.
+      Data-quality warning for anyone re-running this: 546 of the 2,273 rows
+      record per-rater scores on 0-10 while `score_avg` stays on 0-5, and some
+      cannot be reconciled by any single rescaling. See `mohler-consistent`.
+
+  - id: mohler-consistent
+    title: >-
+      Mohler ASAG rows whose two rater scores are internally consistent with
+      the published mean
+    grain: one student answer to one question, with two independent rater scores
+    format: csv
+    rows: 1727
+    # Derived in memory by `loadMohler` and never written to disk, so there is
+    # no file to hash or deposit. It regenerates exactly from `mohler-answers`,
+    # whose hash is above.
+    location:
+      kind: not-yet-deposited
+    identifiability: deidentified
+    access: derived
+    derived_from:
+      - mohler-answers
+    note: >-
+      Keeps only rows where both raters lie in 0-5 and (r1 + r2) / 2
+      reproduces `score_avg` exactly. Rescaling the other 546 would invent
+      rater disagreement, which is the one quantity the ceiling measures. The
+      filter is NOT neutral: excluded rows agree less than kept ones, so the
+      measured ceiling is an over-estimate.
+
+  - id: menagerie-grades
+    title: >-
+      Menagerie: 279 CS1 Java submissions re-graded by 28 recruited graders on
+      four rubric dimensions, four graders on 1,084 of 1,116 items and three on
+      32
+    grain: one grader's letter grade on one rubric dimension of one submission
+    format: csv
+    rows: 4480
+    size_bytes: 460833
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    # grades.csv (OSF file uwvn3). Hash computed on 2026-09-25 and identical to
+    # the sha256 OSF reports for the file.
+    sha256: 2a63ccf4b60ea93b4ae8b11d594cbb870aa6a0ba41c81a1acdead09058d1cf7b
+    identifiability: deidentified
+    access: raw
+    note: >-
+      File grades.csv. THE ONLY CORPUS HERE WHOSE SUBJECT IS GRADING RATHER
+      THAN ANSWERS. The deposit describes the grades as collected "as part of a
+      study into the consistency of human graders" (Messer, Brown, Kolling and
+      Shi 2024, arXiv:2409.12967), and they are deliberately NOT the students'
+      awarded grades. Four rubric dimensions are scored separately, which makes
+      per-dimension agreement measurable. Licence checked against the OSF node
+      record (CC BY 4.0). 33 of 4,480 rows carry a blank or "NAN" grade and are
+      dropped rather than imputed.
+
+  # The program sources the Menagerie deposit ships beside its grades, read
+  # by the label-stability re-test (60 submissions, graded by three models).
+  # One record per archive because each carries its own hash; hashes match
+  # the OSF metadata and data/data-sources.json (`menagerie-grades`).
+  - id: menagerie-programs-18-19
+    title: Menagerie "Anonymised Assignments" archive, academic year 2018-19
+    grain: one student's CS1 Java submission (source files)
+    format: other
+    size_bytes: 5100393
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: 07a1ca90f4dc0ee21d14e789b55d15ccd2ea8c2bb04aeea192899877d36191d6
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Zip archive (OSF file 668d82b0b7d5db00e2c5d3cb), src/18~19.zip. Read
+      only by `label-stability`. Sent to hosted models, as the protocol's
+      `data.collected` now records (scope expanded 2026-10-06; formerly a
+      deviation).
+  - id: menagerie-programs-19-20
+    title: Menagerie "Anonymised Assignments" archive, academic year 2019-20
+    grain: one student's CS1 Java submission (source files)
+    format: other
+    size_bytes: 5640408
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: 0c618cfcb28a98b184bdcbbf0a9041e8ac88fafa8a01269dc71a5dcbe05487d7
+    identifiability: deidentified
+    access: raw
+    note: Zip archive (OSF file 668d83302e47a901055b4193), src/19~20.zip.
+  - id: menagerie-programs-20-21
+    title: Menagerie "Anonymised Assignments" archive, academic year 2020-21
+    grain: one student's CS1 Java submission (source files)
+    format: other
+    size_bytes: 46642622
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: b1764a020ede5a52be7dc361f443ae1d2c1c838495f773813a279e8ee722502d
+    identifiability: deidentified
+    access: raw
+    note: Zip archive (OSF file 669e56252acc490254fd8d2d), src/20~21.zip.
+  - id: menagerie-programs-21-22
+    title: Menagerie "Anonymised Assignments" archive, academic year 2021-22
+    grain: one student's CS1 Java submission (source files)
+    format: other
+    size_bytes: 9667388
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: abecfef1ab27fe8f43818f263365c1dbca08b5d09dcaeda859c9395d4ccb8ddd
+    identifiability: deidentified
+    access: raw
+    note: Zip archive (OSF file 668d82389c995c0105e562d3), src/21~22.zip.
+
+  - id: asap2
+    title: >-
+      ASAP 2.0: 24,728 source-based argumentative essays, grades 6, 8, 9 and 10, one holistic human score (1-6) each, from two adjudicated expert reads, with English-learner, economic,
+      disability, gender and race/ethnicity fields
+    grain: one student's essay with its holistic human score and demographic fields
+    format: other
+    size_bytes: 22983137
+    location:
+      kind: url
+      ref: "https://www.kaggle.com/datasets/lburleigh/asap-2-0"
+    # asap2.zip, Kaggle dataset version 8; hash as recorded in
+    # data/data-sources.json (`asap2`).
+    sha256: afef0d8b2b578ceff6bc0ef6286f37fd5d8da260d97ad2567c6b96cdd75cd964
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Crossley, Baffour, Burleigh and King 2025, CC BY 4.0. Two expert reads with adjudication (for the PERSUADE 2.0 essays, double-blind with 100 percent adjudication; the data paper reports pre-adjudication r = .75 for both subsets) per essay; only "the average
+      human assigned score" (an integer 1-6) is released, so no per-item
+      human ceiling can be computed here. The data paper reports
+      pre-adjudication agreement of weighted kappa .745 / .659 and r .750
+      (Assessing Writing 65, 100954, section 3, p. 3). The demographic fields are analysis metadata
+      only: the harness refuses any prompt whose template names a group
+      attribute. Governed by the protocol's `data.collected` since the scope
+      expansion of 2026-10-06 (formerly a deviation). The release's published
+      per-case outputs leave the demographic fields out; they re-join from
+      this corpus by essay id.
+
+  - id: harmogen-r
+    title: >-
+      HARMOGEN-R: 770 responses from a university data-structures course, each
+      evaluated by four instructors and three LLMs under five rubric variants
+    grain: one evaluator's score on one response under one rubric variant
+    format: other
+    size_bytes: 42732329
+    location:
+      kind: doi
+      ref: "10.5281/zenodo.19534458"
+    # harmogenr_dataset_v2.zip. Hash computed over a fresh download on
+    # 2026-10-06; its MD5 (68a8a970...) matches the Zenodo record.
+    sha256: d83ee9e6ee12adbfe127eed5f44fbacc996b2d3acdf013a9ec19ce0db26f0206
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Mendonca, Quintal, Mendonca and Baras 2026, CC BY 4.0. Responses in
+      Portuguese. Re-analysed as arithmetic over the depositors' own published
+      evaluations; the release runs no model on it. Governed by the protocol's
+      `data.collected` since the scope expansion of 2026-10-06 (formerly a
+      deviation).
+
+  # Every re-test number is regenerated from this file by a declared analysis
+  # (rebuild the analysis-ready dumps with strip_dumps.py, below). Published
+  # beside this release file by maintainer decision, 2026-10-06.
+  - id: per-case-model-outputs
+    title: >-
+      Per-case outputs of every re-test model run, stripped: for each graded
+      case its corpus id, learner or essay id, the label or exemplar marks
+      shown, the human score and the model's mark in each arm
+    grain: one graded case under every arm of one model run
+    format: ndjson
+    # `git`: the file ships in the same repository as this release file, beside
+    # it, so the ref is its repository-relative path (it resolves in
+    # learning-wiki once the release is transplanted, and in the research
+    # repository under research/wiki/ until then). The hash pins the bytes.
+    location:
+      kind: git
+      ref: research/releases/ai-grader-reliability-2026/per-case-model-outputs.jsonl
+    sha256: 4b0bd3e8fa0d771d9a1eb4efab68ff423460c2f0a3a5ad5d88d0c5330586346d
+    # Case lines. The file also opens with 32 run lines (one per model run),
+    # 14,292 lines in all.
+    rows: 14260
+    size_bytes: 4246544
+    identifiability: deidentified
+    access: published
+    derived_from:
+      - jorgpt-answers
+      - mohler-consistent
+      - menagerie-grades
+      - asap2
+    note: >-
+      JSON Lines; data dictionary in per-case-model-outputs.README.md beside
+      it. Generated by studies/measurement/grader-eval/analyses/strip_dumps.py
+      (research repository, committed 2026-10-06 with this record) from the
+      32 per-case harness dumps of the runs: grader-vi/ (swapped label on four
+      models, attempt history, pooling), breadth/ (Opus 5.5, Llama 4, the
+      reasoning arms and the Gemini re-run), exmarks/,
+      grader-label-stability/, grader-vi-groups/ and reproduction-rerun/ (the
+      independent reproduction's Gemini attempt-history spot re-run of 2026-10-06), fable-agent/ (Fable 5.1 graded as Claude Code subagents, 2026-10-06) and neutral/ (the size-matched neutral-statement run on Gemini, 2026-10-06). The script checks each dump against
+      studies/measurement/grader-eval/analyses/per-case-dumps.sha256 before
+      reading it, and each run line names its source dump and hash. KEPT:
+      corpus, case id, learner or essay id as the corpus publishes it, label
+      or exemplar marks shown, human score, model id, the model's marks, and
+      the harness's numeric bookkeeping (tail, scale, lengths in characters).
+      LEFT OUT: ASAP 2.0's demographic fields and the sampling cell derived
+      from them, which re-join from the public corpus by essay id
+      (`strip_dumps.py rebuild --asap2`), and one local file path. The dumps
+      never held answer, program or essay text or grader rationales, and the
+      script refuses any long string. The full dumps are kept privately,
+      with the hashes above. `strip_dumps.py verify` shows the rebuilt dumps
+      equal the originals in every row and header field but that path, and
+      every marks-only analysis below regenerated its committed out/*.json byte for byte from the rebuilt dumps (records-1.md). Since corrections-5 the rebuilt dumps are written as the harness wrote them (indent 2, no trailing newline), so 30 of the 32 are byte-identical to the originals and match per-case-dumps.sha256 (the two ASAP 2.0 files lose `resumedFrom`; their rebuilt hashes, which are deterministic, are listed in per-case-dumps.rebuilt.sha256 and accepted by label-dose and by `strip_dumps.py verify`); `ceiling-robustness`, which checks each dump's hash, was re-run from them to its committed outputs (selftest, floor, results and posthoc, byte for byte). The original
+      single runs (Table 5.1, the first history run, the original attainment
+      contrast, the original exemplar table, grader against each Mohler
+      rater) left no per-case output, and this file does not replace them.
+
+analyses:
+  # SPLIT PER CORPUS, not per script. An analysis declares the datasets it
+  # read, and `--why` prints them under every observation that names it.
+  # Every `upstream:` commit below is in the Lazuli repository (private) named in the header, and
+  # its files are vendored at the `path:` given. 584e5a91a and 8474722e9 are
+  # merge commits in that repo's `development` history. 9344787 is the tip of
+  # the harness branch LDA-1349-grader-eval-harness.
+  - id: jorgpt-agreement
+    title: >-
+      Score the shipped grading prompt against JorGPT's teacher grade on two
+      model tiers, and report QWK, MAE, spread ratio and bias against the
+      baselines the corpus ships
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/run.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/run.ts
+    environment:
+      kind: process
+      detail: >-
+        Node 22, pnpm; Vercel AI SDK against hosted Gemini
+        (gemini-3.5-flash-lite as Model.LITE with thinking off,
+        gemini-3.7-flash as Model.STANDARD with thinking on). Calls
+        `buildGradingPrompt` and `gradingSchema` from
+        src/lib/ai/grading/prompt.ts (vendored beside the harness), the prompt
+        and schema the production grader used at that commit. Everything around
+        the model call (database, anonymisation, xAPI dispatch) is skipped. The
+        runs resolved ai 6.0.233, @ai-sdk/google 3.0.98, @ai-sdk/openai 3.0.86
+        and zod 3.25.76 from the app's lockfile (sha256 in each VENDORED.md).
+        The lockfile named here was generated on 2026-10-05 for the vendored
+        snapshot and resolves the same version of every package on the model
+        call path (ai, @ai-sdk/gateway, google, openai, provider,
+        provider-utils, zod, eventsource-parser); it differs from the app's
+        only in test and transpile tooling (vite, esbuild and their
+        dependencies).
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: jorgpt-stability
+    title: >-
+      Ablations on JorGPT: re-grading, reformatting, pooling, the
+      content-signature cache, graded exemplars and goal-graph context
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        As `jorgpt-agreement`. Modes perturb, pool, stabilise, signature,
+        exemplars and graph. Perturbations are generated by perturb.ts and keep
+        the words and their order in every layout variant, so any movement is
+        the grader's and not the content's. `signature` makes no model call.
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: jorgpt-learner-context
+    title: >-
+      What the grader is told about the learner: a previous attempt with and
+      without its mark (five arms), and the learner's held-out attainment,
+      sampled 150 per tail, on three models from two vendors
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/584e5a91a/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 584e5a91a609d98f0d2ce165a941b77bbf2ee4c2
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        As `jorgpt-agreement`. Modes history and attainment. The runs were made
+        at commits 9e43cc2532cd183b388ff5ab735ab21431abd46d and
+        f0b217093c5f5cae62da8225e288872f5baae2e0 on branch
+        claude/funny-turing-d8f04c, whose grader-eval trees are identical to
+        this merge commit. At 9e43cc253 prompt.ts differs (no
+        `responseFenceToken`, one hardening sentence worded differently), on
+        paths these modes never reach; rendering every history and attainment
+        prompt at all three commits gives identical text
+        (studies/measurement/grader-eval/vendor/runtime/render.py and its
+        out/render.json). Model
+        selection sits behind provider.ts, so the same arms run against
+        gemini-3.5-flash-lite, gpt-4.1-mini and gpt-5-mini from one spec, each
+        in its own default configuration. There is no defensible way to
+        equalise effort across vendors. The attainment draw is deterministic and
+        shared by every model.
+      lockfile: studies/measurement/grader-eval/vendor/584e5a91a/pnpm-lock.yaml
+    inputs:
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: jorgpt-injection
+    title: >-
+      Append adversarial payloads to real JorGPT answers and measure the
+      movement, in three prompt arms: shipped, instruction-hardened and
+      nonce-fenced
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        As `jorgpt-agreement`, mode inject. Payloads are in inject.ts. At this
+        commit `buildGradingPrompt` carries `hardened` and `nonce` as opt-in
+        parameters, so all three arms run from one binary. The graded content is
+        identical across arms and payloads; only the appended text and the
+        prompt arm differ.
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: mohler-ceiling
+    title: >-
+      Agreement between Mohler's two independent human raters on the
+      internally consistent rows, and on the rows the consistency filter
+      removed
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        Node 22, pnpm, mode ceiling. NO MODEL IS INVOLVED in this half: it is
+        arithmetic over the deposit, using the same quadratic-weighted kappa in
+        metrics.ts as every machine figure. The kept-row figures reproduce from
+        the committed code. The excluded-row figure is computed by
+        `mohler-removed-rows` (committed 2026-10-06); see `limitations`. The
+        150-answer subset figure (0.608) is the `--mode ceiling` draw,
+        stratifiedSample(all 1,727, 150, seed 7); it rebuilds to 0.6077 with
+        no model call by `mohler-ceiling-draw` (2026-10-06).
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - mohler-answers
+      - mohler-consistent
+    ai_processing: false
+
+  - id: mohler-agreement
+    title: >-
+      Score the shipped grading prompt against each Mohler rater separately and
+      against their mean
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        As `jorgpt-agreement`, mode ceiling, on the corpus's own 0-5 scale and a
+        stratified sample of 150: stratifiedSample(all 1,727 consistent rows,
+        150, seed 7), hard-coded in runCeiling. The run kept no per-case
+        output, so the grader's 0.549 / 0.798 / 0.711 cannot be re-scored
+        without a model call; the draw itself rebuilds exactly, and its
+        rater-vs-rater 0.608 reproduces (`mohler-ceiling-draw`). It is not
+        the `mohler-taxonomy` draw, which samples from the 1,609 answers
+        with four sibling questions.
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - mohler-consistent
+    ai_processing: true
+
+  - id: mohler-taxonomy
+    title: >-
+      Curricular sibling context on Mohler, with an unrelated-sibling arm
+      holding length and shape constant
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        As `jorgpt-agreement`, mode taxonomy. Sibling groups come from the
+        corpus's own `E<module>.Q<question>.A<answer>` identifiers: a module is
+        an assignment and its questions are goals a course author grouped,
+        which is the structure JorGPT lacks.
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - mohler-consistent
+    ai_processing: true
+
+  - id: menagerie-irr
+    title: >-
+      Inter-rater reliability between recruited human graders, pooled, per
+      grader pair and per rubric dimension
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/8474722e9/lazuli-app/scripts/grader-eval/menagerie.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 8474722e9750aebad791dd76866d391d55e36609
+        path: services/lazuli-app/scripts/grader-eval/menagerie.ts
+    environment:
+      kind: process
+      detail: >-
+        Node 22, pnpm, run as stability.ts --mode irr. NO MODEL IS INVOLVED:
+        arithmetic over the deposit, using the same `agreement()` from
+        metrics.ts as every machine figure. Reported at two scale granularities
+        because the corpus's 14-level letter scale is finer than Mohler's. Every
+        figure the observations quote was reproduced from grades.csv on
+        2026-09-25 by re-implementing this code.
+      lockfile: studies/measurement/grader-eval/vendor/8474722e9/pnpm-lock.yaml
+    inputs:
+      - menagerie-grades
+    ai_processing: false
+
+  # No observation names this one. It produces the instrument's error bars,
+  # not a result about grading.
+  - id: resolution-run
+    title: >-
+      Measure the harness's own error bars: sampling variance under stratified
+      and random draws, and model variance across repeated identical runs
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 21487fea78ff41023ac302eaf6a387d6b8c7123a
+      path: studies/measurement/grader-eval/vendor/934478716/lazuli-app/scripts/grader-eval/stability.ts
+      upstream:
+        repo: "the Lazuli repository (private)"
+        commit: 9344787165e7a497131d03302ef0c67a8afd16f1
+        path: services/lazuli-app/scripts/grader-eval/stability.ts
+    environment:
+      kind: process
+      detail: >-
+        As `jorgpt-agreement`. The model spread comes from mode pool (three
+        identical LITE passes). Sampling standard deviations were once quoted
+        from an ad hoc, uncommitted resampling (stratified 0.007, random 0.022);
+        both are WITHDRAWN. They are now computed by `resolution-sampling-sd`:
+        SD 0.024 over stratified draws and 0.031 over uniform random draws (200
+        seeds each), so stratification reduces sampling noise by about 1.3x at
+        n = 150. (An intermediate figure of 0.020 for random draws, and a
+        200-draw mean of 0.783, came from a non-uniform sort-comparator shuffle
+        in a reproduction's scratch script and are withdrawn too.) The
+        stratified baseline (0.833, seed 7) and the full-corpus baseline (0.799 on
+        all 3,041 rows; 0.796 on the 3,031 non-empty) reproduce from the
+        same script; the single random-draw figure 0.795 does not (seed not
+        recorded), though it equals the mean of 200 uniform draws (0.795).
+      lockfile: studies/measurement/grader-eval/vendor/934478716/pnpm-lock.yaml
+    inputs:
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: resolution-sampling-sd
+    title: >-
+      Sampling variation of the corpus's own Gemini-baseline QWK at n = 150:
+      stratified draws against uniform simple-random draws, and the
+      whole-corpus baseline
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: c80fc593fbda00ebc9338e1e78577302c20ec95a
+      path: studies/measurement/grader-eval/analyses/sampling_sd.ts
+    environment:
+      kind: process
+      detail: >-
+        Node 22.22 (types stripped natively; no install). No model call:
+        arithmetic over the deposit with the vendored stratifiedSample and
+        quadraticWeightedKappa (vendor/934478716). Stratified: seeds 1-200.
+        Random: uniform Fisher-Yates (mulberry32, seeds 1-200), first 150.
+        `node studies/measurement/grader-eval/analyses/sampling_sd.ts
+        <JORGPT_DIR>/dataset_en.csv`, writing analyses/out/sampling-sd.json:
+        stratified SD 0.0238 (mean 0.8325), random SD 0.0306 (mean 0.7948),
+        ratio 1.29; corpus 0.7964 on 3,031 non-empty answers, 0.7992 on all
+        3,041 rows. Added 2026-10-06 (corrections-2) so that these figures stop
+        being ad hoc.
+    inputs:
+      - jorgpt-answers
+    ai_processing: false
+
+  - id: mohler-removed-rows
+    title: >-
+      Agreement between Mohler's two raters on the 546 rows the consistency
+      filter removes, under the rescaling that gives the quoted figure and
+      three alternatives
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: c80fc593fbda00ebc9338e1e78577302c20ec95a
+      path: studies/measurement/grader-eval/analyses/mohler_removed_rows.py
+    environment:
+      kind: process
+      detail: >-
+        Python standard library. No model call. `python3
+        studies/measurement/grader-eval/analyses/mohler_removed_rows.py
+        <MOHLER_DIR>/mohler_en.csv`, writing
+        analyses/out/mohler-removed-rows.json. Halving both raters' 0-10
+        scores and rounding half to even gives QWK 0.418 on 0-5 (rounded half
+        up 0.410; halving only scores above 5, 0.377; raw on 0-10, 0.411); exact
+        agreement on the raw scores 52.4%. Checks 0.519 on the 1,727 kept rows.
+        Added 2026-10-06 (corrections-2).
+    inputs:
+      - mohler-answers
+    ai_processing: false
+
+  - id: harmogen-reanalysis
+    title: >-
+      Human-human and LLM-human agreement on HARMOGEN-R, built pairwise on the
+      same items with the same statistic as every other figure here
+    # Not pre-specified: a port of an existing analysis (corrections-20, 2026-10-15).
+    # Commit moved to 7e427e4 by corrections-21, which added the labelled unbinned bias.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 7e427e48367bf4e3bde61b392ec725fb859e1494
+      path: studies/measurement/grader-harmogen-ceiling/harmogen.py
+    environment:
+      kind: process
+      detail: >-
+        Python 3.9 or later, standard library only. Run from `code/` as
+        `python3 studies/measurement/grader-harmogen-ceiling/harmogen.py
+        --root <HARMOGEN_DIR>`, where <HARMOGEN_DIR> holds
+        harmogenr_dataset_v2.zip (this release's `harmogen-r` dataset) or its
+        extracted harmogenr_dataset_v2/ folder; it reads
+        csv/tables/{questions,student_responses,evaluations}.csv and writes
+        out/results.json (aggregates only, unrounded), byte-identical from the
+        zip or the extracted copy. NO MODEL IS INVOLVED: arithmetic over the
+        depositors' published evaluations, with the same quadratic-weighted
+        kappa as every other figure here. It is a line-for-line Python port
+        (2026-10-15, corrections-20) of the analysis first run on 2026-09-15 in
+        the evaluation harness, which this release does not publish
+        (`harness/harmogen.ts`, run as `stability.ts --mode harmogen` at commit
+        21487fe); run on the same tables, the original and the port give
+        bit-identical values (538 of 538). Instructor against instructor, 21
+        levels: QWK 0.981 on 23,100 pairs (0.980 at 11 levels), exactly 1.000
+        on the 1,925 bare-option cells and 0.942 on the 1,925 open cells; LLM
+        against instructor 0.968 (0.905 on the open cells). One addition
+        outside the ported computation (corrections-21), labelled as such in
+        the output: the pooled LLM-minus-instructor bias on the unbinned 0-100
+        scores, -2.02 points over the same 138,600 pairs, against the data
+        paper's reported -2.02%.
+    inputs:
+      - harmogen-r
+    ai_processing: false
+
+  - id: jorgpt-attainment-retests
+    title: >-
+      Attainment re-tests on JorGPT: a swapped-label arm on identical work,
+      paired learner-clustered intervals on accuracy for the attainment and
+      attempt-history arms, an open-weights model, and pooling read in Pearson r
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: cc12f4deede6ad5dda57509ff75fe5ab9890f75a
+      path: studies/measurement/grader-attainment-prior/analyse.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at d44fd28; floor and instrument revision at 50434ad,
+        before any dump was read. Gradings by the current harness
+        (studies/measurement/grader-eval/harness/stability.ts, modes
+        attainment-swap, history, pool) with the grading prompt vendored at
+        studies/measurement/grader-eval/vendor/lazuli-app/ (hashed in
+        lazuli-app.lock.json; a byte copy of the product's prompt at its
+        commit 277cd5085), whose rendered text for these arms matches
+        584e5a91a. Models: gemini-3.5-flash-lite (thinking minimal),
+        gpt-4.1-mini, gpt-5-mini (OpenAI direct, non-strict JSON schema), and
+        qwen3-235b-a22b-2507 via OpenRouter pinned to DeepInfra with fallbacks
+        off. No temperature, top-p, seed or direct-API token limit sent.
+        Analysis in Python (numpy; versions pinned in
+        studies/measurement/grader-eval/analyses/requirements.txt);
+        learner-cluster bootstrap, 4,000 resamples. Invocations, from the root of the release's code package (`code/`), each script under
+        its study directory in studies/measurement/, with <D> a dump directory rebuilt from
+        `per-case-model-outputs` by `python3
+        studies/measurement/grader-eval/analyses/strip_dumps.py rebuild --out
+        <D> --asap2 <ASAP2_train_sourcetexts.csv>` (the same for every
+        analysis below; one RNG is shared across dumps, so the order sets the
+        bootstrap endpoints): `analyse.py --dumps <D>/grader-vi/swap-gemini.json
+        <D>/grader-vi/swap-gpt41mini.json <D>/grader-vi/swap-gpt5mini.json
+        <D>/grader-vi/swap-qwen.json`; `analyse.py --history
+        <D>/grader-vi/history-gemini.json`. The independent reproduction's spot
+        re-run of the history arms (2026-10-06, Gemini, 150 answers, a single run;
+        dump `<D>/reproduction-rerun/history-gemini.json`, hash in
+        per-case-dumps.sha256) is read by the same `analyse.py --history`; it gives
+        the unmarked strong attempt's MAE change −0.143 [−0.267, −0.023]. The
+        pooling re-run is
+        grader-attainment-prior/pooling.py (commit
+        d44fd28a9abac31ebe8805ec752f7148d95be04a), `pooling.py --dump
+        <D>/grader-vi/pool-gemini.json`, writing out/pooling.json.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: jorgpt-model-breadth
+    title: >-
+      The swapped-label arm on further models (Claude Opus 5.5, Llama 4
+      Maverick), a within-model reasoning contrast (GPT-5-mini, Gemini 3.5
+      Flash Lite), the configuration record of every run, and per-learner
+      label effects
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 4a46373762d4e6e6436f02b91fe1471b8941a447
+      path: studies/measurement/grader-model-breadth/breadth.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at 5f3ceca; floor and pricing at c999185. Same draw,
+        arms, prompt pin and analysis code as `jorgpt-attainment-retests`.
+        Opus 5.5 via OpenRouter pinned to Amazon Bedrock (JSON mode, schema in a
+        system message); Llama 4 Maverick via OpenRouter pinned to Parasail;
+        GPT-5-mini at reasoning effort minimal and high (OpenAI direct); Gemini
+        3.5 Flash Lite at thinking high and a default re-run. Request bodies
+        captured offline per SDK tree (wirehook.mjs) and live per run.
+        Spend $42.68 of a $60 cap. Gemini 3.1 Pro and GPT-5.5 were not run as graders through the API (Gemini 3.1 Pro graded ten answers in a pricing probe), a scope decision on cost per grade; Claude Fable 5.1's
+        API route was blocked by the account's zero-data-retention setting, and
+        it was run on 100 answers as Claude Code subagents (fable-agent-label).
+        Invocations (<D> as in `jorgpt-attainment-retests`; G = <D>/grader-vi,
+        B = <D>/breadth; order sets the bootstrap endpoints): `breadth.py
+        --models G/swap-gemini.json G/swap-gpt41mini.json G/swap-gpt5mini.json
+        G/swap-qwen.json B/swap-opus55.json B/swap-llama4.json
+        B/swap-lite-rerun.json B/swap-lite-high.json B/swap-g5m-min.json
+        B/swap-g5m-high.json --frontier openrouter:anthropic/claude-opus-5.5`;
+        `--learners` with the same ten dumps in the same order; `--reasoning
+        B/swap-g5m-min.json:B/swap-g5m-high.json:gpt5mini-minimal-vs-high
+        B/swap-g5m-min.json:G/swap-gpt5mini.json:gpt5mini-minimal-vs-default
+        G/swap-gpt5mini.json:B/swap-g5m-high.json:gpt5mini-default-vs-high
+        B/swap-lite-rerun.json:B/swap-lite-high.json:gemini-lite-minimal-vs-high
+        G/swap-gemini.json:B/swap-lite-rerun.json:RERUN-gemini-lite-default`.
+        The Pearson-r check (reported only, added after the runs) is
+        grader-model-breadth/r_check.py (commit
+        6265e5ab085d8dc00cf760a17a0293ba8be1b54f): `r_check.py
+        G/swap-gemini.json G/swap-gpt41mini.json G/swap-gpt5mini.json
+        G/swap-qwen.json B/swap-opus55.json B/swap-llama4.json
+        B/swap-lite-high.json B/swap-g5m-min.json B/swap-g5m-high.json`,
+        writing out/r_check.json.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: fable-agent-label
+    title: >-
+      The swapped-label arm on Claude Fable 5.1, graded as Claude Code
+      subagents (100 answers, true and swapped arms), reported beside the
+      model-breadth table and never pooled with the API runs
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: bcc776dfc91b5befbe39c8e58752c1f6f0a551ef
+      path: studies/measurement/grader-fable/agent_analyse.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at 7ccb528 (floor and deviation 1 at cef3e95; Amendment 1,
+        the agent route, committed before any agent grading). The API route was
+        blocked by the account's zero-data-retention setting. Prompts were
+        rendered by the unmodified harness with fetch replaced and are
+        byte-identical to the Opus 5.5 API run's inputs for the same (answer,
+        arm). They were graded in 20 blinded batches of ten by Claude Code
+        subagents on the session's fable alias; every agent's transcript records
+        the served model as claude-fable-5-1, and each read only its own batch.
+        Sampling settings were not known or recorded. One item of 200 was not
+        returned (99 complete pairs). Deviation 2: each agent read a
+        byte-identical copy of its batch from an isolated directory rather than
+        receiving it inline. Invocation: `agent_analyse.py --scratch <scratch>
+        --model-served claude-fable-5-1 --opus <D>/breadth/swap-opus55.json`,
+        writing out/agent-results.json; its dump is
+        <D>/fable-agent/swap-fable-agent.json in `per-case-model-outputs`.
+        Result: PERSISTS, L +0.31 [+0.19, +0.45]; Opus 5.5 via the API on the
+        same answers +0.34 [+0.26, +0.43].
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: label-dose
+    title: >-
+      Whether the attainment label's effect scales with the label's value:
+      slope of the per-answer label effect on the gap between the two labels
+      shown (six models), and Qwen's four-point label curve on ASAP 2.0
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 73ffe6f88d04dab5c5b08e667c36b8a6bd95c1ff
+      path: studies/measurement/grader-label-dose/dose.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered with its detection floor at 78605d6, before any real
+        slope was computed. No model calls: the existing swapped-label and ASAP
+        2.0 dumps, each checked against per-case-dumps.sha256 or, for the two
+        ASAP 2.0 dumps rebuilt from `per-case-model-outputs`, against
+        per-case-dumps.rebuilt.sha256 (added after reproduction-5). Slope of d on
+        the label gap with tail, own label and teacher mark held fixed;
+        learner-cluster bootstrap within tail, 4,000 replicates; rho = slope x
+        mean gap / L. Invocation: `dose.py --run --dump-dir <D>` (writes
+        out/results.json); post-hoc leave-one-model-out `dose.py --posthoc --dump-dir <D>`.
+        Result: GRADED-ACROSS-MODELS, pooled rho +0.84 [+0.38, +1.36]; only
+        Qwen passes the floor alone (GRADED, +0.148 [+0.049, +0.255] per
+        label point); ASAP Qwen MONOTONE-DOSE / CONCAVE.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+      - asap2
+    ai_processing: true
+
+  - id: neutral-control
+    title: >-
+      A size-matched neutral sentence beside the control and the true
+      attainment label on Gemini 3.5 Flash Lite, separating the presence of a
+      sentence about the student from the label's value
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 13e97fac5998d2467c8292e78d11075e65fb144d
+      path: studies/measurement/grader-neutral-control/neutral.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at 3046048 and floor (revision 0 failed, revision 1
+        passed) at 37f1087, before any model call. One run, the 300-answer
+        attainment draw, four arms (control, neutral, true, swapped label);
+        Gemini 3.5 Flash Lite configured as in jorgpt-attainment-retests; the
+        neutral arm added to harness/stability.ts (`--arms` accepts
+        `neutral`). 1,200 gradings, 0 failed, $1.25. Invocation: `neutral.py
+        --dump <D>/neutral/swap-neutral-lite.json`, writing out/results.json.
+        Result: PRESENCE-EFFECT in the high tail (+0.14 [+0.05, +0.24]);
+        READINGS-CHANGE in the high tail (reward +0.08 [-0.01, +0.17] against
+        neutral, +0.22 against control); penalty holds (-0.27 against neutral).
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: calibration-vs-label
+    title: >-
+      A label-free linear calibration (mean and SD matched to the teacher,
+      fitted leaving each student out) against the attainment label's QWK gain,
+      on the swapped-label runs of seven grader configurations
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 1bcec6258edb828e685d49b94deaeae56d2cca41
+      path: studies/measurement/grader-calibration-vs-label/calibrate.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered with its detection floor at 4bce18b, before any real
+        estimand was computed; no model calls (existing dumps, each checked
+        against per-case-dumps.sha256). Learner-cluster bootstrap within tail,
+        4,000 replicates, calibration refitted in every replicate; margins
+        ±0.02 QWK, ±0.10 MAE. Result: calibration alone raises QWK on every
+        harsh or compressed grader (+0.047 to +0.132; Gemini +0.008,
+        NO-GAIN-BOUNDED); on the three graders the label helped, calibrated
+        unlabeled minus raw labeled +0.038 [+0.013, +0.061]
+        (CALIBRATION-AT-LEAST-MATCHES-LABEL), and calibrated labeled minus
+        calibrated unlabeled +0.014 [-0.008, +0.035] (UNRESOLVED; "no addition"
+        unreachable at n = 300 by the floor). Mean/SD matching only; tail
+        transfer overshoots; one deviation (GPT-5-mini minimal row filter),
+        verdicts unchanged on the plan's basis. Invocation: `calibrate.py --run
+        --scratch <D>` (out/results.json) and `calibrate.py --run --all-arms
+        --scratch <D>` (out/results-all-arms.json).
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: label-stability
+    title: >-
+      The attainment label's effect on identical work across item types and
+      scales: JorGPT re-marked out of 5, Mohler short answers on 0-5, and
+      whole Menagerie programs on the 14-level rubric
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: fa0ad111874a4dd72e54226cdc75facf72d11b94
+      path: studies/measurement/grader-label-stability/analyse.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at b7a97cc. Harness mode label-stability with the
+        swapped-label pairs rescaled to each scale; models
+        gemini-3.5-flash-lite, gpt-4.1-mini and qwen3-235b-a22b-2507
+        (DeepInfra pin), each at its defaults. Cluster bootstrap by learner,
+        question or submission. `analyse.py --run --dump-dir <D>` (<D> holding
+        grader-vi/ and grader-label-stability/). The outputs were produced at
+        the commit above, where the dump directory was a hard-coded session
+        path; the --dump-dir argument (else $GRADER_DUMP_DIR, else
+        shared.paths.scratch_root()) was added on 2026-10-06 without changing
+        any computation, and the rerun is byte-identical.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+      - mohler-consistent
+      - menagerie-grades
+      - menagerie-programs-18-19
+      - menagerie-programs-19-20
+      - menagerie-programs-20-21
+      - menagerie-programs-21-22
+    ai_processing: true
+
+  - id: exemplar-marks
+    title: >-
+      Graded exemplars with correct, shuffled and shifted marks on identical
+      work, 600 JorGPT answers on Gemini 3.5 Flash Lite and 146 on GPT-4.1-mini
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 87620bff196542c434af3ee94955e690b726bb48
+      path: studies/measurement/grader-exemplar-marks/analyse.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at 8807506. Harness mode exemplar-marks; a render check
+        shows it sends the original exemplar run's 450 prompts byte for byte
+        (vendor/934478716). Paired cluster bootstrap by question and by
+        learner, 4,000 resamples. `analyse.py --dumps <D>/exmarks/lite.json
+        <D>/exmarks/gpt41mini.json`, in that order.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: true
+
+  - id: label-compounding
+    title: >-
+      Simulation of the belief -> label -> grade -> belief loop over a 40-item
+      term, driven by graders fitted to the four swapped-label runs
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 14080d6b3095a81d3784ea7f8c82df891917aa24
+      path: studies/measurement/grader-label-compounding/compounding.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at a3647f5; floor revisions at dc32491 and 0060add.
+        Python (numpy). No model call: grader parameters fitted from the
+        per-case dumps of `jorgpt-attainment-retests`, cohort shape from
+        JorGPT, a Beta-Bernoulli engine with lazy decay as shipped. 200
+        learner-cluster parameter draws per configuration. `compounding.py
+        params --dumps <D>/grader-vi/swap-gemini.json
+        <D>/grader-vi/swap-gpt41mini.json <D>/grader-vi/swap-gpt5mini.json
+        <D>/grader-vi/swap-qwen.json`, then `compounding.py run`.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: false
+
+  - id: qwk-offset
+    title: >-
+      What a constant offset costs QWK on the stratified 150, and the
+      teacher-grade standard deviations the paper uses as effect-size units
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: dfebdd4dc28119f807d7ab9a81a025c288a2d2f7
+      path: studies/measurement/grader-eval/analyses/qwk_offset.py
+    environment:
+      kind: process
+      detail: >-
+        Python standard library. No model call; reads the pooling dump of
+        `jorgpt-attainment-retests` and JorGPT: `JORGPT_DIR=<dir> python3
+        studies/measurement/grader-eval/analyses/qwk_offset.py
+        <D>/grader-vi/pool-gemini.json` (the dump path is argv[1]; run bare it
+        exits with an IndexError), writing analyses/out/qwk-offset.json. Verifies QWK =
+        2 s_xy / (s_x^2 + s_y^2 + d^2) against a direct computation.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+    ai_processing: false
+
+  - id: asap2-label-by-group
+    title: >-
+      Whether the attainment label's effect on identical work differs by
+      demographic group: 3,000 ASAP 2.0 essays under no, low, high (and on Qwen
+      mid) assigned labels, on two models, with a projection of the gap a
+      deployment would open
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 4827366014eccc86c64c0f9ff9b9c4e61c34b0b7
+      path: studies/measurement/grader-attainment-groups/analyse.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at 5597fe9; amendment 1 at 839549a (its floor failed and
+        the run was stopped before any call, 515e035); amendment 2 (n = 3,000)
+        at ed20b80, floor passed at 51c52fb, before any main-run call. Harness
+        mode attainment-groups (studies/measurement/grader-eval/harness/asap2.ts
+        and stability.ts) with the vendored prompt pin. Models
+        qwen3-235b-a22b-2507 (OpenRouter, DeepInfra pin, fallbacks off) and
+        gpt-4.1-mini (OpenAI direct), each at its defaults. Stratified
+        bootstrap over essays, design-weighted; spend about $16.47.
+        `analyse.py --dumps <D>/grader-vi-groups/run-qwen.json
+        <D>/grader-vi-groups/run-gpt41mini.json`, in that order. Byte-identical
+        to the committed outputs at the default thread count; with
+        OPENBLAS_NUM_THREADS=1 one value moves by one ulp (no printed number
+        moves), so set that variable for `asap2-matching-artefact` only. Its
+        rebuilt dumps need the ASAP 2.0 corpus for the demographic fields
+        (`strip_dumps.py rebuild --asap2`).
+    inputs:
+      - per-case-model-outputs
+      - asap2
+    ai_processing: true
+
+  - id: asap2-matching-artefact
+    title: >-
+      How much of the graders' unlabeled group gap at equal human score on
+      ASAP 2.0 is an artefact of matching on a noisy human score, and
+      whether the label-by-group contrasts carry the same artefact
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: bd3fc41a095322403cd1fbb8461da6194d4aa90d
+      path: studies/measurement/grader-matching-artefact/artefact.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at 34e8110; amendment 1 at d662da7 and amendment 2 at
+        7c2293d/cd7b960, each before any grader score was read; floor passed at
+        169c80b (revision 1 plus the amendment-2 recheck). No model call:
+        reads the `asap2-label-by-group` dumps and the ASAP 2.0 corpus. Python
+        (numpy, pandas, scipy; pinned in
+        studies/measurement/grader-eval/analyses/requirements.txt). Classical
+        test theory with a Kelley posterior and a calibrated unbiased grader;
+        reliability of the human score reported on a pre-registered grid
+        (0.60-0.95), read under amendment 3 at the data paper's figures: 0.75
+        (one rater, r = .750) and 0.857 (Spearman-Brown, two reads);
+        `reliability_known.py` (commit
+        0bebb89a37e725cbff2a3011b7e05bacc1ada857) does that reading from the committed outputs, invoked as `reliability_known.py --subsets --dumps
+        <D>/grader-vi-groups/run-qwen.json <D>/grader-vi-groups/run-gpt41mini.json`,
+        writing out/reliability-known.json, with no new
+        analysis and nothing in out/results.json re-run. Run it
+        single-threaded (OPENBLAS_NUM_THREADS=1): only then are its outputs
+        byte-identical to the committed ones; with default BLAS threading they
+        differ in the 9th-16th significant digit and no printed number or
+        verdict moves. `asap2-label-by-group` is the other way round:
+        byte-stable at the default thread count, and one value moves one ulp
+        with OPENBLAS_NUM_THREADS=1, so set the variable for this script only. `artefact.py
+        --run --dumps <D>/grader-vi-groups/run-qwen.json
+        <D>/grader-vi-groups/run-gpt41mini.json`, then `--label-check` with
+        the same dumps. The label-by-group check (item 5) was added after the
+        planned `asap2-label-by-group` analysis and does not re-cut its
+        verdicts.
+    inputs:
+      - asap2
+      - per-case-model-outputs
+    ai_processing: false
+
+  - id: ceiling-robustness
+    title: >-
+      Two robustness checks on the human ceilings: agreement stratified by
+      whether the humans agreed, and Gwet's AC2 beside each kappa
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: db577e6b44ca413f4c2d45e5389e67703417e04f
+      path: studies/measurement/grader-ceiling-robustness/robustness.py
+    environment:
+      kind: process
+      detail: >-
+        Pre-registered at b1b954d, before any grader mark was read; detection
+        floor (rev 1) and the AC2 self-test (Gwet's irrCAC worked examples,
+        reproduced exactly) passed before the run. No model call. Python
+        (numpy; pinned in studies/measurement/grader-eval/analyses/
+        requirements.txt). Reads the analysed Mohler CSV (1,727 rows), the
+        Menagerie grades.csv, and the grader-label-stability per-case marks
+        (300 Mohler answers / 62 questions and 60 Menagerie programs x 4
+        dimensions, Gemini 3.5 Flash Lite, GPT-4.1-mini and Qwen3-235B, under
+        a high and a low attainment label), verified against
+        grader-eval/analyses/per-case-dumps.sha256. `robustness.py --selftest`,
+        then `--floor --dump-dir <D>` and `--run --dump-dir <D>` (<D> a dump directory rebuilt from `per-case-model-outputs` as above, holding grader-label-stability/; its files pass the per-dump sha256 check; run with OPENBLAS_NUM_THREADS=1, as the outputs were regenerated from the published file; the default thread count gives the same bytes), writing out/selftest.json, out/floor.json and
+        out/results.json; `--posthoc --dump-dir <D>` writes out/posthoc.json (constant-grader
+        readings, added after the run, reported only). Clusters: Mohler
+        questions, Menagerie submissions; 4,000 resamples. Results: T1
+        BLUNT-INSTRUMENT-SUPPORTED (grader better where the humans agree in 4
+        of 6 model-by-corpus cells after standardising for level; about half,
+        0.45-0.55, of each grader's squared error against one human is that
+        human's own noise, every interval above 0.25, with the Mohler raters'
+        +0.89-point offset straining the independence assumption; reference
+        swing 0.23-0.27 on three models); T2 CEILING-STATISTIC-DEPENDENT
+        (AC2 0.858 against QWK 0.519 on Mohler, 0.887 / 0.749 against 0.465 /
+        0.424 on Menagerie, per-pair 0.61-0.92 against 0.035-0.730; no
+        grader-versus-human comparison reverses). Post hoc: a constant grader
+        scores AC2 0.854 (Menagerie, always A-) and 0.926 (Mohler, always 5),
+        above the humans, so AC2 is not used to score graders. Its statement
+        that the 150-answer ceiling draw does not re-derive (0.478) was a
+        rebuild of the taxonomy draw; see `mohler-ceiling-draw`.
+    inputs:
+      - mohler-answers
+      - mohler-consistent
+      - menagerie-grades
+      - per-case-model-outputs
+    ai_processing: false
+
+  - id: mohler-ceiling-draw
+    title: >-
+      Rebuild the 150-answer Mohler draw behind the human-human 0.608, in the
+      frozen snapshot and the current harness, beside the taxonomy draw
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 4201f5af466ba3f24aaee88c01c3b13a962b559e
+      path: studies/measurement/grader-eval/analyses/mohler_ceiling_draw.mts
+    environment:
+      kind: process
+      detail: >-
+        Node 22.22 (types stripped natively; no install). No model call:
+        imports `loadMohler`, `stratifiedSample` and `agreement` from the
+        frozen vendor/934478716 snapshot and from the current harness/. `node
+        --experimental-strip-types
+        studies/measurement/grader-eval/analyses/mohler_ceiling_draw.mts
+        <MOHLER_DIR>/mohler_en.csv`, writing
+        analyses/out/mohler-ceiling-draw.json. `--mode ceiling` draws
+        stratifiedSample(all 1,727 consistent rows, 150, seed 7): rater 1 vs
+        rater 2 QWK 0.6077, MAE 1.147, identical in both, and the same draw in
+        both (sha256 of the sorted ids 2b9eed54...). `--mode taxonomy` draws
+        stratifiedSample(eligible, 150, 7) from the 1,609 answers whose module
+        has four sibling questions, a different 150: QWK 0.478, MAE 1.347,
+        which is the figure grader-ceiling-robustness reported as the failed
+        re-derivation. Checks 0.519 on the 1,727 rows. Added 2026-10-06
+        (corrections-4).
+    inputs:
+      - mohler-answers
+      - mohler-consistent
+    ai_processing: false
+
+  - id: figures
+    title: >-
+      The paper's six figures, drawn from committed aggregate outputs, with
+      every plotted value the article prints checked against it
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: 470f4408631e457a18ccc90103dec22ae803f2cd
+      path: studies/measurement/grader-eval/analyses/figures.py
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11, matplotlib 3.11.2, numpy 2.4.6 (requirements.txt beside
+        the script); no model call, no corpus read. `python3
+        studies/measurement/grader-eval/analyses/figures.py` writes
+        research/article/figures/fig1-6 as SVG and 300-dpi PNG,
+        byte-identical on re-run. Figure 1 (label effect L by model) reads
+        grader-model-breadth/out/models.json and
+        grader-fable/out/agent-results.json; figure 2 (bias with and without
+        the true label, by tail) reads grader-model-breadth/out/models.json;
+        figure 3 reads grader-label-dose/out/posthoc.json (raw shift by
+        label-gap tercile) and out/results.json (pooled rho, the ASAP 2.0
+        block); figure 4 reads grader-exemplar-marks/out/results.json, with
+        the per-arm shown-level offsets (+1.49, -1.43) from that study's
+        analyse.py docstring, checked against the recorded 2.92; figure 5
+        re-runs the committed simulation, calling draw_cohort and run_engine
+        from grader-label-compounding/compounding.py with its committed
+        out/params.json, the primary configuration and the study's recovery
+        seeds, and stops unless the median recovery items equal the
+        committed out/results.json (23/25, 19/20, 21/23, 19/22); figure 6
+        reads grader-matching-artefact/out/results.json (the reliability
+        grid) and out/reliability-known.json (0.75 and 0.857). The script
+        stops on any printed article value the committed output does not
+        give. Building it found one table cell printed -0.10 where the
+        committed value is -0.0946 (the RQ6 GPT-4.1-mini economic gap at
+        reliability 0.75); the article and the study README now print -0.09.
+    inputs:
+      - per-case-model-outputs
+      - jorgpt-answers
+      - asap2
+    ai_processing: false
+
+# The findings are NOT restated here. They are records in observations/, and
+# each names this release back.
+evidence:
+  - ref: lazuli-grader-jorgpt-2026/agreement-vs-teacher
+    note: >-
+      The headline agreement level. Its margin over the corpus baselines sits
+      on the resolution limit. Read with `spread-ratio`.
+  - ref: lazuli-grader-jorgpt-2026/spread-ratio
+    note: >-
+      The number that says the agreement figure is not bought by hedging to
+      safe mid-scores.
+  - ref: lazuli-grader-jorgpt-2026/model-tier-bias
+    note: Tier buys calibration, not agreement.
+  - ref: lazuli-grader-jorgpt-2026/pooling-agreement
+    note: A measured null on QWK. See the limitation on what QWK cannot see.
+  - ref: lazuli-grader-jorgpt-2026/pooling-stability
+    note: Pooling judged as a variance reduction. Also null.
+  - ref: lazuli-grader-jorgpt-2026/formatting-movement
+    note: Reformatting shifts the grade, and is not merely re-sampling.
+  - ref: lazuli-grader-jorgpt-2026/signature-cache-coverage
+    note: The fix that follows from the two records above.
+  - ref: lazuli-grader-jorgpt-2026/cross-learner-signature-collision
+    note: Why that cache must be keyed per learner.
+  - ref: lazuli-grader-jorgpt-2026/exemplar-calibration
+    note: >-
+      Carries its own control for "is this just more context": the ungraded
+      arm is worse than no exemplars at all.
+  - ref: lazuli-grader-jorgpt-2026/attempt-history-anchoring
+    note: A low prior mark lowers the grade on identical work.
+  - ref: lazuli-grader-jorgpt-2026/attempt-history-mark-is-the-mechanism
+    note: The prior mark, not the prior work, is the active ingredient.
+  - ref: lazuli-grader-jorgpt-2026/attainment-bias-replicates-across-providers
+    note: >-
+      The original attainment contrast, 150 per tail, three models from two
+      vendors, every interval excluding zero. Read with the swapped-label
+      record, which says what it is.
+  - ref: lazuli-grader-jorgpt-2026/attainment-label-moves-identical-work
+    note: >-
+      The label itself moves the mark on identical work on four models, in
+      both tails; toward or away from the teacher by model.
+  - ref: lazuli-grader-jorgpt-2026/label-effect-persists-at-the-frontier
+    note: >-
+      Claude Opus 5.5 (smallest effect) and Llama 4 Maverick; per-learner
+      effects; the small QWK gains on harsh graders with r flat.
+  - ref: lazuli-grader-jorgpt-2026/reasoning-off-doubles-the-label-effect
+    note: GPT-5-mini with reasoning off shows twice the label effect.
+  - ref: lazuli-grader-jorgpt-2026/exemplar-marks-pairing-and-level
+    note: >-
+      Restates the exemplar mechanism: correct marks matter, and the grader
+      adopts the level it is shown, so exemplars shift rather than calibrate.
+  - ref: lazuli-grader-menagerie-2026/label-effect-on-whole-programs
+    note: The label effect across item types and scales; sign stable, size not.
+  - ref: lazuli-grader-asap2-2026/label-effect-by-demographic-group
+    note: >-
+      The label's effect does not fall harder on any group tested, relative to
+      no label; against a same-length statement it costs three groups more on
+      one model. The grader's own unlabeled group gap is larger.
+  - ref: lazuli-grader-asap2-2026/no-label-group-gap-at-equal-true-quality
+    note: >-
+      The unlabeled grader gap corrected for matching on a noisy score:
+      0.15-0.27 of a level remains at equal true quality at the reliability implied by the data paper's rater agreement (0.75-0.86); fully explained only near 0.5, which
+      the raters' agreement rules out.
+  - ref: lazuli-grader-loop-simulation-2026/label-loop-amplifies-and-stays-stable
+    note: >-
+      The belief -> label -> grade -> belief loop over a term: a stable, modest
+      amplifier.
+  - ref: lazuli-grader-jorgpt-2026/graph-context-dilution
+    note: Contradicted on the other corpus. Read with `sibling-context`.
+  - ref: lazuli-grader-jorgpt-2026/authority-claim-injection
+    note: >-
+      A trivially discoverable exploit in the prompt as measured, and the
+      structural defence that closes it.
+  - ref: lazuli-grader-menagerie-2026/ceiling-replicated
+    note: >-
+      The ceiling on a corpus built for the question, and lower than Mohler's
+      on a comparable scale.
+  - ref: lazuli-grader-menagerie-2026/ceiling-is-a-distribution
+    note: Per-pair agreement runs from 0.035 to 0.730.
+  - ref: lazuli-grader-menagerie-2026/agreement-varies-by-rubric-dimension
+    note: Human agreement tracks how objective the dimension is.
+  - ref: lazuli-grader-mohler-2026/human-human-ceiling
+    note: >-
+      The number that makes the agreement figures readable. An over-estimate,
+      by the next record.
+  - ref: lazuli-grader-mohler-2026/ceiling-is-over-estimated
+    note: The consistency filter removed the cases the raters disagreed on most.
+  - ref: lazuli-grader-mohler-2026/grader-vs-each-rater
+    note: The head-to-head against each human rater.
+  - ref: lazuli-grader-mohler-2026/ceiling-depends-on-the-statistic
+    note: >-
+      The same two raters at AC2 0.858 against QWK 0.519: the ceiling's level
+      belongs to the statistic and the marginals; the comparisons built on it keep their sign and none reverses; the grader below the human-human level against rater 1 is no longer resolved on GPT-4.1-mini and Qwen.
+  - ref: lazuli-grader-mohler-2026/sibling-context
+    note: >-
+      Reverses the JorGPT graph result, and separates "hierarchy" from "more
+      text".
+  - ref: lazuli-grader-harmogen-2026/the-ceiling-is-a-property-of-the-task
+    note: >-
+      Four instructors at QWK 0.981 on a corpus half made of multiple choice:
+      the ceiling belongs to the task, not to human graders.
+  - ref: lazuli-grader-harmogen-2026/a-published-headline-reproduces-and-still-needs-its-ceiling
+    note: >-
+      A published machine-agreement headline, reproduced, and read beside its
+      own ceiling.
+
+artifacts:
+  - id: paper-attainment-bias
+    kind: preprint
+    title: >-
+      What the grader knows about the learner changes the mark it gives the
+      work (the article of this release, draft)
+    location:
+      kind: internal
+      ref: research/article/attainment-bias-in-llm-grading.md
+    note: >-
+      Deliberately narrower than this release: it carries the learner-context
+      results, their re-tests, the exemplar contrast and the loop simulation,
+      and leaves out the injection, stability, pooling and goal-graph
+      findings, which answer a different question. Redrafted 2026-10-06 in
+      answer to maintainer review 1, and corrected the same day for the
+      independent scope audit, precedence sweep and reproduction
+      (corrections-1). Its references were resolved by an agent; the thirteen
+      added in the correction were resolved by the independent precedence
+      sweep, the rest are not yet independently re-checked; it says so.
+      Corrections-4 added Gwet (2008), checked against its Crossref record
+      (doi 10.1348/000711006X126600) by the agent that added it.
+  - id: working-record
+    kind: reference
+    title: >-
+      Grader evaluation: the working record, with every table and correction
+    location:
+      kind: internal
+      ref: studies/measurement/grader-eval/findings/grader-evaluation.md
+    note: >-
+      Migrated from the Lazuli repository (private), where it is
+      knowledge/areas/learning-records/grader-evaluation.md at commit
+      4a346c3d732a1d387b2ee8523847100aca947fcb on branch
+      LDA-1379-knowledge-and-research (not on `development`, where the grader
+      documents were reverted on 2026-09-17, #3060). The copy here was
+      byte-identical (git blob 6e2cc2027383953390fb28ae34a64400dbd93648 in
+      both, checked 2026-10-05); since then it carries dated correction notes
+      (2026-10-15), so it no longer is. It also records later work on further corpora
+      that this release does not report.
+
+interpretation: >-
+  Agreement with one human is a weak instrument on short free-text answers. On
+  the only corpus here with two raters doing ordinary marking, the two graduate
+  assistants agree with each other at QWK 0.519, while this grader agrees with
+  one of them at 0.798 and the other at 0.549. A second corpus built to study
+  grader consistency puts 28 recruited graders at 0.465 on a comparable scale,
+  and per-pair agreement there runs from 0.035 to 0.730. On Gemini 3.5 Flash
+  Lite, none of four interventions moved agreement resolvably on the
+  single-rater corpus (three single runs and one interval that leaves room for
+  +0.056): a better model tier, pooling three or four calls, anchor exemplars,
+  and showing the grader the learner's previous attempt; graded exemplars did
+  raise a harsh second model's QWK by 0.033. On the two corpora where it can be measured, much of the residual
+  disagreement is noise in the human reference: about half (0.45-0.55) of
+  each of three graders' squared error against one human is that human's
+  own disagreement with the others (`ceiling-robustness`). The ceilings are
+  kappa figures: under Gwet's AC2 the same raters agree at 0.858 (Mohler)
+  and 0.887 (Menagerie, five levels), because kappa falls when marks bunch
+  at one end of the scale; no grader-versus-human comparison reverses.
+
+  What is left is not only about accuracy. First, calibration. The cheap model
+  runs generous (+0.19 to +0.38 depending on the draw), and two interventions
+  remove most of that on the original draw: the better tier (bias +0.34 to
+  +0.01) or three human-graded anchor answers (+0.38 to +0.06). Neither
+  improved Gemini's agreement. The anchors turn out to shift the grade by the
+  level they are marked at rather than to calibrate it: on a wider draw they
+  overshot, and on a harsh second model they did not resolvably move bias and
+  raised its QWK by 0.033. Calibration and agreement are separate quantities,
+  because QWK penalises a constant offset only through its square relative to
+  the score variance: an offset large enough to move a pass decision costs
+  well under 0.02 of kappa here.
+
+  Second, stability. On one model, in single runs, re-grading byte-identical
+  text lands on a different integer grade a quarter of the time, and
+  reformatting the same words moves it more than twice as far as re-running
+  does, on matched cases. There is no consistent direction across variants
+  (signed means -0.10 to +0.22 at n = 30 each, no intervals), so no penalty for
+  any layout was detected. It is a shift in where the grader settles, which is
+  why pooling does not fix it. The fix is not to re-grade: key the grade on a
+  normalised content signature per learner and return the stored grade. That
+  removes every layout-only variant and re-grades genuine text changes. It must
+  be keyed per learner, because 2% of this corpus is identical text from
+  different students and the teacher graded most of those 18 groups
+  differently.
+
+  Third, context about the learner changes the mark on identical work. On one
+  model (Gemini 3.5 Flash Lite), a previous attempt shown with a low mark lowers
+  the grade by 0.44 points on a 0-10 scale (95% interval 0.26 to 0.62; 0.59 in
+  the first, single run); with a high mark it does not raise it; the same weak
+  attempt without its mark does not lower it, but a strong one without its mark
+  lowers it by 0.24. Told the learner's held-out attainment, the grader gives
+  the same answer 0.28 to 0.75 points more under a high label than a low one,
+  on 300 answers from 33 students, on six models from five developers including
+  a frontier model and two open-weights families, inside both tails of the
+  attainment distribution (6 or more and below 4 of 10; the middle was not
+  sampled); with one model's reasoning off, 1.04. On whole programs the effect
+  reached 1.4 to 2.3 points on a 14-level rubric on two of three models.
+  Whether the label moves weak learners' marks toward or away from the teacher
+  differs by model, in the direction of each grader's own error in that tail
+  (a pattern, not a tested mechanism), so it is not a uniform penalty on the
+  weak; a false low label costs strong work 0.3 to 0.8 points. No change in
+  how the grader ranks answers was resolved (no resolved change in Pearson r on
+  any run, though intervals reach +0.05); on three harsh graders the label
+  raises QWK by 0.03 to 0.05, consistent with moving where marks land. A
+  simulation driven by four of the measured graders shows that feeding the
+  belief back into the grader amplifies the effect modestly (1.07 to 1.17 over
+  a term) and stays stable. The attainment result is the one to refuse
+  outright. A learner model's estimate should be updated by the assessment,
+  and feeding it back into the grader closes a loop that should stay open. On
+  3,000 ASAP 2.0 essays with demographic fields the label's effect did not fall
+  harder on any group tested on two models, relative to no label (every
+  resolved difference favoured the focal group, each time on one model only
+  (English learners and disability-identified students on Qwen, economically
+  disadvantaged students on GPT-4.1-mini), and on Qwen partly an artefact of matching on a noisy human score); against a same-length neutral statement the
+  low value cost English learners, economically disadvantaged and
+  disability-identified students 0.06-0.08 more on Qwen (also partly the
+  matching artefact; corrected at the reliability implied by the data paper's rater agreement (0.75–0.86), the English-learner difference stays beyond the
+  multiple-testing bar, the economic one only at 0.86, and the disability
+  one at neither). A deployment
+  whose labels track attainment would open a projected
+  0.01-0.07 of a level. The graders' own unlabeled gap against English learners
+  and disability-identified students is 0.21-0.32 of a level at equal human
+  score. Part of that is the artefact of matching on a noisy score, and
+  0.15-0.27 remains at equal true quality at the reliability implied by the data paper's rater agreement (0.75-0.86). It would be fully explained only near 0.5,
+  which that agreement rules out. So it is a fairness problem larger than
+  the label's, measured against human raters whose own group neutrality is
+  not tested: whether ASAP 2.0's raters, who had anti-bias training, marked
+  every group alike at equal quality is the open question.
+
+  Course context splits by corpus, in single runs. Sibling questions raised
+  agreement on terse answers and more graph context lowered it on long ones,
+  each by a few hundredths, at the edge of the evaluation's resolution; related
+  and unrelated siblings did not differ detectably. That item signal density
+  explains the split is a candidate reading of two corpora, and a reason to set
+  context per activity type rather than globally.
+
+  Finally, the attack surface. On one model, 50 answers per arm, a single run,
+  in the prompt as measured, appending a sentence claiming to be a note from
+  the instructor gains 4.6 points out of 10 on average, up to a full 10, and
+  inflates 90% of attempts, while the prompt's penalty for manipulation fires
+  in none of them. The overt "ignore all previous instructions" attack is
+  penalised 88% of the time; the defence is blind to text that does not look
+  like an attack, because the response was interpolated without a boundary.
+  Instruction hardening halves the gain and leaves two thirds of attacks
+  working. Wrapping the response in a per-submission unguessable marker
+  inverts it (mean -0.42, 8% inflated), because a learner cannot forge a
+  delimiter they have never seen. That is a structural fix rather than a
+  persuasive one. The deployed defence has not been re-measured.
+
+limitations:
+  - >-
+    FORMATIVE STAKES ONLY. In Lazuli the grader gives formative feedback as
+    students prepare for assessments that people grade; nothing the AI
+    generates is used to grade them. The effects measured here therefore reach
+    students through feedback and through the learner model's estimate, not through grades of record. The platform does not adapt by default; only a course built to choose the next item from the estimate would also route students by it. The
+    same grader used to grade would carry them into a higher-stakes setting,
+    which this release does not study.
+  - >-
+    PROXY POPULATIONS, AND THIS IS THE LIMITATION THAT GOVERNS ALL THE OTHERS.
+    University computer-science answers, other people's questions, other
+    people's rubrics. These figures describe grader mechanics. They do not
+    describe how the grader behaves on a Lazuli course, and no figure here
+    should be quoted as production calibration.
+  - >-
+    THE AGREEMENT RESULTS ARE SHORT FREE-TEXT ANSWERS ONLY. Menagerie supplies
+    a human ceiling, and the grader was run on it only in the label-stability
+    re-test (60 programs under a high and a low label), which measures the
+    label's effect, not agreement; marks there tracked the raters at r 0.25 to
+    0.58. Later work in the Lazuli repository (private), not reported here, graded whole
+    Menagerie programs and found the grader far below the human ceiling, near
+    zero on the readability and documentation dimensions. The agreement result
+    does not extend to large artefacts or craft rubrics.
+  - >-
+    Sampling is stratified across the grade range, which inflates absolute
+    agreement by roughly +0.03 against the full corpus (0.833 stratified, seed
+    7; 0.799 on all 3,041 rows; 0.795 on one random draw whose seed was not
+    recorded, and 0.795 averaged over 200 uniform random draws, computed by
+    `resolution-sampling-sd`). This is a comparison instrument, not an
+    estimate of population agreement. Subtract roughly 0.03 to read any
+    absolute figure here as a corpus-level number.
+  - >-
+    "NO ACCURACY GAIN" IS AN INTERVAL, NOT AN EQUIVALENCE (added 2026-10-05,
+    reviewer question Q4). Paired, learner-clustered bootstrap intervals on the
+    change from control, with margins fixed before the run (QWK +/-0.02, MAE
+    +/-0.10): attainment arm, QWK change +0.003 [-0.010, +0.017] on Gemini 3.5
+    Flash Lite (equivalent on both), +0.003 [-0.021, +0.027] on GPT-4.1-mini,
+    -0.001 [-0.027, +0.018] on GPT-5-mini, -0.010 [-0.047, +0.023] on
+    Qwen3-235B; on three later runs (Claude Opus 5.5, Llama 4 Maverick,
+    GPT-5-mini at minimal reasoning) the true label RAISED QWK by +0.029,
+    +0.046 and +0.039 with intervals clear of zero, while no change in Pearson
+    r was resolved on any of nine runs checked (a check added after the runs,
+    with intervals reaching +0.049, the size of those gains), so the gains are
+    consistent with where marks land on harsh graders, and a ranking gain is
+    not excluded; attempt-history arms (n=150, 65
+    learners), QWK changes from -0.015 to +0.019 with intervals reaching +0.056
+    and MAE intervals of about +/-0.17, none equivalent. A floor run before the
+    data were read showed that at n=150 a null arm reaches equivalence at the
+    +/-0.10 MAE margin only 4% of the time, so equivalence was unreachable by
+    design here; the supportable statement is "no gain larger than" the
+    improving-side bound of each interval. Numbers in
+    studies/measurement/grader-attainment-prior/out/.
+  - >-
+    BIAS OR PRIOR (added 2026-10-05, reviewer question Q2). A swapped-label arm
+    on identical work confirms the attainment label itself moves the grade, in
+    both tails (the draw sampled only the tails) and on every model: a high label rather than a low one on the
+    same answer adds +0.37 (Gemini 3.5 Flash Lite), +0.38 (GPT-4.1-mini), +0.52
+    (GPT-5-mini) and +0.75 (Qwen3-235B-A22B-2507, open weights, added to close
+    the open-weights gap); and, in a further re-test, +0.28 (Claude Opus 5.5,
+    the smallest) and +0.54 (Llama 4 Maverick). Whether the true label moves grades toward or away
+    from the teacher differs by model, in the direction of each model's own
+    error in that tail (a pattern across six models, not a tested mechanism).
+    On Gemini the low-tail penalty moves a generous control toward the teacher
+    (+0.49 to +0.27, with no resolvable change in MAE): TOWARD. On
+    GPT-4.1-mini and Qwen the grader is already harsh in the low tail and the
+    penalty makes it harsher (-0.46 to -0.72; -0.41 to -0.75): AWAY. On
+    GPT-5-mini the low tail moves from about 0 (+0.08, unresolved) to -0.44.
+    Pre-registered verdict MIXED-ACROSS-MODELS (per model: UNRESOLVED on
+    Gemini and GPT-5-mini, MIXED on GPT-4.1-mini, Qwen and Opus, PRIOR on Llama
+    4 Maverick and GPT-5-mini at minimal reasoning). These per-model readings
+    are against a control with no added sentence. Against a same-length
+    neutral sentence (analysis neutral-control, Gemini only), a sentence's
+    presence alone raised high-tail marks by +0.14 [+0.05, +0.24]; Gemini's
+    reward falls to +0.08, unresolved, and its verdict reads PRIOR; the
+    penalty holds. The other models' readings are against the bare control
+    only, and on a grader harsh on strong work a presence effect of that sign
+    would read as toward. L itself compares two same-length sentences and is
+    unaffected; it grows with the gap between the two labels across the six
+    models (analysis label-dose), and Claude Fable 5.1, run on 100 answers as
+    Claude Code subagents, shows it too (+0.31 [+0.19, +0.45], analysis
+    fable-agent-label). None of the first four
+    models shows an accuracy gain; three later runs gain QWK (above). "Bias" as
+    a uniform accuracy harm is not supported; "a label that changes the grade
+    on identical work and is not shown to improve ranking" is. The re-tests
+    used the vendored prompt (studies/measurement/grader-eval/vendor/lazuli-app/,
+    a copy of the product's prompt at its commit 277cd5085), whose rendered text
+    matches 584e5a91a for these arms. See
+    studies/measurement/grader-attainment-prior/README.md in this repository.
+  - >-
+    The harness resolves differences of about +/-0.02 QWK at n=150, set by
+    judgement at about twice the model spread (0.011 across three identical
+    passes). Anything smaller is not a result. Two
+    conclusions sit on that limit and are labelled borderline in their own
+    records: "this prompt beats the corpus baselines" (0.853 against 0.833) and
+    the model tier's agreement advantage (0.016-0.027 depending on run). The
+    tier's bias advantage is solid; its kappa advantage is not. The sampling
+    standard deviations once quoted here (stratified 0.007, random 0.022) came
+    from an uncommitted ad hoc resampling and are withdrawn. Committed code
+    (`resolution-sampling-sd`) gives SD 0.024 over stratified draws and 0.031
+    over uniform random draws, 200 seeds each, so stratification reduces
+    sampling noise by about 1.3x at n = 150, not threefold (an intermediate
+    0.020 came from a non-uniform shuffle). Sampling variance cancels in the
+    paired comparisons every verdict rests on.
+  - >-
+    At n=40-60 nothing that matters is resolvable. At n=40 the low-prior
+    attempt-history arm read QWK 0.930 against a 0.886 control; at n=120 the two
+    were level. Pooling was first run at n=40 and re-run at n=150, and
+    only the n=150 figures are reported.
+  - >-
+    THE HUMAN CEILING BELONGS TO THE TASK. Two corpora put pooled human
+    agreement below 0.52 on open-ended marking (neither records whether its
+    graders were trained), but neither figure is "the ceiling":
+    Menagerie's per-pair agreement spans 0.035 to 0.730. HARMOGEN-R, in this
+    release, puts four instructors at QWK 0.981 on a corpus of near-closed
+    items, and 0.942 on its genuinely open half, so a low ceiling is a property
+    of open-ended judgement, not of human graders in general.
+  - >-
+    The Mohler ceiling of 0.519 is an OVER-ESTIMATE and must not be quoted as
+    the ceiling. The consistency filter removed the cases the raters disagreed
+    on most. The excluded-row figure (QWK 0.418, exact agreement 52.4%) halves both
+    raters' 0-10 scores and rounds half to even; it now reproduces from
+    committed code (`mohler-removed-rows`, 2026-10-06). The rescaling is a
+    choice: rounding half up gives 0.410, halving only scores above 5 gives
+    0.377, and the raw 0-10 scores give 0.411. Every one is below 0.519, so the
+    direction holds; the exact value depends on the rescaling.
+  - >-
+    The ceiling comes from different corpora, scales and domains than the
+    agreement figures it is used to interpret, and Mohler is skewed toward
+    correct answers (mean grade 4.18 of 5 across the full corpus). JorGPT has
+    one rater, so its own ceiling is unmeasurable. "0.83-0.87 is above human
+    consistency" is a transfer across corpora, not a measurement.
+  - >-
+    Agreeing with the MEAN of two raters (0.711) is mechanically easier than
+    agreeing with either one, since averaging cancels part of the noise. The
+    honest head-to-head is the per-rater pair, 0.549 and 0.798, and the spread
+    between those two is itself a caution about any single-rater figure.
+  - >-
+    THE CEILING LEVELS ARE KAPPA FIGURES. Under Gwet's AC2 the same raters
+    agree at 0.858 (Mohler, against QWK 0.519) and 0.887 / 0.749 (Menagerie,
+    five / fourteen levels, against 0.465 / 0.424): the kappa paradox, since
+    Mohler's marks bunch at the top. No grader-versus-human comparison
+    reverses under AC2, but on Menagerie QWK puts every grader far below the
+    humans and AC2 does not resolve a difference (-0.04 to +0.05 on fourteen levels, intervals up to +/-0.13). QWK is kept because AC2 credits a
+    constant grader above the humans (0.854 for always A- on Menagerie,
+    0.926 for always 5 on Mohler). The noise share of about half assumes
+    the grader's errors are independent of the raters', which Mohler's
+    +0.89-point rater offset strains, and whether the items humans disagree
+    on are noisy or also hard for the grader is unresolved
+    (`ceiling-robustness`).
+  - >-
+    POOLING WAS FIRST MEASURED IN QWK ONLY, and QWK penalises the compression
+    averaging creates. Later work outside this release, on Menagerie (whole
+    programs), found that pooling nine passes raised Pearson r by about 0.02
+    while QWK moved by 0.003. Re-run on JorGPT on 2026-10-05 with nine LITE
+    passes and per-case scores
+    (studies/measurement/grader-attainment-prior/pooling.py in this repository):
+    r +0.0035 (learner-clustered 95% interval +0.0026 to +0.0048, inside a
+    pre-set +/-0.01 equivalence margin), QWK +0.007, MAE unchanged. Repeated
+    grades of one short answer have sd 0.18 and never straddle the teacher's
+    mark, so there is nothing to average. The null holds on short answers in r
+    as well as QWK; the Menagerie gain belongs to long, noisier items.
+  - >-
+    The goal-graph results contradict each other across corpora and each sits
+    at the edge of the harness's resolution in a single run, so neither
+    generalises on its own.
+    The reconciling account (sparse items benefit from course context, rich
+    items are diluted by it) is fitted to two data points and is offered as a
+    hypothesis to test per activity type, not as a finding.
+  - >-
+    Within the Mohler taxonomy arm, real siblings beat unrelated ones by 0.013,
+    below resolution. "Relatedness does not do the work" is a non-detection at
+    this n, not a demonstrated null.
+  - >-
+    An early version of the attainment arm keyed the held-out mean on the
+    question rather than the learner, which measures item difficulty. The
+    harness now carries a learner id on every case, and every attainment figure
+    here comes from the learner-keyed run sampled 150 per tail.
+  - >-
+    Single runs at n=150 for the graph and taxonomy arms and the tier
+    comparison. The exemplar and history arms were first single runs and were
+    re-run in 2026-10-05's pre-registered re-tests with clustered intervals
+    (exemplars at n=600). No arm here has been replicated by anyone else, on
+    any corpus, at any n.
+  - >-
+    Two Gemini tiers throughout, except the attainment arm, which also ran on
+    two OpenAI models and, in the 2026-10-05 re-tests, on Qwen3-235B-A22B-2507,
+    Llama 4 Maverick and Claude Opus 5.5 (six models, five developers), with
+    reasoning varied on GPT-5-mini and Gemini 3.5 Flash Lite. Gemini 3.1 Pro and GPT-5.5 were not run as graders through the API (Gemini 3.1 Pro graded ten answers in a pricing probe), a scope decision on
+    cost per grade; Claude Fable 5.1's API route was blocked by the account's
+    zero-data-retention setting, and it was run on 100 answers as Claude Code
+    subagents (`fable-agent-label`), outside the API condition and not pooled
+    with it. No temperature, top-p, seed or direct-API token limit was sent by
+    any run; the OpenAI re-tests used non-strict schema decoding where the
+    originals were strict. The injection results in particular are properties
+    of one model's instruction following as much as of the prompt.
+  - >-
+    English only. No non-English answers were graded in this release.
+  - >-
+    MARK ONLY. Every analysis uses the numeric score; the grader's feedback text
+    and evidence weights were not analyzed. Whether the label changes the
+    feedback needs a measure of feedback quality validated against independent
+    human judgments, which this release does not have (future work).
+  - >-
+    ONE LABEL FORMAT AND ONE PROMPT TEMPLATE. The attainment label is one fixed
+    sentence stating an explicit number, in one fixed position in the product's
+    prompt template. Qualitative or implied descriptions of a student, other
+    wordings, other templates and other positions were not tested (future
+    work). Each answer is graded in its own call with no conversation history,
+    as in the product.
+  - >-
+    THE DEMOGRAPHIC TEST IS NARROW. ASAP 2.0 only (secondary-school essays,
+    one two-read, adjudicated human score per essay, which also defines
+    "equal work"), two models
+    (Qwen3-235B-A22B-2507, GPT-4.1-mini), one prompt template, and ASSIGNED
+    labels (1.9/6 and 4.2/6), not true ones. Race/ethnicity groups were too
+    small for the test (UNDERPOWERED, accepted in advance). The deployment gap
+    (0.01-0.07 of a level) is a projection under stated reliability
+    assumptions, not a measurement. Against a same-length mid label the low
+    value took 0.06-0.08 more off English learners', economically
+    disadvantaged and disability-identified work on Qwen, so "uniform" holds
+    for the high-versus-low contrast (within a +/-0.10 margin nearly half the
+    size of GPT-4.1-mini's label effect), not for every contrast. "Equal work"
+    is equal two-read, adjudicated human score: the graders' unlabeled group
+    gap of 0.21-0.32 at that score is partly an artefact of matching on a
+    noisy score, and 0.15-0.27 remains at equal true quality at the data
+    paper's rater reliability (0.75 for one rater, about 0.86 for two reads);
+    it would vanish only at about 0.5. The correction assumes rater error is
+    independent of group; rater DIF is not tested
+    (studies/measurement/grader-matching-artefact/). On Qwen the label's own
+    effect depends on essay quality, so its favouring label-by-group
+    differences carry up to 0.03 (at 0.75) or 0.014 (at 0.86) of the same artefact (a check added after the
+    planned analysis).
+  - >-
+    THE LOOP RESULT IS A SIMULATION. The compounding estimate drives a
+    Beta-Bernoulli learner model with graders fitted from four of the six
+    models' swapped-label runs on one corpus, linear in the label and measured only in the two
+    attainment tails, and converts the grade to evidence; it models no other
+    output of the grader, which the label may also move. A
+    deployment comparison would measure what it bounds.
+  - >-
+    THE LABEL EFFECT'S SIZE IS ITEM- AND MODEL-SPECIFIC. Its sign held in all
+    13 model-by-corpus cells of the label-stability re-test, but on whole
+    programs it was 0.4x to 2.8x its short-answer share depending on the
+    model, confounded with task and rubric. Short-answer 0-10 magnitudes do not
+    transfer to other item types.
+  - >-
+    The injection sweep is n=50 per payload per arm. `forged-system` should be
+    read as grader noise rather than a second exploit: its mean stays near zero
+    in every arm while about 40% of cases move up, the rate at which any
+    perturbation moves a score up. One model, one payload family, a single
+    run.
+  - >-
+    At the measured commit both injection defences were opt-in parameters, so
+    the shipped prompt was unchanged and the comparison measurable. Both were
+    then enabled in the production grading path by LDA-1344: merged 2026-09-15
+    (#3006), reverted 2026-09-17 (#3060) and re-landed 2026-09-22 (#3062). The
+    defence has not been re-measured as deployed.
+
+funding: >-
+  None. Internal engineering work by the Learning Design Alliance, conducted as
+  part of building the product it evaluates. No external funder, no grant.
+
+conflicts: >-
+  Declared rather than mitigated: the grader under test is the Learning Design
+  Alliance's own product, the prompt evaluated and the harness were both written
+  there, and the release reports that the product's prompt scores above the
+  corpus authors' baselines, by a
+  margin on the resolution limit. Nobody outside the team has run any of it. Two
+  structural mitigations exist and neither is independence. The harness calls
+  the production prompt and schema directly rather than a favourable
+  reconstruction, so a flattering result cannot be obtained by evaluating a
+  different prompt. The corpora, the human grades and the competing baselines
+  were all authored by other people. The findings that reflect worst on the
+  product (an injection exploit, a group gap the grader shows with no label
+  (larger than the label's at the reliability implied by the data paper's rater agreement; it has not been tested on a second essay corpus within this release), a quarter of
+  re-grades landing on a different level) are the ones this release is most
+  confident in.
+
+provenance:
+  # `authors` are the DOI creators (scripts/mint_release_doi.py makes each one a creator), so they
+  # are the people accountable for the work. The AI system that did most of it is credited by role in
+  # `contributors`, and in the paper's byline note and AI-use disclosure; an
+  # AI is not an author (maintainer's decision, 2026-10-06). `contributors` is not yet a field of the
+  # wiki's schema: adding it there, and passing it to the DOI record as a contributor rather than a
+  # creator, is a learning-wiki change to make before publication (research/WRITEUP-MAP.md).
+  authors:
+    - id: human:david-porcaro
+      name: David S. Porcaro
+      affiliation: Learning Design Alliance
+      role: >-
+        conceptualization, supervision, validation (review of every analysis, figure and sentence),
+        writing (review and editing), final approval; accountable for the work
+  contributors:
+    - id: agent:claude-code
+      name: Claude Code (Claude Opus 5.5, Anthropic)
+      role: >-
+        investigation, software (the evaluation harness and every analysis), formal analysis,
+        visualization, data curation, writing (original draft); also the independent audits and
+        reproductions, each by a separate agent with no part in the work it checked
+  # The release is the publication; learning-wiki is the venue. The evidence
+  # records it names carry `platform-experiment`, because they report an
+  # experiment by the grader's own makers on that grader.
+  source_type: research
+  created_at: 2026-09-15
+  # Product-repo commits the runs were made from; each is vendored, byte for
+  # byte, at studies/measurement/grader-eval/vendor/<first 9 characters>/.
+  software_versions:
+    harness: 9344787165e7a497131d03302ef0c67a8afd16f1
+    learner-context-arms: 584e5a91a609d98f0d2ce165a941b77bbf2ee4c2
+    menagerie-irr: 8474722e9750aebad791dd76866d391d55e36609
+  verification: unverified
