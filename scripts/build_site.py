@@ -74,27 +74,28 @@ def card(rel: dict) -> str:
     base = f"{e['release']}/{e['version']}"
     links = []
     if e["has_report"]:
-        links.append(f'<a class="primary" href="{base}/report/index.html">Read the report</a>')
+        links.append(f'<a class="pill primary" href="{base}/report/index.html">Read the report</a>')
     if e["article"]:
-        links.append(f'<a href="{REPO_URL}/blob/main/{e["article"]}">Article</a>')
-    links.append(f'<a href="{REPO_URL}/blob/main/{base}/{e["version"]}.yaml">Release file</a>')
+        links.append(f'<a class="pill" href="{REPO_URL}/blob/main/{e["article"]}">Article <span aria-hidden="true">↗</span></a>')
+    links.append(f'<a class="pill" href="{REPO_URL}/blob/main/{base}/{e["version"]}.yaml">Release file <span aria-hidden="true">↗</span></a>')
     if e["has_code"]:
-        links.append(f'<a href="{REPO_URL}/tree/main/{base}/code">Code</a>')
-    links.append(f'<a href="{REPO_URL}/tree/main/{base}">All files</a>')
+        links.append(f'<a class="pill" href="{REPO_URL}/tree/main/{base}/code">Code <span aria-hidden="true">↗</span></a>')
+    links.append(f'<a class="pill" href="{REPO_URL}/tree/main/{base}">All files <span aria-hidden="true">↗</span></a>')
     doi = (f'<a href="https://doi.org/{esc(e["doi"])}">doi:{esc(e["doi"])}</a>' if e["doi"]
-           else '<span class="muted">DOI pending</span>')
+           else '<span>DOI pending</span>')
     q = e["question"]
     if len(q) > 420:
         q = q[:420].rsplit(" ", 1)[0] + "…"
     older = ""
     if len(rel["versions"]) > 1:
-        older = ('<p class="older">Earlier versions: ' + ", ".join(
+        older = ('<p class="label older">Earlier versions: ' + ", ".join(
             f'<a href="{v["release"]}/{v["version"]}/report/index.html">{esc(v["version"])}</a>'
             if v["has_report"] else esc(v["version"]) for v in rel["versions"][1:]) + "</p>")
     return f"""
-  <article class="card">
+  <article class="release">
+    <p class="label">{esc(e['release'])} · v{esc(e['version'])} · published {esc(e['lifted_at'])} · {doi}</p>
     <h2><a href="{base}/report/index.html">{esc(e['title'])}</a></h2>
-    <p class="meta">{esc(', '.join(e['authors']))} · version {esc(e['version'])} · published {esc(e['lifted_at'])} · {doi}</p>
+    <p class="byline">{esc(', '.join(e['authors']))}</p>
     <p class="question">{esc(q)}</p>
     <p class="links">{' '.join(links)}</p>{older}
   </article>"""
@@ -103,18 +104,18 @@ def card(rel: dict) -> str:
 # The bar the site adds above each report it serves. Only the served copy carries it: the repository's
 # file, which LIFT.json hashes and the DOI deposit holds, is not changed.
 NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><style>
-.lda-crumbs{{background:#0e1240;color:#f8fafc;border-bottom:2px solid #e3b455;font:500 14px/1.4 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif}}
-.lda-crumbs .in{{display:flex;align-items:center;gap:10px;padding:9px 16px;min-width:0}}
-.lda-crumbs a{{color:#f8fafc;text-decoration:none}}
-.lda-crumbs a:hover{{text-decoration:underline;text-decoration-color:#e3b455;text-underline-offset:3px}}
-.lda-crumbs img{{height:22px;width:22px;display:block}}
-.lda-crumbs .home{{display:flex;align-items:center;gap:8px;white-space:nowrap;flex:none}}
-.lda-crumbs .sep{{color:#8f95c4;flex:none}}
-.lda-crumbs .here{{color:#c9cde6;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1}}
-.lda-crumbs .doi{{flex:none;white-space:nowrap;color:#c9cde6}}
+.lda-crumbs{{background:#fffbf5;color:#122fb2;border-bottom:1px solid #122fb2;font:400 12.5px/1.4 "DM Mono",ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase}}
+.lda-crumbs .in{{display:flex;align-items:center;gap:12px;padding:10px 16px;min-width:0}}
+.lda-crumbs a{{color:#122fb2;text-decoration:none}}
+.lda-crumbs a:hover{{text-decoration:underline;text-underline-offset:3px}}
+.lda-crumbs img{{height:16px;width:auto;display:block}}
+.lda-crumbs .home{{display:flex;align-items:center;gap:10px;white-space:nowrap;flex:none}}
+.lda-crumbs .sep{{opacity:.5;flex:none}}
+.lda-crumbs .here{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1;opacity:.8}}
+.lda-crumbs .doi{{flex:none;white-space:nowrap}}
 @media (max-width:560px){{.lda-crumbs .doi{{display:none}}}}
 @media print{{.lda-crumbs{{display:none}}}}
-</style><div class="in"><a class="home" href="../../../index.html"><img src="../../../assets/lda-monogram-white.svg" alt="">Research Reports</a><span class="sep" aria-hidden="true">›</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
+</style><div class="in"><a class="home" href="../../../index.html"><img src="../../../assets/lda-monogram.svg" alt="Learning Design Alliance">Research reports</a><span class="sep" aria-hidden="true">/</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
 
 
 REVIEW_DIALOG = re.compile(r'<dialog id="review-dialog".*?</dialog>', re.S)
@@ -153,64 +154,82 @@ PAGE = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Learning Research Reports</title>
+<title>Research Reports · Learning Design Alliance</title>
 <meta name="description" content="Published research releases of the Learning Design Alliance's learning-engineering programme.">
 <link rel="icon" type="image/svg+xml" href="assets/lda-monogram-lapis.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=DM+Mono&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
-/* Learning Design Alliance: ink #0E1240, lapis #122FB2, pyrite #E3B455 on a cool gesso white. */
-:root {{ --bg:#f6f7fb; --fg:#0e1240; --muted:#4f5475; --line:#dde0ec; --card:#ffffff; --band:#0e1240; --band-fg:#f8fafc;
-         --accent:#122fb2; --accent-fg:#ffffff; --pyrite:#e3b455; }}
+/* After learningdesignalliance.org and the LDA templates' palette: cream ground, lapis type, Baskervville display, DM Mono labels,
+   DM Sans text, pill buttons, hairline lapis rules, a lavender-to-peach glow over a faint grid. */
+:root {{ --cream:#fffbf5; --lapis:#122fb2; --ink:#0e1240; --lavender:#e1dbff; --pink:#f7cbcb; --orange:#f37434; --butter:#fffad9;
+         --bg:var(--cream); --fg:var(--lapis); --text:var(--ink); --rule:rgba(18,47,178,.85); --faint:rgba(18,47,178,.12); }}
 @media (prefers-color-scheme: dark) {{
-  :root:not([data-theme="light"]) {{ --bg:#0a0d2e; --fg:#eef0fa; --muted:#a9aecb; --line:#262b55; --card:#11163d;
-         --band:#070a24; --band-fg:#f8fafc; --accent:#8fa2ff; --accent-fg:#0a0d2e; }}
+  :root:not([data-theme="light"]) {{ --bg:#0b0e33; --fg:#c9c2ff; --text:#ece9ff; --rule:rgba(201,194,255,.6);
+         --faint:rgba(201,194,255,.10); --butter:#2a2f6b; --lavender:#2b2470; --pink:#4a2340; --orange:#5a2a1c; }}
 }}
-:root[data-theme="dark"] {{ --bg:#0a0d2e; --fg:#eef0fa; --muted:#a9aecb; --line:#262b55; --card:#11163d;
-         --band:#070a24; --band-fg:#f8fafc; --accent:#8fa2ff; --accent-fg:#0a0d2e; }}
+:root[data-theme="dark"] {{ --bg:#0b0e33; --fg:#c9c2ff; --text:#ece9ff; --rule:rgba(201,194,255,.6);
+         --faint:rgba(201,194,255,.10); --butter:#2a2f6b; --lavender:#2b2470; --pink:#4a2340; --orange:#5a2a1c; }}
 * {{ box-sizing:border-box; }}
-body {{ margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif; }}
-a {{ color:var(--accent); text-underline-offset:3px; }}
-.band {{ background:var(--band); color:var(--band-fg); border-bottom:3px solid var(--pyrite); }}
-.band-inner {{ max-width:880px; margin:0 auto; padding:28px 16px 34px; }}
-.brand {{ display:inline-block; line-height:0; }}
-.brand img {{ height:58px; width:auto; }}
-.band h1 {{ font:400 clamp(2.2rem,6vw,3.1rem)/1.05 "Instrument Serif",Georgia,serif; margin:26px 0 12px; letter-spacing:-0.01em; text-wrap:balance; }}
-.band p {{ margin:0 0 8px; max-width:66ch; color:#c9cde6; text-wrap:pretty; }}
-.band a {{ color:#ffffff; text-decoration-color:var(--pyrite); }}
-main {{ max-width:880px; margin:0 auto; padding:12px 16px 64px; }}
-.card {{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px 24px; margin:24px 0;
-         box-shadow:0 1px 2px rgba(14,18,64,0.05); }}
-.card h2 {{ font:400 1.6rem/1.2 "Instrument Serif",Georgia,serif; margin:0 0 8px; text-wrap:balance; }}
-.card h2 a {{ color:var(--fg); text-decoration:none; }}
-.card h2 a:hover {{ color:var(--accent); }}
-.meta, .older, .muted {{ color:var(--muted); font-size:0.9rem; }}
-.meta {{ margin:0 0 12px; }}
-.question {{ margin:0 0 16px; text-wrap:pretty; }}
-.links {{ display:flex; flex-wrap:wrap; gap:8px 18px; align-items:center; margin:0; font-size:0.95rem; font-weight:500; }}
-.links a.primary {{ background:var(--accent); color:var(--accent-fg); padding:7px 14px; border-radius:8px; text-decoration:none; font-weight:600; }}
-.links a.primary:hover {{ filter:brightness(1.12); }}
-footer {{ color:var(--muted); font-size:0.85rem; border-top:1px solid var(--line); margin-top:40px; padding-top:16px; }}
+html {{ background:var(--bg); }}
+body {{ margin:0; min-height:100vh; color:var(--text); font:16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif; position:relative; }}
+body::before {{ content:""; position:fixed; inset:0; z-index:-1; pointer-events:none;
+  background:
+    radial-gradient(60vw 50vh at 100% 0%, var(--lavender), transparent 70%),
+    radial-gradient(55vw 55vh at 0% 100%, var(--pink), transparent 70%),
+    radial-gradient(30vw 30vh at 0% 100%, color-mix(in srgb, var(--orange) 35%, transparent), transparent 70%),
+    repeating-linear-gradient(90deg, var(--faint) 0 1px, transparent 1px 160px),
+    var(--bg); }}
+a {{ color:var(--fg); text-underline-offset:3px; }}
+.label, nav.top {{ font:400 12.5px/1.5 "DM Mono",ui-monospace,Menlo,monospace; letter-spacing:.07em; text-transform:uppercase; color:var(--fg); }}
+nav.top {{ display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:16px; padding:22px 24px; border-bottom:1px solid var(--rule); }}
+nav.top a {{ text-decoration:none; }}
+nav.top a:hover {{ text-decoration:underline; }}
+nav.top .r {{ justify-self:end; display:flex; gap:28px; }}
+nav.top .mark svg {{ height:28px; width:auto; display:block; color:var(--fg); }}
+main {{ max-width:920px; margin:0 auto; padding:0 20px 72px; }}
+.hero {{ padding:72px 0 40px; }}
+h1 {{ font:400 clamp(3rem,9vw,5.6rem)/1 "Baskervville",Georgia,serif; letter-spacing:-.02em; color:var(--fg); margin:14px 0 26px; }}
+h1 em {{ font-style:italic; }}
+.hero p {{ max-width:60ch; margin:0 0 10px; color:var(--fg); text-wrap:pretty; }}
+.release {{ border-top:1px solid var(--rule); padding:30px 0 34px; }}
+.release h2 {{ font:400 clamp(1.7rem,4vw,2.3rem)/1.15 "Baskervville",Georgia,serif; letter-spacing:-.01em; margin:10px 0 6px; text-wrap:balance; }}
+.release h2 a {{ color:var(--fg); text-decoration:none; }}
+.release h2 a:hover {{ text-decoration:underline; text-decoration-thickness:1px; }}
+.byline {{ font-family:"Baskervville",Georgia,serif; font-style:italic; font-size:1.05rem; color:var(--fg); margin:0 0 14px; }}
+.question {{ margin:0 0 20px; max-width:70ch; text-wrap:pretty; }}
+.links {{ display:flex; flex-wrap:wrap; gap:10px; margin:0; }}
+.pill {{ display:inline-flex; align-items:center; gap:8px; padding:9px 18px; border:1px solid var(--rule); border-radius:999px;
+  font:400 12.5px/1 "DM Mono",ui-monospace,Menlo,monospace; letter-spacing:.07em; text-transform:uppercase; text-decoration:none; color:var(--fg); }}
+.pill:hover {{ background:var(--faint); }}
+.pill.primary {{ background:var(--butter); }}
+.pill.primary:hover {{ filter:brightness(.97); }}
+.older {{ margin-top:14px; }}
+footer {{ border-top:1px solid var(--rule); padding-top:18px; margin-top:8px; color:var(--fg); }}
+footer p {{ margin:0 0 8px; max-width:80ch; }}
+@media (max-width:600px) {{ nav.top {{ grid-template-columns:1fr auto; }} nav.top .l {{ display:none; }} nav.top .r {{ gap:16px; }} .hero {{ padding-top:44px; }} }}
 </style>
 </head>
 <body>
-<header class="band">
-  <div class="band-inner">
-    <a class="brand" href="https://learningdesignalliance.org"><img src="assets/lda-wordmark-white.svg" alt="Learning Design Alliance"></a>
-    <h1>Research Reports</h1>
-    <p>Published research releases of the Learning Design Alliance's learning-engineering programme. Each release
-    is an article with everything needed to check it: the release file, the code, per-case outputs, re-run notebooks,
-    and an HTML report in which every number links to the output it was computed from.</p>
-    <p>Findings are also summarised as claim pages in <a href="https://wiki.learningdesignalliance.org">learning-wiki</a>.</p>
-  </div>
-</header>
+<nav class="top" aria-label="Site">
+  <span class="l"><a href="./">Research reports</a></span>
+  <a class="mark" href="https://www.learningdesignalliance.org" aria-label="Learning Design Alliance">{mark}</a>
+  <span class="r"><a href="https://wiki.learningdesignalliance.org">Wiki <span aria-hidden="true">↗</span></a><a href="https://www.learningdesignalliance.org">LDA <span aria-hidden="true">↗</span></a></span>
+</nav>
 <main>
+<section class="hero">
+  <p class="label">Learning Design Alliance · published research</p>
+  <h1>research, <em>in the open</em></h1>
+  <p>Research releases from the Learning Design Alliance's learning-engineering programme. Each release is an article with
+  everything needed to check it: the release file, the code, per-case outputs, re-run notebooks, and an HTML report in which
+  every number links to the output it was computed from.</p>
+  <p>The findings are also summarised as claim pages in <a href="https://wiki.learningdesignalliance.org">learning-wiki</a>.</p>
+</section>
 {cards}
-<footer>
-  {n} published release(s). Every file is listed with its SHA-256 in each version's LIFT.json; a published version
-  is never changed. Code is MIT-licensed; text, figures, reports and data outputs are CC BY 4.0.
-  Source: <a href="{repo}">{repo_short}</a>.
+<footer class="label">
+  <p>{n} published release(s) · every file is listed with its SHA-256 in each version's LIFT.json, and a published version is never changed</p>
+  <p>Code MIT · text, figures, reports and data outputs CC BY 4.0 · source <a href="{repo}">{repo_short}</a></p>
 </footer>
 </main>
 </body>
@@ -235,7 +254,11 @@ def main() -> int:
             if v["has_report"]:
                 update_review_form(out / v["release"] / v["version"] / "report" / "index.html")
                 add_nav(out / v["release"] / v["version"] / "report" / "index.html", v)
-    (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL,
+    # The mark is inlined so it takes the page's colour (lapis, or lavender in dark mode).
+    mark = re.sub(r'fill="#[0-9A-Fa-f]{6}"', 'fill="currentColor"',
+                  (ROOT / "site" / "lda-monogram.svg").read_text(encoding="utf-8").strip())
+    mark = mark.replace("<svg ", '<svg aria-hidden="true" focusable="false" ', 1)
+    (out / "index.html").write_text(PAGE.format(cards="".join(card(r) for r in rels), n=len(rels), repo=REPO_URL, mark=mark,
                                                 repo_short=REPO_URL.removeprefix("https://github.com/")),
                                     encoding="utf-8")
     shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review"))   # the LDA logos
