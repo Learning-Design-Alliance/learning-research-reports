@@ -48,9 +48,30 @@ A correction is a new version folder, and its release file names the version it 
 The check proves that a folder is complete and unaltered. It cannot prove that the lift happened,
 since anyone can write a `LIFT.json`, so pull requests are merged only by the maintainer.
 
+## DOIs
+
+Each version gets one DOI from Zenodo, minted by `scripts/mint_doi.py` and recorded in `DOIS.json`,
+because a published version folder never changes. The deposit is the version folder as one zip.
+
+1. **Reserve** (anyone): `python3 scripts/mint_doi.py --release <r> --version <v> --reserve`. This
+   creates an unpublished Zenodo deposition holding a reserved DOI, and writes it to `DOIS.json` as
+   `reserved`. Commit that through a pull request. An unpublished deposition can still be deleted.
+2. **Merge** the release's pull request, so that the version folder is on `main`.
+3. **Publish** (the maintainer only): `python3 scripts/mint_doi.py --release <r> --version <v> --publish
+   --by human:<name> --yes`. This uploads the zip, publishes the record and marks the entry
+   `published`. Commit `DOIS.json` through a pull request. **This cannot be undone.**
+
+The token is a Zenodo personal access token with the scopes `deposit:write` and `deposit:actions`.
+Set it as `ZENODO_TOKEN`, or, in a Claude Code cloud environment, store it as a network secret for
+`zenodo.org` that adds the header `Authorization: Bearer <token>`; the script then sends no header
+itself. Run the whole flow on the sandbox first: add `--sandbox`, with `ZENODO_SANDBOX_TOKEN` or a
+network secret for `sandbox.zenodo.org`. Sandbox DOIs never resolve, and `DOIS.json` is not changed for them. Use
+`--metadata` to see what would be deposited, offline. CI refuses a `DOIS.json` entry that is
+malformed, names a version that does not exist, or changes after it has been published.
+
 ## Citing
 
-Cite the release's DOI where it has one, or this repository's URL for the version folder, with the
+Cite the release's DOI (in `DOIS.json`) where it has one, or this repository's URL for the version folder, with the
 release's title and authors from its release file.
 
 ## Licences
