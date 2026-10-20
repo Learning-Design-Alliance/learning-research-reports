@@ -32,7 +32,7 @@ h1:hover .hanchor,h2:hover .hanchor,h3:hover .hanchor,h4:hover .hanchor,p.para:h
 .rv-btn::before{content:"";position:absolute;top:-6px;bottom:-6px;left:-18px;right:-6px}
 .hanchor::after{content:"";position:absolute;top:0;bottom:0;right:-.6em;width:.8em}
 p.para::before{content:"";position:absolute;top:0;bottom:0;left:100%;width:74px}
-@media (max-width:1100px){.rv-btn::before,p.para::before{display:none}}
+@media (max-width:1160px){.rv-btn::before,p.para::before{display:none}}
 article h1{font-size:clamp(30px,4.2vw,42px);line-height:1.1;text-wrap:balance}
 article h2{font-size:30px;line-height:1.2;border-top:1px solid var(--accent);border-top-color:color-mix(in srgb,var(--accent) 45%,transparent)}
 article h3{font-size:23px}article h4{font-size:19px}
