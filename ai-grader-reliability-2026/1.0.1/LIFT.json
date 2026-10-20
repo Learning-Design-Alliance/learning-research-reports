@@ -1,0 +1,657 @@
+{
+ "release": "ai-grader-reliability-2026",
+ "version": "1.0.1",
+ "lifted_by": "human:david-porcaro",
+ "lifted_at": "2026-10-20T02:42:25Z",
+ "source_commit": "b3cdcd1eb451aea6224298c87d397ad8baeeee26",
+ "files": [
+  {
+   "path": "1.0.1.yaml",
+   "sha256": "839e9c8253dde98d6f70b2f03f94a44277b60919f7ef7691f9b73a3625a5e7d8"
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "69bd2268837d7ec466fed2b64b9df486b10038dde44c5c0186961c88a4358a65"
+  },
+  {
+   "path": "article/attainment-bias-in-llm-grading.md",
+   "sha256": "cfab367c98c22f43cd47f163644717adfda2cde7c6368deeaa3d3e898410844b"
+  },
+  {
+   "path": "article/figures/fig1-label-effect-across-models.png",
+   "sha256": "37ea176b0a433c31276eb8b466fac07e47d6e969a8f9e01127f1922b983c31af"
+  },
+  {
+   "path": "article/figures/fig1-label-effect-across-models.svg",
+   "sha256": "e4f88a28bcd35758c2b6dd19e30e7d82c270efc60ebd8383b80daba43da69cdf"
+  },
+  {
+   "path": "article/figures/fig2-toward-or-away.png",
+   "sha256": "7460685a23709c1ab4672435fb376bcade4420f78e5e5695c50e371e19f4eb31"
+  },
+  {
+   "path": "article/figures/fig2-toward-or-away.svg",
+   "sha256": "d2f39a6df5ab3bfa561f051529256a7fb7ef234fa7aa5814678226f714688acf"
+  },
+  {
+   "path": "article/figures/fig3-label-value.png",
+   "sha256": "98c1043e59a9d4169a9d70eb3863ea34b1917161ac602689d9606343d23a337d"
+  },
+  {
+   "path": "article/figures/fig3-label-value.svg",
+   "sha256": "554b1a04d6aac0e56f37da2339507364138d605af8f29147748dc1d9b993d7be"
+  },
+  {
+   "path": "article/figures/fig4-graded-examples.png",
+   "sha256": "638d013a799447143062ca49b1d6a9bc890e6844b36204942dcf92157eaccff0"
+  },
+  {
+   "path": "article/figures/fig4-graded-examples.svg",
+   "sha256": "13715e404933fdbb49bdca694a6e2dec21324b36d3364e9f3bf7c0db36611344"
+  },
+  {
+   "path": "article/figures/fig5-loop-recovery.png",
+   "sha256": "25ad2dace6af07e9f77a82e3c1553cc4f68e6d3ed906499817f860f849dbe2b3"
+  },
+  {
+   "path": "article/figures/fig5-loop-recovery.svg",
+   "sha256": "9401779fa6303bc023b64d9ef2edaacac14ea35cfaf479dcfa5760fd2ab068e8"
+  },
+  {
+   "path": "article/figures/fig6-group-gap-by-reliability.png",
+   "sha256": "a75102ca2ccdbcbb0ef1e8aaf6465f6c98a970fd79d92d0ade6f7249d49e85de"
+  },
+  {
+   "path": "article/figures/fig6-group-gap-by-reliability.svg",
+   "sha256": "d48bd3dbe5c58388aa9045b35eff1ead25a2bd11d3778ad89bcb1532b072792d"
+  },
+  {
+   "path": "artifacts/studies/measurement/grader-eval/findings/grader-evaluation.md",
+   "sha256": "ff90cda6c86521dde2bcb8e2d59ab3fd98bf0701636680c9501cf7bf5bf27f09"
+  },
+  {
+   "path": "code-manifest.txt",
+   "sha256": "487bb3c357c748665dbf623139807ec9ce8c72ef844269ca9af496ce99f1167e"
+  },
+  {
+   "path": "code/SHA256SUMS",
+   "sha256": "a8b491b2f97d7333a6eace6bd7ccff580f4e2ecc0e586e5f09ad2beacfe3155e"
+  },
+  {
+   "path": "code/research/article/figures/fig1-label-effect-across-models.png",
+   "sha256": "37ea176b0a433c31276eb8b466fac07e47d6e969a8f9e01127f1922b983c31af"
+  },
+  {
+   "path": "code/research/article/figures/fig1-label-effect-across-models.svg",
+   "sha256": "e4f88a28bcd35758c2b6dd19e30e7d82c270efc60ebd8383b80daba43da69cdf"
+  },
+  {
+   "path": "code/research/article/figures/fig2-toward-or-away.png",
+   "sha256": "7460685a23709c1ab4672435fb376bcade4420f78e5e5695c50e371e19f4eb31"
+  },
+  {
+   "path": "code/research/article/figures/fig2-toward-or-away.svg",
+   "sha256": "d2f39a6df5ab3bfa561f051529256a7fb7ef234fa7aa5814678226f714688acf"
+  },
+  {
+   "path": "code/research/article/figures/fig3-label-value.png",
+   "sha256": "98c1043e59a9d4169a9d70eb3863ea34b1917161ac602689d9606343d23a337d"
+  },
+  {
+   "path": "code/research/article/figures/fig3-label-value.svg",
+   "sha256": "554b1a04d6aac0e56f37da2339507364138d605af8f29147748dc1d9b993d7be"
+  },
+  {
+   "path": "code/research/article/figures/fig4-graded-examples.png",
+   "sha256": "638d013a799447143062ca49b1d6a9bc890e6844b36204942dcf92157eaccff0"
+  },
+  {
+   "path": "code/research/article/figures/fig4-graded-examples.svg",
+   "sha256": "13715e404933fdbb49bdca694a6e2dec21324b36d3364e9f3bf7c0db36611344"
+  },
+  {
+   "path": "code/research/article/figures/fig5-loop-recovery.png",
+   "sha256": "25ad2dace6af07e9f77a82e3c1553cc4f68e6d3ed906499817f860f849dbe2b3"
+  },
+  {
+   "path": "code/research/article/figures/fig5-loop-recovery.svg",
+   "sha256": "9401779fa6303bc023b64d9ef2edaacac14ea35cfaf479dcfa5760fd2ab068e8"
+  },
+  {
+   "path": "code/research/article/figures/fig6-group-gap-by-reliability.png",
+   "sha256": "a75102ca2ccdbcbb0ef1e8aaf6465f6c98a970fd79d92d0ade6f7249d49e85de"
+  },
+  {
+   "path": "code/research/article/figures/fig6-group-gap-by-reliability.svg",
+   "sha256": "d48bd3dbe5c58388aa9045b35eff1ead25a2bd11d3778ad89bcb1532b072792d"
+  },
+  {
+   "path": "code/shared/controls.py",
+   "sha256": "e751745961771cde40195fe49472601ef7622fa5b2285f66123c598da0b884db"
+  },
+  {
+   "path": "code/shared/paths.py",
+   "sha256": "80f7dfd393ef6275c6d47d49224f3e68dbd3fdd0b7a463b03ee294098542f344"
+  },
+  {
+   "path": "code/shared/seeds.py",
+   "sha256": "a335be9b9207c1d95da33c648f9cf37b010636d1713e5ca1d9520954a43e61e4"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/README.md",
+   "sha256": "d2a80b93991cc603fe812b17b8c85c997bb62c771634363185e476e9f2ef80b4"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/analyse.py",
+   "sha256": "46aaab3418cfa6c21cb35594dcf717bd1825fc5c1f0901ccbd2f14095e84c523"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/cost.json",
+   "sha256": "a8495daa3e3b7835b55cc44693310c9c387488b6b809a11ec9b10d66ea88bc45"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/floor-n1400.json",
+   "sha256": "25338d732e8ee015a34851bb67977a5071eed4823e871f92b71e6af848e95ce9"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/floor-n2000.json",
+   "sha256": "8b19a0ed29b8ed9b92072808c80be381eafb94a61162e2601cb7e99ef607efb8"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/floor-rev0.json",
+   "sha256": "1153ed099418eed17fc5de0939fdb575fea22f3dcb45a86b3db995c90b596cfb"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/floor.json",
+   "sha256": "be334526c7f2ac789940f799dd3db42ad351d0814246d40b43af860f137da444"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/pilot.json",
+   "sha256": "aef2e53e1242b0f25c5011cc5eebe988b1919ea3b431e4cb5a73ca481749ad8d"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/pipeline-check.json",
+   "sha256": "250932f62c03233c42e5a6543b34de10d6235478299c8611a57d6fedf0f24acb"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-groups/out/results.json",
+   "sha256": "7e3594461ddd8a78344ce2ab5d7950d0384196523be8718e2c97d93e0207c861"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/README.md",
+   "sha256": "4b1240384eea4393b1086f51aba8499f2a812044159be96261cee2597c1ece29"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/analyse.py",
+   "sha256": "aa31e4d20f3a8f8cb16e04155a0c9787598f3a3c45a502d9bbc9626fd2b07ad2"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/out/floor-q4.json",
+   "sha256": "15878dc2cdbebb14f545ed7446624505d8833b042a8d4f4a0d8d28f66b299f41"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/out/floor.json",
+   "sha256": "68c78aa6cd9434e5b47a7e6acde9a3269730fbd18d82221d81235bb5be9d1bca"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/out/history-q4.json",
+   "sha256": "4243c89968a37625757570e80808dc469c7154703e957200b8d5b1f7bd285639"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/out/pooling-floor.json",
+   "sha256": "3e83e1d2b933e45d3b07c7068d27a9e3b9ca5b809cd96a01c01e686888c94992"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/out/pooling.json",
+   "sha256": "08ab745cbc9d890575bbc787fe8084b3c65e7f9596d248851c1e63791d28a09f"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/out/results.json",
+   "sha256": "606bf39b15ddc952139334ccb987c1d24d0f8a4f3160a27114b101cd21e7a298"
+  },
+  {
+   "path": "code/studies/measurement/grader-attainment-prior/pooling.py",
+   "sha256": "49e6b0e0d18ce91eff8501d4a4c702dc787912c55525c158f0460609cd5ae6ef"
+  },
+  {
+   "path": "code/studies/measurement/grader-calibration-vs-label/README.md",
+   "sha256": "c0ea4ca59abcd4955f9f6cad04c8d8d00d4776342c95a2288431049ccc41f211"
+  },
+  {
+   "path": "code/studies/measurement/grader-calibration-vs-label/calibrate.py",
+   "sha256": "a2f58e2b0f644d74068826b4650882466a1de7235de2cef66899d8797b867600"
+  },
+  {
+   "path": "code/studies/measurement/grader-calibration-vs-label/out/floor.json",
+   "sha256": "93aefcedbf36ec05f221ad63a132c79711071e8a9a3f8698b8fcb8569cc131e0"
+  },
+  {
+   "path": "code/studies/measurement/grader-calibration-vs-label/out/results-all-arms.json",
+   "sha256": "428a2ffc8008e323967d7cd772dbfc061cd35d1e3950b5015c59026e066c7b3c"
+  },
+  {
+   "path": "code/studies/measurement/grader-calibration-vs-label/out/results.json",
+   "sha256": "812b5704387b7d30e2e7800330b442db25bef3480fdf852d15c3d33af9d27cc5"
+  },
+  {
+   "path": "code/studies/measurement/grader-ceiling-robustness/README.md",
+   "sha256": "c018a0b9d9c58bc1f87d508ff605de02c8600f62faf66f8c67cefaa17693b70f"
+  },
+  {
+   "path": "code/studies/measurement/grader-ceiling-robustness/out/floor.json",
+   "sha256": "a0715e2b41aef9c06c8c5ccd42ba1f89388ba4e3e581e791f675970d8e5b8721"
+  },
+  {
+   "path": "code/studies/measurement/grader-ceiling-robustness/out/posthoc.json",
+   "sha256": "7cefb3a8d2b243ca776bc1e10b6f82bbbf7b90b9010edaeaf55bd4cd8eeb7ab4"
+  },
+  {
+   "path": "code/studies/measurement/grader-ceiling-robustness/out/results.json",
+   "sha256": "f850c9e44ea2bff18b3b65710b368791467a9b5d131770cd59fe6144c326791f"
+  },
+  {
+   "path": "code/studies/measurement/grader-ceiling-robustness/out/selftest.json",
+   "sha256": "c925c92427ab072a585d6c0e09cc10f5d56a395177b09f3987939d1c19ca0680"
+  },
+  {
+   "path": "code/studies/measurement/grader-ceiling-robustness/robustness.py",
+   "sha256": "0c7e550a1efe9a30a049bead6c5274b576e9ef590b7fb8a09f542c283ba6cf24"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/figures.py",
+   "sha256": "085f02e7d567c4283b6169aa5654ffc12937a8c249286a33d95fcea82cf0fc79"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/mohler_removed_rows.py",
+   "sha256": "2546f535501814a5a5817c418755ff2b1825be0411f4e1d8c639d89a7e84d6c9"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/mohler_to_csv.py",
+   "sha256": "4a8b88340c058ccab9dbc882aff6266753bd979f15af4a13e47749fbe7dfd759"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/out/mohler-ceiling-draw.json",
+   "sha256": "56db2adbffbae1fa71e320667b48f8728e05fb8af0c00dd2e70b777cb7e83622"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/out/mohler-removed-rows.json",
+   "sha256": "d5f7fccd7d40af2b02495e96537b53661a591f20b8f3fd1dc626cfe5225d9900"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/out/qwk-offset.json",
+   "sha256": "3687d32b5d938641a04b8f09d5e2411cec42c89927bf05e73e56e36c127d2b4e"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/out/sampling-sd.json",
+   "sha256": "97559ea1611e7a6f39da4043058b163a2523e1f605c4ce0f2b19a3e9f53e6614"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/per-case-dumps.rebuilt.sha256",
+   "sha256": "ded72af7a183b00b750ab4550c2770b88f6e818663d902973832b6cae2c0b234"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/per-case-dumps.sha256",
+   "sha256": "78e4d0c39cf68e24e5e859937e1aedc8b750b2ccd20701c9f674259cfcb12879"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/qwk_offset.py",
+   "sha256": "f05b49f19ce682c27d3f1bf3358669334fc2cbbce63945d03ea3ce36223ba2f7"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/requirements.txt",
+   "sha256": "632c7f64025fd6561efbcf0171865c2a3fa59f266da3d7ff38fc45bf252ecc79"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/analyses/strip_dumps.py",
+   "sha256": "633a10108216cf7c49470bc8f6f1a9bc5dfe37711af07f194a1b7855e5b53748"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/findings/log/2026-09-16-asap2-and-the-ell-gap.md",
+   "sha256": "f9e777e199e7a4499e80b11a753cfb1410e2c002809708c8523a902415460058"
+  },
+  {
+   "path": "code/studies/measurement/grader-eval/findings/log/2026-09-16-the-ell-gap-is-the-halo.md",
+   "sha256": "3496d96a0bb0d7e658ecc89eb20aca37c4b51305044c9ff9bbb4b6808414265f"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/README.md",
+   "sha256": "49aa993cc8348604b649a22b1905a6f8d9e3147bf3ad5ef9f7c66cbe609cf5eb"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/analyse.py",
+   "sha256": "b710848f8cd9585da85b5fb1f0583fc943613a238766dd334fea817088b7de44"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-150.json",
+   "sha256": "82d43cf07af4f57e9a176c601963d5bd4113fe3cde494157576b4333bb3c133f"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-300.json",
+   "sha256": "551297c45a77b84c79a3beff40cc754b3f6cea1ac1f464a8959a1d65ce3f43f5"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-450.json",
+   "sha256": "ad6081eed60e45eb401720b9275204509abe690cd4cfe1cc9335e46559f21cfb"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-600-sd0.8.json",
+   "sha256": "1f0f984386d864b0d9c211b78da198a0c913f259ed4f16853f7978565897a32a"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-600.json",
+   "sha256": "13c80dfdb6fb3575a01ad3a97acefc01778dd058a186afd869a0665518a6333d"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-900-sd0.8.json",
+   "sha256": "285f7d8cfff1e9be1c66ea97fa0697d890bb71898089db03d4cc5a2e06806060"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/floor-900.json",
+   "sha256": "d0ad24091b9246401034abe04a99c2d269e9937a6c4b23d53aa36d662170743c"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/render-check.json",
+   "sha256": "1b8ab9e0f96b55c993c0cc016d10353e09e6c51810d151993104c07736f8da71"
+  },
+  {
+   "path": "code/studies/measurement/grader-exemplar-marks/out/results.json",
+   "sha256": "1baebfe9ebbc977f236020ef0a9eeb26dc0337bc231d9944df9609a3a65b34b0"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/README.md",
+   "sha256": "8a2c6b5b177c322c52d5a120776cf70631b68a4043c6a6b7fc313bc50d7de946"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/agent_analyse.py",
+   "sha256": "f01460393207838b3cc38f8d381e41c45574d9b4b7293e0f6c7f993075e51f25"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/fable.py",
+   "sha256": "af5fe6bd9720b6dfd99696086f2ce178803344210635ed3fd2b72df043b3163c"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/out/agent-manifest.json",
+   "sha256": "15c7364fbc22c83e6c3d72980f0fced715b8d819129d70b35d45b16545735b85"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/out/agent-results.json",
+   "sha256": "93ea6e6837aa46a2140247abdd0c2cea3a5bb41740a66eb1371ffe8b838740ec"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/out/block.json",
+   "sha256": "a68abe6babed4abf4799d2cf37367ec3fca2a71d0b224529e6709b1974fb5c04"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/out/draw.json",
+   "sha256": "bd2bb43c63bbff512124a6c99c41288f17ed5e5e0e36f87513308c0829beed17"
+  },
+  {
+   "path": "code/studies/measurement/grader-fable/out/floor.json",
+   "sha256": "e05dfce7df147ff00347a35a09124f04b173f97578fac9f227d16db9154ecb6b"
+  },
+  {
+   "path": "code/studies/measurement/grader-harmogen-ceiling/README.md",
+   "sha256": "1cef232215bcac8a5497f91618f7a482f5c31d577ec319737f2cfa7d14a861df"
+  },
+  {
+   "path": "code/studies/measurement/grader-harmogen-ceiling/harmogen.py",
+   "sha256": "1c070bf2df7a7814401229401a2a24cc5c346e3528bf34cdacb9146ddd4122a1"
+  },
+  {
+   "path": "code/studies/measurement/grader-harmogen-ceiling/out/results.json",
+   "sha256": "a69e163f4c6bf63370906dbc0671348e39ce9755344d34bc3c21d3d3c9547213"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-compounding/README.md",
+   "sha256": "77efe39a9eed4db10edbfb1231ecf707344f40c8b7f4d3fa4bb3aea757b77ef2"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-compounding/compounding.py",
+   "sha256": "c45b208079a54d256b4cf74249ea54bf867a492e8f10ed0e6e31b483830cdb95"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-compounding/out/floor.json",
+   "sha256": "19dc79822d62cfabe54150b7d3af2642bb67588f6ed96a02336e6a0c154f91b7"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-compounding/out/params.json",
+   "sha256": "ef50236850d77b479620d1cfbfb64b1b94e6b9697a5cd51d768f58b0086d4579"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-compounding/out/results.json",
+   "sha256": "ac6ed31afc14a21c59e33aef0bf5c777c8bcf06a4675add67e8331c0e831f350"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-dose/README.md",
+   "sha256": "381bda7957a58ed16d8f1ba8a9f5f88b7eab1993149e33f7816e4244385db050"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-dose/dose.py",
+   "sha256": "ecc06298683150a823c8e6daf18ef48b89c99543827d8f6e3a32ecee07276c3d"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-dose/out/floor.json",
+   "sha256": "89f0c7f238fd28db58c3315da03ac7284dc9b8563920b2b27a52f0180e4b6f64"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-dose/out/posthoc.json",
+   "sha256": "6fc88fdbfca5655ad8c77fc2145fd4f4afd92212e9683090cfde49909e1e314e"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-dose/out/results.json",
+   "sha256": "f9f613315f717430f181d586534ec475700d05e5dcdd01a196e99808ced74c68"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-stability/README.md",
+   "sha256": "65c43b7a0f8d98428ad152c31b60ce9ea0c22f1a0e8f9899d7649c26aebc1af7"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-stability/analyse.py",
+   "sha256": "20ccbdde40fd34b615bf4794a20cd4cd9802826a2b0b81e2607f65290d9ae553"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-stability/out/floor.json",
+   "sha256": "2b0c2798e9207769ec124e3ee969126b8211f4ab82c330bc9e93a1d78d1590e8"
+  },
+  {
+   "path": "code/studies/measurement/grader-label-stability/out/results.json",
+   "sha256": "8a6f57a88cb7f94bf6fae54a0147f9f7155148385cc5aceba5955679a033d352"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/README.md",
+   "sha256": "f885dc34f676b5a0d5dc7b23dc45f3b892b1226fa3ae6ed5d95141abea15c057"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/artefact.py",
+   "sha256": "5b7dc13581065cfb6058f5a86152fce6c9d85b4812c2d9408048296a864a005c"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/out/floor-recheck.json",
+   "sha256": "de4c3484e20f916f2c42a7938dc080f3d4b8da5140fd3bf14ea348890fd40580"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/out/floor-rev0.json",
+   "sha256": "32ebe3fbecfc842bbb60ef6b6a5d5b93d53b6e0eee4243408d9d84582181dd27"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/out/floor-rev1.json",
+   "sha256": "3ebee4d1eef7199222f9d4f12dc04101b591cfadbc89597a5e43a3c9251cd251"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/out/label-check.json",
+   "sha256": "2733010e3b4f8b7f6dba729e2ae7db77f5481b2ed44a2b8b6899d185dbfc7a4b"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/out/reliability-known.json",
+   "sha256": "5d21e304eee58c42d8a8d533c0ed942137b88e4c7f4fc68cc82743e331a31101"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/out/results.json",
+   "sha256": "e8ba2b08a488f0497e586462770fa99bf189f5aa3eb95e571b6e67dbd88af38c"
+  },
+  {
+   "path": "code/studies/measurement/grader-matching-artefact/reliability_known.py",
+   "sha256": "dcbcd2d745f2716010ba6ed069a6f31ea56a6c0ffde83db97505aca6c9c3597e"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/README.md",
+   "sha256": "6ccfcfba9e0a19e531738b9231c4091fd18a3dc0bd8e39708207520f0f7b8151"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/breadth.py",
+   "sha256": "16e6eeeb9d55455006652b78a01272366f165723986ba4e6abedb93aa6f11e4a"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/config.json",
+   "sha256": "35fef4f7070fae185c4ccc21abf932edbcb42c07a047e43edb8fe0b66ec6ca18"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/floor.json",
+   "sha256": "8f6aff33e0f61a88dfe167aba2c50a24f5db48b2152ecddb343e9023860d7cb4"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/learners.json",
+   "sha256": "0cf4871192301715beb86eb2e0fbe7e634fac7fa2d9e5e87531fbc5581c4c215"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/models.json",
+   "sha256": "c635dd4803755855510ffe04ab51ef2930eb36c468661be25c3d598f34a7c470"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/r_check.json",
+   "sha256": "456f2c9a8acd8e5fd1784a6800d67a38ee2674d8d9d268bb5cf164d91deac305"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/reasoning.json",
+   "sha256": "99ed7c33d9b5ec59351861578c8d20cf37ffec19ad86485b4329304dc09f9660"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/out/spend.json",
+   "sha256": "471033cbfb882d91d4627ad7bc0c6483067954dc14924c5ae42936f257104512"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/r_check.py",
+   "sha256": "c4290fcc5fefad55ab44a05ceb3db44dfde903e21fded9cf914a445619aaa535"
+  },
+  {
+   "path": "code/studies/measurement/grader-model-breadth/spend.py",
+   "sha256": "5aae203cce3aad6a018bc6e129df447ce8c76b1d368d9d1c71a3481843b03d75"
+  },
+  {
+   "path": "code/studies/measurement/grader-neutral-control/README.md",
+   "sha256": "1e10f61c8164e565f04f6a6e87bf3ae8b76363ec9a501a31a4c8bac42d906c62"
+  },
+  {
+   "path": "code/studies/measurement/grader-neutral-control/neutral.py",
+   "sha256": "c6f621af04b6eec22314b2cd66b923ce66e9dc465e4f1b7539cd97d9f01c9ca6"
+  },
+  {
+   "path": "code/studies/measurement/grader-neutral-control/out/floor-rev0.json",
+   "sha256": "2ed0848aa63876f344ac2ef0dad2918188d4c500934404e4c48af0d8ceab0ac9"
+  },
+  {
+   "path": "code/studies/measurement/grader-neutral-control/out/floor.json",
+   "sha256": "94c4fb3df8016da318bd5ca2cba05cf7df39b61563b9edc45ed60da971c994d7"
+  },
+  {
+   "path": "code/studies/measurement/grader-neutral-control/out/results.json",
+   "sha256": "814da464daf153a4b55f7bba408fb8a72474410a1665010df213862424924836"
+  },
+  {
+   "path": "notebooks/rq1-history-arms.ipynb",
+   "sha256": "acfcddc507d704e31723fbf9d9e89f6d832b6006da7fc9022620e2c1ab731ac3"
+  },
+  {
+   "path": "notebooks/rq2-label-effect.ipynb",
+   "sha256": "f4f70066fcb7536cc6b39cc03a8adbf1159f3733e5af787562626bc98fb0a38a"
+  },
+  {
+   "path": "notebooks/rq3-graded-examples.ipynb",
+   "sha256": "cbe063459e90036e3c674a3c5e3379a92ddbf232cecc4fc0bf2c073f033fa562"
+  },
+  {
+   "path": "notebooks/rq4-loop.ipynb",
+   "sha256": "43e3efc2ba100d4ff788ec04cd0343cecc0cfcb53ddea2de717c303c995ff8b9"
+  },
+  {
+   "path": "notebooks/rq5-generality.ipynb",
+   "sha256": "0a1c4cf6a7783aabe55babc1f393d55d26f1724860fbfca406a68f8b00834983"
+  },
+  {
+   "path": "notebooks/rq6-groups.ipynb",
+   "sha256": "b6948dd6dcf530ea2b6691ca0dca5870f3f7b1642ddac25c9587db45674bfd97"
+  },
+  {
+   "path": "per-case-model-outputs.README.md",
+   "sha256": "7e4922683b4445928e841fbd3f8b416be141aec0c1eefe2076b284e98d961f30"
+  },
+  {
+   "path": "per-case-model-outputs.jsonl",
+   "sha256": "4b0bd3e8fa0d771d9a1eb4efab68ff423460c2f0a3a5ad5d88d0c5330586346d"
+  },
+  {
+   "path": "protocol/open-graded-short-answer-corpora/1.0.0.yaml",
+   "sha256": "9d5eaaf70d0cbf0ac50b0005ac6c795643798ff1365c5baf4f334dcbc099ebd0"
+  },
+  {
+   "path": "readiness/readiness.yaml",
+   "sha256": "d423628dea661a1887d635ae850b66bd856919e50e7c24535cd39c90d78d556c"
+  },
+  {
+   "path": "readiness/reproduction-13.md",
+   "sha256": "c65efc8a6f6c2520c9e76107fc0be00bd7fb1fcbccf45c7d3f55af35847cb443"
+  },
+  {
+   "path": "readiness/scope-audit-35.md",
+   "sha256": "c3105d37cdd85e2964e17ffe0ab39e49bf095b9a12322a16d2847fabab0a7f0b"
+  },
+  {
+   "path": "report/index.html",
+   "sha256": "29acff01b13856fc2192fd5a3b518f9d545ae378a7de8e438b561136bb5e8b58"
+  },
+  {
+   "path": "report/rq1-history-arms.ipynb",
+   "sha256": "acfcddc507d704e31723fbf9d9e89f6d832b6006da7fc9022620e2c1ab731ac3"
+  },
+  {
+   "path": "report/rq2-label-effect.ipynb",
+   "sha256": "f4f70066fcb7536cc6b39cc03a8adbf1159f3733e5af787562626bc98fb0a38a"
+  },
+  {
+   "path": "report/rq3-graded-examples.ipynb",
+   "sha256": "cbe063459e90036e3c674a3c5e3379a92ddbf232cecc4fc0bf2c073f033fa562"
+  },
+  {
+   "path": "report/rq4-loop.ipynb",
+   "sha256": "43e3efc2ba100d4ff788ec04cd0343cecc0cfcb53ddea2de717c303c995ff8b9"
+  },
+  {
+   "path": "report/rq5-generality.ipynb",
+   "sha256": "0a1c4cf6a7783aabe55babc1f393d55d26f1724860fbfca406a68f8b00834983"
+  },
+  {
+   "path": "report/rq6-groups.ipynb",
+   "sha256": "b6948dd6dcf530ea2b6691ca0dca5870f3f7b1642ddac25c9587db45674bfd97"
+  },
+  {
+   "path": "reproduce.py",
+   "sha256": "2aafc5664221c494c8e8a5bdc71a701c4c00b68eaa71e4fff6f8b9906cb6aa2d"
+  }
+ ],
+ "wiki": [
+  "claims/course-context-helps-sparse-items-and-dilutes-rich-ones.md",
+  "claims/delimiting-untrusted-learner-text-defeats-authority-claim-injection.md",
+  "claims/expert-human-graders-agree-with-each-other-far-less-than-assumed.md",
+  "claims/graded-exemplars-shift-an-llm-grader-by-the-level-they-are-marked-at.md",
+  "claims/llm-short-answer-graders-can-reach-human-rater-agreement.md",
+  "claims/pooling-repeated-llm-grades-does-not-improve-agreement.md",
+  "claims/showing-a-grader-a-learners-prior-performance-biases-the-grade.md",
+  "claims/surface-formatting-changes-shift-llm-grades-without-penalising-them.md",
+  "observations/lazuli-grader-asap2-2026.yaml",
+  "observations/lazuli-grader-harmogen-2026.yaml",
+  "observations/lazuli-grader-jorgpt-2026.yaml",
+  "observations/lazuli-grader-loop-simulation-2026.yaml",
+  "observations/lazuli-grader-menagerie-2026.yaml",
+  "observations/lazuli-grader-mohler-2026.yaml"
+ ]
+}

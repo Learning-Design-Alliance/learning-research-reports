@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-06",
+  "status": "BLOCKED: no reachable host",
+  "model": "anthropic/claude-fable-5.1",
+  "served_name_listed": "anthropic/claude-fable-5.1-20260831",
+  "list_price_usd_per_million": {
+    "input": 10.0,
+    "output": 50.0
+  },
+  "openrouter_hosts": [
+    "Azure",
+    "Anthropic",
+    "Amazon Bedrock",
+    "Google (Vertex, global)"
+  ],
+  "pricing_probe": {
+    "command": "--mode schema-probe --models openrouter:anthropic/claude-fable-5.1 --n 10 --max-calls 15 --max-spend 3; OPENROUTER_PROVIDER='Amazon Bedrock'",
+    "calls": 10,
+    "failed": 10,
+    "failure_class": "PROVIDER: blocked by an account data/provider policy",
+    "tokens_billed": 0,
+    "openrouter_reported_usd": 0.0
+  },
+  "host_checks": {
+    "note": "one 16-token chat request per host, pinned with allow_fallbacks false, and one unpinned; each refused at OpenRouter's routing step before any model ran",
+    "Amazon Bedrock": "404 guardrail",
+    "Google": "404 guardrail",
+    "Azure": "404 guardrail",
+    "Anthropic": "404 guardrail",
+    "unpinned": "404 guardrail"
+  },
+  "openrouter_reason": {
+    "failed_routing_step": "Filter by Guardrails",
+    "ineligibility_reasons": [
+      {
+        "reason": "zdr-violation-by-account",
+        "endpoint_count": 4
+      }
+    ],
+    "message": "0 endpoints out of 4 requested are available matching your guardrail restrictions and data policy ... ZDR violation (account settings): 4 endpoints excluded"
+  },
+  "spend_usd": {
+    "openrouter_reported": 0.0,
+    "cap": 30.0
+  },
+  "run_made": false,
+  "cost_per_grade_usd": {
+    "measured": null,
+    "projection": 0.0688,
+    "projection_basis": "Opus 5.5's measured tokens per call on the same draw (2162 in / 944 out) x Fable 5.1 list price",
+    "per_8000_grades_projection": 551,
+    "projection_200_call_run": 13.77
+  },
+  "not_tried": [
+    "relaxing the account's zero-data-retention setting (a deliberate protection over student work; the maintainer's decision)",
+    "a direct Anthropic API key (none is set in this environment)",
+    "direct AWS Bedrock with the environment's AWS credentials (not a route this repo uses for grading; not approved)"
+  ]
+}

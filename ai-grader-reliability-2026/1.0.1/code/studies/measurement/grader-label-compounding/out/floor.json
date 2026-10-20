@@ -1,0 +1,290 @@
+{
+  "pass": true,
+  "revision": 1,
+  "attenuation_curve": {
+    "planted": [
+      0.0,
+      0.1,
+      0.3,
+      0.6,
+      1.0,
+      1.5
+    ],
+    "fitted_mean": [
+      -0.00022670094524237567,
+      0.09083462228809394,
+      0.27048441874715107,
+      0.5379051503469733,
+      0.8666422831373012,
+      1.2098764679291967
+    ],
+    "fitted_sd": [
+      0.01277603847502662,
+      0.017886021123677487,
+      0.012139972222952966,
+      0.01860277925069165,
+      0.012585071301979998,
+      0.022831992577038912
+    ],
+    "reps": 20
+  },
+  "cohort": {
+    "mu_theta": 5.045552824264423,
+    "sd_theta": 1.2683360282930294,
+    "sd_item": 2.3917333744408222,
+    "T": 40,
+    "learners": 79,
+    "responses": 3031
+  },
+  "tail_labels": {
+    "high": 6.959333333333334,
+    "low": 3.239333333333333
+  },
+  "worlds": {
+    "AMP-MEASURED": {
+      "planted": {
+        "gamma": 0.1,
+        "delta": 0.0,
+        "eta": 0.0
+      },
+      "reads": "spread",
+      "expected": "AMPLIFIES",
+      "counts": {
+        "AMPLIFIES": 40
+      },
+      "rate": 1.0,
+      "null_false_rate": null,
+      "pass": true,
+      "A_mean": 1.0659058753052162,
+      "A_total_mean": 1.0570186245712876,
+      "spread_total_counts": {
+        "AMPLIFIES": 35,
+        "DAMPS": 0,
+        "NEUTRAL": 2,
+        "UNRESOLVED": 3
+      },
+      "gamma_hat_mean": 0.0922479226320577,
+      "spread_counts": {
+        "AMPLIFIES": 40,
+        "DAMPS": 0,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    "AMP-LARGE": {
+      "planted": {
+        "gamma": 0.3,
+        "delta": 0.0,
+        "eta": 0.0
+      },
+      "reads": "spread",
+      "expected": "AMPLIFIES",
+      "counts": {
+        "AMPLIFIES": 40
+      },
+      "rate": 1.0,
+      "null_false_rate": null,
+      "pass": true,
+      "A_mean": 1.2132538888490167,
+      "A_total_mean": 1.2023202767563668,
+      "spread_total_counts": {
+        "AMPLIFIES": 40,
+        "DAMPS": 0,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      },
+      "gamma_hat_mean": 0.27017291722992687,
+      "spread_counts": {
+        "AMPLIFIES": 40,
+        "DAMPS": 0,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    "DAMP": {
+      "planted": {
+        "gamma": -0.1,
+        "delta": 0.0,
+        "eta": 0.0
+      },
+      "reads": "spread",
+      "expected": "DAMPS",
+      "counts": {
+        "DAMPS": 40
+      },
+      "rate": 1.0,
+      "null_false_rate": null,
+      "pass": true,
+      "A_mean": 0.9402341791363981,
+      "A_total_mean": 0.9442255256625008,
+      "spread_total_counts": {
+        "AMPLIFIES": 0,
+        "DAMPS": 35,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 5
+      },
+      "gamma_hat_mean": -0.09209867996509492,
+      "spread_counts": {
+        "AMPLIFIES": 0,
+        "DAMPS": 40,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    "NULL-SHIFT": {
+      "planted": {
+        "gamma": 0.0,
+        "delta": 0.3,
+        "eta": 0.0
+      },
+      "reads": "spread",
+      "expected": "NEUTRAL",
+      "counts": {
+        "NEUTRAL": 38,
+        "AMPLIFIES": 2
+      },
+      "rate": 0.95,
+      "null_false_rate": 0.05,
+      "pass": true,
+      "A_mean": 0.999527830811109,
+      "A_total_mean": 1.0025861774947253,
+      "spread_total_counts": {
+        "AMPLIFIES": 2,
+        "DAMPS": 1,
+        "NEUTRAL": 21,
+        "UNRESOLVED": 16
+      },
+      "gamma_hat_mean": -0.0009858057741117727,
+      "spread_counts": {
+        "AMPLIFIES": 2,
+        "DAMPS": 0,
+        "NEUTRAL": 38,
+        "UNRESOLVED": 0
+      }
+    },
+    "NULL": {
+      "planted": {
+        "gamma": 0.0,
+        "delta": 0.0,
+        "eta": 0.0
+      },
+      "reads": "spread",
+      "expected": "NEUTRAL",
+      "counts": {
+        "NEUTRAL": 40
+      },
+      "rate": 1.0,
+      "null_false_rate": 0.0,
+      "pass": true,
+      "A_mean": 0.9997302176672045,
+      "A_total_mean": 0.9975177178735013,
+      "spread_total_counts": {
+        "AMPLIFIES": 1,
+        "DAMPS": 1,
+        "NEUTRAL": 24,
+        "UNRESOLVED": 14
+      },
+      "gamma_hat_mean": -0.00047820019452914054,
+      "spread_counts": {
+        "AMPLIFIES": 0,
+        "DAMPS": 0,
+        "NEUTRAL": 40,
+        "UNRESOLVED": 0
+      }
+    },
+    "RUNAWAY": {
+      "planted": {
+        "gamma": 1.5,
+        "delta": 0.0,
+        "eta": 0.0
+      },
+      "reads": "stability",
+      "expected": "RUNAWAY",
+      "counts": {
+        "RUNAWAY": 40
+      },
+      "rate": 1.0,
+      "null_false_rate": null,
+      "pass": true,
+      "A_mean": 2.603711924543641,
+      "A_total_mean": 2.094817966037734,
+      "spread_total_counts": {
+        "AMPLIFIES": 40,
+        "DAMPS": 0,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      },
+      "gamma_hat_mean": 1.216042149264845,
+      "spread_counts": {
+        "AMPLIFIES": 40,
+        "DAMPS": 0,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      }
+    },
+    "SHRINK": {
+      "planted": {
+        "gamma": 0.0,
+        "delta": 0.0,
+        "eta": -0.15
+      },
+      "reads": "spread",
+      "expected": "NEUTRAL",
+      "counts": {
+        "NEUTRAL": 37,
+        "AMPLIFIES": 3
+      },
+      "rate": 0.925,
+      "null_false_rate": 0.075,
+      "pass": true,
+      "A_mean": 1.0044962481609434,
+      "A_total_mean": 0.8569416423439804,
+      "spread_total_counts": {
+        "AMPLIFIES": 0,
+        "DAMPS": 40,
+        "NEUTRAL": 0,
+        "UNRESOLVED": 0
+      },
+      "gamma_hat_mean": 0.006363274625187943,
+      "spread_counts": {
+        "AMPLIFIES": 3,
+        "DAMPS": 0,
+        "NEUTRAL": 37,
+        "UNRESOLVED": 0
+      }
+    }
+  },
+  "gain_recovery": {
+    "gamma=+0.10": {
+      "A_sim_minus_1": 0.07035998670000976,
+      "A_loop_analytic_minus_1": 0.08382980003815255,
+      "pass": true
+    },
+    "gamma=+0.30": {
+      "A_sim_minus_1": 0.2333666719848828,
+      "A_loop_analytic_minus_1": 0.30214729470960844,
+      "pass": true
+    },
+    "gamma=-0.10": {
+      "A_sim_minus_1": -0.06383889470458781,
+      "A_loop_analytic_minus_1": -0.07179301230656132,
+      "pass": true
+    },
+    "gamma=+0.00": {
+      "A_sim_minus_1": 0.0,
+      "A_loop_analytic_minus_1": 0.0,
+      "pass": true
+    }
+  },
+  "grader": {
+    "a": 0.5,
+    "b": 0.85,
+    "case_sd": 1.4,
+    "call_sd": 0.6,
+    "learner_sd": 0.33
+  },
+  "reps": 40,
+  "B": 100,
+  "cohort_n": 1000,
+  "note": "smoke check: instrument, worlds and scoring written by one session"
+}

@@ -1,0 +1,603 @@
+# ============================================================================
+# EMBARGOED. This file is staged in learning-engineering-research (private)
+# and is NOT in learning-wiki. See research/README.md in this repo for why.
+#
+# What this protocol governs: NOT Lazuli's learners. The AI grader evaluation uses
+# third-party, openly-licensed, already-published corpora of student work
+# (short answers, whole programs and essays) carrying expert human grades.
+#
+# SCOPE EXPANDED 2026-10-06 (maintainer), still 1.0.0 because nothing here has
+# been published: HARMOGEN-R, Menagerie's student programs and ASAP 2.0 (with
+# its demographic fields, as analysis metadata only) are now governed sources,
+# and the release's stripped per-case outputs are now published. These were
+# formerly the deviations of 2026-09-15, 2026-09-16 (ASAP 2.0's exploratory runs), 2026-10-05
+# and 2026-10-06 below, which
+# are kept and marked resolved (the 2026-09-16 deviation's PERSUADE 2.0
+# part stays OPEN, outside this release). No Lazuli learner data is touched by
+# any analysis under this protocol, and none may be: production has no ground
+# truth, which is the whole reason these corpora were reached for.
+#
+# The governing instrument here is a LICENCE, not a consent form. That was the
+# interesting thing about this protocol and, at 2026-09-15, the source of its
+# one unrepresentable field: the layer required
+# `consent.ai_processing_disclosed: true` before any analysis could declare AI
+# processing, and no honest value here could satisfy it.
+#
+# That is now expressible. `consent.basis: licence` was added to the layer
+# (learning-wiki#80) after this protocol raised the case, and this file uses
+# it. See research/issues/ai-disclosure-has-no-rule-for-secondary-corpora.yaml
+# for the whole history, including why filling the field in to clear the check
+# would have been the wrong repair.
+#
+# PROVENANCE OF EVERY FIELD BELOW. Established by reading the five corpora's
+# own deposit records and licences, and the harness that consumes them, which
+# lives in the Lazuli repository (private):
+#   services/lazuli-app/scripts/grader-eval/dataset.ts   loaders, filters, scales
+#   services/lazuli-app/scripts/grader-eval/run.ts       the scoring run
+#   knowledge/areas/learning-records/grader-evaluation.md  findings + caveats
+# and, for the sources added 2026-10-06, this repository's harness:
+#   studies/measurement/grader-eval/harness/asap2.ts, harmogen.ts, stability.ts
+#
+# WHERE A FIELD SAYS `unspecified` OR "NOT ESTABLISHED", NOBODY HAS CHECKED.
+#
+# Corrected in place 2026-10-06 (corrections-4, still 1.0.0): ASAP 2.0's human
+# score described as its data paper does (two expert reads, adjudicated), not
+# as one rater's.
+# ============================================================================
+
+schema_version: 1
+
+protocol:
+  id: open-graded-short-answer-corpora
+  version: 1.0.0
+  title: >-
+    Secondary use of openly-licensed, human-graded corpora of student work
+    (short answers, programs and essays) to benchmark an AI grader
+  effective_from: 2026-09-14
+  note: >-
+    Governs analysis of published corpora of student work (short answers,
+    programs and essays) that ship expert human grades, used as a standing
+    benchmark for the Lazuli AI grading prompt. The data were collected by
+    other investigators, de-identified by them, and released under open
+    licences (CC BY 4.0, all five). Nothing here authorises analysis of Lazuli
+    learner data, which is governed by `lazuli-platform-telemetry` and is not
+    publishable as research. Scope expanded 2026-10-06 (maintainer), formerly
+    deviations: HARMOGEN-R read (2026-09-15); Menagerie student programs sent
+    to hosted models (2026-10-05); ASAP 2.0 secondary-school essays, with
+    demographic fields used as analysis metadata only and never in prompts,
+    sent to hosted models (2026-09-16, exploratory; 2026-10-06). The id keeps its original wording so
+    that the records naming it do not change.
+
+participants:
+  population: >-
+    Students whose written short answers, code or essays were collected by the
+    original investigators: university students in four corpora, and
+    secondary-school students (grades 6, 8, 9 and 10, so largely minors) in the fifth,
+    ASAP 2.0. FIVE corpora. Menagerie has a different shape from the others:
+    its subjects of interest are the GRADERS, not the students. Menagerie re-graded 279 CS1 Java submissions post hoc with 28
+    recruited graders, four per item on 1,084 of 1,116 items and three on the
+    other 32, expressly to study grader consistency —
+    and the published grades are NOT the students' awarded grades, which the
+    depositors could not get ethical permission to release. JorGPT — 79 students answering 50
+    open-ended computer-science questions, 3,041 answers, each carrying a
+    teacher grade on 0-10; Mohler ASAG — students on a data-structures course,
+    2,273 answers to 80 questions, each independently graded by two graduate
+    assistants on 0-5. HARMOGEN-R — 770 Portuguese responses from a university
+    data-structures course, each evaluated by four instructors and three LLMs
+    under five rubric variants; only the depositors' evaluations are read, as
+    arithmetic. ASAP 2.0 — 24,728 source-based argumentative essays written by
+    US students in grades 6, 8, 9 and 10, one holistic human score (1-6) each ("the
+    average human assigned score" of two expert reads, adjudicated; Crossley et al. 2025, p. 3), with
+    English-learner, economic, disability, gender and race/ethnicity fields
+    supplied by the depositors.
+  recruitment: >-
+    None in this work. Recruitment, if any, was performed by the original
+    investigators under their own arrangements, which are not restated here
+    because they have not been read here and would be reported at second hand.
+  inclusion:
+    - Any answer present in the published corpus
+    - >-
+      JorGPT: answers carrying the corpus's own `teacher_corrected` flag. Every
+      row in the deposit carries it, so this excludes nothing today; it is
+      stated because a future deposit that relaxes it would silently turn
+      "graded by a teacher" into "a grade a teacher did not object to", and the
+      benchmark would then be measuring agreement with a model.
+    - >-
+      Mohler: rows where both rater scores lie in 0-5 and their mean reproduces
+      the published `score_avg` exactly — 1,727 of 2,273. See `deviations`.
+  exclusion:
+    - >-
+      Mohler: the 546 rows whose per-rater scores are recorded on a 0-10 scale
+      while `score_avg` stays on 0-5 and cannot be reconciled by any single
+      rescaling. Excluded rather than rescaled, because rescaling would invent
+      rater disagreement, which is the one quantity the ceiling analysis
+      measures. The exclusion is NOT neutral and is reported as a limitation:
+      the excluded rows have lower rater agreement than the kept ones.
+    - >-
+      ASAP 2.0: essays outside the drawn sample. The grader runs read a
+      stratified draw (quota cells by English-learner and disability status,
+      hash-ordered within cell; studies/measurement/grader-attainment-groups/).
+  vulnerable_populations:
+    - group: >-
+        Students whose coursework was collected by their own instructors, for
+        whom participation may not have been meaningfully declinable.
+      safeguards:
+        - >-
+          NOT ESTABLISHED in this work, and not establishable: whatever safeguards the
+          original investigators applied are not recorded in any deposit.
+        - >-
+          The operative safeguard is that the data arrive already de-identified
+          and already public. Nothing done here can re-expose an individual who is
+          not already exposed by the deposit, and no new collection occurs.
+    - group: >-
+        Minors: the ASAP 2.0 essays were written by secondary-school students,
+        and the deposit carries their English-learner, economic, disability,
+        gender and race/ethnicity status.
+      safeguards:
+        - >-
+          The demographic fields are analysis metadata only. They never enter
+          a prompt: the harness refuses any template that names a group
+          attribute (studies/measurement/grader-eval/harness/asap2.ts).
+        - >-
+          Nothing published here carries them. The release's per-case outputs
+          hold essay ids, labels shown and marks; anyone can re-join the
+          demographic fields from the public corpus by essay id, which links
+          nothing that the deposit does not already link.
+        - >-
+          NOT ESTABLISHED: what assent or parental permission the original
+          collection obtained. The depositors' arrangements are not restated
+          because they have not been read here.
+  age_assurance:
+    method: not-established
+    jurisdiction: >-
+      NOT ESTABLISHED per participant. Four corpora describe university
+      cohorts, which makes minors unlikely there rather than excluded; ASAP
+      2.0 describes grades 6, 8, 9 and 10 in the United States, so most of its writers
+      are minors by design. No deposit records a per-participant jurisdiction. This matters less here than it would for
+      first-party collection because nothing new is collected and nothing
+      re-identifiable is published, but it is not nothing.
+  compensation:
+    kind: none
+    detail: >-
+      Nothing is offered in this work, whose researchers did not meet these
+      participants. Whether the
+      original investigators compensated anyone is NOT ESTABLISHED.
+
+consent:
+  # ON WHAT BASIS THIS WORK PROCESSES — not what the original investigators obtained.
+  # The distinction is the whole of this protocol: a depositor can grant
+  # reuse rights over what they collected, and cannot retroactively tell their
+  # participants what a later team would do with it.
+  basis: licence
+  licence:
+    id: CC-BY-4.0
+    ref: "https://creativecommons.org/licenses/by/4.0/"
+    holder: >-
+      The depositing teams: the JorGPT authors (Zenodo 18981627), the
+      depositor of the Mohler ASAG mirror (nkazi/MohlerASAG), and the
+      Menagerie authors, Messer, Brown, Kolling and Shi (OSF q8jbt), the
+      HARMOGEN-R authors, Mendonca, Quintal, Mendonca and Baras (Zenodo
+      19534458), and the ASAP 2.0 authors, Crossley, Baffour, Burleigh and
+      King (Kaggle lburleigh/asap-2-0). Each released their corpus under this
+      licence. None is a participant, and none speaks for the participants.
+  # Research consent is not sought BY THIS WORK and cannot be: the participants are
+  # unreachable, and the data were released for reuse. `required: false` says
+  # that about this arrangement, not that consent is unimportant.
+  required: false
+  mechanism: not-applicable
+  # Added 2026-09-15 with the layer's new condition. TRUE here and meant: all
+  # FIVE deposits are CC-BY-4.0, each checked against its own deposit record
+  # (Menagerie its OSF node licence; HARMOGEN-R its Zenodo record and README;
+  # ASAP 2.0 the Kaggle dataset licence), not assumed, so this one basis really
+  # does cover every source this release analyses. Contrast learning-graph-structure, which governs
+  # three sources under three instruments and declares false.
+  sources_uniformly_governed: true
+  permitted_uses:
+    # All five deposits are CC-BY-4.0 — reuse and redistribution with attribution,
+    # including commercial use, including publication. This is the one clean
+    # part of this protocol: the permission is explicit, written down by the
+    # depositor, and does not depend on anybody's interpretation.
+    internal-pipeline-validation: permitted
+    product-improvement: permitted
+    research-analysis: permitted
+    research-publication: permitted
+    secondary-research-by-others: permitted
+    # Benchmarking a prompt is not training a model, and nothing in this work
+    # trains on these corpora. `unspecified` rather than `permitted` because
+    # the licence would allow it and nobody has decided whether this work should — the
+    # use most likely to happen by default without anyone deciding.
+    model-training: unspecified
+  permitted_uses_note: >-
+    Every `permitted` above rests on the CC-BY-4.0 licence attached to the
+    deposit, not on a consent form held here. That is a sound basis for reuse and
+    redistribution and an incomplete one for the ethics of reuse: a licence is
+    granted by the depositor, and the participant granted something to the
+    depositor under terms that cannot be read here. Recorded so that nobody later reads
+    five `permitted` values as five decisions somebody made about participants.
+    `research-publication` here covers the release's stripped per-case outputs
+    (case ids as each corpus publishes them, labels shown, human scores and
+    model marks; no student text, no grader rationale, no demographic field),
+    which CC BY 4.0 permits with attribution; the attribution travels in the
+    data dictionary beside the file.
+  # WHAT THE LICENCE DOES NOT SETTLE. Required and non-empty under a licence
+  # basis, because the risk this basis carries is precisely that a permission
+  # granted by a depositor gets read as a permission granted by the people in
+  # the data. These are the things nobody here can establish.
+  secondary_use_caveats:
+    - >-
+      NOT ESTABLISHED whether any corpus's participants were told their
+      answers might be processed by a model, still less by a third-party hosted
+      one. For JorGPT it is arguably inherent — the deposit IS a study of LLM
+      grading and ships four models' grades of these same answers — and for
+      Mohler, collected around 2011 for automatic short-answer grading
+      research, automated scoring was the stated purpose but transfer to a
+      third-party hosted model in 2026 was not, and is materially different.
+      One corpus arguably yes, one corpus no, neither checkable: that is why
+      this is a caveat rather than a value in a field. The same holds for the
+      Menagerie student programs (sent to three hosted models for the
+      label-stability re-test; the Menagerie grades are not sent) and the ASAP
+      2.0 essays (sent to Qwen3-235B and GPT-4.1-mini under this release, and to the product's Gemini grader in the 2026-09-16 exploratory runs, whose tier the logs do not record). HARMOGEN-R is read as arithmetic
+      and no model processes it in this work.
+    - >-
+      NOT ESTABLISHED whether the ASAP 2.0 writers, mostly minors, or their
+      parents were told that their demographic status would be published with
+      their essays and analysed against machine scores. The deposit publishes
+      it; that is the depositors' decision, not a statement about what anyone
+      agreed to.
+    - >-
+      NOT ESTABLISHED whether the original consent contemplated commercial
+      reuse. The licence permits it. That is a statement by the depositor about
+      the rights they hold, not a statement about what was explained to anyone.
+    - >-
+      Free-text answers can carry incidental identifiers and no deposit
+      claims to have filtered for that. The text is already public, so this is
+      a property of the deposits rather than a risk created here — but it is
+      not nothing, and a reader should not infer that de-identified means
+      checked.
+  # `not-applicable`, and the layer requires exactly this under a licence
+  # basis. NOT `unspecified`, which would mean nobody looked — a different
+  # state, and one somebody could still fix by asking. Nobody can ask here.
+  ai_processing_disclosed: not-applicable
+  ai_processing_detail: >-
+    Processing plainly occurs and is not in doubt: the answers, programs and
+    essays graded under this protocol (JorGPT, Mohler, the Menagerie programs,
+    ASAP 2.0) are sent to hosted grading models and scored by them; the
+    Menagerie grades and HARMOGEN-R are not. ASAP 2.0's demographic fields are
+    never sent. The routes and their terms: Google (Gemini) and OpenAI
+    directly, under the Learning Design Alliance's business data processing addenda with
+    each, with no zero-retention arrangement: under the providers' standard
+    API terms inputs are not used for training and are retained for abuse
+    monitoring for up to 55 days (Google, with possible review by authorized
+    staff) and up to 30 days (OpenAI); Qwen, Llama 4 and Claude Opus 5.5
+    through OpenRouter under the account's zero-data-retention setting; and,
+    for 100 JorGPT answers only, Claude Fable 5.1 in Claude Code sessions.
+    What is
+    unestablished is what the participants were told, which is recorded above
+    as a caveat rather than asserted as a value.
+
+data:
+  collected:
+    # Nothing is collected in this work. These are the fields it READS from the
+    # published deposits, listed at the grain a row carries them.
+    - item: >-
+        JorGPT: question text, student answer text, teacher grade (0-10),
+        `teacher_corrected` flag, grades assigned by four other LLMs, opaque
+        student identifier
+      purpose: >-
+        Scoring the shipped grading prompt against an expert grade, and
+        comparing it with the corpus authors' own model baselines
+      identifiability: deidentified
+    - item: >-
+        Mohler ASAG: question text, student answer text, two independent rater
+        scores (0-5), their mean, and an `E<module>.Q<question>.A<answer>`
+        identifier that recovers curricular structure
+      purpose: >-
+        Measuring human-human agreement as a ceiling, and testing whether real
+        curricular sibling context changes grading
+      identifiability: deidentified
+    - item: >-
+        Menagerie (OSF q8jbt, grades.csv): for 279 CS1 Java submissions, letter
+        grades (A++ to F) on each of four rubric dimensions from four of 28
+        recruited graders (three on 32 items), plus their written feedback and
+        an opaque grader id
+      purpose: >-
+        Replicating the human-human ceiling on a corpus built for that question,
+        with four raters per item rather than two, and measuring how agreement
+        varies by rubric dimension
+      identifiability: deidentified
+    - item: >-
+        Menagerie (OSF q8jbt, the four "Anonymised Assignments" archives): the
+        Java source files of 60 student submissions
+      purpose: >-
+        Grading whole programs under an attainment label, to test whether the
+        label's effect holds across item types and scales
+      identifiability: deidentified
+    - item: >-
+        HARMOGEN-R (Zenodo 10.5281/zenodo.19534458): instructor and LLM
+        evaluations of 770 responses under five rubric variants, with question
+        maxima and opaque response ids (the Portuguese response text is in the
+        deposit and is not read)
+      purpose: >-
+        Measuring human-human and LLM-human agreement on a third corpus, as
+        arithmetic over the depositors' published evaluations
+      identifiability: deidentified
+    - item: >-
+        ASAP 2.0 (Kaggle lburleigh/asap-2-0): essay text, task and prompt name,
+        one holistic human score (1-6; "the average human assigned score" of
+        two expert reads, adjudicated), essay id, and the depositors'
+        English-learner, economic, disability, gender and race/ethnicity fields
+      purpose: >-
+        Testing whether the attainment label's effect on identical work differs
+        by demographic group. The demographic fields are analysis metadata
+        only and never enter a prompt.
+      identifiability: deidentified
+  prohibited:
+    - >-
+      Lazuli learner data. No row from `log__xapi_statements`, `goal_evidence`
+      or `sdk_submissions` may enter an analysis under this protocol; that data
+      has its own protocol and it does not permit publication.
+    - >-
+      Any attempt to re-identify a participant in any corpus, including by
+      linkage against any other source.
+    - >-
+      Redistribution of corpus content through this repository or the wiki:
+      no answer, program or essay text, no human feedback text, and no
+      demographic field. The layer holds locations and hashes; the corpora stay
+      where their depositors put them. What is published row-level is the
+      release's stripped per-case model outputs (ids as each corpus publishes
+      them, labels shown, human scores, model marks).
+    - >-
+      Any demographic field in a prompt, and any demographic field in a
+      published per-case file.
+  identifiability:
+    # The depositors de-identified; the identifiers that remain are opaque and
+    # local to the corpus. Free text can always carry an incidental identifier,
+    # and no deposit claims to have filtered for that — but the text is
+    # already public, so this records the state rather than a risk this work creates.
+    collected: deidentified
+    # Row-level, since 2026-10-06 (maintainer): the release publishes its
+    # stripped per-case model outputs, keyed by the corpora's own opaque ids,
+    # beside the aggregate statistics. No text and no demographic field, so
+    # nothing in them is more identifiable than the public deposits they index.
+    published: deidentified
+  deidentification:
+    method: >-
+      None applied in this work. All five corpora arrive de-identified by their
+      depositors; identifiers are opaque and corpus-local.
+    applied_at: not-applicable
+    # Not reversible BY THIS WORK: it holds no mapping and no side information. Whether
+    # the original investigators retain one is NOT ESTABLISHED and is their
+    # arrangement, not this work's.
+    reversible: false
+    key_holder: >-
+      NOT ESTABLISHED. If any mapping survives it is held by the original
+      investigators. This work holds none and has sought none.
+  retention:
+    raw: >-
+      Corpus files are downloaded to an ephemeral session workspace for a run
+      and are not committed to any repository. There is no retained copy; the
+      deposit is the copy, and the release records its hash so a rerun can
+      prove it used the same bytes.
+    derived: >-
+      Per-case scoring output is written to a local JSON file for the run that
+      produced it. For the re-test runs, those files are kept privately with
+      their SHA-256 values committed
+      (studies/measurement/grader-eval/analyses/per-case-dumps.sha256), and a
+      stripped copy (ids, labels shown, human scores, marks) is published with
+      the release, generated by
+      studies/measurement/grader-eval/analyses/strip_dumps.py. The aggregate
+      tables and that copy are the durable record.
+    basis: >-
+      Minimisation by default rather than by policy: nothing needs to persist,
+      because the deposit is permanent and the harness is deterministic in
+      everything except the model call.
+  storage:
+    location: >-
+      Ephemeral session workspace only. The corpora themselves live at Zenodo
+      (JorGPT, HARMOGEN-R), Hugging Face (Mohler ASAG), OSF (Menagerie) and
+      Kaggle (ASAP 2.0); see the release's `datasets`.
+    # Not asserted. A session workspace's disk encryption and access logging
+    # are properties of the hosting environment that nobody checked for this
+    # work, and "almost certainly yes" is not a record.
+    encryption_at_rest: unspecified
+    encryption_in_transit: true
+    access_logging: unspecified
+  access:
+    raw:
+      # Anybody at all: the deposits are public and openly licensed. This is
+      # the field that most distinguishes this protocol from the platform one.
+      - public
+    derived:
+      - role:platform-engineering
+      - role:learning-engineering
+    published:
+      - public
+
+risks:
+  classification: minimal
+  identified:
+    - risk: >-
+        Benchmark results being read as production calibration. These are proxy
+        populations — university CS answers, other people's rubrics — so they
+        measure grader mechanics, not how the grader behaves on Lazuli's
+        learners' work against Lazuli's rubrics.
+      mitigation: >-
+        Stated in the release's `limitations`, in every observation record's
+        `population`, and at the top of the knowledge-base page. It is a
+        limitation that cannot be engineered away under this protocol: removing
+        it requires ground truth on production data, which does not exist.
+    - risk: >-
+        Re-identification of a participant from free-text answers that may
+        carry incidental identifiers.
+      mitigation: >-
+        Low and not created by this work: the text is already published. No linkage is
+        attempted and no text is redistributed. The published per-case outputs
+        carry only the corpora's own opaque ids, labels and marks.
+    - risk: >-
+        Machine marks published per essay can be re-joined by essay id to ASAP
+        2.0's demographic fields of minors, so a reader can see how a model
+        marked a given group's essays.
+      mitigation: >-
+        The join adds a model's mark to a record the depositors already
+        published with its demographic fields and human score; it identifies
+        no one. The published file carries no demographic field, so the join
+        is a deliberate act against the public corpus, which is how the
+        analysis itself is reproduced.
+    - risk: >-
+        The Mohler consistency filter removing exactly the rows the raters
+        disagreed on most, biasing the measured human-human ceiling upward.
+      mitigation: >-
+        Measured rather than assumed, and reported: on a best-guess rescaling
+        the excluded rows agree at QWK 0.418 against 0.519 for the kept ones.
+        The value depends on the rescaling; the direction does not. The release therefore states
+        that 0.519 is an over-estimate and must not be quoted as the ceiling.
+    - risk: >-
+        Lazuli learner data being drawn into this line of work by a future
+        session that sees an evaluation harness and a permitted-publication
+        protocol and joins them.
+      mitigation: >-
+        Structural. `data.prohibited` names those tables, and the platform
+        telemetry protocol independently refuses publication, so a release
+        drawing on them fails on its own protocol rather than on this one.
+
+external_review:
+  status: not-required
+  determination: >-
+    A self-determination, made within this work and not by any external
+    body, recorded as one. No new data are collected, no participant
+    is contacted, all five corpora are published and openly licensed, and no
+    corpus content is republished (the per-case outputs carry ids, labels and
+    marks only) — so this is secondary analysis of public data.
+    That reasoning covers the human-subjects question. It does NOT cover the
+    licence-versus-consent gap recorded under `ai_processing_disclosed`, which
+    is a governance question this layer surfaced and nobody has answered.
+
+deviations:
+  - at: 2026-09-14
+    description: >-
+      Mohler: 546 of 2,273 rows dropped as internally inconsistent — per-rater
+      scores recorded on 0-10 against a 0-5 published mean, irreconcilable by
+      any single rescaling. Not a pre-planned exclusion; it was found while
+      loading the Hugging Face mirror. Rescaling would have invented rater
+      disagreement, which is the one quantity the ceiling analysis measures.
+    reported_to: >-
+      Recorded here and in the release's `mohler-consistent` dataset, with its
+      direction measured rather than assumed. Not reported to the depositor.
+    resolution: >-
+      Implemented as a filter in `loadMohler`
+      (services/lazuli-app/scripts/grader-eval/dataset.ts) and reported as a
+      limitation: the excluded rows have LOWER rater agreement than the kept
+      ones, so the measured human-human ceiling is an over-estimate.
+  - at: 2026-09-14
+    description: >-
+      Sampling is stratified across the grade range rather than random, which
+      was not the original plan. Adopted after an ad hoc measurement that
+      suggested stratification cuts sampling noise threefold; committed code
+      later gave about 1.3x at n = 150 (the release's `resolution-sampling-sd`;
+      the threefold figure is withdrawn). The between-configuration
+      comparisons are paired, so sampling variance cancels in them.
+    reported_to: >-
+      Recorded here and restated in the release's `limitations`, because it is
+      the single easiest figure in this work to misread.
+    resolution: >-
+      Accepted with its cost stated: stratification inflates absolute agreement
+      by roughly +0.03 against the full corpus. Every absolute figure must be
+      read with that subtracted; the instrument is for comparisons, not for
+      estimating population agreement.
+  - at: 2026-09-15
+    description: >-
+      A fourth deposit was read under this protocol without being listed in
+      `data.collected`: HARMOGEN-R (Zenodo 10.5281/zenodo.19534458, CC BY 4.0;
+      770 Portuguese responses from a university data-structures course, each
+      evaluated by four instructors and three LLMs). It was re-analysed as
+      arithmetic over the depositors' own published evaluations, with no model
+      call in this work, to measure a human ceiling on a third corpus.
+    reported_to: >-
+      Recorded here (appended 2026-10-06, when the release was brought into
+      step with its two HARMOGEN-R observations) and in the release's
+      `harmogen-r` dataset and `harmogen-reanalysis` analysis. For the
+      maintainer: whether `data.collected` should name it is a scope question
+      this deviation does not decide.
+    resolution: >-
+      RESOLVED 2026-10-06 (maintainer): scope expanded. HARMOGEN-R is now a
+      governed source in `data.collected` and the licence holders; the licence
+      basis is the same CC BY 4.0 as the other deposits. Kept here as the
+      record of what happened before the scope said so.
+  - at: 2026-09-16
+    description: >-
+      Exploratory runs outside this protocol's then scope. On 2026-09-16 the product's grading prompt (not pinned to a commit), and in one run rubric variants of it, graded ASAP 2.0
+      essays (Crossley et al. 2025, CC BY 4.0; secondary-school students in
+      grades 6, 8, 9 and 10, most of them minors) on the product's Gemini
+      grader through the Gemini API, in several runs recorded in the working
+      log: 1,400 essays with no learner context
+      (2026-09-16-asap2-and-the-ell-gap.md), 700 essays under three rubric
+      prompts (2026-09-16-independence-pooling-and-the-rubric-claim.md) and
+      further ASAP 2.0 and PERSUADE 2.0 essays in the same day's entries
+      (studies/measurement/grader-eval/findings/log/2026-09-16-*.md). The logs
+      do not consistently record the model tier or every count. The
+      demographic fields were used only in analysis and never entered a
+      prompt. PERSUADE 2.0 is not a corpus of this protocol (data source
+      `persuade-ellipse`); its essays are noted here because they were sent
+      in the same runs and no protocol records them.
+    reported_to: >-
+      Recorded in the working log above and in the article's design history
+      as exploratory evidence outside the release.
+    resolution: >-
+      ASAP 2.0: RESOLVED 2026-10-06 by the scope expansion below, which brings
+      it under this protocol. Kept here as the record that minors' essays were
+      first sent to a hosted model on 2026-09-16. PERSUADE 2.0: OPEN, outside
+      this release; to be recorded under the protocol of the study that uses
+      it.
+  - at: 2026-10-05
+    description: >-
+      Menagerie's student programs (the deposit's four "Anonymised
+      Assignments" archives, not only grades.csv) were sent to three hosted
+      models (Gemini 3.5 Flash Lite, GPT-4.1-mini, Qwen3-235B-A22B-2507) to
+      grade 60 submissions under an attainment label
+      (studies/measurement/grader-label-stability/). `data.collected` lists
+      only grades.csv for this corpus, and the first secondary-use caveat says
+      no model processes the Menagerie grades; the grades still were not sent,
+      but student work from this deposit now is.
+    reported_to: >-
+      Recorded here and in the release's `menagerie-programs-*` datasets and
+      `label-stability` analysis. The AI-processing caveat that applies to the
+      other corpora (what participants were told is not established) applies
+      to these programs too.
+    resolution: >-
+      RESOLVED 2026-10-06 (maintainer): scope expanded in place (unpublished,
+      so still 1.0.0). The Menagerie programs are in `data.collected`, and the
+      AI-processing caveat names them. Kept here as the record of what happened
+      before the scope said so.
+  - at: 2026-10-06
+    description: >-
+      A fifth deposit, first read in exploratory runs on 2026-09-16 (above),
+      was read and its essays sent to hosted models (Qwen3-235B
+      via OpenRouter pinned to DeepInfra; GPT-4.1-mini via OpenAI): ASAP 2.0
+      (Crossley et al. 2025, CC BY 4.0; 3,000 of 24,728 secondary-school
+      essays), together with its demographic fields (English-learner,
+      economic, disability, gender, race/ethnicity), which no corpus under
+      this protocol had carried. The fields were used only in analysis and
+      never entered a prompt (the harness refuses a template naming a group
+      attribute). Participants are secondary-school students, not the
+      university students this protocol describes.
+    reported_to: >-
+      Recorded here and in the release's `asap2` dataset and
+      `asap2-label-by-group` analysis (studies/measurement/grader-attainment-groups/).
+    resolution: >-
+      RESOLVED 2026-10-06 (maintainer): scope expanded in place (unpublished,
+      so still 1.0.0) rather than a protocol of its own. ASAP 2.0 is in
+      `data.collected`, its writers are named as minors under
+      `vulnerable_populations` with safeguards, the demographic fields are
+      analysis metadata only, never in a prompt and never in a published
+      file, and a caveat records what the licence does not settle about them.
+      Kept here as the record of what happened before the scope said so. The
+      assessment-fairness review of the result is still to come
+      (post-publication).
+
+provenance:
+  source_type: research
+  created_at: 2026-09-15
+  authored_by: claude/unspecified
+  # An agent must never certify its own work. Every `unspecified` and every
+  # "NOT ESTABLISHED" above is a question for a person.
+  verification: unverified

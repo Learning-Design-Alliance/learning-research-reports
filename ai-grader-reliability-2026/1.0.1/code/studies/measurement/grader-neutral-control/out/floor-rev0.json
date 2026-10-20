@@ -1,0 +1,136 @@
+{
+  "pass": false,
+  "replicates": 200,
+  "bootstrap": 4000,
+  "sigma": 0.13,
+  "noise_target": {
+    "p_equal": 0.7566666666666667,
+    "sd_diff": 0.35093525835338285
+  },
+  "noise_calibrated": {
+    "p_equal": 0.7178333333333333,
+    "sd_diff": 0.26594758722206147
+  },
+  "bounded_verdict_reachable": false,
+  "worlds": {
+    "NULL": {
+      "planted_P": {
+        "high": 0.0,
+        "low": 0.0
+      },
+      "planted_value_vs_neutral": {
+        "high": 0.22,
+        "low": -0.22
+      },
+      "presence_verdicts": {
+        "NO-PRESENCE-EFFECT-BOUNDED": 108,
+        "PRESENCE-EFFECT": 17,
+        "UNRESOLVED": 75
+      },
+      "presence_effect_rate": 0.085,
+      "any_tail_minus": 0.055,
+      "any_tail_plus": 0.03,
+      "readings_hold_rate": 0.73,
+      "vn_high_plus_rate": 0.985,
+      "vn_low_minus_rate": 0.99,
+      "mean_P_est": [
+        -0.008100000000000001,
+        0.0024
+      ],
+      "bounded_rate": 0.54,
+      "checks": {
+        "false_presence<=0.10": true,
+        "readings_hold>=0.80": false,
+        "vn_high+>=0.80": true,
+        "vn_low->=0.80": true
+      },
+      "pass": false
+    },
+    "PRES+": {
+      "planted_P": {
+        "high": 0.2,
+        "low": 0.2
+      },
+      "planted_value_vs_neutral": {
+        "high": 0.22,
+        "low": -0.22
+      },
+      "presence_verdicts": {
+        "PRESENCE-EFFECT": 200
+      },
+      "presence_effect_rate": 1.0,
+      "any_tail_minus": 0.0,
+      "any_tail_plus": 1.0,
+      "readings_hold_rate": 0.0,
+      "vn_high_plus_rate": 0.98,
+      "vn_low_minus_rate": 0.99,
+      "mean_P_est": [
+        0.17956666666666662,
+        0.19818333333333335
+      ],
+      "signed_hit_rate": 1.0,
+      "checks": {
+        "signed_hit>=0.80": true,
+        "wrong_sign<=0.05": true
+      },
+      "pass": true
+    },
+    "PRES-": {
+      "planted_P": {
+        "high": -0.2,
+        "low": -0.2
+      },
+      "planted_value_vs_neutral": {
+        "high": 0.22,
+        "low": -0.22
+      },
+      "presence_verdicts": {
+        "PRESENCE-EFFECT": 200
+      },
+      "presence_effect_rate": 1.0,
+      "any_tail_minus": 1.0,
+      "any_tail_plus": 0.0,
+      "readings_hold_rate": 0.03,
+      "vn_high_plus_rate": 0.99,
+      "vn_low_minus_rate": 0.995,
+      "mean_P_est": [
+        -0.19636666666666663,
+        -0.18718333333333334
+      ],
+      "signed_hit_rate": 1.0,
+      "checks": {
+        "signed_hit>=0.80": true,
+        "wrong_sign<=0.05": true
+      },
+      "pass": true
+    },
+    "CHANGE": {
+      "planted_P": {
+        "high": -0.22,
+        "low": 0.0
+      },
+      "planted_value_vs_neutral": {
+        "high": 0.22,
+        "low": -0.22
+      },
+      "presence_verdicts": {
+        "PRESENCE-EFFECT": 200
+      },
+      "presence_effect_rate": 1.0,
+      "any_tail_minus": 1.0,
+      "any_tail_plus": 0.025,
+      "readings_hold_rate": 0.035,
+      "vn_high_plus_rate": 1.0,
+      "vn_low_minus_rate": 0.995,
+      "mean_P_est": [
+        -0.21686666666666668,
+        0.007516666666666667
+      ],
+      "checks": {
+        "readings_change>=0.80": true
+      },
+      "pass": true
+    }
+  },
+  "note": "smoke check: synthetic graders written and scored by the same session"
+}

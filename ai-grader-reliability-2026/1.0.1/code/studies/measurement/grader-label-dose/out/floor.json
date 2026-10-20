@@ -1,0 +1,713 @@
+{
+ "seed": 20261006,
+ "floor_reps": 500,
+ "floor_boot": 1000,
+ "k_grid": [
+  0.25,
+  0.5
+ ],
+ "pass_rule": {
+  "PROP_GRADED_min": 0.8,
+  "STEP_signed_max": 0.1
+ },
+ "models": {
+  "gemini": {
+   "label": "Gemini 3.5 Flash Lite",
+   "g": {
+    "n": 300,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.72,
+    "g_sd": 0.9886691391292978,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 150,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6497072845178478,
+     "partner_label_within_learner_sd": 0.5304659968802166,
+     "corr_partner_teacher": -0.07327821903403953,
+     "corr_own_teacher": 0.3933497389956046
+    },
+    "low": {
+     "n": 150,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7573723581494699,
+     "partner_label_within_learner_sd": 0.7070478580628331,
+     "corr_partner_teacher": 0.0197393410951961,
+     "corr_own_teacher": 0.18532642819653725
+    }
+   },
+   "n": 300,
+   "L": 0.36833333333333335,
+   "gbar": 3.72,
+   "b_prop": 0.09901433691756273,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.048,
+     "INVERSE": 0.038,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.00142464580831006,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.528,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.09499870604227664,
+     "planted_slope": 0.09901433691756273
+    },
+    "HALF": {
+     "GRADED": 0.212,
+     "INVERSE": 0.004,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.048319906160330925,
+     "planted_slope": 0.049507168458781364
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.568,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.09944720506224317,
+     "planted_slope": -0.09901433691756273
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  },
+  "gpt41mini": {
+   "label": "GPT-4.1-mini",
+   "g": {
+    "n": 298,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.722483221476511,
+    "g_sd": 0.9915064844865533,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 149,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6488784140749491,
+     "partner_label_within_learner_sd": 0.5299842250530257,
+     "corr_partner_teacher": -0.07450963989207918,
+     "corr_own_teacher": 0.39329366089906664
+    },
+    "low": {
+     "n": 149,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7596520934575612,
+     "partner_label_within_learner_sd": 0.7088801410686735,
+     "corr_partner_teacher": 0.018736844321402994,
+     "corr_own_teacher": 0.1831468484775298
+    }
+   },
+   "n": 298,
+   "L": 0.37583892617449666,
+   "gbar": 3.722483221476511,
+   "b_prop": 0.100964572252772,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.036,
+     "INVERSE": 0.032,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.0006199624528252972,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.544,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.10037476345952519,
+     "planted_slope": 0.100964572252772
+    },
+    "HALF": {
+     "GRADED": 0.184,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.049276485320498054,
+     "planted_slope": 0.050482286126386
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.546,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.10311845022278356,
+     "planted_slope": -0.100964572252772
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  },
+  "gpt5mini": {
+   "label": "GPT-5-mini",
+   "g": {
+    "n": 297,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.719528619528619,
+    "g_sd": 0.9868269287104302,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 148,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6517868203387327,
+     "partner_label_within_learner_sd": 0.5311085080847227,
+     "corr_partner_teacher": -0.06189767575059091,
+     "corr_own_teacher": 0.3905491686706607
+    },
+    "low": {
+     "n": 149,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7541032299730525,
+     "partner_label_within_learner_sd": 0.7044213488110467,
+     "corr_partner_teacher": 0.01098182012583889,
+     "corr_own_teacher": 0.1911510846229358
+    }
+   },
+   "n": 297,
+   "L": 0.5218855218855218,
+   "gbar": 3.719528619528619,
+   "b_prop": 0.14030958631302617,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.046,
+     "INVERSE": 0.032,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.0021562673806717393,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.68,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.13763032805849626,
+     "planted_slope": 0.14030958631302617
+    },
+    "HALF": {
+     "GRADED": 0.246,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.06744668830446886,
+     "planted_slope": 0.07015479315651309
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.67,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.13986034257423927,
+     "planted_slope": -0.14030958631302617
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  },
+  "qwen": {
+   "label": "Qwen3-235B-A22B-2507",
+   "g": {
+    "n": 295,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.728135593220339,
+    "g_sd": 0.9931570524177035,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 148,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6527191397404336,
+     "partner_label_within_learner_sd": 0.5337084201169571,
+     "corr_partner_teacher": -0.0695024379922086,
+     "corr_own_teacher": 0.3902558938959975
+    },
+    "low": {
+     "n": 147,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7617164490314413,
+     "partner_label_within_learner_sd": 0.7034054789994061,
+     "corr_partner_teacher": 0.03114541520313517,
+     "corr_own_teacher": 0.18500798412065506
+    }
+   },
+   "n": 295,
+   "L": 0.7583050847457626,
+   "gbar": 3.728135593220339,
+   "b_prop": 0.20340061829423528,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.036,
+     "INVERSE": 0.038,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.17,
+     "mean_slope": -0.0017465572246021677,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.97,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.20084354568526885,
+     "planted_slope": 0.20340061829423528
+    },
+    "HALF": {
+     "GRADED": 0.5,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.02,
+     "mean_slope": 0.09987073047602334,
+     "planted_slope": 0.10170030914711764
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.978,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.20293935445231923,
+     "planted_slope": -0.20340061829423528
+    }
+   },
+   "pass": true,
+   "k": null,
+   "m": null
+  },
+  "opus55": {
+   "label": "Claude Opus 5.5",
+   "g": {
+    "n": 300,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.72,
+    "g_sd": 0.9886691391292978,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 150,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6497072845178478,
+     "partner_label_within_learner_sd": 0.5304659968802166,
+     "corr_partner_teacher": -0.07327821903403953,
+     "corr_own_teacher": 0.3933497389956046
+    },
+    "low": {
+     "n": 150,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7573723581494699,
+     "partner_label_within_learner_sd": 0.7070478580628331,
+     "corr_partner_teacher": 0.0197393410951961,
+     "corr_own_teacher": 0.18532642819653725
+    }
+   },
+   "n": 300,
+   "L": 0.275,
+   "gbar": 3.72,
+   "b_prop": 0.0739247311827957,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.038,
+     "INVERSE": 0.024,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.0011811257934072835,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.662,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.07404708563771215,
+     "planted_slope": 0.0739247311827957
+    },
+    "HALF": {
+     "GRADED": 0.224,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.03592777664466703,
+     "planted_slope": 0.03696236559139785
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.694,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.07511776320339941,
+     "planted_slope": -0.0739247311827957
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  },
+  "llama4": {
+   "label": "Llama 4 Maverick",
+   "g": {
+    "n": 300,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.72,
+    "g_sd": 0.9886691391292978,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 150,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6497072845178478,
+     "partner_label_within_learner_sd": 0.5304659968802166,
+     "corr_partner_teacher": -0.07327821903403953,
+     "corr_own_teacher": 0.3933497389956046
+    },
+    "low": {
+     "n": 150,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7573723581494699,
+     "partner_label_within_learner_sd": 0.7070478580628331,
+     "corr_partner_teacher": 0.0197393410951961,
+     "corr_own_teacher": 0.18532642819653725
+    }
+   },
+   "n": 300,
+   "L": 0.5356666666666666,
+   "gbar": 3.72,
+   "b_prop": 0.1439964157706093,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.038,
+     "INVERSE": 0.04,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.0007964761686003894,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.466,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.14419514238750067,
+     "planted_slope": 0.1439964157706093
+    },
+    "HALF": {
+     "GRADED": 0.172,
+     "INVERSE": 0.01,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.06983720645235872,
+     "planted_slope": 0.07199820788530464
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.448,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.14191822417831335,
+     "planted_slope": -0.1439964157706093
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  }
+ },
+ "beside": {
+  "gemini-rerun": {
+   "label": "Gemini 3.5 Flash Lite, default re-run (beside)",
+   "g": {
+    "n": 300,
+    "g_min": 2.0,
+    "g_max": 7.700000000000001,
+    "g_mean": 3.72,
+    "g_sd": 0.9886691391292978,
+    "g_p10_p90": [
+     2.5,
+     5.1
+    ],
+    "high": {
+     "n": 150,
+     "learners": 19,
+     "partner_label_range": [
+      0.6,
+      4.0
+     ],
+     "partner_label_sd": 0.6497072845178478,
+     "partner_label_within_learner_sd": 0.5304659968802166,
+     "corr_partner_teacher": -0.07327821903403953,
+     "corr_own_teacher": 0.3933497389956046
+    },
+    "low": {
+     "n": 150,
+     "learners": 14,
+     "partner_label_range": [
+      6.0,
+      8.5
+     ],
+     "partner_label_sd": 0.7573723581494699,
+     "partner_label_within_learner_sd": 0.7070478580628331,
+     "corr_partner_teacher": 0.0197393410951961,
+     "corr_own_teacher": 0.18532642819653725
+    }
+   },
+   "n": 300,
+   "L": 0.36,
+   "gbar": 3.72,
+   "b_prop": 0.0967741935483871,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.04,
+     "INVERSE": 0.042,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.001049731204214339,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.488,
+     "INVERSE": 0.0,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.09712739805260895,
+     "planted_slope": 0.0967741935483871
+    },
+    "HALF": {
+     "GRADED": 0.15,
+     "INVERSE": 0.004,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.04827734135051436,
+     "planted_slope": 0.04838709677419355
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.47,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.09687499242348908,
+     "planted_slope": -0.0967741935483871
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  },
+  "fable-agent": {
+   "label": "Fable 5.1, agent route, 100 answers (beside, never pooled)",
+   "g": {
+    "n": 99,
+    "g_min": 2.1,
+    "g_max": 6.0,
+    "g_mean": 3.7393939393939393,
+    "g_sd": 0.8887419529611327,
+    "g_p10_p90": [
+     2.58,
+     5.0200000000000005
+    ],
+    "high": {
+     "n": 49,
+     "learners": 17,
+     "partner_label_range": [
+      2.4,
+      4.0
+     ],
+     "partner_label_sd": 0.47758590488320224,
+     "partner_label_within_learner_sd": 0.3226407841260919,
+     "corr_partner_teacher": -0.06593829038020325,
+     "corr_own_teacher": 0.4156126983982746
+    },
+    "low": {
+     "n": 50,
+     "learners": 13,
+     "partner_label_range": [
+      6.0,
+      8.4
+     ],
+     "partner_label_sd": 0.7354590403278758,
+     "partner_label_within_learner_sd": 0.6530002158967697,
+     "corr_partner_teacher": 0.024064378132804702,
+     "corr_own_teacher": 0.08564150944790906
+    }
+   },
+   "n": 99,
+   "L": 0.31313131313131315,
+   "gbar": 3.7393939393939393,
+   "b_prop": 0.08373851971907079,
+   "worlds": {
+    "STEP": {
+     "GRADED": 0.028,
+     "INVERSE": 0.04,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.003964492451528525,
+     "planted_slope": 0.0
+    },
+    "PROP": {
+     "GRADED": 0.134,
+     "INVERSE": 0.004,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.07652717561828581,
+     "planted_slope": 0.08373851971907079
+    },
+    "HALF": {
+     "GRADED": 0.068,
+     "INVERSE": 0.01,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": 0.04076912830631174,
+     "planted_slope": 0.04186925985953539
+    },
+    "NEG": {
+     "GRADED": 0.0,
+     "INVERSE": 0.176,
+     "STEP-BOUNDED@0.25": 0.0,
+     "STEP-BOUNDED@0.5": 0.0,
+     "mean_slope": -0.08178279605897924,
+     "planted_slope": -0.08373851971907079
+    }
+   },
+   "pass": false,
+   "k": null,
+   "m": null
+  }
+ },
+ "pooled": {
+  "n_common": 290,
+  "worlds": {
+   "STEP": {
+    "GRADED": 0.032,
+    "INVERSE": 0.034,
+    "STEP-BOUNDED@0.25": 0.0,
+    "STEP-BOUNDED@0.5": 0.152
+   },
+   "PROP": {
+    "GRADED": 0.986,
+    "INVERSE": 0.0,
+    "STEP-BOUNDED@0.25": 0.0,
+    "STEP-BOUNDED@0.5": 0.0
+   },
+   "HALF": {
+    "GRADED": 0.624,
+    "INVERSE": 0.0,
+    "STEP-BOUNDED@0.25": 0.0,
+    "STEP-BOUNDED@0.5": 0.014
+   },
+   "NEG": {
+    "GRADED": 0.0,
+    "INVERSE": 0.99,
+    "STEP-BOUNDED@0.25": 0.0,
+    "STEP-BOUNDED@0.5": 0.0
+   }
+  },
+  "pass": true,
+  "k": null
+ },
+ "asap": {
+  "n_complete": 2996,
+  "target_sd_low_minus_none": 0.5340992129089889,
+  "sigma": 0.25,
+  "worlds": {
+   "LINEAR": {
+    "expected": "MONOTONE-DOSE",
+    "rate": 1.0,
+    "calls": {
+     "MONOTONE-DOSE": 200
+    }
+   },
+   "STEP-LOW-TO-MID": {
+    "expected": "STEP-LOW-TO-MID",
+    "rate": 0.94,
+    "calls": {
+     "STEP-LOW-TO-MID": 188,
+     "NON-MONOTONE": 7,
+     "MONOTONE-DOSE": 5
+    }
+   },
+   "STEP-MID-TO-HIGH": {
+    "expected": "STEP-MID-TO-HIGH",
+    "rate": 0.95,
+    "calls": {
+     "STEP-MID-TO-HIGH": 190,
+     "NON-MONOTONE": 3,
+     "MONOTONE-DOSE": 7
+    }
+   }
+  },
+  "pass": true
+ }
+}

@@ -1,0 +1,22 @@
+{
+  "pass": true,
+  "worlds": {
+    "noisy-passes": {
+      "expected": "R-GAIN",
+      "hit_rate": 1.0,
+      "verdicts": {
+        "R-GAIN": 200
+      },
+      "pass": true
+    },
+    "no-pass-noise": {
+      "expected": "R-EQUIVALENT",
+      "hit_rate": 1.0,
+      "verdicts": {
+        "R-EQUIVALENT": 200
+      },
+      "pass": true
+    }
+  },
+  "note": "smoke check on the stratified pooling draw; synthetic passes written and scored by one session"
+}

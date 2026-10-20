@@ -1,0 +1,171 @@
+{
+  "result_label": "Fable 5.1 as an agent (Claude Code subagents; Amendment 1). Never pooled with the API runs.",
+  "model_served_recorded_by_orchestrator": "claude-fable-5-1",
+  "parse": {
+    "files_absent": [],
+    "files_unparsed": {},
+    "files_fenced": [],
+    "items_missing": 1,
+    "missing_reasons": {
+      "item not returned": 1
+    },
+    "items_ok": 199,
+    "pairs_complete": 99,
+    "pairs_dropped": 1,
+    "rule": "> 20 of 100 answers without a complete pair -> UNRESOLVED"
+  },
+  "dump": {
+    "path": "/tmp/claude-0/-home-user-Learning-engineering-research/3e89eb50-bc6b-5ed8-9fc9-e24fd022b13f/scratchpad/fable-agent/swap-fable-agent.json",
+    "sha256": "6cfa2235c6ca4d9032fbdb3e9984acfe09be4a7ebc0acb47086c34f2e78cce85"
+  },
+  "results_sha256": {
+    "batch_01.json": "9a5dc67923dbd29b2b19ee4c21a69514255353da963268dd79aec513af0b831c",
+    "batch_02.json": "23b00f47a8354655d550b9e00a641aa2db01ad63fd447aae33f2118b461ce822",
+    "batch_03.json": "af160e43d6b04e3d0d49d6e79f3b41cb3ea6bd06f8af5f831a4f878d0dbcc2cc",
+    "batch_04.json": "ffd3bf02d06185465c417058378ad5f6bad6eccc6aba74a9002de991251db33f",
+    "batch_05.json": "ee8aea85b9a22c2ec7fb67cf483f5858c1a7787af1fc5677cda6043f67ebc259",
+    "batch_06.json": "48929e643cccb54cb30f6311f18b22e299738137f80f46703c608b4d62b64259",
+    "batch_07.json": "e2b8b1015ea0a82c5725309da6e55223f2df00494aac20ad33e5d1675c1b828d",
+    "batch_08.json": "62b5769480e276d7f4a3ae7c92eb11cb2396591634c1053fe3509965d7159f23",
+    "batch_09.json": "ab4d0b18f9c528cebb2a44133bb0d868fd15618715214b079d7c9ff1d6edbe81",
+    "batch_10.json": "3694c54fd3972e0351fcda3263e0c17c2a1d5bc808e1cb6969e369988de40455",
+    "batch_11.json": "3fa21d4f6fb80a7161ba304459a09f4913373990f44bbf9e42aeaac06b6840d6",
+    "batch_12.json": "123fe1b6f234001a4ad16ea578e8ba3bbac1aa7b3366f1d8343f737b0ae9dbd8",
+    "batch_13.json": "6820096e5b4044f057a119f557cc413070f37ce84063ba4d18c1ec95b7566326",
+    "batch_14.json": "75c02bba61fa0bc6e80ab5048053d895146884d20c05c008194dfda2f2e97306",
+    "batch_15.json": "e97a149fbff8ac8530ad21f80a794a39a9d8449debcb6f4d0710d96012995cf6",
+    "batch_16.json": "f4c094594bd08f1b168f8b92ceecfca02cdc20997abb3a025eb9dd8d95efd363",
+    "batch_17.json": "457549094b39aeec4d9b9a3a71223dd7fe4a4c47d065f14c97f8d4ac39c6bad6",
+    "batch_18.json": "2e4f2e4c11a57d641a0dd8a2785bd96833f8dffdcd8f6fbfdd1cc46d9eadd9f2",
+    "batch_19.json": "7e82613b428d41749e41647ba9eeea3e49756a49a6274df707cf25aff8846853",
+    "batch_20.json": "690519286ba21dd9c7194945c3fe53eb59cbb8ec233a1eddce56dbdc333abb04"
+  },
+  "verdict": "PERSISTS",
+  "verdict_from_interval": "PERSISTS",
+  "verdict_reason": "interval rule",
+  "verdict_rule": {
+    "PERSISTS": "95% CI > 0",
+    "PERSISTS-REVERSED": "95% CI < 0",
+    "NOT-DETECTED-BOUNDED": "95% CI inside (-0.1, +0.1)",
+    "UNRESOLVED": "otherwise"
+  },
+  "tail_readings_reported_only": {
+    "high": "PERSISTS",
+    "low": "UNRESOLVED"
+  },
+  "fable_agent": {
+    "L": {
+      "est": 0.31313131313131315,
+      "ci95": [
+        0.18570626003210275,
+        0.4453800611153553
+      ]
+    },
+    "L_high": {
+      "est": 0.4387755102040816,
+      "ci95": [
+        0.30952380952380953,
+        0.5714285714285714
+      ]
+    },
+    "err_highlabel_high": {
+      "est": -1.1020408163265305,
+      "ci95": [
+        -1.5152037617554859,
+        -0.6824843871975018
+      ]
+    },
+    "err_lowlabel_high": {
+      "est": -1.5408163265306123,
+      "ci95": [
+        -1.9565448658649398,
+        -1.1333203125
+      ]
+    },
+    "L_low": {
+      "est": 0.19,
+      "ci95": [
+        -0.06101371951219511,
+        0.42857142857142855
+      ]
+    },
+    "err_highlabel_low": {
+      "est": -0.67,
+      "ci95": [
+        -1.0769230769230769,
+        -0.2692129629629629
+      ]
+    },
+    "err_lowlabel_low": {
+      "est": -0.86,
+      "ci95": [
+        -1.224514805922369,
+        -0.47435897435897434
+      ]
+    },
+    "n_pairs": 99,
+    "n_learners": 30,
+    "d_sd": 0.6646537328727852,
+    "d_values": {
+      "-2.0": 1,
+      "-1.0": 4,
+      "-0.5": 2,
+      "0.0": 55,
+      "0.5": 7,
+      "1.0": 24,
+      "1.5": 3,
+      "2.0": 3
+    }
+  },
+  "underpowered_null": false,
+  "deviation_1_dsd_flag": false,
+  "frontier_verdict_note": "an agent-route result is reported beside, not inside, the model-breadth frontier verdict",
+  "opus55_api_same_answers_reported_only": {
+    "L": {
+      "est": 0.3383838383838384,
+      "ci95": [
+        0.2574121173585249,
+        0.4292929292929293
+      ]
+    },
+    "L_high": {
+      "est": 0.37755102040816324,
+      "ci95": [
+        0.25,
+        0.5104166666666666
+      ]
+    },
+    "L_low": {
+      "est": 0.3,
+      "ci95": [
+        0.20588235294117646,
+        0.41861250785669396
+      ]
+    },
+    "n_pairs": 99,
+    "d_sd": 0.37680370863113555
+  },
+  "fable_agent_minus_opus55_api_dL_reported_only": {
+    "L": {
+      "est": -0.025252525252525252,
+      "ci95": [
+        -0.19418149946062566,
+        0.14215686274509803
+      ]
+    },
+    "L_high": {
+      "est": 0.061224489795918366,
+      "ci95": [
+        -0.1300108695652174,
+        0.26002173913043486
+      ]
+    },
+    "L_low": {
+      "est": -0.11,
+      "ci95": [
+        -0.4204694976076555,
+        0.16346982758620693
+      ]
+    }
+  }
+}
