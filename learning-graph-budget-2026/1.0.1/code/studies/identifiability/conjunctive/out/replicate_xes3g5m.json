@@ -1,0 +1,85 @@
+{
+  "seed": 20260922,
+  "items": 30,
+  "draws": 1000,
+  "min_power": 0.5,
+  "floor_share": 0.05,
+  "verdict": null,
+  "arms": {
+    "xes3g5m": {
+      "corpus": "xes3g5m",
+      "learners": 18066,
+      "items": 30,
+      "n_triples": 11203,
+      "background": 0.10730020445457678,
+      "background_pairs": 819,
+      "fixed_bar": 0.1,
+      "null_ratio": 0.9934563536512211,
+      "null_accepted": true,
+      "null_mean": -0.00041826752799236646,
+      "power": {
+        "0.1073": {
+          "detected": 35024,
+          "of": 44812,
+          "rate": 0.7815763634740694
+        },
+        "0.2": {
+          "detected": 41682,
+          "of": 44812,
+          "rate": 0.930152637686334
+        },
+        "0.4": {
+          "detected": 44516,
+          "of": 44812,
+          "rate": 0.9933946264393466
+        }
+      },
+      "power_at_own_bar": 0.7815763634740694,
+      "power_at_fixed_bar": 0.746050165134339,
+      "readable_own": true,
+      "read_own": {
+        "bar": 0.10730020445457678,
+        "supported": 2425,
+        "above": 1086,
+        "share": 0.21645987681870926,
+        "above_share": 0.09693832009283228,
+        "lo": 0.05259362765351398,
+        "hi": 0.1530610409138157,
+        "design_effect": 92.26382027990697,
+        "n_eff": 121.42354355166201,
+        "count_ci": [
+          511.95,
+          1557.05
+        ]
+      },
+      "readable_fixed": true,
+      "read_fixed": {
+        "bar": 0.1,
+        "supported": 2425,
+        "above": 1212,
+        "share": 0.21645987681870926,
+        "above_share": 0.1081853075069178,
+        "lo": 0.05879866059279317,
+        "hi": 0.17087731883685126,
+        "design_effect": 95.14947173474853,
+        "n_eff": 117.74106356818238,
+        "count_ci": [
+          580.95,
+          1725.6249999999995
+        ]
+      },
+      "jackknife_worst": {
+        "item": "k214",
+        "above": 850,
+        "cost": 0.2986798679867987
+      },
+      "ability": {
+        "n": 1168,
+        "raw_median": 0.14110638937874187,
+        "adj_median": 0.11019476537404715,
+        "kept_fraction": 0.7809339170196948,
+        "still_above": 670
+      }
+    }
+  }
+}

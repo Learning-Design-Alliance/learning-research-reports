@@ -1,0 +1,85 @@
+{
+ "draws_per_world": 500,
+ "worlds_per_cell": 20,
+ "core": 0.4,
+ "culture": 0.42,
+ "M": 0.0625,
+ "F0_draws_equals_invariance_cross": true,
+ "structure": {
+  "ordered_pairs": 12,
+  "n_shared": {
+   "xes3g5m<-assistments2012": 273,
+   "xes3g5m<-eedi": 395,
+   "xes3g5m<-junyi2020": 804,
+   "assistments2012<-xes3g5m": 273,
+   "assistments2012<-eedi": 760,
+   "assistments2012<-junyi2020": 768,
+   "eedi<-xes3g5m": 395,
+   "eedi<-assistments2012": 760,
+   "eedi<-junyi2020": 1134,
+   "junyi2020<-xes3g5m": 804,
+   "junyi2020<-assistments2012": 768,
+   "junyi2020<-eedi": 1134
+  },
+  "union": 1891
+ },
+ "worlds": {
+  "F1 no bonus": {
+   "verdicts": {
+    "UNDERPOWERED": 16,
+    "NO LANGUAGE DIFFERENCE": 3,
+    "CROSS-LANGUAGE EXCESS, NOT SPECIFIC TO LANGUAGE": 1
+   },
+   "mean_delta_language": -0.004840962773827834,
+   "mean_b_cross": 0.12587856747702636,
+   "mean_pooled_b_other": 0.1242649132190838
+  },
+  "F2 bonus 0.42 on language": {
+   "verdicts": {
+    "CORE IS LARGER WITHIN A LANGUAGE": 15,
+    "UNDERPOWERED": 1,
+    "WITHIN-LANGUAGE EXCESS, NOT SPECIFIC TO LANGUAGE": 4
+   },
+   "mean_delta_language": 0.10982118087930108,
+   "mean_b_cross": 0.10578735716552876,
+   "mean_pooled_b_other": 0.1423944174586291
+  },
+  "F2 bonus 0.30 on language": {
+   "verdicts": {
+    "CORE IS LARGER WITHIN A LANGUAGE": 7,
+    "WITHIN-LANGUAGE EXCESS, NOT SPECIFIC TO LANGUAGE": 6,
+    "UNDERPOWERED": 7
+   },
+   "mean_delta_language": 0.070080066176366,
+   "mean_b_cross": 0.10717582280417329,
+   "mean_pooled_b_other": 0.1305358448629619
+  },
+  "F3 bonus 0.42 on ALT-1": {
+   "verdicts": {
+    "CROSS-LANGUAGE EXCESS, NOT SPECIFIC TO LANGUAGE": 8,
+    "UNDERPOWERED": 11,
+    "NO LANGUAGE DIFFERENCE": 1
+   },
+   "mean_delta_language": -0.04611701071087386,
+   "mean_b_cross": 0.15726328348599267,
+   "mean_pooled_b_other": 0.14189094658236806
+  }
+ },
+ "F1": {
+  "within_family_of_20": 0,
+  "passes": true,
+  "no_language_difference_of_20": 3
+ },
+ "F2": {
+  "found_of_20_at_0.42": 15,
+  "found_of_20_at_0.30": 7,
+  "passes": false
+ },
+ "F3": {
+  "false_within_language_of_20": 0,
+  "any_within_family_of_20": 0,
+  "passes": true
+ },
+ "calibration_passes": true,
+ "power_passes": false
+}

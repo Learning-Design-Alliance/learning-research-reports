@@ -1,0 +1,157 @@
+{
+ "R0": {
+  "point": [
+   0.021336783133098863,
+   0.021336783133098863
+  ],
+  "ci": [
+   [
+    -0.06771762685059962,
+    0.11163218655817725
+   ],
+   [
+    -0.06771762685059962,
+    0.11163218655817725
+   ]
+  ],
+  "prox_ci": [
+   [
+    0.33842639426948157,
+    0.4967006715975611
+   ],
+   [
+    0.33842639426948157,
+    0.4967006715975611
+   ]
+  ],
+  "null": [
+   0.05653274840568916,
+   0.05653274840568916
+  ],
+  "equal": true
+ },
+ "H": {
+  "mean_abs_huber_minus_ols_clean": 0.010162414991828964,
+  "mean_abs_err_contaminated_huber": 0.16731990728967802,
+  "mean_abs_err_contaminated_ols": 0.39010896386546545,
+  "passes": true
+ },
+ "F1": {
+  "ols": {
+   "worlds": {
+    "core+culture": {
+     "CORE AND CULTURAL": 17,
+     "CULTURAL": 3
+    },
+    "culture only": {
+     "CULTURAL": 20
+    },
+    "core only": {
+     "NEITHER": 2,
+     "CORE": 18
+    },
+    "neither": {
+     "NEITHER": 19,
+     "CORE": 1
+    }
+   },
+   "false_core_of_40": 1,
+   "core_found_of_40_at_60_pairs": 35,
+   "false_culture_of_40": 0,
+   "passes": true,
+   "power_core_0.3": {
+    "60 pairs": 0.3,
+    "300 pairs": 1.0
+   }
+  },
+  "rank": {
+   "worlds": {
+    "core+culture": {
+     "CORE AND CULTURAL": 16,
+     "CULTURAL": 4
+    },
+    "culture only": {
+     "CULTURAL": 20
+    },
+    "core only": {
+     "NEITHER": 2,
+     "CORE": 18
+    },
+    "neither": {
+     "NEITHER": 18,
+     "CULTURAL": 1,
+     "CORE": 1
+    }
+   },
+   "false_core_of_40": 1,
+   "core_found_of_40_at_60_pairs": 34,
+   "false_culture_of_40": 1,
+   "passes": true,
+   "power_core_0.3": {
+    "60 pairs": 0.2,
+    "300 pairs": 0.9
+   }
+  },
+  "huber": {
+   "worlds": {
+    "core+culture": {
+     "CORE AND CULTURAL": 17,
+     "CULTURAL": 3
+    },
+    "culture only": {
+     "CULTURAL": 20
+    },
+    "core only": {
+     "NEITHER": 2,
+     "CORE": 18
+    },
+    "neither": {
+     "NEITHER": 18,
+     "CULTURAL": 1,
+     "CORE": 1
+    }
+   },
+   "false_core_of_40": 1,
+   "core_found_of_40_at_60_pairs": 35,
+   "false_culture_of_40": 1,
+   "passes": true,
+   "power_core_0.3": {
+    "60 pairs": 0.2,
+    "300 pairs": 1.0
+   }
+  }
+ },
+ "F2": {
+  "W1": {
+   "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS": 12,
+   "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE DOES NOT HOLD": 8
+  },
+  "W2": {
+   "EXPOSURE ADDS NOTHING BEYOND PROXIMITY; CORE HOLDS": 13,
+   "EXPOSURE ADDS NOTHING BEYOND PROXIMITY; CORE DOES NOT HOLD": 6,
+   "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS": 1
+  },
+  "W3": {
+   "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE DOES NOT HOLD": 20
+  },
+  "W4": {
+   "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS": 15,
+   "EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE DOES NOT HOLD": 5
+  },
+  "W1_absorbs": 20,
+  "W2_false_absorbs": 1,
+  "W3_false_core": 0,
+  "passes": true
+ },
+ "passes": {
+  "R0": true,
+  "H": true,
+  "F1_rank": true,
+  "F1_huber": true,
+  "F2": true
+ },
+ "draws": {
+  "bootstrap_and_permutation": 500,
+  "derangements": 50
+ }
+}

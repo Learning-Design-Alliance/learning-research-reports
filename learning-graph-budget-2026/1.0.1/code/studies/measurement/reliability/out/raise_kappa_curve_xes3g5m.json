@@ -1,0 +1,91 @@
+{
+  "corpus": "xes3g5m",
+  "items": 90,
+  "min_cell": 10,
+  "base_z": 1.0,
+  "bar": 0.1,
+  "learners": 18066,
+  "floor": {
+    "curve_100": 0.5041018986582362,
+    "study_baseline": 0.494,
+    "tol": 0.05,
+    "passes": true
+  },
+  "points": {
+    "0.15": {
+      "learners": 2709,
+      "per_half": 1354,
+      "kappa": 0.21032105097782064,
+      "deranged": 0.008745190446482472,
+      "excess": 0.20157586053133816,
+      "excess_lo": 0.16312366300295253,
+      "excess_hi": 0.23066779953917485
+    },
+    "0.3": {
+      "learners": 5419,
+      "per_half": 2709,
+      "kappa": 0.3057771724688649,
+      "deranged": 0.01435139626829513,
+      "excess": 0.29142577620056975,
+      "excess_lo": 0.22617780830428086,
+      "excess_hi": 0.3384534554455729
+    },
+    "0.5": {
+      "learners": 9033,
+      "per_half": 4516,
+      "kappa": 0.376171653129797,
+      "deranged": 0.009244670819583896,
+      "excess": 0.3669269823102131,
+      "excess_lo": 0.3090041130950539,
+      "excess_hi": 0.4028100876695124
+    },
+    "0.75": {
+      "learners": 13549,
+      "per_half": 6774,
+      "kappa": 0.4556360762069167,
+      "deranged": 0.0046891559348158215,
+      "excess": 0.45094692027210087,
+      "excess_lo": 0.39561596665920185,
+      "excess_hi": 0.47336795604587184
+    },
+    "1.0": {
+      "learners": 18066,
+      "per_half": 9033,
+      "kappa": 0.5041018986582362,
+      "deranged": 0.030474521619451078,
+      "excess": 0.4736273770387851,
+      "excess_lo": 0.4369492622789145,
+      "excess_hi": 0.5084228844893385
+    }
+  },
+  "fit": {
+    "k_max": 0.6437699638945172,
+    "n_half": 3170.8242201758267,
+    "k_max_ci": [
+      0.5837034828911122,
+      0.7219180479855538
+    ]
+  },
+  "learners_per_half_needed": {
+    "0.6": {
+      "per_half": 43465.75511669104,
+      "lo": 19894.335064250783,
+      "hi": NaN,
+      "unreachable": false
+    },
+    "0.7": {
+      "per_half": Infinity,
+      "lo": 131247.85488230255,
+      "hi": NaN,
+      "unreachable": false
+    },
+    "0.8": {
+      "per_half": Infinity,
+      "lo": NaN,
+      "hi": NaN,
+      "unreachable": true
+    }
+  },
+  "excess_rise": 0.27205151650744697,
+  "verdict": "SAMPLE IS THE CEILING"
+}

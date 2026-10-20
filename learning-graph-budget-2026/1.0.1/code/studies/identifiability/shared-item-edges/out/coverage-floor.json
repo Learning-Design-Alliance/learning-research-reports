@@ -1,0 +1,262 @@
+{
+ "cover_p": 0.8,
+ "worlds": {
+  "cover_seed1": {
+   "shape": {
+    "C1": true,
+    "C2": false,
+    "C3_gM": true,
+    "C3_verdict_mechanical": true
+   },
+   "passes": false,
+   "verdict": "MECHANICAL: the gap vanishes once shared-item responses are excluded and coverage and difficulty are matched",
+   "gaps": {
+    "g0": {
+     "point": 0.22097938144329898,
+     "lo": 0.18341340866898742,
+     "hi": 0.25994182165960583,
+     "a": 0.975,
+     "b": 0.754020618556701
+    },
+    "gE": {
+     "point": 0.020979381443299028,
+     "lo": -0.04273667665181423,
+     "hi": 0.08215671559308022,
+     "a": 0.775,
+     "b": 0.754020618556701
+    },
+    "gM": {
+     "point": 0.005434782608695676,
+     "lo": -0.012580606639598754,
+     "hi": 0.024885044474596704,
+     "a": 0.9945652173913043,
+     "b": 0.9891304347826086
+    },
+    "gEM": {
+     "point": -0.032467532467532534,
+     "lo": -0.07793185729932721,
+     "hi": 0.013614956472099335,
+     "a": 0.8571428571428571,
+     "b": 0.8896103896103896
+    },
+    "gES": {
+     "point": -0.1684782608695652,
+     "lo": -0.2272795318454,
+     "hi": -0.11109496124031003,
+     "a": 0.8206521739130435,
+     "b": 0.9891304347826086
+    },
+    "share_explained": {
+     "point": 1.1469256192839121,
+     "lo": 0.9363390690239074,
+     "hi": 1.3590249396414904
+    }
+   },
+   "decided_share": {
+    "treated_raw": 0.975,
+    "treated_excl": 0.775,
+    "treated_to_a": 0.92,
+    "treated_to_b": 0.975,
+    "baseline": 0.754020618556701
+   },
+   "matching": {
+    "m_matched": 184,
+    "em_matched": 154,
+    "m_unmatched_share": 0.07999999999999996,
+    "em_unmatched_share": 0.22999999999999998,
+    "sd": [
+     0.4094935741154648,
+     0.16755382727056317,
+     0.033085906076442934,
+     0.03860617689810286
+    ],
+    "caliper_sd": 0.5,
+    "smd_m": [
+     0.07133968137171771,
+     0.041802955509245156,
+     -0.09241928818701313,
+     0.008289992164357596
+    ],
+    "smd_em": [
+     0.06491679798250112,
+     -0.10183377849366897,
+     0.08582386593002567,
+     0.00505588681064157
+    ],
+    "smd_before": [
+     0.8405551941881932,
+     1.1301689465478022,
+     -0.2948085009454264,
+     -0.3363171629870537
+    ]
+   },
+   "X1": {
+    "pairs": 9900,
+    "mismatches": 0,
+    "states_seen": [
+     "supported",
+     "unfalsifiable",
+     "unpowered",
+     "unreadable"
+    ]
+   }
+  },
+  "cover_seed2": {
+   "shape": {
+    "C1": true,
+    "C2": false,
+    "C3_gM": true,
+    "C3_verdict_mechanical": false
+   },
+   "passes": false,
+   "verdict": "UNANSWERABLE: UNDERPOWERED (the remainder can be neither excluded nor bounded below half)",
+   "gaps": {
+    "g0": {
+     "point": 0.23025773195876287,
+     "lo": 0.1890836827160627,
+     "hi": 0.27309354898129057,
+     "a": 0.975,
+     "b": 0.7447422680412371
+    },
+    "gE": {
+     "point": 0.03525773195876292,
+     "lo": -0.031026262674790726,
+     "hi": 0.09855965703088801,
+     "a": 0.78,
+     "b": 0.7447422680412371
+    },
+    "gM": {
+     "point": 0.016574585635359185,
+     "lo": -0.01199111211539184,
+     "hi": 0.05264715042042981,
+     "a": 0.988950276243094,
+     "b": 0.9723756906077348
+    },
+    "gEM": {
+     "point": 0.059880239520958,
+     "lo": -0.010021739130434788,
+     "hi": 0.13124999999999998,
+     "a": 0.8263473053892215,
+     "b": 0.7664670658682635
+    },
+    "gES": {
+     "point": -0.12154696132596687,
+     "lo": -0.18128654970760227,
+     "hi": -0.06878306878306883,
+     "a": 0.8397790055248618,
+     "b": 0.9613259668508287
+    },
+    "share_explained": {
+     "point": 0.7399425460697144,
+     "lo": 0.44580467014552294,
+     "hi": 1.0435036799561397
+    }
+   },
+   "decided_share": {
+    "treated_raw": 0.975,
+    "treated_excl": 0.78,
+    "treated_to_a": 0.92,
+    "treated_to_b": 0.975,
+    "baseline": 0.7447422680412371
+   },
+   "matching": {
+    "m_matched": 181,
+    "em_matched": 167,
+    "m_unmatched_share": 0.09499999999999997,
+    "em_unmatched_share": 0.16500000000000004,
+    "sd": [
+     0.49392687833876814,
+     0.17574854720694214,
+     0.03417541705834334,
+     0.038438241370987704
+    ],
+    "caliper_sd": 0.5,
+    "smd_m": [
+     0.048215777273910194,
+     0.028956372148169835,
+     -0.07591971930236562,
+     -0.017658706335395655
+    ],
+    "smd_em": [
+     0.026164280223771638,
+     -0.09597433413222872,
+     0.07809210175978826,
+     -0.01676813283898751
+    ],
+    "smd_before": [
+     0.772673797321409,
+     1.031310084872968,
+     -0.12076590180565921,
+     -0.2024745702279198
+    ]
+   },
+   "X1": {
+    "pairs": 9900,
+    "mismatches": 0,
+    "states_seen": [
+     "supported",
+     "unfalsifiable",
+     "unpowered",
+     "unreadable"
+    ]
+   }
+  }
+ },
+ "others": {
+  "mech_seed1": {
+   "shape": {
+    "C1": true,
+    "C2": false,
+    "C3_gM": false
+   },
+   "shows_C2_and_C3": false
+  },
+  "mech_seed2": {
+   "shape": {
+    "C1": true,
+    "C2": false,
+    "C3_gM": false
+   },
+   "shows_C2_and_C3": false
+  },
+  "subst_seed1": {
+   "shape": {
+    "C1": true,
+    "C2": false,
+    "C3_gM": false
+   },
+   "shows_C2_and_C3": false
+  },
+  "subst_seed2": {
+   "shape": {
+    "C1": true,
+    "C2": false,
+    "C3_gM": true
+   },
+   "shows_C2_and_C3": false
+  }
+ },
+ "real": {
+  "xes3g5m": {
+   "shape": {
+    "C1": true,
+    "C2": true,
+    "C3_gM": true,
+    "C3_verdict_mechanical": false
+   },
+   "reading": "UNANSWERABLE: the coverage floor failed"
+  },
+  "eedi": {
+   "shape": {
+    "C1": true,
+    "C2": true,
+    "C3_gM": true,
+    "C3_verdict_mechanical": true
+   },
+   "reading": "UNANSWERABLE: the coverage floor failed"
+  }
+ },
+ "P1_cover_worlds_show_shape": false,
+ "P2_other_worlds_do_not": true,
+ "verdict": "COVERAGE FLOOR FAILED: attributing the gap to coverage stays a reading of the decomposition"
+}

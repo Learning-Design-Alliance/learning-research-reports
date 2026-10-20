@@ -1,0 +1,212 @@
+{
+  "junyi": {
+    "verdict": {
+      "verdict": "UNANSWERABLE",
+      "reason": "< 30 eligible pairs: UNANSWERABLE"
+    }
+  },
+  "eedi": {
+    "verdict": {
+      "verdict": "UNANSWERABLE",
+      "reason": "last-answer time: first-meeting order not recorded (pre-registered exclusion)"
+    }
+  },
+  "assist": {
+    "n_eligible_pairs": 6449,
+    "n_rows": 3464813,
+    "n_eligible_reference_pairs": 1669,
+    "balance_median_abs_smd_prior": 0.2063524314268517,
+    "signal_T_mean_z2": 6.702949083697021,
+    "median_abs_A": 0.08790426283318276,
+    "ORDER-ADJ": {
+      "agree": 0.521166072259265,
+      "acc_o": 0.5014979029358898,
+      "acc_d": 0.6476932294787298,
+      "D": -0.14619532654283995,
+      "n_discordant": 826,
+      "discordant_order_follows_reference": 0.3523002421307506,
+      "skill_ci": {
+        "agree": [
+          0.49215213098920846,
+          0.5522653477939143
+        ],
+        "acc_o": [
+          0.44780955817925905,
+          0.5535047653579408
+        ],
+        "acc_d": [
+          0.5615256577466248,
+          0.7298005492390596
+        ],
+        "D": [
+          -0.24281685619955978,
+          -0.05002525541584572
+        ]
+      },
+      "learner_ci": {
+        "agree": [
+          0.5022387191812684,
+          0.5283900604744922
+        ],
+        "acc_o": [
+          0.4769248052726183,
+          0.5272768124625524
+        ],
+        "acc_d": [
+          0.6185964649490713,
+          0.6650838825644098
+        ],
+        "D": [
+          -0.17981575793888555,
+          -0.11021569802276804
+        ]
+      },
+      "learner_ci_unit": "cohort (class proxy)"
+    },
+    "ORDER-RAW": {
+      "agree": 0.5208559466583966,
+      "acc_o": 0.5164769322947873,
+      "acc_d": 0.6476932294787298,
+      "D": -0.13121629718394245,
+      "n_discordant": 821,
+      "discordant_order_follows_reference": 0.36662606577344703
+    },
+    "SCOVA-NEXT": {
+      "agree": 0.4895332609706931,
+      "acc_o": 0.43319352905931696,
+      "acc_d": 0.6476932294787298,
+      "D": -0.2144997004194128,
+      "n_discordant": 946,
+      "discordant_order_follows_reference": 0.3107822410147992
+    },
+    "control": {
+      "agree": [
+        0.503643975810203,
+        0.49325476818111336,
+        0.5134129322375562
+      ],
+      "acc_o": [
+        0.5023666866387059,
+        0.4847213900539245,
+        0.5164769322947873
+      ],
+      "acc_d": [
+        0.6476932294787298,
+        0.6476932294787298,
+        0.6476932294787298
+      ],
+      "D": [
+        -0.14532654284002394,
+        -0.16297183942480525,
+        -0.13121629718394245
+      ],
+      "discordant_order_follows_reference": [
+        0.3516809637238484,
+        0.32871536523929473,
+        0.36662606577344703
+      ],
+      "T": [
+        1.0174927814120884,
+        0.98302073229309,
+        1.0525929870910817
+      ]
+    },
+    "signal_present": true,
+    "signal_note": "order is set per class; the learner-level derangement is too narrow a null, so this SIGNAL line is descriptive and no verdict uses it",
+    "floor": {
+      "0.0": {
+        "recovered": 0.0,
+        "excludes_half": 0.0,
+        "beyond": 0.0
+      },
+      "0.05": {
+        "recovered": 1.0,
+        "excludes_half": 1.0,
+        "beyond": 1.0
+      },
+      "0.1": {
+        "recovered": 1.0,
+        "excludes_half": 1.0,
+        "beyond": 1.0
+      },
+      "passes": true,
+      "min_detectable_delta": 0.05
+    },
+    "verdict": {
+      "verdict": "UNANSWERABLE",
+      "reason": "simulation floor failed (registered rule)",
+      "computed_reading_descriptive": "CONFOUNDED BY ORDER CHOICE",
+      "computed_reading_before_confounding_rule": "WORSE THAN DIFFICULTY"
+    },
+    "seconds": 456
+  },
+  "ednet": {
+    "n_eligible_pairs": 9485,
+    "n_rows": 12438714,
+    "n_eligible_reference_pairs": null,
+    "balance_median_abs_smd_prior": 0.09573681730619861,
+    "signal_T_mean_z2": 3.390977828272945,
+    "median_abs_A": 0.03165752144172096,
+    "ORDER-ADJ": {
+      "agree": 0.4890880337374802,
+      "skill_ci": {
+        "agree": [
+          0.44499599261854933,
+          0.5316400514533929
+        ]
+      },
+      "learner_ci": {
+        "agree": [
+          0.47893779652082236,
+          0.5220005271481286
+        ]
+      },
+      "learner_ci_unit": "learner"
+    },
+    "ORDER-RAW": {
+      "agree": 0.5014232999472852
+    },
+    "SCOVA-NEXT": {
+      "agree": 0.3679493937796521
+    },
+    "control": {
+      "agree": [
+        0.5011702688455456,
+        0.48950975224037957,
+        0.5112282551396943
+      ],
+      "T": [
+        1.0200695145320886,
+        0.9920580935262199,
+        1.052907561869038
+      ]
+    },
+    "signal_present": true,
+    "floor": {
+      "0.0": {
+        "recovered": 0.0,
+        "excludes_half": 0.0,
+        "beyond": null
+      },
+      "0.05": {
+        "recovered": 1.0,
+        "excludes_half": 1.0,
+        "beyond": null
+      },
+      "0.1": {
+        "recovered": 1.0,
+        "excludes_half": 1.0,
+        "beyond": null
+      },
+      "passes": true,
+      "min_detectable_delta": 0.05
+    },
+    "verdict": {
+      "verdict": "UNANSWERABLE",
+      "reason": "simulation floor failed (registered rule)",
+      "computed_reading_descriptive": "ORDER ORIENTATION INDEPENDENT OF DIFFICULTY (ORDER SIGNAL PRESENT)",
+      "computed_reading_before_confounding_rule": "ORDER ORIENTATION INDEPENDENT OF DIFFICULTY (ORDER SIGNAL PRESENT)"
+    },
+    "seconds": 1948
+  }
+}

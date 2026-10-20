@@ -1,0 +1,322 @@
+{
+  "pass_threshold": 0.5,
+  "min_cell": 10,
+  "min_pairs": 20,
+  "bar": 0.02,
+  "learners": 34580,
+  "both_order_pairs": 1250,
+  "structures": [
+    {
+      "structure": "S1  CCSS GRADE",
+      "min_cell": 10,
+      "pairs": 5,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 1050,
+      "dropped_positivity": 195,
+      "reversed_arrow": {
+        "claimed": -0.14254351400688503,
+        "reversed": 0.14254351400688503,
+        "margin": -0.28508702801377006,
+        "verdict": "REVERSED"
+      }
+    },
+    {
+      "structure": "S2  CURRICULUM MODULE ORDER",
+      "min_cell": 10,
+      "noise_2sd": 0.030530363714853435,
+      "pairs": 54,
+      "observations": 13124,
+      "delta_residualised": -0.03280896695239187,
+      "delta_raw": -0.047893941209770405,
+      "deranged_residualised": -0.0036955801221966768,
+      "deranged_raw": -0.007165860222951842,
+      "deranged_sd": 0.02008645628276592,
+      "excess": -0.029113386830195192,
+      "shuffled_mean": -0.010559301631182953,
+      "shuffled_sd": 0.029629354112615473,
+      "ci_lo": -0.07807322489015033,
+      "ci_hi": 0.01643943372394934,
+      "bar": 0.02,
+      "floor_planted": 0.1557921927074257,
+      "floor_null": 0.0019342332561900952,
+      "floor_null_sd": 0.015265181857426717,
+      "dropped_no_direction": 873,
+      "dropped_positivity": 323,
+      "strata": {
+        "module gap 1": {
+          "pairs": 24,
+          "delta": -0.02889835375626434,
+          "deranged": -0.017839294568637466,
+          "excess": -0.011059059187626875
+        },
+        "module gap 2": {
+          "pairs": 19,
+          "delta": -0.016203816119446737,
+          "deranged": 0.013347031546872152,
+          "excess": -0.029550847666318887
+        },
+        "module gap 3": {
+          "pairs": 4
+        },
+        "module gap 4+": {
+          "pairs": 7,
+          "delta": -0.08242308283161727,
+          "deranged": 0.0018497764889338901,
+          "excess": -0.08427285932055116
+        }
+      },
+      "verdict": "UNDERPOWERED AT THE BAR",
+      "reversed_arrow": {
+        "claimed": -0.032808966952391876,
+        "reversed": 0.032808966952391876,
+        "margin": -0.06561793390478375,
+        "verdict": "REVERSED"
+      }
+    },
+    {
+      "structure": "S3  CURRICULUM LESSON ORDER",
+      "min_cell": 10,
+      "noise_2sd": 0.025129728630399185,
+      "pairs": 71,
+      "observations": 19475,
+      "delta_residualised": 0.006290210154485481,
+      "delta_raw": 0.01792355998778228,
+      "deranged_residualised": -0.0039994000948724365,
+      "deranged_raw": -0.0029308995867489505,
+      "deranged_sd": 0.015877256578224176,
+      "excess": 0.010289610249357917,
+      "shuffled_mean": -0.0017951360229456095,
+      "shuffled_sd": 0.019126880349960646,
+      "ci_lo": -0.03339109679561178,
+      "ci_hi": 0.04909382094094819,
+      "bar": 0.02,
+      "floor_planted": 0.1486776763548306,
+      "floor_null": -0.003642216456611832,
+      "floor_null_sd": 0.012564864315199592,
+      "dropped_no_direction": 813,
+      "dropped_positivity": 366,
+      "strata": {
+        "module gap 1": {
+          "pairs": 38,
+          "delta": 0.0005983271646782472,
+          "deranged": 0.006916097277927995,
+          "excess": -0.0063177701132497485
+        },
+        "module gap 2": {
+          "pairs": 19,
+          "delta": 0.013740845565459415,
+          "deranged": -0.05346200394831999,
+          "excess": 0.0672028495137794
+        },
+        "module gap 3": {
+          "pairs": 8,
+          "delta": 0.023080202162080482,
+          "deranged": 0.0010791427955686985,
+          "excess": 0.022001059366511783
+        },
+        "module gap 4+": {
+          "pairs": 6,
+          "delta": 0.029457170356641717,
+          "deranged": -0.05979539607351097,
+          "excess": 0.08925256643015268
+        }
+      },
+      "verdict": "UNDERPOWERED AT THE BAR",
+      "reversed_arrow": {
+        "claimed": 0.006290210154485483,
+        "reversed": -0.006290210154485486,
+        "margin": 0.012580420308970969,
+        "verdict": "CLAIMED"
+      }
+    }
+  ],
+  "positivity_sweep": [
+    {
+      "structure": "S1  CCSS GRADE",
+      "min_cell": 5,
+      "pairs": 11,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 1050,
+      "dropped_positivity": 189
+    },
+    {
+      "structure": "S1  CCSS GRADE",
+      "min_cell": 10,
+      "pairs": 5,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 1050,
+      "dropped_positivity": 195
+    },
+    {
+      "structure": "S1  CCSS GRADE",
+      "min_cell": 20,
+      "pairs": 4,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 1050,
+      "dropped_positivity": 196
+    },
+    {
+      "structure": "S1  CCSS GRADE",
+      "min_cell": 30,
+      "pairs": 3,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 1050,
+      "dropped_positivity": 197
+    },
+    {
+      "structure": "S2  CURRICULUM MODULE ORDER",
+      "min_cell": 5,
+      "noise_2sd": 0.024430717173144035,
+      "pairs": 96,
+      "observations": 19990,
+      "delta_residualised": -0.02712221046823752,
+      "delta_raw": -0.05298029990409176,
+      "deranged_residualised": 0.005478700847268746,
+      "deranged_raw": 0.0051168320728009675,
+      "deranged_sd": 0.015796323777817842,
+      "excess": -0.03260091131550626,
+      "shuffled_mean": 0.004211952593379223,
+      "shuffled_sd": 0.018646476411456822,
+      "ci_lo": -0.06918550878181236,
+      "ci_hi": 0.018290266814153123,
+      "bar": 0.02,
+      "floor_planted": 0.14689577599445913,
+      "floor_null": 0.0011308064644299353,
+      "floor_null_sd": 0.012215358586572017,
+      "dropped_no_direction": 873,
+      "dropped_positivity": 281,
+      "strata": {},
+      "verdict": "NOT RECOVERED"
+    },
+    {
+      "structure": "S2  CURRICULUM MODULE ORDER",
+      "min_cell": 10,
+      "noise_2sd": 0.030530363714853435,
+      "pairs": 54,
+      "observations": 13124,
+      "delta_residualised": -0.03280896695239187,
+      "delta_raw": -0.047893941209770405,
+      "deranged_residualised": -0.0036955801221966768,
+      "deranged_raw": -0.007165860222951842,
+      "deranged_sd": 0.02008645628276592,
+      "excess": -0.029113386830195192,
+      "shuffled_mean": -0.010559301631182953,
+      "shuffled_sd": 0.029629354112615473,
+      "ci_lo": -0.07807322489015033,
+      "ci_hi": 0.01643943372394934,
+      "bar": 0.02,
+      "floor_planted": 0.1557921927074257,
+      "floor_null": 0.0019342332561900952,
+      "floor_null_sd": 0.015265181857426717,
+      "dropped_no_direction": 873,
+      "dropped_positivity": 323,
+      "strata": {},
+      "verdict": "UNDERPOWERED AT THE BAR"
+    },
+    {
+      "structure": "S2  CURRICULUM MODULE ORDER",
+      "min_cell": 20,
+      "pairs": 13,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 873,
+      "dropped_positivity": 364
+    },
+    {
+      "structure": "S2  CURRICULUM MODULE ORDER",
+      "min_cell": 30,
+      "pairs": 3,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 873,
+      "dropped_positivity": 374
+    },
+    {
+      "structure": "S3  CURRICULUM LESSON ORDER",
+      "min_cell": 5,
+      "noise_2sd": 0.02696583808039404,
+      "pairs": 128,
+      "observations": 29721,
+      "delta_residualised": -0.0009684598437591332,
+      "delta_raw": -0.0024367592092981627,
+      "deranged_residualised": 0.002236739356690628,
+      "deranged_raw": 0.004688416247662708,
+      "deranged_sd": 0.011980496369882665,
+      "excess": -0.0032051992004497615,
+      "shuffled_mean": -0.0005631248991723415,
+      "shuffled_sd": 0.018388159323978127,
+      "ci_lo": -0.032480450676287444,
+      "ci_hi": 0.038212698133821145,
+      "bar": 0.02,
+      "floor_planted": 0.14691853508367247,
+      "floor_null": -0.001729939536078403,
+      "floor_null_sd": 0.01348291904019702,
+      "dropped_no_direction": 813,
+      "dropped_positivity": 309,
+      "strata": {},
+      "verdict": "UNDERPOWERED AT THE BAR"
+    },
+    {
+      "structure": "S3  CURRICULUM LESSON ORDER",
+      "min_cell": 10,
+      "noise_2sd": 0.025129728630399185,
+      "pairs": 71,
+      "observations": 19475,
+      "delta_residualised": 0.006290210154485481,
+      "delta_raw": 0.01792355998778228,
+      "deranged_residualised": -0.0039994000948724365,
+      "deranged_raw": -0.0029308995867489505,
+      "deranged_sd": 0.015877256578224176,
+      "excess": 0.010289610249357917,
+      "shuffled_mean": -0.0017951360229456095,
+      "shuffled_sd": 0.019126880349960646,
+      "ci_lo": -0.03339109679561178,
+      "ci_hi": 0.04909382094094819,
+      "bar": 0.02,
+      "floor_planted": 0.1486776763548306,
+      "floor_null": -0.003642216456611832,
+      "floor_null_sd": 0.012564864315199592,
+      "dropped_no_direction": 813,
+      "dropped_positivity": 366,
+      "strata": {},
+      "verdict": "UNDERPOWERED AT THE BAR"
+    },
+    {
+      "structure": "S3  CURRICULUM LESSON ORDER",
+      "min_cell": 20,
+      "noise_2sd": 0.03768127156266736,
+      "pairs": 25,
+      "observations": 8778,
+      "delta_residualised": 0.024752064995416774,
+      "delta_raw": 0.03909191360795261,
+      "deranged_residualised": -0.0036607915556402023,
+      "deranged_raw": -0.004420368736974874,
+      "deranged_sd": 0.016271908551819037,
+      "excess": 0.028412856551056978,
+      "shuffled_mean": 0.0032465998584172077,
+      "shuffled_sd": 0.023475548307039996,
+      "ci_lo": -0.027201262638464254,
+      "ci_hi": 0.07329985025110164,
+      "bar": 0.02,
+      "floor_planted": 0.1526730653100298,
+      "floor_null": -0.005689033228147832,
+      "floor_null_sd": 0.01884063578133368,
+      "dropped_no_direction": 813,
+      "dropped_positivity": 412,
+      "strata": {},
+      "verdict": "UNDERPOWERED AT THE BAR"
+    },
+    {
+      "structure": "S3  CURRICULUM LESSON ORDER",
+      "min_cell": 30,
+      "pairs": 11,
+      "verdict": "UNANSWERABLE",
+      "dropped_no_direction": 813,
+      "dropped_positivity": 426
+    }
+  ],
+  "pricing": {
+    "noise_constant": 0.22435143828891965,
+    "pairs_in_hand": 128,
+    "pairs_for_bar": 126,
+    "pairs_for_half_bar": 504
+  }
+}

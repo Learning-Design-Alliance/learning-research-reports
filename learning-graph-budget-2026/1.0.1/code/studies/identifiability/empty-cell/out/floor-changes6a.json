@@ -1,0 +1,928 @@
+{
+ "fixed": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 1153.5,
+  "W_two_way_share": 0.0,
+  "unordered_pairs_for_W": 780,
+  "minority_share_median": 0.0,
+  "pass_through_median_F": 0.06515227691362327,
+  "ease_median_P1": 0.39930703008821933,
+  "retry_median_P2": 0.16344086021505377,
+  "forward": {
+   "label": "CELL FILLS",
+   "pairs": 780,
+   "empty_share": 0.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "CELL FILLS",
+     "pairs": 780,
+     "empty_share": 0.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "backward": {
+   "label": "ORDER-LIMITED",
+   "pairs": 780,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 1.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "ORDER-LIMITED",
+     "pairs": 780,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 1.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "CELL FILLS",
+    "backward": "ORDER-LIMITED"
+   },
+   "0.3": {
+    "forward": "CELL FILLS",
+    "backward": "ORDER-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "CELL FILLS",
+   "ORDER-LIMITED"
+  ],
+  "passes": true
+ },
+ "gated": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 1154.0,
+  "W_two_way_share": 1.0,
+  "unordered_pairs_for_W": 780,
+  "minority_share_median": 0.49048442906574397,
+  "pass_through_median_F": 0.0,
+  "ease_median_P1": 0.4020797227036395,
+  "retry_median_P2": 0.0,
+  "forward": {
+   "label": "RETRY-LIMITED",
+   "pairs": 780,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 1.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "RETRY-LIMITED",
+     "pairs": 780,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 1.0
+     }
+    }
+   }
+  },
+  "backward": {
+   "label": "RETRY-LIMITED",
+   "pairs": 780,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 1.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "RETRY-LIMITED",
+     "pairs": 780,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 1.0
+     }
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "RETRY-LIMITED",
+    "backward": "RETRY-LIMITED"
+   },
+   "0.3": {
+    "forward": "RETRY-LIMITED",
+    "backward": "RETRY-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "RETRY-LIMITED",
+   "RETRY-LIMITED"
+  ],
+  "passes": true
+ },
+ "curriculum": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 1154.0,
+  "W_two_way_share": 0.0,
+  "unordered_pairs_for_W": 780,
+  "minority_share_median": 0.0,
+  "pass_through_median_F": 0.0,
+  "ease_median_P1": 0.3993085436986039,
+  "retry_median_P2": 0.0,
+  "forward": {
+   "label": "RETRY-LIMITED",
+   "pairs": 780,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 1.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "RETRY-LIMITED",
+     "pairs": 780,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 1.0
+     }
+    }
+   }
+  },
+  "backward": {
+   "label": "ORDER-LIMITED",
+   "pairs": 780,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 1.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "ORDER-LIMITED",
+     "pairs": 780,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 1.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "RETRY-LIMITED",
+    "backward": "ORDER-LIMITED"
+   },
+   "0.3": {
+    "forward": "RETRY-LIMITED",
+    "backward": "ORDER-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "RETRY-LIMITED",
+   "ORDER-LIMITED"
+  ],
+  "passes": true
+ },
+ "sparse": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 4.0,
+  "W_two_way_share": 0.5714285714285714,
+  "unordered_pairs_for_W": 7,
+  "minority_share_median": 0.4166666666666667,
+  "pass_through_median_F": 0.0,
+  "ease_median_P1": 0.4,
+  "retry_median_P2": 0.0,
+  "forward": {
+   "label": "COVERAGE-LIMITED",
+   "pairs": 763,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.9986893840104849,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 0.001310615989515072
+   },
+   "bands": {
+    "N<5": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 502,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N5-19": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 261,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.9961685823754789,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0038314176245210726
+     }
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    }
+   }
+  },
+  "backward": {
+   "label": "COVERAGE-LIMITED",
+   "pairs": 797,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.9874529485570891,
+    "ORDER": 0.012547051442910916,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 536,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N5-19": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 261,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.9616858237547893,
+      "ORDER": 0.038314176245210725,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "COVERAGE-LIMITED",
+    "backward": "COVERAGE-LIMITED"
+   },
+   "0.3": {
+    "forward": "COVERAGE-LIMITED",
+    "backward": "COVERAGE-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "COVERAGE-LIMITED",
+   "COVERAGE-LIMITED"
+  ],
+  "passes": true,
+  "coverage_binds": [
+   0.9986893840104849,
+   0.9874529485570891
+  ]
+ },
+ "free": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 1155.0,
+  "W_two_way_share": 1.0,
+  "unordered_pairs_for_W": 780,
+  "minority_share_median": 0.4909482153195139,
+  "pass_through_median_F": 0.06373760171051851,
+  "ease_median_P1": 0.4006678261645149,
+  "retry_median_P2": 0.15966386554621848,
+  "forward": {
+   "label": "CELL FILLS",
+   "pairs": 780,
+   "empty_share": 0.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "CELL FILLS",
+     "pairs": 780,
+     "empty_share": 0.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "backward": {
+   "label": "CELL FILLS",
+   "pairs": 780,
+   "empty_share": 0.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "CELL FILLS",
+     "pairs": 780,
+     "empty_share": 0.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "CELL FILLS",
+    "backward": "CELL FILLS"
+   },
+   "0.3": {
+    "forward": "CELL FILLS",
+    "backward": "CELL FILLS"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "CELL FILLS",
+   "CELL FILLS"
+  ],
+  "passes": true
+ },
+ "easy": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 1154.0,
+  "W_two_way_share": 1.0,
+  "unordered_pairs_for_W": 780,
+  "minority_share_median": 0.4894625805018876,
+  "pass_through_median_F": 0.004995840266222962,
+  "ease_median_P1": 0.004995840266222962,
+  "retry_median_P2": 1.0,
+  "forward": {
+   "label": "EASE-LIMITED",
+   "pairs": 780,
+   "empty_share": 0.8243589743589743,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 1.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "EASE-LIMITED",
+     "pairs": 780,
+     "empty_share": 0.8243589743589743,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 1.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "backward": {
+   "label": "EASE-LIMITED",
+   "pairs": 780,
+   "empty_share": 0.782051282051282,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 1.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N100+": {
+     "label": "EASE-LIMITED",
+     "pairs": 780,
+     "empty_share": 0.782051282051282,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 1.0,
+      "RETRY": 0.0
+     }
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "EASE-LIMITED",
+    "backward": "EASE-LIMITED"
+   },
+   "0.3": {
+    "forward": "EASE-LIMITED",
+    "backward": "EASE-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "EASE-LIMITED",
+   "EASE-LIMITED"
+  ],
+  "passes": true
+ },
+ "marginal": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 11.0,
+  "W_two_way_share": 0.6529516994633273,
+  "unordered_pairs_for_W": 559,
+  "minority_share_median": 0.4,
+  "pass_through_median_F": 0.4,
+  "ease_median_P1": 0.4,
+  "retry_median_P2": 1.0,
+  "forward": {
+   "label": "COVERAGE-LIMITED",
+   "pairs": 780,
+   "empty_share": 0.8692307692307693,
+   "binding_shares": {
+    "COVERAGE": 1.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 6,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N5-19": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 763,
+     "empty_share": 0.8754914809960681,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N20-99": {
+     "label": "CELL FILLS",
+     "pairs": 11,
+     "empty_share": 0.36363636363636365,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N100+": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    }
+   }
+  },
+  "backward": {
+   "label": "COVERAGE-LIMITED",
+   "pairs": 780,
+   "empty_share": 0.9705128205128205,
+   "binding_shares": {
+    "COVERAGE": 0.9511228533685601,
+    "ORDER": 0.0488771466314399,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 6,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N5-19": {
+     "label": "COVERAGE-LIMITED",
+     "pairs": 763,
+     "empty_share": 0.9777195281782438,
+     "binding_shares": {
+      "COVERAGE": 0.9504021447721179,
+      "ORDER": 0.049597855227882036,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N20-99": {
+     "label": "CELL FILLS",
+     "pairs": 11,
+     "empty_share": 0.45454545454545453,
+     "binding_shares": {
+      "COVERAGE": 1.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N100+": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "COVERAGE-LIMITED",
+    "backward": "COVERAGE-LIMITED"
+   },
+   "0.3": {
+    "forward": "COVERAGE-LIMITED",
+    "backward": "COVERAGE-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "COVERAGE-LIMITED",
+   "COVERAGE-LIMITED"
+  ],
+  "passes": true,
+  "coverage_binds": [
+   1.0,
+   0.9511228533685601
+  ]
+ },
+ "modest": {
+  "learners": 3000,
+  "pairs": 1560,
+  "coverage_median_N": 38.0,
+  "W_two_way_share": 0.0,
+  "unordered_pairs_for_W": 780,
+  "minority_share_median": 0.0,
+  "pass_through_median_F": 0.4,
+  "ease_median_P1": 0.4,
+  "retry_median_P2": 1.0,
+  "forward": {
+   "label": "CELL FILLS",
+   "pairs": 780,
+   "empty_share": 0.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 0.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "CELL FILLS",
+     "pairs": 780,
+     "empty_share": 0.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 0.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N100+": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    }
+   }
+  },
+  "backward": {
+   "label": "ORDER-LIMITED",
+   "pairs": 780,
+   "empty_share": 1.0,
+   "binding_shares": {
+    "COVERAGE": 0.0,
+    "ORDER": 1.0,
+    "EASE": 0.0,
+    "RETRY": 0.0
+   },
+   "bands": {
+    "N<5": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N5-19": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    },
+    "N20-99": {
+     "label": "ORDER-LIMITED",
+     "pairs": 780,
+     "empty_share": 1.0,
+     "binding_shares": {
+      "COVERAGE": 0.0,
+      "ORDER": 1.0,
+      "EASE": 0.0,
+      "RETRY": 0.0
+     }
+    },
+    "N100+": {
+     "label": "NO PAIRS",
+     "pairs": 0
+    }
+   }
+  },
+  "ease_sensitivity": {
+   "0.1": {
+    "forward": "CELL FILLS",
+    "backward": "ORDER-LIMITED"
+   },
+   "0.3": {
+    "forward": "CELL FILLS",
+    "backward": "ORDER-LIMITED"
+   }
+  },
+  "identity_mismatches": 0,
+  "expected": [
+   "CELL FILLS",
+   "ORDER-LIMITED"
+  ],
+  "passes": true
+ },
+ "ability_prereq": {
+  "reached": {
+   "COVERAGE": 380,
+   "CELL": 380,
+   "READABILITY": 380,
+   "POWER": 380,
+   "GATE": 378
+  },
+  "passed": {
+   "COVERAGE": 380,
+   "CELL": 380,
+   "READABILITY": 380,
+   "POWER": 378,
+   "GATE": 378
+  },
+  "pass_rates": {
+   "COVERAGE": 1.0,
+   "CELL": 1.0,
+   "READABILITY": 1.0,
+   "POWER": 0.9947368421052631,
+   "GATE": 1.0
+  },
+  "binding_stage": "NONE BINDS",
+  "pre_gate": {
+   "supported": 14,
+   "would_be_contradicted": 364
+  },
+  "size": {
+   "median_identifying_cell_readable": 2037.5,
+   "median_control_accuracy": 0.18995408865680513,
+   "per_group_n_for_mde_0.10": 186
+  },
+  "ability": {
+   "supported": 14,
+   "survive": 12,
+   "share_survive": 0.8571428571428571,
+   "verdict": "NOT TESTABLE (TOO FEW VERDICTS)"
+  },
+  "expected": "VERDICTS SURVIVE ABILITY ADJUSTMENT",
+  "passes": false
+ },
+ "ability_ability": {
+  "reached": {
+   "COVERAGE": 380,
+   "CELL": 380,
+   "READABILITY": 380,
+   "POWER": 380,
+   "GATE": 380
+  },
+  "passed": {
+   "COVERAGE": 380,
+   "CELL": 380,
+   "READABILITY": 380,
+   "POWER": 380,
+   "GATE": 380
+  },
+  "pass_rates": {
+   "COVERAGE": 1.0,
+   "CELL": 1.0,
+   "READABILITY": 1.0,
+   "POWER": 1.0,
+   "GATE": 1.0
+  },
+  "binding_stage": "NONE BINDS",
+  "pre_gate": {
+   "supported": 380,
+   "would_be_contradicted": 0
+  },
+  "size": {
+   "median_identifying_cell_readable": 1293.0,
+   "median_control_accuracy": 0.6376692640928534,
+   "per_group_n_for_mde_0.10": 377
+  },
+  "ability": {
+   "supported": 380,
+   "survive": 1,
+   "share_survive": 0.002631578947368421,
+   "verdict": "VERDICTS ARE MOSTLY ABILITY"
+  },
+  "expected": "VERDICTS ARE MOSTLY ABILITY",
+  "passes": true
+ },
+ "smoke_W_order": true,
+ "FLOOR_PASSES": false
+}

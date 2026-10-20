@@ -1,0 +1,75 @@
+{
+  "post_hoc": true,
+  "floor_min_asserted_decided": 0.5,
+  "by_learners": {
+    "3000": {
+      "soft": {
+        "decided": 0.11538461538461539,
+        "asserted_decided": 0.375,
+        "planted_supported": 0.3181818181818182,
+        "asserted_supported": 3,
+        "asserted_contradicted": 0,
+        "precision": 0.625,
+        "recall": 0.22727272727272727,
+        "reversed_arrow": "CLAIMED"
+      },
+      "hard": {
+        "decided": 0.6153846153846154,
+        "asserted_decided": 0.7058823529411765,
+        "planted_supported": 0.35,
+        "asserted_supported": 3,
+        "asserted_contradicted": 9,
+        "precision": 0.8235294117647058,
+        "recall": 0.35,
+        "reversed_arrow": "CLAIMED"
+      },
+      "reading1_checks_pass": false
+    },
+    "10000": {
+      "soft": {
+        "decided": 0.9725274725274725,
+        "asserted_decided": 0.8888888888888888,
+        "planted_supported": 0.5,
+        "asserted_supported": 4,
+        "asserted_contradicted": 4,
+        "precision": 0.5555555555555556,
+        "recall": 0.22727272727272727,
+        "reversed_arrow": "CLAIMED"
+      },
+      "hard": {
+        "decided": 0.9175824175824175,
+        "asserted_decided": 1.0,
+        "planted_supported": 0.525,
+        "asserted_supported": 3,
+        "asserted_contradicted": 13,
+        "precision": 0.8125,
+        "recall": 0.325,
+        "reversed_arrow": "CLAIMED"
+      },
+      "reading1_checks_pass": true
+    },
+    "30000": {
+      "soft": {
+        "decided": 1.0,
+        "asserted_decided": 1.0,
+        "planted_supported": 1.0,
+        "asserted_supported": 7,
+        "asserted_contradicted": 1,
+        "precision": 0.625,
+        "recall": 0.22727272727272727,
+        "reversed_arrow": "CLAIMED"
+      },
+      "hard": {
+        "decided": 0.9835164835164835,
+        "asserted_decided": 1.0,
+        "planted_supported": 0.9,
+        "asserted_supported": 14,
+        "asserted_contradicted": 3,
+        "precision": 0.8235294117647058,
+        "recall": 0.35,
+        "reversed_arrow": "CLAIMED"
+      },
+      "reading1_checks_pass": true
+    }
+  }
+}

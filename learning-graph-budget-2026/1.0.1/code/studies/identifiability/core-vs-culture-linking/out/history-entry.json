@@ -1,0 +1,6 @@
+{
+ "date": "2026-10-07",
+ "study": "studies/identifiability/core-vs-culture-linking/linking.py (pre-registered at 57af02d)",
+ "moved": {},
+ "note": "Robustness of invariance.py's CORE AND CULTURAL (model-coded cluster map; human check pending). Recomputed pair statistics and the committed bootstrap reproduce exactly. Floor passes (false core 1/40 for OLS, rank and Huber; exposure planted 20/20, inert 1/20, core-free 0/20). LINKING-ROBUST: verdict unchanged under rank (R 0.464, +0.120 [+0.028, +0.222] paired), Huber (0.319, -0.026 [-0.065, +0.010]) and grade.domain (0.337 [0.190, 0.521]) linkings, against R0 0.344; b_other +0.114 to +0.130, so the ratio is a range, not a linking-free number. EXPOSURE ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS: co-assignment (ASSISTments assignment_id, Eedi QuizId; not recorded in XES3G5M or Junyi) cuts b_prox by -0.172 [-0.222, -0.120] (40%; decile-deranged control -0.007), b_exp +0.241 [+0.169, +0.308], b_other -0.007 [-0.014, +0.000]. Moves nothing."
+}

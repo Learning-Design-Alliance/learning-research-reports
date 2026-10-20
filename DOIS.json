@@ -25,5 +25,12 @@
   "published_at": "2026-10-19",
   "published_by": "human:david-porcaro",
   "zip_sha256": "0da879025c0d69e8e63ce85ebdf36600a06dbbe09b4dfd379b977335713b71fb"
+ },
+ "learning-graph-budget-2026/1.0.1": {
+  "doi": "10.5281/zenodo.23488368",
+  "registrar": "zenodo",
+  "deposition": 23488368,
+  "state": "reserved",
+  "reserved_at": "2026-10-20"
  }
 }

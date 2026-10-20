@@ -1,0 +1,55 @@
+{
+ "draws_per_world": 500,
+ "worlds_per_cell": 20,
+ "F0_cross_multi_equals_invariance_cross": true,
+ "structure": {
+  "ordered_pairs": 6,
+  "n_shared": {
+   "assistments2012<-eedi": 760,
+   "assistments2012<-junyi2020": 768,
+   "eedi<-assistments2012": 760,
+   "eedi<-junyi2020": 1134,
+   "junyi2020<-assistments2012": 768,
+   "junyi2020<-eedi": 1134
+  },
+  "median_shared": 768.0,
+  "union": 1460
+ },
+ "F1": {
+  "worlds": {
+   "core+culture": {
+    "CORE AND CULTURAL": 20
+   },
+   "culture only": {
+    "CULTURAL": 20
+   },
+   "core only": {
+    "CORE": 19,
+    "CORE AND CULTURAL": 1
+   },
+   "neither": {
+    "NEITHER": 18,
+    "CULTURAL": 1,
+    "CORE": 1
+   }
+  },
+  "false_core_of_40": 1,
+  "core_found_of_40": 40,
+  "false_culture_of_40": 2,
+  "passes": true
+ },
+ "F2": {
+  "power": {
+   "core 0.3, 60 pairs": 0.1,
+   "core 0.3, 150 pairs": 0.2,
+   "core 0.3, 300 pairs": 0.8,
+   "core 0.5, 60 pairs": 0.6,
+   "core 0.5, 150 pairs": 0.9,
+   "core 0.5, 300 pairs": 1.0,
+   "core 0.3, real key structure": 1.0
+  },
+  "bar_smallest_count_power_ge_0.8_at_0.3": 300,
+  "committed_bar_4_corpora": 300
+ },
+ "passes": true
+}

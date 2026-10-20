@@ -1,0 +1,84 @@
+{
+  "seed": 20261007,
+  "n_pairs": 47,
+  "n_pool": 470,
+  "dist_share": [
+    0.5424769703172978,
+    0.21084953940634596,
+    0.24667349027635618
+  ],
+  "reps": 500,
+  "assign": 200,
+  "boot": 400,
+  "scenarios": {
+    "S0": {
+      "calls": {
+        "SURVIVES IN POINT, NOT ESTABLISHED": 0.272,
+        "EXPLAINED BY TAXONOMY DISTANCE": 0.052,
+        "NO POSITIVE ASSOCIATION TO CONDITION": 0.49,
+        "MIXED": 0.18,
+        "SURVIVES TAXONOMY CONTROL": 0.006
+      },
+      "mean_rho_t": 0.0028141535615171147
+    },
+    "S2": {
+      "strength": 0.6000000000000001,
+      "calibrated_rho_t": 0.3115213536848597,
+      "calls": {
+        "EXPLAINED BY TAXONOMY DISTANCE": 0.87,
+        "MIXED": 0.1,
+        "NO POSITIVE ASSOCIATION TO CONDITION": 0.018,
+        "SURVIVES IN POINT, NOT ESTABLISHED": 0.012
+      },
+      "mean_rho_t": 0.3031183934628431
+    },
+    "S1": {
+      "0.30": {
+        "strength": 0.45,
+        "calibrated_rho_t": 0.29002274128893,
+        "calls": {
+          "SURVIVES TAXONOMY CONTROL": 0.314,
+          "SURVIVES IN POINT, NOT ESTABLISHED": 0.642,
+          "MIXED": 0.024,
+          "NO POSITIVE ASSOCIATION TO CONDITION": 0.02
+        },
+        "mean_rho_t": 0.31187525439407954
+      },
+      "0.40": {
+        "strength": 0.6500000000000001,
+        "calibrated_rho_t": 0.41213999383287075,
+        "calls": {
+          "SURVIVES IN POINT, NOT ESTABLISHED": 0.456,
+          "SURVIVES TAXONOMY CONTROL": 0.54,
+          "NO POSITIVE ASSOCIATION TO CONDITION": 0.002,
+          "MIXED": 0.002
+        },
+        "mean_rho_t": 0.3952620259019427
+      },
+      "0.50": {
+        "strength": 0.9000000000000001,
+        "calibrated_rho_t": 0.5061112395929694,
+        "calls": {
+          "SURVIVES IN POINT, NOT ESTABLISHED": 0.156,
+          "SURVIVES TAXONOMY CONTROL": 0.84,
+          "MIXED": 0.004
+        },
+        "mean_rho_t": 0.5055157107616405
+      },
+      "0.60": {
+        "strength": 1.35,
+        "calibrated_rho_t": 0.6043813598519889,
+        "calls": {
+          "SURVIVES TAXONOMY CONTROL": 0.966,
+          "SURVIVES IN POINT, NOT ESTABLISHED": 0.034
+        },
+        "mean_rho_t": 0.6096760715386988
+      }
+    }
+  },
+  "F1_confound_recognised": true,
+  "F2_power_at_0_30": false,
+  "F3_size": true,
+  "mde_80": "0.50",
+  "note": "scored by the same script that defines it: a smoke check, not an independent validation; rating-distance strength fixed at -0.6 latent"
+}

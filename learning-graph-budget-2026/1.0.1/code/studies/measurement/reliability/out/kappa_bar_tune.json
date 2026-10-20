@@ -1,0 +1,127 @@
+{
+ "target": {
+  "first_attempt_accuracy": 0.763313889503479,
+  "median_drop": 0.10207784175872803,
+  "readable": 0.80905,
+  "assert_rate": 0.31685309931401023
+ },
+ "grid": [
+  {
+   "theta_sd": 0.5,
+   "mu": 1.5,
+   "loss": 8.756577285251499,
+   "first_attempt_accuracy": 0.6734892129898071,
+   "median_drop": 0.055049389600753784,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.039265536723163845
+  },
+  {
+   "theta_sd": 0.5,
+   "mu": 2.0,
+   "loss": 9.430768866573036,
+   "first_attempt_accuracy": 0.7412453889846802,
+   "median_drop": 0.04129639267921448,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.025706214689265535
+  },
+  {
+   "theta_sd": 0.5,
+   "mu": 2.5,
+   "loss": 13.804751310772545,
+   "first_attempt_accuracy": 0.792354941368103,
+   "median_drop": 0.028681933879852295,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.01977401129943503
+  },
+  {
+   "theta_sd": 0.6,
+   "mu": 1.5,
+   "loss": 4.868715534648871,
+   "first_attempt_accuracy": 0.6696867346763611,
+   "median_drop": 0.07873433828353882,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.12514124293785311
+  },
+  {
+   "theta_sd": 0.6,
+   "mu": 2.0,
+   "loss": 4.549572532398827,
+   "first_attempt_accuracy": 0.7373456954956055,
+   "median_drop": 0.06070232391357422,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.061016949152542375
+  },
+  {
+   "theta_sd": 0.6,
+   "mu": 2.5,
+   "loss": 9.06463850536463,
+   "first_attempt_accuracy": 0.7888688445091248,
+   "median_drop": 0.04273673892021179,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.03531073446327684
+  },
+  {
+   "theta_sd": 0.7,
+   "mu": 1.5,
+   "loss": 3.8438392305014446,
+   "first_attempt_accuracy": 0.6657778024673462,
+   "median_drop": 0.10600334405899048,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.3437853107344633
+  },
+  {
+   "theta_sd": 0.7,
+   "mu": 2.0,
+   "loss": 1.2362009342968605,
+   "first_attempt_accuracy": 0.7333410382270813,
+   "median_drop": 0.08334976434707642,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.17175141242937852
+  },
+  {
+   "theta_sd": 0.7,
+   "mu": 2.5,
+   "loss": 4.6374108246966195,
+   "first_attempt_accuracy": 0.7850354909896851,
+   "median_drop": 0.059894055128097534,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.07994350282485875
+  },
+  {
+   "theta_sd": 0.8,
+   "mu": 1.5,
+   "loss": 6.889800808906532,
+   "first_attempt_accuracy": 0.6615339517593384,
+   "median_drop": 0.13522079586982727,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.5963276836158192
+  },
+  {
+   "theta_sd": 0.8,
+   "mu": 2.0,
+   "loss": 0.6174471887313793,
+   "first_attempt_accuracy": 0.7285740971565247,
+   "median_drop": 0.10941830277442932,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.36694915254237287
+  },
+  {
+   "theta_sd": 0.8,
+   "mu": 2.5,
+   "loss": 1.1029983207677674,
+   "first_attempt_accuracy": 0.7805864214897156,
+   "median_drop": 0.08224189281463623,
+   "readable": 0.9833333333333333,
+   "assert_rate": 0.18220338983050846
+  }
+ ],
+ "chosen": {
+  "theta_sd": 0.8,
+  "mu": 2.0,
+  "loss": 0.6174471887313793,
+  "first_attempt_accuracy": 0.7285740971565247,
+  "median_drop": 0.10941830277442932,
+  "readable": 0.9833333333333333,
+  "assert_rate": 0.36694915254237287
+ }
+}

@@ -1,0 +1,3768 @@
+# ============================================================================
+# Research release learning-graph-budget-2026 1.0.1, a correction of 1.0.0 (https://doi.org/10.5281/zenodo.23480842).
+# 1.0.0 stays as published; `change_note` below says what this version corrects.
+#
+# THIS RELEASE IS MOSTLY REAL LEARNER RECORDS, WITH SOME SIMULATION, and says
+# which in every claim. The results on existence, reliability, validity,
+# usefulness and what is identified rest on archival learner records and three
+# randomized trials collected by others; the orientation sweep, the error curve
+# of the adopted rule, the stability-selection bound, the kappa-bar world and
+# the order-variation estimator are simulated.
+# ============================================================================
+
+schema_version: 1
+
+release:
+  id: learning-graph-budget-2026
+  version: 1.0.1
+  supersedes: 1.0.0
+  change_note: >-
+    Corrects 1.0.0's article, whose subtitle was published as the placeholder "PLACEHOLDER 1 (subtitle): one sentence stating the answer." and whose front matter still read as a skeleton draft. The subtitle now states the article's answer, drawn from its conclusion; the front matter and section 9 name this version. No analysis, number or verdict changed.
+  title: >-
+    What learner records can say about a prerequisite edge
+  released_at: 2026-10-19
+  # The QUESTION, not the finding.
+  question: >-
+    What can learner records say about a prerequisite edge: do they contain the
+    contrast that identifies one (learners who met the dependent skill without
+    the prerequisite), and when they do, can they tell which way it points; do
+    the same kind of data give the same edges twice; do edges derived from
+    learner records agree with an independent order; do prerequisite edges,
+    whether built by language models or authored by experts, improve the
+    prediction of learners' next attempts; and, if edges are not identified,
+    what dependence between skills is?
+
+protocol:
+  ref: learning-graph-structure
+  version: 1.0.0
+
+no_study_reason: >-
+  No study plan object was written for this investigation. It began as adaptive
+  simulation and secondary analysis inside a product research programme, and a
+  plan written now would post-date its own findings. The later analyses stated
+  their verdict rules in code committed before they ran; each analysis records
+  which in `prespecified`. The randomised follow-up that would answer the open
+  questions has its own draft protocol, not yet published, and is not this
+  release.
+
+research_design:
+  family: other
+  detail: >-
+    SECONDARY ANALYSIS OF ARCHIVAL LEARNER RECORDS, SUPPORTED BY SIMULATION.
+    No learner was recruited, contacted or assigned to a condition, and no new
+    data were collected. (1) THE POSITIVITY ATLAS. The corpora are practice
+    platforms, intelligent tutors, a language-learning application, a
+    test-preparation application and online courses: XES3G5M, ASSISTments
+    2012-13, EDM Cup 2023, EdNet KT1, Eedi, Duolingo SLAM 2018, Junyi (DataShop
+    dataset 1275), seven other DataShop datasets, Junyi 2020 and MOOCCubeX. For
+    every ordered pair of units (or a seeded sample of 20,000; 40,000 on
+    ASSISTments) the atlas compares the identifying cell, learners who met b
+    after attempting a without passing it, with the mastered cell, learners who
+    met b after passing a, on first-attempt accuracy on b. Each pair is
+    supported, contradicted or unknown against a claimed drop of 0.10, and a
+    powered null counts as contradicted only if a readable and powered merge
+    node passes the reachability gate. A registered study follows every pair
+    through the conditions at which it can fail to be decided, splits empty
+    identifying cells into coverage, order, ease and retry by an identity, and
+    checks supported verdicts against general ability. (2) STUDIES BY RESEARCH
+    QUESTION. Existence and direction: the drop by lag band and by domain, the
+    items' Q-matrices, shared items, conjunctive gates, the mastery-release
+    contrast inside ASSISTments' skill builders, and an orientation sweep in
+    simulation with real corpora placed on difficulty against depth.
+    Reliability: split-half reliability and agreement of the pairs a rule
+    asserts on XES3G5M and EdNet, against learner-deranged controls, with
+    stability selection and course order on MOOCCubeX. Validity: directional
+    tests against Common Core grade order on ASSISTments and EDM Cup,
+    crowdsourced Junyi prerequisite ratings, and three randomized experiments
+    on order (the kindergarten length-measurement trial of Sarama et al. 2021,
+    ASSISTments experiment PSABANRN, and an order swap in DataShop dataset
+    1190). Usefulness: on XES3G5M, a graph that language models built from
+    question text alone, frozen before any learner response was read, and the
+    dataset's expert KC-route tree, each compared with shuffled, deranged and
+    reversed copies by the area under the curve for held-out learners' next
+    attempts against a pre-registered bar. What is identified: tests of
+    pairwise local dependence beyond a one-trait model, a positive control on
+    the ECPE grammar data, and a cross-curricular comparison of one platform
+    each from China, the United States, the United Kingdom and Taiwan on a
+    model-coded map of units to Common Core clusters. (3) INSTRUMENT CHECKS.
+    With two exceptions, every instrument that returns a verdict was first run
+    on synthetic learners shaped like the records it reads, under a pass rule
+    written before the floor ran; most readings are reported as an excess over
+    a family-matched derangement; permutation and resampling act on the unit
+    that was assigned; every verdict is signed. Simulation also supplies the
+    orientation sweep, the error curve of the adopted rule, the
+    stability-selection bound, the kappa-bar world and the order-variation
+    estimator.
+  preregistration:
+    registered: false
+    note: >-
+      Not registered with any external registry. Each study's pre-registration
+      is the docstring at the top of its script, committed before the script
+      read any real data: the question, estimand, thresholds, verdict strings,
+      detection floor with its pass rule, and controls. A CHANGES entry in the
+      same docstring records every amendment and when it was made. Readings
+      added after a result had been seen are labeled post hoc and carry no
+      registered verdict, and the second lag-forgetting study, registered after
+      the first study's estimates had been seen, is disclosed as such. The
+      program's earliest analyses had no registration, among them the
+      positivity atlas, the item tree analysis of MOOCCubeX, the comparison of
+      surmise relations with the atlas, the reanalysis of the trajectory-order
+      trial and the mastery-release contrast. Each analysis below says whether
+      it was pre-specified in `prespecified`.
+
+datasets:
+  - id: assistments-2012
+    title: >-
+      ASSISTments 2012-13: 6.1M problem logs from a US school mathematics
+      platform, with skill tags, hint counts and timings
+    grain: one student attempt at one problem
+    format: csv
+    rows: 6123270
+    size_bytes: 576365408
+    location:
+      kind: url
+      ref: "https://sites.google.com/site/assistmentsdata/"
+    sha256: 7bb18f932f97e63c2eb34bb869c44cd4f46f4adec4d7fe02298578dbba572445
+    identifiability: deidentified
+    # `raw` is the class; the RESTRICTION is the data terms,
+    # recorded in the note and in the protocol rather than invented as an
+    # access class.
+    access: raw
+    note: >-
+      Terms: the data site's WPI IRB-approved terms of use (cite Feng,
+      Heffernan & Koedinger 2009; email the citation of any paper to
+      etrials@assistments.org, a courtesy rather than a condition; report and
+      delete any PII). No data or row-level extract is redistributed. The hash and size are
+      of the deposited zip (MD5 049675fdba1f887fa7917c051e0e6c46; SHA-256 checked against it on 2026-09-25).
+      2,711,813 rows carry a skill tag. Since 2026-09-24 the extract also drops
+      scaffolding sub-steps and open-response rows. The positivity reading uses
+      29,018 learners. No rows are held in this repository. Readers take
+      extracts from the zip: assist2012-direction, iita-dense-floor,
+      iita-pairscan, local-dependence-checks and cross-curricular-linking read
+      assist_slim.csv
+      (SHA-256 f767f919e81f4b9b6416b301422991f0c695c7cc1636b372ba65481d60368f32,
+      MD5 7a265c83b64323f80bc4dc2fe762aaea, extract_assist.py);
+      mastery-release-lag reads assist_rich.csv (SHA-256
+      ba01682f75bb7240bd9906c9bddee45d2f256c80b7ea6e81e05bc85e2d0b7e9e, MD5
+      c0f706edc41df4135be4456fc1f10854), which data/ingest/assist2012/rich.py
+      rebuilds byte for byte from the zip and which still holds scaffolding
+      and open-response rows. The random-order split (3,838 combinations of a
+      problem set and a pair of skills; within no problem set did more than 15
+      students meet a pair in the less common order) reads the zip itself
+      (studies/identifiability/overlap/random_order.py).
+
+  - id: edmcup-2023
+    title: >-
+      EDM Cup 2023: ASSISTments assignment and problem logs released for the
+      2023 competition, with unit-test scores
+    grain: one student action within an assignment
+    format: csv
+    size_bytes: 965112783
+    location:
+      kind: doi
+      ref: 10.17605/OSF.IO/YRWUH
+    sha256: 2285c714b0e005526fb856876910b74378433fda147669b80ceca9bf59ee2ab0
+    identifiability: deidentified
+    access: raw
+    note: >-
+      ASSISTments Data Terms of Use (2020, license.txt on osf.io/yrwuh):
+      non-commercial, no redistribution, outcomes made openly available,
+      collaborators access the original source. The hash is of the
+      official assignment_details.csv (OSF file q946d, MD5
+      bb1b3328c8ce8d178223c71d5e593304; SHA-256
+      checked against it on 2026-09-25). The six smaller files' MD5s: problem_details.csv
+      bea30460b0c3912f06a16e2d91765773, unit_test_scores.csv
+      59b8e75e45278a734ba51cdf9f049893, assignment_relationships.csv
+      9f598c093658af0fa39369b701fc8b3f, sequence_details.csv
+      f9adb10c2d7de9d3d0f4ac02f2328edf, sequence_relationships.csv
+      74b5fb6d94334075b968271bae93f179, explanation_details.csv
+      76c5a0cf0184004c3dd4fea425d5c42f. The atlas reads edmcup/cells.tsv
+      (SHA-256 c98a1a0d29ea7e64a5fd3d7b65fadee19734e9f331bbb89492b9cc9e6e9b65e4,
+      MD5 a579b4d8a46fed1028c2aa963fb14bba), which
+      studies/measurement/edmcup-direction/prep.py rebuilds byte for byte from
+      assignment_details.csv and three of the smaller files:
+      assignment_relationships.csv (SHA-256
+      155adb0382b194a4f6dddcb613ceb782805aba35dcc16b13e2717549d00015ad),
+      unit_test_scores.csv (SHA-256
+      227f248f6661bc8b4e44c3b1a176b76dac8e76bf43229e5ceb543bb24c8e86ed) and
+      problem_details.csv (SHA-256
+      4f45daf2e010771c6b5e523dd4d583f3ac451f6ce8f2f35270fcb86b875cee4e). 34,580
+      learners in the positivity atlas.
+
+  - id: ednet-kt1
+    title: >-
+      EdNet KT1: interaction logs from 784,309 users of a commercial TOEIC
+      preparation app, with expert multi-tag question annotations and a
+      bundle-level elapsed time
+    grain: one user attempt at one question, timed per question bundle
+    format: csv
+    size_bytes: 1201163816
+    location:
+      kind: url
+      ref: "https://github.com/riiid/ednet"
+    sha256: 0d13933f90201c5101c7fe8659e44474fa049e3fb93181a8ba6fb3e63267b535
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY-NC 4.0: no commercial use, no model training. Learners choose which
+      test part to practise, so order varies. The hash and size are
+      of the deposited zip (MD5 6ffe7ec06bd793a6e0a6ec80b1e0e1b2; SHA-256 checked against it on 2026-09-25). 6,049
+      of its 13,169 questions carry more than one expert tag. `elapsed_time` is
+      recorded per bundle, not per question, so the load analysis reads one
+      observation per bundle session: 1,976,159 sessions from 30,000 users
+      drawn by seeded shuffle. The positivity, lag-band and domain analyses read
+      the re-issued, regenerable 6,000-learner prefix of the archive, with the undocumented no-tag questions
+      dropped. The conjunctive analysis reads the first 60,308 KT1 members of
+      the zip. Every EdNet reader takes the question table
+      contents/questions.csv (SHA-256
+      137d2936b746c98e1586ef134bf9f9bc4b5a878c96b88e630b2241fe9f15d3cd), unzipped
+      from ednet-content.zip (SHA-256
+      aa910a0436d9dbac0ba232f55e27b37ad8d39da285fcf15f1c1eb5d064be98e7, MD5
+      41751eeb196bea58f3d78f9c83029697, 173,976 bytes).
+
+  - id: xes3g5m
+    title: >-
+      XES3G5M: practice logs from a Chinese primary-school competition
+      mathematics platform, with a knowledge-component taxonomy
+    grain: one student response to one question
+    format: csv
+    size_bytes: 373235093
+    location:
+      kind: url
+      ref: "https://github.com/ai4ed/XES3G5M"
+    sha256: 62d145bd995248f78726a0b6ab69612cf418e3118d0fe01bfe6f4c61b5072f73
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Repository MIT; data licence unstated, treated as research use and not
+      redistributed. The hash and size are of the
+      deposited tar.gz (MD5 cb996e44842420a32967889292b7a6d0; SHA-256 checked
+      against it on 2026-09-25). 18,066 learners in the positivity atlas.
+      A practice platform whose assignment rule is not documented, so how
+      order is set is unknown. Readers take attempts.tsv (SHA-256
+      46ff6268c83b56f865b7c75fcfe382c141e0a69699274b7474dcf88610abef4a) and
+      cid2route.json (SHA-256
+      e928d81be9731d4da7ecb16e7df8491fb3f9e64dd8b2b4fadbeb1c0483d98e9c), which
+      data/ingest/xes3g5m/flatten.py rebuilds byte for byte from the extracted
+      tar.gz.
+
+  - id: eedi-2020
+    title: >-
+      Eedi NeurIPS 2020 Education Challenge: answers to diagnostic mathematics
+      questions from UK school pupils
+    grain: one pupil's latest answer to one question
+    format: csv
+    size_bytes: 656787242
+    location:
+      kind: url
+      ref: "https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip"
+    sha256: c7f01672360f1adeb3cf9507d72455d7be035bf897e4a167293e8938049800e1
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Research use, confirmed with the depositor; no redistribution. The hash and size are of the deposited zip (MD5
+      68ac2703d65bc350cca37653917adacb; SHA-256 checked against it on
+      2026-09-25). The questions are teacher-assigned (quizzes within a scheme
+      of work), not chosen by pupils. The release keeps only each pupil's
+      latest answer to a question, so order and "first attempt" are read from
+      last answers. The demographic
+      side file is never opened by these analyses. Readers take answers.tsv
+      (SHA-256 244424637cafb64a2a892ca355b28816fd106af2c8c7f4be6d84d6a9c418f20f,
+      MD5 63f6af8cf12132f6dff578832dd433e5), which data/ingest/eedi/slim.py
+      rebuilds byte for byte from the zip. 118,971 learners in the positivity
+      atlas.
+
+  - id: duolingo-slam-2018-en-es
+    title: >-
+      Duolingo SLAM 2018 shared task, English speakers learning Spanish (en_es):
+      each learner's first 30 days, scored token by token
+    grain: one token of one exercise, marked correct or not
+    format: text
+    rows: 3396935
+    size_bytes: 46889834
+    location:
+      kind: doi
+      ref: 10.7910/DVN/8SWHNO
+    sha256: dac4e97a03e0d35d0b417e4afb8e96a20cdd3bad933bdc590ab4b56c77531393
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY-NC 4.0 (Settles et al. 2018), downloaded
+      through a Dataverse guestbook that asks for a name, email and institution.
+      The `countries` field is never kept. Hash and size of the deposited
+      data_en_es.tar.gz (Dataverse file 3357629, MD5
+      444e0d9e45bdc19822938cffb9fbcc7a; SHA-256
+      computed on 2026-09-25 from a local copy matching it). Rows are the tokens
+      in its train, dev and test files, all three read with their answer keys.
+      The atlas row (construct grain, Table 1 of the article): 2,593 learners,
+      0.10% decided.
+
+  - id: duolingo-slam-2018-es-en
+    title: >-
+      Duolingo SLAM 2018 shared task, Spanish speakers learning English (es_en):
+      each learner's first 30 days, scored token by token
+    grain: one token of one exercise, marked correct or not
+    format: text
+    rows: 2544601
+    size_bytes: 35067817
+    location:
+      kind: doi
+      ref: 10.7910/DVN/8SWHNO
+    sha256: c53079ed8053f5237225ae1b3713ecb7ecb1d0245369cd60599f17c6a6868243
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Terms and route as for duolingo-slam-2018-en-es. Hash and size of the
+      deposited data_es_en.tar.gz (Dataverse file 3357630, MD5
+      3c0bc0019ef772050482c570e0626447; SHA-256
+      computed on 2026-09-25 from a local copy matching it). Construct grain:
+      2,643 learners, 0.07% decided.
+
+  - id: duolingo-slam-2018-fr-en
+    title: >-
+      Duolingo SLAM 2018 shared task, English speakers learning French (fr_en):
+      each learner's first 30 days, scored token by token
+    grain: one token of one exercise, marked correct or not
+    format: text
+    rows: 1199731
+    size_bytes: 16134930
+    location:
+      kind: doi
+      ref: 10.7910/DVN/8SWHNO
+    sha256: f34bb1518d2fbc694d6b142b78b16cb2c755df314e78a1fcb6a86b9987727c31
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Terms and route as for duolingo-slam-2018-en-es. Hash and size of the
+      deposited data_fr_en.tar.gz (Dataverse file 3357627, MD5
+      4b395106d5414cd78ceb4101ad6e4f0d; SHA-256
+      computed on 2026-09-25 from a local copy matching it). Construct grain:
+      1,213 learners, 0.07% decided.
+
+  # DataShop exports. DataShop builds an export on request, so a fresh export
+  # of the same sample need not match these hashes byte for byte; the hashes
+  # fix the files the analyses read, which are held outside this repository.
+  # Several sets hold more than one sample, and which one an analysis read is
+  # part of the dataset's identity, so ds1190 and ds1275 appear twice.
+  - id: datashop-ds580
+    title: >-
+      DataShop ds580: FractionStudy2012 (Fractions Lab Experiment 2012), sample
+      'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 83133
+    size_bytes: 23400662
+    location:
+      kind: url
+      ref: "https://pslcdatashop.web.cmu.edu/DatasetInfo?datasetId=580"
+    sha256: 4bc5d456ceea298d7a6820ddef9ad143d4ea67f4fb058ab693b56ec14ba41057
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 760869016d0840e2e8fd4d3824563b4e,
+      recorded with its SHA-256 on 2026-09-25). No DOI is minted for this
+      set, so the location is its public DataShop page. Atlas row: 104 learners,
+      107 KCs under `KC (Default)`, 0.00% decided after the reachability gate,
+      which took back its 3 would-be contradictions.
+
+  - id: datashop-ds671
+    title: >-
+      DataShop ds671: Classroom study June 2013 (Fractions Lab Experiment 2012),
+      sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 15408
+    size_bytes: 9011617
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-671
+    sha256: 3c4a99c1f7518b6fb065c14e45859040a6faa11e4c2dc2b3a5ce2bc57d042a69
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 b4a6485a84651e41f24eafef87c3ead1,
+      recorded with its SHA-256 on 2026-09-25). Atlas row: 77 learners, 16
+      KCs under `KC (DefaultFewer_corrected)`, 0.00% decided.
+
+  - id: datashop-ds649
+    title: >-
+      DataShop ds649: Lab study 2012 (cleanedLogs) (Fractions Lab Experiment
+      2012), sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 15190
+    size_bytes: 6943418
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-649
+    sha256: 50a4510656a333ecfd9617dd8509089be2c640416d0131bad8bcf65d09b00bd6
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 ea57b53dc99172bb1e81eed3f39fe816,
+      recorded with its SHA-256). Every DataShop reader takes the 'All
+      Data' sample through shared/corpus.datashop_export. Atlas row: 74
+      learners, 19 KCs under `KC (DefaultFewer_corrected)`, 0.00% decided.
+
+  - id: datashop-ds669
+    title: >-
+      DataShop ds669: Classroom study 2013 (Fractions Lab Experiment 2012),
+      sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 15408
+    size_bytes: 4794381
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-669
+    sha256: 1372eea9bd9c478d1e7cf022ddf7027ff0b226559f33d7e0d627f4c5a0177254
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 5957b0c0e911174aff8cc60ac7eae9d5,
+      recorded with its SHA-256 on 2026-09-25). Skipped by the atlas: its
+      first KC model, `KC (Single-KC)`, gives 1 KC, under the 8-item minimum.
+
+  - id: datashop-ds1530
+    title: >-
+      DataShop ds1530: SimStudent Full Memory - DS1190 Study 1 (Apprentice
+      Learner Architecture Simulated Students), sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 16534
+    size_bytes: 4610601
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-1530
+    sha256: 9dd380f7923fccc0d37d6126b0675147125360770ec7229a8611ddfad9fe11d7
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 3e76acfb07763c22752a4a66d7707530,
+      recorded with its SHA-256 on 2026-09-25). SIMULATED learners:
+      SimStudent agents run on ds1190's study 1, so no person is represented.
+      Atlas row: 78 agents, 16 KCs under `KC (Field)`, at ceiling, 0 pairs
+      readable.
+
+  - id: datashop-ds1531
+    title: >-
+      DataShop ds1531: SimStudent One Back Memory - DS1190 Study 1 (Apprentice
+      Learner Architecture Simulated Students), sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 16539
+    size_bytes: 4514362
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-1531
+    sha256: 2760ae4f0e08ce23cdc2e8d5f15e8d67a7faba6c419a754ec747bc72d5ef07b4
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 5006f2b4dc96f5bb2b9f8a47b0dc1886,
+      recorded with its SHA-256 on 2026-09-25). SIMULATED learners:
+      SimStudent agents run on ds1190's study 1, so no person is represented.
+      Atlas row: 78 agents, 16 KCs under `KC (Field)`, at ceiling, 0 pairs
+      readable.
+
+  - id: datashop-ds1706
+    title: >-
+      DataShop ds1706: Fraction Addition and Multiplication, Blocked vs.
+      Interleaved, sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 18892
+    size_bytes: 6779578
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-1706
+    sha256: 5a7e2ad25f27a7f2df1b9bbdd25ccd2a53ceb55571b461e7e4639a9350f03aa2
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 799213f21f89b69205dd7ed4404fe7de,
+      recorded with its SHA-256 on 2026-09-25). Atlas row: 79 learners, 16
+      KCs under `KC (Field)`, 40.4% readable, 0.00% decided.
+
+  - id: datashop-ds495
+    title: >-
+      DataShop ds495: Erroneous Examples - Fall 2011 - ErrEx vs. PS
+      (Adapterrex), sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 166823
+    size_bytes: 50229691
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-495
+    sha256: b4accc20a636f47b1b7f255678f57a59286c712d2266ab09ee9c5192bcdb75a2
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 860312d33aee2a5dbbe21db60c9bc701,
+      recorded with its SHA-256 on 2026-09-25). Skipped by the atlas: 3
+      learners remain after its pre- and posttest filter, under the 40-learner
+      minimum.
+
+  - id: datashop-ds576
+    title: >-
+      DataShop ds576: St. Anselm College, Introductory Physics, Summer 2012
+      (Andes3), sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 46077
+    size_bytes: 14006856
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-576
+    sha256: d4aa319158fbb37c3e9bf95bc8e59b8bd1159476c63ab78d020e1f66b3f6bd22
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 769cd66bcf4675f90742e30f186bac01,
+      recorded with its SHA-256 on 2026-09-25). Skipped by the atlas: 16
+      learners, under the 40-learner minimum.
+
+  - id: datashop-ds1190-all-data
+    title: >-
+      DataShop ds1190: Fraction Addition and Multiplication (Blocked vs
+      Interleaved Instruction), sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 288571
+    size_bytes: 104863091
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-1190
+    sha256: dac0fc3f05b8152efcdb688229d2410a6f26e8d27771c716da06acecc5d36102
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 e4d2ba2d7ba06be4fe080a7671f34e18,
+      recorded on retrieval). Read by the positivity atlas (431 learners,
+      39 KCs under `KC (Default)`, 2 SUPPORTED, 0.13% decided) and by
+      surmise-vs-positivity (studies/identifiability/latent-shape/build_matrix.py,
+      tutor steps only, complete-case readings on too few learners to
+      interpret). Until 2026-09-25 the atlas read the '2016 data' subset (161
+      learners) because it took the first export in sorted order.
+
+  - id: datashop-ds1275-all-data
+    title: >-
+      DataShop ds1275: Junyi Academy Math Practicing Log (to Jan. 2015) Partial
+      Samples, sample 'All Data'
+    grain: one student step (DataShop student-step rollup)
+    format: csv
+    rows: 303720
+    size_bytes: 112646910
+    location:
+      kind: doi
+      ref: 10.60710/DATASET-1275
+    sha256: 47c8d818cac9aea365a9f4db5c68e97d9e779634783863f9629f4fbbbb41332e
+    identifiability: deidentified
+    access: raw
+    note: >-
+      DataShop terms of use (TERMS.html in the export):
+      research only, not commercial, no redistribution, no de-anonymisation.
+      Hash and size of the tab-separated student-step export of sample 'All
+      Data' that the analysis read (MD5 edbbcaf83211085be980ab02ff186127,
+      recorded on retrieval). The export shared/corpus.ds1275_export
+      selects. The atlas row at `KC (Area)`: 2,063 learners, 8 KCs, 0.00%
+      decided after the gate took back its 2 would-be contradictions (identical
+      to the 'All Data1' re-roll it read before 2026-09-25); the article's
+      Table 1 reads it at its 631 exercises instead. Also read by surmise-vs-positivity with `KC
+      (Exercise)` as the item, complete-case, on too few learners to
+      interpret.
+
+  - id: mooccubex-user-problem
+    title: >-
+      MOOCCubeX relations/user-problem.json: the problem-attempt file of the
+      MOOCCubeX release, 133,384,333 records
+    grain: one learner's submission to one problem
+    format: ndjson
+    rows: 133384333
+    size_bytes: 22453311654
+    location:
+      kind: url
+      ref: "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/relations/user-problem.json"
+    sha256: dd0d771f73263a218aaccf7340333627ef13e5f2ec4bc235ad0b339a13112e90
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Research use, no redistribution (landing
+      github.com/THU-KEG/MOOCCubeX). Hash, size and row count of the file as
+      served on 2026-09-25 (Last-Modified 2021-06-16), streamed and hashed with
+      no copy kept (MD5 fae5fee0b1402d29503cf31351c1d7b2). Each
+      record holds a log id, user id, problem id, correctness, attempt count,
+      score and submit time; the learner file entities/user.json, which carries
+      names and schools, is not an input. IITA reads the 69,546 records on
+      concept-linked problems, filtered from this file while streaming by
+      data/ingest/mooccubex/stream_attempts.py into attempts.tsv (SHA-256
+      7786e219216dbffffb86efc25385d64939c4a270d4207ce871ce9211f2b72025, MD5
+      b9d640ec945b8221436ed604ec04906b, 1,735,764 bytes).
+
+  - id: mooccubex-concept-problem
+    title: >-
+      MOOCCubeX relations/concept-problem.txt: the concept-to-problem links used
+      as a Q-matrix
+    grain: one concept-problem link
+    format: csv
+    rows: 33180
+    size_bytes: 1294994
+    location:
+      kind: url
+      ref: "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/relations/concept-problem.txt"
+    sha256: 7f8aaeb76fd78efbcf3bc1194d484b888d3dc1602e0229601ef6007577617406
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      Research use, no redistribution. Authored
+      annotations, not learner data. Hash and size of the deposited file (MD5
+      1a5b23461f98a242b6d5c2ba8fb0e187; SHA-256
+      computed on 2026-09-25 from a local copy matching it). 33,180
+      tab-separated lines hold 29,141 distinct links.
+
+  - id: sarama-length-trial-2021
+    title: >-
+      Sarama, Clements et al. length-measurement trial (ICPSR 151741):
+      kindergartners randomised within class to trajectory, reverse or
+      business-as-usual order
+    grain: one child, with condition, pretest and posttest
+    format: other
+    rows: 187
+    size_bytes: 3931834
+    location:
+      kind: doi
+      ref: 10.3886/E151741V1
+    sha256: c8a649ea8242d12add1a4fd18a6d53ab0cbe16e63e51b67abf55301083d04190
+    identifiability: deidentified
+    access: raw
+    note: >-
+      AERA/ICPSR open data: statistical analysis only, no re-identification; downloaded after an ICPSR sign-in. Race,
+      language-proficiency and assessor columns are never read. Hash and size of
+      the deposited ICPSR_151741-V1.1.zip (MD5 8e523e11276f812fb62e96015d63ca98; SHA-256 computed on 2026-09-25 from a local
+      copy matching it). The analysis reads `C6 Analysis File.xlsx` inside it:
+      187 children (studies/outcomes/lt-trials/out/length_order.json). ICPSR
+      168361 and 168846, deposited under the other two trials' titles, hold an
+      item-level version of the same length data and a 26-child arithmetic
+      pilot; neither is analysed.
+
+  # Corpora first read by Paper II's analyses (declared 2026-10-08). Where
+  # only an MD5 was recorded at download, the SHA-256 was computed on
+  # 2026-10-08 by streaming the file from its recorded route through both
+  # hashes without storing it; each MD5 matched the recorded one unless the
+  # note says none was recorded.
+  - id: junyi-2015-ratings
+    title: >-
+      Junyi Academy 2015 prerequisite, similarity and difficulty ratings of
+      exercise pairs by crowdsourced raters (Chang et al. 2015)
+    grain: one ordered exercise pair, with each rater's 1-9 scores
+    format: csv
+    rows: 1954
+    size_bytes: 220600
+    location:
+      kind: url
+      ref: "https://base.ustc.edu.cn/data/tests/junyi/"
+    sha256: 141858971c71ec741aaa515f3f4776bf6ff14ec14d2ef66212fe431228bf7598
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      Research use. Judgements of
+      exercise pairs, not learner data; the release gives no rater identities.
+      Two files, relationship_annotation_training.csv (1,131 rows, SHA-256
+      f9b10bc10084bf8c65e5ecbb667928ffa9e78c7171217220c836bff2bf3e0576, MD5
+      f3d2b73fb8c2253ba4644aeb0ab525e1, 146,169 bytes) and
+      relationship_annotation_testing.csv (823 rows; SHA-256
+      5dee0a30dfd7a81f1ecd277de705c3db7e86252f7deca8799f7ed0605e4771ea, MD5
+      11522498b993b86820a65cfba04d4909, 74,431 bytes); `sha256` is the
+      manifest (sha256sum over the two in C-locale order, piped through
+      sha256sum). Hashed on 2026-10-08 from the USTC mirror (Last-Modified
+      2021-01-22) of the files first attached to DataShop dataset 1198; no
+      hash had been recorded when the analyses read them (fetched 2026-09-12
+      from the same route), so identity with the bytes read is inferred from
+      the mirror's date, not checked. 1,954 rated rows (1,638 unordered
+      pairs), the count shared/junyi_ratings.py reads. Row (A, B) rates B as
+      the prerequisite of A.
+
+  - id: junyi-2015-problem-log-sample
+    title: >-
+      Junyi Academy 2015 problem log sample distributed with the exercise
+      table (junyi_ProblemLog_for_PSLC.txt)
+    grain: one learner attempt at one exercise
+    format: text
+    rows: 999
+    size_bytes: 242272
+    location:
+      kind: url
+      ref: "https://base.ustc.edu.cn/data/tests/junyi/junyi_ProblemLog_for_PSLC.txt"
+    sha256: e8bea912924d9c526d39c42e6819574972b65f4a3f75dc4a7bf361aebee6aa41
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Research use (MD5 535e51cb3fbab3f90adde2d13cb23f1c, recorded when
+      first downloaded and matched on 2026-10-08). A 999-row sample: 642 learners and 665 learner-exercise
+      cells, too few to place Junyi's authored graph (orientation-sortability)
+      or to reproduce the rater-learner comparison, which needs the full
+      DataShop export (junyi-taxonomy-control reads it as the fallback and
+      records BLOCKED).
+
+  - id: junyi-2020
+    title: >-
+      Junyi Academy learning activity 2018-19 ("Junyi 2020"): 16,217,311
+      problem attempts of 72,630 students, with the content table
+    grain: one student attempt at one problem
+    format: csv
+    rows: 16217311
+    size_bytes: 1615467938
+    location:
+      kind: url
+      ref: "https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy"
+    sha256: d3272a56b3657d19e94f9c4b3c00b7d6b83694c9e9969237d8903ada86d3e7d9
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY-NC-SA 4.0. Hash and size of
+      the archive as the Kaggle API serves it (MD5
+      4457d10d99f50ec525fa370bbeb1665e recorded at download; SHA-256 computed on
+      2026-10-08 by streaming). Readers take Log_Problem.csv (unzipped from it)
+      and Info_Content.csv; content ids are hashed, and timestamps sit on a
+      15-minute grid, so order inside a slot is not in the data. Used only by
+      the cross-curricular analyses, whose units are its 1,330 content units.
+
+  - id: ecpe-grammar
+    title: >-
+      ECPE grammar section responses (Templin & Hoffman 2013): 2,922
+      examinees, 28 items and a Q-matrix over three skills, as shipped in the
+      CDM R package 8.3-14
+    grain: one examinee's scored responses to the 28 items
+    format: other
+    rows: 2922
+    size_bytes: 1109181
+    location:
+      kind: url
+      ref: "https://cran.r-project.org/src/contrib/CDM_8.3-14.tar.gz"
+    sha256: 1faec752a3547257649b420c9d0c6d1df28042ee061366ab9ce9991d7278a7a0
+    identifiability: deidentified
+    access: raw
+    note: >-
+      No data licence is stated (checked
+      2026-10-07); held under the strictest terms used here: research use, no
+      redistribution, aggregates only. Hash and size of the CDM source tarball
+      (MD5 446ba0d91cc8128abf95c60d1ab4e60f; both re-checked on 2026-10-08).
+      data/ingest/ecpe/extract.py writes ecpe_responses.csv (MD5
+      589d6e029fb02c96b5a18d09c2e757d8, 177,241 bytes) and ecpe_qmatrix.csv
+      (MD5 6254b19f2f031c5d2aa63da4d7fc450a) from it. When CRAN supersedes the
+      version, the tarball moves to src/contrib/Archive/CDM/.
+
+  - id: assistments-experiments-2022
+    title: >-
+      ASSISTments online experiments released by Prihar et al. (2022):
+      88 randomised experiments with assignment logs and students' prior
+      records, including experiment PSABANRN (four orders of mean, median,
+      range and mode)
+    grain: one student assignment within an experiment
+    format: csv
+    size_bytes: 83124379
+    location:
+      kind: url
+      ref: "https://osf.io/59shv"
+    sha256: 06d8c992c9600781dc1c7c80690e29ec46588df260aea9a44ef16b7d083266ea
+    identifiability: deidentified
+    access: raw
+    note: >-
+      ASSISTments Data Terms of Use: no
+      commercial use, no redistribution, no de-anonymisation, outcomes made
+      public, collaborators access the original source. Hash and size of
+      experiment_dataset_2021-09-23.zip (OSF file wp438), saved as exp.zip
+      (MD5 c7f929b50e70b9f07b156a79329281f3 recorded at download; SHA-256 computed
+      on 2026-10-08 by streaming). The analyses read PSABANRN.zip inside it
+      (exp_alogs.csv, priors.csv) and, for the remnant model, the other 87
+      experiments' prior records; 1,192 students in PSABANRN. Read from
+      $LDA_SCRATCH_DIR/osf-59shv/ (environment variable PRIHAR_DIR).
+
+  - id: mooccubex-user
+    title: >-
+      MOOCCubeX entities/user.json: each learner's course enrolments with
+      enrolment times
+    grain: one learner, with the ordered courses enrolled in
+    format: ndjson
+    size_bytes: 806781726
+    location:
+      kind: url
+      ref: "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/entities/user.json"
+    sha256: 614c5f2753cc23f344bd51968f052564cfbe61694cd3eb7bccb0756a529f61c9
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Research use, no redistribution. The
+      deposited file also carries name, gender, year of birth and school;
+      data/ingest/mooccubex/stream_user.py discards all four at the door and
+      keeps only the pseudonymous id, the course sequence and the enrolment
+      times (user-order.jsonl), so `identifiability` is that of what the
+      analysis holds. Hash and size of the file as served on 2026-10-08
+      (Last-Modified 2021-06-17), streamed through the hashes with no copy
+      kept; no hash had been recorded when it was read, so identity with the
+      bytes read is inferred from the server date. The course list the ingest
+      restricts to (courses-with-concepts.txt) was built from
+      relations/concept-course.txt (MD5 097ff058ca0b51b33b5f189342166451) by
+      an uncommitted snippet. 541,452 learners enrolled in the 60 most-enrolled
+      courses (course-order-exposure).
+
+  - id: atlas-rules
+    title: >-
+      The positivity atlas's state rule as code: the claimed effect and the
+      order of the readability, power, drop and falsifiability checks
+    grain: one rule set
+    format: text
+    rows: 1
+    size_bytes: 14949
+    location:
+      kind: internal
+      ref: shared/edge_state.py
+    sha256: 50974183ec4d5cb42bf59eb9f8a07fbeb52aa92ec2b6e0f0e52bcb57835ea3a7
+    identifiability: not-applicable
+    access: derived
+    note: >-
+      Code, not data: no participant and no corpus. Figure 1 (analysis
+      figure-atlas) draws the rules this module applies, with the cell floor
+      and readability band of studies/identifiability/overlap/positivity.py
+      and the power convention of shared/reachability.py, both packaged in
+      code/ at the release commit. Declared as a dataset because the figure
+      reads nothing else.
+  # Published prerequisite graphs: the Junyi exercise table and authored map,
+  # the Coherence Map and the MOOCCubeX prerequisite files. Where an analysis
+  # reads several files of one release,
+  # `sha256` is of a manifest: `sha256sum` over the files in C-locale order,
+  # piped through `sha256sum` again; the note names the files. Each note states
+  # the licence.
+  - id: junyi-2015-exercise-table
+    title: >-
+      Junyi Academy 2015 exercise table: 837 mathematics exercises with the
+      prerequisites authored on the platform's knowledge map
+    grain: one exercise, with its listed prerequisite exercises
+    format: csv
+    rows: 837
+    size_bytes: 139957
+    location:
+      kind: url
+      ref: "https://base.ustc.edu.cn/data/tests/junyi/junyi_Exercise_table.csv"
+    sha256: 13292cc2c809985abbacedaba434e39aeb02a7fcb2a32f17b60c4d3f4d769546
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      Research use. Authored
+      structure, not learner data. Fetched from the USTC mirror (dated
+      22-Jan-2021) of the files first attached to DataShop dataset 1198; byte
+      identity with the DataShop copy is not checked. MD5
+      2a903cdea8b07d6029667dc97208ff19, computed 2026-09-25.
+
+  - id: coherence-map
+    title: >-
+      Achieve the Core Coherence Map: Common Core mathematics standards linked
+      by buildsTowards edges
+    grain: one standard, with the standards it builds towards
+    format: json
+    size_bytes: 21795
+    location:
+      kind: internal
+      ref: studies/producers/pipeline/data/coherence-map.json
+    sha256: 49fa041ee813e0e1eba29248e16841decdc37ff695e116efe66258a2915fbb5e
+    identifiability: not-applicable
+    access: derived
+    note: >-
+      Public web tool; CCSS. Landing
+      tools.achievethecore.org/coherence-map/. Analyses read the committed
+      derivative named here, which has no recorded generator; the source
+      data.js as fetched has SHA-256
+      d4d1c803bf0f1e8a0da0b6b446affa98dd13b53a9f9a1763989073592a67dd6f.
+
+  - id: mooccubex-prerequisites-math
+    title: >-
+      MOOCCubeX prerequisites/math.json: labelled mathematics concept pairs
+    grain: one concept pair with a ground-truth label
+    format: ndjson
+    rows: 331202
+    size_bytes: 61381372
+    location:
+      kind: url
+      ref: "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/prerequisites/math.json"
+    sha256: 4cb498ec0b42d729f93be01cdbb7890703427f30d5444b267ef7d9687930194c
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      Research use, no redistribution. Positives are
+      human-labelled from model-ranked candidates. MD5
+      986073733e819c0e5d146d95d1b5b426;
+      SHA-256 computed 2026-09-25.
+
+  - id: mooccubex-prerequisites-cs
+    title: >-
+      MOOCCubeX prerequisites/cs.json: labelled computer-science concept pairs
+    grain: one concept pair with a ground-truth label
+    format: ndjson
+    rows: 492102
+    size_bytes: 90196535
+    location:
+      kind: url
+      ref: "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/prerequisites/cs.json"
+    sha256: a7bef9c1c05975f17afe9e4d363bd5b2c84c01792aeac802ab241c113ee75cd8
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      As for mooccubex-prerequisites-math. MD5
+      d35075e330eb234a5a33c9defcf50c39.
+
+  - id: mooccubex-prerequisites-psy
+    title: >-
+      MOOCCubeX prerequisites/psy.json: labelled psychology concept pairs
+    grain: one concept pair with a ground-truth label
+    format: ndjson
+    rows: 757771
+    size_bytes: 139276093
+    location:
+      kind: url
+      ref: "https://lfs.aminer.cn/misc/moocdata/data/mooccube2/prerequisites/psy.json"
+    sha256: 30728293998ebab657d71258c63d2e07edf5df5ec1b1358746020f04f35fa4ca
+    identifiability: not-applicable
+    access: raw
+    note: >-
+      As for mooccubex-prerequisites-math. MD5
+      699d951c759a4e0bbce117bf1136b397.
+
+  - id: simulation-runs
+    title: >-
+      Simulated learner populations over generated capability graphs, across
+      every simulated condition in this release
+    grain: one learner x one condition x one world
+    format: json
+    rows: 0
+    size_bytes: 0
+    # `not-yet-deposited` is the honest kind, and it is the one the schema
+    # exempts from a hash. Nothing is deposited because there is no file: the
+    # dataset IS the generator plus the seed, both of which live in the code the
+    # analyses name. Hashing a regenerated output would assert a fixity this
+    # dataset does not have.
+    location:
+      kind: not-yet-deposited
+    identifiability: not-applicable
+    access: derived
+    note: >-
+      Row counts vary by analysis; each analysis's docstring states its worlds
+      and learners. Generated per run from a recorded seed rather than stored.
+
+  # ---- Authored item content sent to models -----------------------------------
+  # The text the model steps read from four learner corpora, declared apart from
+  # the learner records so that each analysis that calls a model names only what
+  # it sent. Each is authored by the platform's item writers or taxonomists and
+  # holds no participant, hence `identifiability: not-applicable`. Same location,
+  # terms and access as the parent corpus; nothing is redistributed. Added
+  # 2026-10-08, when an audit of the prompt builders found that this content,
+  # never a learner record, was what the models read.
+
+  - id: xes3g5m-question-content
+    title: >-
+      XES3G5M question content: the text, options, answers and worked solutions
+      of its 7,652 questions
+    grain: one question
+    format: json
+    rows: 7652
+    size_bytes: 7429032
+    location:
+      kind: url
+      ref: "https://github.com/ai4ed/XES3G5M"
+    sha256: 57a3a63ef924e1f10bc83e673213841be4885f5ad52f0e606775a4fc030bc0d4
+    identifiability: not-applicable
+    access: raw
+    derived_from: [xes3g5m]
+    note: >-
+      Authored item text with no participant: XES3G5M/metadata/questions.json
+      in the deposited tar.gz, fields content, options, answer and analysis
+      (the worked solution), read by e2e.py questions(), which drops the
+      kc_routes field and asserts it. Same terms as xes3g5m: data licence
+      unstated, held for research use, not redistributed. The hash is of
+      questions.json as extracted from the tar.gz, computed on 2026-10-08 from
+      the archive whose MD5 matched the one recorded when it was first downloaded. Sent through
+      OpenRouter: content (up to 300 characters), options, answer and worked
+      solution (up to 200) of 840 questions to the proposer models; content
+      (up to 400 characters), options and answer, with no solution, of all
+      7,652 questions to the built-graph tagger and again to the expert-KC
+      tagger.
+
+  - id: xes3g5m-route-names
+    title: >-
+      XES3G5M knowledge-component route names: each of 866 leaf KCs with its
+      path of topic names in the expert taxonomy
+    grain: one knowledge component
+    format: json
+    rows: 866
+    size_bytes: 87297
+    location:
+      kind: url
+      ref: "https://github.com/ai4ed/XES3G5M"
+    sha256: e928d81be9731d4da7ecb16e7df8491fb3f9e64dd8b2b4fadbeb1c0483d98e9c
+    identifiability: not-applicable
+    access: raw
+    derived_from: [xes3g5m]
+    note: >-
+      Authored taxonomy text with no participant: cid2route.json, which
+      data/ingest/xes3g5m/flatten.py builds from metadata/kc_routes_map.json
+      and the kc_routes field of metadata/questions.json in the deposited
+      tar.gz (hash as recorded for xes3g5m).
+      Same terms as xes3g5m. Sent through OpenRouter: the 187 depth-3 route
+      prefixes to the coverage judge; all 866 routes to the expert-KC tagger
+      and to the Common Core mappers; 25 routes for translation in the human
+      check.
+
+  - id: assistments-2012-skill-names
+    title: >-
+      ASSISTments 2012-13 skill names: the 245 skill ids and names of the
+      2012-13 export
+    grain: one skill
+    format: csv
+    rows: 245
+    size_bytes: 6962
+    location:
+      kind: url
+      ref: "https://sites.google.com/site/assistmentsdata/"
+    sha256: 8bea8badd90394c84dca89504a1a54a168fb789813cd7aa04cdbe42eac8d4229
+    identifiability: not-applicable
+    access: raw
+    derived_from: [assistments-2012]
+    note: >-
+      Authored skill labels with no participant: assist_skill_names.csv, the
+      distinct (skill_id, skill) pairs of the deposited zip, written by
+      data/ingest/assist2012/skill_names.py. The SHA-256 was computed on
+      2026-10-08 from a copy whose MD5 (0bc508f9b9a851a8c45e352087f7955d)
+      matched the one recorded when it was first downloaded. Same terms as
+      assistments-2012; no
+      problem text is in the file or was sent. Sent through OpenRouter: all
+      245 names, to the Common Core mappers.
+
+  - id: eedi-subject-names
+    title: >-
+      Eedi subject names: the subject tree of the NeurIPS 2020 release, of
+      which the 308 level-3 subjects and their parent paths were used
+    grain: one subject
+    format: csv
+    rows: 388
+    size_bytes: 13527
+    location:
+      kind: url
+      ref: "https://dqanonymousdata.blob.core.windows.net/neurips-public/data.zip"
+    sha256: d576a6eccc171d8eb82a284a9586c27b2bd9941f39f3fcd6ae1110470766f202
+    identifiability: not-applicable
+    access: raw
+    derived_from: [eedi-2020]
+    note: >-
+      Authored curriculum labels with no participant:
+      data/metadata/subject_metadata.csv inside the deposited data.zip
+      (SubjectId, Name, ParentId, Level), read straight from the zip by
+      invariance.py unit_names(). The hash is of that member, computed on
+      2026-10-08 from the archive whose MD5 matched the one recorded when it was first downloaded.
+      Same terms as eedi-2020; no question, answer or pupil file is read.
+      Sent through OpenRouter: the 308 level-3 subjects, each as its path of
+      names, to the Common Core mappers.
+
+  - id: junyi-2020-unit-names
+    title: >-
+      Junyi 2020 content-unit titles: the 1,330 content units of the content
+      table
+    grain: one content unit
+    format: csv
+    rows: 1330
+    size_bytes: 389397
+    location:
+      kind: url
+      ref: "https://www.kaggle.com/datasets/junyiacademy/learning-activity-public-dataset-by-junyi-academy"
+    sha256: f4ecd9d60f17bbe1e2fe84af7aade405297844e9173abd899278708f3455743e
+    identifiability: not-applicable
+    access: raw
+    derived_from: [junyi-2020]
+    note: >-
+      Authored unit titles with no participant: Info_Content.csv in the
+      archive as the Kaggle API serves it, column content_pretty_name, keyed by
+      ucid. The hash is of that member, computed on 2026-10-08 from the
+      archive whose MD5 matched the one recorded when it was first downloaded. CC BY-NC-SA 4.0, as
+      junyi-2020. Sent through OpenRouter: all 1,330 titles to the Common Core
+      mappers; 25 for translation in the human check.
+
+  - id: edmcup-2023-skill-descriptions
+    title: >-
+      EDM Cup 2023 Common Core skill codes and descriptions, from the problem
+      table
+    grain: one problem (only its skill code and skill description are read)
+    format: csv
+    rows: 132738
+    size_bytes: 61843139
+    location:
+      kind: doi
+      ref: 10.17605/OSF.IO/YRWUH
+    sha256: 4f45daf2e010771c6b5e523dd4d583f3ac451f6ce8f2f35270fcb86b875cee4e
+    identifiability: not-applicable
+    access: raw
+    derived_from: [edmcup-2023]
+    note: >-
+      Authored standards labels with no participant: problem_details.csv,
+      columns problem_skill_code and problem_skill_description, read by
+      invariance.py clusters(). The file has no problem-text column (only
+      problem_text_bert_pca, a vector), so no problem text exists to send.
+      Hash as recorded for edmcup-2023. Same
+      terms as edmcup-2023. Sent through OpenRouter: 92 Common Core clusters
+      (codes cut to grade.domain.cluster), each with up to its three most
+      frequent skill descriptions, in every call of the Common Core map.
+
+analyses:
+  - id: positivity-atlas
+    title: >-
+      For every ordered capability pair in each corpus, how many learners met B
+      having failed A, and whether the drop in B accuracy is SUPPORTED,
+      CONTRADICTED (only with an observed, readable, powered merge node) or
+      UNKNOWN, over the five corpora above, Duolingo SLAM's three courses
+      (slam_atlas.py) and fourteen DataShop exports, six of them too small to
+      read
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/overlap/atlas.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the verdict rule is shared/edge_state.py
+        and the reachability gate shared/reachability.py. Run from
+        studies/identifiability/overlap/: `python3 atlas.py --out
+        out/atlas.json` (every corpus but SLAM); `python3 positivity.py assist
+        --pairs all --out out/positivity-assist.json` (the ASSISTments row:
+        29,018 learners, 40,000 sampled pairs); `python3 slam_atlas.py` (the
+        three SLAM courses through the same audit(), out/atlas-slam.json; reads
+        $SLAM_DIR); and `python3 random_order.py` (the random-order split,
+        out/random_order.json; reads $ASSIST_DIR/assist2012.zip). The article's
+        Table 1 reads these three files. Environment variables: EDMCUP_DIR, EDNET_ZIP,
+        EDNET_CONTENTS, XES_DIR, EEDI_ZIP, EEDI_ANSWERS, ASSIST_DIR,
+        DATASHOP_DIR, DS1275_DIR, DS576_DIR, SLAM_DIR. Corpus locations come
+        from shared/paths.data_path: each corpus's environment variable, else the same
+        layout under $LDA_SCRATCH_DIR. For each
+        DataShop set the atlas reads the 'All Data' student-step export
+        (shared.corpus.datashop_export) and the first KC model in it, and skips
+        QA-server exports. A full run writes every row of the committed
+        out/atlas.json unchanged, in discovery order; the committed file lists
+        them in the order `--only` reruns merged them. Before 9ac9e38 it took the first export in sorted
+        order, which read subsets for ds1190 and ds1275. No pinned lockfile.
+    inputs:
+      - assistments-2012
+      - edmcup-2023
+      - ednet-kt1
+      - xes3g5m
+      - eedi-2020
+      - duolingo-slam-2018-en-es
+      - duolingo-slam-2018-es-en
+      - duolingo-slam-2018-fr-en
+      - datashop-ds580
+      - datashop-ds671
+      - datashop-ds649
+      - datashop-ds669
+      - datashop-ds1190-all-data
+      - datashop-ds1275-all-data
+      - datashop-ds1530
+      - datashop-ds1531
+      - datashop-ds1706
+      - datashop-ds495
+      - datashop-ds576
+    ai_processing: false
+
+  - id: figure-atlas
+    title: >-
+      Figure 1, the positivity atlas's rules (Section 4.2) drawn as a
+      diagram, with every rule it shows checked against the code that applies
+      it
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/overlap/figure_atlas.py
+      commit: c839a69ef13bfd32356074dfad9665632da47c17
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        matplotlib 3.11.2; no model call and no corpus read. Run from
+        studies/identifiability/overlap/: `python3 figure_atlas.py` writes
+        research/article/figures/learning-graph-budget-2026/fig1-positivity-atlas
+        as SVG and 300-dpi PNG, byte-identical on re-run. The figure carries no
+        estimate. The claimed effect, the cell floor, the readability band and
+        the power convention it draws are read from shared/edge_state.py,
+        positivity.py and shared/reachability.py, and the script stops unless
+        shared/edge_state.classify_edge, run on one constructed case per branch,
+        returns the state the decision panel shows. In the research repository
+        it also stops unless Section 4.2 prints each rule as drawn.
+    inputs:
+      - atlas-rules
+    ai_processing: false
+
+  - id: lag-decay-by-domain
+    title: >-
+      Whether the positivity drop shrinks with the lag between first attempting
+      A and first attempting B, by corpus (studies/identifiability/overlap/lag_bands.py)
+      and by domain within each corpus (domains.py)
+    # Verdict rules and a synthetic floor committed before any real corpus was
+    # read (lag_bands.py, commit 7203f86; domains.py, commit 3ae985d; both in
+    # the app repository's history, from which these scripts arrived at
+    # dcb4b9c).
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/domain-mechanism/domains.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. The corpus-level lag table (the
+        article's Table 2, Section 5.1) is
+        studies/identifiability/overlap/lag_bands.py, run from
+        studies/identifiability/overlap/: `python3 lag_bands.py floor`
+        (out/lag_bands_floor.json), then `python3 lag_bands.py real` (all five
+        corpora, out/lag_bands.json). The domain split is run from
+        studies/identifiability/domain-mechanism/: `python3 domains.py floor`
+        (out/floor.json), then `python3 domains.py real` (out/domains.json); each real
+        run refuses to read a corpus until its synthetic floor has passed.
+        Environment variables: ASSIST_DIR, XES_DIR, EDNET_ZIP, EDNET_CONTENTS,
+        EDMCUP_DIR, EEDI_ZIP, EEDI_ANSWERS. Corpus locations come from
+        shared/paths.data_path: each corpus's environment variable, else the same layout under
+        $LDA_SCRATCH_DIR. No pinned lockfile.
+    inputs: [assistments-2012, edmcup-2023, ednet-kt1, xes3g5m, eedi-2020]
+    ai_processing: false
+
+  - id: orientation-under-soft-prerequisites
+    title: >-
+      Whether the signed marginal rate orients a prerequisite edge when
+      prerequisites gate, when they only add load, and in between (rerun after
+      the harness correction of 2026-09-17)
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/simulation/learner-sim/orientation_soft.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; learner model shared/learner.py, the
+        difficulty-matched scoring from orientation_difficulty.py. Synthetic
+        only. Run from studies/simulation/learner-sim/: `python3
+        orientation_soft.py` (writes orientation-soft-result.json beside the
+        script, the source of the article's difficulty-matched figures in
+        Section 5.1). No pinned lockfile.
+    inputs: [simulation-runs]
+    ai_processing: false
+
+  - id: item-tree-inference
+    title: >-
+      Whether corrected IITA finds structure beyond item difficulty in real
+      responses, over MOOCCubeX item sets and concept sets (the fixed-margins
+      null that also holds learner ability, and the lower-tail scoring, were
+      added post hoc and retracted the first reading)
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/learning-structure/mooccubex_iita.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library; IITA is iita.py (ported from DAKS). Run from
+        studies/identifiability/learning-structure/: `python3 mooccubex_iita.py
+        --top-n 20` (item sets, out/iita-real-result.json; the default analyses
+        12 sets and reads 1 of 12); `python3 mooccubex_concept_iita.py`
+        (concept sets, out/iita-concept-result.json); `python3
+        reanalyse_lower_tail.py` (the lower-tail rescoring,
+        out/lower-tail-reanalysis.json). All three read
+        $MOOCCUBEX_DIR/attempts.tsv and $MOOCCUBEX_DIR/concept-problem.txt. The
+        learner file is filtered while streaming by
+        data/ingest/mooccubex/stream_attempts.py and never stored. Corpus
+        locations come from shared/paths.data_path: each corpus's environment
+        variable, else
+        the same layout under $LDA_SCRATCH_DIR.
+        Ties in attempt count are broken by id, so the outputs do not depend on
+        Python's hash seed (byte-identical at seeds 0, 1 and 2; before
+        2026-09-25 the lower-tail count moved between 0 and 1 of 20 with the
+        seed): 6 of 20 item sets clear the difficulty null, 1 of 20 the
+        fixed-margins null (p = 0.642), 1 of 20 on the lower tail; 0 of 11
+        concept sets.
+        No pinned lockfile.
+    inputs: [mooccubex-user-problem, mooccubex-concept-problem]
+    ai_processing: false
+
+  - id: surmise-vs-positivity
+    title: >-
+      Whether the edges an IITA surmise relation asserts land on pairs the
+      positivity audit can decide, on complete-case learners and on every
+      learner (detection floor rescaled post hoc on 2026-09-25)
+    # The verdict table is in the script's docstring, but the script and its
+    # first real result were committed together, so not claimed.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/surmise-vs-positivity/overlap_iita.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; readers in
+        studies/identifiability/latent-shape/build_matrix.py, the audit in
+        studies/identifiability/overlap/positivity.py with the reachability
+        gate. Run from studies/identifiability/surmise-vs-positivity/: the
+        ASSISTments reading is `python3 overlap_iita.py real assist
+        --out out/assist.json` (the item-set size is chosen by the script and
+        recorded, 16), after `python3 overlap_iita.py floor` (out/floor.json;
+        the floor writes to out/ relative to the working directory). The
+        post hoc rerun of the floor at more learners is `python3
+        floor_scale.py` (3,000, 10,000 and 30,000 learners, the default;
+        out/floor-scale.json, marked post_hoc).
+        Environment variables: ASSIST_DIR, DATASHOP_DIR, DS1275_DIR. Corpus
+        locations come from shared/paths.data_path: each corpus's environment
+        variable, else
+        the same layout under $LDA_SCRATCH_DIR.
+        No pinned lockfile.
+    inputs: [assistments-2012, datashop-ds1190-all-data, datashop-ds1275-all-data]
+    ai_processing: false
+
+  - id: trajectory-order-trial
+    title: >-
+      Whether trajectory order beats reverse order in the one randomised order
+      trial held, in the authors' own model and by within-class permutation
+    # Script and result were committed together.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/lt-trials/length_order.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        numpy, pandas, openpyxl and statsmodels. Run from
+        studies/outcomes/lt-trials/: `python3 length_order.py --data "<C6
+        Analysis File.xlsx>"`, the analysis file inside ICPSR_151741-V1.1.zip
+        (out/length_order.json). It first reproduces the authors' own mixed
+        model (their C6 Analysis Syntax.R). No pinned lockfile.
+    inputs: [sarama-length-trial-2021]
+    ai_processing: false
+
+  - id: mastery-release-lag
+    title: >-
+      Whether release from an ASSISTments skill builder without mastery lowers
+      accuracy at later skills, by lag, and whether first successes there are
+      retained (an ability-stratified comparison of released and mastered
+      learners with a within-stratum permutation null; not a regression
+      discontinuity, since release has no running variable or cutoff)
+    # Script and result were committed together.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/rdd/lag.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the reader, exit rule and ability strata
+        are studies/identifiability/rdd/mastery_exit.py at the same commit.
+        `python3 lag.py --out out/lag.json`, run from
+        studies/identifiability/rdd/. The release count (28,608) is the
+        `released` field of out/lag.json. The retention contrast (first
+        successes at later skills, 626,850 later attempts) and the
+        concentration test, which permutes whole runs rather than rows, are
+        `python3 retention_edges.py --out out/retention-edges.json` (cell
+        floor 30, the default), from the same directory. Both read
+        $ASSIST_DIR/assist_rich.csv
+        (data/ingest/assist2012/rich.py). Corpus locations come from
+        shared/paths.data_path: each corpus's environment variable, else the same layout under
+        $LDA_SCRATCH_DIR. No pinned lockfile.
+    inputs: [assistments-2012]
+    ai_processing: false
+
+  - id: conjunctive-above-bar
+    title: >-
+      Share of item triples whose interaction of two parents on the dependent
+      clears a fixed +0.10
+      bar, judged against a learner-deranged pipeline null, on XES3G5M and on
+      re-issued EdNet
+    # The docstring writes its verdicts as pre-registered, but the script and
+    # its first result were committed together (3c31e90), so not claimed.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/conjunctive/relative_bar.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the interaction statistic and block
+        bootstrap from stage3_interaction.py and block_bootstrap.py, power and
+        coarsening from replicate.py (unchanged since
+        f259bdfb10457aab6efde5079de1ef124a2cce26), the EdNet reader from
+        ednet_at_scale.py. Run from studies/identifiability/conjunctive/:
+        `python3 relative_bar.py --arm xes3g5m` and `python3 relative_bar.py
+        --arm ednet`. Environment variables: XES_DIR, EDNET_ZIP,
+        EDNET_CONTENTS. Corpus locations come from shared/paths.data_path: each
+        corpus's environment variable, else the same layout under $LDA_SCRATCH_DIR.
+        The article's figures (Section 5.1) are the `global` scope of
+        out/relative_bar_xes3g5m.json and out/relative_bar_ednet.json;
+        replicate.py and reliability_bar.py read the same estimand with
+        slightly different intervals. No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: conjunctive-blindness
+    title: >-
+      Whether a pairwise contrast reads a planted conjunctive gate as null
+      while the interaction of two parents on the dependent detects it, with
+      additive and null arms
+      as controls
+    # Verdicts are written in the docstring; script and result were committed
+    # together, so not claimed.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/conjunctive/stage1_floor.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Synthetic only: run from
+        studies/identifiability/conjunctive/, `python3 stage1_floor.py
+        --reps 20` writes out/stage1.json (the default of 30 repetitions also
+        reads 4 of 12). No pinned lockfile.
+    inputs: [simulation-runs]
+    ai_processing: false
+
+  # ---------------------------------------------------------------------------
+  # PAPER II (the article of this release, article/what-learner-records-can-say-about-a-prerequisite-edge.md).
+  # Declared 2026-10-08 for every study the article cites that the entries above
+  # did not cover, by research question. Every invocation is run from the study
+  # directory named in it, inside code/ (reproduce.py does this on a copy).
+  # `commit` is the commit that last changed `path` in the research repository
+  # the release was prepared in (private), the `repo` named in each `code:`
+  # block; the published code/ holds the files themselves, not that history.
+  # Scripts first committed at dcb4b9c arrived with the split from the app
+  # repository; the commits that date their pre-registrations are in that
+  # repository's history, named here where the programme recorded them.
+  # A reader can check neither repository's history.
+  # Corpus locations: each corpus's environment variable, named in each
+  # analysis below; code/ ships no registry of defaults, so a reader sets the
+  # variable (shared/paths.data_path says which when it is missing).
+  # ---------------------------------------------------------------------------
+
+  # ---- RQ1: existence and direction (Section 5.1) ----------------------------
+
+  - id: qmatrix-positivity
+    title: >-
+      Whether the item design (the Q-matrix) or the order in which learners met
+      the skills is what leaves the atlas's edges undecided: for every edge the
+      atlas scores on XES3G5M, ASSISTments 2012-13 and Eedi, whether any item
+      measures B without A, crossed with the edge's atlas state (Gu and Xu's
+      condition)
+    # Docstring pre-registration committed at cbc0f5d; the real run and the
+    # result followed at bb16a60. CHANGES entries ba778db and 435417b changed
+    # only timestamp ordering, before any number was read.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/qmatrix-positivity/qmatrix_positivity.py
+      commit: bb16a607ecaa55b11470a81813d2ae5b8c700088
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; reuses the atlas (overlap/positivity.py,
+        shared/edge_state.py, shared/reachability.py) and
+        studies/identifiability/identifiability/qmatrix.py. Run from
+        studies/identifiability/qmatrix-positivity/: `python3
+        qmatrix_positivity.py --floor` (synthetic, out/floor.json), then
+        `python3 qmatrix_positivity.py --corpus xes3g5m`, `--corpus assist` and
+        `--corpus eedi` (out/<corpus>.json; each first reproduces the committed
+        atlas rows), then `python3 qmatrix_positivity.py --summary`
+        (out/summary.json, from the three and the floor). Environment
+        variables: XES_DIR, ASSIST_DIR (assist_rich.csv), EEDI_ANSWERS,
+        EEDI_ZIP. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012, eedi-2020]
+    ai_processing: false
+
+  - id: shared-item-edges
+    title: >-
+      Why edges whose two skills share an item are decided more often:
+      excluding the shared responses, then matching each co-tagged edge to
+      edges into the same dependent skill on coverage and difficulty, on
+      XES3G5M and Eedi
+    # Docstring pre-registration committed at 26439c6 before any real number;
+    # results at 930ae38. The coverage-only floor was pre-registered at de01386
+    # (2026-10-09) and run at 242e004; the commit below is de01386, the last
+    # change to the script, which also reproduces the earlier outputs.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/shared-item-edges/shared_item_edges.py
+      commit: de01386490068734aa750c94f71205b7b346f362
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the per-edge engine is
+        qmatrix-positivity's validated atlas replica. Run from
+        studies/identifiability/shared-item-edges/: `python3
+        shared_item_edges.py --floor` (synthetic, out/floor.json), `python3
+        shared_item_edges.py --coverage-floor` (the coverage-only world added
+        2026-10-09, out/coverage-floor.json; COVERAGE FLOOR FAILED), `python3
+        shared_item_edges.py --corpus xes3g5m` and `--corpus eedi`
+        (out/<corpus>.json; each refuses to run until the floor has passed),
+        then `python3 shared_item_edges.py --summary` (out/summary.json).
+        ASSISTments is excluded because each of its problems carries one
+        skill. Environment variables: XES_DIR, EEDI_ANSWERS, EEDI_ZIP. No
+        pinned lockfile.
+    inputs: [xes3g5m, eedi-2020]
+    ai_processing: false
+
+  - id: lag-forgetting
+    title: >-
+      Whether the lag decay of the drop is forgetting of A or the edge
+      weakening, by holding A's current state at B fixed (the Wald split), on
+      ASSISTments, XES3G5M, EdNet and Eedi; every registered verdict
+      UNANSWERABLE because the synthetic floor failed
+    # Docstring pre-registration committed at 62fb970 before any real corpus
+    # was read; a dated CHANGES entry revised the design at 49206aa, still
+    # before any real read; the floor failed and the real run followed
+    # (results at 1baf3a4).
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/lag-forgetting/lag_forgetting.py
+      commit: 1baf3a4060b7b013f293e1a9a369ed53304a183f
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; pairs and readers from
+        overlap/lag_bands.py and overlap/atlas.py. Run from
+        studies/identifiability/lag-forgetting/: `python3 lag_forgetting.py
+        floor` (synthetic, out/floor.json), `python3 lag_forgetting.py
+        floor-diagnostic` (the same floor at 9,000 learners, gates nothing,
+        out/floor_diagnostic_9000.json), then `python3 lag_forgetting.py real`
+        (all four corpora, out/lag_forgetting.json; the values are reported as
+        descriptions because the floor failed). out/floor_v1_failed.json is the
+        first design's floor, kept as recorded. Environment variables:
+        ASSIST_DIR, XES_DIR, EDNET_ZIP, EDNET_CONTENTS, EEDI_ZIP, EEDI_ANSWERS.
+        No pinned lockfile.
+    inputs: [assistments-2012, xes3g5m, ednet-kt1, eedi-2020]
+    ai_processing: false
+
+  - id: lag-forgetting-v2
+    title: >-
+      The lag-forgetting split re-registered with a synthetic floor sized to
+      each corpus's real pairs (40 seeds per world), re-reading the first
+      study's numbers with the same code, pairs and bootstrap seed: Eedi
+      MOSTLY-FORGETTING, EdNet NO-DECAY-TO-SPLIT, programme verdict UNRESOLVED
+    # The docstring is a registration committed at 94ece18 before the sizing,
+    # the floor or the re-run (results at 0de6294), but it was written after
+    # lag-forgetting's real estimates had been computed and read, and it
+    # re-reads exactly those estimates. Not claimed as pre-specified.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/lag-forgetting-v2/lag_forgetting_v2.py
+      commit: 82e68e1b3ffc8900bbd267d81dfb8d81af859ee6
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; imports lag-forgetting's estimand,
+        verdict strings and thresholds unchanged. Run from
+        studies/identifiability/lag-forgetting-v2/: `python3
+        lag_forgetting_v2.py sizing` (outcome-free cell counts on the real
+        pairs, out/sizing.json), `python3 lag_forgetting_v2.py calibrate`
+        (synthetic, out/calibration.json), `python3 lag_forgetting_v2.py floor`
+        (synthetic copies sized from out/sizing.json, written per world under
+        out/floor_parts/ and merged into out/floor.json; the Eedi floor takes
+        hours), then `python3 lag_forgetting_v2.py real`
+        (out/lag_forgetting_v2.json, which reproduces lag-forgetting's numbers
+        exactly). Default corpora assist, ednet, eedi (XES3G5M is unanswerable
+        on positivity). Environment variables: ASSIST_DIR, EDNET_ZIP,
+        EDNET_CONTENTS, EEDI_ZIP, EEDI_ANSWERS. No pinned lockfile.
+    inputs: [assistments-2012, ednet-kt1, eedi-2020, simulation-runs]
+    ai_processing: false
+
+  - id: conjunctive-ability-control
+    title: >-
+      Whether the conjunctive interactions on XES3G5M survive stratifying
+      learners by ability, which can by itself make an interaction look
+      super-additive (verdict PARTIAL)
+    # The docstring writes its verdicts as "written before the run". The
+    # script arrived at dcb4b9c and no commit that dates the registration is
+    # recorded, so this rests on the docstring alone.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/conjunctive/ability_control.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the interaction statistic is
+        stage3_interaction.py. Run from studies/identifiability/conjunctive/:
+        `python3 ability_control.py --floor-reps 30` (floor of 30 repetitions
+        first, as the published out/ability.json was written; the default is
+        40, which gives the same real-data result and verdict; then 30 items and
+        5 ability strata; out/ability.json). It stops
+        before reading the corpus if the floor fails. Environment variable:
+        XES_DIR. No pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: orientation-sortability
+    title: >-
+      Whether the orientation statistic says more than "sort by difficulty":
+      the asymmetry statistic against difficulty and R-squared sorts in every
+      cell of the orientation sweep, a disjunctive (OR) arm, and where
+      ASSISTments (Common Core grade) and Junyi (authored graph) sit on the
+      difficulty-depth axis
+    # Docstring pre-registration committed at 21f88cf before any number was
+    # computed; results at 18ca828.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/simulation/orientation-sortability/sortability.py
+      commit: 1a1570faa24e6aee8763d64b538718809769e3cf
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the sweep's worlds come from
+        studies/simulation/learner-sim/orientation_soft.py and
+        orientation_difficulty.py (learner model shared/learner.py), the OR
+        arm's interaction reading from conjunctive/stage1_floor.py. Run from
+        studies/simulation/orientation-sortability/: `python3 sortability.py
+        sim` (floor and parts a and b, synthetic only; first reproduces
+        orientation-soft-result.json; out/sim.json) and `python3 sortability.py
+        real` (part c with its floor, out/real.json). The real part reads
+        $JUNYI_DIR (junyi_Exercise_table.csv), $DS1275_DIR (the DataShop ds1275
+        'All Data' student-step export, read through shared.corpus.ds1275_export;
+        `real --junyi-log public` reads junyi_ProblemLog_for_PSLC.txt instead)
+        and $ASSIST_DIR (assist_rich.csv) with the committed
+        studies/measurement/assist2012-direction/out/skill_ccss_map.json. The
+        ds1275 loader is a dated CHANGES entry committed before any ds1275 row
+        was read. No pinned lockfile.
+    inputs: [simulation-runs, assistments-2012, junyi-2015-exercise-table, junyi-2015-problem-log-sample, datashop-ds1275-all-data]
+    ai_processing: false
+
+  # ---- RQ2: reliability (Section 5.2) ----------------------------------------
+
+  - id: reliability-split-half
+    title: >-
+      Split-half reliability of the ranking of pairs by the drop (Spearman-Brown
+      over 12 random splits) on XES3G5M and EdNet at cell floors 5, 10 and 20,
+      with the reach-partialled coefficient (Table 3)
+    # The 0.80 bar (A5) was fixed before any run as the programme's criterion,
+    # but this script's docstring carries no pre-registration of its own.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/split_half.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; readers from overlap/atlas.py. Run from
+        studies/measurement/reliability/: `python3 split_half.py --splits 12`
+        (out/split_half.json; the default is 40 splits). Environment
+        variables: XES_DIR, EDNET_ZIP, EDNET_CONTENTS. No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: reliability-tail
+    title: >-
+      Whether the pairs a graph would assert are ranked more reliably than all
+      pairs: one third of the learners selects, the other two thirds measure,
+      against random subsets of the same size (TAIL IS LESS RELIABLE on
+      XES3G5M)
+    # Verdict strings in the docstring, "written before the run"; arrived at
+    # dcb4b9c, dating commit not recorded.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/tail.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; split_half.py's machinery. Run from
+        studies/measurement/reliability/: `python3 tail.py --splits 12 --items
+        90` (out/tail.json). Environment variables: XES_DIR, EDNET_ZIP,
+        EDNET_CONTENTS. No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: reliability-coarse
+    title: >-
+      Whether scoring groups of skills raises reliability beyond what averaging
+      does: XES3G5M's taxonomy at three levels against random groupings with the
+      same number and sizes of groups, on the same splits
+    # Prediction in the docstring, "written before the run" (taxonomy no
+    # better than random), pre-registered on 2026-09-22. Arrived at dcb4b9c. CHANGE 1 (2026-10-14, post hoc, the
+    # maintainer's decision): the control is the mean of 50 matched random
+    # groupings, after the reproduction showed the single draw depended on the
+    # hash seed; the commit below is CHANGE 1's code, which produces the
+    # published out/coarse.json.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/coarse.py
+      commit: 5e74d15b4bac1b617be1a0ee56ed8b44c7713435
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from studies/measurement/reliability/:
+        `python3 coarse.py` (8 splits, 30,000 pairs, cell floor 5, the
+        defaults; out/coarse.json). Environment variable: XES_DIR
+        (attempts.tsv, cid2route.json). No pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: reliability-retention
+    title: >-
+      Whether reading the outcome at later attempts on B, among learners who
+      answered B correctly first, raises reliability (pre-registered to
+      improve without reaching the bar; it fell)
+    # Prediction in the docstring, "written before the run"; pre-registered on
+    # 2026-09-22, and wrong in direction.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/retention.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from studies/measurement/reliability/:
+        `python3 retention.py` (8 splits, 6,000 pairs, the defaults;
+        out/retention.json). Environment variables: XES_DIR, EDNET_ZIP,
+        EDNET_CONTENTS. No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: lag-band-reliability
+    title: >-
+      Split-half reliability and decision consistency of the drop within three
+      lag bands on XES3G5M's 200 best-covered skills, each against a
+      size-matched arm thinned to the band's share, with EdNet's 6,000-learner
+      prefix (Table 4)
+    # Docstring pre-registration committed at 2ec0b52 before any real corpus
+    # was read by it; results at 0579e82.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/lag_band_reliability.py
+      commit: 2ec0b52bad38fe161c02590f764037a061d5b6ba
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; cell grids from pairgrid.py, the control
+        size check from shared/controls.py. Run from
+        studies/measurement/reliability/: `python3 lag_band_reliability.py
+        floor` (synthetic, out/lag_band_reliability_floor.json), then `python3
+        lag_band_reliability.py real` (XES3G5M and EdNet, 20 splits, the
+        defaults; out/lag_band_reliability.json; refuses to run until the floor
+        has passed). Environment variables: XES_DIR, EDNET_ZIP,
+        EDNET_CONTENTS. No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: raise-kappa
+    title: >-
+      Decision consistency (kappa) of the adopted rule against its deranged
+      arm, four changes to the rule scored under the registered rule, and the
+      excess kappa as a function of learners on XES3G5M and on EdNet's first
+      60,000 learners with a saturating fit (Table 5)
+    # The levers and the deranged arm are pre-registered in the docstring
+    # ("before the run"); the finish (registered reject rule, learner curve)
+    # was pre-registered at c472cc2 before either mode ran, results at
+    # 625063e. The first scoring applied a relative rule in place of the
+    # registered one; raise_kappa_rescored.json applies the registered rule.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/raise_kappa.py
+      commit: c472cc2de0c8d202378465fe11026f618f87a6b9
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the finish is raise_kappa_finish.py. Run
+        from studies/measurement/reliability/: `python3 raise_kappa.py` (90
+        items, 8 splits, cell floor 10, the defaults; out/raise_kappa.json),
+        `python3 raise_kappa.py --rescore` (reads only the committed
+        out/raise_kappa.json; out/raise_kappa_rescored.json), `python3
+        raise_kappa.py --curve --corpus xes3g5m` and `python3 raise_kappa.py
+        --curve --corpus ednet` (out/raise_kappa_curve_<corpus>.json).
+        Environment variables: XES_DIR, EDNET_ZIP, EDNET_CONTENTS. No pinned
+        lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: kappa-bar
+    title: >-
+      Whether a kappa bar can be sized by the practice a graph saves when it
+      gates learners, in simulated learners shaped like XES3G5M: the floor
+      (the planted graph as a hard rule) failed, so the calibration is
+      unanswerable; a post hoc diagnostic with stronger gates and an oracle
+      rule
+    # Docstring pre-registration committed at a5b29f3 before any items-saved
+    # figure was computed; the floor failed at 7f7214c. CHANGE 2, the
+    # diagnostic, is post hoc and labelled so in the script and the paper.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/kappa_bar.py
+      commit: 39735267ee4bb05b4bf3b159bd8951770b487a03
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; synthetic only for every figure the paper
+        prints. Run from studies/measurement/reliability/: `python3
+        kappa_bar.py tune` (shape targets and the tuned ability spread,
+        out/kappa_bar_tune.json), `python3 kappa_bar.py floor`
+        (out/kappa_bar_floor.json; exits 1 because the floor fails), and
+        `python3 kappa_bar.py diagnostic` (post hoc,
+        out/kappa_bar_diagnostic.json). The committed
+        out/kappa_bar_floor.json was written at 7f7214c; the script at this
+        commit also writes, for each point, the `latent_gate` oracle the
+        diagnostic added, and every other value is identical (checked
+        2026-10-08). The `sim` and `real` modes stop at the
+        failed floor, as registered. `tune` reads XES3G5M ($XES_DIR) for its
+        shape targets; `floor` and `diagnostic` read only the committed
+        out/kappa_bar_tune.json and are synthetic. No pinned lockfile.
+    inputs: [simulation-runs, xes3g5m]
+    ai_processing: false
+
+  - id: stability-selection
+    title: >-
+      Stability selection on the drop, whether its bound on false selections
+      holds when noise follows curriculum order (worlds I0, I, C and C0), the
+      adopted rule's sensitivity, specificity and precision from 500 to 32,000
+      learners, and a real-data reading on XES3G5M and EdNet against a deranged
+      null (Tables 6 and 7)
+    # Docstring pre-registration committed at 50bef7e before any number was
+    # computed on real data; results at 1850dcc.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/stability-selection/stability.py
+      commit: 1850dcc75778ecc518b3f48af217487d8bf9dd19
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; worlds from
+        studies/measurement/reliability/kappa_bar.py (it first reproduces
+        kappa_bar's floor world exactly), cells from pairgrid.py. Run from
+        studies/measurement/stability-selection/: `python3 stability.py floor`
+        (reproduction check, F1, F2; out/floor.json), `python3 stability.py
+        sim` (the four world types and the error curves; out/sim.json; long),
+        and `python3 stability.py real` (XES3G5M and EdNet with the deranged
+        null; out/real.json). Environment variables: XES_DIR, EDNET_ZIP,
+        EDNET_CONTENTS. No pinned lockfile.
+    inputs: [simulation-runs, xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: course-order-exposure
+    title: >-
+      Whether the near-perfect reliability of course order on MOOCCubeX is
+      structure or exposure: the share of co-enrolled learners who took A
+      first, against a derangement that keeps each course's enrolment-time
+      distribution (EXPOSURE)
+    # Verdict strings in the docstring, "before the run"; arrived at dcb4b9c,
+    # dating commit not recorded.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/course_order_derangement.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the loader is
+        studies/identifiability/coarse-grain/register_order.py, with
+        course_grain.py's statistics. Run from studies/measurement/reliability/:
+        `python3 course_order_derangement.py --src
+        "$MOOCCUBEX_DIR/user-order.jsonl"` (top 60 courses, 8 splits, cell
+        floor 30, the defaults; out/course_order_derangement.json). The script's
+        default --src is a hard-coded scratch path of the machine it ran on, so
+        --src must be given. user-order.jsonl is derived from
+        entities/user.json by data/ingest/mooccubex/stream_user.py, which drops
+        name, gender, year of birth and school; its course list
+        (courses-with-concepts.txt) was built by an uncommitted snippet
+        and is not in code/. No pinned lockfile.
+    inputs: [mooccubex-user]
+    ai_processing: false
+
+  - id: estimand-kappa
+    title: >-
+      The drop against an order statistic on the same 60 XES3G5M skills,
+      pairs, learners and splits, compared at matched rates of assertion on
+      real and deranged data (ORDER IS CONFOUNDED)
+    # Verdict strings in the docstring, "before the run"; arrived at dcb4b9c,
+    # dating commit not recorded.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/reliability/estimand_kappa.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from studies/measurement/reliability/:
+        `python3 estimand_kappa.py` (60 items, 6 splits, cell floor 10, the
+        defaults; out/estimand_kappa.json). Environment variable: XES_DIR. No
+        pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  # ---- RQ3: validity (Section 5.3) -------------------------------------------
+
+  - id: assist2012-direction
+    title: >-
+      Whether Common Core grade order is recovered on ASSISTments 2012-13 by
+      the within-pair directional contrast on pairs met in both orders,
+      residualised and in excess of a deranged arm, over all name-matched
+      skills and over exact names (NOT RECOVERED on both; Table 8)
+    # Bar, interval rule and verdict strings in the docstring, "pre-registered
+    # before the run"; the 0.020 bar was pre-registered on 2026-09-23. Arrived at dcb4b9c. The skill-to-grade map it builds is a
+    # rule-set code with no human reference.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/assist2012-direction/direction.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the statistic, controls and verdict rule
+        are shared/direction_contrast.py, the reader shared/corpus.Assistments2012.
+        Run from studies/measurement/assist2012-direction/: `python3
+        direction.py` (writes out/skill_ccss_map.json, out/direction.json and
+        out/direction.log). Environment variables: ASSIST_DIR
+        (assist_rich.csv) and EDMCUP_DIR (problem_details.csv, the Common Core
+        dictionary). No pinned lockfile.
+    inputs: [assistments-2012, edmcup-2023]
+    ai_processing: false
+
+  - id: edmcup-direction
+    title: >-
+      The same directional contrast on EDM Cup 2023 against Common Core grade,
+      module order and lesson order (UNANSWERABLE, and UNDERPOWERED AT THE BAR
+      twice; Table 8)
+    # Bar and verdict strings in the docstring, "pre-registered before the
+    # run"; arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/edmcup-direction/direction.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; shared/direction_contrast.py and
+        shared/corpus.EdmCup. Run from studies/measurement/edmcup-direction/:
+        `python3 prep.py` (rebuilds $EDMCUP_DIR/cells.tsv from the official
+        CSVs, anchoring each redacted unit-test time at its last practice
+        start), then `python3 direction.py` (out/direction.json,
+        out/direction.log). Environment variable: EDMCUP_DIR. No pinned
+        lockfile.
+    inputs: [edmcup-2023]
+    ai_processing: false
+
+  - id: junyi-expert-vs-data
+    title: >-
+      Whether Junyi's crowdsourced prerequisite ratings are reliable as a panel
+      (split-half over each pair's raters) and track the learner order effect
+      on DataShop ds1275 (Spearman +0.299 over 47 pairs, with a
+      direction-swapped control)
+    # H0 and H1 in the docstring, "written before any number was read";
+    # arrived at dcb4b9c. A dated CORRECTION (2026-09-24) fixed which column
+    # of a rating row is the prerequisite, after the first reading, and moved
+    # section 3 from -0.059 to +0.299; the paper reports the corrected
+    # reading.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/junyi/expert_vs_data.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; ratings through shared/junyi_ratings.py,
+        the ds1275 export through shared/corpus.ds1275_export (the 'All Data'
+        sample). Run from studies/identifiability/junyi/: `python3
+        expert_vs_data.py "$JUNYI_DIR" "$DS1275_DIR"` (writes
+        junyi-expert-vs-data.json beside the script). $JUNYI_DIR holds
+        junyi_Exercise_table.csv and the two relationship_annotation files. No
+        pinned lockfile.
+    inputs: [junyi-2015-exercise-table, junyi-2015-ratings, datashop-ds1275-all-data]
+    ai_processing: false
+
+  - id: junyi-taxonomy-control
+    title: >-
+      Whether the rater-learner association on Junyi survives conditioning on
+      taxonomy distance, and how far the raters follow distance (rating against
+      distance, Spearman -0.740): learner side BLOCKED because the DataShop
+      export was not on hand; synthetic floor at 47 pairs
+    # Docstring pre-registration committed at 2f701b1 before any real number;
+    # floor and results at 94c6658. The floor is defined and scored by the
+    # same script, so it is a smoke check.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/junyi-taxonomy-control/taxonomy_control.py
+      commit: 94c665875f046ef492305bc97cfde3985bb66494
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; shared/junyi_ratings.py,
+        shared/junyi_graph.py, shared/controls.py. Run from
+        studies/identifiability/junyi-taxonomy-control/: `python3
+        taxonomy_control.py --floor` (500 datasets per scenario, 200
+        assignments, 400 bootstrap replicates, the defaults; out/floor.json),
+        then `python3 taxonomy_control.py` (out/taxonomy-control.json). The
+        rater side reads $JUNYI_DIR; the learner side reads $DS1275_DIR when it
+        is set and falls back to $JUNYI_DIR/junyi_ProblemLog_for_PSLC.txt,
+        which reproduces none of the 47 pairs, so the committed verdict is
+        BLOCKED; with the export present the full path runs and first checks
+        that it reproduces 47 pairs and rho 0.29914. No pinned lockfile.
+    inputs: [junyi-2015-exercise-table, junyi-2015-ratings, junyi-2015-problem-log-sample, datashop-ds1275-all-data]
+    ai_processing: false
+
+  - id: four-order-experiment
+    title: >-
+      ASSISTments experiment PSABANRN: whether four randomised orders of mean,
+      median, range and mode differ in completion, problems to mastery and
+      correct rate, by a permutation test over students (ORDER MATTERS for
+      problems to mastery)
+    # Verdict rule in the docstring, pre-registered at 0d7def1 (app-repository history). Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/order_swap.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from
+        studies/identifiability/core-vs-culture/: `python3 order_swap.py`
+        (out/order-swap-result.json). Reads $LDA_SCRATCH_DIR/osf-59shv/exp.zip
+        (PSABANRN.zip inside: exp_alogs.csv and priors.csv) through
+        shared.paths.scratch_root(). No pinned lockfile.
+    inputs: [assistments-experiments-2022]
+    ai_processing: false
+
+  - id: order-swap-remnant
+    title: >-
+      The four-order result re-estimated with a covariate fitted only on
+      students outside the experiment (a remnant ridge model over the
+      release's other 87 experiments), with power for a randomised
+      edge-release trial
+    # Docstring pre-registration committed at b465f65 before any real data
+    # were read; floor and result at 4af7ff5.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/order-swap-remnant/remnant.py
+      commit: 4af7ff55449ac9f5317cb31447e71d08805e1bd4
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy (ridge in closed form; grouped folds from
+        shared/stats.py). Run from
+        studies/outcomes/order-swap-remnant/: `OMP_NUM_THREADS=1 python3
+        remnant.py --floor` (synthetic, out/floor.json), then
+        `OMP_NUM_THREADS=1 python3 remnant.py` (out/remnant-result.json and
+        out/power.json; power.json also reads the committed
+        studies/outcomes/lt-trials/out/arm_power.json). Reads
+        $LDA_SCRATCH_DIR/osf-59shv/exp.zip through shared.paths.scratch_root().
+        `python3 planning_abs.py` (out/planning-abs.json) re-evaluates the
+        same planning formulas at an absolute drop of 0.10 in accuracy, from
+        the committed power.json, remnant-result.json and
+        lt-trials/out/icc-power.json; it reads no corpus and asserts that it
+        reproduces every stored 0.10 SD value. No pinned lockfile.
+    inputs: [assistments-experiments-2022, simulation-runs]
+    ai_processing: false
+
+  - id: ds1190-order-swap
+    title: >-
+      The fraction-operation order swap in DataShop dataset 1190 (addition
+      first against multiplication first, 30 learners per arm): Cohen's d on
+      the delayed posttest's type-matched items with a learner bootstrap
+      (UNINFORMATIVE)
+    # Verdict strings in the docstring, "before the run"; arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/interleaving/ds1190_order.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from studies/outcomes/interleaving/:
+        `python3 ds1190_order.py --src "$LDA_SCRATCH_DIR/ds1190"` (`--reps`
+        10,000, the default; out/ds1190_order.json). It reads the
+        per-sample student-step exports whose names contain S2_AM_Blocked and
+        S2_MA_Blocked, two samples of the same DataShop dataset as
+        datashop-ds1190-all-data; the hashes of those two sample files were
+        not recorded when they were read. No pinned lockfile.
+    inputs: [datashop-ds1190-all-data]
+    ai_processing: false
+
+  - id: ds1190-order-reanalysis
+    title: >-
+      A pre-registered re-analysis of the same swap (re-randomisation test and
+      a search for the authors' printed figures), BLOCKED because the export
+      was not on hand; its floor at the printed effect, and the check of the
+      printed statistics
+    # Docstring pre-registration committed at 901d14b before any real outcome
+    # was read; floors at 92b2821.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/order-trials-reanalysis/patel_order.py
+      commit: 92b28215fd2ed019ad19f103c3e55d1e54ce2292
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from
+        studies/outcomes/order-trials-reanalysis/: `python3 patel_order.py`
+        (parts 1 and 2 always; part 3, the re-analysis, only when
+        shared.paths.scratch_root()/ds1190 exists; out/patel_order.json). The
+        committed output was written with the export absent, so it records
+        part 3 as BLOCKED. No pinned lockfile.
+    inputs: [simulation-runs, datashop-ds1190-all-data]
+    ai_processing: false
+
+  # ---- RQ4: usefulness (Section 5.4) -----------------------------------------
+
+  - id: xes3g5m-built-graph-model-calls
+    title: >-
+      The model calls behind the XES3G5M built graph: six proposer families
+      reading question text, the merge judge, attributes, two edge proposers,
+      a critic and a tagger (`e2e.py build`), and the judge's coverage of the
+      expert taxonomy's route names (`e2e.py judge`)
+    # Part of xes3g5m-built-graph's registration (docstring written 2026-09-26
+    # before any build call). Declared apart on 2026-10-08 so that the analysis
+    # calling models names only what it sent: authored item content, no learner
+    # record.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-build/e2e.py
+      commit: 6f46ca97459ffde897b356a97e1ad0c5d7d51b67
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy, and hosted language models called through
+        one routing service (OpenRouter; shared/llm.py, every answered call
+        logged in out/spend.json with model, serving provider and UTC time,
+        all on 2026-09-26): proposers google/gemini-3.8-flash,
+        openai/gpt-6-sol, anthropic/claude-sonnet-5, deepseek/deepseek-v4-pro,
+        moonshotai/kimi-k2.6 and mistralai/mistral-medium-3-5 (the reserve for
+        z-ai/glm-5.3); judge minimax/minimax-m3 with the matcher of
+        studies/producers/decomposition-study/cross_family.py; edge proposers
+        openai/gpt-6-sol and mistralai/mistral-medium-3-5, critic
+        moonshotai/kimi-k2.6; tagger deepseek/deepseek-v4.1-flash. What each
+        stage sends (e2e.py): the proposals (PROPOSE_PROMPT, show_question)
+        send each question's text (up to 300 characters), options, answer and
+        worked solution (up to 200), 120 questions per family, 840 in all; the
+        merge judge, attributes, edges and critic send only model-written
+        capability texts; the tagger (TAG_PROMPT, show_question(q, 400, 0))
+        sends the text (up to 400 characters), options and answer of all
+        7,652 questions, with no solution, in batches of 20. build() reads
+        only questions() and never opens attempts.tsv. Run from
+        studies/end-to-end/xes3g5m-build/: `python3 e2e.py build` (writes
+        build/, committed and frozen before any learner record was read).
+        The coverage judge is its own step, `python3 e2e.py judge` (CHANGES
+        9, 2026-10-08; writes build/coverage-judge.json): its prompts hold
+        the 187 depth-3 route prefixes of cid2route.json and the 401 built
+        node texts of build/nodes.json, and no learner record. It was rerun
+        on 2026-10-08 with zero data retention requested on every call
+        (minimax/minimax-m3; out/spend.json); the first run, made inside
+        `analyse` on 2026-09-26, is superseded.
+        Environment variables: XES_DIR, OPENROUTER_API_KEY (from the
+        environment or a gitignored .env). No pinned lockfile. A prompt cannot
+        be re-sent from the release; the recorded outputs (build/) are
+        published in code/.
+    inputs: [xes3g5m-question-content, xes3g5m-route-names]
+    ai_processing: true
+
+  - id: figure-usefulness
+    title: >-
+      Figure 3, the expert KC-route tree's same-shape controls and the coupled
+      state's retained-share rule (Section 5.4), drawn as a diagram with every
+      quantity it shows checked against the committed results and code
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-kc-tree-control/figure_usefulness.py
+      commit: 0b2ead8f47168a6ad8154016879e20f85ebee14a
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        matplotlib 3.11.2; no model call and no corpus read. Run from
+        studies/end-to-end/xes3g5m-kc-tree-control/: `python3
+        figure_usefulness.py` writes
+        research/article/figures/learning-graph-budget-2026/fig3-expert-hierarchy
+        as SVG and 300-dpi PNG, byte-identical on re-run. The figure shows no
+        result. Its counts come from out/result.json (analysis
+        kc-tree-control), its numbers of deranged trees and its bar from
+        kc_tree.py's constants (read with ast), and the coupled state's rule
+        from studies/measurement/graph-state/coupling.py. The script checks
+        that the illustrative tree obeys the derangement rule; in the research
+        repository it also stops unless Section 5.4 prints each quantity as
+        drawn.
+    inputs:
+      - xes3g5m
+    ai_processing: false
+
+  - id: figure-build
+    title: >-
+      Figure 2, the graph built by language models for RQ4 and the arms that
+      test it (Section 4.6), drawn as a diagram with every quantity it shows
+      checked against the committed build and result files
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-build/figure_build.py
+      commit: a66c1a8002dd11f6a61f1cd01133a23710ac8394
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        matplotlib 3.11.2; no model call and no corpus read. Run from
+        studies/end-to-end/xes3g5m-build/: `python3 figure_build.py` writes
+        research/article/figures/learning-graph-budget-2026/fig2-build-and-arms
+        as SVG and 300-dpi PNG, byte-identical on re-run. The figure shows no
+        result. Its counts come from build/nodes.json, build/edges.json,
+        build/tags.json and out/result.json (the committed aggregates of
+        analysis xes3g5m-built-graph), and its sample size, bars and bootstrap
+        draws from e2e.py's constants, read with ast rather than by running
+        it. The script stops if those files disagree with each other or the
+        arms differ from those scored; in the research repository it also
+        stops unless Section 4.6 prints each quantity as drawn.
+    inputs:
+      - xes3g5m
+    ai_processing: false
+
+  - id: xes3g5m-built-graph
+    title: >-
+      A capability graph built by language models from XES3G5M's question text
+      alone (six proposer families, a judge, two edge proposers and a critic,
+      a tagger), frozen, then scored on held-out learners: AUC of logistic
+      models M0 to M4r with a paired learner bootstrap and the +0.001 bar, and
+      the judge's coverage of the expert taxonomy (Table 10)
+    # Docstring pre-registration written 2026-09-26 before any build call,
+    # at bbc3339, with the build frozen at
+    # af63b35 (app-repository history), before learner data were read.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-build/e2e.py
+      commit: 6f46ca97459ffde897b356a97e1ad0c5d7d51b67
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. The graph it scores was built by the
+        model calls declared as xes3g5m-built-graph-model-calls and is read
+        from the committed, frozen build/ (nodes.json, attributes.json,
+        edges.json, tags.json); the fits make no model call. Run from
+        studies/end-to-end/xes3g5m-build/: `python3 e2e.py --synthetic` (the
+        floor, no corpus and no model; out/synthetic.json), then `python3
+        e2e.py analyse` (reads attempts.tsv, cid2route.json and the frozen
+        build/, refuses to run while build/ has uncommitted changes under git;
+        out/result.json). It reads the coverage judge's decisions from the
+        committed build/coverage-judge.json (written by `e2e.py judge`,
+        declared under xes3g5m-built-graph-model-calls) and calls no model.
+        Environment variable: XES_DIR. No pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: built-node-followups-model-calls
+    title: >-
+      The expert-KC tagger's model calls: deepseek/deepseek-v4.1-flash naming
+      one to three of XES3G5M's 866 expert KCs for each question
+      (`expert_tags.py tag`)
+    # Part of built-node-followups' registration (expert_tags.py at a5e5485,
+    # tags frozen at 994fc1a, app-repository history), post hoc as that
+    # analysis is. Declared apart on 2026-10-08 so that the analysis calling a
+    # model names only what it sent.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-build/expert_tags.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy, and deepseek/deepseek-v4.1-flash through
+        OpenRouter (e2e.call, shared/llm.py; 388 answered calls logged in
+        out/spend.json as expert-tag, 2026-09-26). EXPERT_TAG_PROMPT holds all
+        866 leaf KCs as "k<id> | route path" (kc_list(e2e.routes()), from
+        cid2route.json) and, for each batch of 20, each question's text (up to
+        400 characters), options and answer, with no solution
+        (e2e.show_question(q, 400, 0)). tag() reads only e2e.questions() and
+        e2e.routes() and never opens attempts.tsv. Run from
+        studies/end-to-end/xes3g5m-build/: `python3 expert_tags.py tag`
+        (writes build/expert-tags.json, committed before analysis).
+        Environment variables: XES_DIR, OPENROUTER_API_KEY. No pinned
+        lockfile.
+    inputs: [xes3g5m-question-content, xes3g5m-route-names]
+    ai_processing: true
+
+  - id: built-node-followups
+    title: >-
+      Where the built nodes' gain over the expert taxonomy lies: one tag per
+      question (built primary node against the expert's first KC), and the
+      same tagger naming one to three of the 866 expert KCs per question
+    # Each docstring is a registration made before its own run
+    # (primary_tag.py at dfeff84, expert_tags.py at
+    # a5e5485 with tags frozen at 994fc1a, app-repository history), but both
+    # were written after xes3g5m-built-graph's result had been read, and the
+    # paper labels them post hoc. Not claimed as pre-specified.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-build/expert_tags.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; e2e.py's split, difficulty offset, model
+        and bootstrap, imported. No model call: both steps read the committed
+        tags, build/tags.json (from xes3g5m-built-graph-model-calls) and
+        build/expert-tags.json (from built-node-followups-model-calls),
+        beside attempts.tsv. Run from studies/end-to-end/xes3g5m-build/:
+        `python3 primary_tag.py` (out/primary-tag-result.json), then `python3
+        expert_tags.py analyse` (refuses to run while build/expert-tags.json
+        is uncommitted; out/expert-tags-result.json). Environment variable:
+        XES_DIR. No pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: kc-tree-control
+    title: >-
+      XES3G5M's expert KC-route tree against five deranged trees of the same
+      shape, the reversed tree and, as a secondary arm, route families against
+      three deranged route trees, in e2e.py's model on held-out learners
+      (TREE EQUIVALENT TO ITS DERANGEMENT; Table 11)
+    # Docstring pre-registration committed at dfc8545 before any learner data
+    # were read; floor and results at a37eb83. No design change.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-kc-tree-control/kc_tree.py
+      commit: a37eb83ec3b6a37849d5fa6b28ee8d5f0cbdd187
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; e2e.py's split, offset, IRLS model,
+        bootstrap and bar, imported (it first reproduces e2e.py's M1 and M2
+        AUCs exactly, reading the committed ../xes3g5m-build/out/result.json).
+        Run from studies/end-to-end/xes3g5m-kc-tree-control/: `python3
+        kc_tree.py --synthetic` (out/synthetic.json), then `python3 kc_tree.py`
+        (out/result.json). Environment variable: XES_DIR. No pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: dkt-route-control
+    title: >-
+      XES3G5M's real KC routes against routes from three deranged route trees,
+      fused as text into the dataset authors' simpleKT and AKT with question
+      and KC content, on the authors' folds and test set; the synthetic
+      detection floor failed for both models, so both read UNANSWERABLE
+      (floor fails) and no model was trained on the real responses
+    # Docstring pre-registration committed at 0253a01 before any model was
+    # trained on XES3G5M responses; run code at 35dd34d, with two fixes made
+    # during the synthetic floor (cfedcf4, 46e43b9; CHANGES 4 and 5).
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/end-to-end/xes3g5m-dkt-routes/dkt_routes.py
+      commit: 46e43b90454e3cbd0f40cb4dfd3dae9fbffb524f
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        PyTorch 2.4 with CUDA 12.4 (runpod/pytorch:2.4.0-py3.11-cuda12.4.1
+        image), pandas 2.2.2, scikit-learn 1.5.2, transformers 4.44.2, gdown
+        5.2.0; pyKT's simplekt.py, akt.py and utils.py at commit
+        eec087e0230520e7ae7bbd4f5433d71612df62fb, checked by MD5
+        (fusion.py). Route encoder hfl/chinese-roberta-wwm-ext, revision
+        5c58d0b8ec1d9014354d691c538661bf00bfdb44. Run on a machine with CUDA
+        graphics processors: `python3 dkt_routes.py --pod simplekt` and
+        `--pod akt` (writes to $DKT_WORK/out, default /w/out; downloads the
+        corpus from its distributor's link and checks its MD5). Ran on rented
+        secure-cloud machines (2 RTX 4090 for simpleKT, 4 L40S for AKT),
+        deleted afterwards; only the aggregates in out/ were kept.
+        `python3 dkt_routes.py --smoke` checks the code on fake data on a CPU.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: empty-cell
+    title: >-
+      Where each corpus's ordered pairs go undecided: the identifying cell
+      split exactly into coverage, order, ease and retry, read forward and
+      backward; the verdict funnel (coverage, cell, readability, power,
+      reachability gate); and a check of supported verdicts against general
+      ability (ORDER VARIATION DOES NOT SEPARATE THE CORPORA; DOCUMENTATION
+      DISAGREES; VERDICTS ARE MOSTLY ABILITY on four corpora; Table 1)
+    # Docstring pre-registration committed at 8c69b3c before any corpus was
+    # read; CHANGES 1-4 after floor runs and before the real reading; CHANGES 5
+    # the real reading's code; CHANGES 6 (funnel, ability) after the labels'
+    # real reading and before its own; CHANGES 7 (Junyi at its exercises).
+    # Three failed floor runs are kept in out/.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/empty-cell/empty_cell.py
+      commit: f14084238f1a3ca8edff1ccb50efcd426cabb064
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the atlas's own readers, pair draws and
+        verdict rule (overlap/atlas.py, overlap/positivity.py,
+        shared/edge_state.py), imported unchanged. Run from
+        studies/identifiability/empty-cell/: `python3 empty_cell.py --floor`
+        (out/floor.json), then `python3 empty_cell.py` and
+        `python3 empty_cell.py --funnel` (out/result.json), and
+        `python3 empty_cell.py --junyi-exercise` (out/junyi-exercise.json,
+        out/junyi-exercise-atlas.json). Environment variables: those of the
+        atlas, ASSIST_DIR, SLAM_DIR and DS1275_DIR.
+    inputs: [assistments-2012, edmcup-2023, ednet-kt1, xes3g5m, eedi-2020, duolingo-slam-2018-en-es, duolingo-slam-2018-es-en, duolingo-slam-2018-fr-en, datashop-ds580, datashop-ds671, datashop-ds649, datashop-ds1190-all-data, datashop-ds1275-all-data, datashop-ds1530, datashop-ds1531, datashop-ds1706]
+    ai_processing: false
+
+  - id: graph-state
+    title: >-
+      Whether a coupled Gaussian state over all skills forecasts a learner's
+      first attempt at a new skill better than independent skills, and how
+      much of that coupling gain the expert hierarchy's sibling groups keep,
+      on XES3G5M and Eedi (EMPIRICAL COVARIANCE ONLY)
+    # Docstring pre-registration at 624feea,
+    # with the second floor at 66a17bd (app-repository history), before any
+    # real statistic. Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/graph-state/coupling.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the filter and the EM fit are gstate.py,
+        the engine replay studies/measurement/engine-calibration/. Run from
+        studies/measurement/graph-state/: `python3 coupling.py synthetic`
+        (out/synthetic.json), `python3 coupling.py xes` and `python3
+        coupling.py eedi` (out/xes.json, out/eedi.json; the article reads
+        these two). out/assist.json is the same pipeline on ASSISTments and is
+        not cited. Environment variables: XES_DIR, EEDI_ANSWERS, EEDI_ZIP. No
+        pinned lockfile.
+    inputs: [xes3g5m, eedi-2020]
+    ai_processing: false
+
+  - id: filter-recheck
+    title: >-
+      Graph-state's headlines re-run with the coupled filter's Laplace update
+      replaced by moment matching, and nothing else changed (retained shares
+      0.143 and 0.352; verdicts held)
+    # Docstring pre-registration committed at a29cf54 before any run;
+    # comparison at 4df43c4.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/measurement/filter-recheck/filter_recheck.py
+      commit: 4df43c481e126930e16763d256f23110001ac5ee
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the update step is fstep.py; the original
+        pipelines are graph-state/ and state-timescales/; the synthetic check
+        uses studies/measurement/grey-box/. Run from
+        studies/measurement/filter-recheck/: `python3 filter_recheck.py
+        synthetic` (out/synthetic.json); `python3 filter_recheck.py gs xes`,
+        `gs eedi` and `gs assist` (out/gs-<corpus>.json, moment matching);
+        `python3 filter_recheck.py s2 <corpus>` for state-timescales Part A
+        (out/s2-<corpus>.json); the CHANGE 1 re-runs with the original step,
+        `gs-lap <corpus>` and `s2-lap <corpus>` (out/gs-lap-*.json,
+        out/s2-lap-*.json); then `python3 filter_recheck.py compare` (reads
+        only committed outputs; out/comparison.json). The article reads
+        gs-xes.json and gs-eedi.json. Environment variables: XES_DIR,
+        EEDI_ANSWERS, EEDI_ZIP, ASSIST_DIR; OMP_NUM_THREADS=1 for a
+        byte-identical result (the fit's BLAS summation order depends on the
+        thread count). The ASSISTments gs and s2 records were written before CHANGE 1
+        redefined the R1 check, so they lack R1_CLIM_logloss_diff; `compare`
+        recomputes R1 for such records, and every number is identical. The XES3G5M s2 steps also read
+        studies/measurement/difficulty-sources/build/ratings.json, packaged
+        with the code. No pinned lockfile.
+    inputs: [xes3g5m, eedi-2020, assistments-2012, simulation-runs]
+    ai_processing: false
+
+  # ---- RQ5: what is identified (Section 5.5) ---------------------------------
+
+  - id: latent-edge-lowrank
+    title: >-
+      Whether the pairwise gap matrix holds structure beyond single-skill
+      effects: split-half replication after removing the additive margins and
+      the leading k singular components, against a margin-matched null, on
+      XES3G5M and EdNet (PAIRWISE STRUCTURE; Table 12)
+    # The verdict was revised before any corrected number was read, after the
+    # first version (a truncation, not a deflation) was found to test the
+    # wrong thing; the docstring records both. Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/latent-edge/lowrank.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; gap matrices from
+        studies/measurement/reliability/split_half.py. Run from
+        studies/identifiability/latent-edge/: `python3 lowrank.py --splits 8`
+        (out/lowrank.json). EdNet is read on the re-issued 6,000-learner prefix.
+        Environment variables: XES_DIR,
+        EDNET_ZIP, EDNET_CONTENTS. No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1]
+    ai_processing: false
+
+  - id: latent-edge-antisymmetry
+    title: >-
+      The residual left after the margins split into its symmetric and
+      antisymmetric parts, each replicated between halves against its null,
+      with a floor of 30 planted worlds (BOTH on each corpus)
+    # Verdict strings in the docstring, "written before any real number was
+    # read"; arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/latent-edge/antisymmetry.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; lowrank.py's decomposition. Run from
+        studies/identifiability/latent-edge/: `python3 antisymmetry.py
+        --splits 8` (the floor of 30 repetitions first, then both corpora;
+        out/antisymmetry.json). `--floor-only` writes the floor alone to the
+        same file. Environment variables: XES_DIR, EDNET_ZIP, EDNET_CONTENTS.
+        No pinned lockfile.
+    inputs: [xes3g5m, ednet-kt1, simulation-runs]
+    ai_processing: false
+
+  - id: iita-dense-floor
+    title: >-
+      Whether item tree analysis's implication count can detect a planted
+      prerequisite on dense data: 15-skill XES3G5M sets with the floor measured
+      on the corpus's own matrices (UNANSWERABLE: 0.07, 0.27 and 0.20 against
+      a pass mark of 0.80)
+    # Docstring pre-registration at 09b53ca
+    # (app-repository history). Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/learning-structure/iita_dense.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; corrected IITA from iita.py. Run from
+        studies/identifiability/learning-structure/: `python3 iita_dense.py
+        --synthetic --workers 4` (out/iita-dense-synthetic.json), then
+        `python3 iita_dense.py --workers 4` (both corpora;
+        out/iita-dense.json). The worker count is written into the output, so
+        a byte-identical rerun passes the same --workers. Environment
+        variables: XES_DIR, ASSIST_DIR. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012]
+    ai_processing: false
+
+  - id: iita-pairscan
+    title: >-
+      A pair-level test of local dependence beyond one latent trait: each
+      15-skill set fitted with a 2PL model with common asymptotes, counterexample
+      counts standardised against 500 refitted parametric bootstrap draws,
+      max-T level 0.025 and the isolation rule (8 of 15 XES3G5M sets;
+      ASSISTments UNANSWERABLE; Table 13)
+    # Docstring pre-registration at 31ed282
+    # and 314fcce (app-repository history), with CHANGES 1-8 forced by the
+    # synthetic run before any real run. Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/learning-structure/iita_pairscan.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        numpy and scipy (L-BFGS-B); set construction from iita_dense.py. One
+        BLAS thread per worker is set by the script. Run from
+        studies/identifiability/learning-structure/: `python3 iita_pairscan.py
+        --synthetic --workers 2` (out/iita-pairscan-synthetic.json), then
+        `python3 iita_pairscan.py --workers 4` (both corpora;
+        out/iita-pairscan.json). Environment variables: XES_DIR, ASSIST_DIR.
+        No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012]
+    ai_processing: false
+
+  - id: pairscan-curriculum
+    title: >-
+      Whether the 12 pairs the scan flagged are linked in XES3G5M's expert
+      taxonomy (adjacency and tree distance), permuting flags within sets,
+      with a control stratified by difficulty gap and co-attempt count
+      (CURRICULUM-LINKED)
+    # Docstring pre-registration written before the comparison; CHANGE 1 was
+    # forced by the synthetic run, also before. Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/learning-structure/pairscan_curriculum.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; reads the committed out/iita-pairscan.json.
+        Run from studies/identifiability/learning-structure/: `python3
+        pairscan_curriculum.py --validate` (synthetic;
+        out/pairscan-curriculum-synthetic.json), then `python3
+        pairscan_curriculum.py` (out/pairscan-curriculum.json). Environment
+        variable: XES_DIR (cid2route.json only). No pinned lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  - id: local-dependence-checks
+    title: >-
+      The pair-level result under standard indexes (Chen and Thissen's X2 and
+      G2, a mean-centred Q3) with the same bootstrap, level and isolation rule,
+      and a bifactor re-scan with one group factor per XES3G5M module (G2
+      PAIRWISE, Q3 UNANSWERABLE, bifactor MIXED)
+    # Docstring pre-registration committed at 018e286 before any real number
+    # was read; floor at 76dd563, results at c2cade9.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/local-dependence-checks/ld_checks.py
+      commit: 018e286bcf6828db5448158c44f5d9514d8b16b7
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        numpy and scipy; the scan's fitting and bootstrap from
+        learning-structure/iita_pairscan.py, routes from pairscan_curriculum.py.
+        Run from studies/identifiability/local-dependence-checks/: `python3
+        ld_checks.py --synthetic --workers 3` (no response data;
+        out/ld-checks-synthetic.json), then `python3 ld_checks.py --workers 3`
+        (out/ld-checks.json; it first replays the committed scan). Environment
+        variables: XES_DIR, ASSIST_DIR. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012]
+    ai_processing: false
+
+  - id: ecpe-positive-control
+    title: >-
+      A latent positive control on the ECPE grammar data: a parametric
+      bootstrap likelihood-ratio test of the published attribute chain against
+      the saturated diagnostic classification model (not rejected, p 0.068;
+      the other five orders rejected), and whether the programme's three
+      cross-sectional instruments recover a planted copy (all three fail)
+    # Docstring pre-registration committed at c14cb59; results, with one dated
+    # CHANGE, at c1e90ee.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/ecpe-positive-control/ecpe_control.py
+      commit: c1e90eed04f600f683f9682b73d68f12b1782aac
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy (EM for the saturated model); the
+        instruments are learning-structure/iita.py and iita_pairscan.py and
+        conjunctive/stage3_interaction.py. One BLAS thread per worker is set
+        by the script. Run from studies/identifiability/ecpe-positive-control/:
+        `python3 ecpe_control.py --phase check` (EM recovery on a synthetic
+        world, no corpus), `--phase fit` (out/fit.json), `--phase floor`
+        (out/floor.json; about 80 minutes), `--phase real` (out/result.json).
+        Environment variable: ECPE_DIR (ecpe_responses.csv and
+        ecpe_qmatrix.csv, extracted from the CDM tarball by
+        data/ingest/ecpe/extract.py). No pinned lockfile.
+    inputs: [ecpe-grammar]
+    ai_processing: false
+
+  - id: ds1190-answers
+    title: >-
+      The DataShop ds1190 fraction-order swap scored on answers alone (numerator
+      and denominator both right at the first attempt), delayed posttest
+      trained items, multiplication first minus addition first: +0.089
+      [-0.025, +0.203], learners resampled within arm; UNINFORMATIVE (BELOW
+      FLOOR). Registered before its arm contrast was computed but not blind
+      (the logging fault, earlier step-level results and aggregate arithmetic
+      suggesting the authors' figures had been seen).
+    # Registration committed at 1e8b885; floor at 469cf62; results at b4d36c2.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/order-trials-reanalysis/patel_answers.py
+      commit: 1e8b885a91873b48435ab253dc203d90ba430619
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        numpy. Run from studies/outcomes/order-trials-reanalysis/: `python3
+        patel_answers.py --floor` (out/patel_answers_floor.json), then `python3
+        patel_answers.py` (out/patel_answers.json). Reads the ds1190 S2_AM_Blocked
+        and S2_MA_Blocked sample exports under $LDA_SCRATCH_DIR/ds1190 through
+        patel_order.load_arm. No pinned lockfile.
+    inputs: [datashop-ds1190-all-data]
+    ai_processing: false
+
+  - id: lt-trials-effect-variation
+    title: >-
+      How much the trajectory-minus-reverse effect of the length trial (ICPSR
+      151741) varies between its classes: between-class SD 0.418 logits [0,
+      1.141] (DerSimonian-Laird; Q-profile interval), within-class
+      permutation p = 0.445; CANNOT ESTIMATE (floor): 16 classes too few to
+      see a between-class SD of 0.4
+    # Pre-registration committed at aee86b2 before any per-class effect was
+    # computed; floor at c1dc98a; run at 599d011. Post hoc outputs are labelled.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/lt-trials/effect_variation.py
+      commit: 599d011862f9f185cc152f0798d7c18ba714f915
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        numpy, scipy, pandas and openpyxl. Run from studies/outcomes/lt-trials/:
+        `python3 effect_variation.py --floor`, `--run`, and the post hoc
+        `--posthoc` and `--floor-posthoc`. Reads the 151741 analysis file
+        under $LDA_SCRATCH_DIR/lt-trials. No pinned lockfile.
+    inputs: [sarama-length-trial-2021]
+    ai_processing: false
+
+  - id: lt-trials-icc
+    title: >-
+      The class intraclass correlation of posttest ability in the
+      length-measurement trajectory trial (ICPSR 151741), after removing each
+      arm's mean, and the classes per arm it implies for randomized edge
+      release (0.395, 90% BCa interval 0.226 to 0.582 over class bootstraps;
+      TOO IMPRECISE TO REPLACE the published planning values)
+    # Docstring pre-registration and floor committed at 2ae3e25, before any
+    # outcome value was read; results at 293c369. The post hoc coverage check
+    # near 0.40 and 0.50 is labelled as such and changes no verdict.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/lt-trials/icc.py
+      commit: 293c3695256aaf37aa5425a777a835e649ef730c
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        numpy, scipy, pandas and openpyxl. Run from studies/outcomes/lt-trials/:
+        `python3 icc.py --floor` (out/icc-floor.json), `python3 icc.py --run`
+        (out/icc.json, out/icc-power.json) and `python3 icc.py
+        --floor-posthoc` (out/icc-floor-posthoc.json). Reads the three
+        unpacked ICPSR deposits under $LDA_SCRATCH_DIR/lt-trials (or --dir);
+        168361 and 168846 are RAR5 inside the zip. No pinned lockfile.
+    inputs: [sarama-length-trial-2021]
+    ai_processing: false
+
+  - id: core-vs-culture-language
+    title: >-
+      Whether the cross-curricular core (b_other) is larger between corpora
+      that share a language (ASSISTments and Eedi; XES3G5M and Junyi 2020):
+      within minus across -0.006 [-0.067, +0.055], resampling cluster pairs;
+      UNDERPOWERED (floor power check failed); cross-language core holds
+    # Design committed at fb8cd9e; point estimate not blind (a mean of
+    # coefficients already printed); intervals, control and verdict new.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture-language/language_split.py
+      commit: c33eac59095d88ee6f3c839ba497960a59577040
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from
+        studies/identifiability/core-vs-culture-language/: `python3
+        language_split.py --synthetic` (the floor), then `python3
+        language_split.py analyse`. Reads the committed
+        core-vs-culture/out/invariance-pairs.json and
+        core-vs-culture-linking/out/linking-pairs.json; no corpus and no
+        model. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012, eedi-2020, junyi-2020]
+    ai_processing: false
+
+  - id: reverse-reinforcement
+    title: >-
+      Whether meeting the dependent skill b between two attempts at a raises
+      the next answer on a, for Eedi learners who had not yet passed a,
+      against matched learners who met a skill of similar difficulty from
+      another strand: -0.012 [-0.016, -0.007], -0.007 [-0.014, -0.002]
+      beyond a deranged copy, resampling learners; NO REVERSE EFFECT
+      (observational)
+    # Design committed at 75b04e4 before any Eedi read; positivity 09f4ddc;
+    # floor d0e934f; run e464704.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/reverse-reinforcement/reverse_reinforcement.py
+      commit: 75b04e4631e5ab29ffaf65eaa484c2c277c0a2e3
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from studies/identifiability/reverse-reinforcement/: `python3
+        reverse_reinforcement.py skeleton`, `positivity`, `floor`, then
+        `real`. Reads Eedi (EEDI_ZIP, EEDI_ANSWERS); the per-case files and
+        sealed outcomes stay outside the repository. No pinned lockfile.
+    inputs: [eedi-2020]
+    ai_processing: false
+
+  - id: order-variation-estimator
+    title: >-
+      Whether an estimator that uses variation in the order learners met two
+      skills, with later accuracy and an adjustment for prior ability, orients
+      edges beyond the difficulty sort: beats the sort in simulation under
+      random order with disjunctive prerequisites (+0.221 [+0.188, +0.251],
+      resampling worlds), fooled when abler learners choose the order; FLOOR
+      FAILED, real readings (ASSISTments, EdNet) UNANSWERABLE
+    # Design committed at 9c7a756; simulation 0de51f6; changes after the
+    # simulation and before any real row at 47c6e60; positivity ceed51a; real 4882f53.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/order-variation-estimator/order_variation.py
+      commit: ceed51a4a2599987c18f03845079d381eebcf5a3
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. Run from studies/identifiability/order-variation-estimator/: `python3
+        order_variation.py sim`, `sim-posthoc`, `positivity --light`, then
+        `real`. The simulation needs no corpus; positivity and the real
+        readings read EdNet KT1 and ASSISTments 2012-13 (and count Eedi and
+        Junyi on ds1275). Environment variables: EDNET_ZIP, EDNET_CONTENTS,
+        ASSIST_DIR, EEDI_ANSWERS, EEDI_ZIP, DS1275_DIR, JUNYI_DIR. No pinned
+        lockfile.
+    inputs: [simulation-runs, ednet-kt1, assistments-2012]
+    ai_processing: false
+
+  - id: reverse-reinforcement-related
+    title: >-
+      Reverse reinforcement on related Eedi pairs: within one strand, meeting b
+      changes the next answer on a by -0.013 [-0.023, -0.006] with the same
+      dip on a deranged copy (NOT B-SPECIFIC); on pairs linked by Common Core
+      progressions (model-mapped subjects) the part specific to b is +0.010
+      [-0.004, +0.018] (NO REVERSE EFFECT); same group UNANSWERABLE
+    # Registered after the parent's result (design ade77d4); derangement changed
+    # before any floor or outcome (CHANGE 1, 378cb77); floor a0e65bb; run 2bf1306.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/reverse-reinforcement-related/reverse_reinforcement_related.py
+      commit: 378cb77598e658ace1d8e1a53edfe0bef89f936c
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; imports
+        studies/identifiability/reverse-reinforcement/reverse_reinforcement.py
+        and reads the Coherence Map derivative and the committed
+        core-vs-culture/out/unit-map.json. Run from studies/identifiability/reverse-reinforcement-related/:
+        `skeleton`, `positivity`, `floor --set L1`, `floor --set CM`,
+        `assemble --set L1`, then `real`. Reads Eedi (EEDI_ZIP, EEDI_ANSWERS).
+        No pinned lockfile.
+    inputs: [eedi-2020, coherence-map]
+    ai_processing: false
+
+  - id: holon-projection
+    title: >-
+      HOLON-1: whether the order of courses in MOOCCubeX enrollments equals the
+      projection of the dataset's concept-level prerequisite graph onto
+      courses, with course order controlled for the catalogue (UNANSWERABLE:
+      the binding floor failed, because the catalogue control also removes any
+      order every learner shares). Descriptive: the concept-to-course map is
+      model-extracted with no human reference.
+    # Docstring pre-registration committed at 9ed765e (before any learner
+    # data); CHANGES and floor results at 50ac955 (before any real-data
+    # statistic).
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/holon-projection/holon.py
+      commit: 50ac9555c62286ae8e08d20b2f78c3f329301a61
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; the projection rule is
+        studies/workforce/graphex/zoom.py. Run from
+        studies/identifiability/holon-projection/: `python3 holon.py
+        --write-courses` (out/projection.json), `--floor --shape synthetic`
+        (out/floor-synthetic.json), `--floor --shape real`
+        (out/floor-real.json), `--real` (out/holon.json), and `python3
+        floor_diagnosis.py out/floor-diagnosis.json`. Environment variable:
+        MOOCCUBEX_DIR (prerequisites/{cs,psy,math}.json,
+        relations/concept-course.txt, entities/user.json). The general factor
+        is $LDA_SCRATCH_DIR/derived-holon-projection/ability.tsv, written by
+        ability_ingest.py from relations/user-problem.json streamed and never
+        stored; it was dropped from the family key as pre-registered, because
+        fewer than 20% of learners had enough problem rows. The concept-course
+        relation file was not hashed when read. No pinned lockfile.
+    inputs:
+      - mooccubex-prerequisites-math
+      - mooccubex-prerequisites-cs
+      - mooccubex-prerequisites-psy
+      - mooccubex-user
+      - mooccubex-user-problem
+    ai_processing: false
+
+  - id: cross-curricular-invariance-model-calls
+    title: >-
+      The Common Core cluster map: two language models assigning each unit
+      name of XES3G5M, ASSISTments 2012-13, Eedi and Junyi 2020 to a cluster,
+      the clusters described by EDM Cup's skill descriptions
+      (`invariance.py map`)
+    # Part of cross-curricular-invariance's registration (0d7def1, map frozen
+    # at d4acbb0, app-repository history). Declared apart on 2026-10-08 so that
+    # the analysis calling models names only what it sent.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/invariance.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library, and two hosted language models through OpenRouter
+        (shared/llm.py): openai/gpt-6-sol (primary) and
+        deepseek/deepseek-v4-pro (second); 142 answered calls logged in
+        out/invariance-spend.json, 2026-09-27. MAP_PROMPT holds the 92 Common
+        Core clusters, each with up to three of EDM Cup's skill descriptions
+        (clusters(), problem_details.csv), and, for each batch of 40, unit
+        names numbered u<i> with the corpus ids withheld (unit_names()): 866
+        XES3G5M route paths, 245 ASSISTments skill names, 308 Eedi subject
+        paths and 1,330 Junyi 2020 unit titles. map_units() calls only
+        clusters() and unit_names(), which read name tables; it never calls
+        cells() or opens an attempts, answers or student-metadata file. Run
+        from studies/identifiability/core-vs-culture/: `python3 invariance.py
+        map` (out/unit-map.json, committed before analysis). Environment
+        variables: XES_DIR, ASSIST_DIR (assist_skill_names.csv, from
+        data/ingest/assist2012/skill_names.py), EEDI_ZIP, JUNYI2020_DIR,
+        EDMCUP_DIR, OPENROUTER_API_KEY. No pinned lockfile.
+    inputs:
+      - xes3g5m-route-names
+      - assistments-2012-skill-names
+      - eedi-subject-names
+      - junyi-2020-unit-names
+      - edmcup-2023-skill-descriptions
+    ai_processing: true
+
+  - id: cross-curricular-invariance
+    title: >-
+      Whether dependence between Common Core clusters carries from one national
+      platform to another (b_other) beside local teaching proximity (b_prox),
+      over XES3G5M, ASSISTments 2012-13, Eedi and Junyi 2020, with each unit
+      mapped to a cluster by a language model (CORE AND CULTURAL)
+    # Docstring pre-registration at 0d7def1
+    # with the map frozen at d4acbb0 (app-repository history). Arrived at
+    # dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/invariance.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. No model call: the cluster of each unit
+        comes from the committed out/unit-map.json, made by
+        cross-curricular-invariance-model-calls, and analyse refuses to run
+        while that file is uncommitted. Run from
+        studies/identifiability/core-vs-culture/: `python3 invariance.py
+        --synthetic` (out/invariance-synthetic.json), then `python3
+        invariance.py analyse` (reads each corpus's learner records through
+        cells(); out/invariance-pairs.json, out/invariance-result.json).
+        Environment variables: XES_DIR, ASSIST_DIR (assist_rich.csv),
+        EEDI_ANSWERS, EEDI_ZIP, JUNYI2020_DIR. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012, eedi-2020, junyi-2020]
+    ai_processing: false
+
+  - id: cluster-map-human-check-model-calls
+    title: >-
+      The translation of the human check's 50 Chinese unit names by
+      google/gemini-3.8-flash, made while drawing the coding sample
+      (`human_codes.py sample`)
+    # Part of cluster-map-human-check's registration (a528af0). Declared apart
+    # on 2026-10-08 so that the analysis calling a model names only what it
+    # sent.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/human_codes.py
+      commit: 4c8e603430984115f3ae3b4a45d39b9f9bb96eef
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus openpyxl, and google/gemini-3.8-flash through
+        OpenRouter (shared/llm.py): one call, served by Google (Vertex) at
+        2026-10-07T02:24:09Z (out/human-sample.json, translator_served).
+        TRANSLATE_PROMPT holds "t<i> | name" for the sampled Chinese units
+        only: 25 XES3G5M route paths and 25 Junyi 2020 unit titles, from
+        invariance.unit_names(). The ASSISTments and Eedi names and the EDM
+        Cup clusters go into the local coding workbook and are not sent. The
+        sample is drawn from the unit ids of the committed out/unit-map.json;
+        no learner record is read. Run from
+        studies/identifiability/core-vs-culture/: `python3 human_codes.py
+        sample` (out/human-sample.json, and the coding workbook, written to
+        scratch). Environment variables: XES_DIR, ASSIST_DIR, EEDI_ZIP,
+        JUNYI2020_DIR, EDMCUP_DIR, OPENROUTER_API_KEY. No pinned lockfile.
+    inputs: [xes3g5m-route-names, junyi-2020-unit-names]
+    ai_processing: true
+
+  - id: cluster-map-human-check
+    title: >-
+      A blind human check of the Common Core cluster map: 25 units per corpus
+      coded by one person blind to both models' maps, Cohen's kappa against
+      the primary map with a bootstrap over items within corpus (MAP
+      VALIDATED, kappa 0.606 [0.493, 0.709]; Table 14)
+    # Docstring pre-registration committed at a528af0 before the coding was
+    # returned; scored at bbfa11a.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/human_codes.py
+      commit: 4c8e603430984115f3ae3b4a45d39b9f9bb96eef
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy. No model call: the coding sample and its
+        translations come from cluster-map-human-check-model-calls
+        (`human_codes.py sample`), whose workbook shows the coder each unit's
+        name, the translation for Chinese names, and the 92 clusters with
+        EDM Cup's skill descriptions. Run from
+        studies/identifiability/core-vs-culture/: `python3 human_codes.py
+        --synthetic`, then `python3 human_codes.py score coder1.xlsx` (the
+        returned workbook, with out/human-sample.json and the committed
+        out/unit-map.json; writes out/human-codes.json and
+        out/human-agreement.json). The workbook is not published;
+        out/human-codes.json holds the person's codes. Coder
+        human:david-porcaro. No learner record is read. No pinned lockfile.
+    inputs:
+      - xes3g5m-route-names
+      - assistments-2012-skill-names
+      - eedi-subject-names
+      - junyi-2020-unit-names
+      - edmcup-2023-skill-descriptions
+    ai_processing: false
+
+  - id: cross-curricular-linking
+    title: >-
+      The core-versus-culture split under other linkings (ranks, a Huber
+      M-estimator, a coarser grade-and-domain map) after reproducing the
+      committed coefficients from the raw corpora, and whether recorded
+      co-assignment absorbs part of the local layer (LINKING-ROBUST; EXPOSURE
+      ABSORBS PART OF THE LOCAL LAYER; CORE HOLDS; Table 15)
+    # Docstring pre-registration committed at 57af02d before any real number;
+    # results at ba69fef. The analysis started while the floor ran, with its
+    # verdict step made to wait for the floor record.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture-linking/linking.py
+      commit: ba69fef5436b291841fe6b255b34476ceeddea2b
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; invariance.py's statistics and draws,
+        imported. Run from studies/identifiability/core-vs-culture-linking/:
+        `python3 linking.py --synthetic` (out/linking-synthetic.json), `python3
+        linking.py read` (streams the four corpora once into
+        $LDA_SCRATCH_DIR/derived-core-vs-culture-linking/, a cache that is
+        deleted afterwards), `python3 linking.py analyse`
+        (out/linking-result.json, out/exposure-result.json,
+        out/linking-pairs.json), and `python3 linking.py clean`. Environment
+        variables: XES_DIR, ASSIST_DIR, EEDI_ANSWERS, EEDI_ZIP, JUNYI2020_DIR,
+        LDA_SCRATCH_DIR. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012, eedi-2020, junyi-2020]
+    ai_processing: false
+
+  - id: cross-curricular-no-xes
+    title: >-
+      The cross-curricular regression refitted without XES3G5M, and dropping
+      each corpus in turn, from the committed cluster-pair statistics (CORE
+      AND CULTURAL)
+    # Docstring pre-registration committed at 9cc4075 before any statistic of
+    # this design was computed; results at 358eed8. Its point estimate was not
+    # blind (the mean of six coefficients already printed); the interval, null
+    # and verdict were new.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture-no-xes/no_xes.py
+      commit: 358eed890cbdd100f60463255afb71327889dda5
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; linking.py's faster estimator. Reads no
+        corpus: the committed ../core-vs-culture/out/invariance-pairs.json,
+        unit-map.json and human-codes.json and
+        ../core-vs-culture-linking/out/linking-pairs.json. Run from
+        studies/identifiability/core-vs-culture-no-xes/: `python3 no_xes.py
+        --synthetic` (out/no-xes-synthetic.json), then `python3 no_xes.py
+        analyse` (needs the floor; out/no-xes-result.json). No pinned lockfile.
+    inputs: [assistments-2012, eedi-2020, junyi-2020, xes3g5m]
+    ai_processing: false
+
+  - id: cross-curricular-prior-split
+    title: >-
+      Whether the local layer is larger for learners with lower accuracy:
+      each corpus's learners split at their median accuracy, the regression
+      run on each half (LOCAL LAYER LARGER FOR LOW-PRIOR LEARNERS)
+    # The docstring is a registration written 2026-09-27 before any of its
+    # statistics (b24bb02, app-repository history), but
+    # after invariance.py's result had been read; the paper labels it post
+    # hoc. Not claimed as pre-specified.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/prior_split.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; invariance.py's cells and statistics,
+        imported. Run from studies/identifiability/core-vs-culture/: `python3
+        prior_split.py` (out/prior-split-result.json). Environment variables
+        as cross-curricular-invariance's analyse step. No pinned lockfile.
+    inputs: [xes3g5m, assistments-2012, eedi-2020, junyi-2020]
+    ai_processing: false
+
+  - id: carving-rashomon
+    title: >-
+      How many carvings of XES3G5M's questions into skills fit held-out
+      learners equally well in M3's form of the model, against two
+      content-free carvings (NON-UNIQUE CARVING; CONTENT MATTERS)
+    # Docstring pre-registration at 0d7def1
+    # (app-repository history). Arrived at dcb4b9c.
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/identifiability/core-vs-culture/rashomon.py
+      commit: dcb4b9c43d4194d46b8890cfb4e9eb7a264ce950
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        Standard library plus numpy; e2e.py's split, offset and model, and the
+        committed ../../end-to-end/xes3g5m-build/build/tags.json and
+        expert-tags.json. No model call. Run from
+        studies/identifiability/core-vs-culture/: `python3 rashomon.py`
+        (out/rashomon-result.json). Environment variable: XES_DIR. No pinned
+        lockfile.
+    inputs: [xes3g5m]
+    ai_processing: false
+
+  # ---- Discussion ------------------------------------------------------------
+
+  - id: edge-release-power
+    title: >-
+      Power arithmetic for a randomised edge-release trial: the minimum
+      detectable difference in first-encounter accuracy at 30 learners per
+      arm, and the learners per arm a 0.10 difference needs
+    # Arithmetic committed to back two figures an earlier draft printed; no
+    # verdict. Not pre-specified.
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/outcomes/lt-trials/arm_power.py
+      commit: 29d0e861ff20c9afbb127bec46a28e88dd2fe99c
+    environment:
+      language: python
+      version: "3.11"
+      detail: >-
+        scipy (normal quantiles). Reads no data. Run from
+        studies/outcomes/lt-trials/: `python3 arm_power.py`
+        (out/arm_power.json). No pinned lockfile.
+    inputs: [simulation-runs]
+    ai_processing: false
+
+# The findings are NOT restated here. They are records in observations/, and
+# each names this release back.
+evidence:
+  - ref: lazuli-graph-external-corpora-2026/existence-cell-empty-where-order-is-fixed
+    note: >-
+      Existence on ASSISTments and EDM Cup. The reading the id names (an empty
+      cell where the platform fixes the order) is revised: Section 5.1
+      attributes most empty identifying cells to coverage, and a uniform order
+      hides only the reverse direction of a pair.
+  - ref: lazuli-graph-external-corpora-2026/free-choice-fills-the-cell-not-the-verdict
+    note: >-
+      Existence where the identifying cell fills (Eedi, XES3G5M, EdNet). The
+      id's "free choice" reading is revised: how a platform documents its order
+      did not predict which corpora could decide pairs, and most supported
+      verdicts did not survive an adjustment for general ability (Section 5.1).
+  - ref: lazuli-graph-external-corpora-2026/prerequisite-drop-decays-with-lag-across-domains
+    note: >-
+      The drop is smaller at long lags in all four corpora that can be read,
+      and in 12 of 13 domains (Section 5.1).
+  - ref: lazuli-graph-simulation-2026/orientation-needs-a-gate
+    note: >-
+      Direction (simulated). The reading the id names ("needs a gate") is
+      revised: the orientation statistic is identically a sort from the easier
+      skill to the harder, so it is right only as far as difficulty rises along
+      the true edges (Section 5.1).
+
+artifacts:
+  - id: paper-prerequisite-edge
+    kind: preprint
+    title: >-
+      What learner records can say about a prerequisite edge (the article of this
+      release)
+    location:
+      kind: internal
+      ref: research/article/what-learner-records-can-say-about-a-prerequisite-edge.md
+  - id: positivity-atlas-results
+    kind: result
+    title: The positivity atlas, the reachability gate and the lag bands
+    location:
+      kind: git
+      ref: studies/identifiability/overlap/ATLAS.md
+  - id: domain-mechanism-results
+    kind: result
+    title: The pre-registered domain split of the lag decay
+    location:
+      kind: git
+      ref: studies/identifiability/domain-mechanism/README.md
+  - id: surmise-vs-positivity-results
+    kind: result
+    title: >-
+      IITA surmise relations against positivity on ASSISTments, with the
+      post-hoc detection-floor caveat
+    location:
+      kind: git
+      ref: studies/identifiability/surmise-vs-positivity/README.md
+  - id: mastery-release-results
+    kind: result
+    title: The skill-builder release penalty by lag, and the retention deficit
+    location:
+      kind: git
+      ref: studies/identifiability/rdd/LAG.md
+  - id: mastery-release-lag-output
+    kind: result
+    title: Lag buckets, within-pair arm and retention gap
+    location:
+      kind: git
+      ref: studies/identifiability/rdd/out/lag.json
+  - id: conjunctive-bar-results
+    kind: result
+    title: The above-bar share against a deranged pipeline null, and the settled bar
+    location:
+      kind: git
+      ref: studies/identifiability/conjunctive/BAR.md
+  - id: conjunctive-bar-xes3g5m-output
+    kind: result
+    title: Above-bar share on XES3G5M by scope
+    location:
+      kind: git
+      ref: studies/identifiability/conjunctive/out/relative_bar_xes3g5m.json
+  - id: conjunctive-bar-ednet-output
+    kind: result
+    title: Above-bar share on re-issued EdNet by scope
+    location:
+      kind: git
+      ref: studies/identifiability/conjunctive/out/relative_bar_ednet.json
+  - id: conjunctive-blindness-results
+    kind: result
+    title: Planted conjunctive gates read by pairwise and interaction statistics
+    location:
+      kind: git
+      ref: studies/identifiability/conjunctive/STAGE1.md
+  - id: working-record
+    kind: reference
+    title: >-
+      The studies directory: every run, every correction, every retracted
+      result
+    location:
+      kind: git
+      ref: studies/
+  - id: positivity-atlas-output
+    kind: result
+    title: >-
+      The positivity atlas: one row per corpus, with edge states before and after the reachability gate
+    location:
+      kind: git
+      ref: studies/identifiability/overlap/out/atlas.json
+  - id: positivity-atlas-slam-output
+    kind: result
+    title: >-
+      The positivity atlas on Duolingo SLAM's three courses at two grains
+    location:
+      kind: git
+      ref: studies/identifiability/overlap/out/atlas-slam.json
+  - id: positivity-assist-output
+    kind: result
+    title: >-
+      The ASSISTments positivity reading over 29,018 learners
+    location:
+      kind: git
+      ref: studies/identifiability/overlap/out/positivity-assist.json
+  - id: random-order-output
+    kind: result
+    title: >-
+      ASSISTments random-order sections: co-seen skill pairs and the order split within each
+    location:
+      kind: git
+      ref: studies/identifiability/overlap/out/random_order.json
+  - id: lag-bands-output
+    kind: result
+    title: >-
+      The positivity drop by lag band, per corpus
+    location:
+      kind: git
+      ref: studies/identifiability/overlap/out/lag_bands.json
+  - id: domains-output
+    kind: result
+    title: >-
+      The lag decay by domain within each corpus
+    location:
+      kind: git
+      ref: studies/identifiability/domain-mechanism/out/domains.json
+  - id: surmise-vs-positivity-output
+    kind: result
+    title: >-
+      IITA-asserted ASSISTments edges read by the positivity audit
+    location:
+      kind: git
+      ref: studies/identifiability/surmise-vs-positivity/out/assist.json
+  - id: iita-real-output
+    kind: result
+    title: >-
+      Corrected IITA on 20 MOOCCubeX item sets, with the difficulty and fixed-margins nulls
+    location:
+      kind: git
+      ref: studies/identifiability/learning-structure/out/iita-real-result.json
+  - id: iita-concept-output
+    kind: result
+    title: >-
+      Corrected IITA on 11 MOOCCubeX concept sets
+    location:
+      kind: git
+      ref: studies/identifiability/learning-structure/out/iita-concept-result.json
+  - id: lower-tail-output
+    kind: result
+    title: >-
+      The 20 MOOCCubeX item sets rescored against the lower tail of the fixed-margins null
+    location:
+      kind: git
+      ref: studies/identifiability/learning-structure/out/lower-tail-reanalysis.json
+  - id: conjunctive-blindness-output
+    kind: result
+    title: >-
+      Planted conjunctive arms read pairwise and by the interaction of two
+      parents on the dependent
+    location:
+      kind: git
+      ref: studies/identifiability/conjunctive/out/stage1.json
+
+interpretation: >-
+  Observational learner records can rarely show that a prerequisite edge
+  exists, and the statistic that appears to orient one sorts skills by
+  difficulty. What the records do identify is dependence between skills. An
+  edge from skill a to skill b is identified by comparing learners who met b
+  after attempting a without passing it with learners who met b after passing
+  a, and a prerequisite is taken to lower first-attempt accuracy on b by 0.10.
+  Randomized release of an edge creates that comparison by design and ensures
+  that a difference between groups is not general ability, though a trial
+  still needs hundreds of learners for each edge it tests.
+
+  Existence (RQ1; real learner records). The comparison was rarely large
+  enough to test. Most pairs of skills are attempted by few of the same
+  learners: the median pair had no learner in common on EDM Cup and only 4 on
+  ASSISTments. Where a pair is covered, its identifying cell holds tens of
+  learners on most corpora, where a test of a 0.10 drop needs between 277 and
+  379 learners in each group; only Eedi, with 118,971 learners, could test
+  more than a quarter of its pairs. A uniform order of skills hides only the
+  reverse direction of a pair, and how a platform documents its order did not
+  predict which corpora could decide pairs. In ASSISTments 2012-13's
+  random-order configuration, problems are randomized but skills are not:
+  across 3,838 combinations of a problem set and a pair of skills, within no
+  problem set did more than 15 students meet a pair of skills in the less
+  common order. Most of the supported verdicts did not survive an adjustment
+  for general ability: in the four corpora with enough supported edges to
+  check, at most 27.6% survived an adjustment for each learner's accuracy on
+  other skills. Most negative verdicts fail on power rather than positivity:
+  across the atlas file's corpora, the reachability gate returned 1,183 of
+  1,399 powered pairwise nulls to unknown, and in 1,155 of those (97.6%) a
+  merge node was readable but not powered. What empties the identifying cell
+  is which learners met which skills, and when, not the design of the items.
+  Where the contrast exists, the drop is smaller after a week than within a
+  day in all four corpora that can be read, and in 12 of 13 domains. On Eedi,
+  that shrinking is accounted for by learners who had not passed the
+  prerequisite catching up on it, a reading from one corpus, re-registered
+  after its estimates were seen.
+
+  Direction (RQ1; simulated, with real corpora placed). The orientation
+  statistic is identically a sort from the easier skill to the harder, so it
+  is right only as far as difficulty rises along the true edges. In a
+  simulated world where a skill needs any one of its prerequisites rather than
+  all of them, and later skills are easier than earlier ones, it points most
+  edges the wrong way. On the real corpora that could be placed, difficulty
+  rises only weakly with depth: on ASSISTments, with grade as assigned by a
+  name-matching rule that no person checked, the skill from the higher Common
+  Core grade was harder in 0.576 [0.503, 0.647] of pairs, and the dependent
+  was harder along 0.579 of Junyi's authored edges, a sign established by a
+  floor that failed on power. An estimator that uses variation in the order in
+  which learners met the skills is not tied to difficulty when that order is
+  assigned at random, but in simulation it was fooled when abler learners
+  chose the order, even after an adjustment for ability.
+
+  Reliability (RQ2). The same kind of data does not give the same edges twice
+  to the standard this work set. The split-half reliability of the ranking of
+  pairs reached 0.643 on XES3G5M, at most 0.743 on its 90 best-covered skills,
+  and 0.136 on EdNet, against a bar of 0.80. Agreement on which pairs to
+  assert rose with the number of learners, but on XES3G5M it levels off at an
+  excess kappa of +0.644 [+0.584, +0.722], below 0.80. Where reliability is
+  high, as for course order on MOOCCubeX, it is nearly as high on deranged
+  data and measures the curriculum. Repeatability also does not certify edges:
+  in a simulated world shaped like XES3G5M a ranking exceeded 0.80 while 0.075
+  of its asserted edges were true, and across 20 such worlds the adopted
+  rule's precision stayed between 0.074 and 0.095 from 500 to 32,000
+  learners. Stability selection gave a precision of 0.956 at a sensitivity of
+  0.150 in those worlds; on real data it selected 10 of 32,362 candidate pairs
+  on XES3G5M and none on EdNet.
+
+  Validity (RQ3). No independent order confirmed the edges derived from
+  learner records, and none contradicted them, so their validity is untested
+  rather than shown or refuted. Common Core grade order, as assigned to
+  ASSISTments skills by a name-matching rule that no person checked, was NOT
+  RECOVERED: the excess over a deranged control was +0.0117 [+0.0054,
+  +0.0181], positive but below the registered bar of 0.02, and it came only
+  through the approximately matched skills (exact names alone gave -0.0022
+  [-0.0099, +0.0094]). On EDM Cup the same test was unanswerable or
+  underpowered. On Junyi, crowdsourced ratings of prerequisite strength
+  correlated with the learner order effect at +0.299 [-0.017, +0.571], not
+  shown to differ from zero, and the ratings mostly follow how close two
+  skills sit in the taxonomy (-0.740). Randomized trials show that order can
+  matter, by +0.317 logits in the one trajectory-order trial with deposited
+  data, but none randomized the order of two skills whose edge the records had
+  decided.
+
+  Usefulness (RQ4). On XES3G5M, edges that language models built from
+  question text raised the area under the curve (AUC) for held-out learners'
+  next attempts by +0.000161 [+0.000115, +0.000207] over the same nodes
+  without edges, and by +0.000151 [+0.000107, +0.000196] over the same edge
+  list joining skills assigned at random. Both fall below the pre-registered
+  bar, so the verdict is EDGES ADD NOTHING, from an instrument that detected
+  every planted prerequisite effect. The dataset's own expert tree was
+  equivalent to deranged trees of the same shape within the pre-registered
+  margin of 0.001, +0.000037 [+0.000010, +0.000063], and the verdict is TREE
+  EQUIVALENT TO ITS DERANGEMENT. What predicted was the nodes: the built nodes
+  beat the expert taxonomy by +0.002405, mostly because each question was
+  tagged with every skill it draws on. In the dataset authors' deep
+  knowledge-tracing models (simpleKT and AKT) the route control's detection
+  floor failed, so the verdict there is UNANSWERABLE.
+
+  What is identified (RQ5). On XES3G5M, the gap matrix the atlas reads holds a
+  pairwise residual beyond the effects of single skills that replicates
+  between halves of the learners at +0.318, part of it antisymmetric; on EdNet
+  the residual is small, +0.022. Item tree analysis's implication count sees
+  no dependency on MOOCCubeX and could not have seen one: on dense XES3G5M
+  sets, a single planted prerequisite moved it in 0.07 of placements, a
+  conjunctive gate in 0.27 and a chain in 0.20, against a pass mark of 80%, so
+  the registered verdict is UNANSWERABLE and its null, MOOCCubeX's included,
+  is not evidence of absence. A pair-level test against a fitted one-trait
+  model, whose floor passed, finds pairwise local dependence beyond one trait
+  in 8 of 15 XES3G5M sets, on 12 pairs that sit close together in the expert
+  taxonomy; it cannot orient a pair or tell a prerequisite from a trait two
+  skills share. Across four national curricula, part of the dependence
+  carries from one country's platform to another's, b_other +0.125 [+0.091,
+  +0.158], and a larger part follows local teaching, b_prox +0.363 [+0.326,
+  +0.401]. That result rests on a map of units to Common Core clusters coded
+  by a model and checked by one person at a kappa of 0.606 [0.493, 0.709], and
+  it cannot separate a cognitive core from a culture of mathematics education
+  the four countries share.
+
+  Testing an edge. A release trial that randomizes learners needs 291 to 385
+  per arm to detect the drop of 0.10 in accuracy the atlas tests for, and
+  about 1,570 to detect 0.10 standard deviations; randomizing encounters needs
+  fewer learners and randomizing classes more (the article's Table 16). Until
+  such trials are run, the case for any particular edge rests on instructional
+  judgment, not on records in which too few learners met the skill without it
+  to test the claim.
+
+limitations:
+  - >-
+    NO RESULT HERE COMES FROM OUR OWN PLATFORM. The results on existence, lag,
+    reliability, validity, usefulness and what is identified (RQ1 to RQ5) rest
+    on archival learner records and three randomized trials collected by
+    others. The orientation sweep, the error curve of the adopted rule, the
+    stability-selection bound, the kappa-bar world and the order-variation
+    estimator are simulated, and hold for the worlds simulated, whose
+    mechanisms, difficulty regimes and densities the program chose. Learning
+    telemetry on our platform is collected under terms that prohibit research
+    publication. A randomized study in a course whose graph we control is
+    specified and will be reported separately.
+  - >-
+    THE ATLAS READS ONE OUTCOME AGAINST ONE CLAIMED EFFECT. A prerequisite is
+    operationalized as a drop of 0.10 in first-attempt accuracy on the
+    dependent skill, fixed in the program's shared code and not estimated from
+    any corpus. A prerequisite whose effect is smaller, or that acts on later
+    attempts, on speed or on retention, would leave its pairs unknown, not
+    contradicted. A first attempt on the record is also not necessarily a
+    learner's first encounter with a skill, and Duolingo SLAM releases only
+    each learner's first 30 days.
+  - >-
+    THE POSITIVITY ESTIMAND READS FIRST-ATTEMPT ACCURACY AT AN UNCONTROLLED
+    LAG. It shrinks with lag wherever that can be tested, and the bands hold
+    different learners, so atlas verdicts pool bands whose effects differ, and
+    the decay shows that the estimand moves with lag, not that any edge
+    weakens. Eedi keeps only each pupil's latest answer, so its order and
+    first-attempt outcomes are read from last answers.
+  - >-
+    NEGATIVE EXISTENCE VERDICTS ARE STATED UNDER A CONVENTION THIS RELEASE
+    PROPOSES. A pair is CONTRADICTED only if a merge node on it (a node reached
+    after both, with enough learners in each passed/failed stratum and enough
+    power to show a conjunctive gate) is observed, readable and powered. The
+    rule is stricter than power alone and is not derived from an external
+    standard. Its rationale is that two capabilities can be unrelated pairwise
+    and still fuse downstream, and pairwise drops do attenuate planted
+    conjunctive gates. A weaker rule, counting any powered pairwise null as
+    CONTRADICTED, would decide all 1,399 powered pairwise nulls across the
+    atlas file's corpora, of which this rule returns 1,183 to unknown, and
+    loses that protection. Whether the trade is worth making is a question for
+    causal-inference review, which remains requested.
+  - >-
+    THE ABILITY ADJUSTMENT IS PARTIAL, AND A DERANGED ARM REMOVES ABILITY
+    TOGETHER WITH ANY DEPENDENCE. The check on supported verdicts subtracts a
+    learner's mean first-attempt correctness on other skills, which measures
+    ability with error and also carries any real dependence of those skills on
+    a or b, so its survival shares estimate rather than count. Most readings
+    are an excess over a family-matched derangement, which also removes the
+    confounding by general ability, so an excess shows that a signal runs
+    through individual learners, not that it is prerequisite structure.
+  - >-
+    HOW FAR DIFFICULTY RISES ALONG REAL EDGES, AND WHICH MECHANISM REAL
+    PREREQUISITES RUN ON, IS NOT KNOWN BY DOMAIN, and together they decide how
+    often the orientation statistic, a difficulty sort, is right. On
+    ASSISTments the placement rests on an unchecked name-matching map, and on
+    Junyi on a floor that failed on power. Conjunctive structure is sparse
+    (above-bar share 0.108 [0.062, 0.170] on XES3G5M, 0.054 [0.022, 0.096] on
+    EdNet), and the drop shrinks with lag in 12 of 13 domains, with no corpus
+    showing domains differing by the pre-registered 0.03 (Eedi's spread is
+    0.025). Construction-heavy and procedural domains are untested.
+  - >-
+    SEVERAL CONSTRUCTS WERE CODED BY A MODEL OR A RULE SET, AND THE ONE HUMAN
+    REFERENCE IS A SINGLE PERSON. The map from units to Common Core clusters on
+    which the cross-curricular result rests met its registered bar against one
+    coder, the author, at a kappa of 0.606 [0.493, 0.709]: it passed by 0.006,
+    and reading the 13 blank items as no cluster, a reading not registered,
+    gives 0.549. No second person has coded the sample. The Common Core grade
+    of each ASSISTments skill was assigned by a rule set that no person
+    checked, so the directional test of RQ3 and the ASSISTments placement of
+    RQ1 rest on an unvalidated reference. MOOCCubeX's concepts were extracted
+    by a model, so the concept-level item tree analysis is descriptive. The
+    built graph's nodes, edges and tags were checked by no person, by design.
+  - >-
+    ITEM-TREE RESULTS ARE NARROWER THAN THEY LOOK. The MOOCCubeX null (1 of 20
+    item sets beyond a null that holds both ability and difficulty fixed) is
+    not evidence of absence: the implication count failed its floor on dense
+    XES3G5M sets (0.07, 0.27 and 0.20 of placements against 80%), and the
+    fixed-margins null is exact only under a Rasch model. The concept-level
+    result (9 of 11 sets surviving the first null, 0 of 11 the second) rests on
+    model-extracted concepts. On ASSISTments, read over all 29,018 learners,
+    90.3% of IITA-asserted edges fall on pairs the atlas could not decide. That
+    audit's registered floor failed at 3,000 synthetic learners once the
+    reachability gate was applied, so its registered verdict is withheld; a
+    rerun at 10,000, made after the result and labeled post hoc, passes every
+    check the reading depends on.
+  - >-
+    USEFULNESS WAS TESTED ON ONE CORPUS, BY ONE OUTCOME. The comparisons of
+    built and expert edges with their shuffled, deranged and reversed copies
+    rest on XES3G5M alone; DBE-KT22 was not used because its terms do not
+    permit its question text to be sent to model providers without written
+    permission. The models were additive logistic regressions and a coupled
+    latent state; the dataset authors' deep models were run only on synthetic
+    data, where the route control's floor failed, and architectures built to
+    use direction were not run. Prediction of the next attempt is not
+    learning: an edge set that does not improve the forecast could still
+    improve sequencing, retention or transfer, which nothing here measured.
+  - >-
+    THE CORPORA ARE THOSE THEIR PROVIDERS RELEASED, AND MOST ARE MATHEMATICS.
+    They are not a sample of platforms, two pairs of them come from one
+    platform each (ASSISTments and EDM Cup; Junyi ds1275 and Junyi 2020), and
+    in none was the order in which learners met skills randomized. Every
+    analysis of validity and usefulness rests on mathematics. The
+    cross-curricular comparison reads one platform from each of four
+    countries, two in each language, so part of what carries across curricula
+    may be shared language (a within-language excess up to +0.055 could not be
+    ruled out), and a platform is not a national curriculum.
+  - >-
+    SOME ANALYSES WERE NOT PRE-SPECIFIED, AND THE ANALYST WAS NOT BLIND. The
+    positivity atlas itself, the item tree analysis of MOOCCubeX, the
+    comparison of surmise relations with the atlas, the reanalysis of the
+    trajectory-order trial and the mastery-release contrast are among the
+    analyses recorded as not pre-specified. The second lag-forgetting study was
+    registered after the first study's estimates had been seen and is not an
+    independent replication. Each later registration was written by someone
+    who knew earlier results on the same corpora, and every detection floor
+    was written by the program that wrote the instrument it checks; where one
+    script defines and scores its floor, the floor is a smoke check of the
+    code. Readings outside the three randomized trials are observational.
+  - >-
+    FAULTS IN READING THE DATA WERE FOUND, AND OTHERS MAY REMAIN. Three readers
+    were corrected (the EDM Cup mirror's placeholder times, a DataShop reader
+    that took the first file in sorted order, an atlas sampler that shared one
+    random stream across corpora), and a scorer that read the logged statement
+    of each fraction problem in DataShop dataset 1190 as answers withdrew an
+    estimate. The control that separates taxonomy distance from dependence in
+    the Junyi ratings had 31.4% power at the observed size.
+  - >-
+    STATISTICAL CONCLUSIONS ARE BOUNDED BY THE UNITS RESAMPLED AND THE NUMBER
+    OF VERDICTS. Intervals resample held-out learners, classes, cluster pairs,
+    pairs or dependent skills, and describe only that unit's uncertainty; where
+    pairs share prerequisite skills that the bootstrap does not resample, they
+    may be too narrow. Some estimates, such as the decided shares of the atlas,
+    carry no interval, and the four-order experiment's intervals are 90%. Many
+    verdicts were registered and no correction was made across them. Several
+    verdicts lie close to their bars: the cluster map passed by 0.006, and the
+    ECPE chain was not rejected at a p of 0.068 with a Monte Carlo standard
+    error of about 0.011. The reliability bar of 0.80 is a convention, and the
+    attempt to size it was unanswerable.
+
+ethics:
+  irb:
+    required: false
+    determination: >-
+      No intervention, no contact, no re-identification, and one of the
+      populations does not exist. See the protocol's external_review block.
+  data_sharing:
+    permitted: false
+    detail: >-
+      ASSISTments, EDM Cup, XES3G5M, Eedi, DataShop, MOOCCubeX and ICPSR
+      151741 may not be redistributed under the terms they are held on; the
+      Junyi 2015 exercise table, authored map and ratings are held for research
+      use, the ECPE grammar responses state no licence and are held under the
+      strictest of these terms, and the Coherence Map is a public web tool's
+      data. No derived extract leaves the analysis container. EdNet, Duolingo
+      SLAM and Junyi 2020 are redistributable under their licences but are not
+      redistributed here. The
+      release records each corpus's location and the hash of the bytes read
+      instead. Everything in this release that could be
+      shared is an aggregate.
+
+funding: >-
+  No external funding. Internal work on a commercial product's research
+  programme, which is its own interest and is recorded here as one rather than
+  left to be inferred from the repository it sits in.
+
+conflicts: >-
+  Every author is a party to the product whose pipeline this evaluates. The
+  release reports mixed results about that pipeline (built nodes improved
+  prediction; built edges added nothing that cleared the pre-registered bar); the
+  negative half is evidence against the obvious direction of this interest
+  rather than a guarantee against it. Several findings also correct earlier numbers from this same programme,
+  and the originals are kept in the working record. Use of every dataset here is non-commercial: they are analysed only to produce research published openly on learning-wiki as a public good. Commercial applications may later build on those published results, as anyone's may, but no dataset, extract or model trained on one is used commercially (maintainer, 2026-09-25).
+
+provenance:
+  source_type: research
+  created_at: 2026-09-15
+  # `authors` are the DOI creators, so only people accountable for the work; the AI is credited in
+  # `contributors`.
+  authors:
+    - id: human:david-porcaro
+      name: David S. Porcaro
+      affiliation: Learning Design Alliance
+      role: >-
+        conceptualization, supervision, validation, writing (review and editing), final approval;
+        accountable for the work
+  contributors:
+    - id: agent:claude-code
+      name: Claude Code (Claude Opus 5.5, Anthropic)
+      role: >-
+        investigation, software, formal analysis, visualization, data curation, writing (original
+        draft); also the independent audits and reproductions, each by a separate agent
