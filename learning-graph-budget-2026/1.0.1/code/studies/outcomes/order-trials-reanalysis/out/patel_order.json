@@ -1,0 +1,447 @@
+{
+ "printed": {
+  "am": 0.7,
+  "ma": 0.78,
+  "B": 0.07,
+  "SE": 0.04,
+  "t": 3.57,
+  "p": 0.04,
+  "delay_days": 3
+ },
+ "printed_check": {
+  "df": 57,
+  "t_from_B_SE": 1.7500000000000002,
+  "p_from_B_SE": 0.085499867933691,
+  "p_from_t": 0.0007330791022003003,
+  "t_from_p": 2.101817845588452,
+  "SE_from_t": 0.019607843137254905,
+  "SE_from_p": 0.03330450359764735,
+  "difference_of_printed_means": 0.08000000000000007,
+  "pair_agrees": {
+   "B/SE vs t": false,
+   "t vs p": 0.0,
+   "B/SE vs p": 0.0
+  },
+  "implied_learner_sd": {
+   "from_SE_0.04": 0.15360084745528926,
+   "from_t_3.57": 0.07529453306631828,
+   "from_p_0.04": 0.12788999941690907
+  },
+  "verdict": "PRINTED STATISTICS INCONSISTENT (B/SE vs t; t vs p; B/SE vs p)"
+ },
+ "floor": {
+  "calibration": {
+   "ability_sd": 0.9000000000000001,
+   "intercept": 0.8,
+   "am_mean": 0.7030893926823694,
+   "learner_sd": 0.15823089238581722,
+   "target_learner_sd": 0.15360084745528926
+  },
+  "worlds": 1000,
+  "reps": 2000,
+  "cells": {
+   "0.00": {
+    "planted": 0.0,
+    "reject_rate": 0.053,
+    "power_right_sign": null
+   },
+   "0.04": {
+    "planted": 0.04,
+    "reject_rate": 0.124,
+    "power_right_sign": 0.124
+   },
+   "0.08": {
+    "planted": 0.08,
+    "reject_rate": 0.372,
+    "power_right_sign": 0.372
+   },
+   "0.12": {
+    "planted": 0.12,
+    "reject_rate": 0.645,
+    "power_right_sign": 0.645
+   },
+   "0.16": {
+    "planted": 0.16,
+    "reject_rate": 0.857,
+    "power_right_sign": 0.857
+   }
+  },
+  "mde_d_analytic": 0.7296834741268252,
+  "mde_points_at_printed_SE": 0.11208
+ },
+ "reanalysis": {
+  "n_am": 30,
+  "n_ma": 30,
+  "tests": [
+   "Pretest",
+   "Midtest A",
+   "Midtest B",
+   "Posttest",
+   "DPosttest"
+  ],
+  "per_test": {
+   "Pretest": {
+    "all_step": {
+     "am": 0.8422494590536488,
+     "ma": 0.8370614885624474,
+     "n_am": 30,
+     "n_ma": 30,
+     "ma_minus_am": -0.005187970491201344,
+     "d": -0.1595637604632659,
+     "p": 0.5660433956604339,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_problem": {
+     "am": 0.035897435897435895,
+     "ma": 0.002564102564102564,
+     "n_am": 30,
+     "n_ma": 30,
+     "ma_minus_am": -0.03333333333333333,
+     "d": -0.2573600688021595,
+     "p": 0.7516248375162484,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_final": {
+     "am": 0.08846153846153845,
+     "ma": 0.06901709401709401,
+     "n_am": 30,
+     "n_ma": 30,
+     "ma_minus_am": -0.019444444444444445,
+     "d": -0.13651861075589566,
+     "p": 0.7568243175682432,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_step": {
+     "am": 0.8550463042348218,
+     "ma": 0.84638848794949,
+     "n_am": 30,
+     "n_ma": 30,
+     "ma_minus_am": -0.008657816285331799,
+     "d": -0.2857096475804718,
+     "p": 0.2913708629137086,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_problem": {
+     "am": 0.03703703703703704,
+     "ma": 0.0037037037037037034,
+     "n_am": 30,
+     "n_ma": 30,
+     "ma_minus_am": -0.03333333333333334,
+     "d": -0.2560282006233712,
+     "p": 0.7448255174482552,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_final": {
+     "am": 0.10740740740740741,
+     "ma": 0.08240740740740742,
+     "n_am": 30,
+     "n_ma": 30,
+     "ma_minus_am": -0.024999999999999994,
+     "d": -0.16508068893892902,
+     "p": 0.6424357564243576,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "median_days_after_last_practice": -4.999189814814815
+   },
+   "Midtest A": {
+    "all_step": {
+     "am": 0.8595141113435983,
+     "ma": 0.8439336622240856,
+     "n_am": 29,
+     "n_ma": 26,
+     "ma_minus_am": -0.01558044911951273,
+     "d": -0.3957126630305361,
+     "p": 0.15258474152584742,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_problem": {
+     "am": 0.07820197044334976,
+     "ma": 0.019230769230769232,
+     "n_am": 29,
+     "n_ma": 26,
+     "ma_minus_am": -0.058971201212580523,
+     "d": -0.3055603352013105,
+     "p": 0.3962603739626037,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_final": {
+     "am": 0.1414203612479475,
+     "ma": 0.0705128205128205,
+     "n_am": 29,
+     "n_ma": 26,
+     "ma_minus_am": -0.07090754073512699,
+     "d": -0.32691238719383653,
+     "p": 0.2665733426657334,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_step": {
+     "am": 0.8655029678302664,
+     "ma": 0.8436890154488512,
+     "n_am": 29,
+     "n_ma": 26,
+     "ma_minus_am": -0.021813952381415147,
+     "d": -0.5566418575879842,
+     "p": 0.040195980401959805,
+     "verdict": "ADDITION FIRST BETTER"
+    },
+    "trained_problem": {
+     "am": 0.08275862068965519,
+     "ma": 0.009615384615384616,
+     "n_am": 29,
+     "n_ma": 26,
+     "ma_minus_am": -0.07314323607427056,
+     "d": -0.38216081327160534,
+     "p": 0.2415758424157584,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_final": {
+     "am": 0.1603448275862069,
+     "ma": 0.08012820512820512,
+     "n_am": 29,
+     "n_ma": 26,
+     "ma_minus_am": -0.08021662245800179,
+     "d": -0.3503412947175312,
+     "p": 0.21877812218778123,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "median_days_after_last_practice": -4.001527777777778
+   },
+   "Midtest B": {
+    "all_step": {
+     "am": 0.8318761070261804,
+     "ma": 0.8392713663424985,
+     "n_am": 29,
+     "n_ma": 29,
+     "ma_minus_am": 0.007395259316318126,
+     "d": 0.1947791918806031,
+     "p": 0.4804519548045195,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_problem": {
+     "am": 0.034482758620689655,
+     "ma": 0.009236453201970442,
+     "n_am": 29,
+     "n_ma": 29,
+     "ma_minus_am": -0.025246305418719212,
+     "d": -0.18901336113635245,
+     "p": 1.0,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_final": {
+     "am": 0.09770114942528735,
+     "ma": 0.09544334975369456,
+     "n_am": 29,
+     "n_ma": 29,
+     "ma_minus_am": -0.002257799671592786,
+     "d": -0.013331722361187237,
+     "p": 0.9554044595540446,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_step": {
+     "am": 0.8511861039724855,
+     "ma": 0.856630866127529,
+     "n_am": 29,
+     "n_ma": 29,
+     "ma_minus_am": 0.0054447621550435255,
+     "d": 0.1618279448595795,
+     "p": 0.5582441755824418,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_problem": {
+     "am": 0.034482758620689655,
+     "ma": 0.006896551724137932,
+     "n_am": 29,
+     "n_ma": 29,
+     "ma_minus_am": -0.027586206896551724,
+     "d": -0.20601048104984185,
+     "p": 1.0,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_final": {
+     "am": 0.1206896551724138,
+     "ma": 0.09310344827586207,
+     "n_am": 29,
+     "n_ma": 29,
+     "ma_minus_am": -0.027586206896551724,
+     "d": -0.14629443591194782,
+     "p": 0.6296370362963704,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "median_days_after_last_practice": -4.004386574074074
+   },
+   "Posttest": {
+    "all_step": {
+     "am": 0.8423035114628635,
+     "ma": 0.8486603615198086,
+     "n_am": 29,
+     "n_ma": 28,
+     "ma_minus_am": 0.006356850056945085,
+     "d": 0.19140919130956233,
+     "p": 0.4864513548645136,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_problem": {
+     "am": 0.03978779840848806,
+     "ma": 0.011904761904761904,
+     "n_am": 29,
+     "n_ma": 28,
+     "ma_minus_am": -0.027883036503726158,
+     "d": -0.19962170192696757,
+     "p": 0.6142385761423858,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_final": {
+     "am": 0.07957559681697612,
+     "ma": 0.0496031746031746,
+     "n_am": 29,
+     "n_ma": 28,
+     "ma_minus_am": -0.029972422213801524,
+     "d": -0.20828214472363674,
+     "p": 0.5754424557544245,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_step": {
+     "am": 0.8544605072657923,
+     "ma": 0.8598245265074681,
+     "n_am": 29,
+     "n_ma": 28,
+     "ma_minus_am": 0.005364019241675844,
+     "d": 0.18249476520159746,
+     "p": 0.5228477152284772,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_problem": {
+     "am": 0.03831417624521073,
+     "ma": 0.013736263736263738,
+     "n_am": 29,
+     "n_ma": 28,
+     "ma_minus_am": -0.024577912508946996,
+     "d": -0.1728191671374625,
+     "p": 0.7442255774422558,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_final": {
+     "am": 0.08524904214559387,
+     "ma": 0.04677197802197802,
+     "n_am": 29,
+     "n_ma": 28,
+     "ma_minus_am": -0.038477064123615845,
+     "d": -0.24994221266500097,
+     "p": 0.41715828417158285,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "median_days_after_last_practice": -3.9885937499999997
+   },
+   "DPosttest": {
+    "all_step": {
+     "am": 0.8461518366428971,
+     "ma": 0.8525088328203719,
+     "n_am": 27,
+     "n_ma": 29,
+     "ma_minus_am": 0.006356996177474872,
+     "d": 0.1864362320360269,
+     "p": 0.5058494150584941,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_problem": {
+     "am": 0.039886039886039885,
+     "ma": 0.009040671971706453,
+     "n_am": 27,
+     "n_ma": 29,
+     "ma_minus_am": -0.030845367914333434,
+     "d": -0.22913031469150366,
+     "p": 0.7978202179782021,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "all_final": {
+     "am": 0.09829059829059829,
+     "ma": 0.06536251105216621,
+     "n_am": 27,
+     "n_ma": 29,
+     "ma_minus_am": -0.032928087238432074,
+     "d": -0.21886158329373975,
+     "p": 0.5052494750524947,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_step": {
+     "am": 0.8581330313747395,
+     "ma": 0.8627565366207104,
+     "n_am": 27,
+     "n_ma": 29,
+     "ma_minus_am": 0.0046235052459708825,
+     "d": 0.1541039273285609,
+     "p": 0.5840415958404159,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_problem": {
+     "am": 0.0411522633744856,
+     "ma": 0.006130268199233716,
+     "n_am": 27,
+     "n_ma": 29,
+     "ma_minus_am": -0.03502199517525188,
+     "d": -0.25966355372565153,
+     "p": 0.6176382361763824,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "trained_final": {
+     "am": 0.11522633744855967,
+     "ma": 0.07059386973180078,
+     "n_am": 27,
+     "n_ma": 29,
+     "ma_minus_am": -0.0446324677167589,
+     "d": -0.2710064035295141,
+     "p": 0.3601639836016398,
+     "verdict": "UNINFORMATIVE (BELOW FLOOR)"
+    },
+    "median_days_after_last_practice": -0.004131944444444444
+   }
+  },
+  "reproduction": {
+   "matches": [],
+   "verdict": "DOES NOT REPRODUCE"
+  },
+  "delay_contrast": {
+   "immediate": "Posttest",
+   "delayed": "DPosttest",
+   "by_scoring": {
+    "all_step": {
+     "change_am": 0.005139943581463857,
+     "change_ma": 0.0032715464271253986,
+     "ma_minus_am": -0.0018683971543384586,
+     "p": 0.6836316368363163
+    },
+    "all_problem": {
+     "change_am": -0.002958579881656805,
+     "change_ma": -0.0026353276353276354,
+     "ma_minus_am": 0.00032325224632916974,
+     "p": 0.9734026597340266
+    },
+    "all_final": {
+     "change_am": 0.013313609467455622,
+     "change_ma": 0.012591009813232037,
+     "ma_minus_am": -0.0007225996542235841,
+     "p": 0.9801019898010199
+    },
+    "trained_step": {
+     "change_am": 0.0047767525059119655,
+     "change_ma": 0.0020992880289162886,
+     "ma_minus_am": -0.002677464476995677,
+     "p": 0.6236376362363764
+    },
+    "trained_problem": {
+     "change_am": 0.0,
+     "change_ma": -0.007660652105096551,
+     "ma_minus_am": -0.007660652105096551,
+     "p": 0.7485251474852515
+    },
+    "trained_final": {
+     "change_am": 0.02938034188034188,
+     "change_ma": 0.018059512503956945,
+     "ma_minus_am": -0.011320829376384935,
+     "p": 0.7277272272772722
+    }
+   }
+  },
+  "permuted_within_class": false
+ }
+}

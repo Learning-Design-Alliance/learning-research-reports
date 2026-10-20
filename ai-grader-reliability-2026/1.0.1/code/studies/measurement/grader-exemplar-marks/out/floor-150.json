@@ -1,0 +1,274 @@
+{
+ "self_check": {
+  "qwk_closed_form_max_abs_diff": 0.0
+ },
+ "n": 150,
+ "call_sd": 0.6,
+ "question_arm_sd": 0.15,
+ "replicates": 200,
+ "bootstrap": 2000,
+ "worlds": {
+  "SCALE": {
+   "replication": {
+    "planted": "GRADED-CALIBRATES",
+    "hit_rate": 0.945,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "GRADED-CALIBRATES": 189,
+     "NOT-REPLICATED": 11
+    }
+   },
+   "q1": {
+    "planted": "SCALE IS ENOUGH",
+    "hit_rate": 0.2,
+    "false_finding_rate": 0.03,
+    "pass": false,
+    "all": {
+     "PAIRING INCONCLUSIVE": 154,
+     "SCALE IS ENOUGH": 40,
+     "CORRECT MARKS MATTER": 4,
+     "SHUFFLED MARKS OVERCORRECT": 2
+    }
+   },
+   "q2": {
+    "planted": "IGNORES SHOWN LEVEL",
+    "hit_rate": 0.2,
+    "false_finding_rate": 0.07,
+    "pass": false,
+    "all": {
+     "ANCHORING INCONCLUSIVE": 146,
+     "ANCHORS, LEGS UNRESOLVED": 5,
+     "ANCHORS UP ONLY": 2,
+     "ANCHORS AGAINST SHOWN LEVEL": 6,
+     "IGNORES SHOWN LEVEL": 40,
+     "ANCHORS DOWN ONLY": 1
+    }
+   }
+  },
+  "PAIRING": {
+   "replication": {
+    "planted": "GRADED-CALIBRATES",
+    "hit_rate": 0.94,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "GRADED-CALIBRATES": 188,
+     "NOT-REPLICATED": 12
+    }
+   },
+   "q1": {
+    "planted": "CORRECT MARKS MATTER",
+    "hit_rate": 0.95,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "CORRECT MARKS MATTER": 190,
+     "PAIRING INCONCLUSIVE": 10
+    }
+   },
+   "q2": {
+    "planted": "IGNORES SHOWN LEVEL",
+    "hit_rate": 0.23,
+    "false_finding_rate": 0.06,
+    "pass": false,
+    "all": {
+     "ANCHORING INCONCLUSIVE": 142,
+     "IGNORES SHOWN LEVEL": 46,
+     "ANCHORS AGAINST SHOWN LEVEL": 6,
+     "ANCHORS, LEGS UNRESOLVED": 4,
+     "ANCHORS DOWN ONLY": 2
+    }
+   }
+  },
+  "ANCHOR": {
+   "replication": {
+    "planted": "GRADED-CALIBRATES",
+    "hit_rate": 0.935,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "GRADED-CALIBRATES": 187,
+     "NOT-REPLICATED": 13
+    }
+   },
+   "q1": {
+    "planted": "SCALE IS ENOUGH",
+    "hit_rate": 0.265,
+    "false_finding_rate": 0.075,
+    "pass": false,
+    "all": {
+     "SCALE IS ENOUGH": 53,
+     "PAIRING INCONCLUSIVE": 132,
+     "CORRECT MARKS MATTER": 7,
+     "SHUFFLED MARKS OVERCORRECT": 8
+    }
+   },
+   "q2": {
+    "planted": "ANCHORS TO SHOWN LEVEL",
+    "hit_rate": 1.0,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "ANCHORS TO SHOWN LEVEL": 200
+    }
+   }
+  },
+  "PAIR+ANCHOR": {
+   "replication": {
+    "planted": "GRADED-CALIBRATES",
+    "hit_rate": 0.965,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "GRADED-CALIBRATES": 193,
+     "NOT-REPLICATED": 7
+    }
+   },
+   "q1": {
+    "planted": "CORRECT MARKS MATTER",
+    "hit_rate": 0.925,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "CORRECT MARKS MATTER": 185,
+     "PAIRING INCONCLUSIVE": 15
+    }
+   },
+   "q2": {
+    "planted": "ANCHORS TO SHOWN LEVEL",
+    "hit_rate": 1.0,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "ANCHORS TO SHOWN LEVEL": 200
+    }
+   }
+  },
+  "OVERCORRECT": {
+   "replication": {
+    "planted": "GRADED-CALIBRATES",
+    "hit_rate": 0.94,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "GRADED-CALIBRATES": 188,
+     "NOT-REPLICATED": 12
+    }
+   },
+   "q1": {
+    "planted": "SHUFFLED MARKS OVERCORRECT",
+    "hit_rate": 0.975,
+    "false_finding_rate": 0.0,
+    "pass": true,
+    "all": {
+     "SHUFFLED MARKS OVERCORRECT": 195,
+     "PAIRING INCONCLUSIVE": 5
+    }
+   },
+   "q2": {
+    "planted": "IGNORES SHOWN LEVEL",
+    "hit_rate": 0.19,
+    "false_finding_rate": 0.065,
+    "pass": false,
+    "all": {
+     "ANCHORING INCONCLUSIVE": 149,
+     "ANCHORS AGAINST SHOWN LEVEL": 7,
+     "IGNORES SHOWN LEVEL": 38,
+     "ANCHORS DOWN ONLY": 1,
+     "ANCHORS, LEGS UNRESOLVED": 4,
+     "ANCHORS UP ONLY": 1
+    }
+   }
+  },
+  "NULL": {
+   "replication": {
+    "planted": "NOT-REPLICATED",
+    "hit_rate": 0.97,
+    "false_finding_rate": 0.03,
+    "pass": true,
+    "all": {
+     "NOT-REPLICATED": 194,
+     "GRADED-CALIBRATES": 4,
+     "GRADED-MISCALIBRATES": 2
+    }
+   },
+   "q1": {
+    "planted": "SCALE IS ENOUGH",
+    "hit_rate": 0.25,
+    "false_finding_rate": 0.02,
+    "pass": false,
+    "all": {
+     "PAIRING INCONCLUSIVE": 146,
+     "SCALE IS ENOUGH": 50,
+     "CORRECT MARKS MATTER": 2,
+     "SHUFFLED MARKS OVERCORRECT": 2
+    }
+   },
+   "q2": {
+    "planted": "IGNORES SHOWN LEVEL",
+    "hit_rate": 0.245,
+    "false_finding_rate": 0.035,
+    "pass": false,
+    "all": {
+     "ANCHORING INCONCLUSIVE": 144,
+     "IGNORES SHOWN LEVEL": 49,
+     "ANCHORS AGAINST SHOWN LEVEL": 5,
+     "ANCHORS, LEGS UNRESOLVED": 2
+    }
+   }
+  }
+ },
+ "sweep_60_replicates": {
+  "rho_retained": {
+   "0.0": {
+    "CORRECT MARKS MATTER": 53,
+    "PAIRING INCONCLUSIVE": 7
+   },
+   "0.25": {
+    "CORRECT MARKS MATTER": 42,
+    "PAIRING INCONCLUSIVE": 17,
+    "SCALE IS ENOUGH": 1
+   },
+   "0.5": {
+    "CORRECT MARKS MATTER": 32,
+    "PAIRING INCONCLUSIVE": 28
+   },
+   "0.75": {
+    "PAIRING INCONCLUSIVE": 38,
+    "SCALE IS ENOUGH": 10,
+    "CORRECT MARKS MATTER": 12
+   },
+   "1.0": {
+    "PAIRING INCONCLUSIVE": 43,
+    "SHUFFLED MARKS OVERCORRECT": 4,
+    "SCALE IS ENOUGH": 13
+   }
+  },
+  "kappa_pass_through": {
+   "0.05": {
+    "IGNORES SHOWN LEVEL": 6,
+    "ANCHORS UP ONLY": 6,
+    "ANCHORING INCONCLUSIVE": 28,
+    "ANCHORS, LEGS UNRESOLVED": 17,
+    "ANCHORS DOWN ONLY": 3
+   },
+   "0.1": {
+    "ANCHORING INCONCLUSIVE": 7,
+    "ANCHORS, LEGS UNRESOLVED": 24,
+    "ANCHORS UP ONLY": 14,
+    "ANCHORS TO SHOWN LEVEL": 2,
+    "ANCHORS DOWN ONLY": 13
+   },
+   "0.2": {
+    "ANCHORS TO SHOWN LEVEL": 47,
+    "ANCHORS UP ONLY": 8,
+    "ANCHORS DOWN ONLY": 5
+   },
+   "0.3": {
+    "ANCHORS TO SHOWN LEVEL": 60
+   }
+  }
+ },
+ "PASS": false
+}

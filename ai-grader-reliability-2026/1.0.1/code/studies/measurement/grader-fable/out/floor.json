@@ -1,0 +1,102 @@
+{
+  "n_answers": 100,
+  "replicates": 400,
+  "bootstrap": 1000,
+  "shapes": {
+    "Q2": {
+      "null": {
+        "L": 0.0,
+        "rates": {
+          "PERSISTS": 0.035,
+          "PERSISTS-REVERSED": 0.0375,
+          "NOT-DETECTED-BOUNDED": 0.0,
+          "UNRESOLVED": 0.9275
+        }
+      },
+      "opus_effect": {
+        "L": 0.28,
+        "rates": {
+          "PERSISTS": 0.795,
+          "PERSISTS-REVERSED": 0.0,
+          "NOT-DETECTED-BOUNDED": 0.0,
+          "UNRESOLVED": 0.205
+        }
+      },
+      "reversed": {
+        "L": -0.28,
+        "rates": {
+          "PERSISTS": 0.0,
+          "PERSISTS-REVERSED": 0.795,
+          "NOT-DETECTED-BOUNDED": 0.0,
+          "UNRESOLVED": 0.205
+        }
+      },
+      "bound": {
+        "L": 0.1,
+        "rates": {
+          "PERSISTS": 0.2125,
+          "PERSISTS-REVERSED": 0.005,
+          "NOT-DETECTED-BOUNDED": 0.0025,
+          "UNRESOLVED": 0.78
+        }
+      },
+      "checks": {
+        "null_false_signed_le_0.10": true,
+        "opus_effect_persists_ge_0.80": false,
+        "opus_effect_no_wrong_sign": true,
+        "reversed_called_ge_0.80": false
+      },
+      "power_at_0.28": 0.795,
+      "equivalence_power_at_0.10_under_null": 0.0
+    },
+    "OPUS": {
+      "null": {
+        "L": 0.0,
+        "rates": {
+          "PERSISTS": 0.0325,
+          "PERSISTS-REVERSED": 0.0325,
+          "NOT-DETECTED-BOUNDED": 0.6025,
+          "UNRESOLVED": 0.3325
+        }
+      },
+      "opus_effect": {
+        "L": 0.28,
+        "rates": {
+          "PERSISTS": 1.0,
+          "PERSISTS-REVERSED": 0.0,
+          "NOT-DETECTED-BOUNDED": 0.0,
+          "UNRESOLVED": 0.0
+        }
+      },
+      "reversed": {
+        "L": -0.28,
+        "rates": {
+          "PERSISTS": 0.0,
+          "PERSISTS-REVERSED": 1.0,
+          "NOT-DETECTED-BOUNDED": 0.0,
+          "UNRESOLVED": 0.0
+        }
+      },
+      "bound": {
+        "L": 0.1,
+        "rates": {
+          "PERSISTS": 0.7975,
+          "PERSISTS-REVERSED": 0.0,
+          "NOT-DETECTED-BOUNDED": 0.04,
+          "UNRESOLVED": 0.1625
+        }
+      },
+      "checks": {
+        "null_false_signed_le_0.10": true,
+        "opus_effect_persists_ge_0.80": true,
+        "opus_effect_no_wrong_sign": true,
+        "reversed_called_ge_0.80": true
+      },
+      "power_at_0.28": 1.0,
+      "equivalence_power_at_0.10_under_null": 0.6025
+    }
+  },
+  "opus_d_sd": 0.3728337655341963,
+  "pass": false,
+  "note": "smoke check: synthetic graders written and scored by the same session"
+}

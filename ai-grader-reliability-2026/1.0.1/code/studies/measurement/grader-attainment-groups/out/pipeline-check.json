@@ -1,0 +1,42 @@
+{
+ "FAKE": "pipeline check on harness/fake.ts output; NOT A MEASUREMENT",
+ "model": "fake:check",
+ "n_complete": 1400,
+ "verdict_string_produced": "UNDERPOWERED",
+ "axes_produced": {
+  "D_low": {
+   "ell": "UNIFORM",
+   "economic": "UNDERPOWERED",
+   "disability": "UNIFORM",
+   "gender": "UNIFORM",
+   "race": "UNDERPOWERED"
+  },
+  "D_spread": {
+   "ell": "UNIFORM",
+   "economic": "UNDERPOWERED",
+   "disability": "UNIFORM",
+   "gender": "UNIFORM",
+   "race": "UNDERPOWERED"
+  },
+  "D_high": {
+   "ell": "UNIFORM",
+   "economic": "UNIFORM",
+   "disability": "UNIFORM",
+   "gender": "UNIFORM",
+   "race": "UNIFORM"
+  },
+  "D_lowmid": {
+   "ell": "UNIFORM",
+   "economic": "UNDERPOWERED",
+   "disability": "UNIFORM",
+   "gender": "UNIFORM",
+   "race": "UNDERPOWERED"
+  }
+ },
+ "projection_axes": [
+  "disability",
+  "economic",
+  "ell",
+  "gender"
+ ]
+}

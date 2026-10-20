@@ -1,0 +1,81 @@
+{
+  "junyi": {
+    "n_learners": 2059,
+    "n_units": 631,
+    "n_pairs_with_rows": 114119,
+    "n_pair_rows": 502180,
+    "n_eligible_pairs": 98,
+    "median_minority_arm_all": 0.0,
+    "median_minority_arm_eligible": 38.0,
+    "counts": {
+      "file": "ds1275_student_step_All_Data_2872_2026_0916_191215.txt",
+      "rows": 303720,
+      "events": 250006,
+      "first_attempt_hint": 53604,
+      "no_kc_or_time": 110,
+      "pair_rows_tied_time": 89
+    },
+    "n_reference_pairs": 774,
+    "n_reference_pairs_with_rows": 688,
+    "n_eligible_reference_pairs": 1,
+    "first_meeting_order_recorded": true,
+    "read_in_part3": false,
+    "reason": "< 30 eligible pairs: UNANSWERABLE",
+    "seconds": 7
+  },
+  "assist": {
+    "n_learners": 28998,
+    "n_units": 264,
+    "n_pairs_with_rows": 19673,
+    "n_pair_rows": 4132619,
+    "n_eligible_pairs": 6449,
+    "median_minority_arm_all": 6.0,
+    "median_minority_arm_eligible": 118.0,
+    "counts": {
+      "events": 2622851,
+      "pair_rows_tied_time": 1
+    },
+    "n_reference_pairs": 6988,
+    "n_reference_pairs_with_rows": 4416,
+    "n_eligible_reference_pairs": 1669,
+    "first_meeting_order_recorded": true,
+    "read_in_part3": true,
+    "reason": ">= 30 eligible reference pairs",
+    "seconds": 77
+  },
+  "ednet": {
+    "n_learners": 20000,
+    "n_units": 141,
+    "n_pairs_with_rows": 9870,
+    "n_pair_rows": 12498186,
+    "n_eligible_pairs": 9485,
+    "median_minority_arm_all": 426.0,
+    "median_minority_arm_eligible": 440.0,
+    "counts": {
+      "events": 2432308,
+      "pair_rows_tied_time": 991
+    },
+    "first_meeting_order_recorded": true,
+    "read_in_part3": true,
+    "reason": ">= 30 eligible pairs",
+    "seconds": 52
+  },
+  "eedi": {
+    "n_learners": 118971,
+    "n_units": 308,
+    "n_pairs_with_rows": 43222,
+    "n_pair_rows": 106922346,
+    "n_eligible_pairs": 28676,
+    "median_minority_arm_all": 204.0,
+    "median_minority_arm_eligible": 805.0,
+    "counts": {
+      "events": 21627876,
+      "pair_rows_tied_time": 1869034
+    },
+    "method": "positivity_light (CHANGES 4)",
+    "first_meeting_order_recorded": false,
+    "read_in_part3": false,
+    "reason": "last-answer time: first-meeting order not recorded (pre-registered exclusion)",
+    "seconds": 156
+  }
+}

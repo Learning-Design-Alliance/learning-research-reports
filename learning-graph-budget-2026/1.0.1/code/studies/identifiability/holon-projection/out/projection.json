@@ -1,0 +1,44 @@
+{
+ "cs": {
+  "positives": 725,
+  "negatives": 797,
+  "positives_placed": 483,
+  "courses": 111,
+  "quotient_edges": 4396,
+  "quotient_mutual_pairs": 1427,
+  "closure_pairs": 11240,
+  "closure_mutual_pairs": 5151,
+  "reduction_edges": 510
+ },
+ "psy": {
+  "positives": 831,
+  "negatives": 914,
+  "positives_placed": 632,
+  "courses": 28,
+  "quotient_edges": 608,
+  "quotient_mutual_pairs": 277,
+  "closure_pairs": 756,
+  "closure_mutual_pairs": 378,
+  "reduction_edges": 0
+ },
+ "math": {
+  "positives": 761,
+  "negatives": 837,
+  "positives_placed": 240,
+  "courses": 27,
+  "quotient_edges": 481,
+  "quotient_mutual_pairs": 193,
+  "closure_pairs": 702,
+  "closure_mutual_pairs": 351,
+  "reduction_edges": 0
+ },
+ "pooled": {
+  "courses": 166,
+  "P_lit": 5485,
+  "closure_pairs": 12698,
+  "P_red": 510,
+  "P_clo": 938,
+  "P_net": 3040,
+  "P_netred": 842
+ }
+}

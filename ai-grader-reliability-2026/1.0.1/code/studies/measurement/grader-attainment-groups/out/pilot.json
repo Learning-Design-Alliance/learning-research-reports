@@ -1,0 +1,12 @@
+{
+ "model": "openrouter:qwen/qwen3-235b-a22b-2507",
+ "runStamp": "run muvqgqgr-xjbd started 2026-10-05 21:19:45Z",
+ "after": 2000,
+ "n_rows": 200,
+ "n_complete": 193,
+ "failures": {
+  "No object generated: could not parse the response.": 7
+ },
+ "sd_low_minus_none": 0.5601743806954802,
+ "overlap_with_main_draw": 0
+}

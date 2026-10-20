@@ -1,0 +1,6 @@
+{
+ "family": "zai",
+ "requested_slug": "z-ai/glm-5.3",
+ "error": "",
+ "note": "written by hand from the first real build log: FAILED with no error string (two attempts, 16000 and 32000 max tokens, neither with >= 20 parseable capabilities)"
+}

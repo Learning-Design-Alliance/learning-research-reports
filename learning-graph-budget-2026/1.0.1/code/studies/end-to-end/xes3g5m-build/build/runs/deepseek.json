@@ -1,0 +1,731 @@
+{
+ "family": "deepseek",
+ "requested_slug": "deepseek/deepseek-v4-pro",
+ "served_model": "deepseek/deepseek-v4-pro",
+ "provider": "Parasail",
+ "timestamp_utc": "2026-09-26T05:31:04Z",
+ "usage": {
+  "prompt_tokens": 16084,
+  "completion_tokens": 13518,
+  "total_tokens": 29602,
+  "cost": 0.0750288,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 0,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0750288,
+   "upstream_inference_prompt_cost": 0.02798616,
+   "upstream_inference_completions_cost": 0.04704264
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 8229,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "sample_question_ids": [
+  "1811",
+  "7126",
+  "1843",
+  "6323",
+  "1364",
+  "2221",
+  "4344",
+  "1336",
+  "423",
+  "823",
+  "5895",
+  "2175",
+  "855",
+  "1813",
+  "7564",
+  "5984",
+  "4373",
+  "6103",
+  "6752",
+  "2532",
+  "2586",
+  "546",
+  "5024",
+  "5796",
+  "731",
+  "2418",
+  "1836",
+  "19",
+  "1987",
+  "4692",
+  "4658",
+  "4750",
+  "2029",
+  "4437",
+  "7566",
+  "1973",
+  "538",
+  "3357",
+  "3410",
+  "163",
+  "2288",
+  "4342",
+  "6833",
+  "5755",
+  "3102",
+  "4086",
+  "7584",
+  "7198",
+  "3566",
+  "3891",
+  "6110",
+  "1281",
+  "5564",
+  "3674",
+  "2790",
+  "2340",
+  "1284",
+  "4739",
+  "641",
+  "3877",
+  "1169",
+  "2579",
+  "5524",
+  "3367",
+  "2181",
+  "5876",
+  "7553",
+  "2718",
+  "4632",
+  "187",
+  "6877",
+  "658",
+  "319",
+  "610",
+  "5867",
+  "4841",
+  "6175",
+  "3003",
+  "973",
+  "3265",
+  "6711",
+  "7410",
+  "3714",
+  "1594",
+  "6972",
+  "1926",
+  "4179",
+  "2363",
+  "6228",
+  "1470",
+  "3685",
+  "4975",
+  "5807",
+  "2978",
+  "6398",
+  "7349",
+  "5977",
+  "2897",
+  "5043",
+  "2370",
+  "3817",
+  "4238",
+  "814",
+  "1425",
+  "4112",
+  "5855",
+  "5436",
+  "2628",
+  "540",
+  "3848",
+  "1602",
+  "6268",
+  "4791",
+  "4574",
+  "4273",
+  "3270",
+  "4256",
+  "4849",
+  "1539",
+  "7109"
+ ],
+ "prompt_sha256": "8e6adfb93ef47c2904e4b7727906f31744c774a35bc9abadb6f01da4e938383c",
+ "capabilities": [
+  {
+   "name": "Add and subtract within 100 mentally",
+   "name_zh": "100以内加减法心算",
+   "description": "Fluently add and subtract two-digit numbers without writing the vertical form.",
+   "terminal": false
+  },
+  {
+   "name": "Add multi-digit numbers with regrouping",
+   "name_zh": "多位数进位加法笔算",
+   "description": "Perform column addition of numbers up to 10,000 with carrying.",
+   "terminal": false
+  },
+  {
+   "name": "Subtract multi-digit numbers with regrouping",
+   "name_zh": "多位数退位减法笔算",
+   "description": "Perform column subtraction of numbers up to 10,000 with borrowing.",
+   "terminal": false
+  },
+  {
+   "name": "Recall multiplication facts up to 10×10",
+   "name_zh": "熟记表内乘法口诀",
+   "description": "Quickly recall products of single-digit numbers.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply a multi-digit number by a 1-digit number",
+   "name_zh": "多位数乘一位数",
+   "description": "Compute products like 216×3 using the standard algorithm.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply a multi-digit number by a 2-digit number",
+   "name_zh": "多位数乘两位数",
+   "description": "Compute products like 23×14 using the standard algorithm with partial products.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply by multiples of 10, 100, 1000",
+   "name_zh": "乘整十、整百、整千数",
+   "description": "Use place value to multiply numbers ending in zeros efficiently.",
+   "terminal": false
+  },
+  {
+   "name": "Divide a multi-digit number by a 1-digit number (exact)",
+   "name_zh": "多位数除以一位数（整除）",
+   "description": "Perform division with no remainder using the long division algorithm.",
+   "terminal": false
+  },
+  {
+   "name": "Divide with remainders and interpret the remainder",
+   "name_zh": "有余数的除法及余数含义",
+   "description": "Perform division where a remainder exists and explain what the remainder represents in context.",
+   "terminal": false
+  },
+  {
+   "name": "Apply order of operations with parentheses",
+   "name_zh": "含括号的四则运算顺序",
+   "description": "Evaluate expressions involving addition, subtraction, multiplication, division, and parentheses correctly.",
+   "terminal": false
+  },
+  {
+   "name": "Use the commutative and associative properties to simplify computation",
+   "name_zh": "运用交换律和结合律简算",
+   "description": "Rearrange numbers in addition or multiplication to make mental calculation easier.",
+   "terminal": false
+  },
+  {
+   "name": "Use the distributive property to simplify multiplication",
+   "name_zh": "运用分配律简算",
+   "description": "Break a factor into a sum to compute products like (300+2)×23 or 125×(80+8).",
+   "terminal": false
+  },
+  {
+   "name": "Estimate sums, differences, products and quotients",
+   "name_zh": "估算四则运算结果",
+   "description": "Round numbers to the nearest ten or hundred to quickly approximate a result.",
+   "terminal": false
+  },
+  {
+   "name": "Check calculation results by inverse operation or estimation",
+   "name_zh": "用逆运算或估算检验结果",
+   "description": "Verify an answer by performing the opposite operation or comparing with an estimate.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply by 11 using the quick mental trick",
+   "name_zh": "乘11的速算技巧",
+   "description": "Use the 'add the two digits and put in the middle' method for 11× a two-digit number.",
+   "terminal": false
+  },
+  {
+   "name": "Divide by using the splitting method",
+   "name_zh": "拆数连除巧算",
+   "description": "Combine divisions or split dividends, e.g., (a+b)÷c, or a÷b÷c = a÷(b×c).",
+   "terminal": false
+  },
+  {
+   "name": "Fluently compute multi-step arithmetic expressions with whole numbers",
+   "name_zh": "整数四则混合运算综合",
+   "description": "Accurately and efficiently perform any combination of the four operations with whole numbers within the course range.",
+   "terminal": true
+  },
+  {
+   "name": "Recognize odd and even numbers",
+   "name_zh": "认识奇数和偶数",
+   "description": "Identify a whole number as odd or even.",
+   "terminal": false
+  },
+  {
+   "name": "Predict parity of sums, products and differences",
+   "name_zh": "判断四则运算结果的奇偶性",
+   "description": "Determine whether the result of an expression is odd or even without computing the exact value.",
+   "terminal": false
+  },
+  {
+   "name": "Test divisibility by 2, 5, and 10",
+   "name_zh": "用2、5、10整除特征判断",
+   "description": "Decide if a number is divisible by 2, 5, or 10 using the last digit rule.",
+   "terminal": false
+  },
+  {
+   "name": "Test divisibility by 3 and 9",
+   "name_zh": "用3和9整除特征判断",
+   "description": "Decide if a number is divisible by 3 or 9 using the sum of digits rule.",
+   "terminal": false
+  },
+  {
+   "name": "Understand place value up to 100,000 and expanded form",
+   "name_zh": "十万以内位值制与数的拆分",
+   "description": "Read, write, and decompose numbers into place values (ones, tens, hundreds, thousands, ten thousands).",
+   "terminal": false
+  },
+  {
+   "name": "Compare and order large numbers",
+   "name_zh": "大数比较与排序",
+   "description": "Use place value to determine which of two numbers is larger and arrange a set in order.",
+   "terminal": false
+  },
+  {
+   "name": "Round whole numbers to the nearest ten, hundred, or thousand",
+   "name_zh": "四舍五入近似数",
+   "description": "Approximate a number to a specified place value by rounding.",
+   "terminal": false
+  },
+  {
+   "name": "Understand decimal notation for tenths and hundredths",
+   "name_zh": "认识一位及两位小数",
+   "description": "Read and write decimals like 3.43 and explain the meaning of the digits after the decimal point.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply and divide decimals by 10, 100 by shifting the decimal point",
+   "name_zh": "小数点移动引起小数大小变化",
+   "description": "Move the decimal point to quickly compute 0.3343×10 or 80.8÷100.",
+   "terminal": false
+  },
+  {
+   "name": "Apply number properties and place value reasoning to solve puzzles",
+   "name_zh": "用数的性质解数字谜题",
+   "description": "Solve non-routine problems involving odd/even, divisibility, place value, and missing digits.",
+   "terminal": true
+  },
+  {
+   "name": "Convert between centimetres, metres and kilometres",
+   "name_zh": "长度单位换算（厘米、米、千米）",
+   "description": "Change a given length into a different unit within the metric system.",
+   "terminal": false
+  },
+  {
+   "name": "Add and subtract money in yuan, jiao, fen",
+   "name_zh": "人民币元角分加减计算",
+   "description": "Perform computations with decimal money notation.",
+   "terminal": false
+  },
+  {
+   "name": "Read an analog clock and compute elapsed time within an hour",
+   "name_zh": "认读钟表及计算经过时间",
+   "description": "Tell time to the minute and find how many minutes pass between two times.",
+   "terminal": false
+  },
+  {
+   "name": "Use a calendar to find the day of the week for a future date",
+   "name_zh": "用日历推算星期几",
+   "description": "Compute the day of the week after a given number of days using periodicity of 7.",
+   "terminal": false
+  },
+  {
+   "name": "Understand the concept of speed (distance per unit time)",
+   "name_zh": "理解速度概念",
+   "description": "Relate distance, time and speed; compute one when the other two are known for a single moving object.",
+   "terminal": false
+  },
+  {
+   "name": "Understand work rate (amount done per unit time)",
+   "name_zh": "理解工作效率概念",
+   "description": "Calculate the amount one unit (person, machine) can do in one unit of time, or the total work done.",
+   "terminal": false
+  },
+  {
+   "name": "Compute the perimeter of polygons by adding side lengths",
+   "name_zh": "计算多边形的周长（直接加）",
+   "description": "Find the perimeter by summing all side lengths of a given figure.",
+   "terminal": false
+  },
+  {
+   "name": "Apply perimeter formulas for rectangle and square",
+   "name_zh": "运用长方形、正方形周长公式",
+   "description": "Compute perimeter using the standard formulas and find a missing side length given the perimeter.",
+   "terminal": false
+  },
+  {
+   "name": "Compute perimeter of composite rectilinear figures",
+   "name_zh": "计算组合图形的周长",
+   "description": "Find the perimeter of L-shapes and other figures made of rectangles by adding outer sides, sometimes with translation of edges.",
+   "terminal": false
+  },
+  {
+   "name": "Understand area as covering with unit squares",
+   "name_zh": "理解面积含义（单位面积）",
+   "description": "Explain area as the number of unit squares that cover a shape without gaps.",
+   "terminal": false
+  },
+  {
+   "name": "Apply area formulas for rectangle and square",
+   "name_zh": "运用长方形、正方形面积公式",
+   "description": "Compute area using length × width for rectangles and side × side for squares.",
+   "terminal": false
+  },
+  {
+   "name": "Compute area of composite figures by adding or subtracting rectangles",
+   "name_zh": "用割补法求组合图形面积",
+   "description": "Find the area of a complex shape by splitting it into rectangles or subtracting a rectangle from a larger one.",
+   "terminal": false
+  },
+  {
+   "name": "Compute area of a parallelogram",
+   "name_zh": "计算平行四边形面积",
+   "description": "Use the formula base × height to find the area of a parallelogram.",
+   "terminal": false
+  },
+  {
+   "name": "Compute area of a trapezoid",
+   "name_zh": "计算梯形面积",
+   "description": "Use the formula (upper base + lower base) × height ÷ 2 to find the area of a trapezoid.",
+   "terminal": false
+  },
+  {
+   "name": "Compute area of a quadrilateral with perpendicular diagonals",
+   "name_zh": "用对角线垂直求四边形面积",
+   "description": "Use the formula (diagonal1 × diagonal2) ÷ 2 for a kite or rhombus.",
+   "terminal": false
+  },
+  {
+   "name": "Identify right, acute and obtuse angles",
+   "name_zh": "辨认直角、锐角和钝角",
+   "description": "Classify an angle by comparing it to a right angle (90°).",
+   "terminal": false
+  },
+  {
+   "name": "Identify complementary and supplementary angle pairs",
+   "name_zh": "认识余角和补角",
+   "description": "Recognize when two angles sum to 90° or 180° and find a missing angle.",
+   "terminal": false
+  },
+  {
+   "name": "Identify parallel and perpendicular lines",
+   "name_zh": "判断平行和垂直",
+   "description": "Decide whether two given lines are parallel or perpendicular.",
+   "terminal": false
+  },
+  {
+   "name": "Classify quadrilaterals by properties",
+   "name_zh": "按边角特征分类四边形",
+   "description": "Distinguish squares, rectangles, and parallelograms based on side lengths, parallelism, and angles.",
+   "terminal": false
+  },
+  {
+   "name": "Count basic rectangles and triangles in a figure",
+   "name_zh": "数图形中的长方形和三角形",
+   "description": "Use systematic enumeration (by size) or the area-marking method to count the number of a given shape in a diagram.",
+   "terminal": false
+  },
+  {
+   "name": "Apply inclusion-exclusion to count overlapping shapes",
+   "name_zh": "用容斥原理数复杂图形",
+   "description": "Count shapes in a compound figure by adding counts of parts and subtracting overlaps.",
+   "terminal": false
+  },
+  {
+   "name": "Solve area and perimeter problems in real-world contexts",
+   "name_zh": "解决实际中的周长面积问题",
+   "description": "Apply formulas and strategies to problems like paving paths, cutting shapes, or combining figures.",
+   "terminal": true
+  },
+  {
+   "name": "Identify and extend an arithmetic sequence",
+   "name_zh": "认识并续写等差数列",
+   "description": "Find the common difference and list subsequent terms in a sequence.",
+   "terminal": false
+  },
+  {
+   "name": "Find a specific term of an arithmetic sequence",
+   "name_zh": "求等差数列的第n项",
+   "description": "Use the formula first term + (n-1)×common difference to find a distant term.",
+   "terminal": false
+  },
+  {
+   "name": "Sum an arithmetic series by the pairing method",
+   "name_zh": "用配对法求等差数列的和",
+   "description": "Compute the sum of a series like 1+2+...+20 by pairing first and last terms.",
+   "terminal": false
+  },
+  {
+   "name": "Use the middle term property in an arithmetic sequence",
+   "name_zh": "利用等差数列中项定理",
+   "description": "Find the sum or a middle term when the number of terms is odd.",
+   "terminal": false
+  },
+  {
+   "name": "Identify and continue periodic patterns",
+   "name_zh": "找周期规律并应用",
+   "description": "Recognize a repeating cycle (e.g., bead colors, days of the week) and determine the element at any position.",
+   "terminal": false
+  },
+  {
+   "name": "Find a number by its position in a number table",
+   "name_zh": "在数表中按行列定位找数",
+   "description": "Given a table filled by rules, find the number at a given row and column, or vice versa.",
+   "terminal": false
+  },
+  {
+   "name": "Describe and extend growing geometric patterns",
+   "name_zh": "描述并续写几何图形变化规律",
+   "description": "Find the rule for the number of shapes in each step and predict later steps.",
+   "terminal": false
+  },
+  {
+   "name": "Calculate the average (mean) of a set of numbers",
+   "name_zh": "计算平均数",
+   "description": "Sum the values and divide by the count to find the mean.",
+   "terminal": false
+  },
+  {
+   "name": "Use average to find a total or missing value",
+   "name_zh": "利用平均数求总量或未知值",
+   "description": "Given the average and count, compute the total; given all but one number and the average, find the missing number.",
+   "terminal": false
+  },
+  {
+   "name": "Translate a one-step word problem into an arithmetic expression",
+   "name_zh": "将简单应用题转化为算式",
+   "description": "Identify the operation needed (add, subtract, multiply, divide) from a single-step story and write the computation.",
+   "terminal": false
+  },
+  {
+   "name": "Solve two-step word problems involving mixed operations",
+   "name_zh": "解决两步混合运算应用题",
+   "description": "Plan and carry out two calculations where the operations may differ.",
+   "terminal": false
+  },
+  {
+   "name": "Draw a line-segment diagram to represent comparison relationships",
+   "name_zh": "画线段图表示数量比较关系",
+   "description": "Visually model 'a is b times as many' or 'a is more/less than b' relationships to plan a solution.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems with 'a times as many plus/ minus a constant'",
+   "name_zh": "解决几倍多/少的比较问题",
+   "description": "Find unknown quantities when one is described as multiple times another plus/minus a fixed amount.",
+   "terminal": false
+  },
+  {
+   "name": "Solve age problems involving sums and differences over time",
+   "name_zh": "解决年龄和差问题",
+   "description": "Account for the fact that everyone's age increases equally; use sum and differences to find ages.",
+   "terminal": false
+  },
+  {
+   "name": "Solve money problems involving unit price, quantity, and total cost",
+   "name_zh": "解决单价、数量、总价问题",
+   "description": "Use multiplication or division to find one of price, quantity, or total cost.",
+   "terminal": false
+  },
+  {
+   "name": "Solve single-object distance-speed-time problems",
+   "name_zh": "解决单一物体路程速度时间问题",
+   "description": "Given two of distance, speed, time, find the third for one moving object.",
+   "terminal": false
+  },
+  {
+   "name": "Solve meeting problems (two objects moving toward each other)",
+   "name_zh": "解决相遇问题",
+   "description": "Use the relationship (speed1+speed2)×time = total distance to find unknown.",
+   "terminal": false
+  },
+  {
+   "name": "Solve catching-up problems",
+   "name_zh": "解决追及问题",
+   "description": "Use (speed difference)×time = initial distance gap to find when a faster object overtakes a slower one.",
+   "terminal": false
+  },
+  {
+   "name": "Solve round-trip / return meeting problems",
+   "name_zh": "解决折返相遇问题",
+   "description": "Analyze motion where one party reaches an endpoint and returns to meet the other.",
+   "terminal": false
+  },
+  {
+   "name": "Solve distribution problems with excess and deficit",
+   "name_zh": "解决盈亏分配问题",
+   "description": "Given two scenarios of distributing items to groups (one short, one surplus), find the number of groups and total items.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems using the 'assume all' strategy (chicken-rabbit type)",
+   "name_zh": "用假设法解决鸡兔同笼问题",
+   "description": "Assume all items are one type, compute the difference in totals, and deduce the actual composition.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems by working backwards",
+   "name_zh": "用倒推法解决问题",
+   "description": "Start from the final result and reverse each step of a described process to find the starting value.",
+   "terminal": false
+  },
+  {
+   "name": "Use systematic listing to solve enumeration problems",
+   "name_zh": "用枚举法不重不漏地列举",
+   "description": "List all possibilities for a combination or arrangement by fixing one variable and varying others systematically.",
+   "terminal": false
+  },
+  {
+   "name": "Use a table to organize information and find patterns",
+   "name_zh": "列表整理信息找规律",
+   "description": "Construct a table to record repeated operations or possibilities, then identify a pattern or solution.",
+   "terminal": false
+  },
+  {
+   "name": "Solve redistribution problems (giving to make equal)",
+   "name_zh": "解决移多补少/等量调配问题",
+   "description": "Determine original amounts when items are moved between parties and final relationships are known.",
+   "terminal": false
+  },
+  {
+   "name": "Solve multi-person work rate problems",
+   "name_zh": "解决多人/多机的工作效率问题",
+   "description": "Use normalization to 1 unit per time, then scale up to the required number of units and time.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems involving a missing-digit error in numbers",
+   "name_zh": "解决数字错漏问题（如漏0）",
+   "description": "Determine original numbers when a mistake (like missing a trailing zero) leads to an erroneous result.",
+   "terminal": false
+  },
+  {
+   "name": "Form largest/smallest numbers under matchstick-digit constraints",
+   "name_zh": "在给定资源下构造最值数字",
+   "description": "Arrange digits to maximize or minimize the number when each digit costs a fixed number of matchsticks.",
+   "terminal": false
+  },
+  {
+   "name": "Solve interval problems (planting trees, flags) on a line",
+   "name_zh": "解决直线上的植树/间隔问题",
+   "description": "Relate the number of objects to the number of intervals, considering whether ends are included.",
+   "terminal": false
+  },
+  {
+   "name": "Solve interval problems on a closed loop (circle)",
+   "name_zh": "解决封闭图形上的植树问题",
+   "description": "Understand that on a circle, the number of objects equals the number of intervals.",
+   "terminal": false
+  },
+  {
+   "name": "Solve square array problems (outer layer count, total count)",
+   "name_zh": "解决方阵问题（空心/实心）",
+   "description": "Calculate the number of people on the outermost layer or total number in a square arrangement, including hollow arrays.",
+   "terminal": false
+  },
+  {
+   "name": "Solve simple optimization problems in context",
+   "name_zh": "解决简单的最优化问题",
+   "description": "Compare options (e.g., shipping routes, purchase packages) to minimize cost or distance under constraints.",
+   "terminal": false
+  },
+  {
+   "name": "Plan and solve multi-step word problems independently",
+   "name_zh": "独立规划并解决多步应用题",
+   "description": "Read a complex problem, identify knowns and unknowns, choose a strategy, execute a multi-step plan, and interpret the answer.",
+   "terminal": true
+  },
+  {
+   "name": "Apply exponent rules (product of powers) to solve simple exponential equations",
+   "name_zh": "运用指数运算法则解简单方程",
+   "description": "Rewrite numbers with the same base and equate exponents, e.g., 3^m · 9^3 · 27^3 · 81^m = 3^30.",
+   "terminal": false
+  },
+  {
+   "name": "Solve inclusion-exclusion problems for two overlapping sets (Venn diagram)",
+   "name_zh": "用韦恩图解决两集容斥问题",
+   "description": "Given totals for each set, the intersection, and possibly the outside, find any missing value.",
+   "terminal": false
+  },
+  {
+   "name": "Apply inclusion-exclusion for counting items satisfying multiple conditions",
+   "name_zh": "用容斥原理解决灯开关类问题",
+   "description": "Count how many numbers satisfy none or exactly some of several divisibility conditions, as in the light-switch problem.",
+   "terminal": false
+  },
+  {
+   "name": "Count the number of shortest paths on a grid",
+   "name_zh": "计算网格最短路径条数",
+   "description": "Use the addition method (Pascal's triangle) to count ways from one corner to another, including obstacles.",
+   "terminal": false
+  },
+  {
+   "name": "Determine if a graph can be drawn in one stroke",
+   "name_zh": "判断一笔画可行性和画法",
+   "description": "Count odd vertices and decide if the figure can be drawn without lifting the pen, and find a route.",
+   "terminal": false
+  },
+  {
+   "name": "Solve magic square problems",
+   "name_zh": "补充幻方使行列对角线和相等",
+   "description": "Use the constant-sum property to find missing numbers in a square so that each row, column, and diagonal sums to the same value.",
+   "terminal": false
+  },
+  {
+   "name": "Solve cryptarithm puzzles (digit-symbol substitutions)",
+   "name_zh": "解算符谜题（数字竖式谜）",
+   "description": "Determine the digits behind symbols or letters in addition/subtraction/multiplication vertical forms using carrying and number properties.",
+   "terminal": false
+  },
+  {
+   "name": "Solve logic puzzles with true/false statements",
+   "name_zh": "解决真假话逻辑推理题",
+   "description": "Deduce facts from statements where some are true and some false, using contradiction or assumption.",
+   "terminal": false
+  },
+  {
+   "name": "Solve tent-and-tree style grid puzzles",
+   "name_zh": "解决帐篷-树逻辑网格题",
+   "description": "Place objects on a grid satisfying adjacency and row/column count constraints.",
+   "terminal": false
+  },
+  {
+   "name": "Count map-coloring arrangements with adjacency constraints",
+   "name_zh": "计算地图涂色方案数",
+   "description": "Find the number of valid colorings of regions given that adjacent regions have different colors.",
+   "terminal": false
+  },
+  {
+   "name": "Use a tree diagram to enumerate sequential choices",
+   "name_zh": "画树状图列举分步选择",
+   "description": "Draw a branching diagram to list all possible sequences of decisions, avoiding omissions.",
+   "terminal": false
+  },
+  {
+   "name": "Use parity invariants to reason about possible transformations",
+   "name_zh": "用奇偶不变性分析棋子跳动等问题",
+   "description": "Identify a quantity (e.g., sum of coordinates) that remains even or odd to prove a configuration is impossible.",
+   "terminal": false
+  },
+  {
+   "name": "Define and evaluate a new operation defined by a rule",
+   "name_zh": "根据自定义运算规则求值",
+   "description": "Compute expressions like a※b = 3a−2b given the definition, including nested uses.",
+   "terminal": false
+  },
+  {
+   "name": "Solve non-routine puzzles and logical challenges",
+   "name_zh": "综合运用逻辑推理解决非典型谜题",
+   "description": "Combine logical deduction, enumeration, invariants, and trial to solve puzzles beyond standard word problems.",
+   "terminal": true
+  }
+ ]
+}

@@ -1,0 +1,557 @@
+{
+ "family": "mistral",
+ "requested_slug": "mistralai/mistral-medium-3-5",
+ "served_model": "mistralai/mistral-medium-3-5",
+ "provider": "Mistral",
+ "timestamp_utc": "2026-09-26T05:49:05Z",
+ "usage": {
+  "prompt_tokens": 19378,
+  "completion_tokens": 4571,
+  "total_tokens": 23949,
+  "cost": 0.0633495,
+  "is_byok": false,
+  "prompt_tokens_details": {
+   "cached_tokens": 19328,
+   "cache_write_tokens": 0,
+   "audio_tokens": 0,
+   "video_tokens": 0
+  },
+  "cost_details": {
+   "upstream_inference_cost": 0.0633495,
+   "upstream_inference_prompt_cost": 0.029067,
+   "upstream_inference_completions_cost": 0.0342825
+  },
+  "completion_tokens_details": {
+   "reasoning_tokens": 0,
+   "image_tokens": 0,
+   "audio_tokens": 0
+  }
+ },
+ "sample_question_ids": [
+  "4095",
+  "990",
+  "6743",
+  "337",
+  "6808",
+  "5612",
+  "5056",
+  "919",
+  "7506",
+  "1049",
+  "472",
+  "4684",
+  "7610",
+  "1641",
+  "1844",
+  "632",
+  "2099",
+  "7324",
+  "6791",
+  "2209",
+  "2834",
+  "3929",
+  "6518",
+  "5116",
+  "3996",
+  "5349",
+  "2724",
+  "1918",
+  "1945",
+  "6303",
+  "3715",
+  "6900",
+  "327",
+  "4209",
+  "1862",
+  "6649",
+  "3686",
+  "4680",
+  "360",
+  "7283",
+  "6171",
+  "5695",
+  "197",
+  "6130",
+  "4045",
+  "3074",
+  "945",
+  "6517",
+  "649",
+  "4092",
+  "5090",
+  "437",
+  "6370",
+  "1745",
+  "2737",
+  "6402",
+  "3505",
+  "7063",
+  "99",
+  "982",
+  "2626",
+  "1354",
+  "1294",
+  "3816",
+  "3627",
+  "73",
+  "7156",
+  "7498",
+  "6097",
+  "4271",
+  "4837",
+  "6101",
+  "5667",
+  "5137",
+  "4673",
+  "4729",
+  "6628",
+  "6812",
+  "2500",
+  "5155",
+  "5634",
+  "591",
+  "2725",
+  "2760",
+  "5763",
+  "3524",
+  "6834",
+  "1007",
+  "6851",
+  "4930",
+  "5626",
+  "5159",
+  "4622",
+  "480",
+  "5447",
+  "1378",
+  "2000",
+  "4",
+  "4304",
+  "2712",
+  "1822",
+  "155",
+  "7480",
+  "2311",
+  "7521",
+  "4079",
+  "1854",
+  "3261",
+  "1022",
+  "18",
+  "5438",
+  "6863",
+  "2871",
+  "1065",
+  "5843",
+  "5461",
+  "4152",
+  "4937",
+  "7240",
+  "2342"
+ ],
+ "prompt_sha256": "0c26499178d7845ea863df667debad71e0f2187c9829c072fa7a6ae405e2c37f",
+ "capabilities": [
+  {
+   "name": "Recognize and write numbers up to 10000",
+   "name_zh": "识别并书写10000以内的数",
+   "description": "Read, write, and identify numbers from 0 to 9999, including place value understanding.",
+   "terminal": false
+  },
+  {
+   "name": "Compare numbers up to 10000",
+   "name_zh": "比较10000以内的数的大小",
+   "description": "Use place value to compare and order numbers up to 4 digits.",
+   "terminal": false
+  },
+  {
+   "name": "Count by multiples of 2, 3, 5, and 10",
+   "name_zh": "2、3、5、10的倍数计数",
+   "description": "Skip-count forward and backward by multiples of 2, 3, 5, and 10 up to 1000.",
+   "terminal": false
+  },
+  {
+   "name": "Understand and use place value (units, tens, hundreds, thousands)",
+   "name_zh": "理解并使用个、十、百、千的位值",
+   "description": "Break down numbers into thousands, hundreds, tens, and units, and recombine them.",
+   "terminal": false
+  },
+  {
+   "name": "Add and subtract 2-digit and 3-digit numbers without regrouping",
+   "name_zh": "两位数或三位数加减（不进位、不借位）",
+   "description": "Perform addition and subtraction of 2-digit and 3-digit numbers without carrying or borrowing.",
+   "terminal": false
+  },
+  {
+   "name": "Add and subtract 2-digit and 3-digit numbers with regrouping",
+   "name_zh": "两位数或三位数加减（进位、借位）",
+   "description": "Perform addition and subtraction of 2-digit and 3-digit numbers with carrying or borrowing.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply 2-digit numbers by 1-digit numbers without regrouping",
+   "name_zh": "两位数乘一位数（不进位）",
+   "description": "Perform multiplication of 2-digit numbers by 1-digit numbers without carrying.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply 2-digit numbers by 1-digit numbers with regrouping",
+   "name_zh": "两位数乘一位数（进位）",
+   "description": "Perform multiplication of 2-digit numbers by 1-digit numbers with carrying.",
+   "terminal": false
+  },
+  {
+   "name": "Multiply 3-digit numbers by 1-digit numbers",
+   "name_zh": "三位数乘一位数",
+   "description": "Perform multiplication of 3-digit numbers by 1-digit numbers, including carrying.",
+   "terminal": false
+  },
+  {
+   "name": "Divide 2-digit or 3-digit numbers by 1-digit numbers",
+   "name_zh": "两位数或三位数除以一位数",
+   "description": "Perform division of 2-digit or 3-digit numbers by 1-digit numbers, including remainders.",
+   "terminal": false
+  },
+  {
+   "name": "Understand and use the distributive property for multiplication",
+   "name_zh": "理解并使用乘法分配律",
+   "description": "Apply the distributive property (e.g., a × (b + c) = a × b + a × c) to simplify calculations.",
+   "terminal": false
+  },
+  {
+   "name": "Use Associative and Commutative Properties for Addition and Multiplication",
+   "name_zh": "理解并使用加法和乘法的结合律和交换律",
+   "description": "Rearrange and group addends or factors to simplify calculations.",
+   "terminal": false
+  },
+  {
+   "name": "Perform mental addition and subtraction strategies",
+   "name_zh": "心算加减法策略",
+   "description": "Use strategies like rounding, breaking apart, or compensation for mental addition and subtraction.",
+   "terminal": false
+  },
+  {
+   "name": "Perform mental multiplication and division strategies",
+   "name_zh": "心算乘除法策略",
+   "description": "Use strategies like breaking apart, factoring, or splitting for mental multiplication and division.",
+   "terminal": false
+  },
+  {
+   "name": "Round numbers to the nearest 10, 100, or 1000",
+   "name_zh": "四舍五入到十、百或千",
+   "description": "Round numbers to the nearest ten, hundred, or thousand based on digit value.",
+   "terminal": false
+  },
+  {
+   "name": "Estimate sums, differences, products, and quotients",
+   "name_zh": "估算和、差、积、商",
+   "description": "Use rounding and simplification to estimate results of basic operations.",
+   "terminal": false
+  },
+  {
+   "name": "Solve simple one-step equations",
+   "name_zh": "解简单一步方程",
+   "description": "Solve equations like x + a = b or x × a = b using inverse operations.",
+   "terminal": false
+  },
+  {
+   "name": "Solve two-step equations",
+   "name_zh": "解两步方程",
+   "description": "Solve equations requiring two operations (e.g., 2x + 3 = 11).",
+   "terminal": false
+  },
+  {
+   "name": "Identify and use multiples and factors of numbers",
+   "name_zh": "识别和使用倍数与因数",
+   "description": "List multiples and factors of numbers and use them in problem-solving.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize common divisibility rules",
+   "name_zh": "识别常见的整除规则",
+   "description": "Apply divisibility rules for 2, 3, 5, and 9 to determine if numbers are divisible.",
+   "terminal": false
+  },
+  {
+   "name": "Extend arithmetic patterns with addition, subtraction, or multiplication",
+   "name_zh": "扩展加减乘规律的数列",
+   "description": "Identify and extend numerical patterns (e.g., 4, 7, 10, 13...).",
+   "terminal": false
+  },
+  {
+   "name": "Calculate the nth term of a simple arithmetic sequence",
+   "name_zh": "计算简单等差数列的第n项",
+   "description": "Find the term at a given position in an arithmetic sequence (e.g., term 10 of 4, 7, 10...).",
+   "terminal": true
+  },
+  {
+   "name": "Calculate the sum of a simple arithmetic sequence",
+   "name_zh": "计算简单等差数列的和",
+   "description": "Calculate the sum of terms in an arithmetic sequence (e.g., sum of 1 to 24).",
+   "terminal": false
+  },
+  {
+   "name": "Understand and use the concept of average for a set of numbers",
+   "name_zh": "理解并使用一组数的平均数概念",
+   "description": "Calculate and interpret the average (mean) of a dataset.",
+   "terminal": true
+  },
+  {
+   "name": "Measure and calculate perimeter of polygons",
+   "name_zh": "测量并计算多边形的周长",
+   "description": "Calculate the perimeter of rectangles, squares, and composite shapes.",
+   "terminal": false
+  },
+  {
+   "name": "Measure and calculate area of rectangles and squares",
+   "name_zh": "测量并计算长方形和正方形的面积",
+   "description": "Calculate the area of rectangles and squares using length and width.",
+   "terminal": true
+  },
+  {
+   "name": "Understand and calculate the area of composite shapes",
+   "name_zh": "理解并计算组合图形的面积",
+   "description": "Break down composite shapes into rectangles/squares to calculate total area.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and classify angles (right, acute, obtuse)",
+   "name_zh": "识别并分类角（直角、锐角、钝角）",
+   "description": "Identify and classify angles based on their measure (90°, <90°, >90°).",
+   "terminal": false
+  },
+  {
+   "name": "Construct and measure angles using a protractor",
+   "name_zh": "使用量角器构造和测量角",
+   "description": "Use a protractor to draw and measure angles in degrees.",
+   "terminal": false
+  },
+  {
+   "name": "Understand and use the concept of parallel and perpendicular lines",
+   "name_zh": "理解并使用平行线和垂线的概念",
+   "description": "Identify and draw parallel and perpendicular lines in geometric contexts.",
+   "terminal": false
+  },
+  {
+   "name": "Identify, describe, and classify triangles",
+   "name_zh": "识别、描述和分类三角形",
+   "description": "Classify triangles by side length (equilateral, isosceles, scalene) and angles (right, acute, obtuse).",
+   "terminal": false
+  },
+  {
+   "name": "Count the number of triangles in a composite figure",
+   "name_zh": "数组合图形中的三角形数量",
+   "description": "Count all possible triangles embedded in a complex geometric diagram.",
+   "terminal": false
+  },
+  {
+   "name": "Use simple coordinate systems",
+   "name_zh": "使用简单的坐标系",
+   "description": "Place and locate points on a grid using row and column labels or coordinates.",
+   "terminal": false
+  },
+  {
+   "name": "Read and interpret bar graphs and line graphs",
+   "name_zh": "阅读和解释条形图及折线图",
+   "description": "Extract and interpret data from bar graphs and line graphs.",
+   "terminal": true
+  },
+  {
+   "name": "Create simple bar graphs and line graphs",
+   "name_zh": "创建简单的条形图和折线图",
+   "description": "Organize and present data into bar graphs or line graphs.",
+   "terminal": false
+  },
+  {
+   "name": "Calculate probabilities of simple events",
+   "name_zh": "计算简单事件的概率",
+   "description": "Use basic probability concepts to determine the likelihood of simple events.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems involving time",
+   "name_zh": "解决时间相关问题",
+   "description": "Calculate time differences and solve problems involving hours, minutes, and seconds.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems involving converting units of measurement",
+   "name_zh": "解决单位换算问题",
+   "description": "Convert between units like meters/centimeters, kilograms/grams, or hours/minutes.",
+   "terminal": true
+  },
+  {
+   "name": "Solve simple currency problems",
+   "name_zh": "解决简单货币问题",
+   "description": "Calculate sums and differences in currencies (e.g., yuan, jiao, fen).",
+   "terminal": false
+  },
+  {
+   "name": "Use place value to decompose numbers for calculations",
+   "name_zh": "使用位值分解数字进行简便运算",
+   "description": "Break down numbers into parts (e.g., 352 = 300 + 50 + 2) to simplify arithmetic operations.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize equivalences in expressions and rewrite them",
+   "name_zh": "识别表达式的等价形式并改写",
+   "description": "Recognize equivalent arithmetic expressions and rewrite them (e.g., 125 × 72 = 125 × 8 × 9).",
+   "terminal": false
+  },
+  {
+   "name": "Perform calculations using properties of operations",
+   "name_zh": "使用运算性质进行简化计算",
+   "description": "Apply properties like distributive, associative, or commutative to simplify and solve calculations.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve problems involving age relationships",
+   "name_zh": "识别并解决年龄关系问题",
+   "description": "Set up and solve equations based on relationships between ages (e.g., 6 years ago, in 6 years).",
+   "terminal": true
+  },
+  {
+   "name": "Recognize and solve problems involving speed, distance, and time",
+   "name_zh": "识别并解决速度、距离和时间问题",
+   "description": "Solve problems using the formula Distance = Speed × Time.",
+   "terminal": true
+  },
+  {
+   "name": "Recognize and solve problems involving ratios",
+   "name_zh": "识别并解决比例关系问题",
+   "description": "Solve problems where quantities are directly related (e.g., twice, three times, half).",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve part-whole problems (sum and difference of parts)",
+   "name_zh": "识别并解决部分整体问题（部分和与差）",
+   "description": "Solve problems where the total is known, and the parts are related by sums and differences.",
+   "terminal": true
+  },
+  {
+   "name": "Recognize and solve problems involving excess/deficit scenarios",
+   "name_zh": "识别并解决盈亏问题",
+   "description": "Use surplus and deficit information to find unknown quantities (e.g., too much/too little scenarios).",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve reverse calculation (working backwards) problems",
+   "name_zh": "识别并解决倒推计算问题",
+   "description": "Solve problems by working backwards from a given result to determine the starting value.",
+   "terminal": true
+  },
+  {
+   "name": "Recognize and solve problems involving overlapping sets (e.g., Venn diagrams)",
+   "name_zh": "识别并解决重叠集合问题（如维恩图）",
+   "description": "Use principles of inclusion and exclusion to solve problems with overlapping groups.",
+   "terminal": true
+  },
+  {
+   "name": "Recognize and solve problems involving divisibility",
+   "name_zh": "识别并解决整除问题",
+   "description": "Solve problems where divisibility conditions must be satisfied (e.g., divisible by 8 to modify a digit).",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve problems using enumeration",
+   "name_zh": "识别并使用枚举法解决问题",
+   "description": "List all possible outcomes or combinations to solve a problem systematically.",
+   "terminal": true
+  },
+  {
+   "name": "Recognize and solve combinatorial problems (counting paths, arrangements)",
+   "name_zh": "识别并解决组合问题（路径、排列计数）",
+   "description": "Count the number of arrangements, paths, or combinations (e.g., transport routes, seating).",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve problems using the Principle of Addition",
+   "name_zh": "识别并使用加法原理解决问题",
+   "description": "Use addition to count multiple possibilities where cases are mutually exclusive.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve problems using the Principle of Multiplication",
+   "name_zh": "识别并使用乘法原理解决问题",
+   "description": "Use multiplication to count multiple possibilities where cases are independent.",
+   "terminal": true
+  },
+  {
+   "name": "Understand and create tree diagrams for simple counting",
+   "name_zh": "理解并绘制简单计数的树状图",
+   "description": "Use tree diagrams to visualize and solve counting problems.",
+   "terminal": false
+  },
+  {
+   "name": "Understand and use the Pigeonhole Principle",
+   "name_zh": "理解并使用鸽巢原理",
+   "description": "Apply the pigeonhole principle to solve problems like 'guaranteeing a pair'.",
+   "terminal": false
+  },
+  {
+   "name": "Understand and solve one-pen stroke problems (Eulerian paths)",
+   "name_zh": "理解并解决一笔画问题（欧拉路径）",
+   "description": "Determine whether a shape can be drawn without lifting the pen or retracing lines.",
+   "terminal": true
+  },
+  {
+   "name": "Calculate the number of diagonals in a polygon",
+   "name_zh": "计算多边形的对角线数量",
+   "description": "Use formulas or counting methods to determine the diagonals in polygons.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and solve problems involving symmetry",
+   "name_zh": "识别并解决对称性问题",
+   "description": "Identify and apply symmetry properties in geometric and counting contexts.",
+   "terminal": false
+  },
+  {
+   "name": "Use trial and error systematically in problem-solving",
+   "name_zh": "在解决问题时系统地使用尝试法",
+   "description": "Organize trial and error to systematically test possibilities in counting or arithmetic problems.",
+   "terminal": false
+  },
+  {
+   "name": "Solve problems using the concept of properties (e.g., one property corresponds to a multiple of another)",
+   "name_zh": "使用属性关系概念解决问题",
+   "description": "Assign numerical relationships based on properties (e.g., age ratios, allocation rules).",
+   "terminal": false
+  },
+  {
+   "name": "Recognize and use the concept of ‘folding’ or ‘doubling’ to reverse calculations",
+   "name_zh": "识别并使用‘折半’或‘加倍’概念进行逆向计算",
+   "description": "Work backwards in problems involving halving or doubling to find initial values.",
+   "terminal": true
+  },
+  {
+   "name": "Solve problems using before-and-after analysis",
+   "name_zh": "使用前后分析法解决问题",
+   "description": "Analyze changes before and after a process to determine unknowns (e.g., shifts in quantities).",
+   "terminal": true
+  },
+  {
+   "name": "Solve problems using line segment models for relationships",
+   "name_zh": "使用线段模型表示关系解决问题",
+   "description": "Draw and use line segment diagrams to visualize and solve ratio or comparison problems.",
+   "terminal": true
+  },
+  {
+   "name": "Understand and apply the concept of ‘total’ or ‘invariant’",
+   "name_zh": "理解并应用‘总和’或‘不变量’概念",
+   "description": "Use the idea of an unchanging total quantity or invariant in solving problems.",
+   "terminal": false
+  },
+  {
+   "name": "Recognize which operation to apply given a word problem",
+   "name_zh": "根据文字题选择适当的运算",
+   "description": "Select the correct arithmetic operations (addition, subtraction, multiplication, division) based on the problem description.",
+   "terminal": true
+  },
+  {
+   "name": "Validate arithmetic calculations",
+   "name_zh": "验证算术计算",
+   "description": "Check calculations for accuracy using inverse operations or alternative methods.",
+   "terminal": false
+  }
+ ]
+}

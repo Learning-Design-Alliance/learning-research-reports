@@ -1,0 +1,812 @@
+{
+  "1": {
+    "ccss": "6.SP.B.4-2",
+    "jaccard": 1.0,
+    "assistments_name": "Box and Whisker",
+    "edmcup_description": "Box and Whisker"
+  },
+  "10": {
+    "ccss": "6.SP.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Table",
+    "edmcup_description": "Table"
+  },
+  "12": {
+    "ccss": "6.SP.B.5c-2",
+    "jaccard": 1.0,
+    "assistments_name": "Mean",
+    "edmcup_description": "Mean"
+  },
+  "13": {
+    "ccss": "6.SP.B.5c-3",
+    "jaccard": 1.0,
+    "assistments_name": "Median",
+    "edmcup_description": "Median"
+  },
+  "163": {
+    "ccss": "6.NS.C.7c",
+    "jaccard": 1.0,
+    "assistments_name": "Absolute Value",
+    "edmcup_description": "Absolute Value"
+  },
+  "17": {
+    "ccss": "7.SP.C.8c",
+    "jaccard": 1.0,
+    "assistments_name": "Probability of Two Distinct Events",
+    "edmcup_description": "Probability of Two Distinct Events"
+  },
+  "174": {
+    "ccss": "6.SP.B.4-1",
+    "jaccard": 1.0,
+    "assistments_name": "Circle Graph",
+    "edmcup_description": "Circle Graph"
+  },
+  "18": {
+    "ccss": "7.SP.C.7a",
+    "jaccard": 1.0,
+    "assistments_name": "Probability of a Single Event",
+    "edmcup_description": "Probability of a Single Event"
+  },
+  "181": {
+    "ccss": "6.EE.A.1",
+    "jaccard": 0.5,
+    "assistments_name": "Exponents",
+    "edmcup_description": "Evaluating Exponents"
+  },
+  "192": {
+    "ccss": "8.SP.A.2",
+    "jaccard": 1.0,
+    "assistments_name": "Line of Best-Fit",
+    "edmcup_description": "Line of best fit"
+  },
+  "196": {
+    "ccss": "6.SP.B.5c-2",
+    "jaccard": 1.0,
+    "assistments_name": "Mean",
+    "edmcup_description": "Mean"
+  },
+  "198": {
+    "ccss": "6.SP.B.5c-3",
+    "jaccard": 1.0,
+    "assistments_name": "Median",
+    "edmcup_description": "Median"
+  },
+  "2": {
+    "ccss": "6.SP.B.4-1",
+    "jaccard": 1.0,
+    "assistments_name": "Circle Graph",
+    "edmcup_description": "Circle Graph"
+  },
+  "202": {
+    "ccss": "4.OA.C.5",
+    "jaccard": 1.0,
+    "assistments_name": "Pattern Finding",
+    "edmcup_description": "Pattern Finding"
+  },
+  "203": {
+    "ccss": "6.RP.A.3c-1",
+    "jaccard": 0.5,
+    "assistments_name": "Percent Discount",
+    "edmcup_description": "Percent of"
+  },
+  "204": {
+    "ccss": "6.RP.A.3c-3",
+    "jaccard": 0.5,
+    "assistments_name": "Percents",
+    "edmcup_description": "Conversion with Percents"
+  },
+  "21": {
+    "ccss": "7.G.B.5-3",
+    "jaccard": 1.0,
+    "assistments_name": "Interior Angles Figures with More than 3 Sides",
+    "edmcup_description": "Interior angles of figures more than 3 sides"
+  },
+  "213": {
+    "ccss": "8.G.B.7",
+    "jaccard": 1.0,
+    "assistments_name": "Pythagorean Theorem",
+    "edmcup_description": "Pythagorean Theorem"
+  },
+  "214": {
+    "ccss": "HSA.REI.B.4b",
+    "jaccard": 0.5,
+    "assistments_name": "Quadratic Equation Solving",
+    "edmcup_description": "Solve quadratic equation"
+  },
+  "217": {
+    "ccss": "6.RP.A.3b",
+    "jaccard": 0.5,
+    "assistments_name": "Rate",
+    "edmcup_description": "Unit Rate"
+  },
+  "22": {
+    "ccss": "7.G.B.5-2",
+    "jaccard": 1.0,
+    "assistments_name": "Interior Angles Triangle",
+    "edmcup_description": "Interior Angles of a Triangle"
+  },
+  "222": {
+    "ccss": "7.EE.B.4b-1",
+    "jaccard": 1.0,
+    "assistments_name": "Solving Inequalities",
+    "edmcup_description": "Solving Inequalities"
+  },
+  "224": {
+    "ccss": "8.EE.A.2",
+    "jaccard": 0.667,
+    "assistments_name": "Square Roots",
+    "edmcup_description": "Square and cube roots"
+  },
+  "25": {
+    "ccss": "7.G.B.5-1",
+    "jaccard": 1.0,
+    "assistments_name": "Complementary and Supplementary Angles",
+    "edmcup_description": "Complementary and Supplementary Angles"
+  },
+  "27": {
+    "ccss": "8.G.B.7",
+    "jaccard": 1.0,
+    "assistments_name": "Pythagorean Theorem",
+    "edmcup_description": "Pythagorean Theorem"
+  },
+  "277": {
+    "ccss": "2.NBT.B.9",
+    "jaccard": 0.5,
+    "assistments_name": "Addition and Subtraction Integers",
+    "edmcup_description": "Explain addition & subtraction"
+  },
+  "280": {
+    "ccss": "5.NF.A.2",
+    "jaccard": 0.6,
+    "assistments_name": "Addition and Subtraction Fractions",
+    "edmcup_description": "Word problems addition & subtraction fractions"
+  },
+  "281": {
+    "ccss": "4.G.A.2",
+    "jaccard": 0.6,
+    "assistments_name": "Properties and Classification Triangles",
+    "edmcup_description": "Properties & Classification Triangles & 2D Shapes"
+  },
+  "282": {
+    "ccss": "5.G.B.4-1",
+    "jaccard": 1.0,
+    "assistments_name": "Properties and Classification Polygons with 5 or more sides",
+    "edmcup_description": "Properties and Classification of Polygons with 5 or more sides"
+  },
+  "283": {
+    "ccss": "5.G.B.4-2",
+    "jaccard": 1.0,
+    "assistments_name": "Properties and Classification Quadrilaterals",
+    "edmcup_description": "Properties and Classification of Quadrilaterals"
+  },
+  "284": {
+    "ccss": "5.G.B.4-2",
+    "jaccard": 0.5,
+    "assistments_name": "Properties and Classification Circle",
+    "edmcup_description": "Properties and Classification of Quadrilaterals"
+  },
+  "287": {
+    "ccss": "5.G.B.4-2",
+    "jaccard": 0.5,
+    "assistments_name": "Properties and Classification Prism",
+    "edmcup_description": "Properties and Classification of Quadrilaterals"
+  },
+  "289": {
+    "ccss": "4.G.A.3",
+    "jaccard": 1.0,
+    "assistments_name": "Line Symmetry",
+    "edmcup_description": "Line Symmetry"
+  },
+  "292": {
+    "ccss": "8.G.A.3-3",
+    "jaccard": 1.0,
+    "assistments_name": "Rotations",
+    "edmcup_description": "Rotations"
+  },
+  "293": {
+    "ccss": "8.G.A.3-1",
+    "jaccard": 1.0,
+    "assistments_name": "Translations",
+    "edmcup_description": "Translations"
+  },
+  "294": {
+    "ccss": "6.G.A.1-4",
+    "jaccard": 1.0,
+    "assistments_name": "Area Irregular Figure",
+    "edmcup_description": "Area Irregular Figure"
+  },
+  "296": {
+    "ccss": "3.MD.C.7d",
+    "jaccard": 0.5,
+    "assistments_name": "Area Rectangle",
+    "edmcup_description": "Area of rectangle by decomposing figure"
+  },
+  "299": {
+    "ccss": "7.G.B.6-3",
+    "jaccard": 1.0,
+    "assistments_name": "Surface Area Cylinder",
+    "edmcup_description": "Surface Area Cylinder"
+  },
+  "300": {
+    "ccss": "7.G.B.6-2",
+    "jaccard": 0.5,
+    "assistments_name": "Surface Area Pyramid",
+    "edmcup_description": "Surface Area of Prisms"
+  },
+  "301": {
+    "ccss": "7.G.B.6-1",
+    "jaccard": 0.6,
+    "assistments_name": "Surface Area Rectangular Prism",
+    "edmcup_description": "Surface Area of Rectangular Prisms"
+  },
+  "302": {
+    "ccss": "7.G.B.6-2",
+    "jaccard": 0.5,
+    "assistments_name": "Surface Area Sphere",
+    "edmcup_description": "Surface Area of Prisms"
+  },
+  "303": {
+    "ccss": "8.G.C.9-1",
+    "jaccard": 1.0,
+    "assistments_name": "Volume Cylinder",
+    "edmcup_description": "Volume of a Cylinder"
+  },
+  "305": {
+    "ccss": "8.G.C.9-3",
+    "jaccard": 1.0,
+    "assistments_name": "Volume Cone",
+    "edmcup_description": "Volume of a Cone"
+  },
+  "307": {
+    "ccss": "5.MD.C.5a",
+    "jaccard": 0.6,
+    "assistments_name": "Volume Rectangular Prism",
+    "edmcup_description": "Volume of rectangular prism without formula"
+  },
+  "308": {
+    "ccss": "8.G.C.9-2",
+    "jaccard": 1.0,
+    "assistments_name": "Volume Sphere",
+    "edmcup_description": "Volume of a Sphere"
+  },
+  "309": {
+    "ccss": "6.EE.A.2c-2",
+    "jaccard": 1.0,
+    "assistments_name": "Order of Operations +,-,/,* () positive reals",
+    "edmcup_description": "Order of Operations +,-,/,* () positive reals"
+  },
+  "310": {
+    "ccss": "5.OA.A.1",
+    "jaccard": 0.5,
+    "assistments_name": "Order of Operations All",
+    "edmcup_description": "Order of Operations with Parenthesis"
+  },
+  "311": {
+    "ccss": "7.EE.B.4a-1",
+    "jaccard": 1.0,
+    "assistments_name": "Equation Solving Two or Fewer Steps",
+    "edmcup_description": "Equation Solving - Two or Fewer Steps"
+  },
+  "312": {
+    "ccss": "7.EE.B.4a-1",
+    "jaccard": 0.571,
+    "assistments_name": "Equation Solving More Than Two Steps",
+    "edmcup_description": "Equation Solving - Two or Fewer Steps"
+  },
+  "313": {
+    "ccss": "7.SP.C.8b-1",
+    "jaccard": 0.75,
+    "assistments_name": "Tree Diagrams, Lists for Counting",
+    "edmcup_description": "Tree Diagrams and Lists"
+  },
+  "315": {
+    "ccss": "4.G.A.1-2",
+    "jaccard": 1.0,
+    "assistments_name": "Parallel and Perpendicular Lines",
+    "edmcup_description": "Parallel and Perpendicular Lines"
+  },
+  "317": {
+    "ccss": "6.NS.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Greatest Common Factor",
+    "edmcup_description": "Greatest Common Factor"
+  },
+  "32": {
+    "ccss": "6.G.A.4-1",
+    "jaccard": 1.0,
+    "assistments_name": "Nets of 3D Figures",
+    "edmcup_description": "Nets of 3D Figures"
+  },
+  "321": {
+    "ccss": "8.NS.A.2-2",
+    "jaccard": 0.5,
+    "assistments_name": "Computation with Real Numbers",
+    "edmcup_description": "Ordering Real Numbers"
+  },
+  "322": {
+    "ccss": "8.F.B.4-5",
+    "jaccard": 0.5,
+    "assistments_name": "Write Linear Equation from Ordered Pairs",
+    "edmcup_description": "Writing Linear Equations from Ordered Pairs"
+  },
+  "331": {
+    "ccss": "8.F.B.4-7",
+    "jaccard": 0.6,
+    "assistments_name": "Finding Slope From Situation",
+    "edmcup_description": "Find slope from situation"
+  },
+  "332": {
+    "ccss": "8.EE.B.6",
+    "jaccard": 0.6,
+    "assistments_name": "Finding Slope from Graph",
+    "edmcup_description": "Find slope from a graph"
+  },
+  "333": {
+    "ccss": "8.F.B.4-1",
+    "jaccard": 0.75,
+    "assistments_name": "Finding Slope From Equation",
+    "edmcup_description": "Finding Slope in an Equation"
+  },
+  "334": {
+    "ccss": "8.F.B.4-4",
+    "jaccard": 1.0,
+    "assistments_name": "Finding Slope from Ordered Pairs",
+    "edmcup_description": "Finding Slope from Ordered Pairs"
+  },
+  "338": {
+    "ccss": "7.EE.A.1",
+    "jaccard": 1.0,
+    "assistments_name": "Combining Like Terms",
+    "edmcup_description": "Combining Like Terms"
+  },
+  "339": {
+    "ccss": "2.MD.D.10",
+    "jaccard": 0.5,
+    "assistments_name": "Bar Graph",
+    "edmcup_description": "Use bar graph to solove problems"
+  },
+  "34": {
+    "ccss": "5.MD.A.1-1",
+    "jaccard": 0.75,
+    "assistments_name": "Unit Conversion Within a System",
+    "edmcup_description": "Unit Conversion Within a System - Metric"
+  },
+  "340": {
+    "ccss": "6.EE.A.3",
+    "jaccard": 1.0,
+    "assistments_name": "Distributive Property",
+    "edmcup_description": "Distributive Property"
+  },
+  "346": {
+    "ccss": "4.OA.B.4-1",
+    "jaccard": 0.5,
+    "assistments_name": "Polynomial Factors",
+    "edmcup_description": "Factors"
+  },
+  "350": {
+    "ccss": "8.EE.C.7b",
+    "jaccard": 0.75,
+    "assistments_name": "Solving Systems of Linear Equations",
+    "edmcup_description": "Solving Linear Equations"
+  },
+  "356": {
+    "ccss": "HSA.REI.B.4b",
+    "jaccard": 0.75,
+    "assistments_name": "Quadratic Formula to Solve Quadratic Equation",
+    "edmcup_description": "Solve quadratic equation"
+  },
+  "358": {
+    "ccss": "6.EE.C.9-1",
+    "jaccard": 1.0,
+    "assistments_name": "Making a Table from an Equation",
+    "edmcup_description": "Making a Table from an Equation"
+  },
+  "36": {
+    "ccss": "5.MD.A.1-1",
+    "jaccard": 0.6,
+    "assistments_name": "Unit Conversion Standard to Metric",
+    "edmcup_description": "Unit Conversion Within a System - Metric"
+  },
+  "365": {
+    "ccss": "6.EE.C.9-2",
+    "jaccard": 1.0,
+    "assistments_name": "Interpreting Coordinate Graphs ",
+    "edmcup_description": "Interpreting Coordinate Graphs"
+  },
+  "370": {
+    "ccss": "1.OA.D.7",
+    "jaccard": 0.6,
+    "assistments_name": "Recognizing Equivalent Expressions",
+    "edmcup_description": "Recognizing equivalent add/subtract expressions"
+  },
+  "375": {
+    "ccss": "7.EE.B.4b-1",
+    "jaccard": 1.0,
+    "assistments_name": "Solving Inequalities",
+    "edmcup_description": "Solving Inequalities"
+  },
+  "376": {
+    "ccss": "3.NF.A.2b",
+    "jaccard": 0.5,
+    "assistments_name": "Graphing Inequalities on a number line",
+    "edmcup_description": "Fractions on a number line"
+  },
+  "378": {
+    "ccss": "8.EE.C.7b",
+    "jaccard": 0.6,
+    "assistments_name": "Solving Systems of Linear Equations by Graphing",
+    "edmcup_description": "Solving Linear Equations"
+  },
+  "385": {
+    "ccss": "3.MD.A.1-2",
+    "jaccard": 1.0,
+    "assistments_name": "Elapsed Time",
+    "edmcup_description": "Elapsed Time"
+  },
+  "386": {
+    "ccss": "2.OA.C.3",
+    "jaccard": 0.5,
+    "assistments_name": "Odd and Even Number",
+    "edmcup_description": "Identify Odd/Even"
+  },
+  "387": {
+    "ccss": "6.G.A.1-4",
+    "jaccard": 0.5,
+    "assistments_name": "Perimeter of an Irregular Figure",
+    "edmcup_description": "Area Irregular Figure"
+  },
+  "388": {
+    "ccss": "6.NS.B.4-2",
+    "jaccard": 1.0,
+    "assistments_name": "Common Multiple",
+    "edmcup_description": "Common Multiple"
+  },
+  "389": {
+    "ccss": "6.NS.B.4-3",
+    "jaccard": 0.667,
+    "assistments_name": "Common Factor",
+    "edmcup_description": "Greatest Common Factor"
+  },
+  "391": {
+    "ccss": "8.EE.C.7b",
+    "jaccard": 0.5,
+    "assistments_name": "Graphing Linear Equations",
+    "edmcup_description": "Solving Linear Equations"
+  },
+  "392": {
+    "ccss": "7.G.B.6-2",
+    "jaccard": 0.5,
+    "assistments_name": "Surface Area of Prism",
+    "edmcup_description": "Surface Area of Prisms"
+  },
+  "40": {
+    "ccss": "7.G.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Circumference ",
+    "edmcup_description": "Circumference"
+  },
+  "41": {
+    "ccss": "7.G.B.4-1",
+    "jaccard": 1.0,
+    "assistments_name": "Definition Pi",
+    "edmcup_description": "Definition Pi"
+  },
+  "47": {
+    "ccss": "6.RP.A.3c-3",
+    "jaccard": 0.5,
+    "assistments_name": "Conversion of Fraction Decimals Percents",
+    "edmcup_description": "Conversion with Percents"
+  },
+  "48": {
+    "ccss": "4.NF.A.1",
+    "jaccard": 1.0,
+    "assistments_name": "Equivalent Fractions",
+    "edmcup_description": "Equivalent Fractions"
+  },
+  "49": {
+    "ccss": "6.NS.B.3-3",
+    "jaccard": 0.5,
+    "assistments_name": "Ordering Positive Decimals",
+    "edmcup_description": "Multiplying Positive Decimals"
+  },
+  "5": {
+    "ccss": "6.SP.B.4-5",
+    "jaccard": 1.0,
+    "assistments_name": "Number Line",
+    "edmcup_description": "Number Line"
+  },
+  "50": {
+    "ccss": "4.NF.A.2",
+    "jaccard": 1.0,
+    "assistments_name": "Ordering Fractions",
+    "edmcup_description": "Ordering Fractions"
+  },
+  "52": {
+    "ccss": "8.NS.A.2-2",
+    "jaccard": 0.5,
+    "assistments_name": "Ordering Whole Numbers",
+    "edmcup_description": "Ordering Real Numbers"
+  },
+  "523": {
+    "ccss": "6.EE.A.2a",
+    "jaccard": 1.0,
+    "assistments_name": "Picking Expressions From Choices",
+    "edmcup_description": "Picking Expressions From Choices"
+  },
+  "53": {
+    "ccss": "8.NS.A.2-2",
+    "jaccard": 1.0,
+    "assistments_name": "Ordering Real Numbers",
+    "edmcup_description": "Ordering Real Numbers"
+  },
+  "568": {
+    "ccss": "5.MD.C.5a",
+    "jaccard": 0.6,
+    "assistments_name": "Volume Rectangular Prism",
+    "edmcup_description": "Volume of rectangular prism without formula"
+  },
+  "569": {
+    "ccss": "7.G.B.6-1",
+    "jaccard": 0.6,
+    "assistments_name": "Surface Area Rectangular Prism",
+    "edmcup_description": "Surface Area of Rectangular Prisms"
+  },
+  "572": {
+    "ccss": "7.G.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Circumference",
+    "edmcup_description": "Circumference"
+  },
+  "576": {
+    "ccss": "3.MD.C.7d",
+    "jaccard": 0.5,
+    "assistments_name": "Area Rectangle",
+    "edmcup_description": "Area of rectangle by decomposing figure"
+  },
+  "577": {
+    "ccss": "6.G.A.4-1",
+    "jaccard": 0.5,
+    "assistments_name": "Nets of 3D Objects",
+    "edmcup_description": "Nets of 3D Figures"
+  },
+  "58": {
+    "ccss": "4.NBT.B.4-2",
+    "jaccard": 0.5,
+    "assistments_name": "Addition Whole Numbers",
+    "edmcup_description": "Subtracting Whole Numbers"
+  },
+  "580": {
+    "ccss": "6.EE.A.1",
+    "jaccard": 0.5,
+    "assistments_name": "Exponents",
+    "edmcup_description": "Evaluating Exponents"
+  },
+  "582": {
+    "ccss": "6.NS.B.3-3",
+    "jaccard": 0.5,
+    "assistments_name": "Multiplication Positive Decimals",
+    "edmcup_description": "Multiplying Positive Decimals"
+  },
+  "584": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Multiplication Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "585": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Division Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "586": {
+    "ccss": "6.NS.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Greatest Common Factor",
+    "edmcup_description": "Greatest Common Factor"
+  },
+  "587": {
+    "ccss": "6.NS.B.4-4",
+    "jaccard": 1.0,
+    "assistments_name": "Least Common Multiple",
+    "edmcup_description": "Least Common Multiple"
+  },
+  "588": {
+    "ccss": "4.NF.A.1",
+    "jaccard": 1.0,
+    "assistments_name": "Equivalent Fractions",
+    "edmcup_description": "Equivalent Fractions"
+  },
+  "589": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Addition Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "591": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Subtraction Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "592": {
+    "ccss": "5.MD.C.5a",
+    "jaccard": 0.6,
+    "assistments_name": "Volume Rectangular Prism",
+    "edmcup_description": "Volume of rectangular prism without formula"
+  },
+  "593": {
+    "ccss": "7.G.B.6-1",
+    "jaccard": 0.6,
+    "assistments_name": "Surface Area Rectangular Prism",
+    "edmcup_description": "Surface Area of Rectangular Prisms"
+  },
+  "596": {
+    "ccss": "7.G.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Circumference",
+    "edmcup_description": "Circumference"
+  },
+  "6": {
+    "ccss": "3.MD.B.4",
+    "jaccard": 1.0,
+    "assistments_name": "Line Plot",
+    "edmcup_description": "Line plot"
+  },
+  "600": {
+    "ccss": "3.MD.C.7d",
+    "jaccard": 0.5,
+    "assistments_name": "Area Rectangle",
+    "edmcup_description": "Area of rectangle by decomposing figure"
+  },
+  "603": {
+    "ccss": "6.EE.A.1",
+    "jaccard": 0.5,
+    "assistments_name": "Exponents",
+    "edmcup_description": "Evaluating Exponents"
+  },
+  "605": {
+    "ccss": "6.NS.B.3-3",
+    "jaccard": 0.5,
+    "assistments_name": "Multiplication Positive Decimals",
+    "edmcup_description": "Multiplying Positive Decimals"
+  },
+  "607": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Multiplication Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "608": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Division Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "609": {
+    "ccss": "6.NS.B.4-3",
+    "jaccard": 1.0,
+    "assistments_name": "Greatest Common Factor",
+    "edmcup_description": "Greatest Common Factor"
+  },
+  "610": {
+    "ccss": "6.NS.B.4-4",
+    "jaccard": 1.0,
+    "assistments_name": "Least Common Multiple",
+    "edmcup_description": "Least Common Multiple"
+  },
+  "611": {
+    "ccss": "4.NF.A.1",
+    "jaccard": 1.0,
+    "assistments_name": "Equivalent Fractions",
+    "edmcup_description": "Equivalent Fractions"
+  },
+  "612": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Addition Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "614": {
+    "ccss": "5.NF.A.1-1",
+    "jaccard": 0.5,
+    "assistments_name": "Subtraction Proper Fractions",
+    "edmcup_description": "Adding Proper Fractions"
+  },
+  "62": {
+    "ccss": "4.NBT.B.4-2",
+    "jaccard": 0.5,
+    "assistments_name": "Division Whole Numbers",
+    "edmcup_description": "Subtracting Whole Numbers"
+  },
+  "65": {
+    "ccss": "6.NS.B.4-4",
+    "jaccard": 1.0,
+    "assistments_name": "Least Common Multiple",
+    "edmcup_description": "Least Common Multiple"
+  },
+  "67": {
+    "ccss": "5.NF.B.4a-2",
+    "jaccard": 0.5,
+    "assistments_name": "Multiplication Fractions",
+    "edmcup_description": "Multiplication Fractions by Whole Number"
+  },
+  "69": {
+    "ccss": "4.NBT.B.4-2",
+    "jaccard": 0.5,
+    "assistments_name": "Multiplication Whole Numbers",
+    "edmcup_description": "Subtracting Whole Numbers"
+  },
+  "7": {
+    "ccss": "7.SP.A.1",
+    "jaccard": 1.0,
+    "assistments_name": "Sampling Techniques",
+    "edmcup_description": "Sampling Techniques"
+  },
+  "70": {
+    "ccss": "6.RP.A.3c-1",
+    "jaccard": 1.0,
+    "assistments_name": "Percent Of",
+    "edmcup_description": "Percent of"
+  },
+  "74": {
+    "ccss": "4.NBT.B.4-2",
+    "jaccard": 0.5,
+    "assistments_name": "Subtraction Whole Numbers",
+    "edmcup_description": "Subtracting Whole Numbers"
+  },
+  "75": {
+    "ccss": "8.NS.A.2-1",
+    "jaccard": 0.667,
+    "assistments_name": "Square Root",
+    "edmcup_description": "Approximating the Square Root"
+  },
+  "80": {
+    "ccss": "HSG.SRT.A.1b",
+    "jaccard": 0.667,
+    "assistments_name": "Scale Factor",
+    "edmcup_description": "Dilation by scale factor"
+  },
+  "81": {
+    "ccss": "6.RP.A.3b",
+    "jaccard": 1.0,
+    "assistments_name": "Unit Rate",
+    "edmcup_description": "Unit Rate"
+  },
+  "82": {
+    "ccss": "8.EE.A.3",
+    "jaccard": 1.0,
+    "assistments_name": "Scientific Notation",
+    "edmcup_description": "Scientific notation"
+  },
+  "84": {
+    "ccss": "4.OA.B.4-2",
+    "jaccard": 1.0,
+    "assistments_name": "Prime Number",
+    "edmcup_description": "Prime Number"
+  },
+  "85": {
+    "ccss": "6.NS.C.7c",
+    "jaccard": 1.0,
+    "assistments_name": "Absolute Value",
+    "edmcup_description": "Absolute Value"
+  },
+  "86": {
+    "ccss": "6.EE.A.1",
+    "jaccard": 0.5,
+    "assistments_name": "Exponents",
+    "edmcup_description": "Evaluating Exponents"
+  },
+  "90": {
+    "ccss": "6.EE.B.6",
+    "jaccard": 1.0,
+    "assistments_name": "Picking Equation and Inequality from Choices",
+    "edmcup_description": "Picking Equation and Inequality from Choices"
+  },
+  "92": {
+    "ccss": "4.OA.C.5",
+    "jaccard": 1.0,
+    "assistments_name": "Pattern Finding ",
+    "edmcup_description": "Pattern Finding"
+  }
+}

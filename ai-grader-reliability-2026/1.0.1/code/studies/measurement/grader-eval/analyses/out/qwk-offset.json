@@ -1,0 +1,42 @@
+{
+ "source_dump": {
+  "model": {
+   "lite": "google:gemini-3.5-flash-lite",
+   "standard": "google:gemini-3.7-flash"
+  },
+  "run": "run muvl3ijo-qw3e started 2026-10-05 18:35:48Z",
+  "n": 150,
+  "first_id": "1663"
+ },
+ "stratified_150": {
+  "human_mean": 4.907,
+  "human_sd": 3.146,
+  "lite_pass1_sd": 2.909,
+  "lite_pass1_bias": 0.333,
+  "qwk_direct": 0.8441,
+  "qwk_identity": 0.8441
+ },
+ "offset_cost": {
+  "exemplars_0.38_to_0.06": {
+   "kappa_at_larger": 0.8426,
+   "kappa_at_smaller": 0.849,
+   "difference": 0.0065
+  },
+  "tier_0.34_to_0.01": {
+   "kappa_at_larger": 0.8439,
+   "kappa_at_smaller": 0.8492,
+   "difference": 0.0053
+  },
+  "offset_0.59_vs_0": {
+   "kappa_at_larger": 0.8334,
+   "kappa_at_smaller": 0.8492,
+   "difference": 0.0158
+  }
+ },
+ "full_corpus_teacher_grade": {
+  "n": 3031,
+  "sd": 2.676,
+  "mean": 5.12
+ },
+ "note": "population SDs; QWK identity exact on integer levels"
+}

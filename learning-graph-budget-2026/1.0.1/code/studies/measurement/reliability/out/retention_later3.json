@@ -1,0 +1,22 @@
+{
+  "seed": 20260922,
+  "splits": 6,
+  "pairs": 6000,
+  "gate": 0.8,
+  "min_later": 3,
+  "rows": [
+    {
+      "corpus": "ednet",
+      "splits": 6,
+      "pairs_median": 4850,
+      "first_attempt_split_half": 0.20241541260382948,
+      "first_attempt_sb": 0.3366813340582504,
+      "retention_split_half": 0.11280479060197236,
+      "retention_sb": 0.20273958479447332,
+      "gain": -0.13394174926377708,
+      "retention_meets_gate": false,
+      "min_later": 3,
+      "min_cell": 5
+    }
+  ]
+}

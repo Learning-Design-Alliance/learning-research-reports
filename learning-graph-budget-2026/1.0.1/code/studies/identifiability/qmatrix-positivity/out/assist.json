@@ -1,0 +1,314 @@
+{
+ "corpus": "assist",
+ "kc_model": "ASSISTments 2012-13 skill_id",
+ "learners": 29018,
+ "units": 265,
+ "items": 53091,
+ "items_per_unit_median": 35.0,
+ "units_per_item_mean": 1.0,
+ "multi_unit_items": 0,
+ "census": {
+  "ordered_pairs": 69960,
+  "U": 0,
+  "U_share": 0.0,
+  "U_either": 0,
+  "U_either_share": 0.0,
+  "U_pure": 0,
+  "U_pure_share": 0.0,
+  "cotagged": 0,
+  "cotagged_share": 0.0,
+  "U_within_cotagged": 0,
+  "U_share_within_cotagged": null,
+  "units_without_pure_item": 0,
+  "units": 265
+ },
+ "qmatrix_conditions": {
+  "corpus": "assist",
+  "items": 53091,
+  "attributes": 265,
+  "mean_attrs_per_item": 1.0,
+  "single_attribute_items": 53091,
+  "C1_complete": true,
+  "C1_attrs_isolated": 265,
+  "C2_two_identity": false,
+  "C2_attrs_isolated_twice": 233,
+  "C3_three_items": false,
+  "C3_attrs_with_3plus": 202,
+  "C4_distinct_columns": true,
+  "C4_duplicate_attrs": 0,
+  "all_hold": false
+ },
+ "timestamps": {
+  "key": "string-rank",
+  "rows_by_width": {
+   "19": 2658403,
+   "22": 11,
+   "23": 51,
+   "24": 504,
+   "25": 4827,
+   "26": 48017
+  }
+ },
+ "reproduction": {
+  "recomputed": {
+   "learners": 29018,
+   "items": 265,
+   "edges": 40000,
+   "readable": 9350,
+   "detect_20pt": 2070,
+   "supported": 87,
+   "contradicted": 0,
+   "unknown": 39913,
+   "contradicted_before_reachability": 46
+  },
+  "committed": {
+   "edges": 40000,
+   "readable": 9350,
+   "detect_20pt": 2070,
+   "supported": 87,
+   "contradicted": 0,
+   "unknown": 39913,
+   "source": "overlap/out/positivity-assist.json"
+  },
+  "fields": {
+   "edges": [
+    40000,
+    40000,
+    true
+   ],
+   "readable": [
+    9350,
+    9350,
+    true
+   ],
+   "detect_20pt": [
+    2070,
+    2070,
+    true
+   ],
+   "supported": [
+    87,
+    87,
+    true
+   ],
+   "contradicted": [
+    0,
+    0,
+    true
+   ],
+   "unknown": [
+    39913,
+    39913,
+    true
+   ]
+  },
+  "reproduced_exactly": true,
+  "label": "against the committed atlas"
+ },
+ "sample": {
+  "edges": 40000,
+  "U": 0,
+  "U_wilson": [
+   0.0,
+   9.602724991409927e-05
+  ],
+  "U_either": 0,
+  "U_pure": 0,
+  "cotagged": 0,
+  "states": {
+   "unreadable": 30650,
+   "unpowered": 9217,
+   "supported": 87,
+   "contradicted": 0,
+   "unfalsifiable": 46,
+   "no_comparison": 0
+  }
+ },
+ "primary_U": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 0,
+    "unpowered": 0,
+    "supported": 0,
+    "contradicted": 0,
+    "unfalsifiable": 0,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 30650,
+    "unpowered": 9217,
+    "supported": 87,
+    "contradicted": 0,
+    "unfalsifiable": 46,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 0,
+   "U_and_decided": 0,
+   "notU_and_undecided": 39913,
+   "notU_and_decided": 87,
+   "U": 0,
+   "undecided": 39913,
+   "decided": 87,
+   "jaccard": 0.0,
+   "U_share_undecided": null,
+   "f": 0.0,
+   "f_wilson": [
+    0.0,
+    9.62365442980533e-05
+   ],
+   "p_decided_given_U": null,
+   "p_decided_given_notU": 0.002175,
+   "d": null,
+   "U_and_supported": 0,
+   "supported": 87,
+   "supported_U_share": 0.0
+  },
+  "f_cluster_boot": [
+   0.0,
+   0.0
+  ],
+  "f_interval_conservative": [
+   0.0,
+   9.62365442980533e-05
+  ],
+  "derangement": {
+   "d": null,
+   "p_two_sided": null,
+   "p_one_sided_observed_direction": null,
+   "null_mean": null,
+   "draws": 0,
+   "singleton_dependants": 0
+  },
+  "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+  "verdict_overlap": "NO DESIGN LIMIT",
+  "verdict_direction": "NOT TESTABLE (U or not-U empty, or nothing to derange)",
+  "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)"
+ },
+ "secondary_U_either": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 0,
+    "unpowered": 0,
+    "supported": 0,
+    "contradicted": 0,
+    "unfalsifiable": 0,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 30650,
+    "unpowered": 9217,
+    "supported": 87,
+    "contradicted": 0,
+    "unfalsifiable": 46,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 0,
+   "U_and_decided": 0,
+   "notU_and_undecided": 39913,
+   "notU_and_decided": 87,
+   "U": 0,
+   "undecided": 39913,
+   "decided": 87,
+   "jaccard": 0.0,
+   "U_share_undecided": null,
+   "f": 0.0,
+   "f_wilson": [
+    0.0,
+    9.62365442980533e-05
+   ],
+   "p_decided_given_U": null,
+   "p_decided_given_notU": 0.002175,
+   "d": null,
+   "U_and_supported": 0,
+   "supported": 87,
+   "supported_U_share": 0.0
+  },
+  "f_cluster_boot": [
+   0.0,
+   0.0
+  ],
+  "f_interval_conservative": [
+   0.0,
+   9.62365442980533e-05
+  ],
+  "derangement": {
+   "d": null,
+   "p_two_sided": null,
+   "p_one_sided_observed_direction": null,
+   "null_mean": null,
+   "draws": 0,
+   "singleton_dependants": 0
+  },
+  "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+  "verdict_overlap": "NO DESIGN LIMIT",
+  "verdict_direction": "NOT TESTABLE (U or not-U empty, or nothing to derange)",
+  "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)"
+ },
+ "secondary_U_pure": {
+  "crosstab": {
+   "unidentified": {
+    "unreadable": 0,
+    "unpowered": 0,
+    "supported": 0,
+    "contradicted": 0,
+    "unfalsifiable": 0,
+    "no_comparison": 0
+   },
+   "identified": {
+    "unreadable": 30650,
+    "unpowered": 9217,
+    "supported": 87,
+    "contradicted": 0,
+    "unfalsifiable": 46,
+    "no_comparison": 0
+   }
+  },
+  "overlap": {
+   "U_and_undecided": 0,
+   "U_and_decided": 0,
+   "notU_and_undecided": 39913,
+   "notU_and_decided": 87,
+   "U": 0,
+   "undecided": 39913,
+   "decided": 87,
+   "jaccard": 0.0,
+   "U_share_undecided": null,
+   "f": 0.0,
+   "f_wilson": [
+    0.0,
+    9.62365442980533e-05
+   ],
+   "p_decided_given_U": null,
+   "p_decided_given_notU": 0.002175,
+   "d": null,
+   "U_and_supported": 0,
+   "supported": 87,
+   "supported_U_share": 0.0
+  },
+  "f_cluster_boot": [
+   0.0,
+   0.0
+  ],
+  "f_interval_conservative": [
+   0.0,
+   9.62365442980533e-05
+  ],
+  "derangement": {
+   "d": null,
+   "p_two_sided": null,
+   "p_one_sided_observed_direction": null,
+   "null_mean": null,
+   "draws": 0,
+   "singleton_dependants": 0
+  },
+  "verdict_f": "LEARNER-ORDER-LIMITED: the design isolates B from A for almost every undecided edge; F1's limit is who reached B without A, not which items exist",
+  "verdict_overlap": "NO DESIGN LIMIT",
+  "verdict_direction": "NOT TESTABLE (U or not-U empty, or nothing to derange)",
+  "verdict_supported": "SUPPORTED COUNT CLEAN OF DESIGN-UNIDENTIFIED EDGES (below 0.05)"
+ },
+ "cotagged_subset_U": null
+}

@@ -1,0 +1,33 @@
+{
+ "partial_r_check": [
+  0.5936115942713873,
+  0.5936115942713962
+ ],
+ "worlds": {
+  "core+culture": {
+   "CULTURAL": 7,
+   "CORE AND CULTURAL": 13
+  },
+  "culture only": {
+   "CULTURAL": 20
+  },
+  "core only": {
+   "CORE": 16,
+   "CORE AND CULTURAL": 2,
+   "NEITHER": 2
+  },
+  "neither": {
+   "NEITHER": 19,
+   "CULTURAL": 1
+  },
+  "power": {
+   "core 0.3, 60 pairs": 0.3,
+   "core 0.3, 150 pairs": 0.6,
+   "core 0.3, 300 pairs": 0.9,
+   "core 0.5, 60 pairs": 0.8,
+   "core 0.5, 150 pairs": 1.0,
+   "core 0.5, 300 pairs": 1.0
+  }
+ },
+ "passes": true
+}

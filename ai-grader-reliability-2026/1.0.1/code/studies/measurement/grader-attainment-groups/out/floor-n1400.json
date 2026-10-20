@@ -1,0 +1,835 @@
+{
+ "n": 1400,
+ "sigma_for_sd": {
+  "0.35": 0.08439360632095486,
+  "0.45": 0.1680558679392561,
+  "0.6": 0.30914431164506817
+ },
+ "z_star": 2.5758293035489004,
+ "margin": 0.1,
+ "worlds": {
+  "NULL": {
+   "verdicts": {
+    "ell": {
+     "UNIFORM": 183,
+     "UNDERPOWERED": 15,
+     "DIFFERENTIAL-FAVOURING": 1,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "economic": {
+     "UNDERPOWERED": 29,
+     "UNIFORM": 167,
+     "DIFFERENTIAL-AGAINST": 3,
+     "DIFFERENTIAL-FAVOURING": 1
+    },
+    "disability": {
+     "DIFFERENTIAL-FAVOURING": 3,
+     "UNIFORM": 178,
+     "UNDERPOWERED": 18,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "gender": {
+     "UNIFORM": 186,
+     "UNDERPOWERED": 14
+    },
+    "race": {
+     "UNDERPOWERED": 199,
+     "UNIFORM": 1
+    }
+   },
+   "any_differential": 0.045,
+   "unstratified_ell_against": 0.0,
+   "mean_diff": {
+    "ell": -0.0009279718453209176,
+    "economic": -0.0033758293515768843,
+    "disability": 0.0012795366744433787,
+    "gender": 0.003776934509841811
+   }
+  },
+  "SCORE-CONFOUND": {
+   "verdicts": {
+    "ell": {
+     "UNIFORM": 181,
+     "UNDERPOWERED": 15,
+     "DIFFERENTIAL-FAVOURING": 4
+    },
+    "economic": {
+     "UNDERPOWERED": 41,
+     "UNIFORM": 156,
+     "DIFFERENTIAL-FAVOURING": 3
+    },
+    "disability": {
+     "UNIFORM": 177,
+     "UNDERPOWERED": 23
+    },
+    "gender": {
+     "UNIFORM": 177,
+     "UNDERPOWERED": 20,
+     "DIFFERENTIAL-FAVOURING": 1,
+     "DIFFERENTIAL-AGAINST": 2
+    },
+    "race": {
+     "UNDERPOWERED": 197,
+     "DIFFERENTIAL (Hispanic/Latino penalised more than Two or more races/Other)": 1,
+     "UNIFORM": 1,
+     "DIFFERENTIAL (Hispanic/Latino penalised more than Asian/Pacific Islander)": 1
+    }
+   },
+   "any_differential": 0.06,
+   "unstratified_ell_against": 0.695,
+   "mean_diff": {
+    "ell": 0.0033063743442046174,
+    "economic": 0.00859566646086592,
+    "disability": 0.00010729127795030408,
+    "gender": 0.00028291308556606815
+   }
+  },
+  "ELL-AGAINST": {
+   "verdicts": {
+    "ell": {
+     "DIFFERENTIAL-AGAINST": 164,
+     "UNDERPOWERED": 28,
+     "UNIFORM": 8
+    },
+    "economic": {
+     "UNIFORM": 179,
+     "UNDERPOWERED": 18,
+     "DIFFERENTIAL-FAVOURING": 2,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "disability": {
+     "UNIFORM": 178,
+     "UNDERPOWERED": 22
+    },
+    "gender": {
+     "UNIFORM": 186,
+     "UNDERPOWERED": 12,
+     "DIFFERENTIAL-FAVOURING": 2
+    },
+    "race": {
+     "UNDERPOWERED": 199,
+     "UNIFORM": 1
+    }
+   },
+   "any_differential": 0.82,
+   "unstratified_ell_against": 0.87,
+   "mean_diff": {
+    "ell": -0.10290926716287017,
+    "economic": -0.0020017732815848475,
+    "disability": 0.002531953213567149,
+    "gender": 0.0026868601286487636
+   }
+  },
+  "DISABILITY-AGAINST": {
+   "verdicts": {
+    "ell": {
+     "UNIFORM": 184,
+     "UNDERPOWERED": 16
+    },
+    "economic": {
+     "UNIFORM": 165,
+     "UNDERPOWERED": 34,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "disability": {
+     "DIFFERENTIAL-AGAINST": 165,
+     "UNDERPOWERED": 27,
+     "UNIFORM": 8
+    },
+    "gender": {
+     "UNIFORM": 184,
+     "UNDERPOWERED": 13,
+     "DIFFERENTIAL-FAVOURING": 2,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "race": {
+     "UNDERPOWERED": 197,
+     "DIFFERENTIAL (Hispanic/Latino penalised more than Asian/Pacific Islander)": 1,
+     "DIFFERENTIAL (Black/African American penalised more than Asian/Pacific Islander)": 1,
+     "UNIFORM": 1
+    }
+   },
+   "any_differential": 0.83,
+   "unstratified_ell_against": 0.005,
+   "mean_diff": {
+    "ell": -0.0010084615804119386,
+    "economic": 0.0047450149787984855,
+    "disability": -0.10202075290503569,
+    "gender": 0.002444141482342274
+   }
+  },
+  "ECONOMIC-AGAINST": {
+   "verdicts": {
+    "ell": {
+     "UNIFORM": 168,
+     "UNDERPOWERED": 28,
+     "DIFFERENTIAL-AGAINST": 4
+    },
+    "economic": {
+     "UNDERPOWERED": 70,
+     "DIFFERENTIAL-AGAINST": 122,
+     "UNIFORM": 8
+    },
+    "disability": {
+     "UNIFORM": 184,
+     "UNDERPOWERED": 15,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "gender": {
+     "DIFFERENTIAL-AGAINST": 2,
+     "UNIFORM": 183,
+     "UNDERPOWERED": 15
+    },
+    "race": {
+     "UNDERPOWERED": 197,
+     "DIFFERENTIAL (Two or more races/Other penalised more than Asian/Pacific Islander)": 1,
+     "UNIFORM": 1,
+     "DIFFERENTIAL (Hispanic/Latino penalised more than Two or more races/Other)": 1
+    }
+   },
+   "any_differential": 0.62,
+   "unstratified_ell_against": 0.04,
+   "mean_diff": {
+    "ell": -0.014764821715837928,
+    "economic": -0.10024128831554859,
+    "disability": -0.0028486876557244113,
+    "gender": -0.007039947386824451
+   }
+  },
+  "ELL-FAVOURING": {
+   "verdicts": {
+    "ell": {
+     "UNDERPOWERED": 35,
+     "DIFFERENTIAL-FAVOURING": 149,
+     "UNIFORM": 16
+    },
+    "economic": {
+     "UNIFORM": 168,
+     "UNDERPOWERED": 29,
+     "DIFFERENTIAL-FAVOURING": 1,
+     "DIFFERENTIAL-AGAINST": 2
+    },
+    "disability": {
+     "UNIFORM": 178,
+     "UNDERPOWERED": 19,
+     "DIFFERENTIAL-AGAINST": 2,
+     "DIFFERENTIAL-FAVOURING": 1
+    },
+    "gender": {
+     "UNIFORM": 177,
+     "UNDERPOWERED": 20,
+     "DIFFERENTIAL-FAVOURING": 2,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "race": {
+     "UNDERPOWERED": 194,
+     "UNIFORM": 2,
+     "DIFFERENTIAL (Black/African American penalised more than Two or more races/Other)": 1,
+     "DIFFERENTIAL (White penalised more than Asian/Pacific Islander)": 2,
+     "DIFFERENTIAL (Black/African American penalised more than Asian/Pacific Islander)": 1
+    }
+   },
+   "any_differential": 0.76,
+   "unstratified_ell_against": 0.0,
+   "mean_diff": {
+    "ell": 0.09430241570815902,
+    "economic": 0.0031108989090947226,
+    "disability": -0.005941343722558616,
+    "gender": 0.0016900811310279075
+   }
+  },
+  "RACE-BLACK": {
+   "verdicts": {
+    "ell": {
+     "UNIFORM": 159,
+     "UNDERPOWERED": 31,
+     "DIFFERENTIAL-FAVOURING": 10
+    },
+    "economic": {
+     "UNDERPOWERED": 42,
+     "UNIFORM": 154,
+     "DIFFERENTIAL-AGAINST": 4
+    },
+    "disability": {
+     "UNIFORM": 171,
+     "UNDERPOWERED": 23,
+     "DIFFERENTIAL-FAVOURING": 6
+    },
+    "gender": {
+     "UNIFORM": 181,
+     "UNDERPOWERED": 17,
+     "DIFFERENTIAL-FAVOURING": 1,
+     "DIFFERENTIAL-AGAINST": 1
+    },
+    "race": {
+     "UNDERPOWERED": 129,
+     "DIFFERENTIAL (Black/African American penalised more than Two or more races/Other)": 19,
+     "DIFFERENTIAL (Black/African American penalised more than White)": 18,
+     "DIFFERENTIAL (Black/African American penalised more than Asian/Pacific Islander)": 19,
+     "DIFFERENTIAL (Black/African American penalised more than Hispanic/Latino)": 15
+    }
+   },
+   "any_differential": 0.41,
+   "unstratified_ell_against": 0.0,
+   "mean_diff": {
+    "ell": 0.021548444071694862,
+    "economic": -0.014970658779910755,
+    "disability": 0.011875411982181219,
+    "gender": -0.001834124318590814
+   }
+  }
+ },
+ "power": {
+  "0.35": {
+   "ell": {
+    "power": {
+     "0.05": 0.27,
+     "0.075": 0.65,
+     "0.1": 0.87,
+     "0.125": 0.99,
+     "0.15": 1.0,
+     "0.2": 1.0
+    },
+    "mde80": 0.1
+   },
+   "economic": {
+    "power": {
+     "0.05": 0.24,
+     "0.075": 0.58,
+     "0.1": 0.78,
+     "0.125": 0.975,
+     "0.15": 0.995,
+     "0.2": 1.0
+    },
+    "mde80": 0.125
+   },
+   "disability": {
+    "power": {
+     "0.05": 0.245,
+     "0.075": 0.595,
+     "0.1": 0.92,
+     "0.125": 0.98,
+     "0.15": 0.985,
+     "0.2": 1.0
+    },
+    "mde80": 0.1
+   },
+   "gender": {
+    "power": {
+     "0.05": 0.27,
+     "0.075": 0.665,
+     "0.1": 0.92,
+     "0.125": 0.975,
+     "0.15": 1.0,
+     "0.2": 1.0
+    },
+    "mde80": 0.1
+   },
+   "race (Black/African American)": {
+    "power": {
+     "0.05": 0.025,
+     "0.075": 0.095,
+     "0.1": 0.11,
+     "0.125": 0.315,
+     "0.15": 0.495,
+     "0.2": 0.815
+    },
+    "mde80": 0.2
+   },
+   "race (Asian/Pacific Islander)": {
+    "power": {
+     "0.05": 0.005,
+     "0.075": 0.03,
+     "0.1": 0.035,
+     "0.125": 0.055,
+     "0.15": 0.215,
+     "0.2": 0.43
+    },
+    "mde80": null
+   }
+  },
+  "0.45": {
+   "ell": {
+    "power": {
+     "0.05": 0.18,
+     "0.075": 0.59,
+     "0.1": 0.78,
+     "0.125": 0.955,
+     "0.15": 0.98,
+     "0.2": 1.0
+    },
+    "mde80": 0.125
+   },
+   "economic": {
+    "power": {
+     "0.05": 0.14,
+     "0.075": 0.395,
+     "0.1": 0.66,
+     "0.125": 0.83,
+     "0.15": 0.97,
+     "0.2": 1.0
+    },
+    "mde80": 0.125
+   },
+   "disability": {
+    "power": {
+     "0.05": 0.12,
+     "0.075": 0.385,
+     "0.1": 0.68,
+     "0.125": 0.955,
+     "0.15": 0.97,
+     "0.2": 1.0
+    },
+    "mde80": 0.125
+   },
+   "gender": {
+    "power": {
+     "0.05": 0.18,
+     "0.075": 0.47,
+     "0.1": 0.77,
+     "0.125": 0.915,
+     "0.15": 0.99,
+     "0.2": 1.0
+    },
+    "mde80": 0.125
+   },
+   "race (Black/African American)": {
+    "power": {
+     "0.05": 0.005,
+     "0.075": 0.035,
+     "0.1": 0.135,
+     "0.125": 0.175,
+     "0.15": 0.39,
+     "0.2": 0.59
+    },
+    "mde80": null
+   },
+   "race (Asian/Pacific Islander)": {
+    "power": {
+     "0.05": 0.0,
+     "0.075": 0.01,
+     "0.1": 0.035,
+     "0.125": 0.035,
+     "0.15": 0.115,
+     "0.2": 0.335
+    },
+    "mde80": null
+   }
+  },
+  "0.6": {
+   "ell": {
+    "power": {
+     "0.05": 0.12,
+     "0.075": 0.275,
+     "0.1": 0.45,
+     "0.125": 0.715,
+     "0.15": 0.865,
+     "0.2": 0.99
+    },
+    "mde80": 0.15
+   },
+   "economic": {
+    "power": {
+     "0.05": 0.075,
+     "0.075": 0.22,
+     "0.1": 0.305,
+     "0.125": 0.645,
+     "0.15": 0.735,
+     "0.2": 0.955
+    },
+    "mde80": 0.2
+   },
+   "disability": {
+    "power": {
+     "0.05": 0.07,
+     "0.075": 0.19,
+     "0.1": 0.435,
+     "0.125": 0.605,
+     "0.15": 0.87,
+     "0.2": 0.99
+    },
+    "mde80": 0.15
+   },
+   "gender": {
+    "power": {
+     "0.05": 0.115,
+     "0.075": 0.21,
+     "0.1": 0.48,
+     "0.125": 0.67,
+     "0.15": 0.84,
+     "0.2": 0.995
+    },
+    "mde80": 0.15
+   },
+   "race (Black/African American)": {
+    "power": {
+     "0.05": 0.0,
+     "0.075": 0.04,
+     "0.1": 0.02,
+     "0.125": 0.065,
+     "0.15": 0.175,
+     "0.2": 0.31
+    },
+    "mde80": null
+   },
+   "race (Asian/Pacific Islander)": {
+    "power": {
+     "0.05": 0.005,
+     "0.075": 0.005,
+     "0.1": 0.045,
+     "0.125": 0.025,
+     "0.15": 0.055,
+     "0.2": 0.225
+    },
+    "mde80": null
+   }
+  }
+ },
+ "analytic": {
+  "0.35": {
+   "ell": {
+    "n_focal": 420,
+    "n_ref": 968,
+    "se": 0.02431635763865087,
+    "boot_sd": 0.024821205703259564,
+    "mde80": 0.08309994947305355,
+    "coverage": 1.0
+   },
+   "economic": {
+    "n_focal": 810,
+    "n_ref": 453,
+    "se": 0.027963317290339757,
+    "boot_sd": 0.026761544838935804,
+    "mde80": 0.09556325369357933,
+    "coverage": 1.0
+   },
+   "disability": {
+    "n_focal": 470,
+    "n_ref": 793,
+    "se": 0.02291281024373538,
+    "boot_sd": 0.022887201059224576,
+    "mde80": 0.0783033956744237,
+    "coverage": 1.0
+   },
+   "gender": {
+    "n_focal": 644,
+    "n_ref": 756,
+    "se": 0.024196862154478478,
+    "boot_sd": 0.02437908394732469,
+    "mde80": 0.08269157956648499,
+    "coverage": 1.0
+   }
+  },
+  "0.45": {
+   "ell": {
+    "n_focal": 420,
+    "n_ref": 968,
+    "se": 0.026742713174214755,
+    "boot_sd": 0.027066060107122914,
+    "mde80": 0.09139189950131485,
+    "coverage": 1.0
+   },
+   "economic": {
+    "n_focal": 810,
+    "n_ref": 453,
+    "se": 0.03211340306319504,
+    "boot_sd": 0.03185800645321896,
+    "mde80": 0.1097459665471252,
+    "coverage": 1.0
+   },
+   "disability": {
+    "n_focal": 470,
+    "n_ref": 793,
+    "se": 0.03063384158125257,
+    "boot_sd": 0.030327540001057193,
+    "mde80": 0.10468963836595617,
+    "coverage": 1.0
+   },
+   "gender": {
+    "n_focal": 644,
+    "n_ref": 756,
+    "se": 0.0283258326403945,
+    "boot_sd": 0.028129501504133174,
+    "mde80": 0.09680213197133881,
+    "coverage": 1.0
+   }
+  },
+  "0.6": {
+   "ell": {
+    "n_focal": 420,
+    "n_ref": 968,
+    "se": 0.0381948997085081,
+    "boot_sd": 0.036587575910540404,
+    "mde80": 0.13052918052415483,
+    "coverage": 1.0
+   },
+   "economic": {
+    "n_focal": 810,
+    "n_ref": 453,
+    "se": 0.04394414218353479,
+    "boot_sd": 0.043378347424992726,
+    "mde80": 0.15017693230847837,
+    "coverage": 1.0
+   },
+   "disability": {
+    "n_focal": 470,
+    "n_ref": 793,
+    "se": 0.04156793885743801,
+    "boot_sd": 0.04014723602885612,
+    "mde80": 0.14205637497539828,
+    "coverage": 1.0
+   },
+   "gender": {
+    "n_focal": 644,
+    "n_ref": 756,
+    "se": 0.03966799274276445,
+    "boot_sd": 0.040202307910421224,
+    "mde80": 0.13556340310530463,
+    "coverage": 1.0
+   }
+  }
+ },
+ "recovery": {
+  "ELL-AGAINST": 0.82,
+  "DISABILITY-AGAINST": 0.825,
+  "ECONOMIC-AGAINST": 0.61,
+  "ELL-FAVOURING": 0.745,
+  "RACE-BLACK": 0.355
+ },
+ "projection_identities": {
+  "checks": {
+   "zero effects give zero gap": true,
+   "r = 1 gives (near) zero composition gap": true,
+   "equal group means give (near) zero composition gap": true
+  },
+  "pass": true
+ },
+ "design_weights": {
+  "ell": 0.4416046586865092,
+  "disability": 0.3446834897012833,
+  "rest": 1.9102838887091556
+ },
+ "criteria": {
+  "NULL any-axis false differential <= 10%": true,
+  "SCORE-CONFOUND any-axis false differential <= 10%": true,
+  "ELL-AGAINST planted verdict >= 80%": true,
+  "ELL-AGAINST wrong sign <= 1%": true,
+  "ELL-AGAINST spillover onto economic <= 10%": true,
+  "ELL-AGAINST spillover onto disability <= 10%": true,
+  "ELL-AGAINST spillover onto gender <= 10%": true,
+  "DISABILITY-AGAINST planted verdict >= 80%": true,
+  "DISABILITY-AGAINST wrong sign <= 1%": true,
+  "DISABILITY-AGAINST spillover onto ell <= 10%": true,
+  "DISABILITY-AGAINST spillover onto economic <= 10%": true,
+  "DISABILITY-AGAINST spillover onto gender <= 10%": true,
+  "projection identities": true
+ },
+ "pass": true,
+ "projection_illustration": {
+  "gemini-like": {
+   "ell": {
+    "mu_focal": 2.526251526251526,
+    "mu_ref": 3.0028081865778202,
+    "within_sd": 1.0253253495268726,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.539504935900041,
+      "p_low_ref": 0.29963634598736216,
+      "composition": -0.024591947615371104,
+      "total": -0.024591947615371104
+     },
+     "0.65": {
+      "p_low_focal": 0.5137051759974227,
+      "p_low_ref": 0.3044379907971222,
+      "composition": -0.015046499790132655,
+      "total": -0.015046499790132655
+     },
+     "0.8": {
+      "p_low_focal": 0.498023226973292,
+      "p_low_ref": 0.3107551624296748,
+      "composition": -0.007680031953129408,
+      "total": -0.007680031953129408
+     }
+    }
+   },
+   "economic": {
+    "mu_focal": 2.7805412169560455,
+    "mu_ref": 3.1413632354794,
+    "within_sd": 1.0048766066409054,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.3940001607943712,
+      "p_low_ref": 0.23349576580472145,
+      "composition": -0.01900471684463765,
+      "total": -0.01900471684463765
+     },
+     "0.65": {
+      "p_low_focal": 0.3874775563792777,
+      "p_low_ref": 0.24859700738094664,
+      "composition": -0.01163053539154124,
+      "total": -0.01163053539154124
+     },
+     "0.8": {
+      "p_low_focal": 0.3776143993450773,
+      "p_low_ref": 0.2555246267335575,
+      "composition": -0.005910859458955981,
+      "total": -0.005910859458955981
+     }
+    }
+   },
+   "disability": {
+    "mu_focal": 2.3832717500839773,
+    "mu_ref": 3.0085653104925054,
+    "within_sd": 0.9962136949836784,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.6150973430093505,
+      "p_low_ref": 0.28797073133831214,
+      "composition": -0.032742696167486825,
+      "total": -0.032742696167486825
+     },
+     "0.65": {
+      "p_low_focal": 0.5800436360396333,
+      "p_low_ref": 0.2925071747210753,
+      "composition": -0.02010356646705399,
+      "total": -0.02010356646705399
+     },
+     "0.8": {
+      "p_low_focal": 0.5539673303285237,
+      "p_low_ref": 0.2953183797248451,
+      "composition": -0.010280767850285142,
+      "total": -0.010280767850285142
+     }
+    }
+   },
+   "gender": {
+    "mu_focal": 3.0369308876514904,
+    "mu_ref": 2.8453978906999042,
+    "within_sd": 1.0315767808081369,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.28514462151639886,
+      "p_low_ref": 0.3765870706960843,
+      "composition": 0.009877198887511242,
+      "total": 0.009877198887511242
+     },
+     "0.65": {
+      "p_low_focal": 0.2925357686407841,
+      "p_low_ref": 0.3740606471979145,
+      "composition": 0.0060557282776667245,
+      "total": 0.0060557282776667245
+     },
+     "0.8": {
+      "p_low_focal": 0.29556045323930646,
+      "p_low_ref": 0.3703608729280892,
+      "composition": 0.0030853148500279274,
+      "total": 0.0030853148500279274
+     }
+    }
+   }
+  },
+  "qwen-like": {
+   "ell": {
+    "mu_focal": 2.526251526251526,
+    "mu_ref": 3.0028081865778202,
+    "within_sd": 1.0253253495268726,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.539504935900041,
+      "p_low_ref": 0.29963634598736216,
+      "composition": -0.05058345442932773,
+      "total": -0.05058345442932773
+     },
+     "0.65": {
+      "p_low_focal": 0.5137051759974227,
+      "p_low_ref": 0.3044379907971222,
+      "composition": -0.03090582731653389,
+      "total": -0.03090582731653389
+     },
+     "0.8": {
+      "p_low_focal": 0.498023226973292,
+      "p_low_ref": 0.3107551624296748,
+      "composition": -0.01576156598512174,
+      "total": -0.01576156598512174
+     }
+    }
+   },
+   "economic": {
+    "mu_focal": 2.7805412169560455,
+    "mu_ref": 3.1413632354794,
+    "within_sd": 1.0048766066409054,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.3940001607943712,
+      "p_low_ref": 0.23349576580472145,
+      "composition": -0.03884184557200116,
+      "total": -0.03884184557200116
+     },
+     "0.65": {
+      "p_low_focal": 0.3874775563792777,
+      "p_low_ref": 0.24859700738094664,
+      "composition": -0.023802565505330553,
+      "total": -0.023802565505330553
+     },
+     "0.8": {
+      "p_low_focal": 0.3776143993450773,
+      "p_low_ref": 0.2555246267335575,
+      "composition": -0.012106945924641281,
+      "total": -0.012106945924641281
+     }
+    }
+   },
+   "disability": {
+    "mu_focal": 2.3832717500839773,
+    "mu_ref": 3.0085653104925054,
+    "within_sd": 0.9962136949836784,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.6150973430093505,
+      "p_low_ref": 0.28797073133831214,
+      "composition": -0.06750545791809187,
+      "total": -0.06750545791809187
+     },
+     "0.65": {
+      "p_low_focal": 0.5800436360396333,
+      "p_low_ref": 0.2925071747210753,
+      "composition": -0.04135651334804563,
+      "total": -0.04135651334804563
+     },
+     "0.8": {
+      "p_low_focal": 0.5539673303285237,
+      "p_low_ref": 0.2953183797248451,
+      "composition": -0.021105218280739878,
+      "total": -0.021105218280739878
+     }
+    }
+   },
+   "gender": {
+    "mu_focal": 3.0369308876514904,
+    "mu_ref": 2.8453978906999042,
+    "within_sd": 1.0315767808081369,
+    "by_r": {
+     "0.5": {
+      "p_low_focal": 0.28514462151639886,
+      "p_low_ref": 0.3765870706960843,
+      "composition": 0.020217535596375118,
+      "total": 0.020217535596375118
+     },
+     "0.65": {
+      "p_low_focal": 0.2925357686407841,
+      "p_low_ref": 0.3740606471979145,
+      "composition": 0.012400630386251858,
+      "total": 0.012400630386251858
+     },
+     "0.8": {
+      "p_low_focal": 0.29556045323930646,
+      "p_low_ref": 0.3703608729280892,
+      "composition": 0.006321174108568978,
+      "total": 0.006321174108568978
+     }
+    }
+   }
+  }
+ },
+ "note": "Smoke checks: the synthetic grader was written and scored by the session that wrote the instrument. They show the instrument's logic recovers worlds it was told about, not that the construct is valid."
+}

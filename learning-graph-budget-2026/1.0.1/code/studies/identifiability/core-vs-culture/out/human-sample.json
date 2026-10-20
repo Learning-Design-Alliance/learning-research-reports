@@ -1,0 +1,514 @@
+{
+ "seed": 20261007,
+ "per_corpus": 25,
+ "coder": "human:david-porcaro",
+ "translator": "google/gemini-3.8-flash",
+ "translator_served": {
+  "served_model": "google/gemini-3.8-flash",
+  "provider": "Google",
+  "timestamp_utc": "2026-10-07T02:24:09Z"
+ },
+ "translate_prompt": "Translate each Chinese label below into English, literally. These are names of topics on a children's mathematics learning platform; a label may be a path from general to specific, separated by ' > '. Keep the path separators. Do not explain, interpret or add anything.\n\n{items}\n\nReply with JSON only: {{\"t\": {{\"<id>\": \"<English>\"}}}}",
+ "items": [
+  {
+   "item": 1,
+   "corpus": "xes3g5m",
+   "unit": "k367"
+  },
+  {
+   "item": 2,
+   "corpus": "xes3g5m",
+   "unit": "k191"
+  },
+  {
+   "item": 3,
+   "corpus": "junyi2020",
+   "unit": "4JcS9o5eqSGmsfqe/xrIrLH6445lgnKVcwF9b24djEw="
+  },
+  {
+   "item": 4,
+   "corpus": "eedi",
+   "unit": "s112"
+  },
+  {
+   "item": 5,
+   "corpus": "eedi",
+   "unit": "s1077"
+  },
+  {
+   "item": 6,
+   "corpus": "xes3g5m",
+   "unit": "k791"
+  },
+  {
+   "item": 7,
+   "corpus": "eedi",
+   "unit": "s115"
+  },
+  {
+   "item": 8,
+   "corpus": "xes3g5m",
+   "unit": "k747"
+  },
+  {
+   "item": 9,
+   "corpus": "junyi2020",
+   "unit": "hxF+GCZ2kFjuoHOUVj0a6Jn9NbRfydExscjLa0cvxuw="
+  },
+  {
+   "item": 10,
+   "corpus": "junyi2020",
+   "unit": "7GfQH+xzSUY6otFf1vL+TrUfTP/mPShPsFPOrzb8tZc="
+  },
+  {
+   "item": 11,
+   "corpus": "assistments2012",
+   "unit": "370"
+  },
+  {
+   "item": 12,
+   "corpus": "junyi2020",
+   "unit": "IN2rf9N8yr1JT9tAJXei08vWhgCbmljAZ141KO0Bdto="
+  },
+  {
+   "item": 13,
+   "corpus": "eedi",
+   "unit": "s1081"
+  },
+  {
+   "item": 14,
+   "corpus": "junyi2020",
+   "unit": "evnrvQPPTPutwKufIKh7K4UMK3E+lB2zHUzaKFdprEw="
+  },
+  {
+   "item": 15,
+   "corpus": "assistments2012",
+   "unit": "22"
+  },
+  {
+   "item": 16,
+   "corpus": "eedi",
+   "unit": "s372"
+  },
+  {
+   "item": 17,
+   "corpus": "xes3g5m",
+   "unit": "k85"
+  },
+  {
+   "item": 18,
+   "corpus": "xes3g5m",
+   "unit": "k850"
+  },
+  {
+   "item": 19,
+   "corpus": "eedi",
+   "unit": "s1217"
+  },
+  {
+   "item": 20,
+   "corpus": "eedi",
+   "unit": "s447"
+  },
+  {
+   "item": 21,
+   "corpus": "eedi",
+   "unit": "s442"
+  },
+  {
+   "item": 22,
+   "corpus": "assistments2012",
+   "unit": "54"
+  },
+  {
+   "item": 23,
+   "corpus": "assistments2012",
+   "unit": "81"
+  },
+  {
+   "item": 24,
+   "corpus": "assistments2012",
+   "unit": "223"
+  },
+  {
+   "item": 25,
+   "corpus": "eedi",
+   "unit": "s649"
+  },
+  {
+   "item": 26,
+   "corpus": "junyi2020",
+   "unit": "1iha+v5exIXrmb2ARHQmmJwmljMj98PxQ1Io7y+rq84="
+  },
+  {
+   "item": 27,
+   "corpus": "eedi",
+   "unit": "s179"
+  },
+  {
+   "item": 28,
+   "corpus": "assistments2012",
+   "unit": "386"
+  },
+  {
+   "item": 29,
+   "corpus": "junyi2020",
+   "unit": "WS6WWNekaOD2ftvFW2KFOR67cYFe7KHl0DfZjhjhbRU="
+  },
+  {
+   "item": 30,
+   "corpus": "eedi",
+   "unit": "s240"
+  },
+  {
+   "item": 31,
+   "corpus": "xes3g5m",
+   "unit": "k192"
+  },
+  {
+   "item": 32,
+   "corpus": "junyi2020",
+   "unit": "blcaSZRDQfHg6i4RKYRvO7/D6wVIL6rGsyTJtdOElCg="
+  },
+  {
+   "item": 33,
+   "corpus": "assistments2012",
+   "unit": "202"
+  },
+  {
+   "item": 34,
+   "corpus": "assistments2012",
+   "unit": "288"
+  },
+  {
+   "item": 35,
+   "corpus": "xes3g5m",
+   "unit": "k56"
+  },
+  {
+   "item": 36,
+   "corpus": "junyi2020",
+   "unit": "WMgUXcGDQCwsVgpqW00m0nL9vzTUYdkN6Cbdtg8M29k="
+  },
+  {
+   "item": 37,
+   "corpus": "xes3g5m",
+   "unit": "k193"
+  },
+  {
+   "item": 38,
+   "corpus": "eedi",
+   "unit": "s1208"
+  },
+  {
+   "item": 39,
+   "corpus": "eedi",
+   "unit": "s376"
+  },
+  {
+   "item": 40,
+   "corpus": "assistments2012",
+   "unit": "307"
+  },
+  {
+   "item": 41,
+   "corpus": "junyi2020",
+   "unit": "gr4NKrj+oJ0DWsF5eptZqQQ7ksEfY5k4NLv8FQdDDk4="
+  },
+  {
+   "item": 42,
+   "corpus": "assistments2012",
+   "unit": "75"
+  },
+  {
+   "item": 43,
+   "corpus": "junyi2020",
+   "unit": "v90baLZYacc3s+oqAusl+90J4O6kJCF7s47aUGFf8gA="
+  },
+  {
+   "item": 44,
+   "corpus": "assistments2012",
+   "unit": "233"
+  },
+  {
+   "item": 45,
+   "corpus": "assistments2012",
+   "unit": "35"
+  },
+  {
+   "item": 46,
+   "corpus": "assistments2012",
+   "unit": "1641"
+  },
+  {
+   "item": 47,
+   "corpus": "assistments2012",
+   "unit": "582"
+  },
+  {
+   "item": 48,
+   "corpus": "junyi2020",
+   "unit": "aQys6A/5FjGwd7dQ0KQ4h/5zmPrM7lbkwj2ZkuhMepo="
+  },
+  {
+   "item": 49,
+   "corpus": "junyi2020",
+   "unit": "R9Uc/YSWli57zmUYbFm1LrpLpQSpiV8XlzGUDkoUIn8="
+  },
+  {
+   "item": 50,
+   "corpus": "assistments2012",
+   "unit": "49"
+  },
+  {
+   "item": 51,
+   "corpus": "eedi",
+   "unit": "s58"
+  },
+  {
+   "item": 52,
+   "corpus": "xes3g5m",
+   "unit": "k169"
+  },
+  {
+   "item": 53,
+   "corpus": "junyi2020",
+   "unit": "pAUvW4XKSYhg1jlJZSgI+zcE64Vc1ZTK8rqKzNKk0+Q="
+  },
+  {
+   "item": 54,
+   "corpus": "eedi",
+   "unit": "s195"
+  },
+  {
+   "item": 55,
+   "corpus": "assistments2012",
+   "unit": "576"
+  },
+  {
+   "item": 56,
+   "corpus": "eedi",
+   "unit": "s1165"
+  },
+  {
+   "item": 57,
+   "corpus": "xes3g5m",
+   "unit": "k618"
+  },
+  {
+   "item": 58,
+   "corpus": "junyi2020",
+   "unit": "xlVWFGWcVQ8HiY2o1mGb7xJ9fNjjd/XBRul7GwvTwjc="
+  },
+  {
+   "item": 59,
+   "corpus": "xes3g5m",
+   "unit": "k860"
+  },
+  {
+   "item": 60,
+   "corpus": "junyi2020",
+   "unit": "q+qhddeoPj+932QSq5bGBAzgqT4XtW74phrSiM/jfw8="
+  },
+  {
+   "item": 61,
+   "corpus": "eedi",
+   "unit": "s453"
+  },
+  {
+   "item": 62,
+   "corpus": "assistments2012",
+   "unit": "4"
+  },
+  {
+   "item": 63,
+   "corpus": "assistments2012",
+   "unit": "230"
+  },
+  {
+   "item": 64,
+   "corpus": "xes3g5m",
+   "unit": "k856"
+  },
+  {
+   "item": 65,
+   "corpus": "junyi2020",
+   "unit": "Pm4ZYd3FPx3Chch18Er/uNkCsIZCSvPv19sFZFtZyTA="
+  },
+  {
+   "item": 66,
+   "corpus": "xes3g5m",
+   "unit": "k425"
+  },
+  {
+   "item": 67,
+   "corpus": "junyi2020",
+   "unit": "kX+5omUWpBnZq80iSxuIAlsvxdHI68joYz6itRBOCss="
+  },
+  {
+   "item": 68,
+   "corpus": "assistments2012",
+   "unit": "587"
+  },
+  {
+   "item": 69,
+   "corpus": "eedi",
+   "unit": "s190"
+  },
+  {
+   "item": 70,
+   "corpus": "junyi2020",
+   "unit": "bL9LCeyWY9s37YHGGaajw9y6AvwkTvCxHwEL9prznXk="
+  },
+  {
+   "item": 71,
+   "corpus": "assistments2012",
+   "unit": "279"
+  },
+  {
+   "item": 72,
+   "corpus": "eedi",
+   "unit": "s1163"
+  },
+  {
+   "item": 73,
+   "corpus": "xes3g5m",
+   "unit": "k536"
+  },
+  {
+   "item": 74,
+   "corpus": "junyi2020",
+   "unit": "W4l0TIo0YQXLT/c8/Uy7OLtElmNuNWPODI7HkJ0NaI0="
+  },
+  {
+   "item": 75,
+   "corpus": "junyi2020",
+   "unit": "xQNx//qhkk2bCwEwFdNmcqn+xhyU6AwjhGgmphpgtV8="
+  },
+  {
+   "item": 76,
+   "corpus": "xes3g5m",
+   "unit": "k216"
+  },
+  {
+   "item": 77,
+   "corpus": "xes3g5m",
+   "unit": "k858"
+  },
+  {
+   "item": 78,
+   "corpus": "xes3g5m",
+   "unit": "k672"
+  },
+  {
+   "item": 79,
+   "corpus": "assistments2012",
+   "unit": "313"
+  },
+  {
+   "item": 80,
+   "corpus": "assistments2012",
+   "unit": "198"
+  },
+  {
+   "item": 81,
+   "corpus": "eedi",
+   "unit": "s1161"
+  },
+  {
+   "item": 82,
+   "corpus": "junyi2020",
+   "unit": "LX5JBmC+vdiEQxmg1hxbBfGAanwh78vK0LYfaoDJMTM="
+  },
+  {
+   "item": 83,
+   "corpus": "assistments2012",
+   "unit": "371"
+  },
+  {
+   "item": 84,
+   "corpus": "assistments2012",
+   "unit": "301"
+  },
+  {
+   "item": 85,
+   "corpus": "xes3g5m",
+   "unit": "k102"
+  },
+  {
+   "item": 86,
+   "corpus": "xes3g5m",
+   "unit": "k356"
+  },
+  {
+   "item": 87,
+   "corpus": "junyi2020",
+   "unit": "CF13V6t23GjzMMrmb1dKAo7CKiOon8TM72V7olKWEgw="
+  },
+  {
+   "item": 88,
+   "corpus": "junyi2020",
+   "unit": "h8yV7uoM6hu2grzOG5Weh+0M055I9znunaEikiEHXjo="
+  },
+  {
+   "item": 89,
+   "corpus": "eedi",
+   "unit": "s222"
+  },
+  {
+   "item": 90,
+   "corpus": "xes3g5m",
+   "unit": "k786"
+  },
+  {
+   "item": 91,
+   "corpus": "eedi",
+   "unit": "s270"
+  },
+  {
+   "item": 92,
+   "corpus": "assistments2012",
+   "unit": "1"
+  },
+  {
+   "item": 93,
+   "corpus": "xes3g5m",
+   "unit": "k610"
+  },
+  {
+   "item": 94,
+   "corpus": "junyi2020",
+   "unit": "YXMFRXPpfMq0dR1ji3gtHLMvc080j2c2AF52HbRm7O4="
+  },
+  {
+   "item": 95,
+   "corpus": "xes3g5m",
+   "unit": "k308"
+  },
+  {
+   "item": 96,
+   "corpus": "xes3g5m",
+   "unit": "k66"
+  },
+  {
+   "item": 97,
+   "corpus": "eedi",
+   "unit": "s1180"
+  },
+  {
+   "item": 98,
+   "corpus": "eedi",
+   "unit": "s281"
+  },
+  {
+   "item": 99,
+   "corpus": "xes3g5m",
+   "unit": "k848"
+  },
+  {
+   "item": 100,
+   "corpus": "eedi",
+   "unit": "s1160"
+  }
+ ]
+}

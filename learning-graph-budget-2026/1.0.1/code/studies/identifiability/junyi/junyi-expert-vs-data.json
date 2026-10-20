@@ -1,0 +1,29 @@
+{
+  "rater_split_half": 0.7834641128116031,
+  "rater_spearman_brown": 0.8785869109263816,
+  "authored_mean": 6.121733133364342,
+  "unauthored_mean": 4.208566515018507,
+  "n_authored": 387,
+  "cohen_d": 0.9550673454933296,
+  "n_pairs_learner": 47,
+  "spearman": 0.2991443108233118,
+  "ci": [
+    -0.01714269195189639,
+    0.5708082793709526
+  ],
+  "reversed_arrow": {
+    "authored_vs_rated_d": {
+      "claimed": 0.9550673454933296,
+      "reversed": 0.3152646927445722,
+      "margin": 0.6398026527487575,
+      "verdict": "CLAIMED"
+    },
+    "rated_vs_learners_rho": {
+      "claimed": 0.2991443108233118,
+      "reversed": -0.05853541416566627,
+      "margin": 0.35767972498897804,
+      "verdict": "CLAIMED"
+    }
+  },
+  "acknowledgement": "Junyi Academy dataset; Koedinger et al. (2010), datashop.org"
+}

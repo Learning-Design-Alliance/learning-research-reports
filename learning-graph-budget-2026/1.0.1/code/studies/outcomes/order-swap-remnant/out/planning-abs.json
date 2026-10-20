@@ -1,0 +1,40 @@
+{
+ "source": [
+  "out/power.json",
+  "out/remnant-result.json",
+  "studies/outcomes/lt-trials/out/icc-power.json"
+ ],
+ "check_0.10_sd_reproduces_stored": true,
+ "sd_0.10": {
+  "learner_n_per_arm": 1570,
+  "learner_with_remnant_n_per_arm": 1301,
+  "class_m13_icc_experiment": 260,
+  "class_m20_icc_experiment": 222,
+  "class_m13_icc_length_trial": 693,
+  "encounters_total": 2673,
+  "encounter_learners_K5": 535
+ },
+ "abs_0.10": {
+  "d_sd_at_accuracy_0.5": 0.20203050891044216,
+  "d_sd_at_accuracy_0.8": 0.2324952774876386,
+  "at_accuracy_0.5": {
+   "learner_n_per_arm": 385,
+   "learner_with_remnant_n_per_arm": 319,
+   "class_m13_icc_experiment": 64,
+   "class_m20_icc_experiment": 55,
+   "class_m13_icc_length_trial": 170,
+   "encounters_total": 655,
+   "encounter_learners_K5": 131
+  },
+  "at_accuracy_0.8": {
+   "learner_n_per_arm": 291,
+   "learner_with_remnant_n_per_arm": 241,
+   "class_m13_icc_experiment": 49,
+   "class_m20_icc_experiment": 42,
+   "class_m13_icc_length_trial": 129,
+   "encounters_total": 495,
+   "encounter_learners_K5": 99
+  }
+ },
+ "note": "encounters_total and encounter_learners_K5 are totals over both arms; the rest are per arm"
+}

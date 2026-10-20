@@ -1,0 +1,31 @@
+{
+  "seed": 20260923,
+  "top": 60,
+  "splits": 8,
+  "min_cell": 30,
+  "learners": 541452,
+  "courses": 60,
+  "real": {
+    "spearman": 0.9839890875332624,
+    "sb": 0.9919299392484843,
+    "kappa": 0.8572566898242037,
+    "pairs": 1768,
+    "median_cell": 748.5,
+    "assert_rate": 0.42138009049773756
+  },
+  "deranged": {
+    "spearman": 0.9651743997977523,
+    "sb": 0.9822786210700527,
+    "kappa": 0.8003306295816115,
+    "pairs": 1770,
+    "median_cell": 472.5,
+    "assert_rate": 0.2497175141242938
+  },
+  "kappa_excess": 0.05692606024259217,
+  "sb_excess": 0.009651318178431567,
+  "verdict": "EXPOSURE",
+  "published": {
+    "sb": 0.992,
+    "kappa": 0.859
+  }
+}

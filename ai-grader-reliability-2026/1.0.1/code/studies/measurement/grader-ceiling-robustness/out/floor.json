@@ -1,0 +1,173 @@
+{
+ "note": "synthetic graders on the real draws' clusters and level mix; no grader mark read",
+ "reps": 200,
+ "boot": 2000,
+ "mohler": {
+  "agree_share_target": 0.4033333333333333,
+  "s_g": 0.9,
+  "calibrated_s_h": {
+   "W1": [
+    0.7999999999999999,
+    0.40277777777777785
+   ],
+   "W2": [
+    0.6,
+    0.4055555555555555
+   ]
+  },
+  "W0": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.03,
+   "P1:GRADER-WORSE-WHERE-HUMANS-AGREE": 0.025,
+   "P1:NO-DIFFERENCE": 0.45,
+   "P1:UNRESOLVED": 0.495,
+   "P2:SHARE-MINOR": 1.0,
+   "rho_mean": 0.0
+  },
+  "W1": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.88,
+   "P1:NO-DIFFERENCE": 0.015,
+   "P1:UNRESOLVED": 0.105,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "rho_mean": 0.4523211070613071,
+   "rho_planted_before_rounding": 0.4413793103448275,
+   "rho_planted_in_sample_mean": 0.4517548234988363,
+   "rho_coverage_of_in_sample": 0.975
+  },
+  "W2": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.98,
+   "P1:UNRESOLVED": 0.02,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "rho_mean": 0.5333563072356253
+  },
+  "W3": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.985,
+   "P1:UNRESOLVED": 0.015,
+   "P2:SHARE-SUBSTANTIAL": 0.995,
+   "P2:SHARE-UNRESOLVED": 0.005,
+   "rho_mean": 0.4111104825712749
+  },
+  "RHO10": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.77,
+   "P1:NO-DIFFERENCE": 0.115,
+   "P1:UNRESOLVED": 0.115,
+   "P2:SHARE-MINOR": 0.975,
+   "P2:SHARE-UNRESOLVED": 0.025,
+   "rho_mean": 0.17455383044057407,
+   "rho_planted_before_rounding": 0.1,
+   "rho_planted_in_sample_mean": 0.17595627258469562,
+   "rho_coverage_of_in_sample": 0.99
+  },
+  "RHO50": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.895,
+   "P1:NO-DIFFERENCE": 0.01,
+   "P1:UNRESOLVED": 0.095,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "rho_mean": 0.5015673974541153,
+   "rho_planted_before_rounding": 0.5,
+   "rho_planted_in_sample_mean": 0.5012251551997337,
+   "rho_coverage_of_in_sample": 0.965
+  }
+ },
+ "menagerie": {
+  "agree_share_target": 0.3583333333333333,
+  "s_g": 2.5,
+  "calibrated_s_h": {
+   "W1": [
+    2.4,
+    0.36111111111111116
+   ],
+   "W2": [
+    2.0,
+    0.3756944444444444
+   ]
+  },
+  "W0": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.05,
+   "P1:GRADER-WORSE-WHERE-HUMANS-AGREE": 0.045,
+   "P1:NO-DIFFERENCE": 0.655,
+   "P1:UNRESOLVED": 0.25,
+   "P2:SHARE-MINOR": 1.0,
+   "rho_mean": 0.0
+  },
+  "W1": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.905,
+   "P1:NO-DIFFERENCE": 0.01,
+   "P1:UNRESOLVED": 0.085,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "P3:GRADER-ALSO-WORSE-WHERE-HUMANS-DISAGREE": 0.04,
+   "P3:GRADER-BETTER-WHERE-HUMANS-DISAGREE": 0.015,
+   "P3:GRADIENT-IS-REFERENCE-NOISE": 0.005,
+   "P3:UNRESOLVED": 0.94,
+   "rho_mean": 0.4814038186718982,
+   "rho_planted_before_rounding": 0.4796003330557868,
+   "rho_planted_in_sample_mean": 0.4803254776945274,
+   "rho_coverage_of_in_sample": 1.0
+  },
+  "W2": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 1.0,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "P3:GRADER-ALSO-WORSE-WHERE-HUMANS-DISAGREE": 0.05,
+   "P3:GRADER-BETTER-WHERE-HUMANS-DISAGREE": 0.005,
+   "P3:UNRESOLVED": 0.945,
+   "rho_mean": 0.5798921286507691
+  },
+  "W3": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 1.0,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "P3:GRADER-ALSO-WORSE-WHERE-HUMANS-DISAGREE": 0.235,
+   "P3:UNRESOLVED": 0.765,
+   "rho_mean": 0.4670018477207903
+  },
+  "RHO10": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.075,
+   "P1:GRADER-WORSE-WHERE-HUMANS-AGREE": 0.035,
+   "P1:NO-DIFFERENCE": 0.065,
+   "P1:UNRESOLVED": 0.825,
+   "P2:SHARE-MINOR": 1.0,
+   "rho_mean": 0.13201689265652206,
+   "rho_planted_before_rounding": 0.10000000000000002,
+   "rho_planted_in_sample_mean": 0.13217808270022377,
+   "rho_coverage_of_in_sample": 1.0
+  },
+  "RHO50": {
+   "P1:GRADER-BETTER-WHERE-HUMANS-AGREE": 0.89,
+   "P1:NO-DIFFERENCE": 0.015,
+   "P1:UNRESOLVED": 0.095,
+   "P2:SHARE-SUBSTANTIAL": 1.0,
+   "rho_mean": 0.5009484854544868,
+   "rho_planted_before_rounding": 0.5,
+   "rho_planted_in_sample_mean": 0.5004561254848416,
+   "rho_coverage_of_in_sample": 1.0
+  }
+ },
+ "criteria": {
+  "mohler": {
+   "W0 P1 BETTER <= 5%": true,
+   "W1 P1 BETTER >= 80%": true,
+   "W2 P1 BETTER >= 80%": true,
+   "W3 P1 BETTER >= 80%": true,
+   "RHO10 P2 MINOR >= 80%": true,
+   "RHO50 P2 SUBSTANTIAL >= 80%": true
+  },
+  "menagerie": {
+   "W0 P1 BETTER <= 5%": true,
+   "W1 P1 BETTER >= 80%": true,
+   "W2 P1 BETTER >= 80%": true,
+   "W3 P1 BETTER >= 80%": true,
+   "RHO10 P2 MINOR >= 80%": true,
+   "RHO50 P2 SUBSTANTIAL >= 80%": true
+  },
+  "all_passed": true,
+  "reported_only": {
+   "mohler": {
+    "W0 P1 NO-DIFFERENCE (answerability; >= 50% would make a null reachable)": 0.45
+   },
+   "menagerie": {
+    "W0 P1 NO-DIFFERENCE (answerability; >= 50% would make a null reachable)": 0.655,
+    "W2 P3 GRADIENT-IS-REFERENCE-NOISE": 0.0,
+    "W2 P3 GRADER-ALSO-WORSE (false)": 0.05,
+    "W3 P3 GRADER-ALSO-WORSE (power)": 0.235
+   }
+  }
+ }
+}

@@ -1,0 +1,106 @@
+{
+  "cap_usd": 60,
+  "runs": {
+    "opus55": {
+      "model": "openrouter:anthropic/claude-opus-5.5",
+      "reasoning": "provider default",
+      "calls": 902,
+      "failures": 0,
+      "tokens": {
+        "input": 1946085,
+        "output": 849765,
+        "reasoning": 10549,
+        "withUsage": 900
+      },
+      "usd": 24.78,
+      "how": "OpenRouter-reported"
+    },
+    "llama4": {
+      "model": "openrouter:meta-llama/llama-4-maverick",
+      "reasoning": "provider default",
+      "calls": 915,
+      "failures": 0,
+      "tokens": {
+        "input": 854955,
+        "output": 296713,
+        "reasoning": 0,
+        "withUsage": 900
+      },
+      "usd": 0.56,
+      "how": "OpenRouter-reported"
+    },
+    "lite-rerun": {
+      "model": "google:gemini-3.5-flash-lite",
+      "reasoning": "provider default",
+      "calls": 900,
+      "failures": 0,
+      "tokens": {
+        "input": 883153,
+        "output": 269464,
+        "reasoning": 0,
+        "withUsage": 900
+      },
+      "usd": 0.94,
+      "how": "tokens x list price"
+    },
+    "lite-high": {
+      "model": "google:gemini-3.5-flash-lite",
+      "reasoning": "high",
+      "calls": 900,
+      "failures": 0,
+      "tokens": {
+        "input": 883153,
+        "output": 1658356,
+        "reasoning": 1431753,
+        "withUsage": 900
+      },
+      "usd": 4.41,
+      "how": "tokens x list price"
+    },
+    "g5m-min": {
+      "model": "openai:gpt-5-mini",
+      "reasoning": "minimal",
+      "calls": 899,
+      "failures": 92,
+      "tokens": {
+        "input": 1139856,
+        "output": 578755,
+        "reasoning": 0,
+        "withUsage": 899
+      },
+      "usd": 1.44,
+      "how": "tokens x list price"
+    },
+    "g5m-high": {
+      "model": "openai:gpt-5-mini",
+      "reasoning": "high",
+      "calls": 897,
+      "failures": 3,
+      "tokens": {
+        "input": 1137776,
+        "output": 4767181,
+        "reasoning": 3967936,
+        "withUsage": 897
+      },
+      "usd": 9.82,
+      "how": "tokens x list price"
+    }
+  },
+  "pricing_probes_usd": {
+    "opus55": 0.28,
+    "gpt5mini-minimal": 0.02,
+    "gpt5mini-high": 0.11,
+    "gpt5mini-default": 0.03,
+    "gpt41mini": 0.01,
+    "lite-high": 0.05,
+    "lite-default": 0.01,
+    "llama4": 0.01,
+    "gemini31pro": 0.21
+  },
+  "total_usd": 42.68,
+  "skipped_by_cap": {
+    "google:gemini-3.1-pro-preview": "projected $19; spend + 1.3 x projection > $60",
+    "anthropic/claude-fable-5.1": "projected ~$60 alone",
+    "openai:gpt-5.5": "projected ~$50"
+  }
+}

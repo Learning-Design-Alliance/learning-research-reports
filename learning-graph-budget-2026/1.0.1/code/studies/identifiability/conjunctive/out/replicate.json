@@ -1,0 +1,193 @@
+{
+  "seed": 20260922,
+  "items": 30,
+  "draws": 1000,
+  "min_power": 0.5,
+  "floor_share": 0.05,
+  "verdict": "UNANSWERABLE",
+  "arms": {
+    "xes3g5m": {
+      "corpus": "xes3g5m",
+      "learners": 18066,
+      "items": 30,
+      "n_triples": 11203,
+      "background": 0.10730020445457678,
+      "background_pairs": 819,
+      "fixed_bar": 0.1,
+      "null_ratio": 0.9934563536512211,
+      "null_accepted": true,
+      "null_mean": -0.00041826752799236646,
+      "power": {
+        "0.1073": {
+          "detected": 35024,
+          "of": 44812,
+          "rate": 0.7815763634740694
+        },
+        "0.2": {
+          "detected": 41682,
+          "of": 44812,
+          "rate": 0.930152637686334
+        },
+        "0.4": {
+          "detected": 44516,
+          "of": 44812,
+          "rate": 0.9933946264393466
+        }
+      },
+      "power_at_own_bar": 0.7815763634740694,
+      "power_at_fixed_bar": 0.746050165134339,
+      "readable_own": true,
+      "read_own": {
+        "bar": 0.10730020445457678,
+        "supported": 2425,
+        "above": 1086,
+        "share": 0.21645987681870926,
+        "above_share": 0.09693832009283228,
+        "lo": 0.05259362765351398,
+        "hi": 0.1530610409138157,
+        "design_effect": 92.26382027990697,
+        "n_eff": 121.42354355166201,
+        "count_ci": [
+          511.95,
+          1557.05
+        ]
+      },
+      "readable_fixed": true,
+      "read_fixed": {
+        "bar": 0.1,
+        "supported": 2425,
+        "above": 1212,
+        "share": 0.21645987681870926,
+        "above_share": 0.1081853075069178,
+        "lo": 0.05879866059279317,
+        "hi": 0.17087731883685126,
+        "design_effect": 95.14947173474853,
+        "n_eff": 117.74106356818238,
+        "count_ci": [
+          580.95,
+          1725.6249999999995
+        ]
+      },
+      "jackknife_worst": {
+        "item": "k214",
+        "above": 850,
+        "cost": 0.2986798679867987
+      },
+      "ability": {
+        "n": 1168,
+        "raw_median": 0.14110638937874187,
+        "adj_median": 0.11019476537404715,
+        "kept_fraction": 0.7809339170196948,
+        "still_above": 670
+      }
+    },
+    "ednet": {
+      "corpus": "ednet",
+      "learners": 8000,
+      "items": 30,
+      "n_triples": 11298,
+      "background": 0.06470588235294117,
+      "background_pairs": 825,
+      "fixed_bar": 0.1,
+      "null_ratio": 0.9982060672204578,
+      "null_accepted": true,
+      "null_mean": -0.0007607540322719334,
+      "power": {
+        "0.0647": {
+          "detected": 1694,
+          "of": 45192,
+          "rate": 0.03748451053283767
+        },
+        "0.2": {
+          "detected": 29088,
+          "of": 45192,
+          "rate": 0.6436537440254912
+        },
+        "0.4": {
+          "detected": 44775,
+          "of": 45192,
+          "rate": 0.9907727031332979
+        }
+      },
+      "power_at_own_bar": 0.03748451053283767,
+      "power_at_fixed_bar": 0.11752080014161799,
+      "readable_own": false,
+      "readable_fixed": false
+    },
+    "xes3g5m-coarse": {
+      "corpus": "xes3g5m-coarse",
+      "learners": 18066,
+      "items": 30,
+      "n_triples": 11203,
+      "background": 0.11022861501551773,
+      "background_pairs": 826,
+      "fixed_bar": 0.1,
+      "null_ratio": 0.9991374807551471,
+      "null_accepted": true,
+      "null_mean": -0.0004793516801366071,
+      "power": {
+        "0.1102": {
+          "detected": 29827,
+          "of": 44812,
+          "rate": 0.6656029634919218
+        },
+        "0.2": {
+          "detected": 39350,
+          "of": 44812,
+          "rate": 0.8781130054449701
+        },
+        "0.4": {
+          "detected": 44377,
+          "of": 44812,
+          "rate": 0.9902927787199857
+        }
+      },
+      "power_at_own_bar": 0.6656029634919218,
+      "power_at_fixed_bar": 0.6187405159332322,
+      "readable_own": true,
+      "read_own": {
+        "bar": 0.11022861501551773,
+        "supported": 1283,
+        "above": 537,
+        "share": 0.1145228956529501,
+        "above_share": 0.04793358921717397,
+        "lo": 0.026875434866635187,
+        "hi": 0.07521672468268983,
+        "design_effect": 35.66541048325028,
+        "n_eff": 314.1138668587964,
+        "count_ci": [
+          270.0,
+          745.05
+        ]
+      },
+      "readable_fixed": true,
+      "read_fixed": {
+        "bar": 0.1,
+        "supported": 1283,
+        "above": 631,
+        "share": 0.1145228956529501,
+        "above_share": 0.05632419887530126,
+        "lo": 0.03462711701963783,
+        "hi": 0.0816660559060384,
+        "design_effect": 30.476357149753863,
+        "n_eff": 367.5964271238526,
+        "count_ci": [
+          343.95,
+          823.05
+        ]
+      },
+      "jackknife_worst": {
+        "item": "\u77e5\u8bc6\u70b9 / \u5e94\u7528\u9898\u6a21\u5757 / \u548c\u5dee\u500d\u95ee\u9898",
+        "above": 521,
+        "cost": 0.17432646592709988
+      },
+      "ability": {
+        "n": 704,
+        "raw_median": 0.13611204611195643,
+        "adj_median": 0.11044984899072297,
+        "kept_fraction": 0.8114627040421867,
+        "still_above": 413
+      }
+    }
+  }
+}

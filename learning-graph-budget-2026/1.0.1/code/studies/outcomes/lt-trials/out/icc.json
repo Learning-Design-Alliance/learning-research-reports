@@ -1,0 +1,152 @@
+{
+ "date": "2026-10-08",
+ "interval": "90% bca over 2,000 class-bootstrap draws",
+ "resamples": "classes (with replacement; children kept with their class)",
+ "trials": {
+  "151741": {
+   "classes": 16,
+   "class_sizes_all_children": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    16,
+    16,
+    17,
+    18,
+    18
+   ],
+   "median_class_size": 12.0,
+   "floor_pass": true,
+   "outcome": "Theta_post_1pl (Rasch posttest theta, logits)",
+   "estimate": {
+    "icc": 0.39487607461350255,
+    "lo90": 0.22554334539548201,
+    "hi90": 0.5821759028189113,
+    "interval": "bca",
+    "percentile_lo90_hi90_v1": [
+     0.179654997428126,
+     0.5274145730351332
+    ],
+    "classes": 16,
+    "children": 187,
+    "sigma2_between": 0.3700607690840523,
+    "sigma2_within": 0.5670959564690493,
+    "perm_p_icc_gt_0": 0.0004997501249375312
+   },
+   "class_sizes_with_posttest": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    8,
+    10,
+    11,
+    13,
+    14,
+    16,
+    16,
+    16,
+    17,
+    18,
+    18
+   ],
+   "with_pretest": {
+    "children": 187,
+    "pretest_slope": 0.5697642820452093,
+    "icc_conditional": 0.34109507445610365,
+    "sigma2_between_uncond": 0.3700607690840523,
+    "sigma2_between_cond": 0.25552486796160817,
+    "sigma2_within_uncond": 0.5670959564690493,
+    "sigma2_within_cond": 0.4936060550488097,
+    "eta_B": 0.6904943439264446,
+    "eta_B_defined": true,
+    "eta_W": 0.8704101121125689
+   },
+   "ceiling": {
+    "posttest_reliability": 0.812712533365465,
+    "true_score_icc": 0.4858742278506643,
+    "note": "1 - mean(SE^2)/Var(theta); measurement error inflates within-class variance only"
+   },
+   "verdict": [
+    "CLASS ICC ESTIMATED",
+    "OVERLAPS H&H RANGE",
+    "ABOVE ASSISTMENTS",
+    "TOO IMPRECISE TO REPLACE"
+   ],
+   "sign_check": {
+    "icc_signed": 0.39487607461350255,
+    "sigma2_between_signed": 0.3700607690840523
+   },
+   "post_hoc_descriptive_point_icc": {
+    "BAU only": 0.49380694475440196,
+    "REV only": 0.5309806686951188,
+    "LT only": 0.42746976378858403,
+    "REV+BAU (LT dropped)": 0.47127043122998136
+   }
+  },
+  "168361": {
+   "verdict": [
+    "NOT A SEPARATE TRIAL"
+   ],
+   "identity": {
+    "children_151741": 187,
+    "children_168361": 187,
+    "sids_in_both": 187,
+    "same_class_and_arm_for_every_sid": true,
+    "posttheta_matched": 187,
+    "max_abs_diff_posttheta_vs_151741": 0.0
+   },
+   "scoring_sensitivity_TotalPostCorrect": {
+    "icc": 0.34806898747631676,
+    "lo90": 0.23133807173588666,
+    "hi90": 0.4525175852997432,
+    "interval": "bca",
+    "percentile_lo90_hi90_v1": [
+     0.17278297544157845,
+     0.4152165515050865
+    ],
+    "classes": 16,
+    "children": 187,
+    "sigma2_between": 6.522271631687988,
+    "sigma2_within": 12.216173522469205,
+    "perm_p_icc_gt_0": 0.0004997501249375312,
+    "observed_range": [
+     0.0,
+     26.0
+    ],
+    "codebook_range_claimed": [
+     0,
+     20
+    ]
+   }
+  },
+  "168846": {
+   "classes": 2,
+   "class_sizes": [
+    13,
+    13
+   ],
+   "floor_pass": false,
+   "verdict": [
+    "UNANSWERABLE: CLASS CONFOUNDED WITH ARM"
+   ],
+   "outcome_read": false
+  }
+ },
+ "pooling": {
+  "eligible_independent_trials": [
+   "151741"
+  ],
+  "verdict": "NOTHING TO POOL",
+  "order_effect_pooling_item_7": "not run: the patterning, shape and arithmetic order trials' learner data are not in these deposits"
+ }
+}

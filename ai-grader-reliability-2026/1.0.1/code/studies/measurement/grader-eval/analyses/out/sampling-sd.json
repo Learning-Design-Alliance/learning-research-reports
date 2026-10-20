@@ -1,0 +1,25 @@
+{
+ "n": 150,
+ "seeds": 200,
+ "stratified_seed7": 0.8325591296895725,
+ "stratified": {
+  "sampler": "vendor/934478716 stratifiedSample, seeds 1-200",
+  "mean": 0.8324697375408029,
+  "sd": 0.0237781644240697
+ },
+ "random": {
+  "sampler": "uniform Fisher-Yates (mulberry32 seeds 1-200), first 150 of the cases with a gemini baseline",
+  "mean": 0.794793284357726,
+  "sd": 0.030617881886182058
+ },
+ "sd_ratio_random_over_stratified": 1.2876469915898463,
+ "corpus_nonempty": {
+  "n": 3031,
+  "qwk": 0.7964012756950943
+ },
+ "corpus_all_rows": {
+  "rows": 3041,
+  "withGemini": 3041,
+  "qwk": 0.79924682704428
+ }
+}

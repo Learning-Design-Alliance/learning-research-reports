@@ -1,0 +1,121 @@
+{
+ "planted": {
+  "jobs": {
+   "C": {
+    "best_val_auc": 0.8020979875880399,
+    "best_epoch": 146,
+    "epochs_run": 156,
+    "aborted": null
+   },
+   "R": {
+    "best_val_auc": 0.8022388648672968,
+    "best_epoch": 145,
+    "epochs_run": 155,
+    "aborted": null
+   },
+   "Rd0": {
+    "best_val_auc": 0.8020083547866438,
+    "best_epoch": 145,
+    "epochs_run": 155,
+    "aborted": null
+   },
+   "Rd1": {
+    "best_val_auc": 0.8018251244183503,
+    "best_epoch": 144,
+    "epochs_run": 154,
+    "aborted": null
+   },
+   "Rd2": {
+    "best_val_auc": 0.8017230095118459,
+    "best_epoch": 141,
+    "epochs_run": 151,
+    "aborted": null
+   }
+  },
+  "ensemble_auc": {
+   "C": 0.8021603409439243,
+   "R": 0.8023650352446948,
+   "Rd0": 0.8021255080327524,
+   "Rd1": 0.8019661339861033,
+   "Rd2": 0.8018600237855075
+  },
+  "R_minus_Rdbar": {
+   "estimate": 0.00038114664324040426,
+   "lo": 0.00032135627798004774,
+   "hi": 0.0004463879226234979
+  },
+  "V1": "ROUTES EQUIVALENT TO THEIR DERANGEMENT",
+  "R_minus_C": {
+   "estimate": 0.00020469430077052486,
+   "lo": -5.756864463228317e-05,
+   "hi": 0.0004555927996119979
+  },
+  "Rdbar_minus_C": {
+   "estimate": -0.0001764523424698794,
+   "lo": -0.0004462600633274055,
+   "hi": 6.43373630716509e-05
+  },
+  "V2_routes": "ROUTES EQUIVALENT TO CONTENT ALONE",
+  "V2_deranged": "DERANGED ROUTES EQUIVALENT TO CONTENT ALONE"
+ },
+ "null": {
+  "jobs": {
+   "C": {
+    "best_val_auc": 0.7932126169700424,
+    "best_epoch": 149,
+    "epochs_run": 159,
+    "aborted": null
+   },
+   "R": {
+    "best_val_auc": 0.793211698630798,
+    "best_epoch": 144,
+    "epochs_run": 154,
+    "aborted": null
+   },
+   "Rd0": {
+    "best_val_auc": 0.7927583756559091,
+    "best_epoch": 140,
+    "epochs_run": 150,
+    "aborted": null
+   },
+   "Rd1": {
+    "best_val_auc": 0.7931730085831911,
+    "best_epoch": 144,
+    "epochs_run": 154,
+    "aborted": null
+   },
+   "Rd2": {
+    "best_val_auc": 0.7929879930561426,
+    "best_epoch": 143,
+    "epochs_run": 153,
+    "aborted": null
+   }
+  },
+  "ensemble_auc": {
+   "C": 0.7943083014111543,
+   "R": 0.7945451498626845,
+   "Rd0": 0.7941193719477255,
+   "Rd1": 0.7945188811848106,
+   "Rd2": 0.7942989257939994
+  },
+  "R_minus_Rdbar": {
+   "estimate": 0.00023275688717261378,
+   "lo": 0.00018158115365596582,
+   "hi": 0.0002879333721184013
+  },
+  "V1": "ROUTES EQUIVALENT TO THEIR DERANGEMENT",
+  "R_minus_C": {
+   "estimate": 0.00023684845153026934,
+   "lo": -2.4991835700685633e-05,
+   "hi": 0.0004781091828328726
+  },
+  "Rdbar_minus_C": {
+   "estimate": 4.091564357655564e-06,
+   "lo": -0.00025123521250807466,
+   "hi": 0.00023942980781625195
+  },
+  "V2_routes": "ROUTES EQUIVALENT TO CONTENT ALONE",
+  "V2_deranged": "DERANGED ROUTES EQUIVALENT TO CONTENT ALONE"
+ },
+ "FLOOR_PASSES": false
+}

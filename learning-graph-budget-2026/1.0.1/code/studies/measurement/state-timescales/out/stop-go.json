@@ -1,0 +1,130 @@
+{
+ "momentary_state_component": "HOLD (UNIDENTIFIED)",
+ "reason": "the conditions are not met as registered: ASSISTments existence reads 'FAST PERSISTENT STATE PRESENT (UNCALIBRATED)'; ASSISTments engine value reads 'FILTERING IMPROVES NEXT-SESSION STATE (UNCALIBRATED)'",
+ "conditions": {
+  "assist_present": false,
+  "floor_no_m_worlds_clean": true,
+  "direction_replicates": {
+   "xes": true,
+   "eedi": true
+  },
+  "assist_filtering_improves": false,
+  "assist_dynamics": "AR FORM UNIDENTIFIED (UNCALIBRATED)"
+ },
+ "note": "a detected M is an unobserved fast state or process, not fatigue, attention or affect",
+ "g_layer": {
+  "cheapest_passing_variant": "A1-global",
+  "passes": {
+   "A1-global": {
+    "assist": true,
+    "xes": true,
+    "eedi": true
+   },
+   "A1": {
+    "assist": true,
+    "xes": true,
+    "eedi": true
+   },
+   "A2-orth": {
+    "assist": true,
+    "xes": true,
+    "eedi": true
+   },
+   "C2g": {
+    "assist": true,
+    "xes": true,
+    "eedi": true
+   }
+  },
+  "numbers": {
+   "assist": {
+    "share_of_C2_cold": {
+     "est": 0.5819938633430005,
+     "lo": 0.5191089900664839,
+     "hi": 0.638741514734171
+    },
+    "cold_gain_vs_C0": {
+     "est": 0.027507291820359714,
+     "lo": 0.022955502722432224,
+     "hi": 0.03281252434010797
+    },
+    "cold_auc_gain": {
+     "est": 0.0489844888231632,
+     "lo": 0.03952122420929362,
+     "hi": 0.05772231864184781
+    },
+    "items_saved_20": {
+     "est": 7.316962410453812,
+     "lo": 4.991488422637888,
+     "hi": 10.897498863075146
+    },
+    "all_gain_vs_C0": {
+     "est": 0.00941115424519523,
+     "lo": 0.008493824572073937,
+     "hi": 0.010415415802570006
+    }
+   },
+   "xes": {
+    "share_of_C2_cold": {
+     "est": 0.8378546362964092,
+     "lo": 0.8135404144395343,
+     "hi": 0.8649223893509604
+    },
+    "cold_gain_vs_C0": {
+     "est": 0.037145519822290474,
+     "lo": 0.03306081578030667,
+     "hi": 0.04181672964115175
+    },
+    "cold_auc_gain": {
+     "est": 0.05800498944469956,
+     "lo": 0.05155799717071947,
+     "hi": 0.06430397799852992
+    },
+    "items_saved_20": {
+     "est": 56.27516289293368,
+     "lo": 50.907293095049404,
+     "hi": 61.75619364796719
+    },
+    "all_gain_vs_C0": {
+     "est": 0.02606655749005954,
+     "lo": 0.023437923029155844,
+     "hi": 0.028665764323284285
+    }
+   },
+   "eedi": {
+    "share_of_C2_cold": {
+     "est": 0.8622933692560538,
+     "lo": 0.8345035804298281,
+     "hi": 0.8853263296501619
+    },
+    "cold_gain_vs_C0": {
+     "est": 0.058765921226676565,
+     "lo": 0.053054324980055086,
+     "hi": 0.06389534609155209
+    },
+    "cold_auc_gain": {
+     "est": 0.08890794951340786,
+     "lo": 0.08024518801696726,
+     "hi": 0.09637365076862674
+    },
+    "items_saved_20": {
+     "est": 40.57458211792223,
+     "lo": 37.13650582946514,
+     "hi": 44.193294879466556
+    },
+    "all_gain_vs_C0": {
+     "est": 0.02533601023049392,
+     "lo": 0.023494521750630156,
+     "hi": 0.027283791200364633
+    }
+   }
+  },
+  "note": "g is a forecasting coordinate in p(X), not a learner mechanism"
+ },
+ "floor": {
+  "part_A_passes": true,
+  "part_Bex_passes": false,
+  "part_Bform_passes": false,
+  "part_Beng_passes": false
+ }
+}
