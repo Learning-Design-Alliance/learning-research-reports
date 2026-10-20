@@ -123,6 +123,10 @@ NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><styl
 :root[data-theme="dark"] .lda-crumbs a{{color:#c9c2ff}}
 :root[data-theme="dark"] .lda-crumbs .light{{display:none}}:root[data-theme="dark"] .lda-crumbs .dark{{display:block}}
 @media print{{.lda-crumbs{{display:none}}}}
+/* Published reports carry the stylesheet they were rendered with. This keeps their Review button reachable:
+   a paragraph's hover area runs down its right margin, so a diagonal move to the button stays on it. */
+p.para::before{{content:"";position:absolute;top:0;bottom:0;left:100%;width:74px}}
+@media (max-width:1100px){{p.para::before{{display:none}}}}
 </style><div class="in"><a class="home" href="../../../index.html"><img class="light" src="../../../assets/lda-monogram.svg" alt="Learning Design Alliance"><img class="dark" src="../../../assets/lda-monogram-dawn.svg" alt="">Research reports</a><span class="sep" aria-hidden="true">/</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
 
 
