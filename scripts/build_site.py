@@ -115,8 +115,15 @@ NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><styl
 .lda-crumbs .here{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1;opacity:.8}}
 .lda-crumbs .doi{{flex:none;white-space:nowrap}}
 @media (max-width:560px){{.lda-crumbs .doi{{display:none}}}}
+.lda-crumbs .dark{{display:none}}
+@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]) .lda-crumbs{{background:#0b0e33;color:#c9c2ff;border-bottom-color:rgba(201,194,255,.6)}}
+  :root:not([data-theme="light"]) .lda-crumbs a{{color:#c9c2ff}}
+  :root:not([data-theme="light"]) .lda-crumbs .light{{display:none}}:root:not([data-theme="light"]) .lda-crumbs .dark{{display:block}}}}
+:root[data-theme="dark"] .lda-crumbs{{background:#0b0e33;color:#c9c2ff;border-bottom-color:rgba(201,194,255,.6)}}
+:root[data-theme="dark"] .lda-crumbs a{{color:#c9c2ff}}
+:root[data-theme="dark"] .lda-crumbs .light{{display:none}}:root[data-theme="dark"] .lda-crumbs .dark{{display:block}}
 @media print{{.lda-crumbs{{display:none}}}}
-</style><div class="in"><a class="home" href="../../../index.html"><img src="../../../assets/lda-monogram.svg" alt="Learning Design Alliance">Research reports</a><span class="sep" aria-hidden="true">/</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
+</style><div class="in"><a class="home" href="../../../index.html"><img class="light" src="../../../assets/lda-monogram.svg" alt="Learning Design Alliance"><img class="dark" src="../../../assets/lda-monogram-dawn.svg" alt="">Research reports</a><span class="sep" aria-hidden="true">/</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
 
 
 REVIEW_DIALOG = re.compile(r'<dialog id="review-dialog".*?</dialog>', re.S)
