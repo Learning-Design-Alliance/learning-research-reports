@@ -41,7 +41,13 @@ with the report renderer; none of this is committed, and the files in the versio
   protocol/             the protocol the release follows
   readiness/            the readiness record, and the independent scope audit and reproduction it cites
   artifacts/            other documents the release cites, at their original paths
+briefs/<release>/<version>/
+  brief.md, brief.html  the version's plain-language brief, lifted on its own after the version
+  LIFT.json             who lifted it, from which brief, the DOI's state at export, and each file's SHA-256
 ```
+
+A brief is re-exported, never edited, only to bring its DOI's state up to date; CI refuses a
+replacement from a different lift.
 
 ## Versions
 

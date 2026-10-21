@@ -15,7 +15,12 @@ run by CI on every pull request and on main, fails when:
     version folder whose release file says what it supersedes;
   - DOIS.json (written by scripts/mint_doi.py) names a version folder that does not exist, has an
     entry that is not a well-formed reserved or published DOI, or, with --base, changes or removes
-    an entry that was already published at <ref> (a reserved entry may only become published).
+    an entry that was already published at <ref> (a reserved entry may only become published);
+  - a brief, briefs/<release>/<version>/ (exported by board/export_release.py --brief after the
+    maintainer has lifted it with board/patent_gate.py --lift-brief), fails the checks a version
+    folder does against its own LIFT.json, or is for a version that has no folder here; or, with
+    --base, a brief that exists at <ref> is replaced by a different lifted brief. A brief may be
+    re-exported from the same lift, which is how its DOI's state is brought up to date.
 
     python3 scripts/check_releases.py [--base origin/main]
 
@@ -35,7 +40,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MARKER = "-".join(["LDA", "EMBARGO"]).encode()   # joined at run time: a constant would be folded into the .pyc
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
-NOT_RELEASES = {".git", ".github", "scripts", "site", "_site"}   # _site: the Pages build, never committed
+NOT_RELEASES = {".git", ".github", "scripts", "site", "_site", "briefs"}   # _site: the Pages build, never committed
+BRIEFS = ROOT / "briefs"
 DOIS = ROOT / "DOIS.json"
 
 
@@ -60,6 +66,36 @@ def check_tree() -> list[str]:
                 bad.append(f"{x.relative_to(ROOT)}: a release folder holds only version folders (x.y.z)")
                 continue
             bad += check_version(rdir.name, x)
+    bad += check_briefs()
+    return bad
+
+
+def check_briefs() -> list[str]:
+    bad = []
+    if not BRIEFS.is_dir():
+        return bad
+    for x in sorted(BRIEFS.glob("*/*")):
+        if not (x.is_dir() and SEMVER.match(x.name)):
+            bad.append(f"{x.relative_to(ROOT)}: briefs/ holds only <release>/<version>/ folders")
+            continue
+        bad += check_version(x.parent.name, x)
+        if not (ROOT / x.parent.name / x.name / "LIFT.json").is_file():
+            bad.append(f"{x.relative_to(ROOT)}: a brief for a version that is not published here")
+    return bad
+
+
+def check_briefs_unchanged(base: str) -> list[str]:
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+    bad = []
+    for path in git("ls-tree", "-r", "--name-only", base, "--", "briefs").stdout.splitlines():
+        if Path(path).name != "LIFT.json":
+            continue
+        old = json.loads(git("show", f"{base}:{path}").stdout or "{}")
+        new_p = ROOT / path
+        new = json.loads(new_p.read_text(encoding="utf-8")) if new_p.is_file() else {}
+        if (old.get("source_sha256"), old.get("lifted_by")) != (new.get("source_sha256"), new.get("lifted_by")):
+            bad.append(f"{path}: a published brief may only be re-exported from the same lift")
     return bad
 
 
@@ -162,13 +198,15 @@ def main() -> int:
     if a.base:
         bad += check_published_unchanged(a.base)
         bad += check_dois_unchanged(a.base)
+        bad += check_briefs_unchanged(a.base)
     n = sum(1 for r in ROOT.iterdir() if r.is_dir() and r.name not in NOT_RELEASES
             for v in r.iterdir() if v.is_dir() and SEMVER.match(v.name))
     if bad:
         print("\n".join(bad))
         print(f"{len(bad)} problem(s)")
         return 1
-    print(f"{n} published version(s); every file lifted, listed and unaltered")
+    nb = sum(1 for x in BRIEFS.glob("*/*") if x.is_dir()) if BRIEFS.is_dir() else 0
+    print(f"{n} published version(s) and {nb} brief(s); every file lifted, listed and unaltered")
     return 0
 
 
