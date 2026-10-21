@@ -288,6 +288,34 @@ footer.lda-foot .mark svg {{ height:15px; width:auto; display:block; color:var(-
 """
 
 
+SITE_URL = "https://reports.learningdesignalliance.org"
+SHARE_CARD = SITE_URL + "/assets/share-card.png"
+
+
+def add_social(out: Path) -> None:
+    """Give every served page the Open Graph and Twitter tags that link previews (Slack, LinkedIn,
+    email clients) read: its own title, description and URL, and the site's share card as the image."""
+    for page in out.rglob("index.html"):   # the pages the site serves; other HTML in a release is left as lifted
+        s = page.read_text(encoding="utf-8")
+        if 'property="og:image"' in s or s.count("</head>") < 1:
+            continue
+        t = re.search(r"<title>(.*?)</title>", s, re.S)
+        d = re.search(r'<meta name="description" content="([^"]*)"', s)
+        title = html.unescape(t.group(1).strip()) if t else "Learning Design Alliance research reports"
+        desc = html.unescape(d.group(1)) if d else "A research release of the Learning Design Alliance."
+        rel = page.relative_to(out).as_posix()
+        url = SITE_URL + "/" + (rel[: -len("index.html")] if rel.endswith("index.html") else rel)
+        tags = "".join(f'<meta property="{k}" content="{html.escape(v, quote=True)}">' for k, v in (
+            ("og:type", "website"), ("og:site_name", "Learning Design Alliance research reports"),
+            ("og:title", title), ("og:description", desc), ("og:url", url), ("og:image", SHARE_CARD),
+            ("og:image:width", "1200"), ("og:image:height", "630"),
+            ("og:image:alt", "Learning Design Alliance research reports")))
+        tags += "".join(f'<meta name="{k}" content="{html.escape(v, quote=True)}">' for k, v in (
+            ("twitter:card", "summary_large_image"), ("twitter:title", title),
+            ("twitter:description", desc), ("twitter:image", SHARE_CARD)))
+        page.write_text(s.replace("</head>", tags + "</head>", 1), encoding="utf-8")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path, default=ROOT / "_site")
@@ -322,6 +350,7 @@ def main() -> int:
                                     encoding="utf-8")
     shutil.copytree(ROOT / "site", out / "assets", ignore=shutil.ignore_patterns("review", "report"))   # the LDA logos
     shutil.copyfile(ROOT / "site" / "lda-favicon.png", out / "favicon.ico")   # browsers that ask for /favicon.ico take a PNG
+    add_social(out)
     (out / ".nojekyll").write_text("", encoding="utf-8")   # serve folders as they are, underscores included
     print(f"built {out}: {len(rels)} release(s), "
           + ", ".join(f"{r['release']} {r['versions'][0]['version']}" for r in rels))
