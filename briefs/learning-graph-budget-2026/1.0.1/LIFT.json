@@ -1,0 +1,21 @@
+{
+ "release": "learning-graph-budget-2026",
+ "version": "1.0.1",
+ "kind": "brief",
+ "lifted_by": "human:david-porcaro",
+ "lifted_at": "2026-10-21T23:42:08Z",
+ "source_commit": "2c94ddcf48b1ec60b1485556c2ab96ac1b8fe6b9",
+ "source_sha256": "fe8f855ca6a60d3a629dc40a47f7b203792ef323f2dae68818ab955d3679b1d5",
+ "doi": "10.5281/zenodo.23488368",
+ "doi_state": "reserved",
+ "files": [
+  {
+   "path": "brief.html",
+   "sha256": "dc9a98d3f13d2e503c5d35d6ec5a29e75e9946f1deafcda50f394ef644a8eeb5"
+  },
+  {
+   "path": "brief.md",
+   "sha256": "ba52bb9ece6b1fc2d816f39d5a50ddb96767edea03c57adf14e857dd07a6c85e"
+  }
+ ]
+}
