@@ -13,6 +13,11 @@ For each version the index shows the title, authors, lift date and question from
 links to the report, the article (rendered on GitHub), the release file, the code and the folder,
 and the DOI once DOIS.json marks it published. A reserved DOI is not shown: it does not resolve.
 
+Where a version has a brief (briefs/<release>/<version>/, its plain-language summary, exported with
+its own LIFT.json by board/export_release.py --brief), the brief's page, standalone HTML in the reports'
+brand, is served at <release>/<version>/brief/index.html with the same breadcrumb bar, and the index
+entry and the report's bar link to it.
+
 Reads the release files with PyYAML; otherwise standard library only.
 """
 
@@ -62,6 +67,7 @@ def releases() -> list[dict]:
                 "has_report": (vdir / "report" / "index.html").is_file(),
                 "article": articles[0].relative_to(ROOT).as_posix() if articles else None,
                 "has_code": (vdir / "code").is_dir(),
+                "has_brief": (ROOT / "briefs" / rdir.name / vdir.name / "brief.html").is_file(),
             })
         if entries:
             out.append({"release": rdir.name, "versions": entries})
@@ -76,6 +82,8 @@ def card(rel: dict) -> str:
     links = []
     if e["has_report"]:
         links.append(f'<a class="pill primary" href="{base}/report/index.html">Read the report</a>')
+    if e["has_brief"]:
+        links.append(f'<a class="pill" href="{base}/brief/index.html">Read the brief</a>')
     if e["article"]:
         links.append(f'<a class="pill" href="{REPO_URL}/blob/main/{e["article"]}">Article <span aria-hidden="true">↗</span></a>')
     links.append(f'<a class="pill" href="{REPO_URL}/blob/main/{base}/{e["version"]}.yaml">Release file <span aria-hidden="true">↗</span></a>')
@@ -113,7 +121,7 @@ NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><styl
 .lda-crumbs .home{{display:flex;align-items:center;gap:10px;white-space:nowrap;flex:none}}
 .lda-crumbs .sep{{opacity:.5;flex:none}}
 .lda-crumbs .here{{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1;opacity:.8}}
-.lda-crumbs .doi{{flex:none;white-space:nowrap}}
+.lda-crumbs .doi,.lda-crumbs .more{{flex:none;white-space:nowrap}}
 @media (max-width:560px){{.lda-crumbs .doi{{display:none}}}}
 .lda-crumbs .dark{{display:none}}
 @media (prefers-color-scheme:dark){{:root:not([data-theme="light"]) .lda-crumbs{{background:#0b0e33;color:#c9c2ff;border-bottom-color:rgba(201,194,255,.6)}}
@@ -128,7 +136,7 @@ NAV = """<div class="lda-crumbs" role="navigation" aria-label="Breadcrumb"><styl
 p.para::before{{content:"";position:absolute;top:0;bottom:0;left:100%;width:74px}}
 /* Below 1160px the margin is too narrow for the button, which overflowed the page by up to 39px: put it inline. */
 @media (max-width:1160px){{p.para::before,.rv-btn::before{{display:none}}.rv-btn{{position:static;opacity:1;margin-left:6px;padding:0 6px}}}}
-</style><div class="in"><a class="home" href="../../../index.html"><img class="light" src="../../../assets/lda-monogram.svg" alt="Learning Design Alliance"><img class="dark" src="../../../assets/lda-monogram-dawn.svg" alt="">Research reports</a><span class="sep" aria-hidden="true">/</span><span class="here" aria-current="page">{title} · v{version}</span>{doi}</div></div>"""
+</style><div class="in"><a class="home" href="../../../index.html"><img class="light" src="../../../assets/lda-monogram.svg" alt="Learning Design Alliance"><img class="dark" src="../../../assets/lda-monogram-dawn.svg" alt="">Research reports</a><span class="sep" aria-hidden="true">/</span><span class="here" aria-current="page">{here}{title} · v{version}</span>{more}{doi}</div></div>"""
 
 
 REVIEW_DIALOG = re.compile(r'<dialog id="review-dialog".*?</dialog>', re.S)
@@ -166,12 +174,16 @@ def add_brand(report: Path) -> None:
     report.write_text(s, encoding="utf-8")
 
 
-def add_nav(report: Path, e: dict) -> None:
-    """Insert NAV right after <body> in the served copy of a report."""
+def add_nav(report: Path, e: dict, brief: bool = False) -> None:
+    """Insert NAV right after <body> in the served copy of a report, or of a brief (brief=True). Each links
+    to the other where the version has both."""
     s = report.read_text(encoding="utf-8")
     doi = (f'<a class="doi" href="https://doi.org/{html.escape(e["doi"])}">doi:{html.escape(e["doi"])}</a>'
            if e["doi"] else "")
-    nav = NAV.format(title=html.escape(e["title"]), version=html.escape(e["version"]), doi=doi)
+    more = ('<a class="more" href="../report/index.html">Full report</a>' if brief and e["has_report"] else
+            '<a class="more" href="../brief/index.html">Brief</a>' if not brief and e["has_brief"] else "")
+    nav = NAV.format(title=html.escape(e["title"]), version=html.escape(e["version"]), doi=doi, more=more,
+                     here="Brief · " if brief else "")
     m = re.search(r"<body[^>]*>", s)
     if not m:
         sys.exit(f"{report}: no <body> tag to put the navigation after")
@@ -294,6 +306,12 @@ def main() -> int:
                 update_review_form(out / v["release"] / v["version"] / "report" / "index.html")
                 add_brand(out / v["release"] / v["version"] / "report" / "index.html")
                 add_nav(out / v["release"] / v["version"] / "report" / "index.html", v)
+            if v["has_brief"]:
+                page = out / v["release"] / v["version"] / "brief" / "index.html"
+                page.parent.mkdir(parents=True)
+                shutil.copyfile(ROOT / "briefs" / v["release"] / v["version"] / "brief.html", page)
+                add_brand(page)
+                add_nav(page, v, brief=True)
     # The mark is inlined so it takes the page's colour (lapis, or lavender in dark mode).
     mark = re.sub(r'fill="#[0-9A-Fa-f]{6}"', 'fill="currentColor"',
                   (ROOT / "site" / "lda-monogram.svg").read_text(encoding="utf-8").strip())
