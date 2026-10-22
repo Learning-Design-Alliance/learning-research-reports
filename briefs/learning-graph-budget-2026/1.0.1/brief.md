@@ -1,6 +1,6 @@
 # Brief: Learner records rarely show that one skill must come before another
 
-*Source: release learning-graph-budget-2026, version 1.0.1, 2026-10-19; DOI [10.5281/zenodo.23488368](https://doi.org/10.5281/zenodo.23488368) (reserved; 1.0.0 is [10.5281/zenodo.23480842](https://doi.org/10.5281/zenodo.23480842)).*
+*Source: release learning-graph-budget-2026, version 1.0.1, 2026-10-19; DOI [10.5281/zenodo.23488368](https://doi.org/10.5281/zenodo.23488368) (published; 1.0.0 is [10.5281/zenodo.23480842](https://doi.org/10.5281/zenodo.23480842)).*
 
 ## The answer
 
@@ -58,7 +58,7 @@ Evidence: [what is identified](https://reports.learningdesignalliance.org/learni
 
 - [Full report](https://reports.learningdesignalliance.org/learning-graph-budget-2026/1.0.1/report/index.html)
 - [Article](https://github.com/Learning-Design-Alliance/learning-research-reports/blob/main/learning-graph-budget-2026/1.0.1/article/what-learner-records-can-say-about-a-prerequisite-edge.md)
-- DOI: [10.5281/zenodo.23488368](https://doi.org/10.5281/zenodo.23488368) (1.0.1, reserved); [10.5281/zenodo.23480842](https://doi.org/10.5281/zenodo.23480842) (1.0.0)
+- DOI: [10.5281/zenodo.23488368](https://doi.org/10.5281/zenodo.23488368) (1.0.1, published); [10.5281/zenodo.23480842](https://doi.org/10.5281/zenodo.23480842) (1.0.0)
 - Wiki claims:
   [Learner records rarely establish that a prerequisite edge exists](https://wiki.learningdesignalliance.org/claims/observation-cannot-establish-a-prerequisite-edge/);
   [The orientation statistic read from learner records is a difficulty sort](https://wiki.learningdesignalliance.org/claims/observation-orients-edges-only-where-prerequisites-gate/)
