@@ -1,6 +1,6 @@
 # Brief: Telling an AI grader about the student changes the grade
 
-*Source: release ai-grader-reliability-2026, version 1.0.1, 2026-10-19; DOI [10.5281/zenodo.23488287](https://doi.org/10.5281/zenodo.23488287) (reserved; 1.0.0 is [10.5281/zenodo.23480844](https://doi.org/10.5281/zenodo.23480844)).*
+*Source: release ai-grader-reliability-2026, version 1.0.1, 2026-10-19; DOI [10.5281/zenodo.23488287](https://doi.org/10.5281/zenodo.23488287) (published; 1.0.0 is [10.5281/zenodo.23480844](https://doi.org/10.5281/zenodo.23480844)).*
 
 ## The answer
 
@@ -54,7 +54,7 @@ Evidence: [demographic groups](https://reports.learningdesignalliance.org/ai-gra
 
 - [Full report](https://reports.learningdesignalliance.org/ai-grader-reliability-2026/1.0.1/report/index.html)
 - [Article](https://github.com/Learning-Design-Alliance/learning-research-reports/blob/main/ai-grader-reliability-2026/1.0.1/article/attainment-bias-in-llm-grading.md)
-- DOI: [10.5281/zenodo.23488287](https://doi.org/10.5281/zenodo.23488287) (1.0.1, reserved); [10.5281/zenodo.23480844](https://doi.org/10.5281/zenodo.23480844) (1.0.0)
+- DOI: [10.5281/zenodo.23488287](https://doi.org/10.5281/zenodo.23488287) (1.0.1, published); [10.5281/zenodo.23480844](https://doi.org/10.5281/zenodo.23480844) (1.0.0)
 - Wiki claims:
   [Showing an LLM grader a learner's prior performance biases the grade](https://wiki.learningdesignalliance.org/claims/showing-a-grader-a-learners-prior-performance-biases-the-grade/);
   [Graded exemplars shift an LLM grader by the level they are marked at](https://wiki.learningdesignalliance.org/claims/graded-exemplars-shift-an-llm-grader-by-the-level-they-are-marked-at/);
