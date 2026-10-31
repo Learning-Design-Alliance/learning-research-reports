@@ -23,8 +23,11 @@
   "doi": "10.5281/zenodo.23825875",
   "registrar": "zenodo",
   "deposition": 23825875,
-  "state": "reserved",
-  "reserved_at": "2026-10-31"
+  "state": "published",
+  "reserved_at": "2026-10-31",
+  "published_at": "2026-10-30",
+  "published_by": "human:david-porcaro",
+  "zip_sha256": "cf3cd2fb20ac3f71921d5fae5c60883cc82bd5a9de8f94c4536456e5d3ffb17e"
  },
  "learning-graph-budget-2026/1.0.0": {
   "doi": "10.5281/zenodo.23480842",
