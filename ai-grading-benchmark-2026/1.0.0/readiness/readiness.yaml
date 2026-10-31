@@ -1,0 +1,42 @@
+# Publication readiness for ai-grading-benchmark-2026 1.0.0 (the benchmark paper,
+# research/article/ai-grading-benchmark.md). Skeleton 2026-10-26: method drafted, literature review running,
+# results pending. See docs/specs/PUBLICATION-READINESS.md. Agents never sign explain_back or waive a review.
+release: ai-grading-benchmark-2026
+version: 1.0.0
+disclosure: {section: "AI use", present: true}   # written by the maintainer, 2026-10-30; placed verbatim by an agent
+explain_back: {signed_by: "human:david-porcaro", date: 2026-10-30}
+cooling_off:
+  # 2026-10-27: the provenance build corrected Section 5.1's code ceiling (0.818 -> 0.815; only GLM 5.3,
+  # on code, left answers ungraded, so the stated ranges 0.562-0.573 and 0.816-0.818 were wrong) and
+  # Section 5.3's slip-cost range (1.600 from Claude Haiku 5.5 -> 1.550 from Qwen3 235B; the difference
+  # 1.815 -> 1.865, also in the Answer to RQ3). No verdict changed. No audit has run yet.
+  # 2026-10-27 (later): five follow-up studies changed headline verdicts. RQ3: the scored feedback measure is now
+  # the wrong-grade test (all 22 models TONE FOLLOWS THE TOLD GRADE; replaces "nine of 22 have a halo"), and the
+  # whole-task order of every model table follows the rebuilt board. RQ2: the guard sentence's harm is confirmed for
+  # Gemma 3 4B and Gemma 3 27B only (Qwen3 235B GUARD MAKES IT LESS GAMEABLE over three tasks; Olmo UNMEASURED); the
+  # controlled precision study reads PRECISION ALONE NOT SHOWN TO RAISE GAMING; the ranking across prompts reads
+  # RANKING WITHIN RE-ASK NOISE. RQ5: surface features carry part of the disability gap; reverse regression UNMEASURED.
+  # 2026-10-28: Olmo 3.1 32B re-tested self-hosted (guard-retest CHANGE 2): GUARD MAKES IT MORE GAMEABLE, +9.2%
+  # [+7.9%, +10.6%]; the Answer to RQ2 now names three models made more gameable, not two.
+  # 2026-10-28 (corrections-1.md): the scope audit's 22 open findings and the precedence sweep's 8 OVERCLAIMED items.
+  # Headline sentences reworded in the abstract, every Answer, the Discussion and the Conclusion (zero retention,
+  # floor coverage, essays read by intervals, pushback against its registered estimand, tone measured by a word
+  # rule, notes moving the grade "by more than 5%", host and precision scope, fairness answers). No number changed
+  # except additions; no verdict changed.
+  last_headline_correction: 2026-10-28
+  # 2026-10-28 (corrections-2): the abstract's floor-check sentence and the Answers to RQ3 and RQ4 (how the 5% flag
+  # and Haiku's text-note gain are read) changed wording; no number or verdict changed.
+  # 2026-10-28 (corrections-4): the abstract's floor-check sentence now names five unchecked sets (the board's
+  # feedback columns added) and drops "pre-registered" from "study verdict"; no number or verdict changed.
+  # 2026-10-28 (corrections-5): the abstract's floor-check sentence now names six unchecked sets (the setups study's
+  # held-out note added); no number or verdict changed.
+  last_headline_correction_commit: 9555bbdf   # audits must contain it
+scope_audit: {date: 2026-10-30, by: agent, report: scope-audit-29.md, open_findings: 0, audited_commit: e5fe22252e74cfcb585b3f78eaadf7627c945434}   # corrections-28 (abstract sentence; the maintainer's AI use placed); after it only the maintainer's typo fix in AI use and the status line changed. Earlier: scope-audit-28.md at edb8c9b1, scope-audit-19.md at 8eb9049f
+reproduction: {date: 2026-10-29, by: agent, report: reproduction-5.md, unexplained_mismatches: 0, audited_commit: 811561a13d8a2c5187a93c62c871f300e1a43484}   # at code pin bd3165f3 (Voxtral retry); contains the last headline correction 9555bbdf; later corrections (17-18) changed wording only. Earlier: reproduction-4.md at 606b6be6, old pin 2b71626e
+precedence: {date: 2026-10-28, by: agent, report: precedence.md, overclaimed_open: 0, reviewed_commit: b41b91e82585626a9184ca41d79a354be18c6b41}   # independent sweep found 8 (B1, B3, B5, B8, B10, B21, B25, B30); all eight credited in the article by corrections-1.md
+specialist_reviews:
+  # Advisory, not blocking (docs/specs/PUBLICATION-READINESS.md). Named by scope-audit.md; only the maintainer may waive.
+  - {claim: "fairness answers: economic status within a 0.15 equivalence band of a second rater; Black and Hispanic against White learners; the disability gap shared with the adjudicated grade and what surface features carry (Answer to RQ5; Section 5.5; scope audit H26 to H29)", role: psychometrician, status: requested}
+  - {claim: "statistics reported without a planted-effect check (standard checks, pushback split, handwriting probes, release comparison) and whether to demote them to descriptive; the pushback estimand against a prompted control; the descriptive S/W ratio; the fold verdicts resting on the first fine-tune study's check (scope audit H2, H17, H20, N6)", role: statistician, status: requested}
+  - {claim: "host precision and gaming: whether mostly 4-bit hosting bears on the gaming flags of GLM 5.3 and DeepSeek V4 Pro (GLM is flagged on every task); the controlled precision study on two dense models (scope audit H11, H14)", role: ml-systems (serving and quantization), status: requested}
+  - {claim: "the tone rule, validated on tutoring replies, applied to grading feedback under mirrored grades (scope audit H19)", role: nlp-feedback-measurement, status: requested}

@@ -1,0 +1,106 @@
+{
+ "release": "ai-grading-benchmark-2026",
+ "version": "1.0.0",
+ "lifted_by": "human:david-porcaro",
+ "lifted_at": "2026-10-31T00:37:44Z",
+ "source_commit": "da5e8f2a1f7822903662ba88781ff0648ab7d23c",
+ "files": [
+  {
+   "path": "1.0.0.yaml",
+   "sha256": "db716c40c07757517f4c9265e7e2bc0dc4b8a1c755e7ad421c2935205fa667ee"
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "adf45b88654a72c64c4d26ee02ea9458e7f88975f98d39ff2cb99d9b8da1a9c1"
+  },
+  {
+   "path": "article/ai-grading-benchmark.md",
+   "sha256": "f1862e7360953434898aeeabbd590576c78f0a90a62fc6df1fda88288c1aafdb"
+  },
+  {
+   "path": "manifests/benchmark-outputs.sha256",
+   "sha256": "b0b1f515a387c9b1156e23af74f61db603525177e779ce042a15ad245e19d159"
+  },
+  {
+   "path": "manifests/ellipse.sha256",
+   "sha256": "902437c2217831f83b5e14a4aa1e8bb85dd9a2a297f7f17e238fac4ae40cf39d"
+  },
+  {
+   "path": "manifests/fleurs-dev-18.sha256",
+   "sha256": "2ecd71c37edfed4ea8de6083d717d5053a6a45472d09ce67c3e39218f516ef1b"
+  },
+  {
+   "path": "notebooks/rq1-agreement.ipynb",
+   "sha256": "ca71e29cb56c36ee91e12d5dd8ddd6352d776c2725935564a5964131ccb9a91a"
+  },
+  {
+   "path": "notebooks/rq2-robustness.ipynb",
+   "sha256": "4601e0328cf91fb59256cdb11bb536aa8541de9bb67001509a3e3d4cb7694939"
+  },
+  {
+   "path": "notebooks/rq3-beyond-the-grade.ipynb",
+   "sha256": "88e6ec6b43220ca51fb3ed042b07430da188d0f61b144ee99825313e3c2193e4"
+  },
+  {
+   "path": "notebooks/rq4-recordings.ipynb",
+   "sha256": "a7fe19e348a5e692f66ef12384a2a74232a211f97fb0b29f26276588ca1d5fa2"
+  },
+  {
+   "path": "notebooks/rq5-fairness-stability.ipynb",
+   "sha256": "dfdfe1371866fb566dc07a06b1a4956212aebb3d8e339df4f9db3701650fa467"
+  },
+  {
+   "path": "notebooks/rq6-footprint.ipynb",
+   "sha256": "53136fc7cc2104ccf85b97b672fe81f6e73ab8abf6ffc7017ca134133a52378d"
+  },
+  {
+   "path": "preregistration-inventory.md",
+   "sha256": "06031747a5ef71b6c35fbca798c9080da42b6705f480a17e9faf520f517cd18a"
+  },
+  {
+   "path": "readiness/readiness.yaml",
+   "sha256": "6fc231056d162306aba4c696b0622bcc7855c85b05698047d431d8d24cd0b7f0"
+  },
+  {
+   "path": "readiness/reproduction-5.md",
+   "sha256": "f276a5af5e6775b97176c3bd1147b86627387b9cab7e8861bff41a0b4254c356"
+  },
+  {
+   "path": "readiness/scope-audit-29.md",
+   "sha256": "78e32a6e736c20786bc64e51dc10d455bf57c30b492d47ea183458bbc7c2b385"
+  },
+  {
+   "path": "report/index.html",
+   "sha256": "05c4a2820fcfc0ccd87290958e4ad743e1afef6b5dd513f2ebd7c290e92e285d"
+  },
+  {
+   "path": "report/rq1-agreement.ipynb",
+   "sha256": "ca71e29cb56c36ee91e12d5dd8ddd6352d776c2725935564a5964131ccb9a91a"
+  },
+  {
+   "path": "report/rq2-robustness.ipynb",
+   "sha256": "4601e0328cf91fb59256cdb11bb536aa8541de9bb67001509a3e3d4cb7694939"
+  },
+  {
+   "path": "report/rq3-beyond-the-grade.ipynb",
+   "sha256": "88e6ec6b43220ca51fb3ed042b07430da188d0f61b144ee99825313e3c2193e4"
+  },
+  {
+   "path": "report/rq4-recordings.ipynb",
+   "sha256": "a7fe19e348a5e692f66ef12384a2a74232a211f97fb0b29f26276588ca1d5fa2"
+  },
+  {
+   "path": "report/rq5-fairness-stability.ipynb",
+   "sha256": "dfdfe1371866fb566dc07a06b1a4956212aebb3d8e339df4f9db3701650fa467"
+  },
+  {
+   "path": "report/rq6-footprint.ipynb",
+   "sha256": "53136fc7cc2104ccf85b97b672fe81f6e73ab8abf6ffc7017ca134133a52378d"
+  },
+  {
+   "path": "reproduce.py",
+   "sha256": "7c3ab7b450fe463cd9f447f192a3f69aa48d5767376d241cbf3d2ca066e0dbdc"
+  }
+ ],
+ "wiki": []
+}

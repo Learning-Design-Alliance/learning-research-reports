@@ -1,0 +1,938 @@
+# Release record for the AI grading benchmark paper (research/article/ai-grading-benchmark.md).
+# Filled 2026-10-28 from the finished draft: datasets (location, license, sha256), analyses (the benchmark
+# repository at one pinned commit, the maintainer's decision of 2026-10-26: the code is the benchmark's public
+# repository at a pinned commit, not a copied package; each analysis's exact invocation; whether it re-runs
+# offline), interpretation and limitations from the article. `evidence:` waits for the observation records.
+# Nothing has been released, so this file stays at 1.0.0 and is corrected in place until its DOI is published.
+schema_version: 1
+
+release:
+  id: ai-grading-benchmark-2026
+  version: 1.0.0
+  title: >-
+    Beyond agreement: a benchmark of how language models grade student work, and how they fail
+  # The QUESTION, not the finding.
+  question: >-
+    How closely do prompted language models agree with expert raters on student work, against the raters'
+    own agreement and against trained scorers; can a student move a model's grade without improving the
+    work, and do the grader's settings change that; does a model hold its grade under pushback, read the
+    working and write feedback independent of a grade it was told; do speech, handwriting and video graders
+    grade the recording itself; do models grade groups of students differently, or change between releases;
+    and what does a grading cost in energy, carbon and water?
+  # The date of this draft. Set to the date of the lift when the release is published.
+  released_at: 2026-10-28
+
+research_design:
+  family: other
+  detail: >-
+    A benchmark: fixed public corpora with expert grades, graded by prompted language models through one
+    plain prompt, under zero data retention for every model but one (Claude Fable 5.1, run only on public
+    corpora under its maker's 30-day retention), and probed with altered versions of the same work whose sound
+    response is known in advance. Every probe and every study verdict, except the six sets of statistics named in
+    the preregistration note, was checked on simulated graders with planted effects. Each study is pre-registered,
+    in its script or a PREREG.md file, with its later changes numbered and their reasons given; many of them were
+    made after some of that study's results had been read (the preregistration note says of what kinds), and the
+    board's unnumbered scoring changes are listed by commit in the preregistration note.
+  preregistration:
+    registered: true
+    note: >-
+      Per study (30 studies; the comparison of releases is exploratory and has none): each study opens with its
+      pre-registration, in its script's docstring or, for speech, handwriting and video, in a PREREG.md file,
+      committed before any result of its design was read (for the studies that reanalyse existing runs, before
+      the script read them), and numbers its later changes with their reasons. The speech, handwriting and
+      video pre-registrations followed a smoke run of two cases or three gradings, which is not part of a result;
+      perception's was written first, and its design was changed after a one-model pilot (its CHANGE 1), before any
+      call of the design it ran. Every study states a threshold and verdict wording in advance except four, which
+      state what they report but no verdict: the trained scorers (baselines/baselines.py, expectations), the
+      feedback board's columns (feedback-board/fb.py), speech and handwriting (their PREREG.md: probes and what a
+      sound grader does). The board stated its probe battery and detection thresholds in advance; its
+      disqualifying flags were added after its first rows (d04c148f, below). Many numbered changes, in most studies, were made after some of that study's results had
+      been read. The largest group only added models or graders (the maintainer's decisions on coverage, with no
+      rule changed); others added an arm or run, fixed a bug, added a reported statistic, or changed what is scored
+      or how a measure is read (for example feedback-board/fb.py CHANGE 1, which left the gives-away share out of
+      the feedback strand's score after the results). The board's own scoring also changed after its results
+      without a numbered change, each in the repository's commit history: the whole-task score, its strand
+      weights and rank intervals, and the disqualifying flags with the rule that a flagged model ranks below every
+      unflagged one (2026-10-24, d04c148f); the reading-the-working and pushback strands added to it (2026-10-25,
+      bef2041b); the false-discovery correction and per-task scores (2026-10-25, 09ef6229; also dated in
+      leaderboard.py's docstring); and the feedback strand twice (2026-10-27: the halo scored by its distance from 0,
+      c23ba3aa, then replaced by the wrong-grade test, 60a885c8; both also rows in docs/CORRECTIONS.md). The board's
+      battery was fixed in leaderboard.py before the board's rows were built. Six sets of
+      statistics were not checked on simulated graders (the article's Section 4.6): the standard checks of
+      automated scoring, the setups study's held-out note (a condition of its FIXED verdict), the progressive and
+      regressive split of pushback, the board's feedback columns (halo and gives-away share), the handwriting
+      probes, and the comparison between model releases (exploratory, point estimates); the feedback study's ratio
+      S/W is descriptive, with no interval, and the video verdict's check is three planted graders, one simulated
+      dataset each. The inventory, with each study's pre-registration, check and classified changes and the board's
+      unnumbered changes, is preregistration-inventory.md beside this file (artifact `preregistration-inventory`).
+
+no_protocol_reason: >-
+  A secondary analysis of public, de-identified corpora released by others under open licenses (and one
+  corpus under a limited evaluation license, Casual Conversations v2). No data were collected from people for
+  this work, so no data-collection protocol of the Learning Design Alliance governs it; each corpus's own
+  license is recorded under `datasets:`.
+
+no_study_reason: >-
+  No study plan object was written in this wiki. Each analysis below is a study in the benchmark repository whose
+  pre-registration (in its script's docstring, or for speech, handwriting and video in a PREREG.md file) states its
+  question and statistic, its threshold and verdict wording where it has them (every study but the trained
+  scorers, the feedback board's columns, speech and handwriting), and its planted-effect check where Section 4.6 of
+  the article says it has one; it was committed before any result of its design was read, and its later changes are
+  numbered in the same file. The board's battery was fixed in leaderboard.py before the board's rows were built; its
+  unnumbered scoring changes are listed by commit in the preregistration note. `prespecified` says which.
+
+# THE CODE. Every analysis's code is the AI grading benchmark repository at one commit (the maintainer's
+# decision, 2026-10-26: the code is the benchmark's public repository at a pinned commit, not a copied package).
+# Paths are relative to that repository; the paper writes them `code/<path>`. The repository is private until
+# the maintainer makes it public; it is to be public at this commit before the release is lifted.
+#
+# WHAT CAN BE RE-RUN FROM THIS RECORD. `rerun:` on each analysis says:
+#   offline   no model call: run with the commands given, on the corpora listed (fetched and hash-checked),
+#             and the committed outputs; reproduce.py beside this file runs these and compares byte for byte.
+#   api       the grading calls go to hosted models (zero data retention, with the exceptions in each entry); the replies are not published
+#             (they quote the student work), so the analysis step cannot be re-run from the release. Its
+#             committed out/ files are what the paper's numbers are computed from, and the report recomputes
+#             every linked number from them.
+#   gpu       as api, but the model was served on a rented GPU (vLLM); the serving recipe is in the script.
+# The models' grades on the board's items ARE published (submissions/, grades only), which is why the board,
+# its standard checks and its length analysis re-run offline.
+
+datasets:
+  - id: mohler-asag
+    title: >-
+      Mohler ASAG: data-structures short answers, each graded by two raters (Mohler, Bunescu and Mihalcea 2011),
+      as converted by nkazi/MohlerASAG on Hugging Face
+    grain: one student answer to one question, with two independent rater scores (0-5)
+    format: parquet
+    rows: 1727
+    location:
+      kind: url
+      ref: "https://huggingface.co/datasets/nkazi/MohlerASAG/resolve/dac06732b42d01a5169f543f6d272f1476cced3e/data/cleaned-oe-00001.parquet"
+    sha256: f2aff37d7a3c6e6a7267afe0ab29ca4ebfbf90285b8eea77b08da9e1217376b0
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY 4.0 (dataset card). Pinned and hash-checked by fetch_data.py; its cases file (mohler.jsonl, 1,727
+      answers) is pinned by leaderboard-cases.json. Short-answer task, pushback, the wrong-grade feedback test.
+
+  - id: harmogen-r
+    title: >-
+      HARMOGEN-R: student programs graded by instructors against a rubric (Mendonça, Quintal, Mendonça and Baras
+      2026), version 2.0
+    grain: one student program, with two instructor grades
+    format: other
+    rows: 129
+    location:
+      kind: doi
+      ref: "10.5281/zenodo.19534458"
+    sha256: d83ee9e6ee12adbfe127eed5f44fbacc996b2d3acdf013a9ec19ce0db26f0206
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY 4.0. File harmogenr_dataset_v2.zip, hash-checked by fetch_data.py; the code task uses its 129
+      programs (harmogen-code.jsonl, pinned by leaderboard-cases.json).
+
+  - id: asap2
+    title: >-
+      ASAP 2.0: persuasive and source-based essays from grades 6 to 10, one adjudicated grade each (Crossley,
+      Baffour, Burleigh and King 2025)
+    grain: one essay with its adjudicated holistic score (1-6) and the student's demographic fields
+    format: csv
+    rows: 24728
+    location:
+      kind: url
+      ref: "https://www.kaggle.com/datasets/lburleigh/asap-2-0 (version 8; download via the Kaggle API, kaggle.com/api/v1/datasets/download/lburleigh/asap-2-0)"
+    sha256: afef0d8b2b578ceff6bc0ef6286f37fd5d8da260d97ad2567c6b96cdd75cd964
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY 4.0. The hash is of the downloaded asap2.zip, checked by fetch_data.py. Essay task, the disability
+      comparison, the essay fine-tunes (their split is committed as essays-finetune/out/split.json).
+
+  - id: vtg
+    title: >-
+      VtG: 200 mathematics word problems with stepwise solutions and the teacher-marked first wrong step (Daheim
+      et al. 2024), built from MathDial (Macina et al. 2023) and GSM8K (Cobbe et al. 2021)
+    grain: one solution to one problem, built into four versions (right or wrong working, right or wrong answer)
+    format: json
+    rows: 800
+    location:
+      kind: url
+      ref: "https://raw.githubusercontent.com/eth-lre/verify-then-generate/161019e6cc29968bb9a9ae7f261daf63f00e6fc7/dataset/dataset.json"
+    sha256: 335351285ae4b58176a671e6590d5ca29448df98f6b59c2ab8e5598cc8106cbf
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY-SA 4.0 (the stricter of the two licenses the repository shows). 800 is the number of cells
+      maths-process/process.py builds (200 problems x 4 versions, seed fixed); the built file is pinned by
+      leaderboard-cases.json. MathDial and GSM8K are its sources, not separate inputs.
+
+  - id: ellipse
+    title: >-
+      ELLIPSE: English learners' essays with analytic scores and each rater's scores before adjudication
+      (Crossley et al. 2023)
+    grain: one essay with two raters' scores and the learner's demographic fields
+    format: csv
+    location:
+      kind: git
+      ref: "https://github.com/scrosseye/ellipse-corpus at dc3b8f0b3b4332fc9f64302c4ccfc4ed582f4b43"
+    sha256: 902437c2217831f83b5e14a4aa1e8bb85dd9a2a297f7f17e238fac4ae40cf39d
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY-NC-SA 4.0. Three files are read (the raw-rater zip, password in the repository's README, and the
+      final train and test files); the sha256 above is of manifests/ellipse.sha256 beside this file, which lists
+      each file's sha256 (check with `sha256sum -c`). Fairness comparison between groups (fairness-ellipse/).
+
+  - id: speechocean762
+    title: >-
+      speechocean762: English sentences read aloud by Mandarin-L1 speakers, each scored by five experts (Zhang et
+      al. 2021), OpenSLR resource 101
+    grain: one recorded sentence with five experts' pronunciation scores (0-10)
+    format: audio
+    rows: 5000
+    location:
+      kind: url
+      ref: "https://www.openslr.org/resources/101/speechocean762.tar.gz"
+    sha256: 876c34b828c2ebcc35ba2ff1ba5947d50e6b0162fc4a4af91db0942422b3bdd5
+    identifiability: identified
+    access: raw
+    note: >-
+      CC BY 4.0. Hash of the archive as downloaded on 2026-10-28 (MD5 4d7f795bc3d60a6f80c1eb46a03a53c0); the runs
+      were made from an earlier download of the same URL, which recorded no hash. Recordings of voices, so
+      treated as identified. Speech task (speech/).
+
+  - id: fleurs-dev-18
+    title: >-
+      FLEURS dev split, 18 languages: the same sentences read aloud in each language (Conneau et al. 2023)
+    grain: one recorded sentence in one language, with its transcript
+    format: audio
+    location:
+      kind: url
+      ref: "https://huggingface.co/datasets/google/fleurs at revision 70bb2e84b976b7e960aa89f1c648e09c59f894dd (data/<lang>/dev.tsv and data/<lang>/audio/dev.tar.gz)"
+    sha256: 2ecd71c37edfed4ea8de6083d717d5053a6a45472d09ce67c3e39218f516ef1b
+    identifiability: identified
+    access: raw
+    note: >-
+      CC BY 4.0. The sha256 above is of manifests/fleurs-dev-18.sha256 beside this file, which lists the 36 files'
+      sha256 at that revision (the audio archives' from Hugging Face's LFS records, the transcripts computed). The
+      study fetched from `main`, whose last change (2026-05-15) predates the runs, so `main` then was this
+      revision. Languages study (language/).
+
+  - id: check-mat
+    title: >-
+      CHECK-MAT (EGE Math Solutions Assessment Benchmark): scanned handwritten mathematics solutions with an
+      expert's points (Khrulev 2025)
+    grain: one scanned solution with one expert grade
+    format: parquet
+    rows: 122
+    location:
+      kind: url
+      ref: "https://huggingface.co/datasets/Karifannaa/EGE_Math_Solutions_Assessment_Benchmark at revision 79ae06ea76889fc14337af64b9b011b229644fb6, data/train-00000-of-00001.parquet"
+    sha256: fabac73fd9387a53ca29732035ea24d350acec170a9c36bb56ff97afb10331d4
+    identifiability: deidentified
+    access: raw
+    note: >-
+      MIT per the paper; "other" on the dataset card. Hash from Hugging Face's LFS record of the file at that
+      revision, whose last change (2026-08-13) predates the runs. Handwriting task (images/).
+
+  - id: lasana
+    title: >-
+      LASANA: laparoscopic training videos with skill ratings by three experts and error labels (Funke et al.
+      2026), TU Dresden OPARA
+    grain: one recorded training trial (stereo video) with three raters' skill scores
+    format: video
+    location:
+      kind: doi
+      ref: "10.25532/OPARA-1046"
+    sha256: 7de4cf255998b6ca0a15a0285d7ad0ffc96c5955a30f29aa75441c3443ecf9b5
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY 4.0. The sha256 is of Annotation.zip (OPARA MD5 2339e7cd12ba6291e9162119ba068439, matched). The 100
+      test-split recordings are read by range request out of the deposit's eight video zips by
+      video/fetch_lasana.py, which names each zip's bitstream id; OPARA records each zip's MD5. The videos show
+      instruments and a training box, not faces. Video tasks (video/, media/).
+
+  - id: mrbench
+    title: >-
+      MRBench: tutor replies to students' mathematics mistakes, labeled on eight pedagogical dimensions by trained
+      annotators (Maurya et al. 2025)
+    grain: one tutor reply with its annotation labels
+    format: json
+    rows: 1655
+    location:
+      kind: url
+      ref: "https://raw.githubusercontent.com/kaushal0494/UnifyingAITutorEvaluation/bbef521ddb875f2cc8a5ee798f4066965a7cfd8a/MRBench/MRBench_V2.json"
+    sha256: a8792225075533d15c23e1c903d0c649f19708ee93f5c3d8267eaa6ab623aac1
+    identifiability: deidentified
+    access: raw
+    note: >-
+      CC BY-SA 4.0. MD5 c6dde7995deb0faeebb75af4f17bd183, matching the benchmark's record of the file it read.
+      The validation of the feedback measures (feedback-validity/).
+
+  - id: ccv2
+    title: >-
+      Casual Conversations v2: consented videos of people with self-reported and annotated skin tone, lighting and
+      other labels (Porgali et al. 2023)
+    grain: one video of one consenting participant, with its labels
+    format: video
+    location:
+      kind: url
+      ref: "Sign in on ai.meta.com/datasets/casual-conversations-v2-dataset and accept the license; Meta then issues personal, expiring download links"
+    sha256: 4da3c829918bd8fff823c00e404afb5ad1fa0f58cf9712ca045afbf19d40eca5
+    identifiability: identified
+    access: raw
+    note: >-
+      Limited license: evaluating models on the labels is permitted (clause 1(b)); no derivative works (6.1), no
+      disclosure outside 1(b), deletion on request. The sha256 is of the annotations archive (CCv2_annotations.zip,
+      MD5 81e412575d7f0b9ffe2f0ef8f64d6351). The sampled videos were read by range request out of Meta's video
+      archives through the personal links, used unmodified and deleted after the run; no per-video hash is
+      recorded. Perception audit (perception/).
+
+  - id: benchmark-outputs
+    title: >-
+      The benchmark's committed outputs at the pinned commit: each model's grades on the board's items
+      (submissions/, grades only), every study's aggregate outputs (out/ folders) and docs/energy.json
+    grain: one file; submissions hold one grade per model, item and probe, with no student text
+    format: json
+    rows: 479
+    location:
+      kind: git
+      ref: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark at bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107 (submissions/, out/, <study>/out/)"
+    sha256: b0b1f515a387c9b1156e23af74f61db603525177e779ce042a15ad245e19d159
+    identifiability: aggregate
+    access: derived
+    derived_from: [mohler-asag, harmogen-r, asap2, vtg, ellipse, speechocean762, fleurs-dev-18, check-mat, lasana, mrbench, ccv2]
+    note: >-
+      The sha256 above is of manifests/benchmark-outputs.sha256 beside this file: the sha256 of each of the 479
+      committed outputs at the pinned commit, the files under submissions/, out/ and <study>/out/ and
+      docs/energy.json (reproduce.py checks them). The
+      paper's numbers are computed from these files; the report recomputes every number it links from them.
+
+analyses:
+  - id: board-fetch
+    title: Fetch and hash-check the board's corpora and build the pinned cases files
+    prespecified: true
+    rerun: offline
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: fetch_data.py}
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with pyarrow. `python3 fetch_data.py --dir DATA` downloads the four sources,
+        checks each against its pinned sha256 and each built cases file against leaderboard-cases.json.
+    invocation: ["python3 fetch_data.py --dir DATA"]
+    inputs: [mohler-asag, harmogen-r, asap2, vtg]
+    ai_processing: false
+    results: ["4.2 (data)"]
+
+  - id: board
+    title: >-
+      The board: agreement, decision agreement, probes and flags per model and task, from the committed grades
+    prespecified: true
+    rerun: offline
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: leaderboard.py}
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later, standard library. Reads submissions/ (the grades each model gave, exported from its
+        runs by `leaderboard.py export`) and the cases files built by board-fetch; bootstrap intervals with a fixed
+        seed. The grading calls themselves were made with bench.py through OpenRouter with zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only),
+        or self-hosted on vLLM for Olmo 3.1 32B; their replies are not published.
+    invocation:
+      - "python3 leaderboard.py build submissions/ --cases-dir DATA            # writes out/leaderboard.json"
+      - "python3 leaderboard.py overall out/leaderboard.json --feedback feedback-board/out/feedback-board.json --discordant feedback-discordant/out/discordant.json --extra essays-genft/out/board_rows.json --out out/overall.json"
+      - "python3 leaderboard.py scoring out/leaderboard.json --extra out/baselines.json out/finetune_extra.json essays-genft/out/board_rows.json   # writes out/scoring.json"
+    committed_outputs: [out/leaderboard.json, out/public/leaderboard.json, out/overall.json, out/scoring.json]
+    note: >-
+      out/leaderboard.json is committed as the file the paper's report read. It was built on 2026-10-26 by earlier
+      code (its code_sha256 is 33d6241e…; the pinned code's is 7cb20201…). A rebuild at the pinned commit matches it on
+      every result field and differs only in its build time and that code hash, which reproduce.py leaves out of the
+      comparison.
+    inputs: [mohler-asag, harmogen-r, asap2, benchmark-outputs]
+    ai_processing: true
+    results: ["5.1 (Table 5.1)", "5.2 (Table 5.2, flags)", "model-table order throughout"]
+
+  - id: standard-checks
+    title: The three standard checks of automated scoring, and the progressive and regressive split of pushback
+    prespecified: true
+    rerun: offline
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: analyses/standard_checks.py}
+    environment: {kind: process, detail: "Python 3.11 or later, standard library; reads submissions/ and DATA. The thresholds are the field's, fixed before any submission was read; neither the checks nor the pushback split was checked on simulated graders."}
+    invocation: ["python3 analyses/standard_checks.py --cases-dir DATA --out out/standard_checks.json"]
+    committed_outputs: [out/standard_checks.json]
+    inputs: [mohler-asag, harmogen-r, asap2, benchmark-outputs]
+    ai_processing: true
+    results: ["5.1 (standardized mean difference)", "5.3 (pushback split)"]
+
+  - id: length-partial
+    title: Length beside agreement on the board's tasks, and a length-only scorer
+    prespecified: true
+    rerun: offline
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: analyses/length_partial.py}
+    environment: {kind: process, detail: "Python 3.11 or later, standard library; reads submissions/ and DATA."}
+    invocation: ["python3 analyses/length_partial.py --cases-dir DATA --out out/length_partial.json"]
+    committed_outputs: [out/length_partial.json]
+    inputs: [mohler-asag, harmogen-r, asap2, benchmark-outputs]
+    ai_processing: true
+    results: ["5.1"]
+
+  - id: trained-scorers
+    title: Trained scorers on the board's tasks, the CPU ones (length only, word features, reference similarity, sentence embeddings)
+    prespecified: true
+    rerun: offline
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: baselines/baselines.py}
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with scikit-learn and sentence-transformers (all-MiniLM-L6-v2 at the revision the
+        script pins). `--kinds` recomputes these rows and keeps the DeBERTa rows already in out/baselines.json; it
+        writes the CPU rows after them, so the row order changes and the comparison is row by row.
+    invocation: ["python3 baselines/baselines.py --cases-dir DATA --out out/baselines.json --kinds length tfidf-ridge reference-similarity encoder-ridge"]
+    committed_outputs: [out/baselines.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.1 (trained scorers)"]
+
+  - id: trained-scorers-deberta
+    title: The DeBERTa-v3 trained scorer on the board's tasks
+    prespecified: true
+    rerun: gpu
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: baselines/baselines.py}
+    environment:
+      kind: process
+      detail: >-
+        transformers and one GPU (trained on a rented GPU with gpu/pod.py); microsoft/deberta-v3-base at the revision,
+        schedule and seed the script's docstring gives. Run without `--kinds`, the script trains every scorer,
+        DeBERTa included, and so needs the GPU.
+    invocation: ["python3 baselines/baselines.py --cases-dir DATA --out out/baselines.json --kinds deberta-ft"]
+    committed_outputs: [out/baselines.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.1 (the fine-tuned scorer, QWK 0.809 on essays)"]
+
+  - id: essays-finetune
+    title: Grade-only essay fine-tunes (DeBERTa-v3, Qwen3 4B and Gemma 4 26B A4B regression heads) against prompted models
+    prespecified: true
+    rerun: gpu
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: essays-finetune/study.py}
+    environment:
+      kind: process
+      detail: >-
+        Training on one rented A100 80GB (essays-finetune/train.py; recipe and seeds in the docstring); the
+        prompted arms through OpenRouter with zero data retention. The split is committed (out/split.json); the
+        per-essay predictions are not.
+    invocation:
+      - "python3 essays-finetune/study.py split --corpus DATA/asap2.jsonl --work WORK"
+      - "python3 essays-finetune/study.py floor --corpus DATA/asap2.jsonl"
+      - "python3 essays-finetune/study.py analyse --corpus DATA/asap2.jsonl --work WORK"
+      - "python3 essays-finetune/study.py change1 --corpus DATA/asap2.jsonl --work WORK"
+    committed_outputs: [essays-finetune/out/essays-finetune.json, essays-finetune/out/essays-finetune-change1.json, essays-finetune/out/floor.json, essays-finetune/out/split.json, essays-finetune/out/board_rows.json]
+    inputs: [asap2]
+    ai_processing: true
+    results: ["5.1 (essay fine-tunes)"]
+
+  - id: essays-genft
+    title: >-
+      Generative essay fine-tune of Gemma 4 26B A4B through the whole battery, against the same model untrained,
+      and on assignments it never saw
+    prespecified: true
+    rerun: gpu
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: essays-genft/study.py}
+    environment:
+      kind: process
+      detail: >-
+        LoRA training and vLLM v0.32.0 serving on rented A100 80GB pods (essays-genft/driver.py, train_gen.py,
+        evaluate.py; pinned model revision and hyperparameters in the docstring). No API calls. Only `check-split`
+        runs from the release; `floor` reads the unpublished hosted board run of Gemma 4 26B A4B
+        (runs/lb-<task>-google_gemma-4-26b-a4b-it/calls.jsonl, GBENCH_RUNS) and cannot run without it.
+    invocation:
+      - "python3 essays-genft/study.py check-split --cases-dir DATA --work WORK"
+      - "python3 essays-genft/study.py floor --cases-dir DATA"
+      - "python3 essays-genft/driver.py"
+      - "python3 essays-genft/study.py analyse --cases-dir DATA --work WORK --runs RUNS"
+    committed_outputs: [essays-genft/out/essays-genft.json, essays-genft/out/board_rows.json, essays-genft/out/floor.json, essays-genft/out/split-check.json]
+    inputs: [asap2, mohler-asag, harmogen-r, vtg]
+    ai_processing: true
+    results: ["5.1 (generative fine-tune, unseen assignments)", "5.2", "5.3"]
+
+  - id: setups
+    title: The grader's settings on the 14 flagged models (guard sentence, reasoning effort)
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: setups/study.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention; Olmo 3.1 32B self-hosted on vLLM. Runs not published."}
+    invocation: ["python3 setups/study.py run --go", "python3 setups/study.py analyse"]
+    committed_outputs: [setups/out/setups.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.2"]
+
+  - id: guard-retest
+    title: The guard sentence's harms against the spread between repeated runs
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: guard-retest/study.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention; Olmo 3.1 32B self-hosted on vLLM v0.32.0 (CHANGE 2). SUBSETS is the folder of the board's 100-item draws (<task>-first100.jsonl), built from the corpora by the first command, which reads nothing else. The floor and the analysis also read the runs (GBENCH_RUNS), which are not published, so they cannot run from the release."}
+    invocation: ["python3 reasoning/study.py subsets --cases-dir DATA --out-dir SUBSETS   # the board's draws: <task>-first25/50/100.jsonl", "python3 guard-retest/study.py run --go", "python3 guard-retest/study.py floor --subsets SUBSETS", "python3 guard-retest/study.py analyse --subsets SUBSETS"]
+    committed_outputs: [guard-retest/out/guard-retest.json, guard-retest/out/floor.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.2 (guard re-test)"]
+
+  - id: reasoning-effort
+    title: Reasoning effort, low against high, on short answers and code
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: reasoning/study.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only). Runs not published (GB_RUNS points at them)."}
+    invocation: ["python3 reasoning/study.py signal-floor", "python3 reasoning/study.py effort --go", "GB_RUNS=RUNS python3 reasoning/study.py analyse --cases-dir DATA"]
+    committed_outputs: [reasoning/out/runs.json, reasoning/out/signal-floor.json, reasoning/out/signal.json]
+    inputs: [mohler-asag, harmogen-r]
+    ai_processing: true
+    results: ["5.2 (reasoning effort)"]
+
+  - id: hosting
+    title: The same open models through 4-bit and 8-bit hosts
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: hosting/study.py}
+    environment: {kind: process, detail: "OpenRouter with the provider pinned per arm, zero data retention. Runs not published."}
+    invocation: ["python3 hosting/study.py run --go", "python3 hosting/study.py analyse"]
+    committed_outputs: [hosting/out/hosting.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.2 (hosts)"]
+
+  - id: precision-controlled
+    title: 4-bit against 8-bit weights with the host held fixed
+    prespecified: true
+    rerun: gpu
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: precision-controlled/study.py}
+    environment: {kind: process, detail: "vLLM v0.32.0 on one rented A100 80GB; MXFP4, fp8 and bf16 arms (CHANGE 2); serving arguments from `study.py serve-args`. SUBSETS is the folder of the board's 100-item draws, built by the first command from the corpora alone. Runs not published, so the analysis cannot run from the release."}
+    invocation:
+      - "python3 reasoning/study.py subsets --cases-dir DATA --out-dir SUBSETS   # the board's draws: <task>-first25/50/100.jsonl"
+      - "python3 precision-controlled/study.py floor --subsets SUBSETS"
+      - "python3 precision-controlled/study.py run --slug SLUG --arm ARM --subsets SUBSETS --runs RUNS --go   # on the pod"
+      - "python3 precision-controlled/study.py analyse --subsets SUBSETS --runs RUNS"
+    committed_outputs: [precision-controlled/out/precision-controlled.json, precision-controlled/out/floor.json, precision-controlled/out/floor-failed-1.json]
+    inputs: [harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.2 (controlled precision)"]
+
+  - id: paraphrase
+    title: Rewording the prompt, against re-asking with the same prompt, for all 22 models
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: paraphrase/study.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention; Claude Fable 5.1 through the maintainers' own Anthropic key under the stated retention exception (CHANGE 5). Runs not published."}
+    invocation: ["python3 paraphrase/study.py floor --cases-dir DATA", "python3 paraphrase/study.py run --subsets SUBSETS --go", "python3 paraphrase/study.py analyse --cases-dir DATA"]
+    committed_outputs: [paraphrase/out/paraphrase.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.2 (rewording)"]
+
+  - id: prompt-ranking
+    title: Whether the ranking of the models depends on the prompt's wording more than on re-asking
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: prompt-ranking/study.py}
+    environment: {kind: process, detail: "No new calls; reads the paraphrase study's runs, which are not published."}
+    invocation: ["python3 prompt-ranking/study.py floor --cases-dir DATA", "python3 prompt-ranking/study.py analyse --cases-dir DATA"]
+    committed_outputs: [prompt-ranking/out/ranking.json, prompt-ranking/out/floor.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.2 (ranking across prompts)"]
+
+  - id: pushback
+    title: Pushback, the grade's rise after an objection minus its rise after a request to double-check, on the board's short answers
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: feedback-board/pushback.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only); Olmo self-hosted. Runs not published."}
+    invocation: ["python3 feedback-board/pushback.py floor", "python3 feedback-board/pushback.py run --models SLUG ... --go", "python3 feedback-board/pushback.py analyse --out feedback-board/out/pushback.json"]
+    committed_outputs: [feedback-board/out/pushback.json]
+    inputs: [mohler-asag]
+    ai_processing: true
+    results: ["5.3 (pushback, Table 5.3)"]
+
+  - id: maths-working
+    title: Credit for the working in mathematics solutions, and the first wrong step
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: maths-process/process.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only). Olmo 3.1 32B is added from its board submission (scores only; CHANGE 1). Runs not published."}
+    invocation: ["python3 maths-process/process.py build --src VTG/dataset.json --out DATA/vtg-cells.jsonl", "python3 maths-process/process.py floor", "python3 maths-process/process.py analyse --cases DATA/vtg-cells.jsonl --runs RUNS ... --submissions submissions/allenai__olmo-3.1-32b-instruct/maths.json --out maths-process/out/process.json"]
+    committed_outputs: [maths-process/out/process.json]
+    inputs: [vtg, benchmark-outputs]
+    ai_processing: true
+    results: ["5.3 (working, Table 5.3)"]
+
+  - id: feedback-validity
+    title: Validation of six candidate feedback measures against trained annotators on MRBench
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: feedback-validity/validate.py}
+    environment:
+      kind: process
+      detail: >-
+        The word rules run offline on MRBench (MRBENCH_DIR). The Learning Commons evaluators (cloned at b9d4789,
+        LC_EVALUATORS_DIR) call GPT-5.4 (feedback-validity/lc_mrbench.py); their runs are not published.
+    invocation: ["MRBENCH_DIR=MRBENCH python3 feedback-validity/validate.py", "MRBENCH_DIR=MRBENCH python3 feedback-validity/lc_mrbench.py --floor", "python3 feedback-validity/lc_mrbench.py --run --go", "MRBENCH_DIR=MRBENCH python3 feedback-validity/lc_mrbench.py --analyse"]
+    committed_outputs: [feedback-validity/out]
+    inputs: [mrbench]
+    ai_processing: true
+    results: ["5.3 (which feedback measures were used)"]
+
+  - id: feedback-board
+    title: Feedback on the board's short answers with the grade shown and hidden (the earlier halo), and whether it gives away the answer
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: feedback-board/fb.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only); the Withholding Answers evaluator through GPT-5.4. Runs not published."}
+    invocation: ["python3 feedback-board/fb.py run --models SLUG ... --go", "python3 feedback-board/fb.py analyse --out feedback-board/out/feedback-board.json"]
+    committed_outputs: [feedback-board/out/feedback-board.json]
+    inputs: [mohler-asag]
+    ai_processing: true
+    results: ["5.3 (the halo, as the earlier measure; gives away the answer)"]
+
+  - id: feedback-discordant
+    title: Feedback told a grade that contradicts the work (the wrong-grade test), all 22 models
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: feedback-discordant/study.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention; Claude Fable 5.1 through the maintainers' own Anthropic key under its 30-day retention (CHANGE 2); Olmo 3.1 32B self-hosted on vLLM v0.32.0 (CHANGE 3). Pairs with feedback-board's true-grade runs. Tone by the praise-minus-criticism word rule validated on MRBench; the ratio S/W is descriptive, with no interval. `cases` and `floor` make no model call but read the unpublished feedback-board runs (runs/fbb-shown-<model>/config.json, for the case ids), so no step runs from the release. Runs not published."}
+    invocation: ["python3 feedback-discordant/study.py cases --cases DATA/mohler.jsonl --out SCRATCH/mohler-discordant.jsonl", "python3 feedback-discordant/study.py floor --cases DATA/mohler.jsonl", "python3 feedback-discordant/study.py run --cases SCRATCH/mohler-discordant.jsonl --go", "python3 feedback-discordant/study.py analyse --cases DATA/mohler.jsonl"]
+    committed_outputs: [feedback-discordant/out/discordant.json, feedback-discordant/out/floor.json]
+    inputs: [mohler-asag]
+    ai_processing: true
+    results: ["5.3 (Table 5.3, the scored feedback measure)", "4.5 (the feedback strand)"]
+
+  - id: speech
+    title: Pronunciation grading of recordings, with silence, tone, noise and off-task probes
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: speech/PREREG.md}
+    environment: {kind: process, detail: "bench.py prepare speechocean, then bench.py run with prompts/speech.txt (n = 100, seed 7) through OpenRouter, zero data retention; bench.py's report writes out/speech/<model>.json. Runs not published."}
+    invocation: ["python3 bench.py prepare speechocean --src SPEECHOCEAN_DIR --out DATA/speechocean.jsonl", "python3 bench.py run --cases DATA/speechocean.jsonl --prompt prompts/speech.txt --model MODEL --n 100 --seed 7 --out RUN --go"]
+    committed_outputs: [out/speech]
+    inputs: [speechocean762]
+    ai_processing: true
+    results: ["5.4 (speech)"]
+
+  - id: language
+    title: Whether audio models understand speech equally across 18 languages
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: language/study.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention. The Voxtral run is incomplete (110 of 1,080 gradings failed; its 112 transport failures were retried once under language CHANGE 3 and 2 succeeded). Runs not published."}
+    invocation: ["python3 language/study.py prepare --dir FLEURS", "python3 language/study.py floor", "python3 language/study.py run --dir FLEURS --go", "python3 language/study.py analyse --dir FLEURS"]
+    committed_outputs: [language/out]
+    inputs: [fleurs-dev-18]
+    ai_processing: true
+    results: ["5.4 (languages)"]
+
+  - id: handwriting
+    title: Grading scanned handwritten mathematics solutions
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: images/PREREG.md}
+    environment: {kind: process, detail: "bench.py run on the CHECK-MAT images, three runs by maximum points (0-2, 0-3, 0-4), through OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only) and all of Claude Haiku 5.5's gradings in these runs (848, made 2026-10-24), which went the same route (each run records the serving provider; OpenRouter's activity log, matched to the runs, confirms it); bench.py's report writes out/images/. A pilot (one expert per solution, n = 122); its probes were not checked on simulated graders. Runs not published."}
+    invocation: ["python3 bench.py prepare checkmat2 --src CHECKMAT --out DATA/checkmat2.jsonl   # and checkmat3, checkmat4", "python3 bench.py run --cases DATA/checkmat2.jsonl --prompt PROMPT --model MODEL --out RUN --go   # one run per scale; prompts and probes in images/PREREG.md"]
+    committed_outputs: [out/images]
+    inputs: [check-mat]
+    ai_processing: true
+    results: ["5.4 (handwriting)"]
+
+  - id: video
+    title: Grading surgical-skill videos, spotting a mistake, and the length analysis
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: video/analyse.py}
+    environment: {kind: process, detail: "video/fetch_lasana.py reads the 100 test recordings; bench.py runs through OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only) and Claude Haiku 5.5's gradings in the 16-frame run (1,055, made 2026-10-24), which went the same route; its length-control run was served by Amazon Bedrock's zero-retention endpoint (each run records the serving provider; OpenRouter's activity log, matched to the runs, confirms it); frames or video by model; video/analyse.py and video/padding.py analyse. Runs not published."}
+    invocation: ["python3 video/fetch_lasana.py --root LASANA", "python3 video/analyse.py --cases LASANA/lasana.jsonl --runs RUNS ... --out out/video/extras.json", "python3 video/padding.py build --root LASANA", "python3 video/padding.py floor --root LASANA --worlds 300   # runs offline from the LASANA annotations alone", "python3 video/padding.py analyse --runs RUNS ... --out out/video/padding.json"]
+    committed_outputs: [out/video]
+    inputs: [lasana]
+    ai_processing: true
+    results: ["5.4 (video, Table 5.4b)"]
+
+  - id: media-floor
+    title: The media studies' planted-effect checks and controls (silent, blank and black-screen probes)
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: media/floor.py}
+    environment: {kind: process, detail: "`simulate` calls no model but reads the unpublished speech and video runs (runs/speech-*, runs/video*), so it cannot run from the release: without them it overwrites media/out/simulate.json with an empty result. `control` and `vcontrol` call models through OpenRouter, zero data retention."}
+    invocation: ["python3 media/floor.py simulate", "python3 media/floor.py control --go", "python3 media/floor.py analyse", "python3 media/floor.py vcontrol --go", "python3 media/floor.py vanalyse"]
+    committed_outputs: [media/out]
+    inputs: [speechocean762, lasana]
+    ai_processing: true
+    results: ["5.4"]
+
+  - id: perception
+    title: Whether self-hosted video models say they cannot see a speaker who is visible, by skin tone and lighting
+    prespecified: true
+    rerun: gpu
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: perception/study.py}
+    environment: {kind: process, detail: "Open models only, on a rented GPU with vLLM (perception/pod_run.py), under the CCv2 license's limits: unmodified videos, no labeling of people, no images published; videos deleted after the run. Run with `python3 -I`."}
+    invocation: ["python3 -I perception/study.py sample --ann CCV2.json --dir DIR", "python3 -I perception/study.py floor --dir DIR", "python3 -I perception/study.py run --ann CCV2.json --dir DIR --links LINKS.txt --go", "python3 -I perception/study.py analyse --dir DIR"]
+    committed_outputs: [perception/out]
+    inputs: [ccv2]
+    ai_processing: true
+    results: ["5.4 (perception audit)"]
+
+  - id: fairness-ellipse
+    title: Group gaps at the same human grade on ELLIPSE, against a second rater, and the pre-registered replication
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: fairness-ellipse/gap2.py}
+    environment: {kind: process, detail: "bench.py prepare ellipse; runs through OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only) and all of Claude Haiku 5.5's gradings in these runs (3,908, made 2026-10-23 and 2026-10-24), which went the same route (each run records the serving provider; OpenRouter's activity log, matched to the runs, confirms it); gap2.py (first draw) and rep.py (replication). Runs not published."}
+    invocation: ["python3 fairness-ellipse/gap2.py draw --cases DATA/ellipse.jsonl --out UNION.jsonl", "python3 fairness-ellipse/gap2.py floor --cases DATA/ellipse.jsonl", "python3 fairness-ellipse/gap2.py analyse --cases DATA/ellipse.jsonl --runs RUNS ...", "python3 fairness-ellipse/rep.py analyse --cases DATA/ellipse.jsonl --runs RUNS ..."]
+    committed_outputs: [fairness-ellipse/out]
+    inputs: [ellipse]
+    ai_processing: true
+    results: ["5.5 (ELLIPSE)"]
+
+  - id: disability
+    title: The gap for students identified with a disability on ASAP 2.0, at the same human grade
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: disability/gap.py}
+    environment: {kind: process, detail: "Runs through OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only); Claude Haiku 5.5's gradings here were served by Google's zero-retention endpoint on OpenRouter's own key (each run records the serving provider; OpenRouter's activity log, matched to the runs, confirms it). MATCHED.jsonl, the matched essays, is drawn by `gap.py draw` from the corpus and the first run's config.json (FIRST, unpublished), so it cannot be rebuilt from the release; nor can the runs. Runs not published."}
+    invocation: ["python3 disability/gap.py draw --cases DATA/asap2.jsonl --first FIRST/config.json --out MATCHED.jsonl", "python3 disability/gap.py floor --matched MATCHED.jsonl", "python3 disability/gap.py analyse --matched MATCHED.jsonl --runs RUNS ..."]
+    committed_outputs: [disability/out]
+    inputs: [asap2]
+    ai_processing: true
+    results: ["5.5 (disability)"]
+
+  - id: disability-mechanism
+    title: Reverse regression and surface features (length, convention errors) behind the disability gap
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: disability-mechanism/study.py}
+    environment: {kind: process, detail: "No new calls; reads the disability study's matched essays (MATCHED.jsonl, drawn as in `disability`, which needs an unpublished run config) and its runs (not published), and the corpus; misspellings by pyspellchecker 0.8.1. It cannot run from the release."}
+    invocation: ["python3 disability-mechanism/study.py floor --matched MATCHED.jsonl --corpus DATA/asap2.jsonl", "python3 disability-mechanism/study.py analyse --matched MATCHED.jsonl --corpus DATA/asap2.jsonl --runs RUNS ..."]
+    committed_outputs: [disability-mechanism/out]
+    inputs: [asap2]
+    ai_processing: true
+    results: ["5.5 (what lies behind the gap)"]
+
+  - id: release-comparison
+    title: Change between model releases against change on re-asking (exploratory)
+    prespecified: false
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: bench.py}
+    environment: {kind: process, detail: "Each older and newer release graded the same cases through OpenRouter, zero data retention except Claude Fable 5.1 (the maintainers' own Anthropic key through OpenRouter, 30-day safety retention, public corpora only); Claude Haiku 5.5's and Claude Haiku 4.5's gradings here were served by Google's and Amazon Bedrock's zero-retention endpoints on OpenRouter's own key (each run records the serving provider; for Claude Haiku 5.5, OpenRouter's activity log, matched to the runs, confirms it); `bench.py drift` reads run B against run A and A's own retest noise. Described in docs/DRIFT.md (at the pinned commit that file calls the Fable 5.1 API row zero retention; the benchmark's corrections log, 2026-10-25, supersedes it, and a later benchmark commit corrects the file); exploratory, point estimates, not checked on simulated graders. Runs not published; their aggregates are committed."}
+    invocation: ["python3 bench.py drift RUN_A RUN_B"]
+    committed_outputs: [out/lineage-2026-10-23]
+    inputs: [mohler-asag]
+    ai_processing: true
+    results: ["5.5 (stability across releases)"]
+
+  - id: drift-monitor
+    title: The monthly drift monitor (not reported as a result in the article)
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: drift/monitor.py}
+    environment: {kind: process, detail: "OpenRouter, zero data retention. Monthly marks are committed under drift/out/."}
+    invocation: ["python3 drift/monitor.py run --cases-dir DATA --go", "python3 drift/monitor.py analyse --cases-dir DATA"]
+    committed_outputs: [drift/out]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: []
+
+  - id: contamination
+    title: Exact search of an open model's training data for the board's items
+    prespecified: true
+    rerun: api
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: contamination/search.py}
+    environment: {kind: process, detail: "Queries the public infini-gram API with n-grams of the items; no model is graded."}
+    invocation: ["python3 contamination/search.py --cases-dir DATA --out contamination/out/search.json"]
+    committed_outputs: [contamination/out]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: false
+    results: ["7 (internal validity)"]
+
+  - id: energy
+    title: Measured GPU energy per grading for self-hosted open models, and the lifecycle estimate
+    prespecified: true
+    rerun: gpu
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: energy/energy.py}
+    environment:
+      kind: process
+      detail: >-
+        Measured with NVML on rented GPUs (energy/energy.py measure, on the pod); the published per-request
+        method of Jegham et al. (2025) for hosted models; the lifecycle shares, their sources and the everyday
+        comparisons in docs/LIFECYCLE.md and docs/energy.json, turned into the public files by public_data.py.
+    invocation: ["python3 energy/energy.py floor", "python3 energy/energy.py measure --slug SLUG --model SERVED --cases-dir DATA --runs RUNS   # on the pod", "python3 energy/energy.py analyse --runs RUNS --out energy/out/energy.json", "python3 energy/energy.py to-docs", "python3 public_data.py out/public"]
+    committed_outputs: [energy/out, docs/energy.json, out/public/lifecycle_tasks.json, out/public/lifecycle_compare.json]
+    inputs: [mohler-asag, harmogen-r, asap2]
+    ai_processing: true
+    results: ["5.6"]
+
+  - id: public-data
+    title: The public data files the paper's report reads, rebuilt from the committed outputs
+    prespecified: false
+    rerun: offline
+    code: {repo: "https://github.com/Learning-Design-Alliance/ai-grading-benchmark", commit: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107, path: public_data.py}
+    environment: {kind: process, detail: "Python 3.11 or later, standard library; reads only committed files."}
+    invocation: ["python3 public_data.py out/public"]
+    committed_outputs: [out/public]
+    inputs: [benchmark-outputs]
+    ai_processing: false
+    results: ["every number the report links to out/public/"]
+
+evidence: []
+# No observation records or claim pages have been written for this release yet (release-pipeline: they are
+# written from the finished paper and validated with check_observations.py); `evidence` is filled then.
+
+artifacts:
+  - id: paper-benchmark
+    kind: preprint
+    title: >-
+      Beyond agreement: a benchmark of how language models grade student work, and how they fail (the article of
+      this release, draft)
+    location: {kind: internal, ref: research/article/ai-grading-benchmark.md}
+  - id: report-benchmark
+    kind: reference
+    title: The HTML report of the article, with every linked number recomputed from the committed outputs (draft)
+    location: {kind: internal, ref: research/reports/ai-grading-benchmark-2026/index.html}
+  - id: notebooks
+    kind: notebook
+    title: One re-run notebook per research question, recomputing its answer from the committed outputs
+    location: {kind: internal, ref: research/wiki/research/releases/ai-grading-benchmark-2026/notebooks/}
+  - id: reproduce
+    kind: reference
+    title: reproduce.py and REPRODUCE.md beside this file
+    location: {kind: internal, ref: research/wiki/research/releases/ai-grading-benchmark-2026/REPRODUCE.md}
+  - id: preregistration-inventory
+    kind: reference
+    title: >-
+      Inventory of every study's pre-registration, verdict wording, planted-effect check and numbered changes, each
+      change classified from its source, with the board's unnumbered scoring changes by commit
+    location: {kind: internal, ref: research/wiki/research/releases/ai-grading-benchmark-2026/preregistration-inventory.md}
+
+interpretation: >-
+  Agreement with expert raters on ordinary work did not show how a model behaves when the work, the context or the
+  conversation is altered. On short answers most of the 22 prompted models agree with the two raters about as well as
+  the raters agree with each other, and none is shown to exceed them; on code four are shown to agree with the raters
+  more than the raters agree with each other; on essays no point estimate reaches the raters' published agreement and
+  18 of the 22 are shown to fall below it, while a scorer fine-tuned on the corpus's graded essays has a higher point
+  estimate than every model. Beside agreement, a note written into the answer raised the grade by more than 5% of the
+  scale for 14 of the 22 models as their hosts served them (for one of them, GLM 5.3, the largest gain, on code, is that of its 4-bit
+  hosts; its gains on the other two tasks also exceed 5%), and seven of them credited blank or meaningless answers; 17 raised their grade more after a student only
+  objected than after a request to double-check it; and told a grade that contradicts the work, every model wrote
+  feedback whose tone, measured by a word rule validated on tutoring replies, followed that grade. Most audio models
+  credited silent recordings, and only four of 21 video runs were shown to grade a recording beyond its length.
+  Describing the student as strong raised grades in 28 of 66 model-task pairs (24 after correction for multiple
+  comparisons), in line with the attainment-label
+  effect reported in release ai-grader-reliability-2026 (Porcaro 2026). The grader's settings matter but no setting
+  helped every model: in a single run, high reasoning effort or an added guard sentence fixed four of the 14 flagged
+  models; the guard sentence made three others more gameable beyond the spread between repeated runs; 4-bit hosts
+  were gamed more, while for two smaller dense models with the host held fixed, 4-bit weights were not shown to raise
+  the forged override's gain by more than 5% of the scale, though for Phi-4 on code they raised the polite request's
+  gain by 9.9%. Fine-tuning one model on essays raised its essay agreement (the size of the gain on familiar assignments could not
+  be confirmed by its check), and the gain carried over to essay assignments it never saw, but lowered its agreement on short answers and its reading of mathematics working. The trained scorers
+  lead only on the corpus with tens of thousands of graded answers; with three corpora that differ in task as well as
+  in training size, the benchmark cannot say which of the two explains it. The disability gap on ASAP 2.0 cannot be
+  attributed to the models rather than to the human reference, and length and convention errors account for at most
+  a fifth of it for 17 of the 20 models with a gap; on economic status every model's gap lies within the
+  pre-registered band of a second human rater's; four models graded Black learners lower beyond a second rater,
+  though none by an interval wholly below the pre-registered −0.10; the Hispanic-against-White signal is not established as a model
+  bias. The author reads this as: a grader's agreement is one piece of evidence; the rest comes from probes with a
+  known correct response, checked on simulated graders before they are read, run on the grader as deployed, and run
+  again when its prompt, settings, provider or model changes.
+
+limitations:
+  - >-
+    QWK depends on the scale and on how grades are distributed, so models are compared within a task, as a share of
+    the raters' agreement on the same items; the essay ceiling is the raters' published agreement before
+    adjudication, on a different set of essays from the board's 100.
+  - >-
+    Every model was graded through one plain prompt; agreement figures describe what that prompt achieves, not what
+    a model can achieve with a tuned prompt, graded examples or a rubric written for the task.
+  - >-
+    Every adversarial probe tries to raise the grade, none to lower it, and pushback is one unargued objection.
+  - >-
+    The feedback tone measure and the Withholding Answers evaluator were validated on tutoring replies to
+    mathematics mistakes and applied to grading feedback on short answers; both transfers are arguments, not
+    measurements.
+  - >-
+    The mathematics solutions' errors were written by a language model; the video measure removes length from both
+    the model's grades and the raters', and length carries real information about skill; the surface features in
+    the disability analysis are rule-coded proxies.
+  - >-
+    Claude Fable 5.1's submission files record the request flag `provider.zdr: true`, but its gradings went
+    through the maintainers' own Anthropic key under that key's 30-day safety retention. Because of a configuration
+    issue with that stored key, Claude Haiku 5.5's requests in the handwriting runs, the video study's 16-frame run
+    and the ELLIPSE fairness runs went through it too, an unintended exception on public corpora; the key was
+    turned off on 2026-10-30. The benchmark's corrections log records this (2026-10-25, "Data retention for Claude
+    Fable 5.1 and Claude Haiku 5.5"; 2026-10-30), and the article states the retention.
+  - >-
+    Hosted models were served by providers chosen at request time, so a board result can mix hosts (GLM 5.3's code
+    gain is that of its 4-bit hosts); only precision was isolated, for two smaller dense models. Some setup studies ran once; only the guard sentence's harms were re-tested.
+  - >-
+    The corpora are public and a model may have seen their items in training; one open model's training data
+    contained some items, and the closed models' training data are unknown.
+  - >-
+    The corpora are English, from one undergraduate course for short answers, one for programs and US school
+    essays; the models are the versions served during the study and change between releases.
+  - >-
+    The perception audit could test only open models, and beyond the works the article cites, the literature on skin
+    tone and lighting in vision models was not reviewed.
+  - >-
+    Each task has 100 items, so many intervals are wide and "no difference shown" is not "no difference"; intervals
+    from different studies were not corrected jointly for multiplicity.
+  - >-
+    The models' replies are not published (they quote the student work), so the studies that read them cannot be
+    re-run from the release; their aggregate outputs are published, and every number the paper's report links is
+    recomputed from them. The board's own grades are published and its analyses re-run offline.
+  - >-
+    Six sets of statistics were not checked on simulated graders: the standard checks, the setups study's held-out
+    note, the pushback split, the board's feedback columns (the halo and the gives-away share), the handwriting
+    probes and the release comparison (exploratory, point estimates); the feedback ratio S/W is descriptive. Four
+    studies state no verdict wording (the trained scorers, the feedback board's columns, speech and handwriting).
+    Many numbered changes were made after some of that study's results had been read, some of them changing what is
+    scored, and the board's unnumbered scoring changes (five, listed by commit in the preregistration note) were made
+    after its results.
+  - >-
+    The pushback effect is the objection's rise minus the rise after a request to double-check, which itself lowered
+    grades for ten of the 17 models that yield, so it is not the objection's raw effect and is not a lower bound on
+    it.
+  - >-
+    The feedback result rests on a praise-and-criticism word rule and on a badly wrong told grade (the mirror of the
+    true one); whether milder errors carry over, and whether the feedback's substance follows the grade, is untested.
+  - >-
+    The fine-tuning results are for one model; its code agreement moved up by an amount its check could not confirm, while its short-answer
+    agreement and its reading of mathematics working fell.
+  - >-
+    No study with students was run: whether feedback that follows a told grade changes what students learn is
+    untested.
+
+funding: >-
+  None. Internal research by the Learning Design Alliance. No external funder, no grant.
+
+conflicts: >-
+  The Learning Design Alliance, the author's organization, makes Lazuli, a product that grades student work and
+  writes feedback; Lazuli is not among the graders tested, and nothing from its prompts or results is used. The
+  research and writing were carried out with Claude Code, made by Anthropic, which also makes three of the models
+  tested (Claude Opus 5.5, Claude Fable 5.1 and Claude Haiku 5.5).
+
+provenance:
+  authors:
+    - id: human:david-porcaro
+      name: David S. Porcaro
+      affiliation: Learning Design Alliance
+      role: >-
+        conceptualization, supervision, validation (review of every analysis, figure and sentence),
+        writing (review and editing), final approval; accountable for the work
+  contributors:
+    - id: agent:claude-code
+      name: Claude Code (Claude Opus 5.5, Anthropic)
+      role: >-
+        investigation, software, formal analysis, visualization, data curation, writing (original draft)
+  source_type: research
+  created_at: 2026-10-26
+  # The benchmark repository's commit every analysis above names.
+  software_versions:
+    ai-grading-benchmark: bd3165f3d5bd1cd68c0a3f6115dbb2e3719b8107
+  verification: unverified
