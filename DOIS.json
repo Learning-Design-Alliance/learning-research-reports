@@ -19,6 +19,13 @@
   "published_by": "human:david-porcaro",
   "zip_sha256": "72f546ba166e584f18aa5683ab894dd76ea12ddcdc4148099dc9502e8edf4927"
  },
+ "ai-grading-benchmark-2026/1.0.0": {
+  "doi": "10.5281/zenodo.23825875",
+  "registrar": "zenodo",
+  "deposition": 23825875,
+  "state": "reserved",
+  "reserved_at": "2026-10-31"
+ },
  "learning-graph-budget-2026/1.0.0": {
   "doi": "10.5281/zenodo.23480842",
   "registrar": "zenodo",
