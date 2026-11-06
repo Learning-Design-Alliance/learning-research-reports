@@ -1,6 +1,6 @@
 # Brief: A yes/no checklist did not make an AI grader more consistent, and it missed errors
 
-*Source: release checklist-grading-2026, version 1.0.1, 2026-11-06; DOI [10.5281/zenodo.24023968](https://doi.org/10.5281/zenodo.24023968) (reserved; 1.0.0 is [10.5281/zenodo.24023788](https://doi.org/10.5281/zenodo.24023788)).*
+*Source: release checklist-grading-2026, version 1.0.1, 2026-11-06; DOI [10.5281/zenodo.24023968](https://doi.org/10.5281/zenodo.24023968) (published; 1.0.0 is [10.5281/zenodo.24023788](https://doi.org/10.5281/zenodo.24023788)).*
 
 ## The answer
 
@@ -48,7 +48,7 @@ Evidence: [agreement with the human raters](https://reports.learningdesignallian
 
 - [Full report](https://reports.learningdesignalliance.org/checklist-grading-2026/1.0.1/report/index.html)
 - [Article](https://github.com/Learning-Design-Alliance/learning-research-reports/blob/main/checklist-grading-2026/1.0.1/article/precise-checklists-and-an-ai-grader.md)
-- DOI: [10.5281/zenodo.24023968](https://doi.org/10.5281/zenodo.24023968) (1.0.1, reserved); [10.5281/zenodo.24023788](https://doi.org/10.5281/zenodo.24023788) (1.0.0)
+- DOI: [10.5281/zenodo.24023968](https://doi.org/10.5281/zenodo.24023968) (1.0.1, published); [10.5281/zenodo.24023788](https://doi.org/10.5281/zenodo.24023788) (1.0.0)
 - Wiki claims:
   [Precise yes/no checklists were not shown to make LLM grading more reliable](https://wiki.learningdesignalliance.org/claims/precise-yes-no-checklists-do-not-make-llm-grading-more-reliable/);
   [A model-written yes/no checklist agrees less with human raters on short answers](https://wiki.learningdesignalliance.org/claims/a-model-written-checklist-agrees-less-with-human-raters-on-short-answers/);

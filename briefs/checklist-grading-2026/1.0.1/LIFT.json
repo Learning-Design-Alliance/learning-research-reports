@@ -7,15 +7,15 @@
  "source_commit": "d30806c5547b429f5a638b3f3e6d89191ec1686d",
  "source_sha256": "9164431afa760e2017b2489b07f3e5b0573e1668ab9c827002647e4d4c0833ff",
  "doi": "10.5281/zenodo.24023968",
- "doi_state": "reserved",
+ "doi_state": "published",
  "files": [
   {
    "path": "brief.html",
-   "sha256": "382a28b18efd923380af7e592ec9b8c40ab4ae6b9e84186432cbbaa926cc7108"
+   "sha256": "2b492feaaef92d847e347366796854c2f8d277453d522ec1c09a961345af1a0a"
   },
   {
    "path": "brief.md",
-   "sha256": "9164431afa760e2017b2489b07f3e5b0573e1668ab9c827002647e4d4c0833ff"
+   "sha256": "899784230d0d90c3ce95fa9904aafa704d9b3cd65eb9cf1c428d687220e34250"
   }
  ]
 }
