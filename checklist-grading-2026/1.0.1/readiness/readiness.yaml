@@ -1,0 +1,19 @@
+# Publication readiness for checklist-grading-2026 1.0.0
+# (research/article/precise-checklists-and-an-ai-grader.md). Skeleton 2026-10-28: the study has run; the
+# paper is not drafted. See docs/specs/PUBLICATION-READINESS.md. Agents never sign explain_back or waive
+# a review.
+release: checklist-grading-2026
+version: 1.0.0
+disclosure: {section: "AI use (written by the maintainer, David Porcaro, 2026-11-06; the agent removed three stray \"Review\" labels from the paste and added one missing space, nothing else)", present: true}
+explain_back: {signed_by: "human:David Porcaro", date: 2026-11-06}
+scope_audit: {date: 2026-11-06, by: agent, report: scope-audit-8.md, open_findings: 0, audited_commit: ebae337166d123fcbf5803fd934d4d7dbe9742b2}   # verifies corrections-6 (scope-audit-6.md, scope-audit-7.md); earlier rounds scope-audit.md to scope-audit-5.md
+reproduction: {date: 2026-11-06, by: agent, report: reproduction-4.md, unexplained_mismatches: 0, audited_commit: 98e9e1d3b0e395bf626e5a8698d96cdd909c4b27}   # earlier: reproduction.md to reproduction-3.md
+precedence: {date: 2026-10-28, by: agent, report: precedence.md, overclaimed_open: 0}   # K2-K8 credited by corrections-1, verified in scope-audit-2.md
+notes:
+  - date: 2026-10-28
+    note: >-
+      First complete draft at 2b581ea25fc8e1cbb9f9c499e92bd8c68ecf5e09. Pending the maintainer: the AI use section, the explain-back, which
+      learning-wiki observation records and claim pages the release should carry (evidence is empty),
+      and whether the Mohler filter and the vendors called (OpenAI gpt-5.5 and gpt-5.4-mini; Google
+      gemini-3.5-flash-lite and gemini-3.1-pro-preview) need a deviation on the published protocol
+      open-graded-short-answer-corpora 1.0.0.

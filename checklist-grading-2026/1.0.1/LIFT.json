@@ -1,0 +1,195 @@
+{
+ "release": "checklist-grading-2026",
+ "version": "1.0.1",
+ "lifted_by": "human:david-porcaro",
+ "lifted_at": "2026-11-06T23:01:40Z",
+ "source_commit": "2598e06af55542bc1e9916a406ceb799319964f5",
+ "files": [
+  {
+   "path": "1.0.1.yaml",
+   "sha256": "122fcc5260ce9384167f676b61e8c6acb26bdfea4fa9184ad7f1918d3a387fda"
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "028fb2f1d4056b972f0aabde357a433c4421a14b9bfa507dfe07521b0bc6a384"
+  },
+  {
+   "path": "article/figures/checklist-fig1-reliability.png",
+   "sha256": "9091b5b509c9ac4ffc085fe8a409a9038c5896728c79aa378f3fbb3d36acb00b"
+  },
+  {
+   "path": "article/figures/checklist-fig2-human-agreement.png",
+   "sha256": "b2aeecd093a4a132f0977d25b123baa2342ae56e72abf0333d3f702f79cb9f27"
+  },
+  {
+   "path": "article/figures/checklist-fig3-error-by-band.png",
+   "sha256": "7c3177135ee1ff5e7b5106071cccffb55a2e9a7c8008f79a67734bbba5d88d62"
+  },
+  {
+   "path": "article/figures/checklist-fig4-planted-defects.png",
+   "sha256": "d7c710b1a9d339870aebccfc13455ec3c67d5bb0b8282e027bea0a5b41e729f5"
+  },
+  {
+   "path": "article/figures/checklist-fig5-check-types.png",
+   "sha256": "29f5b0c910532ab14176f8d0ad4d62e445ceee4cc41397a5be7d7e92ab6589db"
+  },
+  {
+   "path": "article/precise-checklists-and-an-ai-grader.md",
+   "sha256": "a937f00079d5ea90d99eb4c3021521dc4df01a1dacc55ba7af45ad2980a71990"
+  },
+  {
+   "path": "code-manifest.txt",
+   "sha256": "d7298aec69798440dfd40557d2b8018ba0e8265957ae6438da741db3a848db59"
+  },
+  {
+   "path": "code/SHA256SUMS",
+   "sha256": "bc42e96752ff696c5621e26a0b5ae4856aabbbf461a4e4cf24842dc0a24e44e6"
+  },
+  {
+   "path": "code/research/article/figures/checklist-fig1-reliability.png",
+   "sha256": "9091b5b509c9ac4ffc085fe8a409a9038c5896728c79aa378f3fbb3d36acb00b"
+  },
+  {
+   "path": "code/research/article/figures/checklist-fig2-human-agreement.png",
+   "sha256": "b2aeecd093a4a132f0977d25b123baa2342ae56e72abf0333d3f702f79cb9f27"
+  },
+  {
+   "path": "code/research/article/figures/checklist-fig3-error-by-band.png",
+   "sha256": "7c3177135ee1ff5e7b5106071cccffb55a2e9a7c8008f79a67734bbba5d88d62"
+  },
+  {
+   "path": "code/research/article/figures/checklist-fig4-planted-defects.png",
+   "sha256": "d7c710b1a9d339870aebccfc13455ec3c67d5bb0b8282e027bea0a5b41e729f5"
+  },
+  {
+   "path": "code/research/article/figures/checklist-fig5-check-types.png",
+   "sha256": "29f5b0c910532ab14176f8d0ad4d62e445ceee4cc41397a5be7d7e92ab6589db"
+  },
+  {
+   "path": "code/shared/controls.py",
+   "sha256": "e751745961771cde40195fe49472601ef7622fa5b2285f66123c598da0b884db"
+  },
+  {
+   "path": "code/shared/figstyle.py",
+   "sha256": "af99fc373dc3d796c9ebe5d238bca1bc79a06e6eabe627dae2a27f1b5fea5355"
+  },
+  {
+   "path": "code/shared/paths.py",
+   "sha256": "80f7dfd393ef6275c6d47d49224f3e68dbd3fdd0b7a463b03ee294098542f344"
+  },
+  {
+   "path": "code/shared/seeds.py",
+   "sha256": "a335be9b9207c1d95da33c648f9cf37b010636d1713e5ca1d9520954a43e61e4"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/README.md",
+   "sha256": "652ca339d9bc6e3e7aaa218c5a6d013746c74b3f0d73b4d69573cfb04810fb35"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/boolean.py",
+   "sha256": "42dedbc7edda291611b4ba56f0f6a5df61749e1c84e63e4ce05627a3540c11f0"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/out/checklists.json",
+   "sha256": "b2b1ba32353bea6944e6fd24293e578b4285ee5c2099d9d708217ea7a51fa5e9"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/out/floor-rev0.json",
+   "sha256": "92721f1b7afcb012fc93afa75dbd2ec31db9c6c81cdd9ea91a75a2a7dd81186f"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/out/floor.json",
+   "sha256": "0908d2665014579d0c8aeeb27d893047e198fa611f20e639c9403148b083e2b6"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/out/perturb.json",
+   "sha256": "9136b20439033f80dc59d72480e445b567e964e403451ce92e0e612fee62e34f"
+  },
+  {
+   "path": "code/studies/measurement/grader-boolean-rubrics/out/results.json",
+   "sha256": "481458e7dcda8f14fd8c9da7df007c1c372adbaf7c34fc88498e6d1e071f4268"
+  },
+  {
+   "path": "code/studies/measurement/grader-checklist-defects/README.md",
+   "sha256": "61cd0c0e229311daf115d13d0d7b1e8ebd1e192754369a276434bfd3f35d8d40"
+  },
+  {
+   "path": "code/studies/measurement/grader-checklist-defects/defects.py",
+   "sha256": "5abe1de89c15f003bc210439b5d040581a32ebcc8c02e4ef8f02378e4007857b"
+  },
+  {
+   "path": "code/studies/measurement/grader-checklist-defects/figures.py",
+   "sha256": "28f0e67b7cc4650e05339f849fc0be5e369b35c2bba47c003bc70cc080e7d8c6"
+  },
+  {
+   "path": "code/studies/measurement/grader-checklist-defects/out/floor.json",
+   "sha256": "eadbd4df6868cc394148f8a8c57c7293f5530a73f6119be562a7dd13e05ca2a2"
+  },
+  {
+   "path": "code/studies/measurement/grader-checklist-defects/out/results.json",
+   "sha256": "64545c8700c3cfa51f4f6bfc367dbc230c16fd04fb2594c4829315bb7c06d97a"
+  },
+  {
+   "path": "notebooks/rq1-reliability.ipynb",
+   "sha256": "8216a80231fe53ec008d0017508f15e08afdc95fdfb819fafbef95f933359d54"
+  },
+  {
+   "path": "notebooks/rq2-validity.ipynb",
+   "sha256": "3bd3c0e97192bb3b75bfd2be914454da1e665c34a0d520fb461687af9b909343"
+  },
+  {
+   "path": "notebooks/rq3-defects.ipynb",
+   "sha256": "610b91c391b3bfb8234d8cb557d93957342a848f1d3afbfd000c83841372f763"
+  },
+  {
+   "path": "per-case-model-outputs.README.md",
+   "sha256": "169baa5337c2162b93bcee5fd9bf408faa86637bd09296d6a0a06a9f32cf765e"
+  },
+  {
+   "path": "per-case-model-outputs.jsonl",
+   "sha256": "b4051c6c18f2b84e822cd38eedae7e349e6e18599f2b9043dbe7cca77775f26c"
+  },
+  {
+   "path": "protocol/open-graded-short-answer-corpora/1.0.0.yaml",
+   "sha256": "9d5eaaf70d0cbf0ac50b0005ac6c795643798ff1365c5baf4f334dcbc099ebd0"
+  },
+  {
+   "path": "readiness/readiness.yaml",
+   "sha256": "93c043c1f1b665dc86cafb58dbfaae36119717375df4c44fe1802fc5851a33f9"
+  },
+  {
+   "path": "readiness/reproduction-4.md",
+   "sha256": "72f3db94b706bc662348ba179a06dd70c0c0d4fbaeeb3beaaab7ce5042649608"
+  },
+  {
+   "path": "readiness/scope-audit-8.md",
+   "sha256": "d31caba93c8f0ce9a6fcd332d3f67aa6fe0ba00407fc3541408e8cb459d24a11"
+  },
+  {
+   "path": "report/index.html",
+   "sha256": "c094d7257ba1ec1b2d292c1c4b8b8223a5a22cd89d47238f5e26a1e1dd082db1"
+  },
+  {
+   "path": "report/rq1-reliability.ipynb",
+   "sha256": "8216a80231fe53ec008d0017508f15e08afdc95fdfb819fafbef95f933359d54"
+  },
+  {
+   "path": "report/rq2-validity.ipynb",
+   "sha256": "3bd3c0e97192bb3b75bfd2be914454da1e665c34a0d520fb461687af9b909343"
+  },
+  {
+   "path": "report/rq3-defects.ipynb",
+   "sha256": "610b91c391b3bfb8234d8cb557d93957342a848f1d3afbfd000c83841372f763"
+  },
+  {
+   "path": "reproduce.py",
+   "sha256": "9ba4c94909b53e6ec13024483568ca75abd67687cf81951477a66b8277bc390d"
+  }
+ ],
+ "wiki": [
+  "claims/a-model-written-checklist-agrees-less-with-human-raters-on-short-answers.md",
+  "claims/precise-yes-no-checklists-do-not-make-llm-grading-more-reliable.md",
+  "claims/reference-answer-checklists-miss-false-claims-and-reward-key-terms.md",
+  "observations/lazuli-grader-checklist-2026.yaml"
+ ]
+}

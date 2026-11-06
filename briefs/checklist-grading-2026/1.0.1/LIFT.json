@@ -1,0 +1,21 @@
+{
+ "release": "checklist-grading-2026",
+ "version": "1.0.1",
+ "kind": "brief",
+ "lifted_by": "human:david-porcaro",
+ "lifted_at": "2026-11-06T23:13:29Z",
+ "source_commit": "d30806c5547b429f5a638b3f3e6d89191ec1686d",
+ "source_sha256": "9164431afa760e2017b2489b07f3e5b0573e1668ab9c827002647e4d4c0833ff",
+ "doi": "10.5281/zenodo.24023968",
+ "doi_state": "reserved",
+ "files": [
+  {
+   "path": "brief.html",
+   "sha256": "382a28b18efd923380af7e592ec9b8c40ab4ae6b9e84186432cbbaa926cc7108"
+  },
+  {
+   "path": "brief.md",
+   "sha256": "9164431afa760e2017b2489b07f3e5b0573e1668ab9c827002647e4d4c0833ff"
+  }
+ ]
+}
