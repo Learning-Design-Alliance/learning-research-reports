@@ -1,0 +1,76 @@
+{
+ "contra": {
+  "requested": 120,
+  "kept": 120,
+  "dropped_size_or_parse": 0,
+  "manip_pass": 120,
+  "manip_answer_rates": [
+   {
+    "YES": 120
+   },
+   {
+    "YES": 109,
+    "NO": 11
+   },
+   {
+    "NO": 120
+   },
+   {
+    "NO": 120
+   }
+  ],
+  "mean_chars_treatment": 92.94166666666666,
+  "mean_chars_neutral": 89.5,
+  "mean_ratio": 0.9629696045906931,
+  "control_scale": {
+   "ok": true,
+   "median_treatment": 92.0,
+   "min_ratio": 0.717391304347826,
+   "max_ratio": 1.3369565217391304,
+   "uncovered": 0
+  }
+ },
+ "stuff": {
+  "requested": 120,
+  "kept": 120,
+  "dropped_size_or_parse": 0,
+  "manip_pass": 112,
+  "manip_answer_rates": [
+   {
+    "NO": 119,
+    "YES": 1
+   },
+   {
+    "YES": 120
+   },
+   {
+    "NO": 112,
+    "YES": 8
+   },
+   {
+    "NO": 120
+   }
+  ],
+  "mean_chars_treatment": 92.05,
+  "mean_chars_neutral": 89.14166666666667,
+  "mean_ratio": 0.9684048524352707,
+  "control_scale": {
+   "ok": true,
+   "median_treatment": 92.0,
+   "min_ratio": 0.6739130434782609,
+   "max_ratio": 1.2934782608695652,
+   "uncovered": 0
+  }
+ },
+ "sha256": "5ff6d6fc8c4860aaba994a5c74521fc38623f4e09f647b62e08b68a1ca9bc64b",
+ "prompts": {
+  "contra": "ab92f277917cc4a0465e38742527dc05c8a4bd2e255b020fcce4a2534acca3a1",
+  "stuff": "06bc5d119c8af3c008aaf5116d68320916c3bf61ee3104d319499825e9cf8793",
+  "manip": "4f77cfce60eccc7fda235913aeaddc05d27d4c2f1435f29a9edba85de68b3cfd"
+ },
+ "checker": {
+  "api": "google",
+  "model": "gemini-3.1-pro-preview"
+ },
+ "spend": {}
+}

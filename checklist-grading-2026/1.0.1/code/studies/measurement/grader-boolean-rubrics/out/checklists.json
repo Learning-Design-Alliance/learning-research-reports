@@ -1,0 +1,163 @@
+{
+ "author": {
+  "api": "openai",
+  "model": "gpt-5.5",
+  "reasoning_effort": "medium",
+  "prompts": {
+   "mohler": "40c1b3484990e0d9b09df7acccb4410bb73076a35b746b439a1676d33d2f5e7a",
+   "menagerie": "ea79d2e470eb3710cd6a306438ecca6052275aa0d938307fdefb1fa16f0cbe55"
+  }
+ },
+ "sha256": "002143969608adbc71fc86a83a78e298c47de634753cf30c2f363c48327220e5",
+ "mohler_sha256": "7da6b906c603919db25c52eac32b55c0ed357fd9ebdbc76dcdcdc9546a03591c",
+ "mohler": {
+  "questions": 62,
+  "checks_total": 284,
+  "checks_per_question": {
+   "5": 28,
+   "3": 5,
+   "4": 23,
+   "6": 5,
+   "7": 1
+  },
+  "with_no_error_check": 8,
+  "no_error_by_question": {
+   "E01.Q01": false,
+   "E01.Q02": false,
+   "E01.Q03": true,
+   "E01.Q04": false,
+   "E01.Q05": false,
+   "E01.Q06": false,
+   "E01.Q07": false,
+   "E02.Q01": false,
+   "E02.Q02": false,
+   "E02.Q03": false,
+   "E02.Q04": true,
+   "E02.Q05": false,
+   "E02.Q06": false,
+   "E02.Q07": false,
+   "E03.Q01": false,
+   "E03.Q02": false,
+   "E03.Q03": false,
+   "E03.Q04": false,
+   "E03.Q05": false,
+   "E03.Q06": false,
+   "E03.Q07": false,
+   "E04.Q01": true,
+   "E04.Q02": false,
+   "E04.Q03": false,
+   "E04.Q04": false,
+   "E04.Q05": false,
+   "E05.Q01": false,
+   "E05.Q02": false,
+   "E05.Q03": false,
+   "E05.Q04": false,
+   "E06.Q01": false,
+   "E06.Q02": false,
+   "E06.Q03": false,
+   "E06.Q04": false,
+   "E06.Q05": true,
+   "E06.Q06": true,
+   "E06.Q07": false,
+   "E07.Q01": false,
+   "E07.Q02": true,
+   "E07.Q03": false,
+   "E07.Q04": true,
+   "E07.Q05": false,
+   "E07.Q06": false,
+   "E07.Q07": true,
+   "E08.Q01": false,
+   "E08.Q02": false,
+   "E08.Q03": false,
+   "E08.Q04": false,
+   "E08.Q06": false,
+   "E08.Q07": false,
+   "E09.Q01": false,
+   "E09.Q02": false,
+   "E09.Q03": false,
+   "E09.Q04": false,
+   "E09.Q06": false,
+   "E10.Q01": false,
+   "E10.Q02": false,
+   "E10.Q03": false,
+   "E10.Q04": false,
+   "E10.Q05": false,
+   "E10.Q06": false,
+   "E10.Q07": false
+  },
+  "note": "checklists paraphrase the corpus's reference answers; kept in scratch, hash here"
+ },
+ "menagerie": {
+  "checks": {
+   "Correctness": [
+    "All required Java source files for the application are present in the submission.",
+    "The submitted project opens in BlueJ.",
+    "The application compiles without errors.",
+    "The application starts/runs in BlueJ without crashing at launch.",
+    "Every base task required by the assignment is implemented.",
+    "The implemented base tasks behave as specified for normal inputs/actions.",
+    "The application handles the specified edge-case or invalid inputs/actions correctly.",
+    "The application follows the assignment's required output, user-interface, file, or data-format details without minor deviations.",
+    "At least one challenge task is completed.",
+    "All challenge tasks required for the highest band are completed with a technically strong implementation.",
+    "Documentation is included that identifies the completed challenge tasks and explains how they were implemented.",
+    "All submission instructions, including naming, packaging, and required artefacts, were followed."
+   ],
+   "Code Elegance": [
+    "Is the submission organised into multiple appropriate classes or modules rather than placing unrelated functionality in one class or file?",
+    "Does each class have a clear, focused responsibility?",
+    "Does each non-trivial operation have an appropriate helper method or function rather than being embedded in a long monolithic block?",
+    "Is repeated logic factored into reusable methods, classes, or constants?",
+    "Is the code largely free of duplicated code blocks that would need to be updated in multiple places?",
+    "Can new or extended features be added by reusing or extending existing code without changing many unrelated sections?",
+    "Are the base-task features implemented using reusable structures rather than one-off special-case code?",
+    "Are any implemented challenge-task features integrated using the same reusable design as the base-task features?",
+    "Does the code use appropriate algorithms or data structures instead of avoidable brute-force approaches?",
+    "Is the code efficient without relying on unnecessarily complex or hard-to-read constructs?",
+    "Is the code free from obvious poor design choices that significantly reduce maintainability in any one area?",
+    "Is the overall program structure easy to navigate, with clear naming and consistent organisation?"
+   ],
+   "Readability": [
+    "Does indentation consistently reflect the nesting of code blocks?",
+    "Are blank lines used to separate logical sections of code?",
+    "Is spacing around operators consistent throughout the code?",
+    "Are variable names meaningful for the values they store?",
+    "Are method or function names meaningful for the operations they perform?",
+    "Is the code organised so that related statements are grouped together logically?",
+    "Does each method or function perform a single well-defined operation?",
+    "Is each class focused on a single coherent responsibility?",
+    "Are class fields hidden using private access where appropriate?",
+    "Are methods public only when they need to be used from outside their class?"
+   ],
+   "Documentation": [
+    "Every source file includes a header comment with student-identifying information.",
+    "Each class has a comment at the beginning of the file describing the class's role or contents.",
+    "Each method or function has a comment immediately before it describing its purpose.",
+    "Each method or function with parameters documents what each parameter represents.",
+    "Each non-void method or function documents what its return value represents.",
+    "Non-obvious logical blocks of code are accompanied by comments explaining their intent.",
+    "The comments help the reader understand what the program or component is accomplishing.",
+    "The comments help the reader understand how the program or component accomplishes its task.",
+    "The comments avoid merely restating self-evident code operations.",
+    "The code is not cluttered with excessive or redundant comments."
+   ]
+  },
+  "counts": {
+   "Correctness": 12,
+   "Code Elegance": 12,
+   "Readability": 10,
+   "Documentation": 10
+  },
+  "with_no_error_check": {
+   "Correctness": true,
+   "Code Elegance": false,
+   "Readability": false,
+   "Documentation": false
+  }
+ },
+ "spend": {
+  "gpt-5.5:calls": 66,
+  "gpt-5.5:in": 13024,
+  "gpt-5.5:out": 32614
+ }
+}

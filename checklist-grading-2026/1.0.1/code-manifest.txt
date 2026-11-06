@@ -1,0 +1,25 @@
+# Files packaged with release checklist-grading-2026 under code/, at the same paths as in the research
+# repository. Each file's SHA-256 is in code/SHA256SUMS. Every analysis runs from the release's
+# per-case-model-outputs.jsonl; the model-calling steps of boolean.py (--build, --perturb, --run) need
+# the corpora and API keys and are packaged for the record of how the outputs were made.
+studies/measurement/grader-boolean-rubrics/README.md
+studies/measurement/grader-boolean-rubrics/boolean.py
+studies/measurement/grader-boolean-rubrics/out/checklists.json
+studies/measurement/grader-boolean-rubrics/out/floor-rev0.json
+studies/measurement/grader-boolean-rubrics/out/floor.json
+studies/measurement/grader-boolean-rubrics/out/perturb.json
+studies/measurement/grader-boolean-rubrics/out/results.json
+studies/measurement/grader-checklist-defects/README.md
+studies/measurement/grader-checklist-defects/defects.py
+studies/measurement/grader-checklist-defects/figures.py
+studies/measurement/grader-checklist-defects/out/floor.json
+studies/measurement/grader-checklist-defects/out/results.json
+shared/controls.py
+shared/figstyle.py
+shared/paths.py
+shared/seeds.py
+research/article/figures/checklist-fig1-reliability.png
+research/article/figures/checklist-fig2-human-agreement.png
+research/article/figures/checklist-fig3-error-by-band.png
+research/article/figures/checklist-fig4-planted-defects.png
+research/article/figures/checklist-fig5-check-types.png
