@@ -1,0 +1,400 @@
+# Release record for the checklist paper (research/article/precise-checklists-and-an-ai-grader.md).
+# First complete draft (2026-10-28). Nothing has been released, so this file stays at 1.0.0 and is
+# corrected in place until its DOI is published.
+#
+# Per-case outputs: per-case-model-outputs.jsonl beside this file, written by
+# `python3 boolean.py --strip` in studies/measurement/grader-boolean-rubrics/ (ids, human scores, draw
+# membership, checklist and perturbation flags, every grading's scores and per-check YES/NO; no answer,
+# program, checklist, perturbation or prompt text). `--analyse` and `--floor` run from it alone and
+# reproduce out/results.json and out/floor.json (the floor's `seconds` field aside).
+#
+# Protocol note for the maintainer: the governing protocol is open-graded-short-answer-corpora 1.0.0
+# (published with ai-grader-reliability-2026, so not edited here). This study reads Mohler E01-E10
+# (1,721 rows; drops E11-E12, whose per-rater scores are on 0-10) rather than the protocol's
+# consistency filter (546 rows dropped). It also sends Mohler questions, reference answers and student
+# answers to OpenAI (gpt-5.5, checklist and perturbation authoring; gpt-5.4-mini, grading) and Google
+# (gemini-3.5-flash-lite, grading; gemini-3.1-pro-preview, manipulation check), and Menagerie programs
+# to both graders. Menagerie grades are not sent. Whether this needs a protocol deviation or a new
+# version is the maintainer's decision.
+schema_version: 1
+
+release:
+  id: checklist-grading-2026
+  version: 1.0.0
+  # The lift date. Set when the release was readied for lifting (2026-11-06); correct it in place if
+  # the lift happens on another day, before the DOI is published.
+  released_at: 2026-11-06
+  title: >-
+    Precise yes/no checklists and an AI grader: reliability, validity, and what a
+    checklist cannot see
+  # The QUESTION, not the finding.
+  question: >-
+    When an LLM grader scores student work against a checklist of precise yes/no
+    checks written from the same criterion, instead of a Likert rubric, are its
+    scores more reliable, do they track human raters as well, and does the
+    checklist register an error or reward key terms that the Likert score would
+    not?
+
+no_study_reason: >-
+  No separate study plan object was written. The plan is the registration in the docstring of the
+  analysis script (code/studies/measurement/grader-boolean-rubrics/boolean.py), committed before any
+  model call, and the follow-up's registration in defects.py, committed before any of its own
+  estimates; `prespecified` on each analysis says which is which.
+
+protocol:
+  ref: open-graded-short-answer-corpora
+  version: 1.0.0
+
+research_design:
+  family: other
+  detail: >-
+    Repeated-measures comparison over archival human-graded student work. Every
+    sampled item is graded by two LLM graders in two formats (Likert rubric;
+    model-written yes/no checklist), twice each, on identical inputs, so each
+    item is its own control. A planted-defect arm appends, to the same answer, a
+    false sentence or a key-term sentence and, separately, a length-matched
+    neutral sentence. Pre-registered with a detection floor on synthetic graders
+    shaped like the data; intervals resample questions (Mohler) or submissions
+    (Menagerie).
+  preregistration:
+    registered: true
+    note: >-
+      The study's design, thresholds, predictions and verdict strings were
+      committed before any model call; the instruments (checklists, perturbations)
+      were frozen and committed before any grading call. Recorded in the docstring
+      of studies/measurement/grader-boolean-rubrics/boolean.py.
+
+datasets:
+  - id: mohler-answers
+    title: >-
+      Mohler ASAG: data-structures short answers with an instructor reference answer, each scored
+      0-5 by two independent raters
+    grain: one student answer to one question, with two rater scores
+    format: csv
+    rows: 2273
+    size_bytes: 702489
+    location:
+      kind: url
+      ref: "https://huggingface.co/datasets/nkazi/MohlerASAG/blob/dac06732b42d01a5169f543f6d272f1476cced3e/data/cleaned-oe-00001.parquet"
+    # The hash is of the CSV the study read: a deterministic export of the parquet above by
+    # studies/measurement/grader-eval/analyses/mohler_to_csv.py, which is published in the code package
+    # of release ai-grader-reliability-2026 (not this one); the same file and hash as that release's
+    # mohler-answers.
+    sha256: 7c64b6e1eb9ef95121cb912e273b208130ec4f79c5cf1ea888970026fd605901
+    identifiability: deidentified
+    access: raw
+    note: >-
+      Exercises E01-E10 only (1,721 answers, 62 questions); E11-E12 dropped because their per-rater
+      scores are on 0-10. CC BY 4.0.
+  - id: menagerie-grades
+    title: "Menagerie grades.csv: 279 CS1 Java submissions graded by recruited raters on four dimensions"
+    grain: one rater's letter grade for one submission on one dimension
+    format: csv
+    rows: 4480
+    size_bytes: 460833
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: 2a63ccf4b60ea93b4ae8b11d594cbb870aa6a0ba41c81a1acdead09058d1cf7b
+    identifiability: deidentified
+    access: raw
+    note: >-
+      272 submissions with code and at least three grades on every dimension are used. CC BY 4.0. The
+      grades are never sent to a model.
+  - id: menagerie-programs-2018-19
+    title: Menagerie "Anonymised Assignments" archive 18~19.zip (student Java source, academic year 2018-19)
+    grain: one submission's source files
+    format: other
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: 07a1ca90f4dc0ee21d14e789b55d15ccd2ea8c2bb04aeea192899877d36191d6
+    identifiability: deidentified
+    access: raw
+    note: >-
+      A zip archive, one of four. Each submission's files are concatenated in file order and cut at
+      90,000 characters (73 of 272 cut across the four archives).
+  - id: menagerie-programs-2019-20
+    title: Menagerie "Anonymised Assignments" archive 19~20.zip (student Java source, academic year 2019-20)
+    grain: one submission's source files
+    format: other
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: 0c618cfcb28a98b184bdcbbf0a9041e8ac88fafa8a01269dc71a5dcbe05487d7
+    identifiability: deidentified
+    access: raw
+    note: >-
+      A zip archive, one of four. Each submission's files are concatenated in file order and cut at
+      90,000 characters (73 of 272 cut across the four archives).
+  - id: menagerie-programs-2020-21
+    title: Menagerie "Anonymised Assignments" archive 20~21.zip (student Java source, academic year 2020-21)
+    grain: one submission's source files
+    format: other
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: b1764a020ede5a52be7dc361f443ae1d2c1c838495f773813a279e8ee722502d
+    identifiability: deidentified
+    access: raw
+    note: >-
+      A zip archive, one of four. Each submission's files are concatenated in file order and cut at
+      90,000 characters (73 of 272 cut across the four archives).
+  - id: menagerie-programs-2021-22
+    title: Menagerie "Anonymised Assignments" archive 21~22.zip (student Java source, academic year 2021-22)
+    grain: one submission's source files
+    format: other
+    location:
+      kind: url
+      ref: "https://osf.io/q8jbt/"
+    sha256: abecfef1ab27fe8f43818f263365c1dbca08b5d09dcaeda859c9395d4ccb8ddd
+    identifiability: deidentified
+    access: raw
+    note: >-
+      A zip archive, one of four. Each submission's files are concatenated in file order and cut at
+      90,000 characters (73 of 272 cut across the four archives).
+  - id: per-case-model-outputs
+    title: >-
+      Every grading of the study: ids, human scores, draws, checklist and perturbation flags, scores
+      and per-check YES/NO (no answer, program, checklist, perturbation or prompt text)
+    grain: one model call (plus study, question and item records)
+    format: ndjson
+    rows: 12000
+    size_bytes: 3471904
+    # Ships beside this file in learning-research-reports (per-case-model-outputs.jsonl).
+    location:
+      kind: git
+      ref: research/releases/checklist-grading-2026/per-case-model-outputs.jsonl
+    derived_from: [mohler-answers, menagerie-grades, menagerie-programs-2018-19, menagerie-programs-2019-20,
+                   menagerie-programs-2020-21, menagerie-programs-2021-22]
+    sha256: b4051c6c18f2b84e822cd38eedae7e349e6e18599f2b9043dbe7cca77775f26c
+    identifiability: deidentified
+    access: derived
+    note: >-
+      Written by `python3 boolean.py --strip`; dictionary in per-case-model-outputs.README.md. Every
+      analysis below runs from this file alone.
+
+analyses:
+  - id: grader-boolean-rubrics
+    title: >-
+      Likert rubric against a model-written yes/no checklist, two models x two calls, on Mohler and
+      Menagerie, with planted false and key-terms sentences against length-matched neutral ones
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: be685db0bf723a516a92989f2298cea973041891
+      path: studies/measurement/grader-boolean-rubrics/boolean.py
+      # The same file ships in this release's code package as code/studies/measurement/grader-boolean-rubrics/boolean.py.
+      invocation: >-
+        cd code && python3 studies/measurement/grader-boolean-rubrics/boolean.py --analyse
+        --cases ../per-case-model-outputs.jsonl
+    note: >-
+      The model calls (--build, --perturb, --run) read mohler-answers, menagerie-grades and
+      menagerie-programs and call gpt-5.5 (checklists, perturbations), gemini-3.1-pro-preview
+      (manipulation check), gemini-3.5-flash-lite and gpt-5.4-mini (grading); they cannot be re-sent
+      from the release. Pre-registered at 758e58f; instruments frozen at c5b8ed3.
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with numpy. `--analyse` runs from the per-case file alone (no model call);
+        checked on Python 3.13 by the reproduction (reproduction-4.md). The model calls that produced the
+        per-case file (--build, --perturb, --run) used the providers' hosted APIs: OpenAI gpt-5.5 and
+        gpt-5.4-mini (reasoning effort low), Google gemini-3.5-flash-lite (default sampling) and
+        gemini-3.1-pro-preview.
+    inputs: [per-case-model-outputs]
+    ai_processing: true
+
+  - id: grader-boolean-rubrics-floor
+    title: The registered study's detection floor (revision 1; revision 0 kept as floor-rev0.json)
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: be685db0bf723a516a92989f2298cea973041891
+      path: studies/measurement/grader-boolean-rubrics/boolean.py
+      # The same file ships in this release's code package as code/studies/measurement/grader-boolean-rubrics/boolean.py.
+      invocation: >-
+        cd code && python3 studies/measurement/grader-boolean-rubrics/boolean.py --floor
+        --cases ../per-case-model-outputs.jsonl
+    note: Reads only human scores, draws and clusters; its `seconds` field is a runtime.
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with numpy, run from the per-case file alone (no model call). Checked on
+        Python 3.13 by the reproduction (reproduction-4.md).
+    inputs: [per-case-model-outputs]
+    ai_processing: false
+
+  - id: grader-checklist-defects
+    title: >-
+      Per-check attribution of the planted defects (error checks, which ask whether an answer avoids a particular mistake, against presence checks) and the
+      formats' signed error by band of human score
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: be685db0bf723a516a92989f2298cea973041891
+      path: studies/measurement/grader-checklist-defects/defects.py
+      # The same file ships in this release's code package as code/studies/measurement/grader-checklist-defects/defects.py.
+      invocation: >-
+        cd code && python3 studies/measurement/grader-checklist-defects/defects.py
+        --cases ../per-case-model-outputs.jsonl
+    note: >-
+      A follow-up chosen after the primary results had been read, from the literature review, and
+      registered at e5c2b3a before any of its own estimates were computed; not part of the original
+      registration. No model call.
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with numpy, run from the per-case file alone (no model call). Checked on
+        Python 3.13 by the reproduction (reproduction-4.md).
+    inputs: [per-case-model-outputs]
+    ai_processing: false
+
+  - id: grader-checklist-defects-floor
+    title: The follow-up study's detection floor
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: be685db0bf723a516a92989f2298cea973041891
+      path: studies/measurement/grader-checklist-defects/defects.py
+      # The same file ships in this release's code package as code/studies/measurement/grader-checklist-defects/defects.py.
+      invocation: >-
+        cd code && python3 studies/measurement/grader-checklist-defects/defects.py --floor
+        --cases ../per-case-model-outputs.jsonl
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with numpy, run from the per-case file alone (no model call). Checked on
+        Python 3.13 by the reproduction (reproduction-4.md).
+    inputs: [per-case-model-outputs]
+    ai_processing: false
+
+  - id: figures
+    title: The article's five figures, each value checked against the printed text before drawing
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      commit: be685db0bf723a516a92989f2298cea973041891
+      path: studies/measurement/grader-checklist-defects/figures.py
+      # The same file ships in this release's code package as code/studies/measurement/grader-checklist-defects/figures.py.
+      invocation: cd code && python3 studies/measurement/grader-checklist-defects/figures.py
+    environment:
+      kind: process
+      detail: >-
+        Python 3.11 or later with numpy and matplotlib; DM Sans if installed, else the fallbacks in
+        shared/figstyle.py. A figure's bytes depend on the fonts found.
+    inputs: [per-case-model-outputs]
+    ai_processing: false
+
+
+artifacts:
+  # What the analyses wrote. Each ships in this release's code package (code/) and is regenerated by
+  # reproduce.py beside this file; REPRODUCE.md says which step writes which.
+  - id: results-primary
+    kind: analysis-output
+    title: Results of grader-boolean-rubrics (Tables 1, 2 and 4; Figures 1, 2 and 4)
+    location: {kind: git, ref: code/studies/measurement/grader-boolean-rubrics/out/results.json}
+  - id: floor-primary
+    kind: analysis-output
+    title: The registered study's detection floor (revision 1; revision 0 in floor-rev0.json)
+    location: {kind: git, ref: code/studies/measurement/grader-boolean-rubrics/out/floor.json}
+  - id: results-follow-up
+    kind: analysis-output
+    title: Results of grader-checklist-defects (Tables 3 and 5; Figures 3 and 5)
+    location: {kind: git, ref: code/studies/measurement/grader-checklist-defects/out/results.json}
+  - id: floor-follow-up
+    kind: analysis-output
+    title: The follow-up study's detection floor
+    location: {kind: git, ref: code/studies/measurement/grader-checklist-defects/out/floor.json}
+  - id: figure-1-reliability
+    kind: figure
+    title: Figure 1 of the article
+    location: {kind: git, ref: code/research/article/figures/checklist-fig1-reliability.png}
+  - id: figure-2-human-agreement
+    kind: figure
+    title: Figure 2 of the article
+    location: {kind: git, ref: code/research/article/figures/checklist-fig2-human-agreement.png}
+  - id: figure-3-error-by-band
+    kind: figure
+    title: Figure 3 of the article
+    location: {kind: git, ref: code/research/article/figures/checklist-fig3-error-by-band.png}
+  - id: figure-4-planted-defects
+    kind: figure
+    title: Figure 4 of the article
+    location: {kind: git, ref: code/research/article/figures/checklist-fig4-planted-defects.png}
+  - id: figure-5-check-types
+    kind: figure
+    title: Figure 5 of the article
+    location: {kind: git, ref: code/research/article/figures/checklist-fig5-check-types.png}
+
+evidence:
+  # Drafted 2026-11-06 for the maintainer's review: which results the wiki carries is the maintainer's
+  # decision. Each ref is <observation record>/<observation id> in observations/lazuli-grader-checklist-2026.yaml.
+  - ref: lazuli-grader-checklist-2026/retest-short-answers
+    note: >-
+      Near-ceiling repeatability in both formats; the checklist's 0.011 shortfall is inside the margin
+      and within what its coarser scale alone produces.
+  - ref: lazuli-grader-checklist-2026/cross-model-short-answers
+    note: Too uncertain to call.
+  - ref: lazuli-grader-checklist-2026/reliability-programs
+    note: Every clear difference on programs favored the Likert format.
+  - ref: lazuli-grader-checklist-2026/human-agreement-short-answers
+    note: The checklist agreed less with the human raters, for both models.
+  - ref: lazuli-grader-checklist-2026/under-credit-partly-correct
+    note: Where the formats part; consistent with, not a decomposition of, the lower correlation.
+  - ref: lazuli-grader-checklist-2026/false-sentence-contrast
+    note: The checklist registered a false claim about a third as much as the Likert format.
+  - ref: lazuli-grader-checklist-2026/key-terms-contrast
+    note: Clear pooled and for Gemini only.
+  - ref: lazuli-grader-checklist-2026/error-checks-share
+    note: What the checklist registered of a false claim came mainly from checks written to look for errors.
+  - ref: lazuli-grader-checklist-2026/human-agreement-programs
+    note: Uninformative about the formats; the models barely tracked the raters on programs.
+
+interpretation: >-
+  For two LLM graders of student work, a model-written checklist of precise yes/no checks was not
+  shown to make scores more reliable than a Likert rubric written from the same criterion: in the
+  short-answer assessments both formats gave nearly the same scores on a second grading (test-retest r
+  0.96-0.99; the checklist 0.011 lower, clear by the registered rule and inside the 0.03 margin), and in
+  the assessments of software programs the Likert format was more reliable wherever the data clearly showed a difference. In
+  the short-answer assessments the checklist agreed less with two human raters (dH -0.106 [-0.165, -0.048]), at
+  near-equal test-retest reliability; it under-credited answers the raters judged partly or fully
+  correct, and was not shown to over-credit wrong ones. A checklist written from a reference answer
+  mostly checked presence, not truth: an appended false sentence lowered it by 0.172 of its scale against
+  0.473 for Likert, mostly through checks written to look for errors, and key terms without
+  understanding raised it more (+0.348 against +0.273, clear pooled and for Gemini), entirely
+  through presence checks. In the assessments of software programs the models tracked the raters weakly or not at all on three
+  of four dimensions, so the format comparison there is not informative.
+
+limitations:
+  - Two small models; the checklists, the planted sentences and the manipulation check were each made by one model, with no human review.
+  - One short-answer corpus from one course; human raters using either format were not tested, so nothing here bears on checklists for human graders.
+  - Error checks (the registration's avoid checks) are identified by a word rule over checklist text the release does not publish.
+  - On programs the models tracked the raters weakly or not at all on most dimensions, the coursework specification was not shown, and 46 submissions were dropped for unparseable calls (45 of them for miscounted checklist answers).
+  - The detection floors were written and scored by the same session that ran the study.
+
+funding: >-
+  None. Internal research by the Learning Design Alliance. No external funder, no grant.
+
+conflicts: >-
+  The Learning Design Alliance builds learning tools that grade student work with LLMs; the design,
+  instruments and analysis were produced within it. The work was carried out with Claude Code
+  (Anthropic); no Anthropic model was under test.
+
+provenance:
+  authors:
+    - id: human:david-porcaro
+      name: David S. Porcaro
+      affiliation: Learning Design Alliance
+      role: >-
+        conceptualization, supervision, validation (review of every analysis, figure and sentence),
+        writing (review and editing), final approval; accountable for the work
+  contributors:
+    - id: agent:claude-code
+      name: Claude Code (Claude Opus 5.5, Anthropic)
+      role: >-
+        investigation, software, formal analysis, visualization, data curation, writing (original
+        draft); also the independent audits and reproductions, each by a separate agent with no part
+        in the work it checked
+  source_type: research
+  created_at: 2026-10-28
+  verification: unverified

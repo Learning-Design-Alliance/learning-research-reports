@@ -1,0 +1,133 @@
+{
+ "mohler": {
+  "n": 620,
+  "clusters": 62,
+  "r12": 0.6212437808748489,
+  "c": 0.8754308829453781
+ },
+ "menagerie": {
+  "n": 272,
+  "c": 0.8498828384644274,
+  "dim": "Code Elegance"
+ },
+ "worlds": {
+  "mohler_NULL": {
+   "cross_model=BOOLEAN-MORE-RELIABLE": 0.03,
+   "cross_model=LIKERT-MORE-RELIABLE": 0.05,
+   "cross_model=UNRESOLVED": 0.92,
+   "retest=EQUIVALENT": 0.135,
+   "retest=LIKERT-MORE-RELIABLE": 0.205,
+   "retest=UNRESOLVED": 0.66,
+   "validity=BOOLEAN-MORE-VALID": 0.01,
+   "validity=EQUIVALENT": 0.57,
+   "validity=LIKERT-MORE-VALID": 0.03,
+   "validity=UNRESOLVED": 0.39
+  },
+  "mohler_Vplus": {
+   "cross_model=BOOLEAN-MORE-RELIABLE": 0.98,
+   "cross_model=UNRESOLVED": 0.02,
+   "retest=EQUIVALENT": 0.23,
+   "retest=LIKERT-MORE-RELIABLE": 0.09,
+   "retest=UNRESOLVED": 0.68,
+   "validity=BOOLEAN-MORE-VALID": 0.98,
+   "validity=UNRESOLVED": 0.02
+  },
+  "mohler_Vminus": {
+   "cross_model=LIKERT-MORE-RELIABLE": 0.885,
+   "cross_model=UNRESOLVED": 0.115,
+   "retest=EQUIVALENT": 0.06,
+   "retest=LIKERT-MORE-RELIABLE": 0.38,
+   "retest=UNRESOLVED": 0.56,
+   "validity=EQUIVALENT": 0.005,
+   "validity=LIKERT-MORE-VALID": 0.96,
+   "validity=UNRESOLVED": 0.035
+  },
+  "mohler_Rplus": {
+   "cross_model=BOOLEAN-MORE-RELIABLE": 0.05,
+   "cross_model=LIKERT-MORE-RELIABLE": 0.02,
+   "cross_model=UNRESOLVED": 0.93,
+   "retest=BOOLEAN-MORE-RELIABLE": 0.99,
+   "retest=UNRESOLVED": 0.01,
+   "validity=BOOLEAN-MORE-VALID": 0.02,
+   "validity=EQUIVALENT": 0.54,
+   "validity=LIKERT-MORE-VALID": 0.025,
+   "validity=UNRESOLVED": 0.415
+  },
+  "menagerie_NULL": {
+   "cross_model=BOOLEAN-MORE-RELIABLE": 0.03,
+   "cross_model=LIKERT-MORE-RELIABLE": 0.03,
+   "cross_model=UNRESOLVED": 0.94,
+   "retest=LIKERT-MORE-RELIABLE": 0.2,
+   "retest=UNRESOLVED": 0.8,
+   "validity=BOOLEAN-MORE-VALID": 0.02,
+   "validity=LIKERT-MORE-VALID": 0.045,
+   "validity=UNRESOLVED": 0.935
+  },
+  "menagerie_Vplus": {
+   "cross_model=BOOLEAN-MORE-RELIABLE": 0.39,
+   "cross_model=UNRESOLVED": 0.61,
+   "retest=LIKERT-MORE-RELIABLE": 0.09,
+   "retest=UNRESOLVED": 0.91,
+   "validity=BOOLEAN-MORE-VALID": 0.545,
+   "validity=UNRESOLVED": 0.455
+  },
+  "menagerie_Vminus": {
+   "cross_model=LIKERT-MORE-RELIABLE": 0.375,
+   "cross_model=UNRESOLVED": 0.625,
+   "retest=BOOLEAN-MORE-RELIABLE": 0.005,
+   "retest=LIKERT-MORE-RELIABLE": 0.315,
+   "retest=UNRESOLVED": 0.68,
+   "validity=LIKERT-MORE-VALID": 0.56,
+   "validity=UNRESOLVED": 0.44
+  },
+  "CONTRA": {
+   "CHECKLIST-BLIND-TO-CONTRADICTION": 1.0
+  },
+  "CONTRA0": {
+   "CHECKLIST-BLIND-TO-CONTRADICTION": 0.025,
+   "CHECKLIST-MORE-SENSITIVE": 0.05,
+   "NO-DIFFERENCE-RESOLVED": 0.925
+  },
+  "BLIND": {
+   "CHECKLIST-BLIND-TO-CONTRADICTION": 0.02,
+   "LIKERT-ALSO-BLIND": 0.96,
+   "NO-DIFFERENCE-RESOLVED": 0.02
+  },
+  "STUFF": {
+   "CHECKLIST-REWARDS-STUFFING": 0.99,
+   "NO-DIFFERENCE-RESOLVED": 0.01
+  },
+  "STUFF0": {
+   "CHECKLIST-REWARDS-STUFFING": 0.02,
+   "LIKERT-REWARDS-STUFFING-MORE": 0.02,
+   "NO-DIFFERENCE-RESOLVED": 0.96
+  }
+ },
+ "perturb_n": {
+  "high": 120,
+  "low": 120,
+  "high_clusters": 61,
+  "low_clusters": 53
+ },
+ "checks": {
+  "mohler NULL validity signed <= 0.10": true,
+  "mohler NULL retest signed <= 0.10": false,
+  "mohler NULL cross-model signed <= 0.10": true,
+  "mohler V+ >= 0.80": true,
+  "mohler V+ wrong sign <= 0.05": true,
+  "mohler V- >= 0.80": true,
+  "mohler V- wrong sign <= 0.05": true,
+  "mohler R+ retest >= 0.80": true,
+  "menagerie NULL validity signed <= 0.10": true,
+  "menagerie V+ >= 0.80": false,
+  "menagerie V- >= 0.80": false,
+  "menagerie wrong sign <= 0.05": true,
+  "CONTRA >= 0.80": true,
+  "CONTRA0 <= 0.10": true,
+  "BLIND LIKERT-ALSO-BLIND >= 0.80": true,
+  "STUFF >= 0.80": true,
+  "STUFF0 <= 0.10": true
+ },
+ "passed": false,
+ "seconds": 129
+}
