@@ -26,6 +26,16 @@
   "state": "reserved",
   "reserved_at": "2026-10-31"
  },
+ "checklist-grading-2026/1.0.0": {
+  "doi": "10.5281/zenodo.24023788",
+  "registrar": "zenodo",
+  "deposition": 24023788,
+  "state": "published",
+  "reserved_at": "2026-11-06",
+  "published_at": "2026-11-06",
+  "published_by": "human:david-porcaro",
+  "zip_sha256": "b0136c5698d8d2530ad889d0f47f9b17c18c021c2193dcbcd2b7724a51f01809"
+ },
  "learning-graph-budget-2026/1.0.0": {
   "doi": "10.5281/zenodo.23480842",
   "registrar": "zenodo",
