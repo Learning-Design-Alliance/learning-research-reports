@@ -1,0 +1,228 @@
+# ============================================================================
+# EMBARGOED — NOT PUBLISHED. Staged in learning-engineering-research (private).
+# Governs release knowledge-tracing-benchmark-2026: secondary analysis of
+# three published tutor logs (KDD Cup 2010 Bridge to Algebra 2006-07 and
+# Algebra I 2006-07 from DataShop; EDM Cup 2023 from ASSISTments) to fit and
+# score knowledge-tracing models. Nothing is collected; nobody is contacted.
+# The governing instruments are the two depositors' terms of use, recorded in
+# data/data-sources.json and studies/models/state-estimator-benchmark/LICENCES.md.
+# ============================================================================
+
+schema_version: 1
+
+protocol:
+  id: knowledge-tracing-tutor-logs
+  version: 1.0.0
+  title: >-
+    Secondary analysis of published intelligent-tutor logs to fit and score
+    knowledge-tracing models (KDD Cup 2010 Bridge to Algebra 2006-07 and
+    Algebra I 2006-07; EDM Cup 2023)
+  effective_from: 2026-11-10
+  note: >-
+    Governs reuse of de-identified practice logs that their depositors
+    published for research. Nothing is collected here. The rules this
+    protocol records were in force when the analyses ran (11 to 16 November
+    2026); the protocol itself was written on 2026-11-20, with the release,
+    and is therefore a record of the conditions rather than a plan made
+    beforehand. The terms of each corpus were read before any model was
+    trained on it (studies/models/state-estimator-benchmark/LICENCES.md).
+
+participants:
+  population: >-
+    Students who used Carnegie Learning's Cognitive Tutor for Algebra I and
+    Bridge to Algebra in the 2006-07 school year (the KDD Cup 2010 challenge
+    files deposited in the PSLC DataShop), and students who used the
+    ASSISTments platform (the EDM Cup 2023 release). Their ages are not
+    recorded per student; both are school mathematics courses, so most were
+    minors. We did not meet them and have no route to them.
+  recruitment: >-
+    None by us. Collection, consent and de-identification were the
+    depositors' and are documented, where they are, by the depositors.
+  inclusion:
+    - >-
+      BRIDGE TO ALGEBRA 2006-07: the rows of the challenge's training file
+      that Gervet et al.'s (2020) preprocessing keeps (a skill tag present;
+      duplicate learner, item and time rows dropped; learners with fewer than
+      10 rows dropped): 1,130 learners and 1,817,393 rows.
+    - >-
+      ALGEBRA I 2006-07: one of two halves of the training file's learners,
+      split by learner with a fixed seed before any outcome was read (half A,
+      647 learners); after the same preprocessing, 635 learners and 851,236
+      rows. The other half is reserved for a separate study and is never read
+      under this protocol, not its rows and not any output computed on it.
+    - >-
+      EDM CUP 2023: one row per learner and problem log, scored on the first
+      response, from action_logs.csv with assignment_details.csv and
+      problem_details.csv; learners with fewer than 10 rows and exact
+      duplicate rows dropped.
+  exclusion:
+    - >-
+      Each learner's first row is not scored (it is kept as history), on
+      every corpus, except in the reproductions of published numbers, which
+      follow the published preprocessing exactly.
+    - >-
+      No exclusion is applied on the outcome being predicted.
+  vulnerable_populations:
+    - group: >-
+        School-age students, most of them minors, in both tutors' logs
+      safeguards:
+        - >-
+          The logs arrive de-identified (anonymous learner ids). No identifier
+          and no free text leaves the analysis machine; the published outputs
+          are per-fold aggregates over at least 127 learners and 157,260 rows,
+          and per-corpus gate statistics.
+        - >-
+          No per-row prediction is kept after scoring.
+        - >-
+          NOT ESTABLISHED by us: the safeguards of the original collections,
+          which are the depositors'.
+  age_assurance:
+    method: not-established
+    jurisdiction: >-
+      NOT ESTABLISHED per participant: neither deposit records it (both are
+      United States school deployments). Recorded as unknown rather than
+      guessed.
+  compensation:
+    kind: none
+    detail: We did not meet these participants.
+
+consent:
+  # The primary instrument is DataShop's, which governs two of the three corpora;
+  # EDM Cup 2023 is governed by different terms (additional_bases), so the
+  # sources are not uniformly governed.
+  basis: terms-of-use
+  terms_of_use:
+    id: PSLC-DataShop-terms-of-use-2012-01-16
+    ref: "https://pslcdatashop.web.cmu.edu/Terms"
+    holder: >-
+      The Pittsburgh Science of Learning Center DataShop (Carnegie Mellon
+      University), the depositor's repository. Not a participant, and does
+      not speak for the participants.
+  sources_uniformly_governed: false
+  additional_bases:
+    - source: KDD Cup 2010 Bridge to Algebra 2006-07 and Algebra I 2006-07 (PSLC DataShop)
+      basis: terms-of-use
+      note: >-
+        DataShop's general terms (effective 2012-01-16, read 2026-11-10):
+        research, not commercial, purposes; no attempt to de-anonymize; no
+        distribution of data obtained from DataShop; cite Stamper et al.
+        (2010). Signed in, the project's Terms of Use tab reads "There are no
+        additional terms associated with this project." (read 2026-11-10).
+        Temporary rented machines that this project controlled and destroyed
+        after each job ran the fits; this was read as processing within the
+        terms, not distribution.
+    - source: EDM Cup 2023 (ASSISTments)
+      basis: terms-of-use
+      note: >-
+        The ASSISTments Data Terms of Use (effective 2020-10-30, license.txt
+        on osf.io/yrwuh): cite ASSISTments and the dataset DOI; no commercial
+        use; outcomes made public with free and open access; no
+        de-anonymization; no redistribution; every collaborator accesses the
+        data from its original source. Each rented machine fetched the files
+        from OSF itself and checked their MD5 before reading them. Every
+        outcome of the benchmark on this corpus is to be published.
+  required: false
+  mechanism: not-applicable
+  permitted_uses:
+    internal-pipeline-validation: permitted
+    research-analysis: permitted
+    research-publication: permitted
+    secondary-research-by-others: unspecified
+    product-improvement: prohibited
+    model-training: permitted
+  permitted_uses_note: >-
+    Both terms permit research use and prohibit commercial use and
+    redistribution. Training models for research falls within research use
+    (DataShop's terms and the ASSISTments terms say nothing about models; the
+    reading is recorded in LICENCES.md). No model trained here is used in a
+    product, and no fitted model or prediction is published: the release
+    publishes per-fold aggregates only. No file of either corpus is
+    redistributed; a reader obtains them from the depositors.
+  secondary_use_caveats:
+    - >-
+      NOT ESTABLISHED whether the students or their parents were told that the
+      logs might be analysed by third parties, or with the help of an AI
+      coding agent. The original consent documents are not available to us.
+    - >-
+      The ASSISTments terms require every outcome to be made public; that is
+      why every model scored on EDM Cup 2023 under this protocol is to be
+      reported.
+  ai_processing_disclosed: not-applicable
+  ai_processing_detail: >-
+    An AI coding agent wrote and ran the analysis code. The logs were read by
+    that code on the analysis machines, never sent to a model: what entered
+    the agent's context was column names, counts and the aggregate outputs.
+    The analysis scripts write no row to their logs; this was not separately
+    audited.
+
+data:
+  collected:
+    - item: >-
+        Per row: anonymous learner id, problem and step (or problem log),
+        skill tags, timestamp, correctness of the first attempt, and the help
+        fields used to mark assisted rows. Nothing else is read
+      purpose: fitting and scoring the knowledge-tracing models
+      identifiability: deidentified
+  prohibited:
+    - Redistribution of any file of either corpus, or of any row-level extract.
+    - Linking the logs to any other dataset.
+    - Re-identification attempts of any kind.
+    - Any commercial use of the data.
+  deidentification:
+    applied: true
+    method: >-
+      The depositors' anonymous ids are used as grouping keys only and never
+      written to an output. The smallest unit published is one fold's test
+      set (at least 127 learners).
+  retention:
+    raw: >-
+      In a session-scoped scratch directory, or on the rented machine's
+      volume, for the duration of the analysis; destroyed with the container
+      or the machine. Re-fetched from the depositor when needed; the registry
+      records each file's MD5.
+    derived: Aggregates only, in version control.
+    basis: The depositors' terms of use.
+  storage:
+    location: >-
+      Ephemeral analysis containers and rented machines (destroyed after each
+      job), local disk only.
+    encryption_at_rest: unspecified
+    encryption_in_transit: unspecified
+    access_logging: unspecified
+  access:
+    raw:
+      - The analysis session and the machines it rented.
+    derived:
+      - The analysis session, and this repository for aggregates alone.
+    published:
+      - anyone
+  identifiability:
+    collected: deidentified
+    published: aggregate
+
+risks:
+  classification: minimal
+  identified:
+    - risk: >-
+        A raw file or per-row extract leaves the analysis machine.
+      mitigation: >-
+        Files are held outside the repository by path; jobs push aggregates
+        only, and the rented machines are destroyed after each job.
+    - risk: >-
+        A benchmark ranking is read as a verdict about a model in general,
+        or about these students.
+      mitigation: >-
+        The article reports which differences were tested (none between
+        models) and names the corpora and protocol every number rests on.
+
+external_review:
+  status: not-required
+  determination: >-
+    Secondary analysis of de-identified, published tutor logs, with no
+    intervention, no contact and no re-identification.
+
+deviations: []
+
+provenance:
+  source_type: research
+  created_at: 2026-11-20

@@ -56,6 +56,13 @@
   "state": "reserved",
   "reserved_at": "2026-11-23"
  },
+ "knowledge-tracing-benchmark-2026/1.0.1": {
+  "doi": "10.5281/zenodo.24484160",
+  "registrar": "zenodo",
+  "deposition": 24484160,
+  "state": "reserved",
+  "reserved_at": "2026-11-23"
+ },
  "learning-graph-budget-2026/1.0.0": {
   "doi": "10.5281/zenodo.23480842",
   "registrar": "zenodo",

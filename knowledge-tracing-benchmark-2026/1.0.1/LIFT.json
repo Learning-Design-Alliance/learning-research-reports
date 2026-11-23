@@ -1,0 +1,158 @@
+{
+ "release": "knowledge-tracing-benchmark-2026",
+ "version": "1.0.1",
+ "lifted_by": "human:david-porcaro",
+ "lifted_at": "2026-11-23T21:51:34Z",
+ "source_commit": "aac33162862e9d548d806234df51f6646ef7bae8",
+ "files": [
+  {
+   "path": "1.0.1.yaml",
+   "sha256": "61598dee1a38721fdbf2c7206b339087f1865efd99e3fd9fda7413d411c8d4e9"
+  },
+  {
+   "path": "REPRODUCE.md",
+   "sha256": "2add2cfded3fb4f86093bd3ae4e154cb0e16685116ed1cdf7872108e21c39005"
+  },
+  {
+   "path": "article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.png",
+   "sha256": "42f4ca05d30b55c0efca26e757d3321d33f2fe3f74a4730d3b2a0ef3cac14227"
+  },
+  {
+   "path": "article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.svg",
+   "sha256": "e32178f6f4e9519d2ed5de761d1cfa59c1cdc7310fe8b633cba916244dde2223"
+  },
+  {
+   "path": "article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.png",
+   "sha256": "9b4f59893294191cae6afe1132ebfd5ea728dc54e70770ad8de71e39831ecaed"
+  },
+  {
+   "path": "article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.svg",
+   "sha256": "50b2bc9a4772d67d3be1f0a71325092ab711c142ac4cfe1945f81e8914e29f7a"
+  },
+  {
+   "path": "article/knowledge-tracing-models-under-one-protocol.md",
+   "sha256": "3e905c6ecdf71681ed416a3c744eb9b782bfa806edc805b53bed47bcc5ab32bc"
+  },
+  {
+   "path": "code-manifest.txt",
+   "sha256": "67736a9acaac15ca1d5d7edc7ad7456f936cfa35fdd6efa783bc25fc01393b86"
+  },
+  {
+   "path": "code/LICENSE",
+   "sha256": "8b3188daee50cc2109e92d1a93b458e2dccbe2c91744600206ed349911d33c67"
+  },
+  {
+   "path": "code/SHA256SUMS",
+   "sha256": "1ff6853cffa39518b9c161ff822265cbe6f559aef56645219cd713f0b7dd4734"
+  },
+  {
+   "path": "code/research/article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.png",
+   "sha256": "42f4ca05d30b55c0efca26e757d3321d33f2fe3f74a4730d3b2a0ef3cac14227"
+  },
+  {
+   "path": "code/research/article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.svg",
+   "sha256": "e32178f6f4e9519d2ed5de761d1cfa59c1cdc7310fe8b633cba916244dde2223"
+  },
+  {
+   "path": "code/research/article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.png",
+   "sha256": "9b4f59893294191cae6afe1132ebfd5ea728dc54e70770ad8de71e39831ecaed"
+  },
+  {
+   "path": "code/research/article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.svg",
+   "sha256": "50b2bc9a4772d67d3be1f0a71325092ab711c142ac4cfe1945f81e8914e29f7a"
+  },
+  {
+   "path": "code/shared/figstyle.py",
+   "sha256": "6a05294e455bb69a05dd05f6b5671a3611851b562c00be5407eb5639ce832ab3"
+  },
+  {
+   "path": "code/studies/models/state-estimator-benchmark/rivals/README.md",
+   "sha256": "abb6d95c37ae633c986d621b024a861d0d40f1593582fe7d4e535481bcf9429c"
+  },
+  {
+   "path": "code/studies/models/state-estimator-benchmark/rivals/collect.py",
+   "sha256": "4491dc84ba6359c2f16b02ba90faf5a1cef8081e1d3054933e85256e2c5dc305"
+  },
+  {
+   "path": "code/studies/models/state-estimator-benchmark/rivals/figures.py",
+   "sha256": "d53b3cf64d1b7e2a38ba41703c22216b00fb30b9f26b089f1254b2ea3e8732a8"
+  },
+  {
+   "path": "code/studies/models/state-estimator-benchmark/rivals/out/lpkt-gate-bridge06-r1.json",
+   "sha256": "9a162b1a65d90d8f6c8e6e923c62305152bb09a30116547aeba827175115180f"
+  },
+  {
+   "path": "code/studies/models/state-estimator-benchmark/rivals/out/tables.json",
+   "sha256": "6ec407cd7e7ef0b807841f97b547cf10398badb646995f6394baca70ea4427da"
+  },
+  {
+   "path": "code/studies/models/state-estimator-benchmark/rivals/tables.py",
+   "sha256": "f1a250179cd5b8bd9672a047d00d21242a10e70e1c6255aba00e2372d31506d6"
+  },
+  {
+   "path": "notebooks/rq1-gates.ipynb",
+   "sha256": "c6fd4852b45904a46f27dca129a78123c87cdd08aa99b5bf2c3bf053b7b4b0db"
+  },
+  {
+   "path": "notebooks/rq2-floor.ipynb",
+   "sha256": "a45bce0e7cf228b401f3b14e3cb2901895129b6364ad0d314ddb0673099a5904"
+  },
+  {
+   "path": "notebooks/rq3-prediction.ipynb",
+   "sha256": "d6d1af528c963b759997d5ad4822d04795cec0b9d53efc82257fdfc4d4d35ff5"
+  },
+  {
+   "path": "notebooks/rq4-thinning.ipynb",
+   "sha256": "f0e6d12d961f5e37880a81930f3ec41b057e51e99d6391e7ef22fcb63b64958c"
+  },
+  {
+   "path": "per-case-outputs.README.md",
+   "sha256": "fb4df726fa9117e978d48384917bf9bdc7996def613096f9a2187d42ff15b6aa"
+  },
+  {
+   "path": "per-case-outputs.jsonl",
+   "sha256": "3436512db38037235605ccb20222635cd6c8ae3cc498cfc915c3c1251e003c61"
+  },
+  {
+   "path": "protocol/knowledge-tracing-tutor-logs/1.0.0.yaml",
+   "sha256": "5b48844854154f8c9ce1b0180f44303efea417d2d6f79386118a3d14bff9f4fb"
+  },
+  {
+   "path": "readiness/readiness.yaml",
+   "sha256": "b3520829472e6489a2c1aa835246b0b16ffbdab3b2cc3cf0558fb80d0ef66593"
+  },
+  {
+   "path": "readiness/reproduction-4.md",
+   "sha256": "e5dcf53f320c2e6e55cd4ea4f7bffe73d900e23e3dbbb6d43bc398501a189256"
+  },
+  {
+   "path": "readiness/scope-audit-6.md",
+   "sha256": "0a066f8449418b97f803f0a00295a02300ae4a89e0cf5bb4a2eeb363b8a60af1"
+  },
+  {
+   "path": "report/index.html",
+   "sha256": "76c85d18e9114cff222dd35a04db63fee5e4a5af2d451d75959866e7774dddc2"
+  },
+  {
+   "path": "report/rq1-gates.ipynb",
+   "sha256": "c6fd4852b45904a46f27dca129a78123c87cdd08aa99b5bf2c3bf053b7b4b0db"
+  },
+  {
+   "path": "report/rq2-floor.ipynb",
+   "sha256": "a45bce0e7cf228b401f3b14e3cb2901895129b6364ad0d314ddb0673099a5904"
+  },
+  {
+   "path": "report/rq3-prediction.ipynb",
+   "sha256": "d6d1af528c963b759997d5ad4822d04795cec0b9d53efc82257fdfc4d4d35ff5"
+  },
+  {
+   "path": "report/rq4-thinning.ipynb",
+   "sha256": "f0e6d12d961f5e37880a81930f3ec41b057e51e99d6391e7ef22fcb63b64958c"
+  },
+  {
+   "path": "reproduce.py",
+   "sha256": "12f18e8acb0372c4c0893eaf66c23f8f996d044e7fa4f3bceab8e489ad4d01cc"
+  }
+ ],
+ "wiki": []
+}

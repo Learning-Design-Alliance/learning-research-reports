@@ -1,0 +1,18 @@
+# Files packaged with release knowledge-tracing-benchmark-2026 under code/, at the same paths as in the research
+# repository. Each file's SHA-256 is in code/SHA256SUMS. The release analysis the article cites: the per-case
+# collector, the tables script, the figure script, its README and its outputs; the shared figure style; the
+# published figures. The benchmark's fitting harness is not packaged (it also carries models this release does not
+# report); no corpus file is packaged (the depositors' terms). Data locations and hashes are in the release file.
+studies/models/state-estimator-benchmark/rivals/README.md
+studies/models/state-estimator-benchmark/rivals/collect.py
+studies/models/state-estimator-benchmark/rivals/tables.py
+studies/models/state-estimator-benchmark/rivals/figures.py
+studies/models/state-estimator-benchmark/rivals/out/tables.json
+studies/models/state-estimator-benchmark/rivals/out/lpkt-gate-bridge06-r1.json
+shared/figstyle.py
+research/article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.png
+research/article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.svg
+research/article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.png
+research/article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.svg
+# The MIT licence of the code package, packaged as code/LICENSE.
+LICENSE <- board/licenses/MIT-LDA.txt
