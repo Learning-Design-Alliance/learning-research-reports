@@ -1,0 +1,82 @@
+# Publication readiness for knowledge-tracing-benchmark-2026 1.0.0
+# (research/article/knowledge-tracing-models-under-one-protocol.md). Skeleton 2026-11-20: no independent check
+# has run. See docs/specs/PUBLICATION-READINESS.md. Agents never sign explain_back or waive a review.
+release: knowledge-tracing-benchmark-2026
+version: 1.0.0
+
+# Scope (maintainer, R0553, R0554, 20 Nov 2026): the benchmark's published models and baselines only. The
+# drafting agent's application of that decision, and the masking check, are in scope-notes.md (internal: not
+# part of the publish set).
+# Data terms: data-terms.md.
+
+# Analyses declared in the release file (1.0.0.yaml, analyses:), with their invocations:
+#   benchmark-fits  the harness under studies/models/state-estimator-benchmark/code/ (not packaged)
+#   per-case        python3 collect.py verify --out <release>/per-case-outputs.jsonl   (repository only)
+#   tables          python3 tables.py --per-case ../../../../../per-case-outputs.jsonl (from code/.../rivals/)
+#   figures         python3 figures.py                                                (from code/.../rivals/)
+# Drafting agent's own rerun (not an independent reproduction): reproduce.py read MATCH for both steps on
+# 2026-11-20, from a copy of the release directory alone.
+
+disclosure: {section: "AI use (written by the maintainer, David Porcaro, 2026-11-23; placed by the agent with two spelling fixes only: rentend -> rented, ammendements -> amendments)", present: true}
+explain_back: {signed_by: "human:david-porcaro", date: 2026-11-23}
+scope_audit:     {date: 2026-11-21, by: agent, report: scope-audit-6.md, open_findings: 0, audited_commit: 0bf31a1cef185d4dfdc9b42e052d193b0a18e004}
+precedence:      {date: 2026-11-21, by: agent, report: scope-audit-6.md, overclaimed_open: 0, audited_commit: 0bf31a1cef185d4dfdc9b42e052d193b0a18e004}
+reproduction:    {date: 2026-11-21, by: agent, report: reproduction-4.md, unexplained_mismatches: 0, audited_commit: 0bf31a1cef185d4dfdc9b42e052d193b0a18e004}
+corrections: [corrections-1.md, corrections-2.md, corrections-3.md, corrections-4.md, corrections-5.md, corrections-6.md]
+cooling_off:
+  # 2026-11-20: the draft (baseline). Corrections-2 (2026-11-20, scope audit 1's F1 and F2) changed the subtitle,
+  # the abstract and the conclusion: a headline correction. Its commit is recorded in the follow-up commit (a
+  # commit cannot name itself); the next scope audit and the reproduction must read a commit that contains it.
+  # Corrections-3 (2026-11-20, scope audit 2's G2) added the device qualifier to the subtitle, the abstract and the
+  # conclusion, and reworded the 2% clause of the subtitle (N-4): a second headline correction, whose commit is
+  # recorded the same way.
+  # Corrections-4 (2026-11-20, scope audit 3's H2 and N-D) narrowed the conclusion's 2% sentence ("lost most" became
+  # "lost more than the logistic models, the attention models and BKT") and added DKT's 2% floor miss on half A to
+  # it: a third headline correction, whose commit is recorded the same way.
+  # Corrections-5 (2026-11-21, the maintainer's decisions R0597) reports the floors of PFA, BKT and the running
+  # proportion as descriptive only, which changes the count of models given a floor in the subtitle, the abstract,
+  # the answer to RQ2 and the conclusion (nine to six; eight of nine passing to five of six): a fourth headline
+  # correction, whose commit is recorded the same way.
+  # Corrections-6 (2026-11-21, scope audit 5's F1 and N6) adds to the conclusion and the release's interpretation
+  # that the logistic models' and BKT's 20-answer numbers are descriptive only and that most of the 2% numbers have
+  # no floor at that size, and to the subtitle the 2% qualifier and "six with a planted-effect floor that counts"
+  # (N2): a fifth headline correction, whose commit is recorded the same way.
+  last_headline_correction: 2026-11-21
+  last_headline_correction_commit: a76e058468245255a0803ca2f1bd4f8d7ce585dc
+
+specialist_reviews:
+  - claim: "the prediction floor (a logarithmic practice effect planted on each corpus's structure, read against
+      null twins) is a valid detection floor for a model's ability to carry a practice effect into its predictions"
+    role: psychometrician or knowledge-tracing methodologist
+    status: requested
+  - claim: "the pyKT gate (pyKT's own loop against the published value, then the benchmark loop against pyKT's
+      loop on one fold) establishes that the deep implementations are faithful"
+    role: deep knowledge-tracing practitioner
+    status: requested
+
+for_the_maintainer:
+  - "Scope and data terms confirmed by the maintainer (20 Nov 2026); the record is internal."
+  - "Write the AI-use section; sign explain_back after the quiz."
+  - "Amendments 1 to 3 stand as the amendments plan 2 ran under (R0568, 20 Nov)."
+  - "The literature review (literature.md, 20 Nov) has been run and its 16 edits applied in corrections-1.md;
+     precedence.overclaimed_open stays 6 until a verification audit reads that pass."
+  - "No observation records or claim pages were drafted for this release."
+  - "Registration and amendments: published now as SHA-256 fingerprints (article section 4.7, release file design.preregistration.note); full text when the masked models are reported (maintainer, 21 Nov 2026, R0600). Nothing left to decide."
+  - "Corrections-2 added two record types to the per-case outputs (EDM Cup's preprocessing report; the device
+     control's bands, from the device-control records of Amendment 3), so the device bands now ship. The device
+     control's full records (hosts, timings) are not shipped."
+  - "Corrections-3 changed shared tooling in two commits of their own: code/SHA256SUMS now hashes the files as
+     shipped, so a reader's sha256sum -c passes while the marker is on (this also changed the SHA256SUMS of
+     answer-generation-2026 and value-achievement-age-2026); and the report's release zip now carries
+     code-manifest.txt, and notebooks that read only the per-case file run beside it alone. Reproduction 1's M1
+     and M2 rest on these; the next reproduction should re-run both checks."
+  - "Section 5.1 now says that PFA's published amended gate record is a re-score of 16 November and that Amendment 1
+     computed the same statistic on 11 November (scope audit 2, N-7). That second part rests on the unpublished
+     amendment, like the other dates in section 4.7."
+
+# The maintainer's decisions of 21 Nov 2026 (R0597), applied in corrections-5.md, answered the Best-LR+ rename, the
+# suggested analyses, the three floors, the masking and footer item, the references and Cen et al. (2006); those
+# items are removed from for_the_maintainer above.
+queued_after_release:
+  - "The seven suggested analyses (literature.md, 'Analyses it suggests') are queued for after this release, not run
+     (maintainer, R0597, 21 Nov 2026). Each, when run, is a pre-registered study with its own detection floor."

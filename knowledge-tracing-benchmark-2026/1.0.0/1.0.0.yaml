@@ -1,0 +1,444 @@
+# ============================================================================
+# EMBARGOED — NOT PUBLISHED. Staged in learning-engineering-research (private).
+#
+# `released_at` is the date this was written up, not the date it became public,
+# because it has not. Nothing has been released, so 1.0.0 is corrected in place
+# until its DOI is published.
+#
+# SCOPE (maintainer, 20 Nov 2026): the benchmark's published
+# models and baselines only. Other models scored under the same protocol are
+# not part of this release and are not named in it; their aggregates are not
+# read by its code (collect.py's allowlist). See research/readiness/
+# knowledge-tracing-benchmark-2026/readiness.yaml.
+#
+# CODE COMMITS. The benchmark's fits ran from the harness under
+# studies/models/state-estimator-benchmark/code/ (not in the code package: it
+# also carries models this release does not report) between 11 and 16 Nov
+# 2026, at the job-code commits each lane records (8b27c7df for most of plan 2;
+# HawkesKT's Amendment 4 lanes and LPKT's lanes at their own). The per-case
+# collector, the tables and the figure script were written on 20 Nov at
+# 750ec39f1; the collector and the tables were corrected on 20 Nov at
+# 3ea0b9c2c (corrections-2); corrections-3 (c6972854d) and corrections-4 (903826eb9),
+# headline corrections that changed no analysis code, followed, and corrections-4's is the
+# commit the per-case analysis names (the collector has not changed since corrections-2).
+# Corrections-5 (4aa7c512e, 21 Nov) changed the tables script (the descriptive status of
+# floors run outside the registered stage lists) and the figure script (an axis label),
+# and is the commit the tables and figures analyses name; no analysis code has changed
+# since. The research repository is private; every file the article cites ships in code/.
+# ============================================================================
+
+schema_version: 1
+
+release:
+  id: knowledge-tracing-benchmark-2026
+  version: 1.0.0
+  title: >-
+    Published knowledge-tracing models under one protocol on three tutor corpora
+  released_at: 2026-11-20
+  # The QUESTION, not the finding.
+  question: >-
+    Under one protocol (the same learner-level folds, test rows and scorer) on
+    two KDD Cup 2010 Cognitive Tutor logs and EDM Cup 2023, do thirteen
+    published knowledge-tracing models and baselines reproduce the published
+    numbers they are gated on, can the benchmark detect a planted practice
+    effect through each, how well does each predict the next answer, and how
+    does each change as training learners and training histories thin?
+
+protocol:
+  ref: knowledge-tracing-tutor-logs
+  version: 1.0.0
+
+no_study_reason: >-
+  No study plan object of the learning-wiki schema was written. The benchmark
+  was registered on 11 Nov 2026, before any counted run (its design, pass
+  rules and verdict strings), and four amendments were written while it ran,
+  from 11 to 15 Nov 2026. Neither the registration nor the amendments is
+  published yet, because they also govern models this release does not report
+  (their SHA-256 fingerprints are in design.preregistration.note, and their
+  full text follows when those models are reported);
+  the article's section 4 states every rule this release applies and section
+  4.7 the departures from them. The registration also names comparison readings between
+  pairs of models that no job computed in this pass; they are not reported.
+
+research_design:
+  family: other
+  detail: >-
+    Benchmark of predictive models on secondary data. Five learner-level folds
+    per corpus, identical test rows for every model, one scorer (AUC, log loss,
+    saturated share on all scored rows). Before a model's numbers count: a gate
+    (reproduce a published AUC within a fixed band) and a prediction floor
+    (recover at least half of a practice effect planted in synthetic worlds
+    built on the corpus's structure, against null twins). Regimes: 100%, 25%,
+    10% and 2% of the training learners (10% and 2% drawn five times, nested),
+    and training histories cut to 50 and 20 answers. Descriptive comparison
+    only: no paired interval between models was computed.
+  preregistration:
+    registered: false
+    note: >-
+      Not registered with an outside registry, and not published. The design,
+      the gates, the floor and its pass rule, the regimes and the verdict
+      strings were registered on 11 Nov 2026, before any counted run. Four
+      amendments were written while the benchmark ran: Amendment 1 (11-12 Nov;
+      PFA's gate target, and the pyKT gate, which the registration had left
+      unbuilt), Amendment 2 (12-13 Nov; LPKT added), Amendment 3 (13-15 Nov;
+      the rented-machine layout, and the recorded deviations that moved some
+      fits to GPUs, where the registration pinned CPUs) and Amendment 4 (13-15
+      Nov; HawkesKT built as pyKT sets it up, in force for HawkesKT from 13
+      Nov). Amendments 1 to 3 were drafts while the fits ran; the author
+      confirmed on 20 Nov 2026 that they are the amendments the benchmark ran
+      under. The floors of PFA, BKT and the running proportion were added on
+      16 Nov 2026, outside the registered stage lists, and are reported as
+      descriptive only (maintainer, 21 Nov 2026). LPKT's architecture was
+      tuned on its gate's split after a first failed gate. These documents
+      name models this release does not report, so they are not published
+      with it yet (maintainer, 21 Nov 2026): their full text is published when
+      those models are reported, and their SHA-256 fingerprints are given now so
+      that a reader can check later that the text is unchanged: the registration (last changed 11 November 2026) 331b664230767f3947de0c50acf65c89297874a311fdf6aed0a198a0fafca455; Amendment 1 (last changed 12 November 2026) c57c73d75f698796d8aae18260d73ef6e01f92355ed6442c15549c3fa01669e8; Amendment 2 (last changed 13 November 2026) e531aa1fa48eebc61c68747ece649b0b2553519784e026be6321b4d3a280d659; Amendment 3 (last changed 15 November 2026) e36ac0d54c7dc726c9292a54c34fff77599e971b50bfce6a9888bd158d3ca5ed; Amendment 4 (last changed 15 November 2026) 2383263a446efe298a6cd97f9e52e30272ffae2f8e795dc2ac7161b4c501a8a4.
+
+datasets:
+  - id: kddcup2010-bridge06
+    title: >-
+      KDD Cup 2010, Bridge to Algebra 2006-07, development training file
+      (bridge_to_algebra_2006_2007_train.txt)
+    grain: one learner's step in a problem
+    format: other   # tab-separated text
+    size_bytes: 819909067
+    location:
+      kind: url
+      ref: "https://pslcdatashop.web.cmu.edu/KDDCup/"
+    sha256: b515555fc4e55a1dfba3af555416a88e256d4681399789472e2559520017272b
+    identifiability: deidentified
+    access: raw
+    note: >-
+      PSLC DataShop (Stamper et al., 2010); DataShop's terms: research use, no
+      redistribution, cite Stamper et al. MD5
+      ab7fcfe9cd131f82c468ffd26ab0152a. Rows built with Gervet et al.'s (2020)
+      preprocessing: 1,130 learners, 1,817,393 rows.
+  - id: kddcup2010-algebra0607
+    title: >-
+      KDD Cup 2010, Algebra I 2006-07, development training file
+      (algebra_2006_2007_train.txt); half A of its learners
+    grain: one learner's step in a problem
+    format: other   # tab-separated text
+    size_bytes: 546631752
+    location:
+      kind: url
+      ref: "https://pslcdatashop.web.cmu.edu/KDDCup/"
+    sha256: a711eb7fce78774837939deae40f02f31fde556489874a9b8d8f36cdba8b1ee5
+    identifiability: deidentified
+    access: raw
+    note: >-
+      As above. MD5 0123660549c5cff5ebf351705d6c14e4. The file's learners were
+      split by learner into two halves with a fixed seed before any outcome
+      was read; only half A (647 learners; 635 and 851,236 rows after the same
+      preprocessing) is read. The other half is reserved for a separate study.
+  - id: edmcup2023
+    title: >-
+      EDM Cup 2023 (ASSISTments): action_logs.csv, assignment_details.csv and
+      problem_details.csv
+    grain: one action in a problem log
+    format: csv
+    size_bytes: 2465013199
+    location:
+      kind: doi
+      ref: "10.17605/OSF.IO/YRWUH"
+    # SHA-256 of the listing below ("<sha256>  <file name>\n", sorted by name),
+    # so one hash covers every byte read.
+    sha256: a4fef36890ef61a2b3e9e195bc0066a79495bad56c5ed04f42f598d36f265313
+    identifiability: deidentified
+    access: raw
+    note: >-
+      OSF node yrwuh (Heffernan & Prihar, 2023), ASSISTments Data Terms of Use
+      (2020): cite ASSISTments and the DOI; no commercial use; outcomes public;
+      no redistribution; collaborators fetch from the original source. Each
+      rented machine fetched the three files from OSF and checked their MD5
+      before reading. Files with SHA-256:
+        db6b0cd4875488d0847d9d9ba2896552f4ad1015f3e2388995222dd4a178443d  action_logs.csv
+        2285c714b0e005526fb856876910b74378433fda147669b80ceca9bf59ee2ab0  assignment_details.csv
+        4f45daf2e010771c6b5e523dd4d583f3ac451f6ce8f2f35270fcb86b875cee4e  problem_details.csv
+  - id: per-case-outputs
+    title: >-
+      Per-case outputs: one record per scored fit (model, corpus, regime, draw,
+      fold), prediction floor, gate and floor sizing, with EDM Cup 2023's
+      preprocessing report and the device control's bands
+    grain: one fold's test set (an aggregate over its learners)
+    format: ndjson
+    rows: 2731
+    size_bytes: 966074
+    location:
+      kind: internal
+      ref: per-case-outputs.jsonl
+    sha256: 3436512db38037235605ccb20222635cd6c8ae3cc498cfc915c3c1251e003c61
+    identifiability: aggregate
+    access: published
+    derived_from:
+      - kddcup2010-bridge06
+      - kddcup2010-algebra0607
+      - edmcup2023
+    note: >-
+      Written by code/studies/models/state-estimator-benchmark/rivals/collect.py
+      from the benchmark's per-job aggregates (in the research repository,
+      where `collect.py verify` rebuilds it byte for byte). Data dictionary:
+      per-case-outputs.README.md.
+
+analyses:
+  - id: benchmark-fits
+    title: >-
+      The benchmark's fits, floors and gates: every model trained and scored
+      on each corpus, regime and fold, writing one aggregate per job
+    prespecified: true
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/models/state-estimator-benchmark/code/bench_drive.py
+      commit: 8b27c7df8633baea782a93216c29a69dd9e3b5ee
+    environment:
+      kind: python
+      detail: >-
+        Python 3.13; numpy, scipy and scikit-learn for the non-deep models;
+        torch 2.15.0 and pyKT at commit
+        4db3fbe681e2bca3e44ea92863a7168234267b92 for the deep models. Run on
+        rented CPU and GPU machines, one corpus fetch per machine. The harness
+        is not in the code package (it also carries models this release does
+        not report), so the fits cannot be rerun from the package; their
+        aggregates are the per-case outputs.
+      lockfile: none
+    inputs:
+      - kddcup2010-bridge06
+      - kddcup2010-algebra0607
+      - edmcup2023
+    ai_processing: false
+  - id: per-case
+    title: The per-case outputs, collected from the benchmark's per-job aggregates
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/models/state-estimator-benchmark/rivals/collect.py
+      commit: 903826eb9d2499d575a0d8906a7ce2faca86a379
+    environment:
+      kind: python
+      detail: >-
+        Python 3.11 or later, standard library, and git. Runs in the research
+        repository, which holds the per-job aggregates: from
+        studies/models/state-estimator-benchmark/rivals/, `python3 collect.py
+        verify --out ../../../../research/wiki/research/releases/knowledge-tracing-benchmark-2026/per-case-outputs.jsonl`.
+      lockfile: none
+    inputs:
+      - kddcup2010-bridge06
+      - kddcup2010-algebra0607
+      - edmcup2023
+    outputs:
+      - per-case-outputs
+    ai_processing: false
+  - id: tables
+    title: >-
+      Tables 2 to 7 and every number in the text: the summary tables computed
+      from the per-case outputs (RQ1 to RQ4)
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/models/state-estimator-benchmark/rivals/tables.py
+      commit: 4aa7c512e36a7f57355e0c2e209bdb7dc24e8b07
+    environment:
+      kind: python
+      detail: >-
+        Python 3.11 or later, standard library. From
+        code/studies/models/state-estimator-benchmark/rivals/: `python3
+        tables.py --per-case ../../../../../per-case-outputs.jsonl`. Writes
+        out/tables.json.
+      lockfile: none
+    inputs:
+      - per-case-outputs
+    ai_processing: false
+  - id: figures
+    title: >-
+      Figures 1 and 2, drawn from the summary tables, with a check of every
+      value Tables 5 and 7 print
+    prespecified: false
+    code:
+      repo: "https://github.com/Learning-Design-Alliance/Learning-engineering-research"
+      path: studies/models/state-estimator-benchmark/rivals/figures.py
+      commit: 4aa7c512e36a7f57355e0c2e209bdb7dc24e8b07
+    environment:
+      kind: python
+      detail: >-
+        Python 3.11 or later with matplotlib. From
+        code/studies/models/state-estimator-benchmark/rivals/: `python3
+        figures.py`. Writes
+        research/article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.png
+        and fig2-thinning.png, each with its .svg, under code/. The bytes depend
+        on the fonts installed; two runs on one machine are identical.
+      lockfile: none
+    inputs:
+      - per-case-outputs
+    ai_processing: false
+
+artifacts:
+  - id: article
+    kind: preprint
+    title: >-
+      Published knowledge-tracing models under one protocol on three tutor
+      corpora (the article of this release, draft)
+    location:
+      kind: internal
+      ref: research/article/knowledge-tracing-models-under-one-protocol.md
+  - id: figure-1
+    kind: figure
+    title: Test AUC with all training learners, per model and corpus
+    location:
+      kind: internal
+      ref: code/research/article/figures/knowledge-tracing-benchmark-2026/fig1-main-auc.png
+  - id: figure-2
+    kind: figure
+    title: Change in test AUC with 2% of the training learners and with 20-answer histories
+    location:
+      kind: internal
+      ref: code/research/article/figures/knowledge-tracing-benchmark-2026/fig2-thinning.png
+  - id: study-readme
+    kind: result
+    title: The release analysis's record of what was asked and what came back
+    location:
+      kind: internal
+      ref: code/studies/models/state-estimator-benchmark/rivals/README.md
+
+interpretation: >-
+  All nine gated models reproduced their published targets within the
+  registered band (PFA against Gervet et al.'s Table 13 value after an
+  amendment; HawkesKT and LPKT after changes made in response to a first
+  failure). The benchmark recovered a planted practice effect through five of
+  the six models given the floor (the deep models) at 25% of the training
+  learners; through HawkesKT it did not on either KDD corpus, so those numbers
+  are not read. The floors run for PFA, BKT and the running proportion outside
+  the registered stage lists are reported as descriptive only. With
+  all training learners, AKT and then simpleKT had the highest mean test AUC on
+  all three corpora (0.8148 and 0.8128 on half A, 0.8149 and 0.8148 on
+  bridge06, 0.8381 and 0.8364 on EDM Cup), by margins inside the fold ranges;
+  on EDM Cup their order and IEKT's is device-sensitive under the registered
+  rule, and on half A so is their lead (and that of Best-LR with time
+  windows, the model identifier Best-LR+) over IEKT, whose fits
+  there ran on a GPU. With 2% of the training learners, on the two KDD
+  corpora, the recurrent deep models (DKT, IEKT, LPKT) lost more AUC than the
+  logistic models, the attention models about as much as the Best-LR models,
+  and, of the models that fit anything, BKT least on every corpus; most of
+  these 2% numbers have no floor at that size. With training histories cut
+  to 20 answers the logistic models lost more than the attention models and
+  BKT on the KDD corpora; the logistic models' and BKT's numbers are
+  descriptive only. No difference between two models was tested.
+
+limitations:
+  - >-
+    No paired interval between models: per-row predictions were not kept, so
+    every comparison is descriptive.
+  - >-
+    All rows were scored, including rows after help; the unassisted and
+    first-attempt row sets the registration names were not scored.
+  - >-
+    No floor was run for the three Best-LR models, for PFA, BKT and the running
+    proportion on EDM Cup, or at 2% on bridge06; those numbers are descriptive
+    under the registered rule. The floors of PFA, BKT and the running
+    proportion on the KDD corpora were added after the registered fits, outside
+    the registered stage lists, and are reported as descriptive only, so those
+    three models' numbers are descriptive as well.
+  - >-
+    Registered reports not made: the share of deep fits stopping at the 20-epoch
+    cap (and the rule that a model capped on more than half its folds is a
+    floor, not a result), because the committed aggregates do not record the
+    stopping epoch; EDM Cup's sensitivity run without its out-of-order problem
+    logs, which needs new fits; the strata and the unassisted and
+    first-attempt row sets, which need per-row predictions; and the t interval
+    beside each floor interval, which needs each twin pair's statistic.
+  - >-
+    PFA's gate rests on reading Gervet et al.'s Table 4 value as a misprint of
+    Table 13's, a reading that an earlier published value on the same corpus
+    (Choffin et al., 2019, Table 4: 0.739, which agrees with Table 4) weighs
+    against; LPKT's gate followed tuning on the gate's own split.
+  - >-
+    The deep models' configurations come from small grids. Some fits ran on
+    GPUs, against the registration's CPU-only pin; the pre-registered device
+    bands (largest GPU-CPU AUC difference over a sample of fits) are 0.0169
+    for IEKT, 0.0035 for AKT, 0.0021 for simpleKT and 0.0003 for LPKT, and a
+    comparison within twice a model's band is device-sensitive, which includes
+    the EDM Cup order of AKT, simpleKT and IEKT and the lead of AKT, simpleKT
+    and Best-LR with time windows over IEKT on half A. The samples are not all from the
+    corpora of the counted GPU fits: IEKT's are bridge06 fits (its GPU fits
+    are on half A and EDM Cup), AKT's and simpleKT's are half A and bridge06
+    fits (their GPU fits are on EDM Cup).
+  - >-
+    Three spent corpora from two tutoring platforms; LPKT was not fitted on
+    EDM Cup.
+  - >-
+    The benchmark's fitting harness is not published, so the fits cannot be
+    rerun from the package; every printed number can be recomputed from the
+    per-case outputs.
+
+ethics:
+  irb:
+    required: false
+    determination: >-
+      Secondary analysis of de-identified, published tutor logs; no contact,
+      no intervention, no re-identification. See the protocol.
+  data_sharing:
+    permitted: false
+    detail: >-
+      DataShop's terms and the ASSISTments Data Terms of Use do not permit
+      redistribution. The release records each file's location and hash and
+      publishes per-fold aggregates only. Every outcome on EDM Cup 2023 reported
+      here is public, as its terms require. Acknowledgment: ASSISTments; EDM Cup
+      2023, doi 10.17605/OSF.IO/YRWUH; KDD Cup 2010 data from the PSLC DataShop
+      (Stamper et al., 2010).
+
+# LICENCES, matching learning-wiki's own terms and the other releases. The
+# research-layer schema has no licence field yet; this block records the terms
+# until it does.
+licenses:
+  code:
+    id: MIT
+    ref: "https://opensource.org/licenses/MIT"
+    holder: Learning Design Alliance
+    notice: "Copyright (c) 2026 Learning Design Alliance"
+    covers: >-
+      The code package (code/, whose LICENSE file carries the full text) and
+      reproduce.py.
+  content:
+    id: CC-BY-SA-4.0
+    ref: "https://creativecommons.org/licenses/by-sa/4.0/"
+    holder: Learning Design Alliance
+    covers: >-
+      The article, the HTML report and its notebooks, this release file and
+      the other release records, the per-case outputs and the figures.
+  inputs: >-
+    Not covered by either licence. The KDD Cup 2010 files remain under
+    DataShop's terms and EDM Cup 2023 under the ASSISTments Data Terms of Use;
+    neither is redistributed here. Published target values quoted from the
+    cited papers are citations.
+
+funding: >-
+  No external funding.
+
+conflicts: >-
+  The benchmark was built to establish how well published knowledge-tracing
+  models perform under one protocol, as a baseline for the development of a
+  new, publicly available model. That model is not reported in this release,
+  nor are other models the author's programme scored for its own reference.
+  The author works with the Learning Design Alliance (LDA), an organization
+  that, besides this research, builds learning authoring software. The
+  protocol was registered before any counted run, though the registration is
+  not published, and the per-fit aggregates are published with this release.
+
+provenance:
+  source_type: research
+  created_at: 2026-11-20
+  # `authors` are the DOI creators, so only people accountable for the work; the AI is credited in
+  # `contributors` (paper-writing skill, "Authorship").
+  authors:
+    - id: human:david-porcaro
+      name: David S. Porcaro
+      affiliation: Learning Design Alliance
+      role: >-
+        conceptualization, supervision, validation, writing (review and
+        editing), final approval; accountable for the work
+  contributors:
+    - id: agent:claude-code
+      name: Claude Code (Anthropic)
+      role: >-
+        investigation, software, formal analysis, visualization, data curation,
+        writing (original draft)
