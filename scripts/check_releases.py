@@ -13,6 +13,11 @@ run by CI on every pull request and on main, fails when:
   - with --base <ref> (pull requests), the change edits, adds to or deletes from a version folder
     that already exists at <ref>. A published version is never changed: a correction is a new
     version folder whose release file says what it supersedes;
+  - with --base <ref>, a file added in a new version folder or brief states an embargo in words (an
+    `embargo:` front-matter field, "EMBARGOED", "not for circulation", "awaiting the lift", "staged in
+    learning-engineering-research"). Only the marker comes off at the lift, so such a notice would be
+    published as written; it was, in five releases, before 2026-11-24. The patterns match NOTICE in the
+    research repository's board/patent_gate.py, which refuses the lift first; keep the two in step;
   - DOIS.json (written by scripts/mint_doi.py) names a version folder that does not exist, has an
     entry that is not a well-formed reserved or published DOI, or, with --base, changes or removes
     an entry that was already published at <ref> (a reserved entry may only become published);
@@ -189,6 +194,38 @@ def check_published_unchanged(base: str) -> list[str]:
     return bad
 
 
+# Kept in step with NOTICE in the research repository's board/patent_gate.py (2026-11-24).
+NOTICE = re.compile(
+    r"\bEMBARGOED\b|\bNOT PUBLISHED\b"
+    r"|(?i:^\s*#?\s*embargo\s*:)"
+    r"|(?i:awaiting the lift|\bat embargo lift|not for circulation)"
+    r"|(?i:staged in learning-engineering-research|staged under research/wiki)",
+    re.M)
+TEXT = {".md", ".yaml", ".yml", ".txt", ".html", ".py", ".json", ".jsonl", ".csv", ".svg", ".ipynb", ".R", ".r"}
+
+
+def check_new_notices(base: str) -> list[str]:
+    """Files added by this change, in a version folder or brief, that state an embargo in words.
+    Published folders are left alone: they are never edited, and a correction is a new version."""
+    out = subprocess.run(["git", "diff", "--name-status", "--no-renames", "--diff-filter=A", f"{base}...HEAD"],
+                         cwd=ROOT, capture_output=True, text=True, check=True).stdout
+    bad = []
+    for line in out.splitlines():
+        path = Path(line.split("\t", 1)[1])
+        f = ROOT / path
+        if path.suffix not in TEXT or not f.is_file() or path.parts[0] in NOT_RELEASES - {"briefs"}:
+            continue
+        try:
+            text = f.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        for n, ln in enumerate(text.splitlines(), 1):
+            if MARKER.decode() not in ln and NOTICE.search(ln):
+                bad.append(f"{path}:{n}: states an embargo in words; reword it in the research repository, "
+                           f"re-lift and re-export: {ln.strip()[:100]}")
+    return bad
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", help="the ref a pull request merges into, e.g. origin/main")
@@ -199,6 +236,7 @@ def main() -> int:
         bad += check_published_unchanged(a.base)
         bad += check_dois_unchanged(a.base)
         bad += check_briefs_unchanged(a.base)
+        bad += check_new_notices(a.base)
     n = sum(1 for r in ROOT.iterdir() if r.is_dir() and r.name not in NOT_RELEASES
             for v in r.iterdir() if v.is_dir() and SEMVER.match(v.name))
     if bad:
