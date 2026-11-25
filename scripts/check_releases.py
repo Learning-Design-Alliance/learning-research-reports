@@ -18,6 +18,12 @@ run by CI on every pull request and on main, fails when:
     learning-engineering-research"). Only the marker comes off at the lift, so such a notice would be
     published as written; it was, in five releases, before 2026-11-24. The patterns match NOTICE in the
     research repository's board/patent_gate.py, which refuses the lift first; keep the two in step;
+  - an erratum (errata/<release>/<version>.json) is for a version folder that does not exist, is not
+    approved by a person (approved_by human:<name>), declares that it changes a finding, is of a kind not
+    listed in ERRATA_KINDS, or quotes a published line that is not in the published file at the line it
+    names; or, with --base, an erratum that exists at <ref> is changed or removed. An erratum corrects
+    wording that changes no finding, number, verdict, data or code, without a new version or DOI
+    (maintainer, 2026-11-25); anything else is a new version;
   - DOIS.json (written by scripts/mint_doi.py) names a version folder that does not exist, has an
     entry that is not a well-formed reserved or published DOI, or, with --base, changes or removes
     an entry that was already published at <ref> (a reserved entry may only become published);
@@ -45,8 +51,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MARKER = "-".join(["LDA", "EMBARGO"]).encode()   # joined at run time: a constant would be folded into the .pyc
 SEMVER = re.compile(r"^\d+\.\d+\.\d+$")
-NOT_RELEASES = {".git", ".github", "scripts", "site", "_site", "briefs"}   # _site: the Pages build, never committed
+NOT_RELEASES = {".git", ".github", "scripts", "site", "_site", "briefs", "errata"}   # _site: the Pages build, never committed
 BRIEFS = ROOT / "briefs"
+ERRATA = ROOT / "errata"
 DOIS = ROOT / "DOIS.json"
 
 
@@ -137,6 +144,93 @@ def check_version(release: str, vdir: Path) -> list[str]:
     return bad
 
 
+ERRATA_KINDS = {"embargo-notice", "typo", "broken-link", "metadata"}
+ISO_DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+def check_errata() -> list[str]:
+    """Each errata file names a published version, and each location quotes that version's file exactly."""
+    bad = []
+    if not ERRATA.is_dir():
+        return bad
+    for f in sorted(ERRATA.rglob("*")):
+        if not f.is_file():
+            continue
+        where = f.relative_to(ROOT)
+        rel = f.parent.name
+        ver = f.stem
+        if f.parent.parent != ERRATA or f.suffix != ".json" or not SEMVER.match(ver):
+            bad.append(f"{where}: errata/ holds only <release>/<version>.json")
+            continue
+        vdir = ROOT / rel / ver
+        if not (vdir / "LIFT.json").is_file():
+            bad.append(f"{where}: an erratum for a version that is not published here")
+            continue
+        try:
+            doc = json.loads(f.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            bad.append(f"{where}: not JSON ({e})")
+            continue
+        if (doc.get("release"), doc.get("version")) != (rel, ver):
+            bad.append(f"{where}: names {doc.get('release')} {doc.get('version')}")
+        ids = []
+        for e in doc.get("errata") or []:
+            tag = f"{where} erratum {e.get('id')}"
+            ids.append(e.get("id"))
+            by = str(e.get("approved_by") or "")
+            if not by.startswith("human:") or len(by) <= len("human:"):
+                bad.append(f"{tag}: approved_by is {by!r}, not human:<name> (an erratum is a person's decision)")
+            if e.get("changes_findings") is not False:
+                bad.append(f"{tag}: changes_findings must be false; a correction that changes a finding is a new version")
+            if e.get("kind") not in ERRATA_KINDS:
+                bad.append(f"{tag}: kind {e.get('kind')!r} is not one of {sorted(ERRATA_KINDS)}")
+            if not ISO_DATE.match(str(e.get("date") or "")):
+                bad.append(f"{tag}: date {e.get('date')!r} is not YYYY-MM-DD")
+            if not (e.get("summary") and e.get("note")):
+                bad.append(f"{tag}: needs a summary and a note")
+            if not e.get("locations"):
+                bad.append(f"{tag}: names no location")
+            for loc in e.get("locations") or []:
+                p, n, pub = Path(str(loc.get("path", ""))), loc.get("line"), loc.get("published")
+                if p.is_absolute() or ".." in p.parts or not (vdir / p).is_file():
+                    bad.append(f"{tag}: {p} is not a file of {rel}/{ver}")
+                    continue
+                if not isinstance(n, int) or n < 1 or not isinstance(pub, str) or not pub or "reads" not in loc:
+                    bad.append(f"{tag}: {p} needs line (>= 1), published and reads")
+                    continue
+                have = (vdir / p).read_text(encoding="utf-8", errors="replace").splitlines()
+                want = pub.split("\n")
+                if len(want) > 1:
+                    ok = have[n - 1:n - 1 + len(want)] == want
+                else:
+                    ok = n <= len(have) and pub in have[n - 1]
+                if not ok:
+                    bad.append(f"{tag}: {p}:{n} does not read as the erratum quotes it")
+        if ids != list(range(1, len(ids) + 1)):
+            bad.append(f"{where}: errata ids must run 1, 2, 3 ... in order")
+    return bad
+
+
+def check_errata_unchanged(base: str) -> list[str]:
+    """Errata are added to, never changed or removed."""
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True)
+    bad = []
+    for path in git("ls-tree", "-r", "--name-only", base, "--", "errata").stdout.splitlines():
+        try:
+            old = json.loads(git("show", f"{base}:{path}").stdout or "{}").get("errata") or []
+        except json.JSONDecodeError:
+            continue
+        new_p = ROOT / path
+        try:
+            new = json.loads(new_p.read_text(encoding="utf-8")).get("errata") or [] if new_p.is_file() else []
+        except json.JSONDecodeError:
+            new = []
+        if new[:len(old)] != old:
+            bad.append(f"{path}: an erratum published at {base} was changed or removed; add a new one instead")
+    return bad
+
+
 DOI = re.compile(r"^10\.\d{4,9}/\S+$")
 
 
@@ -196,7 +290,7 @@ def check_published_unchanged(base: str) -> list[str]:
 
 # Kept in step with NOTICE in the research repository's board/patent_gate.py (2026-11-24).
 NOTICE = re.compile(
-    r"\bEMBARGOED\b|\bNOT PUBLISHED\b"
+    r"\bEMBARGOED\b|\bNOT PUBLISHED\b|\bNOT in learning-wiki\b"
     r"|(?i:^\s*#?\s*embargo\s*:)"
     r"|(?i:awaiting the lift|\bat embargo lift|not for circulation)"
     r"|(?i:staged in learning-engineering-research|staged under research/wiki)",
@@ -232,11 +326,13 @@ def main() -> int:
     a = ap.parse_args()
     bad = check_tree()
     bad += check_dois(DOIS.read_text(encoding="utf-8") if DOIS.is_file() else None)[0]
+    bad += check_errata()
     if a.base:
         bad += check_published_unchanged(a.base)
         bad += check_dois_unchanged(a.base)
         bad += check_briefs_unchanged(a.base)
         bad += check_new_notices(a.base)
+        bad += check_errata_unchanged(a.base)
     n = sum(1 for r in ROOT.iterdir() if r.is_dir() and r.name not in NOT_RELEASES
             for v in r.iterdir() if v.is_dir() and SEMVER.match(v.name))
     if bad:

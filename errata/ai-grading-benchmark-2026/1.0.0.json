@@ -1,0 +1,41 @@
+{
+  "release": "ai-grading-benchmark-2026",
+  "version": "1.0.0",
+  "errata": [
+    {
+      "id": 1,
+      "date": "2026-11-25",
+      "kind": "embargo-notice",
+      "changes_findings": false,
+      "approved_by": null,
+      "summary": "Embargo notices left in the published files",
+      "note": "Front matter, header comments and a Venue line written while the release was under embargo said it was unpublished, private or awaiting its lift. They were not removed when it was lifted. This version is published; the lines below read as given. No finding, number, verdict, data or code is affected.",
+      "locations": [
+        {
+          "path": "article/ai-grading-benchmark.md",
+          "line": 2,
+          "published": "status: final (2026-10-30; the maintainer's sign-off given; awaiting the lift)",
+          "reads": "status: published"
+        },
+        {
+          "path": "article/ai-grading-benchmark.md",
+          "line": 3,
+          "published": "embargo: >-\n  EMBARGOED — not for circulation outside LDA. Staged in\n  learning-engineering-research (private). See research/README.md.",
+          "reads": ""
+        },
+        {
+          "path": "article/ai-grading-benchmark.md",
+          "line": 7,
+          "published": "venue: learning-wiki research release (release file staged under research/wiki; DOI reserved and published through the wiki at embargo lift)",
+          "reads": "venue: learning-wiki research release"
+        },
+        {
+          "path": "report/index.html",
+          "line": 214,
+          "published": "learning-wiki research release (release file staged under research/wiki; DOI reserved and published through the wiki at embargo lift)",
+          "reads": "learning-wiki research release"
+        }
+      ]
+    }
+  ]
+}
