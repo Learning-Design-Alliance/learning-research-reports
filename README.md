@@ -63,6 +63,18 @@ A correction is a new version folder, and its release file names the version it 
 The check proves that a folder is complete and unaltered. It cannot prove that the lift happened,
 since anyone can write a `LIFT.json`, so pull requests are merged only by the maintainer.
 
+## Errata
+
+A correction that changes no finding, number, verdict, data or code (a stale embargo notice, a typo, a
+broken link, wrong metadata) is an **erratum**, not a new version, and needs no new DOI (maintainer,
+2026-11-25). It is recorded in `errata/<release>/<version>.json`: for each location, the file and line,
+the text exactly as published, and how it reads. The version folder and the DOI deposit stay as
+published; the site serves `<release>/<version>/errata.html` and links it from the report's bar and the
+index. CI refuses an erratum that quotes a line the published file does not contain, that is not approved
+by a person (`approved_by: human:<name>`), that declares `changes_findings` anything but `false`, or that
+is changed or removed once merged: errata are added to, never edited. Anything that changes a finding is
+a new version. The source in the research repository is corrected too, so the next version ships clean.
+
 ## DOIs
 
 Each version gets one DOI from Zenodo, minted by `scripts/mint_doi.py` and recorded in `DOIS.json`,

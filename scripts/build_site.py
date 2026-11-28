@@ -18,6 +18,10 @@ its own LIFT.json by board/export_release.py --brief), the brief's page, standal
 brand, is served at <release>/<version>/brief/index.html with the same breadcrumb bar, and the index
 entry and the report's bar link to it.
 
+Where a version has errata (errata/<release>/<version>.json: wording corrected without a new version,
+checked by check_releases.py), the site serves <release>/<version>/errata.html, and the report's bar and the
+index entry link to it. The version folder itself is not changed.
+
 Reads the release files with PyYAML; otherwise standard library only.
 """
 
@@ -40,6 +44,50 @@ import check_releases  # noqa: E402
 
 def vkey(v: str) -> tuple:
     return tuple(int(x) for x in v.split("."))
+
+
+def errata_for(release: str, version: str) -> list[dict]:
+    """The version's errata (errata/<release>/<version>.json), which check_releases.py has verified."""
+    f = ROOT / "errata" / release / f"{version}.json"
+    return (json.loads(f.read_text(encoding="utf-8")).get("errata") or []) if f.is_file() else []
+
+
+ERRATA_PAGE = """<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Errata · {title} v{version}</title>
+<style>
+:root{{--bg:#fffbf5;--fg:#0e1240;--accent:#122fb2;--rule:rgba(18,47,178,.25);--code:#f3efe6}}
+@media (prefers-color-scheme:dark){{:root:not([data-theme="light"]){{--bg:#0b0e33;--fg:#ece9ff;--accent:#c9c2ff;--rule:rgba(201,194,255,.3);--code:#161a4a}}}}
+:root[data-theme="dark"]{{--bg:#0b0e33;--fg:#ece9ff;--accent:#c9c2ff;--rule:rgba(201,194,255,.3);--code:#161a4a}}
+body{{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 "DM Sans",system-ui,sans-serif}}
+main{{max-width:860px;margin:0 auto;padding:32px max(16px,env(safe-area-inset-left,0px))}}
+h1{{font:400 28px/1.2 Baskervville,Georgia,serif;color:var(--accent)}} h2{{font-size:18px;margin-top:32px}}
+a{{color:var(--accent)}} .label{{font:12.5px "DM Mono",ui-monospace,monospace;letter-spacing:.06em;text-transform:uppercase;opacity:.8}}
+.loc{{border-top:1px solid var(--rule);padding:12px 0}} pre{{background:var(--code);padding:8px 10px;white-space:pre-wrap;overflow-wrap:anywhere;margin:4px 0}}
+</style></head><body><main>
+<p class="label"><a href="report/index.html">{title} · v{version}</a></p>
+<h1>Errata</h1>
+<p>An erratum corrects wording in a published version without changing any finding, number, verdict, data or
+code. The files in this version, and the copy deposited under its DOI, stay exactly as published; read each
+location below as corrected. A correction that changes a finding is published as a new version.</p>
+{items}
+</main></body></html>
+"""
+
+
+def errata_page(e: dict) -> str:
+    esc = html.escape
+    items = []
+    for x in e["errata"]:
+        locs = "".join(
+            f'<div class="loc"><p class="label">{esc(l["path"])}, line {int(l["line"])}</p>'
+            f'<p>Published:</p><pre>{esc(l["published"])}</pre>'
+            + (f'<p>Reads:</p><pre>{esc(l["reads"])}</pre>' if l["reads"] else "<p>Reads: removed.</p>")
+            + "</div>" for l in x["locations"])
+        items.append(f'<h2>{int(x["id"])}. {esc(x["summary"])}</h2><p class="label">{esc(str(x["date"]))} · '
+                     f'{esc(x["kind"])} · approved by {esc(str(x["approved_by"]).removeprefix("human:"))}</p>'
+                     f'<p>{esc(x["note"])}</p>{locs}')
+    return ERRATA_PAGE.format(title=esc(e["title"]), version=esc(e["version"]), items="".join(items))
 
 
 def releases() -> list[dict]:
@@ -68,6 +116,7 @@ def releases() -> list[dict]:
                 "article": articles[0].relative_to(ROOT).as_posix() if articles else None,
                 "has_code": (vdir / "code").is_dir(),
                 "has_brief": (ROOT / "briefs" / rdir.name / vdir.name / "brief.html").is_file(),
+                "errata": errata_for(rdir.name, vdir.name),
             })
         if entries:
             out.append({"release": rdir.name, "versions": entries})
@@ -92,6 +141,7 @@ def card(rel: dict) -> str:
     links.append(f'<a class="pill" href="{REPO_URL}/tree/main/{base}">All files <span aria-hidden="true">↗</span></a>')
     doi = (f'<a href="https://doi.org/{esc(e["doi"])}">doi:{esc(e["doi"])}</a>' if e["doi"]
            else '<span>DOI pending</span>')
+    errata = (f' · <a href="{base}/errata.html">errata ({len(e["errata"])})</a>' if e["errata"] else "")
     q = e["question"]
     if len(q) > 420:
         q = q[:420].rsplit(" ", 1)[0] + "…"
@@ -102,7 +152,7 @@ def card(rel: dict) -> str:
             if v["has_report"] else esc(v["version"]) for v in rel["versions"][1:]) + "</p>")
     return f"""
   <article class="release">
-    <p class="label">{esc(e['release'])} · v{esc(e['version'])} · published {esc(e['lifted_at'])} · {doi}</p>
+    <p class="label">{esc(e['release'])} · v{esc(e['version'])} · published {esc(e['lifted_at'])} · {doi}{errata}</p>
     <h2><a href="{base}/report/index.html">{esc(e['title'])}</a></h2>
     <p class="byline">{esc(', '.join(e['authors']))}</p>
     <p class="question">{esc(q)}</p>
@@ -182,6 +232,8 @@ def add_nav(report: Path, e: dict, brief: bool = False) -> None:
            if e["doi"] else "")
     more = ('<a class="more" href="../report/index.html">Full report</a>' if brief and e["has_report"] else
             '<a class="more" href="../brief/index.html">Brief</a>' if not brief and e["has_brief"] else "")
+    if e["errata"]:
+        more += '<a class="more" href="../errata.html">Errata</a>'
     nav = NAV.format(title=html.escape(e["title"]), version=html.escape(e["version"]), doi=doi, more=more,
                      here="Brief · " if brief else "")
     m = re.search(r"<body[^>]*>", s)
@@ -334,6 +386,8 @@ def main() -> int:
                 update_review_form(out / v["release"] / v["version"] / "report" / "index.html")
                 add_brand(out / v["release"] / v["version"] / "report" / "index.html")
                 add_nav(out / v["release"] / v["version"] / "report" / "index.html", v)
+            if v["errata"]:
+                (out / v["release"] / v["version"] / "errata.html").write_text(errata_page(v), encoding="utf-8")
             if v["has_brief"]:
                 page = out / v["release"] / v["version"] / "brief" / "index.html"
                 page.parent.mkdir(parents=True)
