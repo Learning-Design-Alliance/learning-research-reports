@@ -7,7 +7,7 @@
       "date": "2026-11-25",
       "kind": "embargo-notice",
       "changes_findings": false,
-      "approved_by": null,
+      "approved_by": "human:david-porcaro",
       "summary": "Embargo notices left in the published files",
       "note": "Front matter, header comments and a Venue line written while the release was under embargo said it was unpublished, private or awaiting its lift. They were not removed when it was lifted. This version is published; the lines below read as given. No finding, number, verdict, data or code is affected.",
       "locations": [
